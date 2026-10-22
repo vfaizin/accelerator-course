@@ -1,0 +1,3462 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>04 High voltage and
+breakdown · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Chapter 04 of 29</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#04-high-voltage-and-breakdown"
+id="toc-04-high-voltage-and-breakdown">04 High voltage and breakdown</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-wall" id="toc-the-wall">The wall</a></li>
+<li><a href="#the-physics" id="toc-the-physics">The physics</a>
+<ul>
+<li><a
+href="#pre-requisite-continued-gausss-law-and-potentials-of-simple-shapes"
+id="toc-pre-requisite-continued-gausss-law-and-potentials-of-simple-shapes">Pre-requisite
+(continued): Gauss’s law and potentials of simple shapes</a></li>
+<li><a
+href="#pre-requisite-continued-laplace-and-poisson-equations-uniqueness-boundary-value-problems"
+id="toc-pre-requisite-continued-laplace-and-poisson-equations-uniqueness-boundary-value-problems">Pre-requisite
+(continued): Laplace and Poisson equations, uniqueness, boundary-value
+problems</a></li>
+<li><a
+href="#pre-requisite-continued-dielectrics-capacitance-and-field-energy"
+id="toc-pre-requisite-continued-dielectrics-capacitance-and-field-energy">Pre-requisite
+(continued): Dielectrics, capacitance and field energy</a></li>
+<li><a href="#1-field-not-voltage-and-the-fields-of-simple-electrodes"
+id="toc-1-field-not-voltage-and-the-fields-of-simple-electrodes">1.
+Field, not voltage, and the fields of simple electrodes</a></li>
+<li><a
+href="#pre-requisite-continued-mean-free-path-and-collision-rates"
+id="toc-pre-requisite-continued-mean-free-path-and-collision-rates">Pre-requisite
+(continued): Mean free path and collision rates</a></li>
+<li><a href="#2-the-avalanche-and-paschens-law-derived"
+id="toc-2-the-avalanche-and-paschens-law-derived">2. The avalanche, and
+Paschen’s law derived</a></li>
+<li><a href="#3-air-at-one-atmosphere-schumanns-law-and-the-3-mvm-rule"
+id="toc-3-air-at-one-atmosphere-schumanns-law-and-the-3-mvm-rule">3. Air
+at one atmosphere: Schumann’s law and the 3 MV/m rule</a></li>
+<li><a href="#4-streamers-corona-glow-and-arc"
+id="toc-4-streamers-corona-glow-and-arc">4. Streamers, corona, glow and
+arc</a></li>
+<li><a
+href="#pre-requisite-continued-tunnelling-and-the-wkb-approximation"
+id="toc-pre-requisite-continued-tunnelling-and-the-wkb-approximation">Pre-requisite
+(continued): Tunnelling and the WKB approximation</a></li>
+<li><a
+href="#pre-requisite-continued-electrons-in-metals-fermi-dirac-statistics-work-function"
+id="toc-pre-requisite-continued-electrons-in-metals-fermi-dirac-statistics-work-function">Pre-requisite
+(continued): Electrons in metals, Fermi-Dirac statistics, work
+function</a></li>
+<li><a href="#5-vacuum-breakdown" id="toc-5-vacuum-breakdown">5. Vacuum
+breakdown</a></li>
+<li><a href="#6-surface-flashover" id="toc-6-surface-flashover">6.
+Surface flashover</a></li>
+<li><a href="#7-solids-and-liquids-ratings-rf-and-x-rays"
+id="toc-7-solids-and-liquids-ratings-rf-and-x-rays">7. Solids and
+liquids, ratings, RF and X-rays</a></li>
+<li><a
+href="#pre-requisite-images-and-two-dimensional-complex-potentials"
+id="toc-pre-requisite-images-and-two-dimensional-complex-potentials">Pre-requisite:
+Images and two-dimensional complex potentials</a></li>
+<li><a href="#pre-requisite-rlc-circuits-and-phasors"
+id="toc-pre-requisite-rlc-circuits-and-phasors">Pre-requisite: RLC
+circuits and phasors</a></li>
+<li><a href="#8-measuring-a-high-voltage"
+id="toc-8-measuring-a-high-voltage">8. Measuring a high voltage</a></li>
+<li><a href="#9-stored-energy-and-safety"
+id="toc-9-stored-energy-and-safety">9. Stored energy and safety</a></li>
+</ul></li>
+<li><a href="#how-it-was-researched-and-built"
+id="toc-how-it-was-researched-and-built">How it was researched and
+built</a></li>
+<li><a href="#at-the-bench" id="toc-at-the-bench">At the bench</a>
+<ul>
+<li><a href="#a-sphere-gap-measurement"
+id="toc-a-sphere-gap-measurement">A sphere-gap measurement</a></li>
+<li><a href="#corona-hiss-and-ozone"
+id="toc-corona-hiss-and-ozone">Corona, hiss and ozone</a></li>
+<li><a href="#tracking" id="toc-tracking">Tracking</a></li>
+<li><a href="#conditioning" id="toc-conditioning">Conditioning</a></li>
+<li><a href="#flashover" id="toc-flashover">Flashover</a></li>
+<li><a href="#x-rays-and-earthing" id="toc-x-rays-and-earthing">X-rays
+and earthing</a></li>
+</ul></li>
+<li><a href="#where-it-stops" id="toc-where-it-stops">Where it
+stops</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="04-high-voltage-and-breakdown">04 High voltage and
+breakdown</h1>
+<p><em>1745 to today: the Leyden jar, the spark gap, Tesla coils in oil,
+pressure tanks of compressed gas, vacuum tubes and their insulators; the
+wall is the spark, which comes when the field, not the voltage, grows
+too large.</em></p>
+<blockquote>
+<p><strong>Pre-requisites for this chapter.</strong></p>
+<ul>
+<li><a
+href="#pre-requisite-continued-gausss-law-and-potentials-of-simple-shapes">Gauss’s
+law and potentials of simple shapes (continued)</a>: the voltage as the
+integral of the field, and the fields between concentric spheres and
+coaxial cylinders, for a terminal in its tank (section 1).</li>
+<li><a
+href="#pre-requisite-continued-laplace-and-poisson-equations-uniqueness-boundary-value-problems">Laplace
+and Poisson equations, uniqueness, boundary-value problems
+(continued)</a>: conductors as equipotentials, uniqueness, the sphere in
+a uniform field and the needle, for where fields concentrate (section
+1).</li>
+<li><a
+href="#pre-requisite-continued-dielectrics-capacitance-and-field-energy">Dielectrics,
+capacitance and field energy (continued)</a>: permittivity, boundary
+conditions, capacitance, stored energy and force, for the triple
+junction, the voltmeters and stored energy (sections 1, 8 and 9).</li>
+<li><a
+href="#pre-requisite-continued-mean-free-path-and-collision-rates">Mean
+free path and collision rates (continued)</a>: the distribution of free
+paths and the scaling with <span
+class="math inline">\(\mathcal{E}/N\)</span> and <span
+class="math inline">\(pd\)</span>, for Townsend’s coefficient and
+Paschen’s law (section 2).</li>
+<li><a
+href="#pre-requisite-continued-tunnelling-and-the-wkb-approximation">Tunnelling
+and the WKB approximation (continued)</a>: the triangular barrier at a
+metal surface, for field emission (section 5).</li>
+<li><a
+href="#pre-requisite-continued-electrons-in-metals-fermi-dirac-statistics-work-function">Electrons
+in metals, Fermi-Dirac statistics, work function (continued)</a>: the
+sum over the Fermi sea and the image force, for the Fowler-Nordheim law
+(section 5).</li>
+<li><a
+href="#pre-requisite-images-and-two-dimensional-complex-potentials">Images
+and two-dimensional complex potentials</a>: image charges, for the peak
+field in a sphere gap (section 8).</li>
+<li><a href="#pre-requisite-rlc-circuits-and-phasors">RLC circuits and
+phasors</a>: dividers, discharge and damping, for measuring a high
+voltage and earthing (sections 8 and 9).</li>
+</ul>
+<p>From Part 0, Foundations, the chapter relies on:</p>
+<ul>
+<li><a href="F1-calculus.html">F1 Calculus</a>: the <a
+href="F1-calculus.html#4-the-exponential-and-the-logarithm">exponential
+and the logarithm</a> (avalanches, Paschen’s law, tunnelling), <a
+href="F1-calculus.html#5-using-derivatives-small-changes-errors-maxima">maxima
+and minima</a> (the best terminal radius, Paschen’s minimum), <a
+href="F1-calculus.html#7-the-fundamental-theorem-and-working-integrals-out">integrals
+and integration by parts</a>, <a
+href="F1-calculus.html#8-approximating-a-function-taylor-series">Taylor
+series</a>, <a
+href="F1-calculus.html#9-several-variables-partial-derivatives">partial
+derivatives</a> and <a
+href="F1-calculus.html#10-equations-of-change-first-differential-equations">first
+differential equations</a> (growth of an avalanche, discharge of a
+capacitor).</li>
+<li><a href="F2-vectors.html">F2 Vectors</a>: the <a
+href="F2-vectors.html#6-the-gradient">gradient</a>, <a
+href="F2-vectors.html#7-line-integrals-work-along-a-path">line
+integrals</a>, <a href="F2-vectors.html#9-flux">flux</a>, <a
+href="F2-vectors.html#10-divergence-and-gausss-theorem">divergence and
+Gauss’s theorem</a>, <a href="F2-vectors.html#12-the-laplacian">the
+Laplacian</a> and <a
+href="F2-vectors.html#13-coordinates-that-fit-round-things">spherical
+and cylindrical coordinates</a>.</li>
+<li><a href="F3-mechanics.html">F3 Mechanics</a>: the <a
+href="F3-mechanics.html#10-damped-and-driven-oscillation">damped
+oscillator</a>, for a sphere gap ringing with its leads (section
+8).</li>
+<li><a href="F4-electromagnetism.html">F4 Electromagnetism</a>: <a
+href="F4-electromagnetism.html#3-the-electric-field-and-superposition">the
+field</a>, <a
+href="F4-electromagnetism.html#4-gausss-law-in-use">Gauss’s law</a>, <a
+href="F4-electromagnetism.html#5-potential-potential-energy-and-the-electron-volt">potential
+and the electron-volt</a>, <a
+href="F4-electromagnetism.html#6-capacitance-and-the-energy-in-the-field">capacitance
+and field energy</a>, <a
+href="F4-electromagnetism.html#7-dielectrics-briefly">dielectrics</a>,
+<a
+href="F4-electromagnetism.html#8-current-current-density-and-ohms-law">Ohm’s
+law</a> and <a
+href="F4-electromagnetism.html#9-circuits-kirchhoffs-laws-and-rc">RC
+circuits</a>.</li>
+<li><a href="F5-waves.html">F5 Waves</a>: <a
+href="F5-waves.html#1-complex-numbers">complex numbers</a> and <a
+href="F5-waves.html#6-lc-and-rlc-circuits-with-phasors">RLC circuits
+with phasors</a>, for dividers and damping (section 8).</li>
+<li><a href="F6-heat-and-probability.html">F6 Heat and probability</a>:
+<a
+href="F6-heat-and-probability.html#4-continuous-distributions-probability-density">probability
+density</a>, <a href="F6-heat-and-probability.html#10-the-ideal-gas">the
+ideal gas</a>, <a
+href="F6-heat-and-probability.html#13-the-boltzmann-factor-and-the-speeds-of-molecules">the
+Boltzmann factor</a> and <a
+href="F6-heat-and-probability.html#14-molecules-on-the-move-wall-collisions-and-the-mean-free-path">the
+mean free path</a>, for the avalanche (section 2) and the Schottky
+effect.</li>
+<li><a href="F7-atoms-and-quanta.html">F7 Atoms and quanta</a>: <a
+href="F7-atoms-and-quanta.html#3-the-electron-volt">the
+electron-volt</a>, <a
+href="F7-atoms-and-quanta.html#5-x-rays">X-rays</a>, <a
+href="F7-atoms-and-quanta.html#7-bohrs-hydrogen-atom-and-energy-levels">energy
+levels</a> (ionisation and excitation) and <a
+href="F7-atoms-and-quanta.html#9-a-short-honest-picture-of-quantum-mechanics">the
+picture of quantum mechanics</a> (tunnelling, the Pauli principle).</li>
+</ul>
+</blockquote>
+<p>A note on symbols in this chapter. <span
+class="math inline">\(\mathcal{E}\)</span> is the electric field in V/m,
+as in <a href="F4-electromagnetism.html">F4</a> and <a
+href="02-the-cathode-ray-tube.html">chapter 2</a>, and <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> the field as a
+vector, <span class="math inline">\(p\)</span> a gas pressure (no
+momentum appears), <span class="math inline">\(d\)</span> a gap, <span
+class="math inline">\(V\)</span> a voltage, <span
+class="math inline">\(Q\)</span> a charge and <span
+class="math inline">\(C\)</span> a capacitance. The work function <span
+class="math inline">\(\phi_w\)</span> is an energy here, quoted in eV as
+in the Fowler-Nordheim literature; <a
+href="02-the-cathode-ray-tube.html">chapter 2</a> writes the same
+quantity as <span class="math inline">\(e\phi_w\)</span>, with <span
+class="math inline">\(\phi_w\)</span> in volts. Other symbols that clash
+with the shared notation carry subscripts, noted where they first
+appear.</p>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The wall.</strong> A static accelerator gives a particle
+<span class="math inline">\(qV\)</span>. By the late 1920s physicists
+wanted a million volts. Tesla coils and impulse generators could make
+it; nothing could hold it. Air sparked across, insulators flashed over
+along their surfaces, and vacuum tubes broke down from electrons pulled
+out of their own electrodes.</p>
+<p><strong>The idea.</strong> Breakdown is set by the electric field
+<span class="math inline">\(\mathcal{E}\)</span>, in volts per metre, at
+the worst point of a surface, not by the voltage. A voltage is held by
+spreading it over enough distance, enough smoothly curved metal, or
+enough separate parts, that the field stays below what the medium bears.
+An isolated sphere of radius <span class="math inline">\(R_s\)</span> at
+potential <span class="math inline">\(V\)</span> has surface field <span
+class="math inline">\(V/R_s\)</span>; a sharp point or edge multiplies
+the field by tens or hundreds.</p>
+<p><strong>The equations to remember.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{E} &amp;= V/d \ \text{(plates)}, \qquad \mathcal{E} = V/R_s \
+\text{(isolated sphere)}, \\
+\mathcal{E}(a) &amp;= \frac{V}{a\ln(b/a)} \ \text{(coaxial; least at } a
+= b/\mathrm{e}\text{)} \\
+\gamma_{se}\left(e^{\alpha d}-1\right) &amp;= 1 \quad
+\text{(Townsend&#39;s criterion for a self-sustained discharge)} \\
+V_b &amp;= \frac{B_T\,pd}{\ln\left[A_T\,pd/\ln(1+1/\gamma_{se})\right]}
+\quad \text{(Paschen&#39;s law: a function of } pd \text{ alone)} \\
+J &amp;=
+\frac{a_{FN}\mathcal{E}_{loc}^2}{\phi_w}\exp\left(-\frac{b_{FN}\phi_w^{3/2}}{\mathcal{E}_{loc}}\right),
+\qquad \mathcal{E}_{loc} = \beta_f \mathcal{E} \\
+&amp; \quad \text{(Fowler-Nordheim field emission)}
+\end{aligned}
+\]</span></p>
+<p><strong>Numbers worth knowing by heart.</strong> Air at one
+atmosphere and 20 °C breaks down at about 3 MV/m across a centimetre (31
+kV across 1 cm), tending to 2.4 MV/m for long uniform gaps. Paschen’s
+minimum for air is about 330 to 350 V at a pressure times gap near 0.75
+Pa m: no gap in air sparks below it. Sulphur hexafluoride is about 2.5
+to 3 times stronger than air. Large electrodes in compressed gas run at
+fields of order 10 MV/m. Insulator surfaces in vacuum hold one to a few
+MV/m along their length. Field emission needs a local field of a few
+GV/m, which real surfaces reach at tens of MV/m because whiskers and
+dust multiply the field by <span class="math inline">\(\beta_f \approx
+30\)</span> to 200. Large vacuum gaps hold a voltage rising only as
+about the square root of the gap. Two 25 cm spheres 50 mm apart spark at
+137 kV.</p>
+<h2 id="the-wall">The wall</h2>
+<p>In October 1745 Ewald Georg von Kleist in Pomerania charged a small
+medicine bottle of alcohol or water through a nail in its cork and took
+a shock from it; early in 1746 Pieter van Musschenbroek in Leiden
+reported the same, and the Leyden jar, the first capacitor, took his
+town’s name. For a century and a half after, high voltage meant
+electrostatic machines, induction coils and their sparks, and the spark
+was measured long before it was understood. In 1889 Friedrich Paschen,
+then an assistant at Münster, measured the sparking voltage in air,
+hydrogen and carbon dioxide at many pressures and gaps, and found that
+it depends only on their product. From 1900 John Townsend, newly Wykeham
+Professor of Physics at Oxford, explained the current in a gas by an
+electron avalanche; his book <em>Electricity in Gases</em> (1915) gave
+the whole picture.</p>
+<p>In the 1920s nuclear physics wanted particles of several MeV. Making
+several megavolts for a moment was possible. Holding them across
+something a beam could travel through was not. At the Carnegie
+Institution in Washington, Gregory Breit, Merle Tuve and Odd Dahl ran
+Tesla coils immersed in oil. In January 1930 (Carnegie’s own history
+dates the 5 MV to 1928) they reported about 3 MV in ordinary transformer
+oil and up to 5.2 MV in oil at 500 pounds per square inch (3.4 MPa),
+peak values measured with a capacity-potentiometer and a sphere gap. In
+the companion paper, Tuve, Breit and Lawrence Hafstad described tubes
+built, following William Coolidge at General Electric, as several
+sections in cascade. One withstood 1.4 MV repeatedly. The limit was
+uncontrolled cold-cathode emission: electrons drawn out of metal by the
+field itself. The coil made five megavolts; the tube held a little over
+one, and only as a pulse.</p>
+<p>Coolidge had run a three-section cascade tube at about 900 kV by
+1928. In 1927 and 1928 Arno Brasch, Fritz Lange and Kurt Urban tried to
+harness lightning with a cable slung across a valley at Monte Generoso
+in southern Switzerland, then turned to an impulse generator and tubes
+of their own, reported in 1931. Every group met the same three failures:
+sparks through the air outside, flashover along insulating surfaces, and
+breakdown inside the vacuum.</p>
+<p>The answers of 1931 and 1932 were both about field. Cockcroft and
+Walton divided the voltage among many rectifiers and capacitors and
+their tube into sections (<a
+href="05-the-voltage-multiplier.html">chapter 5</a>); Van de Graaff
+carried charge into a large smooth sphere whose size sets its surface
+field (<a href="06-the-electrostatic-generator.html">chapter 6</a>).
+Tuve’s group took up Van de Graaff’s generator in 1931; their first,
+with a sphere 1 m across, gave ions of 600 kV by 1933, and a generator
+with a 2 m outer shell held up to 1.3 MV in 1935 (Livingston and
+Blewett, section 3-1).</p>
+<h2 id="the-physics">The physics</h2>
+<h3
+id="pre-requisite-continued-gausss-law-and-potentials-of-simple-shapes">Pre-requisite
+(continued): Gauss’s law and potentials of simple shapes</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section adds Gauss’s law as a
+working tool, the voltage as the line integral of the field, and the
+fields between concentric spheres and between coaxial cylinders. Section
+1 uses them to size a terminal inside its tank and to show why a voltage
+alone says nothing about breakdown. Taught from Tong,
+<em>Electromagnetism</em>, sections 2.1 (Gauss’s law, 2.1.2 the uniform
+sphere, 2.1.3 the line charge) and 2.2.1, and Kuffel, Zaengl and Kuffel,
+section 4.2.2.</p>
+</blockquote>
+<p>Reminder: <a
+href="01-why-accelerate.html#pre-requisite-gausss-law-and-potentials-of-simple-shapes">chapter
+1</a> gave Coulomb’s law, the potential <span
+class="math inline">\(V\)</span> with <span
+class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla V\)</span>, and
+the fact that a uniformly charged sphere acts outside as a point charge
+at its centre. Part 0 taught the same tools from the start: the field in
+<a
+href="F4-electromagnetism.html#3-the-electric-field-and-superposition">F4,
+section 3</a>, the potential in <a
+href="F4-electromagnetism.html#5-potential-potential-energy-and-the-electron-volt">F4,
+section 5</a>, the gradient in <a
+href="F2-vectors.html#6-the-gradient">F2, section 6</a> and the line
+integral in <a
+href="F2-vectors.html#7-line-integrals-work-along-a-path">F2, section
+7</a>. Here those ideas are put to work on electrodes.</p>
+<p><strong>The voltage is the integral of the field.</strong> Move a
+short step <span class="math inline">\(d\mathbf{l}\)</span> (metres).
+The potential changes by <span class="math inline">\(dV = \nabla V\cdot
+d\mathbf{l}\)</span> (this is what the gradient means: its component
+along a step is the rate of change of <span
+class="math inline">\(V\)</span> along that step, <a
+href="F2-vectors.html#6-the-gradient">F2, section 6</a>), and since
+<span class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla
+V\)</span> this is <span class="math inline">\(dV =
+-\boldsymbol{\mathcal{E}}\cdot d\mathbf{l}\)</span>. Add up the steps
+along any path from a point A to a point B:</p>
+<p><span class="math display">\[
+V_A - V_B = \int_A^B \boldsymbol{\mathcal{E}}\cdot d\mathbf{l}.
+\]</span></p>
+<p>In a static field the answer is the same for every path (a static
+field is <em>conservative</em>, <a
+href="F2-vectors.html#7-line-integrals-work-along-a-path">F2, section
+7</a>). So a voltage fixes only the total area under the field along a
+path; how that area is shared out depends on the shape of the
+electrodes. Take 100 kV. Between flat plates 10 cm apart it gives 1 MV/m
+everywhere. Between a wire of radius 1 mm and a tube of radius 10 cm
+(worked out below) it gives 21.7 MV/m at the wire and 0.22 MV/m at the
+tube wall. Same voltage, a field a hundred times larger at one place.
+Breakdown starts where the field is largest, which is why the chapter
+speaks of field and not voltage.</p>
+<p><img src="figures/04-field-not-voltage.svg" loading="lazy"
+alt="Field across a gap: flat plates against a wire in a tube" /></p>
+<p><em>Figure 4.1. The same 100 kV across 10 cm, held two ways. Between
+flat plates the field is 1 MV/m everywhere; between a wire of 1 mm
+radius and a tube of 10 cm radius it is <span
+class="math inline">\(\mathcal{E}(r) = V/[r\ln(b/a)]\)</span>, 21.7 MV/m
+at the wire and 0.22 MV/m at the wall. The area under each curve is the
+voltage, the same for both; the peak field, which decides breakdown,
+differs twentyfold.</em></p>
+<p><strong>Gauss’s law.</strong> The flux of <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> out of any
+closed surface equals the charge inside divided by <span
+class="math inline">\(\varepsilon_0\)</span>:</p>
+<p><span class="math display">\[
+\oint \boldsymbol{\mathcal{E}}\cdot d\mathbf{S} =
+\frac{Q_{enc}}{\varepsilon_0},
+\]</span></p>
+<p>with <span class="math inline">\(d\mathbf{S}\)</span> an element of
+area (m<span class="math inline">\(^2\)</span>) pointing outwards, <span
+class="math inline">\(Q_{enc}\)</span> in coulombs and <span
+class="math inline">\(\varepsilon_0 = 8.854\times10^{-12}\)</span> F/m.
+(<a href="F4-electromagnetism.html#4-gausss-law-in-use">F4, section
+4</a> teaches it, and <a href="F2-vectors.html#9-flux">F2, section 9</a>
+defines flux, the amount of field passing through a surface.) The idea
+behind it: field lines begin and end only on charges. For a point charge
+the field falls as <span class="math inline">\(1/r^2\)</span> while the
+area of a sphere grows as <span class="math inline">\(r^2\)</span>, so
+the flux through any sphere around it is the same, <span
+class="math inline">\(Q/\varepsilon_0\)</span>, and bending the surface
+does not change the count of lines through it. The law always holds, but
+it gives the field only when symmetry tells us the field’s direction and
+that its size is the same everywhere on a well-chosen surface. Spheres
+and long cylinders are exactly such cases, and they are the shapes of
+terminals and tanks.</p>
+<p><strong>Concentric spheres.</strong> An inner sphere of radius <span
+class="math inline">\(a\)</span> carries charge <span
+class="math inline">\(Q\)</span>; an earthed outer shell of radius <span
+class="math inline">\(b\)</span> surrounds it, and its inner surface
+carries <span class="math inline">\(-Q\)</span>. Take a Gaussian sphere
+of radius <span class="math inline">\(r\)</span> between them. By
+symmetry <span class="math inline">\(\boldsymbol{\mathcal{E}}\)</span>
+points radially and has the same size all over it, so the flux is <span
+class="math inline">\(\mathcal{E}\cdot4\pi r^2\)</span>, and only the
+inner charge is enclosed:</p>
+<p><span class="math display">\[
+\mathcal{E}(r) = \frac{Q}{4\pi\varepsilon_0r^2}, \qquad a &lt; r &lt; b.
+\]</span></p>
+<p>The outer shell’s charge adds nothing inside it, because a Gaussian
+sphere inside the shell does not enclose it. Integrate from <span
+class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span> to get the voltage, using <span
+class="math inline">\(\int dr/r^2 = -1/r\)</span>:</p>
+<p><span class="math display">\[
+V = \int_a^b \frac{Q}{4\pi\varepsilon_0r^2}\,dr =
+\frac{Q}{4\pi\varepsilon_0}\left(\frac1a - \frac1b\right) =
+\frac{Q\,(b-a)}{4\pi\varepsilon_0\,ab}.
+\]</span></p>
+<p>Use this to replace the charge, which nobody measures, by the
+voltage, which is what we set:</p>
+<p><span class="math display">\[
+\mathcal{E}(r) = \frac{V\,ab}{(b-a)\,r^2}, \qquad \mathcal{E}(a) =
+\frac{V\,b}{a\,(b-a)}.
+\]</span></p>
+<p>As <span class="math inline">\(b\to\infty\)</span> the surface field
+becomes <span class="math inline">\(V/a\)</span>, the isolated sphere of
+section 1. How far away must the earthed wall be before a sphere counts
+as isolated? For <span class="math inline">\(a = 0.3\)</span> m at 1 MV
+the surface field is 6.67 MV/m with the wall at <span
+class="math inline">\(b = 0.6\)</span> m, 4.76 at 1 m, 3.92 at 2 m, 3.55
+at 5 m, and 3.33 MV/m with no wall at all. A nearby wall raises the
+field, because the same voltage must now fall across a shorter path.</p>
+<p>For a fixed tank radius <span class="math inline">\(b\)</span>, the
+field on the terminal is least when <span
+class="math inline">\(a(b-a)\)</span> is largest: <span
+class="math inline">\(d[a(b-a)]/da = b - 2a = 0\)</span>, so <span
+class="math inline">\(a = b/2\)</span> and <span
+class="math inline">\(\mathcal{E}_{min} = 4V/b\)</span>.</p>
+<p><strong>Coaxial cylinders.</strong> Now an inner cylinder of radius
+<span class="math inline">\(a\)</span> carries charge <span
+class="math inline">\(\lambda\)</span> per metre (C/m) inside an earthed
+tube of radius <span class="math inline">\(b\)</span>, both long enough
+that the ends do not matter. Take a Gaussian cylinder of radius <span
+class="math inline">\(r\)</span> and length <span
+class="math inline">\(\ell\)</span>. The field is radial, so no flux
+leaves through the flat ends; through the curved side the flux is <span
+class="math inline">\(\mathcal{E}\cdot2\pi r\ell\)</span>, and the
+charge inside is <span class="math inline">\(\lambda\ell\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{E}(r) = \frac{\lambda}{2\pi\varepsilon_0r}, \qquad V =
+\int_a^b\frac{\lambda}{2\pi\varepsilon_0r}\,dr =
+\frac{\lambda}{2\pi\varepsilon_0}\ln\frac ba,
+\]</span></p>
+<p>since <span class="math inline">\(\int dr/r = \ln r\)</span> and
+<span class="math inline">\(\ln b - \ln a = \ln(b/a)\)</span> (<a
+href="F1-calculus.html#4-the-exponential-and-the-logarithm">F1, section
+4</a>). Eliminating <span class="math inline">\(\lambda\)</span>,</p>
+<p><span class="math display">\[
+\mathcal{E}(r) = \frac{V}{r\ln(b/a)}, \qquad \mathcal{E}(a) =
+\frac{V}{a\ln(b/a)}.
+\]</span></p>
+<p>The field falls only as <span class="math inline">\(1/r\)</span>,
+more slowly than the <span class="math inline">\(1/r^2\)</span> of
+spheres, so a cylinder spreads its voltage more evenly across the gap.
+For fixed <span class="math inline">\(b\)</span>, minimise <span
+class="math inline">\(\mathcal{E}(a)\)</span> by making <span
+class="math inline">\(a\ln(b/a) = a(\ln b - \ln a)\)</span> largest: by
+the product rule its derivative is <span class="math inline">\((\ln b -
+\ln a) + a\times(-1/a) = \ln(b/a) - 1\)</span>, zero at <span
+class="math inline">\(a = b/\mathrm{e}\)</span>, where the field is
+<span class="math inline">\(\mathcal{E}_{min} = \mathrm{e}V/b\)</span>.
+Comparing the two best cases at the same <span
+class="math inline">\(b\)</span> and <span
+class="math inline">\(V\)</span>, a sphere’s least field is <span
+class="math inline">\(4/\mathrm{e} = 1.47\)</span> times a
+cylinder’s.</p>
+<p><img src="figures/04-terminal-optimum.svg" loading="lazy"
+alt="Field on a terminal against its radius, for spheres and cylinders" /></p>
+<p><em>Figure 4.2. The field on an inner electrode of radius <span
+class="math inline">\(a\)</span> inside an earthed one of radius <span
+class="math inline">\(b\)</span>, in units of <span
+class="math inline">\(V/b\)</span>: <span
+class="math inline">\(b/[a(b-a)]\)</span> for concentric spheres, least
+(4) at <span class="math inline">\(a = b/2\)</span>, and <span
+class="math inline">\(1/[a\ln(b/a)]\)</span> for coaxial cylinders,
+least (<span class="math inline">\(\mathrm{e}\)</span>) at <span
+class="math inline">\(a = b/\mathrm{e}\)</span>. A small terminal is too
+sharply curved, a large one leaves too little gap; the minimum between
+them is shallow.</em></p>
+<p><em>At work: Herb’s tank.</em> The tank of section 1 has <span
+class="math inline">\(b = 0.838\)</span> m and held 2.16 MV. As coaxial
+cylinders, the best terminal radius is <span
+class="math inline">\(0.838/2.718 = 0.308\)</span> m and the field on it
+7.0 MV/m. Were the terminal a sphere in a spherical tank of the same
+radius, the best radius would be 0.419 m and the least field <span
+class="math inline">\(4\times2.16/0.838 = 10.3\)</span> MV/m. As a check
+on the line integral, integrating <span
+class="math inline">\(Q/(4\pi\varepsilon_0r^2)\)</span> numerically from
+0.419 m to 0.838 m, with <span class="math inline">\(Q\)</span> chosen
+from the formula above, returns 2.16 MV.</p>
+<p><em>At work: a corona wire.</em> The wire of section 4, radius 1 mm
+in a tube of radius 10 cm at 28.5 kV, has <span
+class="math inline">\(\mathcal{E}(a) = 28\,500/(0.001\ln100) =
+6.19\)</span> MV/m. The mean field across the gap is <span
+class="math inline">\(28.5\ \mathrm{kV}/0.099\ \mathrm{m} =
+0.29\)</span> MV/m; the wire sees 21 times the mean.</p>
+<p><strong>Exercise A1.</strong> Van de Graaff’s Round Hill sphere had
+radius 2.29 m. (a) What charge did it carry at 2.4 MV, treated as
+isolated? (b) How far away must an earthed concentric wall be for the
+surface field to be no more than 10 per cent above the isolated
+value?</p>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li><p><span class="math inline">\(Q = 4\pi\varepsilon_0R_sV =
+1.113\times10^{-10}\times2.29\times2.4\times10^6 =
+6.1\times10^{-4}\)</span> C, with surface field <span
+class="math inline">\(2.4/2.29 = 1.05\)</span> MV/m.</p></li>
+<li><p>The concentric-sphere field is the isolated one times <span
+class="math inline">\(b/(b-a)\)</span>. Setting <span
+class="math inline">\(b/(b-a) = 1.1\)</span> gives <span
+class="math inline">\(b = 11a = 25\)</span> m. A hall large enough for a
+sphere is also large enough to raise its field noticeably.</p></li>
+</ol>
+</details>
+<p><strong>Exercise A2.</strong> For coaxial cylinders at the best ratio
+<span class="math inline">\(a = b/\mathrm{e}\)</span>, what fraction of
+the voltage lies across the tenth of the gap nearest the inner
+conductor? Compare spheres at <span class="math inline">\(a =
+b/2\)</span>.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>For cylinders the potential drop from <span
+class="math inline">\(a\)</span> to <span
+class="math inline">\(r\)</span> is <span
+class="math inline">\(V\ln(r/a)/\ln(b/a)\)</span>. With <span
+class="math inline">\(b = 1\)</span>, <span class="math inline">\(a =
+0.368\)</span> and <span class="math inline">\(r = a + 0.1(b - a) =
+0.431\)</span>: <span class="math inline">\(\ln(0.431/0.368)/1 =
+0.159\)</span>, so 16 per cent. For spheres the drop is <span
+class="math inline">\(V(1/a - 1/r)/(1/a - 1/b)\)</span>; with <span
+class="math inline">\(a = 0.5\)</span> and <span class="math inline">\(r
+= 0.55\)</span> this is 0.18. Either way the tenth of the gap next to
+the terminal carries more than its tenth of the voltage, which is why
+the terminal’s surface is where breakdown starts.</p>
+</details>
+<h3
+id="pre-requisite-continued-laplace-and-poisson-equations-uniqueness-boundary-value-problems">Pre-requisite
+(continued): Laplace and Poisson equations, uniqueness, boundary-value
+problems</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section gives Laplace’s equation
+in three dimensions, conductors as equipotentials, the uniqueness
+theorem, the conducting sphere in a uniform field, potentials that
+depend on one coordinate only, and why sharp points carry strong fields.
+Section 1 uses them for the hemispherical bump that triples a field, the
+needle of exercise 4, and the rule that every high-voltage conductor is
+round. Taught from Tong, <em>Electromagnetism</em>, sections 2.2 and 2.4
+(conductors, charge and curvature, 2.4.2 boundary-value problems, 2.4.3
+problem 3), and Kuffel, Zaengl and Kuffel, sections 4.2.5 (field
+distortions by conducting particles, in prolate spheroidal coordinates)
+and 4.1.</p>
+</blockquote>
+<p>Reminder: <a
+href="02-the-cathode-ray-tube.html#pre-requisite-laplace-and-poisson-equations-uniqueness-boundary-value-problems">chapter
+2</a> solved Poisson’s equation <span class="math inline">\(d^2V/dx^2 =
+-\rho/\varepsilon_0\)</span> across a diode in one dimension, and noted
+that an empty gap gives a straight-line potential. Real electrodes need
+three dimensions, and with them the divergence of <a
+href="F2-vectors.html#10-divergence-and-gausss-theorem">F2, section
+10</a> and the Laplacian of <a
+href="F2-vectors.html#12-the-laplacian">F2, section 12</a>.</p>
+<p><strong>Laplace’s equation in three dimensions.</strong> Apply
+Gauss’s law to a tiny box of sides <span
+class="math inline">\(dx\)</span>, <span
+class="math inline">\(dy\)</span>, <span
+class="math inline">\(dz\)</span>. The flux out through the two faces
+normal to <span class="math inline">\(x\)</span> is <span
+class="math inline">\([\mathcal{E}_x(x+dx) - \mathcal{E}_x(x)]\,dy\,dz =
+(\partial \mathcal{E}_x/\partial x)\,dx\,dy\,dz\)</span>, and likewise
+for <span class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span>. Setting the total equal to <span
+class="math inline">\(\rho\,dx\,dy\,dz/\varepsilon_0\)</span>, with
+<span class="math inline">\(\rho\)</span> the charge density in C/m<span
+class="math inline">\(^3\)</span>,</p>
+<p><span class="math display">\[
+\nabla\cdot\boldsymbol{\mathcal{E}} = \frac{\partial
+\mathcal{E}_x}{\partial x} + \frac{\partial \mathcal{E}_y}{\partial y} +
+\frac{\partial \mathcal{E}_z}{\partial z} = \frac{\rho}{\varepsilon_0}.
+\]</span></p>
+<p>Put in <span class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla
+V\)</span> and this becomes Poisson’s equation, <span
+class="math inline">\(\nabla^2V = -\rho/\varepsilon_0\)</span>; in space
+empty of charge, which is nearly all the space between electrodes, it is
+Laplace’s equation,</p>
+<p><span class="math display">\[
+\nabla^2V = \frac{\partial^2V}{\partial x^2} +
+\frac{\partial^2V}{\partial y^2} + \frac{\partial^2V}{\partial z^2} = 0.
+\]</span></p>
+<p>What it says: average <span class="math inline">\(V\)</span> over a
+small sphere of radius <span class="math inline">\(h\)</span> around a
+point. Let <span class="math inline">\(\hat{\mathbf{n}} = (n_x, n_y,
+n_z)\)</span> be a unit vector pointing from the centre to a point on
+the sphere. A Taylor series in three variables (<a
+href="F1-calculus.html#8-approximating-a-function-taylor-series">F1,
+sections 8 and 9</a>) gives</p>
+<p><span class="math display">\[
+V(\text{centre} + h\hat{\mathbf{n}}) = V_0 + h\left(n_x\frac{\partial
+V}{\partial x} + n_y\frac{\partial V}{\partial y} + n_z\frac{\partial
+V}{\partial z}\right) +
+\frac{h^2}{2}\sum_{i,j}n_in_j\frac{\partial^2V}{\partial x_i\,\partial
+x_j} + \ldots
+\]</span></p>
+<p>Average over all directions. Every <span
+class="math inline">\(\hat{\mathbf{n}}\)</span> is paired with <span
+class="math inline">\(-\hat{\mathbf{n}}\)</span>, so the averages of
+<span class="math inline">\(n_x\)</span>, <span
+class="math inline">\(n_y\)</span>, <span
+class="math inline">\(n_z\)</span> and of the mixed products such as
+<span class="math inline">\(n_xn_y\)</span> are zero. The squares are
+not: <span class="math inline">\(n_x^2 + n_y^2 + n_z^2 = 1\)</span>
+everywhere, and no axis is special, so each square averages to 1/3. Only
+the terms <span
+class="math inline">\(\frac{h^2}{2}\cdot\frac13(\partial^2V/\partial x^2
++ \partial^2V/\partial y^2 + \partial^2V/\partial z^2)\)</span> survive,
+and the average is <span class="math inline">\(V_0 +
+h^2\nabla^2V/6\)</span>. Laplace’s equation says the potential at every
+point equals its local average. So <span
+class="math inline">\(V\)</span> has no peak or hollow in empty space;
+its extremes, and the steepest slopes with them, sit on the
+electrodes.</p>
+<p><strong>Conductors.</strong> In a metal, charges move freely. In
+equilibrium the field inside must be zero, or current would flow; so
+<span class="math inline">\(V\)</span> is the same throughout the metal
+and over its surface. Just outside, the field is normal to the surface,
+because a component along the surface would push the surface charges
+along. A conductor is therefore a boundary on which <span
+class="math inline">\(V\)</span> is given, and the field leaves it at
+right angles.</p>
+<p><strong>Uniqueness.</strong> In a region bounded by surfaces on which
+<span class="math inline">\(V\)</span> is given, Laplace’s equation has
+only one solution. Suppose <span class="math inline">\(V_1\)</span> and
+<span class="math inline">\(V_2\)</span> both solve it with the same
+boundary values. Their difference <span class="math inline">\(U = V_1 -
+V_2\)</span> satisfies <span class="math inline">\(\nabla^2U =
+0\)</span> inside and <span class="math inline">\(U = 0\)</span> on
+every boundary. The product rule, used on each component, gives <span
+class="math inline">\(\partial_x(U\,\partial_xU) = (\partial_xU)^2 +
+U\,\partial_x^2U\)</span>, and adding the three components, <span
+class="math inline">\(\nabla\cdot(U\nabla U) = |\nabla U|^2 + U\nabla^2U
+= |\nabla U|^2\)</span>. Integrate over the region (<span
+class="math inline">\(d\tau\)</span> is an element of volume, m<span
+class="math inline">\(^3\)</span>) and use the divergence theorem of <a
+href="F2-vectors.html#10-divergence-and-gausss-theorem">F2, section
+10</a>:</p>
+<p><span class="math display">\[
+\int |\nabla U|^2\,d\tau = \oint U\,\nabla U\cdot d\mathbf{S} = 0,
+\]</span></p>
+<p>since <span class="math inline">\(U = 0\)</span> on the boundary. A
+sum of squares that is zero means <span class="math inline">\(\nabla U =
+0\)</span> everywhere, so <span class="math inline">\(U\)</span> is
+constant, and zero because it is zero on the boundary. Two consequences
+matter here:</p>
+<ol type="1">
+<li>Any potential, however it was found or guessed, that satisfies
+Laplace’s equation and the boundary values is <em>the</em> answer. This
+licenses the guesses below and the image charges of section 8.</li>
+<li>Any equipotential surface of a known solution can be replaced by a
+thin metal sheet held at that potential, and the field on either side
+does not change: both sides still satisfy Laplace’s equation with the
+same boundary values.</li>
+</ol>
+<p><strong>A conducting sphere in a uniform field.</strong> Put an
+earthed sphere of radius <span class="math inline">\(R\)</span> (m) at
+the origin of a uniform field <span
+class="math inline">\(\mathcal{E}_0\)</span> along <span
+class="math inline">\(z\)</span>, whose potential is <span
+class="math inline">\(-\mathcal{E}_0z =
+-\mathcal{E}_0r\cos\theta\)</span> in spherical coordinates (<span
+class="math inline">\(r\)</span> from the centre, <span
+class="math inline">\(\theta\)</span> from the <span
+class="math inline">\(z\)</span> axis). Far away, the field must return
+to this. Try <span class="math inline">\(V = f(r)\cos\theta\)</span>.
+For a potential that does not depend on the azimuth, the Laplacian in
+spherical coordinates is</p>
+<p><span class="math display">\[
+\nabla^2V = \frac{1}{r^2}\frac{\partial}{\partial
+r}\left(r^2\frac{\partial V}{\partial r}\right) +
+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial
+V}{\partial\theta}\right)
+\]</span></p>
+<p>(derived below from the scale factors). For <span
+class="math inline">\(V = f(r)\cos\theta\)</span> the radial part is
+<span class="math inline">\((1/r^2)(r^2f&#39;)&#39;\cos\theta\)</span>.
+In the angular part, <span class="math inline">\(\partial_\theta V =
+-f\sin\theta\)</span>, so <span
+class="math inline">\(\sin\theta\,\partial_\theta V =
+-f\sin^2\theta\)</span>, whose <span
+class="math inline">\(\theta\)</span>-derivative is <span
+class="math inline">\(-2f\sin\theta\cos\theta\)</span>; dividing by
+<span class="math inline">\(r^2\sin\theta\)</span> leaves <span
+class="math inline">\(-2f\cos\theta/r^2\)</span>. The two parts sum to
+zero when <span class="math inline">\((r^2f&#39;)&#39; = 2f\)</span>.
+Try <span class="math inline">\(f = r^n\)</span>: <span
+class="math inline">\(r^2f&#39; = nr^{n+1}\)</span>, whose derivative is
+<span class="math inline">\(n(n+1)r^n\)</span>, so <span
+class="math inline">\(n(n+1) = 2\)</span>, giving <span
+class="math inline">\(n = 1\)</span> or <span class="math inline">\(n =
+-2\)</span>. The combination that goes to <span
+class="math inline">\(-\mathcal{E}_0r\)</span> far away and to zero on
+the sphere is</p>
+<p><span class="math display">\[
+V = -\mathcal{E}_0\left(r - \frac{R^3}{r^2}\right)\cos\theta.
+\]</span></p>
+<p>The second term is the field of a dipole: the charges the field draws
+onto the sphere. By uniqueness this is the answer. The field on the
+surface is</p>
+<p><span class="math display">\[
+\mathcal{E}_r = -\frac{\partial V}{\partial r}\bigg|_{r=R} =
+\mathcal{E}_0\left(1 + \frac{2R^3}{r^3}\right)\cos\theta\bigg|_{r=R} =
+3\mathcal{E}_0\cos\theta,
+\]</span></p>
+<p>three times the applied field at the poles. A numerical check (the
+Laplacian by finite differences at an arbitrary point, and the field at
+the pole) confirms both: the Laplacian is zero to <span
+class="math inline">\(3\times10^{-7}\)</span> and the pole field is
+<span class="math inline">\(3.000\mathcal{E}_0\)</span>. The factor 3
+does not depend on <span class="math inline">\(R\)</span>: Laplace’s
+equation contains no length, so a sphere of a micrometre and a sphere of
+a metre give the same ratio.</p>
+<p>The plane <span class="math inline">\(z = 0\)</span> is the
+equipotential <span class="math inline">\(V = 0\)</span> of this
+solution. By the second consequence of uniqueness, replace it with a
+flat earthed electrode: the half of the solution above the plane is the
+field over a <strong>hemispherical bump</strong> on a flat electrode.
+Any such bump, whatever its size, triples the field at its top. Away
+from the bump the excess dies fast: along the axis the field is <span
+class="math inline">\(\mathcal{E}_0(1 + 2R^3/r^3)\)</span>, so <span
+class="math inline">\(1.59\mathcal{E}_0\)</span> at <span
+class="math inline">\(r = 1.5R\)</span>, <span
+class="math inline">\(1.25\mathcal{E}_0\)</span> at <span
+class="math inline">\(2R\)</span> and <span
+class="math inline">\(1.07\mathcal{E}_0\)</span> at <span
+class="math inline">\(3R\)</span>.</p>
+<p><img src="figures/04-boss.svg" loading="lazy"
+alt="Field lines and equipotentials over a hemispherical boss on a flat electrode" /></p>
+<p><em>Figure 4.3. A hemispherical boss on a flat electrode, from <span
+class="math inline">\(V = -\mathcal{E}_0(r -
+R^3/r^2)\cos\theta\)</span>. Solid lines are field lines, dashed lines
+equipotentials. The field lines crowd onto the top, where the field is
+<span class="math inline">\(3\mathcal{E}_0\)</span>, and spread apart at
+the foot, where it falls towards zero; a few radii away the field is
+uniform again.</em></p>
+<p><em>At work.</em> Herb’s terminal ran at 7.0 MV/m (section 1). A
+hemispherical burr anywhere on it would see 21 MV/m, above the 17 MV/m
+that air at 0.69 MPa bears. A small burr’s excess field is confined to a
+layer a few burr radii thick, which may be too thin for an avalanche to
+grow across the gap; it then gives corona, or in vacuum field emission
+(section 5), rather than a full spark. Either way, it loads the terminal
+or starts the trouble.</p>
+<p><strong>Potentials that depend on one coordinate.</strong> Planes,
+spheres and cylinders give potentials depending on one coordinate, and
+so does the needle. The general method: in orthogonal coordinates <span
+class="math inline">\((q_1, q_2, q_3)\)</span>, let <span
+class="math inline">\(h_i\)</span> be the scale factors, the length
+moved per unit change of <span class="math inline">\(q_i\)</span>. A
+small box has sides <span class="math inline">\(h_1dq_1\)</span>, <span
+class="math inline">\(h_2dq_2\)</span>, <span
+class="math inline">\(h_3dq_3\)</span>. The flux of <span
+class="math inline">\(\nabla V\)</span> through its faces normal to
+<span class="math inline">\(q_1\)</span> is the face area <span
+class="math inline">\(h_2h_3\,dq_2\,dq_3\)</span> times the normal
+derivative <span class="math inline">\((1/h_1)\partial V/\partial
+q_1\)</span>; the net outflow from the pair of faces is <span
+class="math inline">\(\partial_{q_1}[(h_2h_3/h_1)\partial_{q_1}V]\,dq_1dq_2dq_3\)</span>.
+Summing the three pairs and dividing by the volume <span
+class="math inline">\(h_1h_2h_3\,dq_1dq_2dq_3\)</span>,</p>
+<p><span class="math display">\[
+\nabla^2V = \frac{1}{h_1h_2h_3}\sum_{i=1}^{3}\frac{\partial}{\partial
+q_i}\left(\frac{h_1h_2h_3}{h_i^2}\frac{\partial V}{\partial q_i}\right).
+\]</span></p>
+<p>If <span class="math inline">\(V\)</span> depends on <span
+class="math inline">\(q_1\)</span> alone, Laplace’s equation reduces to
+<span class="math inline">\(\partial_{q_1}[(h_2h_3/h_1)\,dV/dq_1] =
+0\)</span>, which can be integrated twice when the factor <span
+class="math inline">\(h_2h_3/h_1\)</span> splits into a function of
+<span class="math inline">\(q_1\)</span> times a function of the other
+coordinates.</p>
+<ul>
+<li>Spherical coordinates <span class="math inline">\((r, \theta,
+\varphi)\)</span> have <span class="math inline">\(h = (1, r,
+r\sin\theta)\)</span>; for <span class="math inline">\(V(r)\)</span>:
+<span class="math inline">\((r^2V&#39;)&#39; = 0\)</span>, so <span
+class="math inline">\(V = -A/r + B\)</span>, the concentric
+spheres.</li>
+<li>Cylindrical coordinates <span class="math inline">\((r, \varphi,
+z)\)</span> have <span class="math inline">\(h = (1, r, 1)\)</span>; for
+<span class="math inline">\(V(r)\)</span>: <span
+class="math inline">\((rV&#39;)&#39; = 0\)</span>, so <span
+class="math inline">\(V = A\ln r + B\)</span>, the coaxial
+cylinders.</li>
+<li>Prolate spheroidal coordinates use the hyperbolic functions <span
+class="math inline">\(\sinh u = (e^u - e^{-u})/2\)</span> and <span
+class="math inline">\(\cosh u = (e^u + e^{-u})/2\)</span>, which obey
+<span class="math inline">\(\cosh^2u - \sinh^2u = 1\)</span> much as
+cosine and sine obey <span class="math inline">\(\cos^2 + \sin^2 =
+1\)</span>; <span class="math inline">\(\sinh 0 = 0\)</span> and <span
+class="math inline">\(\cosh 0 = 1\)</span>. The coordinates <span
+class="math inline">\((u, \theta, \varphi)\)</span>, with foci a
+distance <span class="math inline">\(a\)</span> from the origin on the
+<span class="math inline">\(z\)</span> axis, are defined by <span
+class="math inline">\(x = a\sinh u\sin\theta\cos\varphi\)</span>, <span
+class="math inline">\(y = a\sinh u\sin\theta\sin\varphi\)</span>, <span
+class="math inline">\(z = a\cosh u\cos\theta\)</span>, with <span
+class="math inline">\(u \ge 0\)</span> and <span class="math inline">\(0
+\le \theta \le \pi\)</span>; the surfaces of constant <span
+class="math inline">\(u\)</span> are prolate spheroids. They have <span
+class="math inline">\(h_u = h_\theta = a\sqrt{\sinh^2u +
+\sin^2\theta}\)</span> and <span class="math inline">\(h_\varphi =
+a\sinh u\sin\theta\)</span> (found as in <a
+href="F2-vectors.html#13-coordinates-that-fit-round-things">F2, section
+13</a>: change one coordinate a little, holding the others, and measure
+the length of the step that results). For <span
+class="math inline">\(V(\theta)\)</span> the factor <span
+class="math inline">\(h_uh_\varphi/h_\theta = a\sinh
+u\sin\theta\)</span> splits, and Laplace’s equation becomes <span
+class="math inline">\(\frac{d}{d\theta}\left(\sin\theta\frac{dV}{d\theta}\right)
+= 0\)</span>. The surfaces of constant <span
+class="math inline">\(\theta\)</span> are hyperboloids of revolution,
+and <span class="math inline">\(\theta = \pi/2\)</span> is a plane: a
+needle facing a plate.</li>
+</ul>
+<p>Integrating the last once gives <span
+class="math inline">\(\sin\theta\,dV/d\theta = -A\)</span>, a constant,
+so <span class="math inline">\(dV/d\theta = -A/\sin\theta\)</span>. The
+integral of <span class="math inline">\(1/\sin\theta\)</span> is <span
+class="math inline">\(\ln\tan(\theta/2)\)</span>, as differentiating
+checks: <span class="math inline">\(\frac{d}{d\theta}\ln\tan(\theta/2) =
+\frac{\frac12\sec^2(\theta/2)}{\tan(\theta/2)} =
+\frac{1}{2\sin(\theta/2)\cos(\theta/2)} = \frac{1}{\sin\theta}\)</span>.
+So <span class="math inline">\(V = -A\ln\tan(\theta/2) + B =
+A\ln\cot(\theta/2) + B\)</span>, and <span class="math inline">\(B =
+0\)</span> makes it zero on the plane, where <span
+class="math inline">\(\cot(\pi/4) = 1\)</span>. This <span
+class="math inline">\(V = A\ln\cot(\theta/2)\)</span> is zero on the
+plane (a finite-difference Laplacian of it at an arbitrary point is zero
+to <span class="math inline">\(5\times10^{-7}\)</span>). Exercise 4 of
+the chapter takes it to <span class="math inline">\(\mathcal{E}_{tip}
+\approx 2V/[r\ln(4d/r)]\)</span> for a tip of radius <span
+class="math inline">\(r\)</span> at distance <span
+class="math inline">\(d\)</span>. At 10 kV with <span
+class="math inline">\(r = 0.1\)</span> mm and <span
+class="math inline">\(d = 10\)</span> cm this is 24.1 MV/m; the exact
+hyperboloid gives 24.12 MV/m. With a 1 mm tip it is 3.3 MV/m: the field
+goes almost as <span class="math inline">\(1/r\)</span>, while the
+distance enters only through a logarithm.</p>
+<p><strong>Charge and curvature.</strong> Why are sharp places strong?
+Take two spheres of radii <span class="math inline">\(R_1\)</span> and
+<span class="math inline">\(R_2\)</span>, far apart and joined by a thin
+wire, so they share one potential <span
+class="math inline">\(V\)</span>. Each is nearly isolated, so <span
+class="math inline">\(V = Q_1/(4\pi\varepsilon_0R_1) =
+Q_2/(4\pi\varepsilon_0R_2)\)</span>, and the charges are in proportion
+to the radii. The surface charge per area, <span
+class="math inline">\(Q/4\pi R^2\)</span>, and with it the surface field
+<span class="math inline">\(V/R\)</span>, go as <span
+class="math inline">\(1/R\)</span>: <span
+class="math inline">\(\mathcal{E}_1/\mathcal{E}_2 = R_2/R_1\)</span>. A
+single conductor with parts of different curvature behaves roughly the
+same way: its sharply curved parts carry more charge per area and more
+field. A terminal of radius 0.25 m at 300 kV has 1.2 MV/m on its
+surface; a wire end of radius 1 mm at the same potential would, by this
+estimate, carry up to 300 MV/m. The estimate overstates it, because the
+wire end sits close to the large sphere. Treating the wire end instead
+as a needle 25 cm from an earthed wall, the needle formula gives <span
+class="math inline">\(2\times300\ \mathrm{kV}/(1\
+\mathrm{mm}\times\ln1000) = 87\)</span> MV/m: lower, and still far above
+the 3 MV/m air bears. Hence the hemispheres, toroids and corona rings of
+the high-voltage laboratory.</p>
+<p><strong>Exercise B1.</strong> On a conducting sphere in a uniform
+field <span class="math inline">\(\mathcal{E}_0\)</span>, at what angle
+from the pole is the surface field equal to <span
+class="math inline">\(\mathcal{E}_0\)</span>? What does this say about a
+hemispherical boss?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(3\mathcal{E}_0\cos\theta =
+\mathcal{E}_0\)</span> gives <span class="math inline">\(\cos\theta =
+1/3\)</span>, <span class="math inline">\(\theta = 70.5°\)</span>. Over
+the top 70° of a boss the field exceeds the applied field; near its foot
+the field falls to zero, because the gas there sits in a right-angled
+corner between the bump and the flat electrode, and a field cannot reach
+into such a corner.</p>
+</details>
+<p><strong>Exercise B2.</strong> A needle of tip radius 0.1 mm stands 10
+cm from a plate at 10 kV (24.1 MV/m at the tip). Find the tip field if
+the radius is halved, and separately if the distance is doubled.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\mathcal{E}_{tip} =
+2V/[r\ln(4d/r)]\)</span>. Halving <span class="math inline">\(r\)</span>
+to 0.05 mm: <span
+class="math inline">\(2\times10^4/(5\times10^{-5}\ln8000) =
+44.5\)</span> MV/m, nearly double. Doubling <span
+class="math inline">\(d\)</span> to 20 cm: <span
+class="math inline">\(2\times10^4/(10^{-4}\ln8000) = 22.3\)</span> MV/m,
+only 8 per cent lower. The tip’s radius controls the field; the gap
+barely does.</p>
+</details>
+<p><strong>Exercise B3.</strong> Show that <span class="math inline">\(V
+= A\ln r + B\)</span> is the only potential depending on <span
+class="math inline">\(r\)</span> alone between coaxial cylinders, and
+fix <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> for the inner cylinder at <span
+class="math inline">\(V\)</span> and the outer at zero.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\((rV&#39;)&#39; = 0\)</span> gives <span
+class="math inline">\(rV&#39; = A\)</span>, so <span
+class="math inline">\(V&#39; = A/r\)</span> and <span
+class="math inline">\(V = A\ln r + B\)</span>. With <span
+class="math inline">\(V(b) = 0\)</span>, <span class="math inline">\(B =
+-A\ln b\)</span>, so <span class="math inline">\(V(r) =
+A\ln(r/b)\)</span>; with <span class="math inline">\(V(a) = V\)</span>,
+<span class="math inline">\(A = V/\ln(a/b) = -V/\ln(b/a)\)</span>. Then
+<span class="math inline">\(\mathcal{E} = -dV/dr =
+V/[r\ln(b/a)]\)</span>, the result Gauss’s law gave in the previous
+section. By uniqueness the two methods must agree.</p>
+</details>
+<h3
+id="pre-requisite-continued-dielectrics-capacitance-and-field-energy">Pre-requisite
+(continued): Dielectrics, capacitance and field energy</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section gives the relative
+permittivity and the displacement <span
+class="math inline">\(\mathbf{D}\)</span>, the conditions on fields at a
+boundary between materials, the field in series layers, the charge on a
+conductor’s surface, capacitance, stored energy and the force on an
+electrode. Section 1 uses them for the triple junction; sections 5, 7, 8
+and 9 use them for Cranberg’s clumps, voids in solids, the voltmeters
+and the stored energy. Taught from Tong, <em>Electromagnetism</em>,
+sections 2.1.4 (surface charge and discontinuities), 2.3 (electrostatic
+energy), 2.4.1 (capacitors) and 8.1 (polarisation, electric
+displacement), Landau and Lifshitz, volume 2, section 31 (energy
+density), and Kuffel, Zaengl and Kuffel, section 4.3 (fields in several
+dielectrics).</p>
+</blockquote>
+<p>Reminder: <a
+href="01-why-accelerate.html#pre-requisite-dielectrics-capacitance-and-field-energy">chapter
+1</a> used <span class="math inline">\(\Delta V = Q/C\)</span> for the
+voltage a collected charge makes on a capacitance. Here is where
+capacitance comes from, and what an insulator does to a field. <a
+href="F4-electromagnetism.html#6-capacitance-and-the-energy-in-the-field">F4,
+section 6</a> and <a
+href="F4-electromagnetism.html#7-dielectrics-briefly">section 7</a> gave
+the first look; this section goes further.</p>
+<p><strong>Polarisation and relative permittivity.</strong> An insulator
+has no free charges, but its atoms and molecules are stretched by a
+field: electrons shift against the nuclei, and polar molecules turn.
+Each becomes a small dipole along the field: a pair of equal and
+opposite charges <span class="math inline">\(\pm q\)</span> a small
+distance <span class="math inline">\(\ell\)</span> apart, with dipole
+moment <span class="math inline">\(q\ell\)</span> (C m; <a
+href="F4-electromagnetism.html#3-the-electric-field-and-superposition">F4,
+section 3</a>). The dipole moment per unit volume is the polarisation
+<span class="math inline">\(\mathbf{P}\)</span> (C/m<span
+class="math inline">\(^2\)</span>). Inside a uniform piece the shifted
+charges cancel, but at its surfaces a layer is left uncovered: a bound
+surface charge of density <span
+class="math inline">\(\mathbf{P}\cdot\hat{\mathbf{n}}\)</span>, which
+opposes the applied field and weakens it inside. In most insulators
+<span class="math inline">\(\mathbf{P}\)</span> is proportional to <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span>, and it is
+convenient to define the displacement</p>
+<p><span class="math display">\[
+\mathbf{D} = \varepsilon_0\boldsymbol{\mathcal{E}} + \mathbf{P} =
+\varepsilon_0\varepsilon_r\boldsymbol{\mathcal{E}},
+\]</span></p>
+<p>with <span class="math inline">\(\varepsilon_r\)</span> the relative
+permittivity, a pure number: 1.0005 for air, about 2.2 for transformer
+oil, 2.3 for polyethylene, 2.1 for PTFE, 3.5 to 4 for epoxy, about 9.8
+for alumina. (<span class="math inline">\(\mathbf{D}\)</span> is bold
+here; from section 5 on, <span class="math inline">\(D\)</span> alone is
+a probability of transmission.) Gauss’s law, which counts all charge,
+can then be written for the free charge alone, because the bound charge
+has been folded into <span
+class="math inline">\(\mathbf{D}\)</span>:</p>
+<p><span class="math display">\[
+\oint \mathbf{D}\cdot d\mathbf{S} = Q_{free}.
+\]</span></p>
+<p>Fill a pair of plates holding free charge <span
+class="math inline">\(\pm Q\)</span> on area <span
+class="math inline">\(A_e\)</span> with a dielectric: <span
+class="math inline">\(D = Q/A_e\)</span> as before, so <span
+class="math inline">\(\mathcal{E} =
+Q/(\varepsilon_0\varepsilon_rA_e)\)</span>, smaller by <span
+class="math inline">\(\varepsilon_r\)</span>.</p>
+<p><strong>Conditions at a boundary.</strong> Where two materials meet,
+take a flat pillbox straddling the surface, thinner than anything else
+in the problem. Only its two faces carry flux, so if there is no free
+charge on the surface, the normal component of <span
+class="math inline">\(\mathbf{D}\)</span> is the same on both sides:</p>
+<p><span class="math display">\[
+\varepsilon_{r1}\mathcal{E}_{n1} = \varepsilon_{r2}\mathcal{E}_{n2}.
+\]</span></p>
+<p>Take instead a thin rectangular loop straddling the surface. A static
+field has zero integral round any closed loop (it is conservative, <a
+href="F2-vectors.html#7-line-integrals-work-along-a-path">F2, section
+7</a>), and only the two long sides contribute, so the tangential
+component of <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> is the same on
+both sides. If the surface carries free charge <span
+class="math inline">\(\sigma_q\)</span> per area (C/m<span
+class="math inline">\(^2\)</span>; <span
+class="math inline">\(\sigma_q\)</span> to keep it apart from the
+cross-section <span class="math inline">\(\sigma_c\)</span> of section
+2), the pillbox gives <span class="math inline">\(D_{n2} - D_{n1} =
+\sigma_q\)</span>.</p>
+<p><strong>Surface charge on a conductor.</strong> At a metal surface
+the field inside is zero, so the pillbox gives the field just outside,
+in gas or vacuum:</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{\sigma_q}{\varepsilon_0}, \qquad \sigma_q =
+\varepsilon_0\mathcal{E}.
+\]</span></p>
+<p>A patch of area <span class="math inline">\(A_e\)</span> on an
+electrode where the field is <span
+class="math inline">\(\mathcal{E}\)</span> carries charge <span
+class="math inline">\(\varepsilon_0\mathcal{E}A_e\)</span>. At 3 MV/m
+that is <span class="math inline">\(2.66\times10^{-5}\)</span> C/m<span
+class="math inline">\(^2\)</span>, <span
+class="math inline">\(1.7\times10^{14}\)</span> electrons per square
+metre. This is the charge Cranberg’s clump carries away (section 5), and
+the charge the generating voltmeter detects (section 8).</p>
+<p><strong>Layers in series: why a crevice is dangerous.</strong> A
+solid of thickness <span class="math inline">\(d\)</span> and
+permittivity <span class="math inline">\(\varepsilon_r\)</span> sits
+between flat electrodes, with a thin layer of gas of thickness <span
+class="math inline">\(t\)</span> between it and one electrode. Both
+fields are normal to the layers, so continuity of <span
+class="math inline">\(D_n\)</span> gives <span
+class="math inline">\(\varepsilon_0\mathcal{E}_g =
+\varepsilon_0\varepsilon_r\mathcal{E}_s\)</span>, that is <span
+class="math inline">\(\mathcal{E}_g =
+\varepsilon_r\mathcal{E}_s\)</span>: the gas carries <span
+class="math inline">\(\varepsilon_r\)</span> times the field in the
+solid. The voltages add: <span class="math inline">\(V = \mathcal{E}_sd
++ \mathcal{E}_gt = \mathcal{E}_s(d + \varepsilon_rt)\)</span>. So</p>
+<p><span class="math display">\[
+\mathcal{E}_s = \frac{V}{d + \varepsilon_rt}, \qquad \mathcal{E}_g =
+\frac{\varepsilon_rV}{d + \varepsilon_rt} \approx
+\frac{\varepsilon_rV}{d} \quad (t \ll d/\varepsilon_r).
+\]</span></p>
+<p>The weaker medium gets the stronger field. <em>At work:</em> epoxy 10
+mm thick, <span class="math inline">\(\varepsilon_r = 3.75\)</span>, at
+30 kV, with an air crevice of 0.1 mm at the electrode. Without the
+crevice the field is 3.0 MV/m. With it, the epoxy carries 2.9 MV/m and
+the crevice 10.8 MV/m, 1.08 kV across 0.1 mm of air. Air at one
+atmosphere across 0.1 mm breaks down at about 0.9 kV (Paschen’s law,
+section 2), so the crevice sparks again and again while the solid holds:
+partial discharge, which erodes the epoxy over time. A void inside a
+solid behaves the same way. A crevice of 10 µm carries only 112 V, below
+air’s Paschen minimum of about 330 V, and cannot spark at all; hence
+electrodes are bonded or moulded into their insulators.</p>
+<p><img src="figures/04-crevice.svg" loading="lazy"
+alt="An air crevice between an electrode and an epoxy slab" /></p>
+<p><em>Figure 4.4. Epoxy 10 mm thick (<span
+class="math inline">\(\varepsilon_r = 3.75\)</span>) at 30 kV, with an
+air crevice of 0.1 mm at the earthed electrode (drawn far thicker than
+it is). The normal component of <span
+class="math inline">\(\mathbf{D}\)</span> is continuous, so the air
+carries <span class="math inline">\(\varepsilon_r\)</span> times the
+field in the solid: 10.8 MV/m against 2.9 MV/m. The weaker medium gets
+the stronger field.</em></p>
+<p><strong>Capacitance.</strong> A pair of conductors with charges <span
+class="math inline">\(\pm Q\)</span> and potential difference <span
+class="math inline">\(V\)</span> has capacitance <span
+class="math inline">\(C = Q/V\)</span>, in farads (C/V). Each shape
+follows from its field:</p>
+<ul>
+<li>parallel plates, area <span class="math inline">\(A_e\)</span>, gap
+<span class="math inline">\(d\)</span>: <span class="math inline">\(C =
+\varepsilon_0\varepsilon_rA_e/d\)</span>;</li>
+<li>an isolated sphere of radius <span
+class="math inline">\(R_s\)</span>, from <span class="math inline">\(V =
+Q/(4\pi\varepsilon_0R_s)\)</span>: <span class="math inline">\(C =
+4\pi\varepsilon_0R_s\)</span>, 111 pF per metre of radius;</li>
+<li>concentric spheres: <span class="math inline">\(C =
+4\pi\varepsilon_0ab/(b-a)\)</span>;</li>
+<li>coaxial cylinders, per metre of length: <span
+class="math inline">\(C =
+2\pi\varepsilon_0\varepsilon_r/\ln(b/a)\)</span>, which is 55.6 pF/m in
+gas at the best ratio <span class="math inline">\(b/a =
+\mathrm{e}\)</span>.</li>
+</ul>
+<p><strong>Stored energy.</strong> Charge a capacitor by carrying small
+charges <span class="math inline">\(dq\)</span> from one conductor to
+the other. When it already holds <span class="math inline">\(q\)</span>,
+the voltage is <span class="math inline">\(q/C\)</span> and the step
+costs <span class="math inline">\((q/C)\,dq\)</span>. Summing from zero
+to <span class="math inline">\(Q\)</span>,</p>
+<p><span class="math display">\[
+U_{st} = \int_0^Q\frac{q}{C}\,dq = \frac{Q^2}{2C} = \tfrac12CV^2 =
+\tfrac12QV.
+\]</span></p>
+<p>The factor one half appears because the early charge was moved across
+a smaller voltage. Where is the energy? For plates, <span
+class="math inline">\(\tfrac12CV^2 =
+\tfrac12(\varepsilon_0A_e/d)(\mathcal{E}d)^2 =
+\tfrac12\varepsilon_0\mathcal{E}^2\times A_ed\)</span>: an energy
+density</p>
+<p><span class="math display">\[
+u = \tfrac12\varepsilon_0\mathcal{E}^2 \quad \text{(J/m}^3\text{)}
+\]</span></p>
+<p>through the volume <span class="math inline">\(A_ed\)</span> where
+the field is. The result holds for any shape (in a dielectric it is
+<span
+class="math inline">\(\tfrac12\mathbf{D}\cdot\boldsymbol{\mathcal{E}}\)</span>).
+At 10 MV/m it is 443 J/m<span class="math inline">\(^3\)</span>.</p>
+<p><em>At work.</em> The Round Hill sphere, <span
+class="math inline">\(R_s = 2.29\)</span> m, has <span
+class="math inline">\(C = 255\)</span> pF and at 2.4 MV stored <span
+class="math inline">\(\tfrac12\times255\ \mathrm{pF}\times(2.4\
+\mathrm{MV})^2 = 734\)</span> J. Herb’s terminal, as a coaxial conductor
+at the best ratio, has 56 pF per metre and at 2.16 MV stores 130 J per
+metre. Letournel’s 400 kJ for the Vivitron at 35 MV corresponds to an
+effective capacitance of <span class="math inline">\(2U_{st}/V^2 =
+650\)</span> pF.</p>
+<p><strong>Force on an electrode.</strong> Hold the charge <span
+class="math inline">\(Q\)</span> on parallel plates fixed and let the
+gap <span class="math inline">\(S\)</span> grow by <span
+class="math inline">\(dS\)</span>. The energy <span
+class="math inline">\(U_{st} = Q^2/(2C) =
+Q^2S/(2\varepsilon_0A_e)\)</span> grows by <span
+class="math inline">\(Q^2\,dS/(2\varepsilon_0A_e)\)</span>, and with no
+battery connected that energy must come from work done pulling the
+plates apart. So the plates attract with</p>
+<p><span class="math display">\[
+F = \frac{Q^2}{2\varepsilon_0A_e} =
+\tfrac12\varepsilon_0\mathcal{E}^2A_e =
+\frac{\varepsilon_0A_eV^2}{2S^2}.
+\]</span></p>
+<p>Per unit area this is a pull of <span
+class="math inline">\(\tfrac12\varepsilon_0\mathcal{E}^2\)</span> on any
+conductor surface, equal to the energy density. At 3 MV/m it is only 40
+Pa, a 2,500th of atmospheric pressure: electrostatic forces on
+electrodes are weak. That is why the electrostatic voltmeter of section
+8 needs a delicate balance: a disc 10 cm across at 10 cm feels 0.035 N
+at 100 kV.</p>
+<p><strong>Exercise C1.</strong> For the epoxy above (10 mm, <span
+class="math inline">\(\varepsilon_r = 3.75\)</span>, 30 kV), how thin
+must the air crevice be for its voltage to stay below 330 V?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The crevice voltage is <span class="math inline">\(\mathcal{E}_gt =
+\varepsilon_rVt/(d + \varepsilon_rt)\)</span>. Setting it equal to 330
+V: <span class="math inline">\(3.75\times30\,000\,t = 330(0.01 +
+3.75t)\)</span>, so <span class="math inline">\(t(112\,500 - 1\,238) =
+3.3\)</span> and <span class="math inline">\(t = 30\)</span> µm. Any
+crevice thinner than about 30 µm cannot spark at one atmosphere,
+whatever its exact size, because no gap in air sparks below Paschen’s
+minimum.</p>
+</details>
+<p><strong>Exercise C2.</strong> Herb’s terminal is a coaxial conductor
+of radius 0.308 m in a tank of radius 0.838 m at 2.16 MV. Find the
+energy stored along 1.5 m of it, and the outward pull per square metre
+on its surface.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(C = 2\pi\varepsilon_0/\ln(0.838/0.308) =
+55.6\)</span> pF/m, so 1.5 m holds <span
+class="math inline">\(\tfrac12\times83.5\
+\mathrm{pF}\times(2.16\times10^6)^2 = 194\)</span> J. The surface field
+is 7.0 MV/m, so the pull is <span
+class="math inline">\(\tfrac12\varepsilon_0\mathcal{E}^2 = 217\)</span>
+Pa.</p>
+</details>
+<p><strong>Exercise C3.</strong> The electrostatic voltmeter disc (10 cm
+across, 10 cm gap) feels 0.035 N at 100 kV. What does it feel at 10 kV,
+and what does this mean for the instrument?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The force goes as <span class="math inline">\(V^2\)</span>, so at 10
+kV it is 100 times smaller: 0.35 mN, the weight of 35 mg. To read low
+voltages, the gap is made smaller, since the force goes as <span
+class="math inline">\(1/S^2\)</span>. The square law is also why the
+instrument reads the mean of <span class="math inline">\(V^2\)</span>,
+the root-mean-square value.</p>
+</details>
+<h3 id="1-field-not-voltage-and-the-fields-of-simple-electrodes">1.
+Field, not voltage, and the fields of simple electrodes</h3>
+<p>A medium fails when charges in it, or on its surfaces, gain enough
+energy from the field to multiply. A charge <span
+class="math inline">\(q\)</span> gains <span
+class="math inline">\(q\mathcal{E}\ell\)</span> over a distance <span
+class="math inline">\(\ell\)</span>: a mean free path in gas, the width
+of the barrier at a metal surface, a hop along an insulator. So the
+controlling quantity is the field <span
+class="math inline">\(\mathcal{E}\)</span> (V/m) at the worst place, and
+a voltage is only its integral along a path. The designer’s job is to
+find the largest field anywhere and keep it below what the medium
+bears.</p>
+<p><strong>Plates.</strong> Between large flat plates a distance <span
+class="math inline">\(d\)</span> apart at potential difference <span
+class="math inline">\(V\)</span>, Laplace’s equation gives a uniform
+field <span class="math inline">\(\mathcal{E} = V/d\)</span>. Only here
+are field and voltage simply proportional; real plates fail at their
+edges.</p>
+<p><strong>An isolated sphere.</strong> A sphere of radius <span
+class="math inline">\(R_s\)</span> (subscripted to keep it apart from
+the ring radius <span class="math inline">\(R\)</span>) with charge
+<span class="math inline">\(Q\)</span> has <span class="math inline">\(V
+= Q/(4\pi\varepsilon_0R_s)\)</span> and surface field <span
+class="math inline">\(Q/(4\pi\varepsilon_0R_s^2)\)</span>, so</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{V}{R_s}.
+\]</span></p>
+<p>To hold <span class="math inline">\(V\)</span> in a medium that bears
+<span class="math inline">\(\mathcal{E}_b\)</span>, the radius must be
+at least <span class="math inline">\(V/\mathcal{E}_b\)</span>.</p>
+<p><em>Worked number.</em> Van de Graaff’s 1933 generator at Round Hill
+had aluminium spheres 15 feet (4.57 m) across (Science News Letter,
+January 1933), so <span class="math inline">\(R_s = 2.29\)</span> m. It
+was designed for 10 MV between its two spheres, 5 MV on each; at 5 MV
+the surface field would be <span class="math inline">\(5/2.29 =
+2.2\)</span> MV/m, and at 3 MV/m one sphere alone could reach 6.9 MV. In
+practice the spheres reached 2.4 MV and 2.7 MV, 5.1 MV between them (Van
+Atta and others, 1936). Large laboratory electrodes are in practice
+designed for 1.2 to 1.5 MV/m in air, because dust and surface flaws
+weaken large areas (Kuffel, Zaengl and Kuffel, section 4.2.2).</p>
+<p><strong>The best radius inside a tank.</strong> A terminal sits
+inside an earthed tank. With inner radius <span
+class="math inline">\(a\)</span>, outer radius <span
+class="math inline">\(b\)</span> and potential difference <span
+class="math inline">\(V\)</span>, Gauss’s law gives for concentric
+spheres and coaxial cylinders</p>
+<p><span class="math display">\[
+\mathcal{E}(a) = \frac{V\,b}{a\,(b-a)} \quad\text{(spheres)}, \qquad
+\mathcal{E}(a) = \frac{V}{a\ln(b/a)} \quad\text{(cylinders)}.
+\]</span></p>
+<p>Fix <span class="math inline">\(b\)</span> and <span
+class="math inline">\(V\)</span> and vary <span
+class="math inline">\(a\)</span>. A small inner electrode is sharply
+curved; a large one leaves little gap; between them is a minimum. For
+spheres <span class="math inline">\(a(b-a)\)</span> is largest at <span
+class="math inline">\(a = b/2\)</span>, giving <span
+class="math inline">\(\mathcal{E}_{min} = 4V/b\)</span>. For cylinders,
+<span class="math inline">\(\frac{d}{da}[a\ln(b/a)] = \ln(b/a) - 1 =
+0\)</span> gives <span class="math inline">\(a = b/\mathrm{e}\)</span>
+and</p>
+<p><span class="math display">\[
+\mathcal{E}_{min} = \frac{\mathrm{e}\,V}{b},
+\]</span></p>
+<p>where <span class="math inline">\(\mathrm{e} = 2.718\ldots\)</span>
+is the base of natural logarithms, not the elementary charge; it is
+written upright in this chapter wherever it stands alone.</p>
+<p><em>Worked number: Herb’s tank.</em> Raymond Herb, C. M. Parkinson
+and Donald Kerst put a belt generator in a steel tank 1.68 m in
+diameter, filled with air at 100 pounds per square inch (0.69 MPa), and
+in 1937 reported about 2.5 MV peak and 2.16 MV steadily. For a coaxial
+terminal in a tank of radius <span class="math inline">\(b =
+0.838\)</span> m the best inner radius is 0.31 m, and the least possible
+field at 2.16 MV is <span class="math inline">\(2.718 \times 2.16/0.838
+= 7.0\)</span> MV/m. A long uniform gap in air at that pressure bears
+about 17 MV/m (section 3): the machine ran at about 40 per cent of it,
+typical of large electrodes in compressed gas.</p>
+<p><em>Worked number: the Vivitron.</em> M. Letournel’s 35 MV tandem at
+Strasbourg, designed in the 1980s, has a tank 51 m long and 8.4 m in
+diameter at its centre, filled with sulphur hexafluoride, and a terminal
+1.4 m in diameter (Letournel, 1987). His paper notes that a classical
+tandem puts its terminal near <span class="math inline">\(a/b =
+1/\mathrm{e}\)</span>. Here that would be a radius of 1.55 m and a field
+of 22.7 MV/m at 35 MV; the actual 0.7 m terminal, alone in the tank,
+would see <span class="math inline">\(35/(0.7\ln 6) = 27.9\)</span>
+MV/m. Letournel instead placed seven sets of “discrete electrodes” at
+linearly stepped intermediate potentials across the radial gap. The mean
+field across the gap is <span class="math inline">\(35\ \mathrm{MV}/3.5\
+\mathrm{m} = 10\)</span> MV/m with or without them, the 100 kV/cm the
+paper quotes; what the electrodes change is the peak, by making the
+field nearly uniform, so that it stays close to that mean (the paper
+gives a largest stress magnification on the electrodes of about 1.4).
+This is the multiplier’s idea applied to the gas.</p>
+<p><strong>Where the field concentrates.</strong> A conducting sphere in
+a uniform field <span class="math inline">\(\mathcal{E}_0\)</span> has
+surface field <span
+class="math inline">\(3\mathcal{E}_0\cos\theta\)</span> (a uniform field
+plus a dipole; Tong, <em>Electromagnetism</em>, section 2.4.3, problem
+3). The plane through its equator is an equipotential, so a
+hemispherical bump on a flat electrode also triples the field, whatever
+its size. A needle, modelled as a hyperboloid of tip radius <span
+class="math inline">\(r\)</span> at distance <span
+class="math inline">\(d\)</span> from a plane, has, for <span
+class="math inline">\(d \gg r\)</span>,</p>
+<p><span class="math display">\[
+\mathcal{E}_{tip} \approx \frac{2V}{r\ln(4d/r)},
+\]</span></p>
+<p>which follows from Laplace’s equation in prolate spheroidal
+coordinates (exercise 4). At <span class="math inline">\(V = 10\)</span>
+kV, <span class="math inline">\(d = 10\)</span> cm and <span
+class="math inline">\(r = 0.1\)</span> mm this is 24 MV/m, 241 times
+<span class="math inline">\(V/d\)</span>. Hence every high-voltage
+conductor is round, and the laboratory is full of hemispheres and
+toroids.</p>
+<p><strong>The triple junction.</strong> Where metal, insulator and gas
+or vacuum meet, a thin crevice of thickness <span
+class="math inline">\(t\)</span> between an electrode and a solid of
+relative permittivity <span class="math inline">\(\varepsilon_r\)</span>
+and thickness <span class="math inline">\(d\)</span> carries a field
+<span class="math inline">\(\varepsilon_r\)</span> times that in the
+solid, because the normal component of <span
+class="math inline">\(\varepsilon_0\varepsilon_r\mathcal{E}\)</span> is
+continuous: <span class="math inline">\(\mathcal{E}_{gap} =
+\varepsilon_rV/(d+\varepsilon_rt) \approx \varepsilon_rV/d\)</span>. An
+epoxy of <span class="math inline">\(\varepsilon_r = 3.75\)</span>
+nearly quadruples the field there. Flashovers in vacuum usually start at
+the cathode’s triple junction (section 6), and electrodes are shaped to
+shield it.</p>
+<h3
+id="pre-requisite-continued-mean-free-path-and-collision-rates">Pre-requisite
+(continued): Mean free path and collision rates</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section gives the distribution
+of free paths, the number of collisions per metre of drift, the fraction
+of free paths long enough to ionise, and the scaling argument that makes
+<span class="math inline">\(\mathcal{E}/N\)</span> and <span
+class="math inline">\(pd\)</span> the only variables that matter.
+Section 2 uses them to derive Townsend’s coefficient and Paschen’s law;
+section 3 uses the density scaling for its corrections. Taught from
+Kuffel, Zaengl and Kuffel, sections 5.1.2 and 5.1.3 (the free path and
+its distribution) and 5.2.1 (Townsend’s first coefficient), and Landau
+and Lifshitz, volume 5, sections 39 (molecular collisions) and 42 (the
+equation of state of an ideal gas).</p>
+</blockquote>
+<p>Reminder: <a
+href="02-the-cathode-ray-tube.html#pre-requisite-mean-free-path-and-collision-rates">chapter
+2</a> gave the number density <span class="math inline">\(n =
+p/(k_BT)\)</span>, the mean free path <span
+class="math inline">\(\lambda = 1/(n\sigma)\)</span> for a fast electron
+in still gas, and the chance <span
+class="math inline">\(e^{-L/\lambda}\)</span> of crossing a length <span
+class="math inline">\(L\)</span> without a collision. <a
+href="F6-heat-and-probability.html#14-molecules-on-the-move-wall-collisions-and-the-mean-free-path">F6,
+section 14</a> derived the same exponential law from the gas having no
+memory. In this chapter the number density is written <span
+class="math inline">\(N\)</span>, as in the ratio <span
+class="math inline">\(\mathcal{E}/N\)</span>, and the collision
+cross-section <span class="math inline">\(\sigma_c\)</span>, the
+effective target area a molecule presents to an electron (m<span
+class="math inline">\(^2\)</span>).</p>
+<p><strong>The distribution of free paths.</strong> The chance of
+travelling a distance <span class="math inline">\(x\)</span> without a
+collision is <span class="math inline">\(P(x) = e^{-x/\lambda}\)</span>;
+the chance of colliding in the next short step <span
+class="math inline">\(dx\)</span> is <span
+class="math inline">\(dx/\lambda\)</span>. So the chance that a free
+path ends between <span class="math inline">\(x\)</span> and <span
+class="math inline">\(x + dx\)</span> is the product, a probability
+density in the sense of <a
+href="F6-heat-and-probability.html#4-continuous-distributions-probability-density">F6,
+section 4</a> (per metre):</p>
+<p><span class="math display">\[
+\frac{1}{\lambda}e^{-x/\lambda}\,dx.
+\]</span></p>
+<p>The mean free path is its average, <span
+class="math inline">\(\int_0^\infty x\,\lambda^{-1}e^{-x/\lambda}\,dx =
+\lambda\)</span> (integrate by parts, <a
+href="F1-calculus.html#7-the-fundamental-theorem-and-working-integrals-out">F1,
+section 7</a>: <span class="math inline">\([-xe^{-x/\lambda}]_0^\infty +
+\int_0^\infty e^{-x/\lambda}dx = 0 + \lambda\)</span>), as the name
+requires. Two facts follow:</p>
+<ol type="1">
+<li>Each collision ends one free path, and free paths average <span
+class="math inline">\(\lambda\)</span>, so an electron makes <span
+class="math inline">\(1/\lambda\)</span> collisions per metre of drift,
+and about <span class="math inline">\(d/\lambda\)</span> crossing a gap
+<span class="math inline">\(d\)</span>.</li>
+<li>The fraction of free paths longer than some length <span
+class="math inline">\(x_i\)</span> is <span
+class="math inline">\(e^{-x_i/\lambda}\)</span>. Long paths are rare but
+not absent: a million paths drawn at random by computer give 4.94 per
+cent longer than <span class="math inline">\(3\lambda\)</span>, against
+<span class="math inline">\(e^{-3} = 4.98\)</span> per cent.</li>
+</ol>
+<p>Townsend’s picture treats each free path as measured along the field,
+as if the electron restarted from rest after each collision and was
+carried straight along. A real electron zigzags. The picture is a
+simplification, which is one reason the constants of section 2 are
+fitted rather than computed.</p>
+<p><strong>Ionising collisions per metre.</strong> In a field <span
+class="math inline">\(\mathcal{E}\)</span> an electron gains <span
+class="math inline">\(e\mathcal{E}x\)</span> over a free path <span
+class="math inline">\(x\)</span> along the field. If it ionises only
+when it has gained at least <span class="math inline">\(eV_i\)</span>,
+the path must be at least <span class="math inline">\(x_i =
+V_i/\mathcal{E}\)</span>. Multiply the collisions per metre by the
+fraction that come after a long enough path:</p>
+<p><span class="math display">\[
+\alpha =
+\frac{1}{\lambda}\exp\left(-\frac{V_i}{\mathcal{E}\lambda}\right).
+\]</span></p>
+<p>With <span class="math inline">\(\lambda = 1/(N\sigma_c)\)</span> and
+<span class="math inline">\(N = p/(k_BT)\)</span> this is <span
+class="math inline">\(\alpha = A_Tp\exp(-B_Tp/\mathcal{E})\)</span>,
+with <span class="math inline">\(A_T = \sigma_c/(k_BT)\)</span> and
+<span class="math inline">\(B_T = V_i\sigma_c/(k_BT)\)</span>: the form
+section 2 uses.</p>
+<p><em>At work.</em> Raizer’s fitted <span class="math inline">\(A_T =
+11.25\)</span> m<span class="math inline">\(^{-1}\)</span> Pa<span
+class="math inline">\(^{-1}\)</span> for air (quoted in section 2, with
+<span class="math inline">\(B_T/A_T = V_i = 24\)</span> V) means an
+effective <span class="math inline">\(\sigma_c = A_Tk_BT =
+4.6\times10^{-20}\)</span> m<span class="math inline">\(^2\)</span> at
+293 K, smaller than the geometric <span
+class="math inline">\(\pi(d_m/2)^2 = 1.1\times10^{-19}\)</span> m<span
+class="math inline">\(^2\)</span> of an air molecule of diameter <span
+class="math inline">\(d_m = 0.37\)</span> nm seen by a point electron.
+The effective free path, <span class="math inline">\(1/(A_Tp)\)</span>,
+is 0.88 µm at one atmosphere, 89 µm at 1 kPa and 8.9 cm at 1 Pa. At one
+atmosphere and 3 MV/m an electron gains only <span
+class="math inline">\(3\times10^6\times0.88\times10^{-6} = 2.6\)</span>
+eV over a mean free path, against the effective 24 V it needs to ionise.
+It ionises only on free paths 9.2 times longer than average, a fraction
+<span class="math inline">\(e^{-9.2} = 1\times10^{-4}\)</span> of them.
+This is why <span class="math inline">\(\alpha\)</span> rises so steeply
+with field: at 2 MV/m the ratio is 13.9 and the fraction 100 times
+smaller.</p>
+<p><strong>Why <span class="math inline">\(\mathcal{E}/N\)</span> and
+<span class="math inline">\(pd\)</span>.</strong> Write every quantity
+with the number density <span class="math inline">\(N\)</span> (m<span
+class="math inline">\(^{-3}\)</span>). The energy an electron gains over
+one mean free path is <span class="math inline">\(e\mathcal{E}\lambda =
+e\mathcal{E}/(N\sigma_c)\)</span>, which depends on <span
+class="math inline">\(\mathcal{E}/N\)</span> only. The number of mean
+free paths across a gap is <span class="math inline">\(d/\lambda =
+N\sigma_cd\)</span>, which depends on <span
+class="math inline">\(Nd\)</span> only. So, as long as an electron’s
+history is a string of two-body collisions with molecules, <span
+class="math inline">\(\alpha\lambda\)</span> is a function of <span
+class="math inline">\(\mathcal{E}/N\)</span>, that is <span
+class="math inline">\(\alpha/N = f(\mathcal{E}/N)\)</span>. Then</p>
+<p><span class="math display">\[
+\alpha d = \frac{\alpha}{N}\,Nd = f\!\left(\frac{V}{Nd}\right)Nd,
+\]</span></p>
+<p>using <span class="math inline">\(\mathcal{E} = V/d\)</span> in a
+uniform gap. Townsend’s criterion fixes <span
+class="math inline">\(\alpha d\)</span>, so it fixes <span
+class="math inline">\(V\)</span> in terms of <span
+class="math inline">\(Nd\)</span> alone: Paschen’s law. At fixed
+temperature <span class="math inline">\(N \propto p\)</span>, which is
+why it is usually stated in <span class="math inline">\(pd\)</span> and
+<span class="math inline">\(\mathcal{E}/p\)</span>; with the temperature
+allowed to change, <span class="math inline">\(N = p/(k_BT)\)</span>,
+and the relative air density <span
+class="math inline">\(\delta_r\)</span> of section 3 is simply <span
+class="math inline">\(N\)</span> divided by its value at 101.3 kPa and
+293 K.</p>
+<p>The unit of <span class="math inline">\(\mathcal{E}/N\)</span> is the
+townsend, <span class="math inline">\(1\ \mathrm{Td} = 10^{-21}\)</span>
+V m<span class="math inline">\(^2\)</span>. Air at 101.3 kPa and 293 K
+has <span class="math inline">\(N = 2.50\times10^{25}\)</span> m<span
+class="math inline">\(^{-3}\)</span>; 3 MV/m is then 120 Td, and the
+long-gap limit of 2.44 MV/m is 97 Td. Similarity in practice: a 1 cm gap
+at one atmosphere and a 1 m gap at 1013 Pa have the same <span
+class="math inline">\(pd\)</span> and should spark at the same voltage.
+Processes that are not two-body, such as three-body attachment of
+electrons to oxygen, and surface effects, break the rule at its edges,
+which is why Schumann’s law of section 3 is fitted at atmospheric
+pressure.</p>
+<p><strong>Exercise D1.</strong> Find the effective mean free path in
+air at 10 Pa, and the number of mean free paths across a 1 cm gap. Which
+side of Paschen’s minimum is this?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\lambda = 1/(A_Tp) = 1/(11.25\times10) =
+8.9\)</span> mm, so 1.1 mean free paths in 1 cm. Here <span
+class="math inline">\(pd = 0.1\)</span> Pa m, far left of the minimum at
+about 0.75 Pa m: electrons cross with too few collisions to multiply,
+and the gap holds much more than 330 V.</p>
+</details>
+<p><strong>Exercise D2.</strong> Herb’s tank held air at 0.69 MPa and
+about 293 K. What field corresponds to 97 Td there, and how does it
+compare with the 17 MV/m of section 3?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(N = p/(k_BT) =
+0.69\times10^6/(1.381\times10^{-23}\times293) =
+1.70\times10^{26}\)</span> m<span class="math inline">\(^{-3}\)</span>,
+so 97 Td is <span
+class="math inline">\(97\times10^{-21}\times1.70\times10^{26} =
+16.5\)</span> MV/m, close to the 17 MV/m from Schumann’s constants. The
+long-gap strength scales with density, as similarity says.</p>
+</details>
+<h3 id="2-the-avalanche-and-paschens-law-derived">2. The avalanche, and
+Paschen’s law derived</h3>
+<p>Picture a uniform gap of width <span class="math inline">\(d\)</span>
+in gas at pressure <span class="math inline">\(p\)</span> and
+temperature <span class="math inline">\(T\)</span>, with a few free
+electrons at the cathode from cosmic rays or ultraviolet light. An
+electron drifts towards the anode; if between collisions it gains more
+than an ionisation energy, a collision can free another electron.</p>
+<p><strong>The first coefficient.</strong> Townsend defined <span
+class="math inline">\(\alpha\)</span> (in this chapter only; m<span
+class="math inline">\(^{-1}\)</span>) as the number of ionising
+collisions per metre of drift. Then <span
+class="math inline">\(n\)</span> electrons drifting a step <span
+class="math inline">\(dx\)</span> make <span
+class="math inline">\(\alpha n\,dx\)</span> new ones, so <span
+class="math inline">\(dn/dx = \alpha n\)</span>: the rate of growth is
+proportional to the amount, the equation of <a
+href="F1-calculus.html#10-equations-of-change-first-differential-equations">F1,
+section 10</a>, whose solution is the exponential <span
+class="math inline">\(n(d) = n_0e^{\alpha d}\)</span> for <span
+class="math inline">\(n_0\)</span> electrons starting at the cathode.
+This growing cloud is an <em>avalanche</em>. The mean free path is <span
+class="math inline">\(\lambda = k_BT/(p\sigma_c)\)</span> for a
+collision cross-section <span class="math inline">\(\sigma_c\)</span>,
+so <span class="math inline">\(\lambda \propto 1/p\)</span>. To ionise,
+the electron must travel <span class="math inline">\(\lambda_i =
+V_i/\mathcal{E}\)</span> along the field without colliding, <span
+class="math inline">\(V_i\)</span> an effective ionisation potential,
+with probability <span
+class="math inline">\(e^{-\lambda_i/\lambda}\)</span>; there are <span
+class="math inline">\(1/\lambda\)</span> collisions per metre. So</p>
+<p><span class="math display">\[
+\alpha =
+\frac{1}{\lambda}\exp\left(-\frac{V_i}{\mathcal{E}\lambda}\right) =
+A_T\,p\,\exp\left(-\frac{B_T\,p}{\mathcal{E}}\right).
+\]</span></p>
+<p>The derivation ignores inelastic losses, collisions in which the
+electron gives up energy to lift a molecule into an excited state (a
+higher energy level, <a
+href="F7-atoms-and-quanta.html#7-bohrs-hydrogen-atom-and-energy-levels">F7,
+section 7</a>) without ionising it, so <span
+class="math inline">\(A_T\)</span> and <span
+class="math inline">\(B_T\)</span> are fitted. For air, Raizer’s <em>Gas
+Discharge Physics</em> gives, in the older units of the discharge
+literature (1 Torr = 133.3 Pa, <a href="03-vacuum.html">chapter 3</a>),
+<span class="math inline">\(A_T = 15\)</span> cm<span
+class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span> <span class="math inline">\(=
+11.25\)</span> m<span class="math inline">\(^{-1}\)</span> Pa<span
+class="math inline">\(^{-1}\)</span> and <span class="math inline">\(B_T
+= 365\)</span> V cm<span class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span> <span class="math inline">\(=
+273.8\)</span> V m<span class="math inline">\(^{-1}\)</span> Pa<span
+class="math inline">\(^{-1}\)</span>, valid for <span
+class="math inline">\(\mathcal{E}/p\)</span> from 100 to 800 V cm<span
+class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span> (the same values and range are in
+Kuffel, Zaengl and Kuffel, table 5.3). Their ratio, 24 V, is an
+effective ionisation potential, larger than the 12 to 16 eV of oxygen
+and nitrogen because energy goes into excitation on the way. The
+essential fact is that <span class="math inline">\(\alpha/p\)</span>
+depends on <span class="math inline">\(\mathcal{E}/p\)</span> alone
+(strictly on <span class="math inline">\(\mathcal{E}/N\)</span>, with
+<span class="math inline">\(N\)</span> the number density).</p>
+<p><strong>The second coefficient and the criterion.</strong> Positive
+ions returning to the cathode, and photons, release electrons there:
+<span class="math inline">\(\gamma_{se}\)</span> per ion (subscripted to
+keep it apart from the Lorentz factor), <span
+class="math inline">\(10^{-3}\)</span> to <span
+class="math inline">\(10^{-1}\)</span> depending on the surface, about
+0.01 for air on oxidised aluminium (Kuffel, Zaengl and Kuffel, table
+5.9). Let <span class="math inline">\(n_c\)</span> electrons per second
+leave the cathode. They make <span class="math inline">\(n_c(e^{\alpha
+d}-1)\)</span> ions, which release <span
+class="math inline">\(\gamma_{se}n_c(e^{\alpha d}-1)\)</span> electrons,
+so <span class="math inline">\(n_c = n_0 + \gamma_{se}n_c(e^{\alpha
+d}-1)\)</span>. Collect the <span class="math inline">\(n_c\)</span>
+terms: <span class="math inline">\(n_c[1 - \gamma_{se}(e^{\alpha d}-1)]
+= n_0\)</span>. Each electron leaving the cathode arrives at the anode
+as <span class="math inline">\(e^{\alpha d}\)</span> electrons, so the
+anode receives <span class="math inline">\(n_ce^{\alpha d}\)</span> per
+second, and with <span class="math inline">\(I_0 = en_0\)</span> the
+current produced by the outside source alone, the current is</p>
+<p><span class="math display">\[
+I = I_0\,\frac{e^{\alpha d}}{1-\gamma_{se}\left(e^{\alpha d}-1\right)}.
+\]</span></p>
+<p>When the denominator vanishes, each avalanche makes a successor
+without outside help. That is Townsend’s criterion, <span
+class="math inline">\(\alpha d = \ln(1+1/\gamma_{se}) \equiv K\)</span>;
+with <span class="math inline">\(\gamma_{se} = 0.01\)</span>, <span
+class="math inline">\(K = 4.6\)</span>.</p>
+<p><img src="figures/04-avalanche.svg" loading="lazy"
+alt="An electron avalanche crossing a gap, with ions returning to the cathode" /></p>
+<p><em>Figure 4.5. Townsend’s avalanche, schematic. An electron from the
+cathode doubles at each ionising collision (dots), so <span
+class="math inline">\(n_0\)</span> electrons become <span
+class="math inline">\(n_0e^{\alpha d}\)</span> at the anode. Each
+collision also leaves a positive ion, which drifts back to the cathode
+and frees <span class="math inline">\(\gamma_{se}\)</span> electrons
+there. When those freed electrons replace the one that started, <span
+class="math inline">\(\gamma_{se}(e^{\alpha d} - 1) = 1\)</span>, the
+discharge sustains itself.</em></p>
+<p><strong>Paschen’s law.</strong> In a uniform gap <span
+class="math inline">\(\mathcal{E} = V/d\)</span>, so <span
+class="math inline">\(B_Tp/\mathcal{E} = B_Tpd/V\)</span>. Put <span
+class="math inline">\(\alpha = A_Tp\,e^{-B_Tpd/V}\)</span> into <span
+class="math inline">\(\alpha d = K\)</span>: <span
+class="math inline">\(A_Tpd\,e^{-B_Tpd/V} = K\)</span>, so <span
+class="math inline">\(e^{B_Tpd/V} = A_Tpd/K\)</span>; take logarithms,
+<span class="math inline">\(B_Tpd/V = \ln(A_Tpd/K)\)</span>, and solve
+for <span class="math inline">\(V\)</span>:</p>
+<p><span class="math display">\[
+V_b = \frac{B_T\,pd}{\ln\left(A_T\,pd/K\right)}.
+\]</span></p>
+<p>The breakdown voltage depends on <span
+class="math inline">\(p\)</span> and <span
+class="math inline">\(d\)</span> only through <span
+class="math inline">\(pd\)</span>, Paschen’s 1889 finding. Halve the
+pressure and double the gap, and an electron makes the same number of
+collisions with the same energy gain in each. The curve has a minimum:
+at large <span class="math inline">\(pd\)</span> an electron gains
+little per collision; at small <span class="math inline">\(pd\)</span>
+it crosses in too few collisions. Write <span class="math inline">\(x =
+pd\)</span> and <span class="math inline">\(L = \ln(A_Tx/K)\)</span>, so
+<span class="math inline">\(V_b = B_Tx/L\)</span> and <span
+class="math inline">\(dL/dx = 1/x\)</span>. The quotient rule gives
+<span class="math inline">\(dV_b/dx = B_T(L - 1)/L^2\)</span>, zero when
+<span class="math inline">\(L = 1\)</span>, that is <span
+class="math inline">\(\ln(A_Tpd/K) = 1\)</span> and <span
+class="math inline">\(A_Tpd/K = \mathrm{e}\)</span>. Then <span
+class="math inline">\(V_b = B_Tpd/1\)</span>:</p>
+<p><span class="math display">\[
+(pd)_{min} = \frac{\mathrm{e}\,K}{A_T}, \qquad V_{b,min} =
+\frac{\mathrm{e}\,B_TK}{A_T},
+\]</span></p>
+<p>with <span class="math inline">\(\mathrm{e} = 2.718\ldots\)</span>
+again Euler’s number.</p>
+<p>With Raizer’s constants and <span class="math inline">\(\gamma_{se} =
+0.01\)</span>: 1.12 Pa m and 305 V. The measured minimum for air is 352
+V at 0.55 Torr cm (0.73 Pa m) in Kuffel, Zaengl and Kuffel’s table 5.12,
+and 327 V near 0.57 Torr cm in other sources. The formula has the right
+shape and scale, not the exact numbers, because the fit of <span
+class="math inline">\(\alpha\)</span> is stretched and <span
+class="math inline">\(\gamma_{se}\)</span> is uncertain. At one
+atmosphere the minimum falls at a gap of 7 µm; at 1 Pa, at about 0.7
+m.</p>
+<p><img src="figures/04-paschen.svg" loading="lazy"
+alt="Paschen’s curve for air: breakdown voltage against pressure times gap" /></p>
+<p><em>Figure 4.6. Paschen’s curve for air, <span
+class="math inline">\(V_b = B_Tpd/\ln(A_Tpd/K)\)</span> with Raizer’s
+constants and <span class="math inline">\(\gamma_{se} = 0.01\)</span>
+(solid; minimum 305 V at 1.12 Pa m), and Schumann’s law of section 3,
+<span class="math inline">\(V_b = 24.36\,pd + 212.5\sqrt{pd}\)</span>
+volts (dashed, over its range of 1 mm to 10 cm at one atmosphere). The
+dot is the measured minimum, 352 V at 0.73 Pa m; the square is 1 cm at
+one atmosphere, 31 kV. Left of the minimum an electron crosses in too
+few collisions; right of it, it gains too little energy in
+each.</em></p>
+<p><strong>A glow tube.</strong> Left of the minimum, a discharge takes
+the longest path available, since more path means more <span
+class="math inline">\(pd\)</span>. For a tube 30 cm long at 2 kV,
+solving <span class="math inline">\(V_b(pd) = 2000\)</span> V with
+Raizer’s constants and <span class="math inline">\(\gamma_{se} =
+0.01\)</span> gives 106 Pa and 1.45 Pa (with <span
+class="math inline">\(\gamma_{se} = 0.02\)</span>, 111 Pa and 1.2 Pa):
+as the pump takes the pressure through this range, the tube glows and
+then goes dark (<a href="02-the-cathode-ray-tube.html">chapter 2</a>).
+The upper figure is sound; the lower one lies at <span
+class="math inline">\(\mathcal{E}/p \approx 6000\)</span> V cm<span
+class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span>, far outside the fit, and is good
+to perhaps a factor of two.</p>
+<h3 id="3-air-at-one-atmosphere-schumanns-law-and-the-3-mvm-rule">3. Air
+at one atmosphere: Schumann’s law and the 3 MV/m rule</h3>
+<p>At atmospheric pressure the fit fails from the other side (it gives
+35.5 kV for 1 cm, against a measured 31 kV), and two things change.
+Electrons <em>attach</em> to oxygen, sticking to an O<span
+class="math inline">\(_2\)</span> molecule to make a heavy negative ion
+that is too slow to ionise anything, at a rate <span
+class="math inline">\(\eta_a\)</span> per metre (subscripted to keep it
+apart from the phase-slip factor), so the effective coefficient is <span
+class="math inline">\(\bar\alpha = \alpha - \eta_a\)</span>, zero at a
+critical field. And Schumann (1923) found that near it</p>
+<p><span class="math display">\[
+\frac{\bar\alpha}{p} =
+C\left(\frac{\mathcal{E}}{p}-\left(\frac{\mathcal{E}}{p}\right)_c\right)^2.
+\]</span></p>
+<p>Put this into <span class="math inline">\(\bar\alpha d = K\)</span>,
+written as <span class="math inline">\(\bar\alpha/p = K/(pd)\)</span>:
+<span class="math inline">\(C(\mathcal{E}/p - (\mathcal{E}/p)_c)^2 =
+K/(pd)\)</span>. Take the square root, <span
+class="math inline">\(\mathcal{E}/p = (\mathcal{E}/p)_c +
+\sqrt{K/(C\,pd)}\)</span>, and multiply by <span
+class="math inline">\(pd\)</span>, using <span
+class="math inline">\((\mathcal{E}/p)\,pd = \mathcal{E}d =
+V_b\)</span>:</p>
+<p><span class="math display">\[
+V_b = \left(\frac{\mathcal{E}}{p}\right)_c pd +
+\sqrt{\frac{K}{C}}\sqrt{pd} = 24.36\,pd + 6.72\sqrt{pd}\ \ \mathrm{kV}
+\quad (p \text{ in bar}, d \text{ in cm}, 20\ ^\circ\mathrm{C}),
+\]</span></p>
+<p>with Sohst’s and Schröder’s constants, as in Kuffel, Zaengl and
+Kuffel (equation 5.103); 1 bar = <span
+class="math inline">\(10^5\)</span> Pa, about one atmosphere, so 1 bar
+cm = 1000 Pa m. In SI, <span class="math inline">\(V_b = 24.36\,pd +
+212.5\sqrt{pd}\)</span> volts with <span
+class="math inline">\(pd\)</span> in Pa m. At 101.3 kPa it gives 4.6 kV
+for 1 mm (4.6 MV/m), 31.4 kV for 1 cm (3.1 MV/m), 58.9 kV for 2 cm (2.9
+MV/m) and 268 kV for 10 cm (2.7 MV/m), agreeing with measurement from 1
+mm to 100 mm. So 3 MV/m is right for centimetre gaps, and long uniform
+gaps tend to <span class="math inline">\((\mathcal{E}/p)_c\)</span>,
+2.44 MV/m. At 0.69 MPa the long-gap strength is <span
+class="math inline">\(24.36 \times 6.89 = 168\)</span> kV/cm, about 17
+MV/m.</p>
+<p>Because density is the true variable, results are corrected with the
+relative air density <span class="math inline">\(\delta_r = (p/101.3\
+\mathrm{kPa})(293\ \mathrm{K}/T)\)</span>, <span
+class="math inline">\(T\)</span> in kelvin; breakdown voltage is roughly
+proportional to it. At 95 kPa and 30 °C, <span
+class="math inline">\(\delta_r = 0.907\)</span>: about 9 per cent less
+than the table.</p>
+<h3 id="4-streamers-corona-glow-and-arc">4. Streamers, corona, glow and
+arc</h3>
+<p><strong>Streamers.</strong> Townsend’s mechanism needs ions to drift
+back to the cathode, which takes microseconds, but sparks across
+centimetres of air form in nanoseconds. Heinz Raether (1939, from
+cloud-chamber photographs of single avalanches; a cloud chamber holds a
+vapour ready to condense, and droplets form on the ions an avalanche
+leaves, making it visible), and John Meek and Leonard Loeb (1940),
+explained why. When an avalanche holds about <span
+class="math inline">\(10^8\)</span> charges, the field of its own space
+charge (the charge of the avalanche itself: fast electrons at its head,
+slow positive ions left behind) matches the applied field. Photons from
+its excited molecules ionise the gas ahead, starting new avalanches that
+feed into it, and a conducting channel grows across the gap without the
+cathode’s help. The criterion is</p>
+<p><span class="math display">\[
+\alpha x_c \approx \ln(10^8) \approx 18 \text{ to } 20,
+\]</span></p>
+<p>with <span class="math inline">\(x_c\)</span> the length over which
+the avalanche reaches critical size. In air the streamer mechanism takes
+over above <span class="math inline">\(pd \approx 1\)</span> to 2 bar cm
+(Kuffel, Zaengl and Kuffel, section 5.5). Schumann’s law is in effect
+the streamer criterion with <span class="math inline">\(K \approx
+18\)</span>: Meek’s calculation for a 1 cm gap in air at breakdown gives
+<span class="math inline">\(\alpha d = 18.6\)</span> (their table
+5.10).</p>
+<p><strong>Corona.</strong> Near a thin wire or point the field exceeds
+the critical value only in a thin layer: avalanches start there and die
+beyond it, giving a steady glowing, hissing partial discharge that does
+not bridge the gap. Frank Peek measured the onset from 1911; in Kuffel,
+Zaengl and Kuffel’s form, for a wire of radius <span
+class="math inline">\(r_w\)</span> (metres) in coaxial geometry,</p>
+<p><span class="math display">\[
+\mathcal{E}_c = \delta_r\left(3.153 +
+\frac{0.0963}{\sqrt{\delta_r\,r_w}}\right)\ \mathrm{MV/m}.
+\]</span></p>
+<p>A wire of 1 mm radius (<span class="math inline">\(\delta_r =
+1\)</span>) needs 6.2 MV/m, reached inside a tube of 10 cm radius at
+<span class="math inline">\(\mathcal{E}_c r_w \ln(0.1/0.001) =
+28.5\)</span> kV. Corona is a load on a terminal: it carries current
+away and stops the voltage rising.</p>
+<p><strong>Glow and arc.</strong> After breakdown the circuit decides.
+With a high series resistance at low pressure the discharge is a glow:
+milliamperes, a cathode fall of a few hundred volts. Let the current
+rise and the cathode heats until it emits from hot spots; the voltage
+collapses to tens of volts and the current is limited only by the
+supply. That is an arc, which destroys electrodes; a spark is a brief
+arc fed by stored charge.</p>
+<p><strong>Insulating gases.</strong> By Paschen’s law, strength at a
+fixed gap rises roughly with density, until surface roughness and dust
+dominate near 1 MPa. Compressed air gave way to nitrogen, often with
+carbon dioxide, which removes the oxygen that feeds fires after a spark.
+Electronegative gases do better, turning free electrons into heavy
+negative ions that cannot ionise. Sulphur hexafluoride’s effective
+coefficient crosses zero near <span class="math inline">\(\mathcal{E}/p
+= 89\)</span> kV cm<span class="math inline">\(^{-1}\)</span> bar<span
+class="math inline">\(^{-1}\)</span> (Kuffel, Zaengl and Kuffel, section
+5.10) against 24.4 for air (section 3; their figure 5.29 marks air’s
+crossing near 27); in practice it is quoted at about 2.5 to 3 times air,
+with the advantage shrinking at high pressure because it is very
+sensitive to surface defects. Its cost is environmental: a 100-year
+global-warming potential (the warming a kilogram released causes over a
+century, relative to a kilogram of carbon dioxide) of about 23,500 (IPCC
+fifth assessment) to 24,300 (sixth) times that of CO<span
+class="math inline">\(_2\)</span>, and a lifetime in the atmosphere
+estimated at between about 850 and 3,200 years. Laboratories recover and
+recycle it.</p>
+<h3
+id="pre-requisite-continued-tunnelling-and-the-wkb-approximation">Pre-requisite
+(continued): Tunnelling and the WKB approximation</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section gives the WKB
+transmission through a barrier, with where its exponent comes from, and
+works it out for the triangular barrier that a strong field makes at a
+metal surface. Section 5 uses it for field emission, the start of vacuum
+breakdown. Taught from Landau and Lifshitz, volume 3, section 50
+(penetration through a potential barrier, problem 1 the triangular
+barrier), Tong, <em>Quantum Mechanics</em>, sections 2.4.2 (tunnelling)
+and 10.3 (WKB), and Kuffel, Zaengl and Kuffel, section 5.3.4 (field
+emission).</p>
+</blockquote>
+<p>Reminder: <a
+href="01-why-accelerate.html#pre-requisite-tunnelling-and-the-wkb-approximation">chapter
+1</a> met tunnelling as the way an alpha particle crosses the Coulomb
+barrier of a nucleus, with the Gamow factor. Field emission is the same
+physics run the other way: an electron leaving a metal through a barrier
+that the applied field has made thin.</p>
+<p><strong>The WKB exponent.</strong> Where a particle of energy <span
+class="math inline">\(W\)</span> meets a region in which its potential
+energy <span class="math inline">\(U(x)\)</span> is higher, the
+Schrödinger equation <span
+class="math inline">\(-(\hbar^2/2m)\psi&#39;&#39; + U\psi =
+W\psi\)</span> becomes</p>
+<p><span class="math display">\[
+\psi&#39;&#39; = \kappa^2\psi, \qquad \kappa(x) = \frac{\sqrt{2m\,(U(x)
+- W)}}{\hbar},
+\]</span></p>
+<p>with <span class="math inline">\(\kappa\)</span> in m<span
+class="math inline">\(^{-1}\)</span>, <span
+class="math inline">\(m\)</span> the mass and <span
+class="math inline">\(\hbar = h/2\pi\)</span>. If <span
+class="math inline">\(U\)</span> were constant the wave would decay as
+<span class="math inline">\(e^{-\kappa x}\)</span>. If <span
+class="math inline">\(U\)</span> changes slowly, so that <span
+class="math inline">\(\kappa\)</span> changes little over a distance
+<span class="math inline">\(1/\kappa\)</span>, each short step <span
+class="math inline">\(dx\)</span> multiplies the wave by <span
+class="math inline">\(e^{-\kappa\,dx}\)</span>, and the steps compound
+to <span class="math inline">\(\exp(-\int\kappa\,dx)\)</span>. The
+probability of getting through goes as the square of the amplitude:</p>
+<p><span class="math display">\[
+D \approx \exp\left(-\frac{2}{\hbar}\int_{x_1}^{x_2}\sqrt{2m\,(U(x) -
+W)}\,dx\right),
+\]</span></p>
+<p>where <span class="math inline">\(x_1\)</span> and <span
+class="math inline">\(x_2\)</span> are the turning points, the places
+where <span class="math inline">\(U = W\)</span>. This is the WKB
+(quasi-classical) result. It drops a prefactor of order one, which
+Landau and Lifshitz show changes when one wall of the barrier is steep,
+and it is good when the exponent is large, so that <span
+class="math inline">\(D\)</span> is small.</p>
+<p><strong>The triangular barrier.</strong> An electron at the top of
+the occupied levels in a metal needs an extra energy <span
+class="math inline">\(\phi_w\)</span>, the work function, to escape.
+Outside, a field <span class="math inline">\(\mathcal{E}_{loc}\)</span>
+directed into the surface (the surface is a cathode) pushes it away with
+force <span class="math inline">\(e\mathcal{E}_{loc}\)</span>, so its
+potential energy outside, measured from where it starts, falls in a
+straight line:</p>
+<p><span class="math display">\[
+U(x) - W = \phi_w - e\mathcal{E}_{loc}x.
+\]</span></p>
+<p>The barrier begins at the surface, <span class="math inline">\(x_1 =
+0\)</span>, and ends where this reaches zero, <span
+class="math inline">\(x_2 = \phi_w/(e\mathcal{E}_{loc})\)</span>: a
+triangle of height <span class="math inline">\(\phi_w\)</span> and width
+<span class="math inline">\(\phi_w/(e\mathcal{E}_{loc})\)</span>.
+Substitute <span class="math inline">\(s = \phi_w -
+e\mathcal{E}_{loc}x\)</span>, so <span class="math inline">\(dx =
+-ds/(e\mathcal{E}_{loc})\)</span> and <span
+class="math inline">\(s\)</span> runs from <span
+class="math inline">\(\phi_w\)</span> down to 0:</p>
+<p><span class="math display">\[
+\int_0^{x_2}\sqrt{2m_e(\phi_w - e\mathcal{E}_{loc}x)}\,dx =
+\frac{\sqrt{2m_e}}{e\mathcal{E}_{loc}}\int_0^{\phi_w}s^{1/2}\,ds =
+\frac{\sqrt{2m_e}}{e\mathcal{E}_{loc}}\cdot\frac23\phi_w^{3/2}.
+\]</span></p>
+<p>Multiplying by <span class="math inline">\(2/\hbar\)</span>,</p>
+<p><span class="math display">\[
+D \approx \exp\left(-\frac{4\sqrt{2m_e}\,\phi_w^{3/2}}{3\hbar
+e\mathcal{E}_{loc}}\right).
+\]</span></p>
+<p>The work function enters as the power 3/2 because a higher barrier is
+also a wider one. The field enters in the denominator of the exponent,
+which is why emission is so steep in field.</p>
+<p><em>At work.</em> For <span class="math inline">\(\phi_w =
+4.5\)</span> eV (<span class="math inline">\(7.21\times10^{-19}\)</span>
+J), computed in SI and checked by integrating the WKB integral
+numerically (they agree to four figures):</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(\mathcal{E}_{loc}\)</span></th>
+<th>barrier width</th>
+<th>exponent</th>
+<th><span class="math inline">\(D\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50 MV/m</td>
+<td>90 nm</td>
+<td>1304</td>
+<td><span class="math inline">\(10^{-566}\)</span></td>
+</tr>
+<tr>
+<td>1 GV/m</td>
+<td>4.5 nm</td>
+<td>65.2</td>
+<td><span class="math inline">\(5\times10^{-29}\)</span></td>
+</tr>
+<tr>
+<td>2 GV/m</td>
+<td>2.25 nm</td>
+<td>32.6</td>
+<td><span class="math inline">\(7\times10^{-15}\)</span></td>
+</tr>
+<tr>
+<td>3 GV/m</td>
+<td>1.5 nm</td>
+<td>21.7</td>
+<td><span class="math inline">\(4\times10^{-10}\)</span></td>
+</tr>
+<tr>
+<td>4 GV/m</td>
+<td>1.13 nm</td>
+<td>16.3</td>
+<td><span class="math inline">\(8\times10^{-8}\)</span></td>
+</tr>
+<tr>
+<td>5 GV/m</td>
+<td>0.9 nm</td>
+<td>13.0</td>
+<td><span class="math inline">\(2\times10^{-6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>At the 50 MV/m of an accelerator gap, nothing tunnels at all; at a
+few GV/m, electrons do. The applied fields in section 5 can only produce
+emission if something multiplies them locally by about a hundred, which
+is the field enhancement <span class="math inline">\(\beta_f\)</span>.
+The sensitivity is extreme: from 4 to 5 GV/m, a 25 per cent rise, <span
+class="math inline">\(D\)</span> grows 26 times. Because <span
+class="math inline">\(\ln D\)</span> is proportional to <span
+class="math inline">\(-1/\mathcal{E}_{loc}\)</span>, a 1 per cent rise
+in field raises <span class="math inline">\(D\)</span> by the exponent’s
+size in per cent: 13 per cent at 5 GV/m. The work function matters as
+much: at 5 GV/m, raising <span class="math inline">\(\phi_w\)</span>
+from 4.5 to 5.0 eV multiplies <span class="math inline">\(D\)</span> by
+0.11, so a film of contamination or oxide that changes <span
+class="math inline">\(\phi_w\)</span> changes emission tenfold.</p>
+<p>Is WKB fair here? The decay length at the barrier’s entrance is <span
+class="math inline">\(1/\kappa = \hbar/\sqrt{2m_e\phi_w} =
+0.092\)</span> nm, so at 5 GV/m the barrier is ten decay lengths wide:
+the exponent is good, the prefactor is not exact. The real barrier is
+also not a triangle: the electron’s image in the metal rounds and lowers
+it, which the next section adds.</p>
+<p><strong>Exercise E1.</strong> At what local field is <span
+class="math inline">\(D = 10^{-10}\)</span> for <span
+class="math inline">\(\phi_w = 4.5\)</span> eV?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The exponent goes as <span
+class="math inline">\(1/\mathcal{E}_{loc}\)</span> and is 65.2 at 1
+GV/m, so it is <span class="math inline">\(65.2\
+\mathrm{GV/m}/\mathcal{E}_{loc}\)</span>. Setting it equal to <span
+class="math inline">\(\ln10^{10} = 23.0\)</span> gives <span
+class="math inline">\(\mathcal{E}_{loc} = 65.2/23.0 = 2.83\)</span>
+GV/m.</p>
+</details>
+<p><strong>Exercise E2.</strong> A conditioned surface runs at an
+applied 30 MV/m and has an emitter with <span
+class="math inline">\(\beta_f = 100\)</span>. What is <span
+class="math inline">\(D\)</span> at the emitter? What <span
+class="math inline">\(\beta_f\)</span> would give the same <span
+class="math inline">\(D\)</span> at 20 MV/m?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\mathcal{E}_{loc} = 100\times30\)</span>
+MV/m <span class="math inline">\(= 3\)</span> GV/m, so <span
+class="math inline">\(D = e^{-21.7} = 4\times10^{-10}\)</span> from the
+table. The same <span class="math inline">\(\mathcal{E}_{loc}\)</span>
+at 20 MV/m needs <span class="math inline">\(\beta_f = 3000/20 =
+150\)</span>. Emission depends only on the local field, so a surface
+that loses its sharpest emitters during conditioning holds a higher
+applied field.</p>
+</details>
+<h3
+id="pre-requisite-continued-electrons-in-metals-fermi-dirac-statistics-work-function">Pre-requisite
+(continued): Electrons in metals, Fermi-Dirac statistics, work
+function</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section sums the tunnelling
+probability over the occupied electron states of a metal to get the
+Fowler-Nordheim current density, and derives the image-force lowering of
+the surface barrier (the Schottky effect). Section 5 uses both: the
+Fowler-Nordheim law and its image-force correction. Taught from Landau
+and Lifshitz, volume 5, section 57 (a degenerate electron gas), Kuffel,
+Zaengl and Kuffel, section 5.3.4 (the image-force barrier, Schottky’s
+equation and field emission), and Tong, <em>Electromagnetism</em>,
+section 2.4.3 (images).</p>
+</blockquote>
+<p>Reminder: <a
+href="02-the-cathode-ray-tube.html#pre-requisite-electrons-in-metals-fermi-dirac-statistics-work-function">chapter
+2</a> treated the conduction electrons as a free gas in a potential
+well, filled up to the Fermi level with two states per <span
+class="math inline">\(h^3\)</span> of momentum space per unit volume,
+wrote the current density as the flux <span
+class="math inline">\(e\,n\,v_z\)</span> of electrons crossing a
+surface, and defined the work function as the least energy above the
+Fermi level needed to escape. There the electrons escaped over the
+barrier, by heat. Here they go through it.</p>
+<p><strong>Summing over the Fermi sea.</strong> Let the surface be
+normal to <span class="math inline">\(z\)</span>. Electrons with
+momentum in <span class="math inline">\(d^3p\)</span> number <span
+class="math inline">\((2/h^3)f\,d^3p\)</span> per cubic metre, with
+<span class="math inline">\(f\)</span> the Fermi-Dirac occupation. Those
+moving towards the surface (<span class="math inline">\(p_z &gt;
+0\)</span>) carry current density <span
+class="math inline">\(ev_z\)</span> each, and each gets through with
+probability <span class="math inline">\(D\)</span>. Only the motion
+normal to the surface pushes against the barrier, so <span
+class="math inline">\(D\)</span> depends on <span
+class="math inline">\(W_z = p_z^2/2m_e\)</span>, the kinetic energy of
+that motion. So</p>
+<p><span class="math display">\[
+J = e\int\frac{2}{h^3}f\,v_z\,D(W_z)\,d^3p.
+\]</span></p>
+<p>Take zero temperature, so <span class="math inline">\(f = 1\)</span>
+up to the Fermi energy <span class="math inline">\(W_F\)</span> (written
+<span class="math inline">\(W\)</span> because <span
+class="math inline">\(\mathcal{E}\)</span> is the field) and zero above.
+For a given <span class="math inline">\(p_z\)</span>, the occupied
+sideways momenta fill a disc <span class="math inline">\(p_x^2 + p_y^2
+\le 2m_e(W_F - W_z)\)</span> of area <span
+class="math inline">\(\pi\times2m_e(W_F - W_z)\)</span>. Also, since
+<span class="math inline">\(W_z = p_z^2/2m_e\)</span>, <span
+class="math inline">\(dW_z = (p_z/m_e)\,dp_z = v_z\,dp_z\)</span>. The
+integral over <span class="math inline">\(p_x\)</span> and <span
+class="math inline">\(p_y\)</span> gives the disc’s area, and <span
+class="math inline">\(v_z\,dp_z\)</span> becomes <span
+class="math inline">\(dW_z\)</span>:</p>
+<p><span class="math display">\[
+J = \frac{4\pi m_ee}{h^3}\int_0^{W_F}(W_F - W_z)\,D(W_z)\,dW_z.
+\]</span></p>
+<p>An electron with <span class="math inline">\(W_z = W_F -
+\varepsilon\)</span> lies <span
+class="math inline">\(\varepsilon\)</span> below the Fermi level and
+faces a barrier of height <span class="math inline">\(\phi_w +
+\varepsilon\)</span>. From the previous section, <span
+class="math inline">\(D = \exp[-c(\phi_w +
+\varepsilon)^{3/2}/\mathcal{E}_{loc}]\)</span> with <span
+class="math inline">\(c = 4\sqrt{2m_e}/(3\hbar e)\)</span>. Only
+electrons near the top get out, so expand for <span
+class="math inline">\(\varepsilon \ll \phi_w\)</span> by the first term
+of a Taylor series (<a
+href="F1-calculus.html#8-approximating-a-function-taylor-series">F1,
+section 8</a>): <span class="math inline">\((\phi_w + \varepsilon)^{3/2}
+\approx \phi_w^{3/2} + \tfrac32\phi_w^{1/2}\varepsilon\)</span>. The
+exponent splits into a constant part and a part proportional to <span
+class="math inline">\(\varepsilon\)</span>, <span
+class="math inline">\(c\,\tfrac32\phi_w^{1/2}\varepsilon/\mathcal{E}_{loc}\)</span>,
+so <span class="math inline">\(d_F =
+\mathcal{E}_{loc}/(\tfrac32c\,\phi_w^{1/2})\)</span>, and putting in
+<span class="math inline">\(c\)</span>, <span
+class="math inline">\(\tfrac32c = 2\sqrt{2m_e}/(\hbar e)\)</span>.
+Then</p>
+<p><span class="math display">\[
+D \approx D_0\,e^{-\varepsilon/d_F}, \qquad D_0 =
+\exp\left(-\frac{c\,\phi_w^{3/2}}{\mathcal{E}_{loc}}\right), \qquad d_F
+= \frac{e\hbar \mathcal{E}_{loc}}{2\sqrt{2m_e\phi_w}}.
+\]</span></p>
+<p>The energy <span class="math inline">\(d_F\)</span> is the depth
+below the Fermi level from which electrons still escape: 0.09 eV at 2
+GV/m and 0.23 eV at 5 GV/m for <span class="math inline">\(\phi_w =
+4.5\)</span> eV, against a Fermi energy of several eV. Change the
+variable of the integral from <span class="math inline">\(W_z\)</span>
+to <span class="math inline">\(\varepsilon = W_F - W_z\)</span>: the
+factor <span class="math inline">\(W_F - W_z\)</span> is <span
+class="math inline">\(\varepsilon\)</span>, and <span
+class="math inline">\(\varepsilon\)</span> runs from 0 at the Fermi
+level down into the sea. Since <span class="math inline">\(D\)</span>
+dies away within a few <span class="math inline">\(d_F\)</span>, the
+upper limit can be taken as infinity, and <span
+class="math inline">\(\int_0^\infty\varepsilon\,e^{-\varepsilon/d_F}\,d\varepsilon
+= d_F^2\)</span> (by parts, as for the mean free path above):</p>
+<p><span class="math display">\[
+J = \frac{4\pi m_ee}{h^3}\,d_F^2\,D_0 = \frac{4\pi
+m_ee}{h^3}\cdot\frac{e^2\hbar^2\mathcal{E}_{loc}^2}{8m_e\phi_w}\,D_0 =
+\frac{e^3\mathcal{E}_{loc}^2}{8\pi h\,\phi_w}\,D_0,
+\]</span></p>
+<p>using <span class="math inline">\(\hbar^2 = h^2/4\pi^2\)</span>. This
+is the Fowler-Nordheim law of section 5, with <span
+class="math inline">\(a_{FN} = e^3/(8\pi h)\)</span>; with <span
+class="math inline">\(\phi_w\)</span> in eV instead of joules, <span
+class="math inline">\(a_{FN} = 1.5414\times10^{-6}\)</span> A eV V<span
+class="math inline">\(^{-2}\)</span>. The <span
+class="math inline">\(\mathcal{E}_{loc}^2\)</span> in front comes from
+<span class="math inline">\(d_F^2\)</span>: a stronger field opens the
+barrier to a deeper slice of the Fermi sea.</p>
+<p><em>Check.</em> Doing the integral numerically with the exact <span
+class="math inline">\(D\)</span> and <span class="math inline">\(W_F =
+7\)</span> eV (copper) gives 0.97 of the formula at 2 GV/m and 0.93 at 5
+GV/m: the linear expansion costs a few per cent. The formula gives <span
+class="math inline">\(J = 0.0095\)</span> A/m<span
+class="math inline">\(^2\)</span> at 2 GV/m and <span
+class="math inline">\(1.9\times10^7\)</span> A/m<span
+class="math inline">\(^2\)</span> at 5 GV/m. The temperature hardly
+matters as long as <span class="math inline">\(k_BT\)</span> is small
+compared with <span class="math inline">\(d_F\)</span>; at room
+temperature <span class="math inline">\(k_BT = 0.025\)</span> eV.</p>
+<p><strong>The image force.</strong> An electron a distance <span
+class="math inline">\(x\)</span> outside a flat metal draws charge onto
+the surface below it, and that charge pulls it back. The field outside
+is exactly that of the electron and a charge <span
+class="math inline">\(+e\)</span> at the mirror point <span
+class="math inline">\(-x\)</span>: the pair makes the plane an
+equipotential, so by uniqueness their field is the field outside the
+metal. (The method of images is taught in full before section 8.) The
+force is <span
+class="math inline">\(e^2/[4\pi\varepsilon_0(2x)^2]\)</span>, towards
+the surface, and the potential energy, zero far away, is</p>
+<p><span class="math display">\[
+U_{im}(x) = -\frac{e^2}{16\pi\varepsilon_0x}.
+\]</span></p>
+<p>At <span class="math inline">\(x = 1\)</span> nm this is <span
+class="math inline">\(-0.36\)</span> eV. Add it to the triangular
+barrier, all measured from the Fermi level:</p>
+<p><span class="math display">\[
+U(x) = \phi_w - e\mathcal{E}_{loc}x - \frac{e^2}{16\pi\varepsilon_0x}.
+\]</span></p>
+<p>The top is where <span class="math inline">\(dU/dx = 0\)</span>:
+<span class="math inline">\(e\mathcal{E}_{loc} =
+e^2/(16\pi\varepsilon_0x_m^2)\)</span>, so <span
+class="math inline">\(x_m =
+\sqrt{e/(16\pi\varepsilon_0\mathcal{E}_{loc})}\)</span>. There the two
+subtracted terms are equal, each <span
+class="math inline">\(e\mathcal{E}_{loc}x_m\)</span>, and their sum
+is</p>
+<p><span class="math display">\[
+\Delta\phi = 2e\mathcal{E}_{loc}x_m =
+\sqrt{\frac{e^3\mathcal{E}_{loc}}{4\pi\varepsilon_0}}.
+\]</span></p>
+<p>In eV, <span class="math inline">\(\Delta\phi =
+\sqrt{1.44\times10^{-9}\ \mathrm{V\,m}\times
+\mathcal{E}_{loc}}\)</span>. The barrier’s top is lowered by 0.038 eV at
+1 MV/m (at <span class="math inline">\(x_m = 19\)</span> nm), 0.12 eV at
+10 MV/m (6 nm), 1.2 eV at 1 GV/m (0.6 nm) and 2.68 eV at 5 GV/m (0.27
+nm). For <span class="math inline">\(\phi_w = 4.5\)</span> eV the
+barrier would vanish entirely at 14 GV/m.</p>
+<p><img src="figures/04-barrier.svg" loading="lazy"
+alt="The potential barrier at a metal surface in a strong field" /></p>
+<p><em>Figure 4.7. The energy of an electron just outside a metal of
+work function 4.5 eV in a local field of 5 GV/m, measured from the Fermi
+level. The field alone makes a triangle 0.9 nm wide (blue); the image
+force rounds it and lowers its top to 1.82 eV at 0.27 nm (red).
+Electrons at the Fermi level tunnel through the narrow part. Their
+probability of getting through falls exponentially with the barrier’s
+width.</em></p>
+<p><strong>Two uses.</strong> <em>Thermionic emission</em> (the Schottky
+effect). Richardson’s law goes as <span
+class="math inline">\(\exp(-\phi_w/k_BT)\)</span>; the field lowers
+<span class="math inline">\(\phi_w\)</span> by <span
+class="math inline">\(\Delta\phi\)</span> and multiplies the current by
+<span class="math inline">\(\exp(\Delta\phi/k_BT)\)</span>. A tungsten
+filament at 2500 K (<span class="math inline">\(k_BT = 0.215\)</span>
+eV) under 1 MV/m emits 1.19 times its zero-field current, and 1.75 times
+under 10 MV/m. This is why a hot cathode’s current keeps creeping up
+with voltage after space charge no longer limits it.</p>
+<p><em>Field emission.</em> The rounded barrier is both lower and
+thinner, so the exponent shrinks. Murphy and Good worked this out; in
+Forbes’s simple approximation the exponent of <span
+class="math inline">\(D_0\)</span> is multiplied by <span
+class="math inline">\(v(f) \approx 1 - f + (f/6)\ln f\)</span>, with
+<span class="math inline">\(f = (\Delta\phi/\phi_w)^2\)</span>, and the
+prefactor changes slightly as well. At 5 GV/m and 4.5 eV, <span
+class="math inline">\(f = 0.356\)</span> and <span
+class="math inline">\(v = 0.583\)</span>: the exponent drops from 13.0
+to 7.6, and the current rises from <span
+class="math inline">\(1.9\times10^7\)</span> to <span
+class="math inline">\(3.8\times10^9\)</span> A/m<span
+class="math inline">\(^2\)</span>, the “about <span
+class="math inline">\(4\times10^9\)</span>” of section 5. The image
+force is not a small correction.</p>
+<p><strong>Exercise F1.</strong> Find <span
+class="math inline">\(x_m\)</span> and <span
+class="math inline">\(\Delta\phi\)</span> at 3 GV/m.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(x_m =
+\sqrt{e/(16\pi\varepsilon_0\mathcal{E}_{loc})} =
+\sqrt{1.602\times10^{-19}/(16\pi\times8.854\times10^{-12}\times3\times10^9)}
+= 0.35\)</span> nm, and <span class="math inline">\(\Delta\phi =
+\sqrt{1.44\times10^{-9}\times3\times10^9} = 2.08\)</span> eV, almost
+half the work function.</p>
+</details>
+<p><strong>Exercise F2.</strong> With the elementary formula (no image
+correction), what current density does a 4.5 eV surface emit at 3 GV/m,
+and over what area does that make 1 µA?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(J =
+1.5414\times10^{-6}\times(3\times10^9)^2/4.5\times e^{-21.7} =
+3.08\times10^{12}\times3.6\times10^{-10} = 1.1\times10^3\)</span>
+A/m<span class="math inline">\(^2\)</span>. Then 1 µA needs <span
+class="math inline">\(10^{-6}/1120 = 8.9\times10^{-10}\)</span> m<span
+class="math inline">\(^2\)</span>, a square 30 µm on a side. Real
+emitters are far smaller and run at higher local fields.</p>
+</details>
+<p><strong>Exercise F3.</strong> At what surface field does the Schottky
+effect raise a tungsten filament’s emission at 2500 K by 10 per
+cent?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\exp(\Delta\phi/k_BT) = 1.1\)</span>
+gives <span class="math inline">\(\Delta\phi = 0.215\ln1.1 =
+0.0205\)</span> eV. Then <span class="math inline">\(\mathcal{E} =
+\Delta\phi^2/(1.44\times10^{-9}) = 2.9\times10^5\)</span> V/m, about 0.3
+MV/m: fields found in any electron gun.</p>
+</details>
+<h3 id="5-vacuum-breakdown">5. Vacuum breakdown</h3>
+<p><strong>Field emission.</strong> Conduction electrons are held in a
+metal by a barrier of height <span
+class="math inline">\(\phi_w\)</span>, the work function (an energy, in
+joules in the WKB integral below and quoted in eV; subscripted to keep
+it apart from the RF phase), about 4.5 eV for common electrode metals. A
+field <span class="math inline">\(\mathcal{E}_{loc}\)</span> tilts the
+barrier to <span class="math inline">\(\phi_w -
+e\mathcal{E}_{loc}x\)</span>, a triangle of width <span
+class="math inline">\(\phi_w/e\mathcal{E}_{loc}\)</span>, and electrons
+tunnel through. In the WKB approximation (Landau and Lifshitz, volume 3,
+section 50, problem 1),</p>
+<p><span class="math display">\[
+D \approx
+\exp\left(-\frac{2}{\hbar}\int_0^{\phi_w/e\mathcal{E}_{loc}}\sqrt{2m_e(\phi_w
+- e\mathcal{E}_{loc}x)}\,dx\right) =
+\exp\left(-\frac{4\sqrt{2m_e}\,\phi_w^{3/2}}{3\hbar
+e\mathcal{E}_{loc}}\right).
+\]</span></p>
+<p>Fowler and Nordheim (1928) summed this over the electrons of the
+metal:</p>
+<p><span class="math display">\[
+J =
+\frac{a_{FN}\mathcal{E}_{loc}^2}{\phi_w}\exp\left(-\frac{b_{FN}\phi_w^{3/2}}{\mathcal{E}_{loc}}\right),
+\]</span></p>
+<p><span class="math display">\[
+a_{FN} = \frac{e^3}{8\pi h} = 1.5414\times10^{-6}\
+\mathrm{A\,eV\,V^{-2}}, \qquad b_{FN} = \frac{8\pi\sqrt{2m_e}}{3eh} =
+6.8309\ \mathrm{eV^{-3/2}\,V\,nm^{-1}},
+\]</span></p>
+<p>with <span class="math inline">\(J\)</span> in A/m<span
+class="math inline">\(^2\)</span>, <span
+class="math inline">\(\mathcal{E}_{loc}\)</span> in V/m and <span
+class="math inline">\(\phi_w\)</span> in eV. This explained the field
+currents Millikan’s group had measured at Caltech from 1926. The image
+force lowers and rounds the barrier; the corrected form (Murphy and Good
+1956; Forbes 2006) gives larger currents. For <span
+class="math inline">\(\phi_w = 4.5\)</span> eV, with that correction,
+<span class="math inline">\(J\)</span> is 4 A/m<span
+class="math inline">\(^2\)</span> at 2 GV/m and <span
+class="math inline">\(4\times10^9\)</span> A/m<span
+class="math inline">\(^2\)</span> at 5 GV/m; a spot 10 nm across at 5
+GV/m emits 0.3 µA, and a rise from 4 to 5 GV/m multiplies the current by
+34.</p>
+<p><strong>Enhancement.</strong> Applied fields are tens of MV/m, not
+GV/m, yet emission is seen. Take logarithms of the Fowler-Nordheim law
+with <span class="math inline">\(\mathcal{E}_{loc} =
+\beta_f\mathcal{E}\)</span>: <span
+class="math inline">\(\ln(J/\mathcal{E}^2) = \ln(a_{FN}\beta_f^2/\phi_w)
+- (b_{FN}\phi_w^{3/2}/\beta_f)(1/\mathcal{E})\)</span>. So plotting
+<span class="math inline">\(\ln(J/\mathcal{E}^2)\)</span> against <span
+class="math inline">\(1/\mathcal{E}\)</span> gives a straight line, a
+<em>Fowler-Nordheim plot</em>, of slope <span
+class="math inline">\(-b_{FN}\phi_w^{3/2}/\beta_f\)</span>; with <span
+class="math inline">\(\phi_w\)</span> known, the slope yields an
+effective <span class="math inline">\(\beta_f\)</span> (subscripted to
+keep it apart from the relativistic <span
+class="math inline">\(\beta\)</span>) with <span
+class="math inline">\(\mathcal{E}_{loc} = \beta_f\mathcal{E}\)</span>.
+Studies for CLIC, the Compact Linear Collider proposed at CERN (<a
+href="25-linear-colliders.html">chapter 25</a>), found <span
+class="math inline">\(\beta_f \approx 30\)</span> to 60 for conditioned
+copper accelerating structures and 100 to 200 for pulsed DC electrodes
+(flat test electrodes given short pulses of steady voltage) (Wuensch and
+others, 2025). Microscopic tips and particles explain part of it.</p>
+<p><strong>From emission to arc.</strong> The emitted current heats its
+tip and the spot where it lands; when either vaporises, the field
+ionises the vapour and an arc follows. Louis Cranberg (1952) proposed
+another route: loose particles, “clumps”, torn from one electrode and
+vaporised on the other. A clump of area <span
+class="math inline">\(A_e\)</span> carries charge <span
+class="math inline">\(\varepsilon_0\mathcal{E}A_e\)</span> (the surface
+charge of the electrode it left) with <span
+class="math inline">\(\mathcal{E} = V/d\)</span>, and, falling through
+the whole voltage, arrives with energy charge times voltage, <span
+class="math inline">\(\varepsilon_0(V/d)A_e\times V =
+\varepsilon_0A_eV^2/d\)</span>; if breakdown needs a fixed energy per
+area, <span class="math inline">\(V^2/d\)</span> is constant and</p>
+<p><span class="math display">\[
+V_b \propto d^{1/2}.
+\]</span></p>
+<p>This is the <strong>total-voltage effect</strong>: up to about half a
+centimetre to a centimetre the voltage held rises roughly linearly with
+the gap, beyond it roughly as the square root (Grisham and others,
+2014), with measured exponents of about 0.5 to 0.7 (0.6 to 0.7 for
+vacuum interrupters, switches for power circuits whose contacts part
+inside a vacuum, with 10 to 50 mm gaps; Zhang and others, 2011).
+Quadrupling a large gap doubles the voltage and halves the usable
+field.</p>
+<p><strong>Conditioning.</strong> New electrodes break down at fields
+well below what they reach later. <em>Conditioning</em> is the cure.
+Raising the voltage slowly and letting small, limited sparks occur
+removes emitters and contaminants. In a 3 GHz accelerating structure
+built for medical linacs, <span class="math inline">\(\beta_f\)</span>
+fell from 76 to 46 during conditioning (Martinez-Reviriego and others,
+2025); across many tens of structures and electrodes, progress followed
+the number of pulses applied rather than the number of breakdowns
+(Wuensch and others, 2025).</p>
+<h3 id="6-surface-flashover">6. Surface flashover</h3>
+<p>An insulator in vacuum fails along its surface at fields well below
+its bulk strength and below the strength of a vacuum gap of the same
+length. The accepted picture (Miller’s reviews, 1989 to 2015) starts at
+the cathode triple junction, where enhanced field draws out electrons.
+Some strike the insulator, each knocking out more than one
+<em>secondary</em> electron (an electron freed from a surface by an
+impact); the surface charges positive and pulls the next electrons back
+onto it, so an avalanche hops along the surface towards the anode,
+desorbing gas (freeing molecules stuck to the surface) that then
+ionises. It needs only a surface and a cathode junction, which is why it
+comes early.</p>
+<p>Two cures follow. <strong>Angled insulators</strong>: make the
+insulator a cone at about 45° to the field, wider at the cathode.
+Electrons leaving the cathode junction are driven towards the anode, and
+the surface, narrowing that way, slopes away from them, so the field
+pushes them off the surface. O. Milton’s 1972 measurements of flashover
+against angle established the practice. <strong>Grading</strong>: divide
+a long insulator with metal electrodes into short sections, each holding
+a share, each junction shielded; this is the sectioned tube of every
+electrostatic accelerator. In 1962 Van de Graaff, Rose and Wittkower
+added “inclined-field” tubes, whose tilted fields sweep stray electrons
+and negative ions into the electrodes before they gain much energy;
+otherwise an electron from the positive end falls through the whole
+voltage, makes X-rays and ions at the far end, and the process
+regenerates.</p>
+<p><em>Worked number: the Fermilab Recycler cooler.</em> The cooler,
+developed from 1995 to 2004, ran a beam of electrons alongside
+Fermilab’s antiprotons to cool them, that is to narrow their spread of
+velocities (<a href="24-beam-cooling.html">chapter 24</a>). Its
+electrons came from a Pelletron, a belt-charged electrostatic generator
+whose belt is a chain of metal pellets (<a
+href="06-the-electrostatic-generator.html">chapter 6</a>), at 4.3 MV.
+The accelerating tubes, first about 3 m long, were five sections of 2
+feet (0.61 m). Each section alone was conditioned to about 1.1 MV (1.8
+MV/m). Together the tubes held about 5 MV without beam but ran stably
+with beam only at 3.5 MV, about 60 per cent of the sum. A sixth section
+(3.6 m in all) gave stable running at 4.3 MV, a mean of 1.2 MV/m
+(Shemyakin and Prost, 2013).</p>
+<h3 id="7-solids-and-liquids-ratings-rf-and-x-rays">7. Solids and
+liquids, ratings, RF and X-rays</h3>
+<p><strong>Solids and liquids.</strong> Thin, clean samples tested
+briefly are very strong: 100 to 400 MV/m for highly purified liquids
+(Kuffel, Zaengl and Kuffel, table 6.2), and short-term values of 19 to
+160 MV/m are quoted for polyethylene. Thick pieces in service fail far
+lower. Voids carry <span class="math inline">\(\varepsilon_r\)</span>
+times the field of the surrounding material, discharge, and grow
+branched channels; losses heat the material until it runs away
+thermally; particles and moisture in oil bridge gaps; and surfaces fail
+first. Practical stresses are of order 10 MV/m. Mineral transformer oil,
+tested between electrodes 2.5 mm apart (IEC 60156), must hold at least
+30 kV on delivery, 12 MV/m. Window glass is quoted at about 10 to 14
+MV/m, extruded PTFE at about 20 MV/m. A component’s datasheet states
+what it may see, not where it fails: a capacitor’s working DC voltage, a
+rectifier’s peak reverse voltage, both with margin. Beyond them a part
+punctures through its insulation or flashes over its case. How a
+multiplier keeps each part within its rating is in <a
+href="05-the-voltage-multiplier.html">chapter 5</a>.</p>
+<p><strong>RF breakdown.</strong> Surfaces in radio-frequency cavities
+hold peak fields that rise with frequency. W. D. Kilpatrick published a
+criterion from 1950s data in 1957; the form used, from a 1982 Los Alamos
+note by T. J. Boyd, is</p>
+<p><span class="math display">\[
+f = 1.64\,\mathcal{E}_K^2\,e^{-8.5/\mathcal{E}_K} \qquad (f \text{ in
+MHz}, \mathcal{E}_K \text{ in MV/m}),
+\]</span></p>
+<p>giving 18.5 MV/m at 352.2 MHz and 46 MV/m at 2856 MHz. Clean modern
+surfaces exceed it: CERN’s Linac4 radio-frequency quadrupole (a
+structure that both accelerates and focuses a low-energy beam with
+shaped RF electrodes; <a href="14-linear-accelerators.html">chapter
+14</a>) at 352 MHz was designed for 34 MV/m, 1.84 times the Kilpatrick
+value (Rossi and others, 2008). <a
+href="13-rf-cavities-and-power.html">Chapter 13</a> takes this up.</p>
+<p><strong>X-rays.</strong> Every stray electron lands with energy up to
+<span class="math inline">\(eV\)</span> and makes bremsstrahlung, the
+X-rays given off when an electron is slowed in the field of a nucleus
+(<a href="F7-atoms-and-quanta.html#5-x-rays">F7, section 5</a>). The
+fraction of its power that becomes X-rays is roughly <span
+class="math inline">\(kZV\)</span>, with <span
+class="math inline">\(Z\)</span> the target’s atomic number, <span
+class="math inline">\(V\)</span> in volts and <span
+class="math inline">\(k \approx 10^{-9}\)</span> V<span
+class="math inline">\(^{-1}\)</span> (the IAEA handbook gives about 0.8
+per cent for tungsten at 100 kV). A dark current (current that flows
+with no beam, from field emission) of 10 µA at 200 kV on copper deposits
+2 W and sends out about 12 mW of X-rays, penetrating and invisible.
+Since field emission rises steeply with voltage, a rising X-ray rate is
+the warning of a gap in trouble.</p>
+<h3
+id="pre-requisite-images-and-two-dimensional-complex-potentials">Pre-requisite:
+Images and two-dimensional complex potentials</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section teaches the method of
+image charges: a point charge and a conducting plane, a point charge and
+a conducting sphere, and the series of images that solves two spheres at
+given potentials. Section 8 uses it to find the peak field in a sphere
+gap and to show that the standard sparking voltages correspond to one
+field, 3.1 MV/m. (Two-dimensional complex potentials, the other half of
+the subject, are not needed in this chapter and are left out.) Taught
+from Tong, <em>Electromagnetism</em>, section 2.4.3 (the method of
+images), and Kuffel, Zaengl and Kuffel, section 4.2.3 (sphere-to-sphere
+fields by image charges).</p>
+</blockquote>
+<p><strong>The idea.</strong> The <a
+href="#pre-requisite-continued-laplace-and-poisson-equations-uniqueness-boundary-value-problems">uniqueness
+theorem</a> says that any potential satisfying Laplace’s equation in a
+region, with the right values on its boundaries, is the only one. So if
+we can place imaginary charges <em>outside</em> the region of interest,
+inside the metal where no field is asked for, such that together with
+the real charges they make every conductor surface an equipotential at
+the right value, then the field of all these charges is the true field
+in the region. The imaginary charges are called images. They are not
+there; the real charge sits on the metal surface, spread so as to have
+the same effect outside.</p>
+<p><strong>A point charge and a plane.</strong> A charge <span
+class="math inline">\(q\)</span> (C) sits a height <span
+class="math inline">\(h\)</span> (m) above a flat earthed conductor. Put
+an image <span class="math inline">\(-q\)</span> at depth <span
+class="math inline">\(h\)</span> below the plane, on the same normal.
+Every point of the plane is equally far from both, so the pair gives it
+zero potential: the boundary condition holds, and above the plane the
+field is that of the pair. At a point on the plane a distance <span
+class="math inline">\(\rho\)</span> from the foot of the normal, both
+charges are a distance <span class="math inline">\(s = \sqrt{h^2 +
+\rho^2}\)</span> away; their fields have size <span
+class="math inline">\(q/(4\pi\varepsilon_0s^2)\)</span> each, the
+components along the plane cancel, and the normal components, each a
+fraction <span class="math inline">\(h/s\)</span> of the whole, add:</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{2qh}{4\pi\varepsilon_0(h^2 + \rho^2)^{3/2}}, \qquad
+\sigma_q = -\varepsilon_0\mathcal{E}.
+\]</span></p>
+<p>Integrating <span class="math inline">\(\sigma_q\)</span> over the
+plane gives exactly <span class="math inline">\(-q\)</span> (checked
+numerically for 1 nC at 10 cm, whose field directly below is 1.8 kV/m):
+the image stands in for the induced charge. The force on the real charge
+is its attraction to the image, <span
+class="math inline">\(q^2/[4\pi\varepsilon_0(2h)^2]\)</span> towards the
+plane. For an electron this is the image force used before section 5: at
+0.5 nm from a metal it is <span
+class="math inline">\(2.3\times10^{-10}\)</span> N, and the potential
+energy <span class="math inline">\(-e^2/(16\pi\varepsilon_0x)\)</span>
+is <span class="math inline">\(-0.72\)</span> eV.</p>
+<p><strong>A point charge and a sphere.</strong> A charge <span
+class="math inline">\(q\)</span> sits a distance <span
+class="math inline">\(D_q\)</span> from the centre of an earthed sphere
+of radius <span class="math inline">\(R\)</span> (<span
+class="math inline">\(D_q &gt; R\)</span>). By symmetry, try one image
+<span class="math inline">\(q&#39;\)</span> on the line joining them, a
+distance <span class="math inline">\(b&#39;\)</span> from the centre.
+Ask for zero potential at the two points of the sphere on that line. At
+the near point the distances are <span class="math inline">\(D_q -
+R\)</span> to <span class="math inline">\(q\)</span> and <span
+class="math inline">\(R - b&#39;\)</span> to <span
+class="math inline">\(q&#39;\)</span>; at the far point, <span
+class="math inline">\(D_q + R\)</span> and <span class="math inline">\(R
++ b&#39;\)</span>:</p>
+<p><span class="math display">\[
+\frac{q}{D_q - R} + \frac{q&#39;}{R - b&#39;} = 0, \qquad \frac{q}{D_q +
+R} + \frac{q&#39;}{R + b&#39;} = 0.
+\]</span></p>
+<p>Both give <span class="math inline">\(q&#39;/q\)</span>; equating
+them, <span class="math inline">\((R - b&#39;)(D_q + R) = (R +
+b&#39;)(D_q - R)\)</span>. Multiplying out, the <span
+class="math inline">\(RD_q\)</span> terms cancel and so do the <span
+class="math inline">\(-b&#39;R\)</span> terms, leaving <span
+class="math inline">\(2R^2 = 2b&#39;D_q\)</span>. So</p>
+<p><span class="math display">\[
+b&#39; = \frac{R^2}{D_q}, \qquad q&#39; = -q\,\frac{R}{D_q}.
+\]</span></p>
+<p>Two points are not the whole sphere, so check a general point at
+angle <span class="math inline">\(\theta\)</span> from the line. Its
+squared distance to <span class="math inline">\(q\)</span> is <span
+class="math inline">\(s^2 = R^2 + D_q^2 - 2RD_q\cos\theta\)</span>; to
+the image,</p>
+<p><span class="math display">\[
+s&#39;^2 = R^2 + \frac{R^4}{D_q^2} - \frac{2R^3}{D_q}\cos\theta =
+\frac{R^2}{D_q^2}\left(D_q^2 + R^2 - 2RD_q\cos\theta\right) =
+\frac{R^2}{D_q^2}s^2.
+\]</span></p>
+<p>So <span class="math inline">\(s&#39; = (R/D_q)s\)</span> everywhere
+on the sphere, and <span class="math inline">\(q/s + q&#39;/s&#39; = q/s
+- (qR/D_q)/(Rs/D_q) = 0\)</span>. The whole sphere is at zero. For 1 nC
+at 0.3 m from a sphere of radius 0.125 m, the image is <span
+class="math inline">\(-0.417\)</span> nC at 52 mm from the centre, and
+the potential computed at seven points round the sphere is zero to <span
+class="math inline">\(10^{-14}\)</span> V.</p>
+<p>Two extensions. A sphere held at potential <span
+class="math inline">\(V\)</span> instead of earthed: add a charge <span
+class="math inline">\(4\pi\varepsilon_0RV\)</span> at its centre, which
+raises the whole surface by <span class="math inline">\(V\)</span> and
+keeps it an equipotential. An insulated sphere with no net charge: add
+<span class="math inline">\(+qR/D_q\)</span> at the centre to cancel the
+image’s charge.</p>
+<p><strong>Two spheres: the series of images.</strong> Two spheres of
+radius <span class="math inline">\(R\)</span> have centres a distance
+<span class="math inline">\(b\)</span> apart, so the gap is <span
+class="math inline">\(S = b - 2R\)</span>. Sphere 1 is at <span
+class="math inline">\(+V/2\)</span> and sphere 2 at <span
+class="math inline">\(-V/2\)</span>, which makes the arrangement
+symmetric and the mid-plane an equipotential at zero. Build the solution
+step by step.</p>
+<ol type="1">
+<li>Put <span class="math inline">\(Q_0 =
+4\pi\varepsilon_0R(V/2)\)</span> at the centre of sphere 1 and <span
+class="math inline">\(-Q_0\)</span> at the centre of sphere 2. Each
+sphere alone would now be right, but each charge spoils the other
+sphere’s equipotential.</li>
+<li>Cancel the effect of <span class="math inline">\(-Q_0\)</span> on
+sphere 1 with its image in sphere 1: <span
+class="math inline">\(+Q_0R/b\)</span> at <span
+class="math inline">\(R^2/b\)</span> from centre 1, towards sphere 2.
+Mirror it in sphere 2.</li>
+<li>The new charge in sphere 2 now spoils sphere 1 again, and so on. If
+the <span class="math inline">\((n-1)\)</span>th charge in sphere 1 sits
+at <span class="math inline">\(x_{n-1}\)</span> from centre 1, its
+mirror sits at <span class="math inline">\(b - x_{n-1}\)</span> from
+centre 1, and its image in sphere 1 is</li>
+</ol>
+<p><span class="math display">\[
+Q_n = Q_{n-1}\frac{R}{b - x_{n-1}}, \qquad x_n = \frac{R^2}{b -
+x_{n-1}}, \qquad x_0 = 0.
+\]</span></p>
+<p>Each step multiplies the charge by <span class="math inline">\(R/(b -
+x_{n-1})\)</span>, which is less than <span class="math inline">\(R/(R +
+S)\)</span> because <span class="math inline">\(x_{n-1} &lt; R\)</span>;
+so the charges shrink geometrically and the series converges, while the
+positions move towards a limiting point inside each sphere, on the side
+facing the other (67 mm from the centre for 25 cm spheres 50 mm apart).
+The highest field is at the point M of sphere 1 nearest sphere 2, a
+distance <span class="math inline">\(R\)</span> from centre 1 on the
+line. Each <span class="math inline">\(+Q_n\)</span> in sphere 1, a
+distance <span class="math inline">\(R - x_n\)</span> behind M, pushes
+outwards towards sphere 2; each <span
+class="math inline">\(-Q_n\)</span> in sphere 2, a distance <span
+class="math inline">\(b - R - x_n\)</span> ahead of M, pulls the same
+way. All add:</p>
+<p><span class="math display">\[
+\mathcal{E}_{max} =
+\frac{1}{4\pi\varepsilon_0}\sum_{n=0}^{\infty}Q_n\left[\frac{1}{(R -
+x_n)^2} + \frac{1}{(b - R - x_n)^2}\right].
+\]</span></p>
+<p><em>At work: the 25 cm sphere gap.</em> With <span
+class="math inline">\(R = 0.125\)</span> m, summing 200 terms gives
+<span class="math inline">\(\mathcal{E}_{max}\)</span> equal to 1.081,
+1.137 and 1.283 times <span class="math inline">\(V/S\)</span> at gaps
+of 30, 50 and 100 mm. A check: the potential computed from all the
+charges is the same at three points round sphere 1, to one part in <span
+class="math inline">\(10^{15}\)</span>. The series converges fast: at 50
+mm, 5 terms give 93 per cent of the sum, 10 terms 99.7 per cent, 20
+terms the sum to five figures. The first term alone, two spheres that
+ignore each other, gives only 0.30 of <span
+class="math inline">\(V/S\)</span>: most of the field in the gap comes
+from charge the spheres draw onto each other’s facing sides. At the
+tabulated sparking voltages, 86, 137 and 244 kV, the peak fields are
+3.10, 3.12 and 3.13 MV/m. For 12.5 cm spheres the factors are 1.054 at
+10 mm and 1.109 at 20 mm, and the tabulated 31.7 kV and 59 kV give 3.34
+and 3.27 MV/m: smaller gaps hold a little more field, as Schumann’s law
+of section 3 says they should. When one sphere is earthed and the other
+at <span class="math inline">\(V\)</span>, as in the standard, the
+arrangement is no longer symmetric; the same method works with a
+different starting charge on each sphere, and the field changes
+slightly.</p>
+<p><strong>Exercise G1.</strong> A 1 nC charge is 0.3 m from the centre
+of an earthed sphere of radius 0.125 m. Find the image, and the total
+charge induced on the sphere.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(q&#39; = -qR/D_q = -1\times0.125/0.3 =
+-0.417\)</span> nC at <span class="math inline">\(b&#39; = R^2/D_q =
+0.0156/0.3 = 52\)</span> mm from the centre. Outside the sphere the
+field is that of <span class="math inline">\(q\)</span> and <span
+class="math inline">\(q&#39;\)</span>, so by Gauss’s law the charge on
+the sphere is <span class="math inline">\(q&#39;\)</span>: <span
+class="math inline">\(-0.417\)</span> nC. An earthed sphere does not
+take an equal and opposite charge; it takes the fraction <span
+class="math inline">\(R/D_q\)</span>.</p>
+</details>
+<p><strong>Exercise G2.</strong> For two 25 cm spheres at 50 mm and 137
+kV, work out the first three charges and their contributions to the
+field at M by hand, and compare with the full sum.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(b = 0.30\)</span> m. <span
+class="math inline">\(Q_0 = 4\pi\varepsilon_0\times0.125\times68\,500 =
+0.953\)</span> µC at <span class="math inline">\(x_0 = 0\)</span>. <span
+class="math inline">\(Q_1 = Q_0\times0.125/0.30 = 0.397\)</span> µC at
+<span class="math inline">\(x_1 = 0.125^2/0.30 = 52.1\)</span> mm. <span
+class="math inline">\(Q_2 = Q_1\times0.125/(0.30 - 0.0521) =
+0.200\)</span> µC at <span class="math inline">\(x_2 = 0.0156/0.2479 =
+63.0\)</span> mm. Contributions to <span
+class="math inline">\(\mathcal{E}_{max}\)</span>: 0.83, 0.91 and 0.61
+MV/m, total 2.35 MV/m. The full sum is 3.12 MV/m: three terms give 75
+per cent. The later charges are smaller but sit closer to M, which is
+why so many terms are needed.</p>
+</details>
+<h3 id="pre-requisite-rlc-circuits-and-phasors">Pre-requisite: RLC
+circuits and phasors</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> This section gives Ohm’s law and the
+power in a resistor, the voltage divider, the current of a changing
+charge, the discharge of a capacitor through a resistor, phasors and
+impedance, and the series circuit of a resistor, an inductor and a
+capacitor with its damping. Section 8 uses them for resistive and
+capacitive dividers, the generating voltmeter and the sphere gap’s
+series resistor; section 9 uses the discharge time for safe earthing.
+Taught from Tong, <em>Electromagnetism</em>, sections 4.1.2 (inductance)
+and 4.1.3 (resistance), Tong, <em>Classical Mechanics</em>, section
+2.5.1 (the damped harmonic oscillator), Landau and Lifshitz, volume 1,
+section 25 (damped oscillations), and Kuffel, Zaengl and Kuffel,
+sections 2.3.1 (the critical damping resistance), 3.1.1 (the sphere
+gap’s series resistor), 3.4 (generating voltmeters) and 3.5.2 and 3.6.4
+(voltage dividers).</p>
+</blockquote>
+<p>Reminder: <a
+href="F4-electromagnetism.html#8-current-current-density-and-ohms-law">F4,
+sections 8 and 9</a> gave Ohm’s law and the RC circuit, <a
+href="F5-waves.html#6-lc-and-rlc-circuits-with-phasors">F5, sections 1
+and 6</a> complex numbers and phasors, and <a
+href="F3-mechanics.html#10-damped-and-driven-oscillation">F3, section
+10</a> the damped oscillator. This section gathers what the measurements
+need.</p>
+<p><strong>Resistors and power.</strong> A resistor of resistance <span
+class="math inline">\(R\)</span> (ohms, Ω) carries a current <span
+class="math inline">\(I\)</span> (A) proportional to the voltage across
+it: <span class="math inline">\(V = IR\)</span>. The charge falls
+through <span class="math inline">\(V\)</span>, so energy is delivered
+at the rate</p>
+<p><span class="math display">\[
+P = VI = \frac{V^2}{R} = I^2R \quad \text{(watts)},
+\]</span></p>
+<p>all of it turned to heat. Resistors in series add. Two in series
+across <span class="math inline">\(V\)</span> carry the same current
+<span class="math inline">\(V/(R_1 + R_2)\)</span>, so the voltage
+across the lower one is</p>
+<p><span class="math display">\[
+V_{out} = V\,\frac{R_2}{R_1 + R_2}.
+\]</span></p>
+<p>That is a divider: a known fraction of an unmeasurable voltage, read
+on an ordinary meter. <em>At work:</em> a 1 MV divider of 10 GΩ draws
+<span class="math inline">\(10^6/10^{10} = 100\)</span> µA and turns
+<span class="math inline">\(V^2/R = 100\)</span> W into heat. Built as
+100 resistors of 100 MΩ, each holds 10 kV and dissipates 1 W. A lower
+arm of 10 kΩ gives 1.0 V out. The 100 µA is not free: it is comparable
+with what a belt generator carries (<a
+href="06-the-electrostatic-generator.html">chapter 6</a>), so a divider
+is part of the load.</p>
+<p><strong>The current of a changing charge.</strong> A capacitor holds
+<span class="math inline">\(q = CV\)</span>; current is the rate charge
+arrives, <span class="math inline">\(i = dq/dt\)</span> (the
+instantaneous current is written <span
+class="math inline">\(i\)</span>), so</p>
+<p><span class="math display">\[
+i = C\frac{dV}{dt}.
+\]</span></p>
+<p>No change, no current: a capacitor passes no steady current but any
+changing one. The same holds for any induced charge. In the generating
+voltmeter an earthed plate facing the high-voltage electrode carries the
+induced charge <span
+class="math inline">\(\varepsilon_0\mathcal{E}A_e\)</span> on its
+uncovered area <span class="math inline">\(A_e(t)\)</span> (<a
+href="#pre-requisite-continued-dielectrics-capacitance-and-field-energy">Dielectrics,
+capacitance and field energy</a>), and a rotating earthed vane changes
+that area, so a current <span class="math inline">\(i =
+\varepsilon_0\mathcal{E}\,dA_e/dt\)</span> flows to earth. Each cycle
+the charge flows in, <span class="math inline">\(q_{max} =
+\varepsilon_0\mathcal{E}A_e\)</span>, and back out, so a rectified meter
+reads the mean <span class="math inline">\(2q_{max}f\)</span> at <span
+class="math inline">\(f\)</span> cycles per second. At 1 MV/m on 10
+cm<span class="math inline">\(^2\)</span>, <span
+class="math inline">\(q_{max} = 8.85\)</span> nC; at 200 per second,
+3.54 µA, proportional to the field, not to any voltage.</p>
+<p><strong>Discharge through a resistor.</strong> A capacitor <span
+class="math inline">\(C\)</span> charged to <span
+class="math inline">\(V_0\)</span> is connected across <span
+class="math inline">\(R\)</span>. The current through the resistor is
+<span class="math inline">\(V/R\)</span> and it is the capacitor’s
+charge running out, <span class="math inline">\(i = -C\,dV/dt\)</span>.
+So</p>
+<p><span class="math display">\[
+\frac{dV}{dt} = -\frac{V}{RC}, \qquad V(t) = V_0e^{-t/\tau}, \qquad \tau
+= RC,
+\]</span></p>
+<p>the equation of decay of <a
+href="F1-calculus.html#10-equations-of-change-first-differential-equations">F1,
+section 10</a>, with <span class="math inline">\(\tau\)</span> in
+seconds when <span class="math inline">\(R\)</span> is in ohms and <span
+class="math inline">\(C\)</span> in farads. After one <span
+class="math inline">\(\tau\)</span> the voltage is 37 per cent of the
+start; to fall to a voltage <span class="math inline">\(V_1\)</span>
+takes <span class="math inline">\(\tau\ln(V_0/V_1)\)</span>. The stored
+energy <span class="math inline">\(\tfrac12CV_0^2\)</span> all ends as
+heat in <span class="math inline">\(R\)</span>. <em>At work:</em> a 1 µF
+capacitor at 100 kV drained by a 100 MΩ bleeder has <span
+class="math inline">\(\tau = 100\)</span> s, and needs <span
+class="math inline">\(100\ln(2000) = 760\)</span> s, nearly 13 minutes,
+to reach 50 V. An earthing stick with 1 kΩ in its lead does it in
+milliseconds (<span class="math inline">\(\tau = 1\)</span> ms), with a
+first current of <span class="math inline">\(100\ \mathrm{kV}/1\
+\mathrm{k\Omega} = 100\)</span> A. That is why the stick goes on every
+time, and why the fixed earth stays on.</p>
+<p><strong>Phasors and impedance.</strong> For a voltage oscillating at
+angular frequency <span class="math inline">\(\omega = 2\pi f\)</span>
+(rad/s), write <span class="math inline">\(V(t) = V_0\cos(\omega t +
+\psi) = \mathrm{Re}[\hat V e^{j\omega t}]\)</span>, with the complex
+amplitude <span class="math inline">\(\hat V = V_0e^{j\psi}\)</span> and
+<span class="math inline">\(j^2 = -1\)</span> (<span
+class="math inline">\(j\)</span>, not <span
+class="math inline">\(i\)</span>, since <span
+class="math inline">\(i\)</span> is a current). The gain is that a time
+derivative becomes multiplication by <span
+class="math inline">\(j\omega\)</span>. A capacitor’s <span
+class="math inline">\(i = C\,dV/dt\)</span> becomes <span
+class="math inline">\(\hat I = j\omega C\hat V\)</span>; an inductor’s
+<span class="math inline">\(V = L\,di/dt\)</span>, with <span
+class="math inline">\(L\)</span> in henries, becomes <span
+class="math inline">\(\hat V = j\omega L\hat I\)</span>. Each element
+then obeys an Ohm’s law <span class="math inline">\(\hat V = Z\hat
+I\)</span> with an impedance</p>
+<p><span class="math display">\[
+Z_R = R, \qquad Z_C = \frac{1}{j\omega C}, \qquad Z_L = j\omega L,
+\]</span></p>
+<p>and impedances in series add, like resistances. The size of <span
+class="math inline">\(Z\)</span> gives the ratio of amplitudes, and its
+angle the phase shift; a capacitor’s current leads its voltage by a
+quarter cycle and takes no power on average.</p>
+<p><strong>The capacitive divider.</strong> Two capacitors in series,
+<span class="math inline">\(C_1\)</span> on the high-voltage side and
+<span class="math inline">\(C_2\)</span> below. The divider rule with
+impedances gives</p>
+<p><span class="math display">\[
+\frac{\hat V_{out}}{\hat V} = \frac{Z_{C2}}{Z_{C1} + Z_{C2}} =
+\frac{1/C_2}{1/C_1 + 1/C_2} = \frac{C_1}{C_1 + C_2}.
+\]</span></p>
+<p>The frequency has cancelled. Since the ratio is the same at every
+frequency, it holds for any waveform built from them: AC, and fast
+impulses too. <em>At work:</em> <span class="math inline">\(C_1 =
+100\)</span> pF and <span class="math inline">\(C_2 = 100\)</span> nF
+divide by 1001, so 100 kV gives 99.9 V. At 50 Hz the high-voltage arm’s
+impedance is <span class="math inline">\(1/(\omega C_1) = 31.8\)</span>
+MΩ and it carries 3.1 mA at 100 kV, a current that stores and returns
+energy each cycle rather than turning it into heat. Breit, Tuve and
+Dahl’s “capacity-potentiometer” of 1930 worked this way.</p>
+<p>Why not use the resistive divider for impulses? Every resistor also
+has capacitance to its surroundings, of order picofarads. A 10 GΩ chain
+with 10 pF of stray capacitance has a time constant of 0.1 s. Anything
+that changes faster than that is divided by the stray capacitances,
+which nobody has designed, rather than by the resistors. Resistive
+dividers are for DC; capacitive ones, or mixed ones, for AC and
+impulses.</p>
+<p><strong>The series RLC circuit: a sphere gap and its leads.</strong>
+A sphere gap is a capacitor: two 25 cm spheres have of order 15 pF (one
+alone has <span class="math inline">\(4\pi\varepsilon_0\times0.125\
+\mathrm{m} = 14\)</span> pF). Its leads add inductance, roughly 1 µH per
+metre of wire, and a series resistor <span
+class="math inline">\(R\)</span>. When a predischarge or a spark
+disturbs it, charge sloshes round the loop. Going round the loop, the
+voltages add to zero:</p>
+<p><span class="math display">\[
+L\frac{di}{dt} + Ri + \frac{q}{C} = 0, \qquad i = \frac{dq}{dt},
+\qquad\text{so}\qquad L\ddot q + R\dot q + \frac{q}{C} = 0.
+\]</span></p>
+<p>This is the damped oscillator of mechanics, with <span
+class="math inline">\(L\)</span> as mass, <span
+class="math inline">\(R\)</span> as friction and <span
+class="math inline">\(1/C\)</span> as spring. Try <span
+class="math inline">\(q = e^{st}\)</span>: <span
+class="math inline">\(Ls^2 + Rs + 1/C = 0\)</span>, so</p>
+<p><span class="math display">\[
+s = -\frac{R}{2L} \pm \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}.
+\]</span></p>
+<p>If <span class="math inline">\(R &lt; 2\sqrt{L/C}\)</span> the square
+root is imaginary: the charge oscillates at nearly <span
+class="math inline">\(\omega_0 = 1/\sqrt{LC}\)</span>, dying away at the
+rate <span class="math inline">\(R/2L\)</span>. If <span
+class="math inline">\(R \ge 2\sqrt{L/C}\)</span> both roots are real and
+negative: no oscillation, only decay. The dividing value <span
+class="math inline">\(R_{crit} = 2\sqrt{L/C}\)</span> is the critical
+damping resistance.</p>
+<p><em>At work.</em> With 2 m of lead (2 µH) and 15 pF: <span
+class="math inline">\(f_0 = 1/(2\pi\sqrt{LC}) = 29\)</span> MHz and
+<span class="math inline">\(R_{crit} =
+2\sqrt{2\times10^{-6}/15\times10^{-12}} = 730\)</span> Ω. With only the
+50 Ω or so of the leads themselves, the ringing lasts <span
+class="math inline">\(2L/R = 80\)</span> ns, about two cycles, enough to
+set off a premature spark. Kuffel, Zaengl and Kuffel recommend 0.1 to 1
+MΩ in series for DC and power-frequency AC: far above critical, so no
+ringing, and it also limits each spark’s current. But the resistor and
+the gap’s capacitance make a delay, <span class="math inline">\(\tau =
+RC\)</span>: 15 µs for 1 MΩ, negligible against the 20 ms period at 50
+Hz (the resistor takes only <span class="math inline">\(\omega RC =
+0.5\)</span> per cent of the voltage, a quarter cycle out of phase, so
+the peak on the gap falls by about <span class="math inline">\((\omega
+RC)^2/2\)</span>, one part in <span
+class="math inline">\(10^5\)</span>), but far too slow for a lightning
+impulse rising in 1.2 µs. So for impulses the resistor must be small, no
+more than 500 Ω by their rule, giving <span class="math inline">\(RC =
+7.5\)</span> ns. One circuit, two opposite needs; the choice of resistor
+follows from the waveform.</p>
+<p><strong>Exercise H1.</strong> A 300 kV supply may give at most 20 µA
+to its measuring divider. What resistance is needed, what power does it
+dissipate, and what does each of 50 equal resistors in the chain
+see?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(R = 300\ \mathrm{kV}/20\ \mu\mathrm{A} =
+15\)</span> GΩ, dissipating <span class="math inline">\(V^2/R =
+6\)</span> W. Each of 50 resistors (300 MΩ) holds 6 kV and dissipates
+0.12 W. The voltage per resistor, not the power, usually decides how
+many are needed, since a resistor also has a voltage rating.</p>
+</details>
+<p><strong>Exercise H2.</strong> A capacitive divider must give 100 V at
+200 kV with a high-voltage arm of 50 pF. What low-voltage capacitor is
+needed?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(V_{out}/V = C_1/(C_1 + C_2)\)</span>, so
+<span class="math inline">\(C_2 = C_1(V/V_{out} - 1) = 50\
+\mathrm{pF}\times1999 = 99.95\)</span> nF, in practice 100 nF.</p>
+</details>
+<p><strong>Exercise H3.</strong> A 0.5 µF capacitor charged to 50 kV is
+left on a 50 MΩ bleeder. How long until it is below 30 V, and how much
+energy has the bleeder absorbed?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\tau = RC =
+50\times10^6\times0.5\times10^{-6} = 25\)</span> s; <span
+class="math inline">\(t = 25\ln(50\,000/30) = 185\)</span> s, about
+three minutes. The energy is <span class="math inline">\(\tfrac12CV^2 =
+\tfrac12\times0.5\times10^{-6}\times(5\times10^4)^2 = 625\)</span> J.
+Within the first minute it is still above 4 kV: the bleeder is a
+backstop, not a reason to skip the earthing stick.</p>
+</details>
+<p><strong>Exercise H4.</strong> A sphere gap of 15 pF has 3 m of lead
+(3 µH). Find its ringing frequency and the critical resistance.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(f_0 =
+1/(2\pi\sqrt{3\times10^{-6}\times15\times10^{-12}}) = 23.7\)</span> MHz
+and <span class="math inline">\(R_{crit} =
+2\sqrt{3\times10^{-6}/15\times10^{-12}} = 894\)</span> Ω. Longer leads
+ring more slowly and need a larger resistor to stop them.</p>
+</details>
+<h3 id="8-measuring-a-high-voltage">8. Measuring a high voltage</h3>
+<p><strong>The sphere gap.</strong> Two equal spheres, one earthed, a
+known distance apart: raise the voltage until it sparks, and a standard
+table gives the peak voltage. Between large spheres at a gap below their
+radius the field is nearly uniform, the gas strength is known, and the
+spark forms fast enough to respond to an AC peak. The tables, in IEC
+60052, come from international measurements between about 1920 and 1955;
+they were set in the second edition of 1960 and carried unchanged into
+the third, of 2002. For 12.5 cm spheres: 31.7 kV at 10 mm and 59 kV at
+20 mm; for 25 cm spheres (tabulated from 25 mm): 86 kV at 30 mm, 137 kV
+at 50 mm, 244 kV at 100 mm; for 100 cm spheres, 266 kV at 100 mm and 510
+kV at 200 mm (Kuffel, Zaengl and Kuffel, table 3.3: AC, negative
+impulses and DC, at 20 °C and 101.3 kPa). Accuracy is about ±3 per cent
+for AC and impulses with spacing up to half the diameter, ±5 per cent
+for DC below 0.4 of it.</p>
+<p><em>Worked number.</em> For two 25 cm spheres at <span
+class="math inline">\(\pm V/2\)</span>, summing the series of image
+charges gives a peak surface field of 1.081, 1.137 and 1.283 times <span
+class="math inline">\(V/S\)</span> at <span class="math inline">\(S =
+30\)</span>, 50 and 100 mm. At the tabulated voltages that is 3.10, 3.12
+and 3.13 MV/m. The measured table and the physics of section 3 agree:
+these spheres spark when their surface field reaches 3.1 MV/m. (The
+standard earths one sphere, which changes the field slightly.)</p>
+<p>The table value is multiplied by a factor <span
+class="math inline">\(k_d\)</span>, a slightly non-linear function of
+<span class="math inline">\(\delta_r\)</span> given in the standard
+(0.91 at <span class="math inline">\(\delta_r = 0.90\)</span>, 1.05 at
+1.05). Humidity raises the sparking voltage by about 0.2 per cent per
+g/m<span class="math inline">\(^3\)</span>; above 90 per cent relative
+humidity condensation spoils the measurement.</p>
+<p><strong>The electrostatic voltmeter.</strong> The force on a plate of
+area <span class="math inline">\(A_e\)</span> at spacing <span
+class="math inline">\(S\)</span> is <span class="math inline">\(F =
+\varepsilon_0A_eV^2/(2S^2)\)</span>. A guarded disc on a balance reads
+the mean of <span class="math inline">\(V^2\)</span>, and so the
+root-mean-square value, drawing no steady current; Kelvin presented an
+absolute electrometer in 1855 and described attracted-disc instruments
+by 1867 (Aplin and Harrison, 2013). A disc 10 cm across at 10 cm feels
+0.035 N at 100 kV.</p>
+<p><strong>The generating voltmeter.</strong> An earthed sensing plate
+facing the high-voltage electrode carries induced charge <span
+class="math inline">\(q = \varepsilon_0\mathcal{E}A_e\)</span>; a
+rotating earthed vane covers and uncovers it, so a current <span
+class="math inline">\(i = dq/dt\)</span> proportional to <span
+class="math inline">\(\mathcal{E}\)</span> flows to earth through a
+meter. Paul Kirkpatrick and Iwao Miyake described one in 1932; it became
+the voltmeter of electrostatic accelerators. At 1 MV/m on 10 cm<span
+class="math inline">\(^2\)</span> chopped 200 times a second, the
+rectified current is 3.5 µA, and the instrument sits at earth.</p>
+<p><strong>Dividers.</strong> A resistor chain from terminal to earth,
+read at its foot: a 1 MV divider of 10 GΩ draws 100 µA and dissipates
+100 W. For AC and impulses, capacitors divide without steady power;
+Breit, Tuve and Dahl’s 1930 “capacity-potentiometer” was one. In
+electrostatic accelerators the chain that grades the column also
+measures it.</p>
+<h3 id="9-stored-energy-and-safety">9. Stored energy and safety</h3>
+<p>A charged system stores <span class="math inline">\(U_{st} =
+\tfrac12CV^2\)</span> (subscripted to keep it apart from the kinetic
+energy <span class="math inline">\(W\)</span>). A 1 µF capacitor at 100
+kV holds 5 kJ. Letournel estimated 400 kJ in the Vivitron at 35 MV,
+against 60 kJ for a classical 13 MV tandem. Charge stays after the
+supply is off and must be drained, with time constant <span
+class="math inline">\(RC\)</span>; and a capacitor shorted briefly can
+recharge itself from the slow polarisation of its dielectric (the
+“recovery voltage”, Kuffel, Zaengl and Kuffel, section 7.1.1). Hence the
+earthing stick, an insulating pole with an earthed hook applied to every
+conductor before it is touched, and a fixed short left on while work
+goes on.</p>
+<h2 id="how-it-was-researched-and-built">How it was researched and
+built</h2>
+<p>Insulation was learned piece by piece by two communities that met in
+the accelerator: power engineers, who learned air, oil and porcelain for
+transmission lines, and physicists, who learned gases at low pressure,
+vacuum and the electron.</p>
+<p>Paschen’s measurements and Townsend’s avalanche experiments of 1900
+to 1915 used small electrodes, controlled gas and electrometers reading
+tiny currents, kept low so as not to damage the electrodes. Peek’s law
+of corona (1911) and his book of 1915 came from power engineering, as
+did the sphere-gap tables, built by laboratories in several countries
+from 1920 to 1955. Later calculations from the streamer criterion and
+accurate field computation confirmed the tables with few exceptions.</p>
+<p>Coolidge’s cascade tubes of 1926 to 1928 showed that sections in
+series hold more than one long tube. Tuve’s group reached 1.4 MV and
+named field emission as the limit, two years after Fowler and Nordheim
+explained it. Herb’s group had put the whole generator into compressed
+air by 1935 and reported 2.16 MV steady in 1937; Trump and Van de Graaff
+built a compact pressure-insulated X-ray generator by 1939. Tanks were
+later filled with nitrogen and carbon dioxide, then with SF<span
+class="math inline">\(_6\)</span>, and machines of a given voltage
+shrank with each. Cranberg’s 1952 hypothesis explained the total-voltage
+effect, and inclined-field tubes of 1962 reduced it; tubes of alumina
+insulators and titanium electrodes came into use. The Oak Ridge 25URC
+Pelletron, designed for 25 MV, entered routine operation in 1982 and,
+after its tubes were replaced between 1985 and 1987, ran for long
+periods at 24 MV.</p>
+<p>The Vivitron shows the limits. Letournel tested a full-scale model
+section in his laboratory’s 5.5 MV generator before building.
+Commissioning tests from December 1990 to March 1991 at 7 bar of SF<span
+class="math inline">\(_6\)</span> reached 17.6 MV with flashovers and
+parasitic currents, later traced to humidity (Helleboid, 1993), and in
+service the machine delivered beams at 8 to 19 MV (Foehrenbacher and
+others, 1998). A design right in its fields was beaten by water vapour,
+surfaces and stored energy.</p>
+<p>Today electrodes are laid out first for field: large radii, terminals
+near the optimum radius ratio, corona rings and grading at every
+junction. Fields are computed in two or three dimensions by
+finite-element, finite-difference, boundary-element or charge-simulation
+codes (Kuffel, Zaengl and Kuffel, section 4.4), and the peak surface
+field on every part is compared with an allowed value for its medium,
+area and finish, with margin. Insulators are angled or shielded; tubes
+are graded by resistor chains; gas pressure, purity and dryness are
+monitored. Then the device is conditioned, and the margin it really has
+is found.</p>
+<h2 id="at-the-bench">At the bench</h2>
+<h3 id="a-sphere-gap-measurement">A sphere-gap measurement</h3>
+<p>The spheres stand on insulating supports, one earthed, with a screw
+and scale for the gap. The standard fixes their diameter (within 2 per
+cent), their shanks, and the clearances: for 25 cm spheres the sparking
+point stands 5 to 7 diameters above the earthed floor, and nothing else
+may come within 10 spacings of it.</p>
+<ol type="1">
+<li>Clean the spheres: no grease or varnish near the sparking points,
+and dry. They need not be polished. Pitted spheres spark early and read
+low; refinish or replace them.</li>
+<li>Put 0.1 to 1 MΩ in series with the gap, to limit each spark’s
+current and pitting and to damp oscillations of the gap with its
+leads.</li>
+<li>Read temperature and pressure; compute <span
+class="math inline">\(\delta_r\)</span> and <span
+class="math inline">\(k_d\)</span>. Note the humidity.</li>
+<li>Set the gap, no wider than half the diameter, for the voltage
+expected. Too wide gives no spark and no information; too narrow sparks
+early and pits the spheres.</li>
+<li>Below about 50 kV, or with spheres of 12.5 cm or less, irradiate the
+gap with a quartz mercury lamp or a small radioactive source in the
+high-voltage sphere: without a starting electron the spark is late and
+readings scatter high.</li>
+<li>Raise the voltage from well below, slowly enough to read the
+supply’s low-voltage meter at sparkover; or hold the voltage and close
+the gap slowly.</li>
+<li>Discard the first sparks, which are erratic, and average several.
+Dust and fibres give low, erratic sparks, especially on DC.</li>
+<li>Look up the table, multiply by <span
+class="math inline">\(k_d\)</span>, and use the result to calibrate the
+supply’s own meter, trusted until the circuit changes.</li>
+</ol>
+<p>A sphere-gap spark is a flat crack and a bright white-violet thread,
+and the voltage collapses until the supply is reset.</p>
+<h3 id="corona-hiss-and-ozone">Corona, hiss and ozone</h3>
+<p>Before breakdown, corona. In a darkened room a faint violet-blue glow
+appears on sharp edges, wire ends and screw heads: a bluish-white sheath
+on a positive wire, reddish spots on a negative one. It hisses, loudly
+enough to be the oldest test for partial discharge, and it smells of
+ozone. On the meters it is a supply current rising steeply with voltage
+and a voltage that will not rise further. Find the point by eye or ear
+and cover it with a larger radius.</p>
+<h3 id="tracking">Tracking</h3>
+<p>An insulator that has carried surface discharges shows a dark,
+branching carbonised line running from the high-voltage end towards
+earth. It forms only on organic materials, from leakage across a film of
+dust and moisture. The carbon conducts, so each flashover comes at a
+lower voltage. Porcelain and glass do not track.</p>
+<h3 id="conditioning">Conditioning</h3>
+<p>A vacuum gap or tube is pumped, and baked if it can be, before any
+voltage. The voltage is raised in small steps and held at each until the
+current and the X-ray monitors are quiet. Small discharges come: a
+flicker on the current meter, a burst on the vacuum gauge, a click on
+the X-ray monitor; after each the voltage is held or lowered until the
+vacuum recovers. A gap takes hours, a large tube days. The Recycler’s
+tube sections were each conditioned to about 1.1 MV until they held
+without apparent discharges for many minutes. The record of voltage and
+dark current against time shows whether the surfaces are improving.</p>
+<h3 id="flashover">Flashover</h3>
+<p>In air: a bright channel across the gap or along a surface, a sharp
+crack that grows with the stored energy, ozone. In a pressure tank: a
+thud through the steel and the generating voltmeter falling to zero. In
+a vacuum tube: the voltage collapses within a microsecond, the gauge
+leaps, the X-ray monitors spike, the protective spark gaps fire. In the
+Recycler a full discharge raised the tube pressure to about 0.01 mTorr
+(1.3 mPa) and took hours to recover from. Afterwards the evidence is on
+the parts: craters on electrodes, a burn at a triple junction, a track,
+a punctured capacitor.</p>
+<h3 id="x-rays-and-earthing">X-rays and earthing</h3>
+<p>A high-voltage vacuum gap is an X-ray source whether or not it is
+meant to be one. Above a few tens of kilovolts its X-rays pass through
+glass and thin metal; at hundreds of kilovolts they need lead or
+concrete. Laboratories keep radiation monitors by such equipment and
+interlock the doors of shielded rooms; a rising reading at fixed voltage
+is a reason to stop. Before anyone reaches in: the supply off and
+locked, the earthing stick on every terminal and capacitor, a fixed
+earth left on during work, because stored charge is invisible and can
+return.</p>
+<h2 id="where-it-stops">Where it stops</h2>
+<p>A static voltage is limited by its insulation, and every insulator
+has a field limit: about 3 MV/m in air over a centimetre, falling
+towards 2.4 MV/m; of order 10 MV/m over large electrodes in compressed
+SF<span class="math inline">\(_6\)</span>; one to a few MV/m along an
+insulator in vacuum; and a total-voltage effect that makes long tubes
+hold less than the sum of their parts. Bigger electrodes, higher
+pressure and more sections push the limit, each at a cost in size and
+stored energy. The largest electrostatic accelerators reached about 25
+MV; the Vivitron, designed for 35 MV, ran below 20 MV.</p>
+<p>Two ideas get past it. The first divides the voltage among many parts
+so that none sees more than it can hold: the multiplier and sectioned
+tube of <a href="05-the-voltage-multiplier.html">chapter 5</a>, and the
+pressurised electrostatic generator of <a
+href="06-the-electrostatic-generator.html">chapter 6</a>. The second
+gives up the static field and uses a modest voltage many times,
+switching it in step with the particle: resonant acceleration (<a
+href="09-resonant-acceleration.html">chapter 9</a>), where
+radio-frequency surfaces also hold higher fields (<a
+href="13-rf-cavities-and-power.html">chapter 13</a>).</p>
+<h2 id="exercises">Exercises</h2>
+<p><strong>1.</strong> The Vivitron’s terminal is 1.4 m in diameter, at
+up to 35 MV. What would its surface field be alone in open space?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\mathcal{E} = V/R_s = 35/0.7 =
+50\)</span> MV/m, several times what compressed SF<span
+class="math inline">\(_6\)</span> holds in practice. The tank wall
+brings the mean radial field down to 10 MV/m, and the discrete
+electrodes bring the peak close to that mean.</p>
+</details>
+<p><strong>2.</strong> A gap of 25 cm spheres at 50 mm (137 kV in the
+table) is used at 80 kPa and 10 °C. What does it measure? Interpolate
+linearly in the standard’s factors, <span class="math inline">\(k_d =
+0.82\)</span> at <span class="math inline">\(\delta_r = 0.80\)</span>
+and 0.86 at 0.85.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\delta_r = (80/101.3)(293/283.15) =
+0.817\)</span>, so <span class="math inline">\(k_d = 0.834\)</span> and
+the gap sparks at <span class="math inline">\(0.834 \times 137 =
+114\)</span> kV. Scaling with <span
+class="math inline">\(\delta_r\)</span> alone gives 112 kV; the factor
+is larger because of the <span class="math inline">\(\sqrt{pd}\)</span>
+term in Schumann’s law.</p>
+</details>
+<p><strong>3.</strong> Derive the Paschen minimum from Townsend’s
+criterion and evaluate it for air with <span class="math inline">\(A_T =
+15\)</span> cm<span class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span>, <span class="math inline">\(B_T =
+365\)</span> V cm<span class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span> and <span
+class="math inline">\(\gamma_{se} = 0.01\)</span>.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(V_b = B_Tpd/\ln(A_Tpd/K)\)</span> with
+<span class="math inline">\(K = \ln(1+1/\gamma_{se}) = 4.615\)</span>.
+<span class="math inline">\(dV_b/d(pd) = 0\)</span> gives <span
+class="math inline">\(\ln(A_Tpd/K) = 1\)</span>: <span
+class="math inline">\((pd)_{min} = \mathrm{e}K/A_T = 0.836\)</span> Torr
+cm (1.12 Pa m) and <span class="math inline">\(V_{b,min} =
+\mathrm{e}B_TK/A_T = 305\)</span> V, with <span
+class="math inline">\(\mathrm{e} = 2.718\)</span>. The measured 352 V at
+0.55 Torr cm differs by about 15 per cent in voltage and a third in
+<span class="math inline">\(pd\)</span>.</p>
+</details>
+<p><strong>4.</strong> Sketch the point-to-plane result. In prolate
+spheroidal coordinates <span class="math inline">\((u, \theta,
+\varphi)\)</span> with foci at distance <span
+class="math inline">\(a\)</span> from the origin, <span
+class="math inline">\(z = a\cosh u\cos\theta\)</span> and distance from
+the axis <span class="math inline">\(a\sinh u\sin\theta\)</span>, the
+surfaces of constant <span class="math inline">\(\theta\)</span> are
+hyperboloids and <span class="math inline">\(\theta = \pi/2\)</span> is
+the plane <span class="math inline">\(z = 0\)</span>. Show that <span
+class="math inline">\(\Phi = A\ln\cot(\theta/2)\)</span> solves the
+problem and that the tip field is <span
+class="math inline">\(\mathcal{E}_{tip} \approx
+2V/[r\ln(4d/r)]\)</span>.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>A potential depending only on <span
+class="math inline">\(\theta\)</span> satisfies Laplace’s equation if
+<span
+class="math inline">\(\frac{d}{d\theta}\left(\sin\theta\,\frac{d\Phi}{d\theta}\right)
+= 0\)</span>, so <span class="math inline">\(d\Phi/d\theta =
+-A/\sin\theta\)</span> and <span class="math inline">\(\Phi =
+A\ln\cot(\theta/2)\)</span>, zero on the plane. On the tip hyperboloid
+<span class="math inline">\(\theta_0\)</span>, <span
+class="math inline">\(V = A\ln\cot(\theta_0/2)\)</span>. The scale
+factor for <span class="math inline">\(\theta\)</span> is <span
+class="math inline">\(a\sqrt{\sinh^2u + \sin^2\theta}\)</span>; at the
+vertex (<span class="math inline">\(u = 0\)</span>) it is <span
+class="math inline">\(a\sin\theta_0\)</span>, so <span
+class="math inline">\(\mathcal{E}_{tip} = A/(a\sin^2\theta_0)\)</span>.
+The vertex is at <span class="math inline">\(d = a\cos\theta_0\)</span>
+and the tip radius is <span class="math inline">\(r =
+a\sin^2\theta_0/\cos\theta_0\)</span>. For a sharp tip <span
+class="math inline">\(\theta_0\)</span> is small: <span
+class="math inline">\(a\sin^2\theta_0 \approx r\)</span>, <span
+class="math inline">\(\theta_0^2 \approx r/d\)</span>, and <span
+class="math inline">\(\ln\cot(\theta_0/2) \approx \ln(2/\theta_0) =
+\tfrac12\ln(4d/r)\)</span>. So <span
+class="math inline">\(\mathcal{E}_{tip} = 2V/[r\ln(4d/r)]\)</span>. For
+<span class="math inline">\(r = 0.1\)</span> mm and <span
+class="math inline">\(d = 10\)</span> cm the exact and approximate
+values agree to 0.04 per cent.</p>
+</details>
+<p><strong>5.</strong> For coaxial cylinders, apply <span
+class="math inline">\(a = b/\mathrm{e}\)</span> to Herb’s tank (1.68 m
+diameter, 2.16 MV). What field does a 0.5 m inner radius give?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(b = 0.838\)</span> m, so <span
+class="math inline">\(a = 0.308\)</span> m and <span
+class="math inline">\(\mathcal{E} = \mathrm{e}V/b = 7.0\)</span> MV/m.
+With <span class="math inline">\(a = 0.5\)</span> m, <span
+class="math inline">\(\mathcal{E} = 2.16/(0.5\ln1.676) = 8.4\)</span>
+MV/m, 19 per cent higher: the minimum is shallow but not flat.</p>
+</details>
+<p><strong>6.</strong> From the WKB exponent, check <span
+class="math inline">\(b_{FN}\)</span>. For <span
+class="math inline">\(\phi_w = 4.5\)</span> eV, by what factor does the
+exponential change between 4 and 5 GV/m?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The exponent is <span
+class="math inline">\(4\sqrt{2m_e}\,\phi_w^{3/2}/(3\hbar
+e\mathcal{E}_{loc})\)</span>; with <span class="math inline">\(\hbar =
+h/2\pi\)</span> the coefficient is <span
+class="math inline">\(8\pi\sqrt{2m_e}/(3he)\)</span>, which with <span
+class="math inline">\(\phi_w\)</span> in eV is 6.8309 eV<span
+class="math inline">\(^{-3/2}\)</span> V nm<span
+class="math inline">\(^{-1}\)</span>. Then <span
+class="math inline">\(b_{FN}\phi_w^{3/2} = 65.2\)</span> GV/m, so the
+exponent is <span class="math inline">\(-16.30\)</span> at 4 GV/m and
+<span class="math inline">\(-13.04\)</span> at 5 GV/m: a factor <span
+class="math inline">\(e^{3.26} = 26\)</span>. With the <span
+class="math inline">\(\mathcal{E}_{loc}^2\)</span> prefactor the
+elementary formula gives 41, the image-corrected one 34.</p>
+</details>
+<p><strong>7.</strong> Derive Cranberg’s <span class="math inline">\(V_b
+\propto d^{1/2}\)</span>. Then compare, for the Recycler tube at 3.66 m
+(0.61 m sections each holding 1.1 MV alone), the voltage predicted in
+proportion to length, in proportion to its square root, and the 4.3 MV
+achieved.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>A clump carries charge <span
+class="math inline">\(\varepsilon_0(V/d)A_e\)</span> and gains <span
+class="math inline">\(\varepsilon_0A_eV^2/d\)</span>; a fixed threshold
+energy per area makes <span class="math inline">\(V^2/d\)</span>
+constant. Linear: <span class="math inline">\(1.1 \times 6 =
+6.6\)</span> MV. Square root: <span class="math inline">\(1.1\sqrt6 =
+2.7\)</span> MV. Achieved: 4.3 MV, 0.65 of the linear sum. A graded tube
+of short gaps escapes most of the square-root penalty of one long gap,
+but still loses a third.</p>
+</details>
+<h2 id="sources">Sources</h2>
+<p>Free sources are marked <em>(free)</em>.</p>
+<p><strong>Papers</strong></p>
+<ul>
+<li>F. Paschen, “Ueber die zum Funkenübergang in Luft, Wasserstoff und
+Kohlensäure bei verschiedenen Drucken erforderliche Potentialdifferenz”,
+<em>Annalen der Physik</em> 273, 69–96 (1889).</li>
+<li>J. S. Townsend, <em>Nature</em> 62, 340 (1900); <em>Philosophical
+Magazine</em> series 6, 1, 198–227 (1901); <em>Electricity in Gases</em>
+(Clarendon Press, 1915).</li>
+<li>F. W. Peek, “The law of corona and the dielectric strength of air”,
+<em>Transactions of the AIEE</em> 30, 1889–1965 (1911); <em>Dielectric
+Phenomena in High Voltage Engineering</em> (McGraw-Hill, 1915).</li>
+<li>R. H. Fowler and L. Nordheim, “Electron emission in intense electric
+fields”, <em>Proceedings of the Royal Society A</em> 119, 173–181
+(1928).</li>
+<li>G. Breit, M. A. Tuve and O. Dahl, “A laboratory method of producing
+high potentials”, <em>Physical Review</em> 35, 51–65 (1930); M. A. Tuve,
+G. Breit and L. R. Hafstad, “The application of high potentials to
+vacuum tubes”, <em>Physical Review</em> 35, 66–71 (1930).</li>
+<li>A. Brasch and F. Lange, <em>Zeitschrift für Physik</em> 70, 10–37
+(1931).</li>
+<li>P. Kirkpatrick and I. Miyake, “A generating voltmeter for the
+measurement of high potentials”, <em>Review of Scientific
+Instruments</em> 3, 1–8 (1932).</li>
+<li>R. A. Millikan and C. F. Eyring, “Laws governing the pulling of
+electrons out of metals by intense electrical fields”, <em>Physical
+Review</em> 27, 51–67 (1926).</li>
+<li>R. G. Herb, C. M. Parkinson and D. W. Kerst, <em>Review of
+Scientific Instruments</em> 6, 261–265 (1935); <em>Physical Review</em>
+51, 75–83 (1937).</li>
+<li>L. C. Van Atta, D. L. Northrup, C. M. Van Atta and R. J. Van de
+Graaff, “The design, operation, and performance of the Round Hill
+electrostatic generator”, <em>Physical Review</em> 49, 761–776
+(1936).</li>
+<li>J. G. Trump and R. J. Van de Graaff, “A compact pressure-insulated
+electrostatic X-ray generator”, <em>Physical Review</em> 55, 1160–1165
+(1939).</li>
+<li>H. Raether, <em>Zeitschrift für Physik</em> 112, 464–489 (1939); J.
+M. Meek, “A theory of spark discharge”, <em>Physical Review</em> 57,
+722–728 (1940); L. B. Loeb and J. M. Meek, <em>Journal of Applied
+Physics</em> 11, 438–447 (1940).</li>
+<li>L. Cranberg, “The initiation of electrical breakdown in vacuum”,
+<em>Journal of Applied Physics</em> 23, 518–522 (1952).</li>
+<li>E. L. Murphy and R. H. Good, <em>Physical Review</em> 102, 1464–1473
+(1956); R. G. Forbes, <em>Applied Physics Letters</em> 89, 113122
+(2006).</li>
+<li>W. D. Kilpatrick, “Criterion for vacuum sparking designed to include
+both rf and dc”, <em>Review of Scientific Instruments</em> 28, 824–826
+(1957); the exponential form from T. J. Boyd, Los Alamos note AT-1:82-28
+(1982), as cited in Wangler.</li>
+<li>R. J. Van de Graaff, P. H. Rose and A. B. Wittkower, <em>Nature</em>
+195, 1292–1293 (1962).</li>
+<li>O. Milton, “Pulsed flashover of insulators in vacuum”, <em>IEEE
+Transactions on Electrical Insulation</em> EI-7, 9–15 (1972).</li>
+<li>H. C. Miller, <em>IEEE Transactions on Electrical Insulation</em>
+24, 765–786 (1989) and 28, 512–527 (1993); <em>IEEE Transactions on
+Dielectrics and Electrical Insulation</em> 22, 3641–3657 (2015).</li>
+<li>Y. Zhang, Z. Liu, Y. Geng, L. Yang and J. Wang, “Lightning impulse
+voltage breakdown characteristics of vacuum interrupters with contact
+gaps 10 to 50 mm”, <em>IEEE Transactions on Dielectrics and Electrical
+Insulation</em> 18, 2123–2130 (2011).</li>
+<li>K. L. Aplin and R. G. Harrison, “Lord Kelvin’s atmospheric
+electricity measurements”, <em>History of Geo- and Space Sciences</em>
+4, 83–95 (2013). <em>(free, arXiv:1305.5347)</em></li>
+</ul>
+<p><strong>Machines</strong></p>
+<ul>
+<li>M. Letournel and the Vivitron Group, “The Strasbourg project: a 35
+MV Vivitron tandem”, <em>Proceedings of PAC 1987</em>, 346. <em>(free,
+<a href="https://accelconf.web.cern.ch/p87/PDF/PAC1987_0346.PDF"
+class="uri">https://accelconf.web.cern.ch/p87/PDF/PAC1987_0346.PDF</a>)</em></li>
+<li>J. M. Helleboid, “Initial commissioning of the HV electrostatic
+generator for the Vivitron project”, <em>Nuclear Instruments and Methods
+A</em> 328, 76–79 (1993).</li>
+<li>T. Foehrenbacher and others, “The Vivitron: evolution of a working
+accelerator”, <em>Proceedings of EPAC 1998</em>, abstract REB0847.
+<em>(free, <a
+href="https://accelconf.web.cern.ch/e98/ABSTRACTS/REB0847.pdf"
+class="uri">https://accelconf.web.cern.ch/e98/ABSTRACTS/REB0847.pdf</a>)</em></li>
+<li>C. Rossi and others, “The radiofrequency quadrupole accelerator for
+the Linac4”, <em>Proceedings of LINAC08</em>, MOP040. <em>(free, <a
+href="https://jacow.org/LINAC08/papers/MOP040.pdf"
+class="uri">https://jacow.org/LINAC08/papers/MOP040.pdf</a>)</em></li>
+<li>A. Shemyakin and L. R. Prost, “The Recycler electron cooler”,
+FERMILAB-FN-0956-AD (2013), section 5.3. <em>(free,
+arXiv:1306.3175)</em></li>
+<li>L. R. Grisham and others, <em>Nuclear Instruments and Methods A</em>
+733, 168–170 (2014). <em>(free preprint, PPPL)</em></li>
+<li>W. Wuensch, S. Calatroni, F. Djurabekova, A. Kyritsakis and Y.
+Ashkenazy, “Fundamentals of vacuum breakdown in high-field systems”
+(2025). <em>(free, arXiv:2502.03967)</em></li>
+<li>P. Martinez-Reviriego and others, “High-power performance studies of
+an S-band high-gradient accelerating cavity for medical applications”,
+<em>Nuclear Engineering and Technology</em> 57, 103164 (2025).</li>
+<li>D. K. Olsen and others, “Recent developments at the Holifield Heavy
+Ion Research Facility” (Oak Ridge 25URC), <em>Proceedings of EPAC
+1990</em>, 452. <em>(free, <a
+href="https://accelconf.web.cern.ch/e90/PDF/EPAC1990_0452.PDF"
+class="uri">https://accelconf.web.cern.ch/e90/PDF/EPAC1990_0452.PDF</a>)</em></li>
+<li>Carnegie Science collection, “Atomic Physics”. <em>(free, <a
+href="https://collection.carnegiescience.edu/node/19"
+class="uri">https://collection.carnegiescience.edu/node/19</a>)</em></li>
+<li>Science News Letter, 14 January 1933, on the Round Hill generator.
+<em>(free, <a
+href="https://www.sciencenews.org/article/january-14-1933-issue"
+class="uri">https://www.sciencenews.org/article/january-14-1933-issue</a>)</em></li>
+</ul>
+<p><strong>Texts and standards</strong></p>
+<ul>
+<li>E. Kuffel, W. S. Zaengl and J. Kuffel, <em>High Voltage Engineering:
+Fundamentals</em>, 2nd edition (Newnes, 2000): sections 3.1.1 (sphere
+gaps, pp. 79–90: clearances table 3.2, sparking voltages table 3.3 on
+pp. 83–84, accuracy, humidity and <span
+class="math inline">\(k_d\)</span> table 3.5 on pp. 87–90), 3.2, 3.4,
+4.2 (large electrodes at 12 to 15 kV/cm, section 4.2.2, pp. 210–211),
+4.4, 5.2.1 (table 5.3, <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span>, p. 299), 5.3.5 (table 5.9, <span
+class="math inline">\(\gamma\)</span>, p. 324), 5.4 and 5.5 (streamers,
+the 1 to 2 bar cm transition and Meek’s table 5.10, pp. 324–332), 5.6
+(table 5.12 and equation 5.103, pp. 337–338), 5.9 (Peek’s equation
+5.110, p. 344), 5.10 (SF<span class="math inline">\(_6\)</span>, figure
+5.29, pp. 345–348), 5.11, 6.1 and 6.2 (table 6.2, p. 387), 7.1.1.</li>
+<li>M. S. Livingston and J. P. Blewett, <em>Particle Accelerators</em>
+(McGraw-Hill, 1962), sections 2-2 (the Carnegie Tesla coil and tubes,
+pp. 16–18) and 3-1 (the Carnegie and Wisconsin generators,
+pp. 33–35).</li>
+<li>A. W. Chao, M. Tigner and others (editors), <em>Handbook of
+Accelerator Physics and Engineering</em>, 3rd edition, section 6.14 (J.
+Borburgh and B. Goddard, “High voltage technique”): SF<span
+class="math inline">\(_6\)</span> at 2.5 times air; vacuum hold-off
+rising as <span class="math inline">\(d\)</span> below 1 cm and as <span
+class="math inline">\(\sqrt d\)</span> above.</li>
+<li>IEC 60052:2002, <em>Voltage measurement by means of standard air
+gaps</em> (third edition, replacing the second, IEC 52 of 1960); IEC
+60156 and IEC 60296 for insulating oil.</li>
+<li>Yu. P. Raizer, <em>Gas Discharge Physics</em> (Springer, 1991), for
+<span class="math inline">\(A_T\)</span> and <span
+class="math inline">\(B_T\)</span>.</li>
+<li>L. G. Christophorou, J. K. Olthoff and D. S. Green, NIST Technical
+Note 1425 (1997), on SF<span class="math inline">\(_6\)</span> and
+alternatives. <em>(free)</em></li>
+<li>R. V. Latham (editor), <em>High Voltage Vacuum Insulation</em>
+(Academic Press, 1995).</li>
+<li>T. P. Wangler, <em>RF Linear Accelerators</em>, 2nd edition
+(Wiley-VCH, 2008), section 5.11, equation 5.80 (p. 163), for the
+Kilpatrick criterion.</li>
+<li>IAEA, <em>Diagnostic Radiology Physics: A Handbook for Teachers and
+Students</em> (2014), chapter 5. <em>(free)</em></li>
+<li>IPCC Fifth and Sixth Assessment Reports, Working Group I, for the
+global-warming potential of SF<span class="math inline">\(_6\)</span>.
+<em>(free)</em></li>
+<li>E. A. Ray and others, “Quantification of the SF<span
+class="math inline">\(_6\)</span> lifetime based on mesospheric loss
+measured in the stratospheric polar vortex”, <em>Journal of Geophysical
+Research: Atmospheres</em> 122, 4626–4638 (2017), for the 850-year
+lifetime against the earlier 3,200.</li>
+<li>Wikipedia, “Dielectric strength”, for typical values of glass,
+polyethylene and PTFE. <em>(free)</em></li>
+</ul>
+<p><strong>Background in the reference shelf</strong></p>
+<ul>
+<li>L. D. Landau and E. M. Lifshitz, volume 3, <em>Quantum
+Mechanics</em>, section 50, problem 1: the triangular barrier and its
+transmission exponent.</li>
+<li>D. Tong, <em>Electromagnetism</em> (Lectures on Theoretical Physics,
+volume 2, 2025), sections 2.3, 2.4 (“Charge and curvature”), 2.4.1
+(capacitors), 2.4.3 (images; problem 3, a sphere in a constant field)
+and 8.1 (dielectrics). The epub volumes in the folder are Tong’s, not
+Sommerfeld’s; spheroidal-coordinate solutions are in Landau and Lifshitz
+volume 8, not in the folder.</li>
+</ul>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="03-vacuum.html"><span>Previous</span>03 Vacuum</a>
+<a class="next" href="05-the-voltage-multiplier.html"><span>Next</span>05 The voltage multiplier and the split atom</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

@@ -1,0 +1,1932 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F3 Newtonian
+mechanics · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Part 0, Foundations</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#f3-newtonian-mechanics" id="toc-f3-newtonian-mechanics">F3
+Newtonian mechanics</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-problem-it-solved" id="toc-the-problem-it-solved">The
+problem it solved</a>
+<ul>
+<li><a href="#falling-rolling-and-a-moving-ship"
+id="toc-falling-rolling-and-a-moving-ship">Falling, rolling and a moving
+ship</a></li>
+<li><a href="#collisions-and-the-quantity-of-motion"
+id="toc-collisions-and-the-quantity-of-motion">Collisions and the
+quantity of motion</a></li>
+<li><a href="#newtons-principia" id="toc-newtons-principia">Newton’s
+Principia</a></li>
+<li><a href="#living-force-and-work"
+id="toc-living-force-and-work">Living force and work</a></li>
+</ul></li>
+<li><a href="#the-physics" id="toc-the-physics">The physics</a>
+<ul>
+<li><a href="#0-what-this-chapter-assumes-and-a-quick-check"
+id="toc-0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</a></li>
+<li><a href="#1-describing-motion" id="toc-1-describing-motion">1.
+Describing motion</a></li>
+<li><a href="#2-newtons-three-laws" id="toc-2-newtons-three-laws">2.
+Newton’s three laws</a></li>
+<li><a href="#3-momentum-impulse-and-the-centre-of-mass"
+id="toc-3-momentum-impulse-and-the-centre-of-mass">3. Momentum, impulse
+and the centre of mass</a></li>
+<li><a href="#4-work-kinetic-energy-and-power"
+id="toc-4-work-kinetic-energy-and-power">4. Work, kinetic energy and
+power</a></li>
+<li><a
+href="#5-potential-energy-conservative-forces-and-energy-conservation"
+id="toc-5-potential-energy-conservative-forces-and-energy-conservation">5.
+Potential energy, conservative forces and energy conservation</a></li>
+<li><a href="#6-collisions" id="toc-6-collisions">6. Collisions</a></li>
+<li><a href="#7-rotation" id="toc-7-rotation">7. Rotation</a></li>
+<li><a href="#8-central-forces-and-orbits"
+id="toc-8-central-forces-and-orbits">8. Central forces and
+orbits</a></li>
+<li><a href="#9-simple-harmonic-motion"
+id="toc-9-simple-harmonic-motion">9. Simple harmonic motion</a></li>
+<li><a href="#10-damped-and-driven-oscillation"
+id="toc-10-damped-and-driven-oscillation">10. Damped and driven
+oscillation</a></li>
+<li><a href="#11-frames-of-reference"
+id="toc-11-frames-of-reference">11. Frames of reference</a></li>
+<li><a href="#12-from-forces-to-action"
+id="toc-12-from-forces-to-action">12. From forces to action</a></li>
+</ul></li>
+<li><a href="#where-the-course-uses-it"
+id="toc-where-the-course-uses-it">Where the course uses it</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="f3-newtonian-mechanics">F3 Newtonian mechanics</h1>
+<p><em>1632 to 1835: Galileo’s falling bodies and moving ship, Huygens’s
+collisions and pendulum, Newton’s</em> Principia<em>, Leibniz’s living
+force, Euler’s equations and Coriolis’s work. How bodies move under
+forces: momentum and energy and why they are conserved, collisions seen
+from the laboratory and from the centre of mass, rotation and orbits,
+the oscillator, and the frames in which all of it holds. Every particle
+in an accelerator obeys these laws until it goes fast, and the course’s
+relativity starts from them.</em></p>
+<blockquote>
+<p><strong>What this chapter assumes.</strong> High-school physics
+(force, speed, acceleration, energy, <span class="math inline">\(F =
+ma\)</span> in one direction), <a href="F1-calculus.html">F1
+Calculus</a> (derivatives, integrals, Taylor series, the equations <span
+class="math inline">\(\dot N = -\lambda N\)</span> and <span
+class="math inline">\(\ddot x = -\omega^2 x\)</span>) and <a
+href="F2-vectors.html">F2 Vectors and vector calculus</a> (components,
+dot and cross products, velocity and acceleration as vectors, circular
+motion, the gradient, line integrals and conservative fields).</p>
+<p><strong>What comes next.</strong> <a
+href="F4-electromagnetism.html">F4 Electricity and magnetism</a>
+supplies the forces; <a href="F5-waves.html">F5 Oscillations and
+waves</a> takes the oscillator of sections 9 and 10 further with complex
+numbers. In the chapters, the pre-requisites on <a
+href="01-why-accelerate.html#pre-requisite-lagrangian-and-hamiltonian-mechanics-the-charged-particle-hamiltonian">Lagrangian
+and Hamiltonian mechanics</a> and on <a
+href="01-why-accelerate.html#pre-requisite-lorentz-transformations-time-dilation-length-contraction">Lorentz
+transformations</a> in chapter 1 start where sections 11 and 12 stop,
+and the oscillator pre-requisites of <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-simple-and-damped-harmonic-oscillator">chapter
+7</a> go on from sections 9 and 10.</p>
+</blockquote>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The problem.</strong> A particle in an accelerator is pushed
+by electric fields and steered by magnetic ones, and the machine works
+only if its builders can say where the particle will be, how fast it
+will go and how much energy it will carry, at every point and every
+moment. Before Newton there was no general way to go from the forces on
+a body to its motion. There were good rules for special cases (Galileo’s
+falling bodies, Kepler’s planets), but no law that covered a stone, a
+planet and a pendulum alike.</p>
+<p><strong>The idea.</strong> A body’s <em>momentum</em>, mass times
+velocity, changes only when a force acts, at a rate equal to the force:
+<span class="math inline">\(\mathbf{F} = d\mathbf{p}/dt\)</span>. Forces
+come in equal and opposite pairs, so in a closed system the total
+momentum never changes. A force acting through a distance does
+<em>work</em>, which changes the body’s <em>kinetic energy</em>; if the
+force is the gradient of a <em>potential energy</em>, the sum of kinetic
+and potential energy never changes. These two conservation laws solve
+collisions without knowing the forces during the collision, and they
+show that a collision between a moving particle and one at rest wastes
+energy on moving the centre of mass. The same laws applied to turning
+give angular momentum and its conservation, which shape every orbit.
+Near the bottom of any potential well, motion is a <em>simple harmonic
+oscillation</em>, with friction it decays, and pushed in step it
+resonates. All of this holds in every frame moving uniformly, and fails
+near the speed of light.</p>
+<p><strong>Equations to remember.</strong></p>
+<ul>
+<li>Kinematics: <span class="math inline">\(\mathbf{v} =
+d\mathbf{r}/dt\)</span>, <span class="math inline">\(\mathbf{a} =
+d\mathbf{v}/dt\)</span>; at constant <span
+class="math inline">\(\mathbf{a}\)</span>, <span
+class="math inline">\(\mathbf{v} = \mathbf{v}_0 + \mathbf{a}t\)</span>
+and <span class="math inline">\(\mathbf{r} = \mathbf{r}_0 +
+\mathbf{v}_0t + \tfrac12\mathbf{a}t^2\)</span>. Position <span
+class="math inline">\(\mathbf{r}\)</span> in m, velocity <span
+class="math inline">\(\mathbf{v}\)</span> in m/s, acceleration <span
+class="math inline">\(\mathbf{a}\)</span> in m/s<span
+class="math inline">\(^2\)</span>, time <span
+class="math inline">\(t\)</span> in s.</li>
+<li>Newton’s second law: <span class="math inline">\(\mathbf{F} =
+\dfrac{d\mathbf{p}}{dt} = m\mathbf{a}\)</span>, with momentum <span
+class="math inline">\(\mathbf{p} = m\mathbf{v}\)</span> (kg m/s), force
+<span class="math inline">\(\mathbf{F}\)</span> in newtons (N = kg
+m/s<span class="math inline">\(^2\)</span>), mass <span
+class="math inline">\(m\)</span> in kg. Impulse: <span
+class="math inline">\(\Delta\mathbf{p} =
+\int\mathbf{F}\,dt\)</span>.</li>
+<li>Work and kinetic energy: <span class="math inline">\(\Delta W =
+\int\mathbf{F}\cdot d\mathbf{l}\)</span>, with kinetic energy <span
+class="math inline">\(W = \tfrac12 mv^2 = p^2/2m\)</span> in joules (J).
+Power <span class="math inline">\(P = \mathbf{F}\cdot\mathbf{v}\)</span>
+in watts (W = J/s).</li>
+<li>Potential energy <span class="math inline">\(U\)</span> (J): <span
+class="math inline">\(\mathbf{F} = -\nabla U\)</span>, and then <span
+class="math inline">\(W + U\)</span> is constant. For a charge <span
+class="math inline">\(q\)</span> at potential <span
+class="math inline">\(V\)</span>, <span class="math inline">\(U =
+qV\)</span>; for two charges, <span class="math inline">\(U =
+q_1q_2/(4\pi\varepsilon_0 r)\)</span>.</li>
+<li>Collisions: the centre of mass moves at <span
+class="math inline">\(\mathbf{V}_{cm} = (m_1\mathbf{v}_1 +
+m_2\mathbf{v}_2)/(m_1 + m_2)\)</span>; a body of kinetic energy <span
+class="math inline">\(W\)</span> striking a body of mass <span
+class="math inline">\(m_2\)</span> at rest makes available <span
+class="math inline">\(W_{cm} = W\,m_2/(m_1 + m_2)\)</span>. Reduced mass
+<span class="math inline">\(\mu = m_1m_2/(m_1 + m_2)\)</span>.</li>
+<li>Rotation: angular momentum <span class="math inline">\(\mathbf{L} =
+\mathbf{r}\times\mathbf{p}\)</span> (kg m<span
+class="math inline">\(^2\)</span>/s), torque <span
+class="math inline">\(\boldsymbol{\tau} =
+\mathbf{r}\times\mathbf{F}\)</span> (N m), <span
+class="math inline">\(d\mathbf{L}/dt = \boldsymbol{\tau}\)</span>. A
+rigid body: <span class="math inline">\(L = I\omega\)</span>, <span
+class="math inline">\(W = \tfrac12 I\omega^2\)</span>, moment of inertia
+<span class="math inline">\(I = \sum m r^2\)</span> (kg m<span
+class="math inline">\(^2\)</span>).</li>
+<li>Orbits under an attraction <span
+class="math inline">\(k/r^2\)</span> (<span
+class="math inline">\(k\)</span> in J m): circular speed <span
+class="math inline">\(v^2 = k/(mr)\)</span>, energy <span
+class="math inline">\(E = W + U = -k/2r\)</span> (negative means
+bound).</li>
+<li>Oscillator: <span class="math inline">\(m\ddot x = -kx\)</span>
+gives <span class="math inline">\(x = A\cos(\omega t + \phi)\)</span>,
+<span class="math inline">\(\omega = \sqrt{k/m}\)</span>, energy <span
+class="math inline">\(\tfrac12 kA^2\)</span>; near a minimum of any
+<span class="math inline">\(U(x)\)</span>, <span class="math inline">\(k
+= U&#39;&#39;(x_0)\)</span>. With damping, energy falls as <span
+class="math inline">\(e^{-\omega_0t/Q}\)</span>; driven at <span
+class="math inline">\(\omega_0\)</span>, the amplitude is <span
+class="math inline">\(Q\)</span> times the static deflection, over a
+width <span class="math inline">\(\Delta\omega =
+\omega_0/Q\)</span>.</li>
+<li>Galilean change of frame: <span
+class="math inline">\(\mathbf{r}&#39; = \mathbf{r} -
+\mathbf{V}t\)</span>, <span class="math inline">\(\mathbf{v}&#39; =
+\mathbf{v} - \mathbf{V}\)</span>, <span
+class="math inline">\(\mathbf{a}&#39; = \mathbf{a}\)</span>.</li>
+</ul>
+<p><strong>Numbers worth knowing.</strong></p>
+<ul>
+<li>An electron in a field of 200 kV/m feels a force <span
+class="math inline">\(3.6 \times 10^{15}\)</span> times its weight.
+Gravity never matters for a beam’s path inside a machine.</li>
+<li>A 10 mA beam of 2 kV electrons stopped in a screen pushes it with
+1.5 μN; a 1 mA beam of 10 MeV protons with 0.46 mN.</li>
+<li>A 1 mA beam of 10 MeV protons carries 10 kW; the 590 MeV, 2.4 mA
+proton cyclotron at PSI carries 1.4 MW.</li>
+<li>A polonium-210 nucleus decaying at rest sends its alpha off with
+5.30 MeV and the lead nucleus back with 0.10 MeV: the light fragment
+takes almost all the energy.</li>
+<li>A 1 MeV proton can give an electron at most 2.18 keV in one
+collision; an alpha cannot be turned by more than 0.0079° by an
+electron. Large-angle scattering needs a nucleus.</li>
+<li>A turbomolecular pump rotor of 1 kg and 0.1 m across at 40 000 rpm
+stores 11 kJ.</li>
+<li>The hydrogen atom, as a classical orbit at the Bohr radius: speed
+<span class="math inline">\(2.19 \times 10^6\)</span> m/s, energy <span
+class="math inline">\(-13.6\)</span> eV.</li>
+<li>A copper cavity at 2856 MHz with <span class="math inline">\(Q_0 =
+18\,400\)</span> holds its stored energy for about 1 μs and responds
+over 155 kHz; a niobium one at 1.3 GHz with <span
+class="math inline">\(Q_0 = 10^{10}\)</span> for 1.2 s, over 0.13
+Hz.</li>
+<li>Newton’s <span class="math inline">\(\tfrac12 mv^2\)</span> puts a 1
+MeV electron at twice the speed of light. It moves at 0.941<span
+class="math inline">\(c\)</span>.</li>
+</ul>
+<h2 id="the-problem-it-solved">The problem it solved</h2>
+<h3 id="falling-rolling-and-a-moving-ship">Falling, rolling and a moving
+ship</h3>
+<p>Aristotle taught that a body moves only while something pushes it,
+and that heavy bodies fall faster. Galileo Galilei tested motion with
+balls rolling down ramps, and in his <em>Two New Sciences</em> of 1638
+set out that a falling body gains equal speed in equal times, so that
+its distance grows as the square of the time, and that a thrown body
+moves on a parabola: steady motion sideways, accelerated motion
+downwards, the two independent. In his <em>Dialogue Concerning the Two
+Chief World Systems</em> of 1632 he asked the reader to imagine a cabin
+below the deck of a ship moving smoothly: butterflies fly, drops fall
+into a bottle and fish swim exactly as they do when the ship is still.
+No experiment inside can tell whether the ship moves. That is the
+principle of relativity, three centuries before Einstein.</p>
+<h3 id="collisions-and-the-quantity-of-motion">Collisions and the
+quantity of motion</h3>
+<p>René Descartes, in his <em>Principles of Philosophy</em> of 1644,
+held that the world’s total “quantity of motion”, size times speed, is
+conserved, and that a body left alone moves in a straight line. His
+rules for collisions were mostly wrong, because he ignored direction. In
+1668 the Royal Society asked for the true laws of impact; John Wallis,
+Christopher Wren and Christiaan Huygens answered. Huygens showed, by
+watching the collision from a moving boat, that what is conserved is
+mass times velocity <em>with its sign</em>, and that in a collision of
+hard bodies the sum of mass times speed squared is conserved too.
+Huygens also built the first pendulum clock (1656) and, in his
+<em>Horologium Oscillatorium</em> of 1673, gave the pendulum’s period
+and the force needed to hold a body on a circle.</p>
+<h3 id="newtons-principia">Newton’s Principia</h3>
+<p>In 1684 Edmond Halley asked Isaac Newton what path a planet would
+follow under a force falling as the inverse square of distance. Newton
+had the answer, an ellipse, and the question grew into the
+<em>Philosophiae Naturalis Principia Mathematica</em> of 1687. It opens
+with three laws of motion and builds on them the mechanics of the solar
+system, the tides and the pendulum. Newton wrote his laws in words and
+proved his results with geometry. Leonhard Euler, around 1750, wrote the
+second law as differential equations, force equals mass times
+acceleration along each of three axes, which is how it has been used
+since.</p>
+<h3 id="living-force-and-work">Living force and work</h3>
+<p>Gottfried Wilhelm Leibniz argued in 1686 that the true measure of a
+body’s motion is <span class="math inline">\(mv^2\)</span>, its <em>vis
+viva</em> (living force), not Descartes’s <span
+class="math inline">\(mv\)</span>. The quarrel ran for half a century
+before it was understood that both are conserved, in different
+circumstances, and measure different things: <span
+class="math inline">\(mv\)</span> the effect of a force over a time,
+<span class="math inline">\(mv^2\)</span> over a distance. Émilie du
+Châtelet brought Willem ’s Gravesande’s experiments (balls dropped into
+soft clay, making dents that grew with the square of the speed) into her
+<em>Institutions de physique</em> of 1740, and her French translation of
+the <em>Principia</em>, published in 1759, was the standard one for two
+centuries. In 1829 Gaspard-Gustave Coriolis named <em>work</em>
+(<em>travail</em>), force times distance, and put the factor <span
+class="math inline">\(\tfrac12\)</span> into the kinetic energy so that
+the two are equal; in 1835 he worked out the extra forces seen from a
+rotating frame. The words “energy” (Thomas Young, 1807) and “potential
+energy” (William Rankine, 1853) came later, as did the proof, by James
+Joule in the 1840s, that heat is energy too.</p>
+<h2 id="the-physics">The physics</h2>
+<h3 id="0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</h3>
+<ul>
+<li><strong>From school.</strong> Speed is distance over time;
+acceleration is the rate of change of speed; <span
+class="math inline">\(F = ma\)</span> in one direction; weight is <span
+class="math inline">\(mg\)</span> with <span class="math inline">\(g =
+9.81\)</span> m/s<span class="math inline">\(^2\)</span>; kinetic energy
+<span class="math inline">\(\tfrac12mv^2\)</span> and potential energy
+<span class="math inline">\(mgh\)</span>.</li>
+<li><strong>From F1.</strong> Derivatives and integrals and the
+fundamental theorem; the chain rule; a Taylor series to second order,
+<span class="math inline">\(f(x_0 + h) \approx f(x_0) + f&#39;(x_0)h +
+\tfrac12f&#39;&#39;(x_0)h^2\)</span>; the solutions of <span
+class="math inline">\(\dot N = -\lambda N\)</span> and <span
+class="math inline">\(\ddot x = -\omega^2x\)</span>.</li>
+<li><strong>From F2.</strong> Vectors in components; <span
+class="math inline">\(\mathbf{A}\cdot\mathbf{B}\)</span> and <span
+class="math inline">\(\mathbf{A}\times\mathbf{B}\)</span>;
+differentiating a vector component by component; acceleration <span
+class="math inline">\(v^2/R\)</span> towards the centre on a circle; the
+gradient; the line integral <span
+class="math inline">\(\int\mathbf{F}\cdot d\mathbf{l}\)</span>, and that
+it does not depend on the path when <span
+class="math inline">\(\mathbf{F}\)</span> is a gradient.</li>
+</ul>
+<p><strong>Check yourself.</strong> (a) A car accelerates from rest at 2
+m/s<span class="math inline">\(^2\)</span> for 5 s. How fast is it going
+and how far has it gone? (b) Differentiate <span
+class="math inline">\(x(t) = 3t^2 - 2t\)</span> twice. (c) Find <span
+class="math inline">\((1, 0, 0)\times(0, 2, 0)\)</span>. (d) Find <span
+class="math inline">\(\nabla(1/r)\)</span>. Answers: (a) 10 m/s and 25
+m; (b) <span class="math inline">\(\dot x = 6t - 2\)</span>, <span
+class="math inline">\(\ddot x = 6\)</span>; (c) <span
+class="math inline">\((0, 0, 2)\)</span>; (d) <span
+class="math inline">\(-\hat{\mathbf{r}}/r^2\)</span> (F2, section
+6).</p>
+<h3 id="1-describing-motion">1. Describing motion</h3>
+<p><strong>The picture.</strong> Before asking what makes a body move,
+describe how it moves. A body small enough that its size does not matter
+is a <em>particle</em>, a point with a mass. Its <em>position</em> at
+time <span class="math inline">\(t\)</span> is a vector <span
+class="math inline">\(\mathbf{r}(t)\)</span> from an origin we choose.
+Its <em>velocity</em> is the rate of change of position, and its
+<em>acceleration</em> the rate of change of velocity (F2, section
+4):</p>
+<p><span class="math display">\[
+\mathbf{v} = \frac{d\mathbf{r}}{dt} = \dot{\mathbf{r}}, \qquad
+\mathbf{a} = \frac{d\mathbf{v}}{dt} = \ddot{\mathbf{r}} .
+\]</span></p>
+<p><em>Speed</em> is the size of the velocity, <span
+class="math inline">\(v = |\mathbf{v}|\)</span>. The units are m, m/s
+and m/s<span class="math inline">\(^2\)</span>. A body at constant speed
+on a circle is accelerating, since its direction changes; a body whose
+speed is momentarily zero (a ball at the top of its throw) can still be
+accelerating.</p>
+<p><strong>Going backwards: integration.</strong> If the acceleration is
+known for all times, the fundamental theorem of F1 gives the velocity
+and then the position:</p>
+<p><span class="math display">\[
+\mathbf{v}(t) = \mathbf{v}_0 + \int_0^t\mathbf{a}(t&#39;)\,dt&#39;,
+\qquad \mathbf{r}(t) = \mathbf{r}_0 +
+\int_0^t\mathbf{v}(t&#39;)\,dt&#39; .
+\]</span></p>
+<p>Two constants enter, the starting position <span
+class="math inline">\(\mathbf{r}_0\)</span> and the starting velocity
+<span class="math inline">\(\mathbf{v}_0\)</span>: the acceleration
+alone does not say where the body is or how fast it is going. When the
+acceleration is constant, the integrals are easy and give the school
+formulas, now derived:</p>
+<p><span class="math display">\[
+\mathbf{v} = \mathbf{v}_0 + \mathbf{a}t, \qquad \mathbf{r} =
+\mathbf{r}_0 + \mathbf{v}_0t + \tfrac12\mathbf{a}t^2 .
+\]</span></p>
+<p>Eliminating <span class="math inline">\(t\)</span> in one direction
+gives the third, <span class="math inline">\(v^2 = v_0^2 + 2a(x -
+x_0)\)</span>.</p>
+<p><strong>Each direction on its own.</strong> The vector equation is
+three equations, one per component, and when the acceleration is
+constant they do not affect each other. Galileo’s projectile moves
+steadily sideways and accelerates downwards, and the two combine into a
+parabola.</p>
+<p><strong>Example: an electron through deflecting plates.</strong> This
+is chapter 2’s cathode-ray tube. An electron from a 2 kV gun enters
+along <span class="math inline">\(z\)</span> at <span
+class="math inline">\(v_z = 2.65 \times 10^7\)</span> m/s (section 4
+derives this speed) between two plates 2 cm long and 5 mm apart, with
+100 V across them. Inside, there is a uniform field <span
+class="math inline">\(\mathcal{E}_x = 100/0.005 = 2 \times 10^4\)</span>
+V/m along <span class="math inline">\(x\)</span> and nothing along <span
+class="math inline">\(z\)</span>. Section 2 gives the acceleration,
+<span class="math inline">\(a_x = e\mathcal{E}_x/m_e = 3.52 \times
+10^{15}\)</span> m/s<span class="math inline">\(^2\)</span>; <span
+class="math inline">\(v_z\)</span> stays fixed. The electron spends
+<span class="math inline">\(t = 0.02/(2.65 \times 10^7) = 0.754\)</span>
+ns between the plates. It leaves with</p>
+<p><span class="math display">\[
+v_x = a_xt = 2.65 \times 10^6\ \text{m/s}, \qquad x = \tfrac12a_xt^2 =
+1.0\ \text{mm} .
+\]</span></p>
+<p>So it leaves at the angle whose tangent is <span
+class="math inline">\(v_x/v_z = 0.1\)</span>, already displaced 1 mm.
+Beyond the plates there is no force, and it flies straight. On a screen
+20 cm beyond the plates it lands <span class="math inline">\(1.0 + 200
+\times 0.1 = 21\)</span> mm off centre; the straight line it leaves on,
+traced back, starts from the middle of the plates, which is why chapter
+2 writes the deflection as <span class="math inline">\((l/2 +
+L)\tan\theta\)</span>.</p>
+<p><strong>Example: what gravity does to it.</strong> The same electron
+also falls under gravity. Over 1 m of flight, which takes <span
+class="math inline">\(1/(2.65 \times 10^7) = 37.7\)</span> ns, it falls
+<span class="math inline">\(\tfrac12gt^2 = 7 \times 10^{-15}\)</span> m,
+less than the size of a nucleus. Section 2 shows why: the electric force
+is <span class="math inline">\(10^{15}\)</span> times larger.</p>
+<h3 id="2-newtons-three-laws">2. Newton’s three laws</h3>
+<p><strong>The first law: inertia.</strong> <em>A body on which no net
+force acts keeps its velocity: at rest it stays at rest, and moving it
+moves in a straight line at constant speed.</em> This is not obvious; on
+Earth a rolling ball slows down, because friction acts. In the vacuum of
+a beam pipe, a particle that leaves the last accelerating gap coasts at
+constant speed until something acts on it. The first law also defines
+what we mean by a good frame of reference: an <em>inertial frame</em> is
+one in which it holds. A frame fixed to the laboratory is inertial to a
+very good approximation (section 11 shows how good); a frame fixed to a
+turning merry-go-round is not.</p>
+<p><strong>The second law: force and momentum.</strong> Define a body’s
+<em>momentum</em> as its mass times its velocity,</p>
+<p><span class="math display">\[
+\mathbf{p} = m\mathbf{v} \qquad [\text{kg m/s}] .
+\]</span></p>
+<p>The second law says that a force changes the momentum, at a rate
+equal to the force:</p>
+<p><span class="math display">\[
+\mathbf{F} = \frac{d\mathbf{p}}{dt} .
+\]</span></p>
+<p>For a body whose mass does not change, <span
+class="math inline">\(d\mathbf{p}/dt = m\,d\mathbf{v}/dt\)</span>, and
+this is the familiar <span class="math inline">\(\mathbf{F} =
+m\mathbf{a}\)</span>. When several forces act, <span
+class="math inline">\(\mathbf{F}\)</span> is their vector sum. The unit
+of force is fixed by the law: one newton (N) is the force that gives 1
+kg an acceleration of 1 m/s<span class="math inline">\(^2\)</span>.</p>
+<p>The law is three equations, one per axis, and it is a differential
+equation (F1, section 10): it says what the acceleration is, given the
+forces, and the motion follows by integrating twice from a starting
+position and velocity. That is the whole method of the course’s particle
+tracking, from chapter 2’s tube to the LHC: write down the forces,
+integrate.</p>
+<p><strong>Mass: inertia and weight.</strong> The mass <span
+class="math inline">\(m\)</span> in the second law is <em>inertial
+mass</em>, a body’s resistance to having its velocity changed. Push 1 kg
+and 2 kg with the same force; the second accelerates half as fast.
+Weight is a different thing: the gravitational force on a body, <span
+class="math inline">\(m\mathbf{g}\)</span>, with <span
+class="math inline">\(g = 9.81\)</span> m/s<span
+class="math inline">\(^2\)</span> near the Earth’s surface. That the
+same <span class="math inline">\(m\)</span> appears in both, so that all
+bodies fall alike, was Galileo’s discovery and Newton’s puzzle; it is
+now tested to better than one part in <span
+class="math inline">\(10^{14}\)</span>, and it is the starting point of
+Einstein’s theory of gravity. For the course it means only this: weight
+is a force like any other, <span class="math inline">\(mg\)</span>, and
+for particles it is negligible.</p>
+<p><em>Example.</em> An electron in the 200 kV/m field of F1’s 2 kV, 1
+cm gap feels the force <span class="math inline">\(e\mathcal{E} = 1.602
+\times 10^{-19} \times 2 \times 10^5 = 3.20 \times 10^{-14}\)</span> N.
+Its weight is <span class="math inline">\(m_eg = 9.11 \times 10^{-31}
+\times 9.81 = 8.93 \times 10^{-30}\)</span> N, smaller by <span
+class="math inline">\(3.6 \times 10^{15}\)</span>. A field of only <span
+class="math inline">\(m_pg/e = 1.0 \times 10^{-7}\)</span> V/m would
+hold a proton up against gravity. Gravity matters for the magnets and
+the girders of a machine, never for the beam.</p>
+<p><strong>The second law for charges.</strong> The forces on a charge
+<span class="math inline">\(q\)</span> are the electric and magnetic
+parts of the Lorentz force (F2, section 3), and Newton’s law becomes the
+equation of motion of every particle in the course:</p>
+<p><span class="math display">\[
+\frac{d\mathbf{p}}{dt} = q\left(\boldsymbol{\mathcal{E}} +
+\mathbf{v}\times\mathbf{B}\right) .
+\]</span></p>
+<p>Written with <span class="math inline">\(d\mathbf{p}/dt\)</span>
+rather than <span class="math inline">\(m\mathbf{a}\)</span>, it stays
+true at any speed, provided the momentum is given its relativistic form
+<span class="math inline">\(\gamma m\mathbf{v}\)</span> (section 11, and
+<a href="01-why-accelerate.html#21-energy-and-momentum">chapter 1</a>).
+Newton’s own statement, “the change of motion is proportional to the
+motive force”, was in terms of momentum, and that is the form that
+survived.</p>
+<p><strong>The third law: action and reaction.</strong> <em>When body A
+pushes on body B, B pushes on A with a force equal in size and opposite
+in direction.</em> The two forces act on different bodies, so they never
+cancel each other in the motion of one body. The electron gun that
+throws electrons forward is pushed backwards; the Earth pulls an apple
+down and the apple pulls the Earth up, by the same 1 N, but the Earth’s
+acceleration is about <span class="math inline">\(10^{25}\)</span> times
+smaller. The third law is what makes momentum conserved (section 3).</p>
+<p>A caution for later. Between two moving charges, the magnetic forces
+are not always equal and opposite at each instant, because the field
+carries the news from one to the other at the speed of light. Momentum
+is still conserved once the momentum carried by the field itself is
+counted, which F4 and <a href="20-synchrotron-radiation.html">chapter
+20</a> need. For bodies in contact, and for charges moving slowly, the
+third law holds as stated.</p>
+<h3 id="3-momentum-impulse-and-the-centre-of-mass">3. Momentum, impulse
+and the centre of mass</h3>
+<p><strong>Impulse.</strong> Integrate the second law over the time a
+force acts:</p>
+<p><span class="math display">\[
+\Delta\mathbf{p} = \int_{t_1}^{t_2}\mathbf{F}\,dt .
+\]</span></p>
+<p>The right side is the <em>impulse</em>. A large force for a short
+time and a small force for a long time can give the same change of
+momentum. This is how the deflecting plates of section 1 work: the
+impulse <span class="math inline">\(e\mathcal{E}_xt\)</span> gives the
+sideways momentum <span class="math inline">\(m_ev_x\)</span>. It is
+also how a collision is handled when the force during it is unknown: the
+impulse is fixed by the momenta before and after.</p>
+<p><strong>Example: the push of a beam.</strong> A beam of particles
+stopped in a target hands its momentum to the target. If <span
+class="math inline">\(\dot N\)</span> particles arrive per second, each
+with momentum <span class="math inline">\(p\)</span>, the target
+receives momentum <span class="math inline">\(\dot Np\)</span> per
+second, and by the second law that is a steady force <span
+class="math inline">\(F = \dot Np\)</span>. A beam current <span
+class="math inline">\(I_b\)</span> is <span class="math inline">\(\dot N
+= I_b/e\)</span> particles per second. For 10 mA of 2 kV electrons,
+<span class="math inline">\(\dot N = 6.24 \times 10^{16}\)</span> per
+second, <span class="math inline">\(p = m_ev = 2.42 \times
+10^{-23}\)</span> kg m/s, and <span class="math inline">\(F =
+1.5\)</span> μN, the weight of 0.15 mg. For 1 mA of 10 MeV protons,
+<span class="math inline">\(p = \sqrt{2m_pW} = 7.32 \times
+10^{-20}\)</span> kg m/s and <span class="math inline">\(F =
+0.46\)</span> mN. Beams carry little momentum; it is their energy
+(section 4) that melts targets.</p>
+<p><strong>Conservation of momentum.</strong> Take two bodies that push
+on each other with forces <span
+class="math inline">\(\mathbf{F}_{12}\)</span> (on 1 from 2) and <span
+class="math inline">\(\mathbf{F}_{21}\)</span>, and on which nothing
+outside acts. Then</p>
+<p><span class="math display">\[
+\frac{d}{dt}(\mathbf{p}_1 + \mathbf{p}_2) = \mathbf{F}_{12} +
+\mathbf{F}_{21} = 0
+\]</span></p>
+<p>by the third law. The total momentum does not change, however strong
+and complicated the forces between them. With many bodies the internal
+forces cancel in pairs in the same way, and only external forces change
+the total:</p>
+<p><span class="math display">\[
+\frac{d\mathbf{P}}{dt} = \mathbf{F}_{ext}, \qquad \mathbf{P} =
+\sum_i\mathbf{p}_i .
+\]</span></p>
+<p>If there are no external forces, <span
+class="math inline">\(\mathbf{P}\)</span> is constant. This is one of
+the two or three most useful facts in physics. It holds in collisions,
+explosions and decays, and it still holds, with relativistic momenta, at
+the LHC.</p>
+<p><strong>Example: an alpha decay.</strong> A polonium-210 nucleus at
+rest breaks into an alpha particle (mass 4 u) and a lead-206 nucleus
+(206 u), releasing <span class="math inline">\(Q = 5.41\)</span> MeV as
+kinetic energy. (<span class="math inline">\(Q\)</span> here is the
+energy of a reaction, as in chapter 1’s <a
+href="01-why-accelerate.html#pre-requisite-nuclear-reactions-and-q-value">Q
+value</a>; 1 u <span class="math inline">\(= 1.661 \times
+10^{-27}\)</span> kg, the atomic mass unit.) The total momentum was
+zero, so afterwards the two momenta are equal and opposite, <span
+class="math inline">\(p_\alpha = p_{Pb} = p\)</span>. The kinetic energy
+of each is <span class="math inline">\(W = p^2/2m\)</span> (since <span
+class="math inline">\(\tfrac12mv^2 = (mv)^2/2m\)</span>), so with the
+same <span class="math inline">\(p\)</span> the energies are in the
+inverse ratio of the masses:</p>
+<p><span class="math display">\[
+\frac{W_\alpha}{W_{Pb}} = \frac{m_{Pb}}{m_\alpha}, \qquad W_\alpha =
+Q\,\frac{m_{Pb}}{m_{Pb} + m_\alpha} = 5.41 \times \frac{206}{210} =
+5.30\ \text{MeV} .
+\]</span></p>
+<p>The lead nucleus recoils with the remaining 0.10 MeV. The alpha moves
+at <span class="math inline">\(1.60 \times 10^7\)</span> m/s, the lead
+at <span class="math inline">\(3.1 \times 10^5\)</span> m/s, 51 times
+slower. Every polonium alpha has the same energy, because two bodies
+sharing a fixed energy with zero total momentum have no freedom left.
+(When beta decay was found to give electrons a spread of energies,
+Wolfgang Pauli concluded in 1930 that a third, unseen particle, the
+neutrino, must share the momentum.)</p>
+<p><strong>The centre of mass.</strong> For a set of particles of masses
+<span class="math inline">\(m_i\)</span> at positions <span
+class="math inline">\(\mathbf{r}_i\)</span>, define the <em>centre of
+mass</em>, the mass-weighted average position:</p>
+<p><span class="math display">\[
+\mathbf{R}_{cm} = \frac{\sum_im_i\mathbf{r}_i}{M}, \qquad M = \sum_im_i
+.
+\]</span></p>
+<p>Differentiating, <span class="math inline">\(M\dot{\mathbf{R}}_{cm} =
+\sum m_i\mathbf{v}_i = \mathbf{P}\)</span>: the total momentum is the
+total mass times the velocity of the centre of mass. And then <span
+class="math inline">\(M\ddot{\mathbf{R}}_{cm} =
+\mathbf{F}_{ext}\)</span>. The centre of mass moves as if all the mass
+were there and all the external forces acted on it, whatever the parts
+do among themselves. A shell bursting in the air sends its centre of
+mass on the same parabola as before. A hydrogen atom’s centre of mass
+lies <span class="math inline">\(m_e/(m_e + m_p) = 1/1837\)</span> of
+the way from the proton to the electron, <span class="math inline">\(2.9
+\times 10^{-14}\)</span> m from the proton: the proton barely moves, but
+not quite not at all, and the correction shows in the spectrum of
+hydrogen. With no external force, the centre of mass moves at constant
+velocity, and a frame moving with it is inertial: the <em>centre-of-mass
+frame</em>, in which the total momentum is zero. Section 6 uses it.</p>
+<h3 id="4-work-kinetic-energy-and-power">4. Work, kinetic energy and
+power</h3>
+<p><strong>The picture.</strong> Momentum tells how a force acts over
+time. Asking how it acts over distance leads to energy. Push a body
+along with a force <span class="math inline">\(\mathbf{F}\)</span> while
+it moves a small step <span class="math inline">\(d\mathbf{l}\)</span>.
+The force does <em>work</em> <span class="math inline">\(\mathbf{F}\cdot
+d\mathbf{l}\)</span> (F2, section 2): only the part of the force along
+the motion counts. Over a whole path, the work is the line integral</p>
+<p><span class="math display">\[
+\Delta W = \int_C\mathbf{F}\cdot d\mathbf{l} \qquad [\text{J} = \text{N
+m}] .
+\]</span></p>
+<p><strong>The work–energy theorem.</strong> Let <span
+class="math inline">\(\mathbf{F}\)</span> be the total force on a
+particle of constant mass. Along the path, <span
+class="math inline">\(d\mathbf{l} = \mathbf{v}\,dt\)</span>, and <span
+class="math inline">\(\mathbf{F} = m\,d\mathbf{v}/dt\)</span>, so</p>
+<p><span class="math display">\[
+\mathbf{F}\cdot d\mathbf{l} = m\frac{d\mathbf{v}}{dt}\cdot\mathbf{v}\,dt
+= \frac{d}{dt}\left(\tfrac12m\,\mathbf{v}\cdot\mathbf{v}\right)dt,
+\]</span></p>
+<p>using <span
+class="math inline">\(\frac{d}{dt}(\mathbf{v}\cdot\mathbf{v}) =
+2\mathbf{v}\cdot\dot{\mathbf{v}}\)</span> (F2, section 4). The right
+side is an exact derivative, and the fundamental theorem gives</p>
+<p><span class="math display">\[
+\int_1^2\mathbf{F}\cdot d\mathbf{l} = \tfrac12mv_2^2 - \tfrac12mv_1^2 .
+\]</span></p>
+<p>The work done by the total force equals the change of the <em>kinetic
+energy</em>,</p>
+<p><span class="math display">\[
+W = \tfrac12mv^2 = \frac{p^2}{2m} \qquad [\text{J}] .
+\]</span></p>
+<p>(The course writes <span class="math inline">\(W\)</span> for kinetic
+energy everywhere, keeping <span class="math inline">\(E\)</span> for
+total energy; the context keeps it apart from the watt, W.) This
+explains the factor <span class="math inline">\(\tfrac12\)</span>: it is
+what makes the kinetic energy equal to the work done to reach it. It
+also settles Descartes and Leibniz: <span
+class="math inline">\(mv\)</span> is the time integral of force and
+<span class="math inline">\(\tfrac12mv^2\)</span> the distance
+integral.</p>
+<p><strong>Example: the 2 kV electron.</strong> An electron crossing a
+gap with 2000 V across it gains the work <span class="math inline">\(eV
+= 1.602 \times 10^{-19} \times 2000 = 3.20 \times 10^{-16}\)</span> J,
+whatever the shape of the field in the gap (F2, section 7). Starting
+from rest, <span class="math inline">\(\tfrac12m_ev^2 = eV\)</span>,
+so</p>
+<p><span class="math display">\[
+v = \sqrt{\frac{2eV}{m_e}} = 2.65 \times 10^7\ \text{m/s} .
+\]</span></p>
+<p>This is the speed used in section 1. It is 0.3 per cent too high: at
+9 per cent of the speed of light, Newton’s formula has started to fail
+(section 11). The same energy unit, the work done on one electron charge
+by 1 V, is the <em>electron-volt</em>, <span class="math inline">\(1\
+\text{eV} = 1.602 \times 10^{-19}\)</span> J, in which the whole course
+measures particle energies. A proton of 1 MeV moves at <span
+class="math inline">\(\sqrt{2W/m_p} = 1.384 \times 10^7\)</span> m/s,
+within 0.08 per cent of the true value.</p>
+<p><strong>Forces that do no work.</strong> If the force is always at
+right angles to the motion, <span class="math inline">\(\mathbf{F}\cdot
+d\mathbf{l} = 0\)</span> and the kinetic energy cannot change. The
+magnetic force <span
+class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span> is such a
+force. It bends a particle but never changes its speed: accelerators use
+electric fields to give energy and magnetic fields to steer.</p>
+<p><strong>Power.</strong> The rate of doing work is the <em>power</em>.
+Dividing <span class="math inline">\(\mathbf{F}\cdot
+d\mathbf{l}\)</span> by <span class="math inline">\(dt\)</span>:</p>
+<p><span class="math display">\[
+P = \frac{dW}{dt} = \mathbf{F}\cdot\mathbf{v} \qquad [\text{W} =
+\text{J/s}] .
+\]</span></p>
+<p>For a beam, each particle of charge <span
+class="math inline">\(e\)</span> gains <span
+class="math inline">\(eV\)</span> and <span
+class="math inline">\(I_b/e\)</span> of them arrive each second, so the
+power the accelerator puts into the beam is <span
+class="math inline">\(P = I_bV\)</span>. A 10 mA beam through 2 kV
+carries 20 W; a 1 mA beam of 10 MeV protons carries 10 kW, enough to
+melt any small target not cooled with water; the proton cyclotron at the
+Paul Scherrer Institute, 2.4 mA at 590 MeV, carries 1.4 MW, and <a
+href="22-intensity-limits.html">chapter 22</a> is about why a beam of
+that power must lose less than a part in ten thousand of itself on the
+walls.</p>
+<h3
+id="5-potential-energy-conservative-forces-and-energy-conservation">5.
+Potential energy, conservative forces and energy conservation</h3>
+<p><strong>Stored work.</strong> Lift a 1 kg mass by 1 m. You do <span
+class="math inline">\(mgh = 9.81\)</span> J of work against gravity; let
+go, and gravity gives it back as kinetic energy at the bottom. The work
+seems to be stored in the position. That is possible only when the work
+done by the force between two points does not depend on the path taken:
+otherwise one could go up one way and down another and come back with
+more energy than one started with.</p>
+<p><strong>Conservative forces.</strong> A force is
+<em>conservative</em> if its work between any two points is the same
+along every path. F2, section 7, showed when that happens: when the
+force is minus the gradient of a function,</p>
+<p><span class="math display">\[
+\mathbf{F} = -\nabla U .
+\]</span></p>
+<p>The function <span class="math inline">\(U(\mathbf{r})\)</span>, in
+joules, is the <em>potential energy</em>. The minus sign makes the force
+point downhill in <span class="math inline">\(U\)</span>, towards lower
+potential energy. Then the work from point 1 to point 2 is <span
+class="math inline">\(\int\mathbf{F}\cdot d\mathbf{l} = -[U(2) -
+U(1)]\)</span>, and the work–energy theorem gives</p>
+<p><span class="math display">\[
+W_2 - W_1 = -(U_2 - U_1) \quad\Rightarrow\quad W + U = E =
+\text{constant} .
+\]</span></p>
+<p>This is <em>conservation of energy</em> for a particle: the sum <span
+class="math inline">\(E\)</span> of kinetic and potential energy, the
+<em>mechanical energy</em>, does not change. (In chapter 1 and onward,
+<span class="math inline">\(E\)</span> also includes the rest energy
+<span class="math inline">\(mc^2\)</span>; for slow particles that is a
+fixed constant added to both sides and changes nothing here.) The test
+for a conservative force is F2’s: zero curl. Only differences of <span
+class="math inline">\(U\)</span> matter, so its zero can be put anywhere
+convenient.</p>
+<p><strong>The potential energies of the course.</strong></p>
+<ul>
+<li><em>Uniform gravity:</em> <span class="math inline">\(U =
+mgh\)</span>, with <span class="math inline">\(h\)</span> the
+height.</li>
+<li><em>A charge in an electric potential:</em> the force <span
+class="math inline">\(q\boldsymbol{\mathcal{E}} = -q\nabla V\)</span>,
+so <span class="math inline">\(U = qV\)</span>. A charge <span
+class="math inline">\(q\)</span> falling through a potential difference
+<span class="math inline">\(V\)</span> gains kinetic energy <span
+class="math inline">\(qV\)</span>, which is section 4’s result
+again.</li>
+<li><em>Two point charges</em> <span class="math inline">\(q_1\)</span>,
+<span class="math inline">\(q_2\)</span> at distance <span
+class="math inline">\(r\)</span>: <span class="math inline">\(U =
+\dfrac{q_1q_2}{4\pi\varepsilon_0r}\)</span>, zero when they are far
+apart, positive (repulsive) for like charges. Its gradient is Coulomb’s
+force (F2, section 6). Gravity between masses <span
+class="math inline">\(M\)</span> and <span
+class="math inline">\(m\)</span> is the same shape with the opposite
+sign, <span class="math inline">\(U = -GMm/r\)</span>.</li>
+<li><em>A spring,</em> or anything pulled back in proportion to its
+displacement, <span class="math inline">\(F = -kx\)</span>: <span
+class="math inline">\(U = \tfrac12kx^2\)</span>, since <span
+class="math inline">\(-dU/dx = -kx\)</span>.</li>
+</ul>
+<p><strong>Reading a potential-energy curve.</strong> In one dimension,
+<span class="math inline">\(F = -dU/dx\)</span>, and energy conservation
+alone tells a great deal. Draw <span
+class="math inline">\(U(x)\)</span>, and a horizontal line at the energy
+<span class="math inline">\(E\)</span>. The particle can be only where
+<span class="math inline">\(U \le E\)</span>, since <span
+class="math inline">\(W = E - U\)</span> cannot be negative. Where the
+line crosses the curve, <span class="math inline">\(W = 0\)</span>: the
+particle stops and turns back. These are <em>turning points</em>. A
+particle in a valley between two turning points is <em>bound</em> and
+goes back and forth; one whose energy is above the barrier on one side
+escapes. At a minimum of <span class="math inline">\(U\)</span> the
+force is zero and nearby it points back towards the minimum: <em>stable
+equilibrium</em>. At a maximum the force is zero too, but nearby it
+points away: <em>unstable</em>. Section 9 takes the minimum further, and
+<a
+href="12-phase-stability.html#pre-requisite-the-pendulum-nonlinear-oscillation-and-the-separatrix">chapter
+12</a> draws exactly this picture for particles riding an RF wave.</p>
+<p><strong>Example: how close an alpha gets to gold.</strong> An alpha
+particle (<span class="math inline">\(q_1 = 2e\)</span>) of kinetic
+energy <span class="math inline">\(W = 7.69\)</span> MeV heads straight
+for a gold nucleus (<span class="math inline">\(q_2 = 79e\)</span>),
+held fixed. Far away, <span class="math inline">\(U = 0\)</span> and
+<span class="math inline">\(E = W\)</span>. It slows as it climbs the
+Coulomb hill and stops where all its kinetic energy has become potential
+energy:</p>
+<p><span class="math display">\[
+W = \frac{2 \times 79\,e^2}{4\pi\varepsilon_0\,d} \quad\Rightarrow\quad
+d = \frac{158 \times 1.440\ \text{MeV fm}}{7.69\ \text{MeV}} = 29.6\
+\text{fm},
+\]</span></p>
+<p>with <span class="math inline">\(e^2/4\pi\varepsilon_0 =
+1.440\)</span> MeV fm (1 fm <span class="math inline">\(=
+10^{-15}\)</span> m). The gold nucleus has a radius of about 7 fm, so
+the alpha never touches it, and only the Coulomb force acts: this is why
+Rutherford’s scattering law worked so well (<a
+href="01-why-accelerate.html#12-to-get-into-a-nucleus-the-coulomb-barrier">chapter
+1</a>). The recoil of the gold, ignored here, is the subject of section
+6.</p>
+<p><strong>Forces that are not conservative.</strong> Friction always
+opposes the motion, so its work round any closed path is negative, and
+no <span class="math inline">\(U\)</span> can describe it; the energy
+goes into heat (F6). The electric field induced by a changing magnetic
+field has curl and no potential: a charge going round a loop gains
+energy each turn, which is how the betatron accelerates (<a
+href="11-the-betatron.html">chapter 11</a>). Energy is still conserved
+in both cases, once heat and the field’s own energy are counted; it is
+the <em>mechanical</em> energy <span class="math inline">\(W +
+U\)</span> alone that is not.</p>
+<h3 id="6-collisions">6. Collisions</h3>
+<p><strong>What is conserved.</strong> In a collision two bodies push on
+each other hard for a short time, with forces usually unknown. Without
+external forces the total momentum is conserved, always. The total
+kinetic energy is conserved only if none of it is turned into something
+else (heat, deformation, excitation of an atom, a new particle). A
+collision that keeps kinetic energy is <em>elastic</em>; one that does
+not is <em>inelastic</em>. Rutherford’s alphas scattering off gold, and
+electrons off atoms at low energy, are elastic; an alpha knocking a
+proton out of nitrogen is inelastic, since the masses themselves
+change.</p>
+<p><strong>Elastic collision in one dimension.</strong> A body of mass
+<span class="math inline">\(m_1\)</span> and velocity <span
+class="math inline">\(v_1\)</span> hits a body <span
+class="math inline">\(m_2\)</span> at rest, head on. Momentum and energy
+give</p>
+<p><span class="math display">\[
+m_1v_1 = m_1v_1&#39; + m_2v_2&#39;, \qquad \tfrac12m_1v_1^2 =
+\tfrac12m_1v_1&#39;^2 + \tfrac12m_2v_2&#39;^2 .
+\]</span></p>
+<p>Rearrange both to <span class="math inline">\(m_1(v_1 - v_1&#39;) =
+m_2v_2&#39;\)</span> and <span class="math inline">\(m_1(v_1 -
+v_1&#39;)(v_1 + v_1&#39;) = m_2v_2&#39;^2\)</span>, and divide: <span
+class="math inline">\(v_1 + v_1&#39; = v_2&#39;\)</span>. The bodies
+separate at the speed they approached. Putting this back into the
+momentum equation,</p>
+<p><span class="math display">\[
+v_1&#39; = \frac{m_1 - m_2}{m_1 + m_2}\,v_1, \qquad v_2&#39; =
+\frac{2m_1}{m_1 + m_2}\,v_1 .
+\]</span></p>
+<p>The fraction of the kinetic energy handed to the target is</p>
+<p><span class="math display">\[
+\frac{W_2&#39;}{W_1} = \frac{m_2v_2&#39;^2}{m_1v_1^2} =
+\frac{4m_1m_2}{(m_1 + m_2)^2} .
+\]</span></p>
+<p>Three cases cover the course:</p>
+<ul>
+<li><em>Equal masses:</em> the projectile stops and the target takes
+everything. A neutron hitting a proton head on hands it all its energy,
+which is why hydrogen-rich water and paraffin slow neutrons best.</li>
+<li><em>Light on heavy</em> (<span class="math inline">\(m_1 \ll
+m_2\)</span>): <span class="math inline">\(v_1&#39; \approx
+-v_1\)</span>, the projectile bounces straight back with nearly its full
+speed, and the target takes a fraction about <span
+class="math inline">\(4m_1/m_2\)</span>. An alpha bouncing off gold
+keeps 92 per cent of its energy.</li>
+<li><em>Heavy on light</em> (<span class="math inline">\(m_1 \gg
+m_2\)</span>): the projectile barely slows, and the target leaves at
+twice the projectile’s speed, carrying <span
+class="math inline">\(4m_2/m_1\)</span> of its energy. A 1 MeV proton
+gives a free electron at most <span class="math inline">\(4 \times
+0.511/938.3 \times 1\)</span> MeV <span class="math inline">\(=
+2.18\)</span> keV. A charged particle crossing matter therefore loses
+its energy in many thousands of small steps to electrons, which is why
+it has a definite range (<a
+href="01-why-accelerate.html#pre-requisite-energy-loss-in-matter-range-bragg-peak">chapter
+1</a>).</li>
+</ul>
+<p><strong>Glancing collisions and the largest angle.</strong> In two or
+three dimensions the momentum equation is a vector equation, and the
+bodies can leave at angles. One result needs no algebra beyond this: a
+heavy projectile hitting a light target at rest can be turned by at most
+the angle whose sine is <span class="math inline">\(m_2/m_1\)</span>.
+For an alpha on an electron that is <span
+class="math inline">\(0.511/3727 = 1.37 \times 10^{-4}\)</span> rad, or
+<span class="math inline">\(0.0079°\)</span>. When Geiger and Marsden
+saw alphas bounce back from gold foil in 1909, no collision with
+electrons could have done it: the alpha had met something heavier than
+itself. That was the nucleus.</p>
+<p><strong>The centre-of-mass frame.</strong> Watch the same collision
+from a frame moving with the centre of mass, at velocity</p>
+<p><span class="math display">\[
+\mathbf{V}_{cm} = \frac{m_1\mathbf{v}_1 + m_2\mathbf{v}_2}{m_1 + m_2} .
+\]</span></p>
+<p>In this frame the total momentum is zero: the two bodies approach
+with equal and opposite momenta, and in an elastic collision leave with
+equal and opposite momenta of the same size, only turned. The collision
+is as simple as it can be. Section 11 shows that Newton’s laws hold
+equally in this frame, since it moves uniformly.</p>
+<p><strong>Where the energy goes.</strong> Split each velocity into the
+centre-of-mass velocity and a velocity relative to it, <span
+class="math inline">\(\mathbf{v}_i = \mathbf{V}_{cm} +
+\mathbf{u}_i\)</span>. Then <span class="math inline">\(\sum
+m_i\mathbf{u}_i = 0\)</span> (that is what centre of mass means), and
+when the kinetic energies are added the cross terms <span
+class="math inline">\(\mathbf{V}_{cm}\cdot\sum m_i\mathbf{u}_i\)</span>
+vanish:</p>
+<p><span class="math display">\[
+W_{total} = \tfrac12(m_1 + m_2)V_{cm}^2 + \left(\tfrac12m_1u_1^2 +
+\tfrac12m_2u_2^2\right) .
+\]</span></p>
+<p>The first part is the kinetic energy of the centre of mass. No
+collision can change it, since the total momentum is conserved. Only the
+second part, the energy in the centre-of-mass frame, can be turned into
+heat, excitation or new particles. For a body of mass <span
+class="math inline">\(m_1\)</span> and kinetic energy <span
+class="math inline">\(W\)</span> hitting <span
+class="math inline">\(m_2\)</span> at rest, the centre of mass carries
+the fraction <span class="math inline">\(m_1/(m_1 + m_2)\)</span>, and
+what is left over is</p>
+<p><span class="math display">\[
+W_{cm} = W\,\frac{m_2}{m_1 + m_2} .
+\]</span></p>
+<p>It can also be written <span class="math inline">\(W_{cm} =
+\tfrac12\mu v_{rel}^2\)</span>, with the <em>reduced mass</em> <span
+class="math inline">\(\mu = m_1m_2/(m_1 + m_2)\)</span> and <span
+class="math inline">\(v_{rel}\)</span> the speed of one body relative to
+the other.</p>
+<p><strong>Example: making oxygen from nitrogen.</strong> In 1919
+Rutherford found that alphas knock protons out of nitrogen: <span
+class="math inline">\(^{4}\mathrm{He} + {}^{14}\mathrm{N} \to
+{}^{17}\mathrm{O} + p\)</span>. From the masses (chapter 1’s Q value),
+<span class="math inline">\(Q = -1.19\)</span> MeV: the reaction needs
+1.19 MeV, taken from the kinetic energy in the centre-of-mass frame. The
+alpha must therefore bring</p>
+<p><span class="math display">\[
+W_{threshold} = 1.19 \times \frac{4.003 + 14.003}{14.003} = 1.53\
+\text{MeV},
+\]</span></p>
+<p>of which 0.34 MeV is spent only on moving the centre of mass. The
+7.69 MeV alphas of radium C bring <span class="math inline">\(W_{cm} =
+7.69 \times 14.003/18.006 = 5.98\)</span> MeV, enough for the reaction
+and, more to the point, enough to come near the nitrogen nucleus through
+its Coulomb barrier.</p>
+<p><strong>Why colliders.</strong> Let two equal bodies, each of kinetic
+energy <span class="math inline">\(W\)</span>, meet head on. Their total
+momentum is zero, the laboratory is already the centre-of-mass frame,
+and all <span class="math inline">\(2W\)</span> is available. To get the
+same <span class="math inline">\(2W\)</span> by firing one at the other
+at rest, it needs <span class="math inline">\(W_{cm} =
+W_{lab}/2\)</span>, so <span class="math inline">\(W_{lab} =
+4W\)</span>: twice the total energy of the two beams.
+Non-relativistically, colliding beams win by a factor of 2. Near the
+speed of light the gap becomes enormous, because the centre of mass then
+carries almost everything: the LHC’s 6.8 TeV protons colliding head on
+give 13.6 TeV, while the same beam on a fixed target would give only 113
+GeV. Chapter 1 derives that from the relativistic version of exactly
+this argument, in <a
+href="01-why-accelerate.html#5-invariant-mass-and-the-centre-of-mass-energy">section
+5</a>, and <a href="23-colliders.html">chapter 23</a> follows the
+consequences.</p>
+<p><strong>Perfectly inelastic collisions.</strong> If the two bodies
+stick together, they move off at <span
+class="math inline">\(\mathbf{V}_{cm}\)</span>, and all of <span
+class="math inline">\(W_{cm}\)</span> is lost to heat. A slow electron
+captured by an ion, or a particle stopping in a target, are of this
+kind.</p>
+<h3 id="7-rotation">7. Rotation</h3>
+<p><strong>Angular velocity.</strong> A body turning about a fixed axis
+turns through an angle <span class="math inline">\(\theta\)</span>
+(radians) that changes at the <em>angular velocity</em> <span
+class="math inline">\(\omega = d\theta/dt\)</span> (rad/s). A point at
+distance <span class="math inline">\(r\)</span> from the axis moves on a
+circle at speed <span class="math inline">\(v = \omega r\)</span>. As a
+vector, <span class="math inline">\(\boldsymbol{\omega}\)</span> points
+along the axis, by the right-hand rule (fingers curl the way the body
+turns, thumb along <span
+class="math inline">\(\boldsymbol{\omega}\)</span>), and the velocity of
+a point at position <span class="math inline">\(\mathbf{r}\)</span> from
+a point on the axis is <span class="math inline">\(\mathbf{v} =
+\boldsymbol{\omega}\times\mathbf{r}\)</span>. Revolutions per minute
+convert as <span class="math inline">\(\omega = 2\pi \times
+\text{rpm}/60\)</span>.</p>
+<p><strong>Torque.</strong> A door is easy to open by pushing at the
+handle and hard by pushing near the hinge: what turns a body is the
+force times its lever arm. The <em>torque</em> of a force <span
+class="math inline">\(\mathbf{F}\)</span> applied at position <span
+class="math inline">\(\mathbf{r}\)</span> (from a chosen origin) is</p>
+<p><span class="math display">\[
+\boldsymbol{\tau} = \mathbf{r}\times\mathbf{F} \qquad [\text{N m}],
+\]</span></p>
+<p>of size <span class="math inline">\(rF\sin\theta\)</span>, which is
+the force times the perpendicular distance from the origin to its line
+of action.</p>
+<p><strong>Angular momentum.</strong> The rotational partner of momentum
+is the <em>angular momentum</em> about the origin,</p>
+<p><span class="math display">\[
+\mathbf{L} = \mathbf{r}\times\mathbf{p} \qquad [\text{kg m}^2/\text{s}]
+.
+\]</span></p>
+<p>Differentiate with the product rule: <span
+class="math inline">\(\dot{\mathbf{L}} =
+\dot{\mathbf{r}}\times\mathbf{p} +
+\mathbf{r}\times\dot{\mathbf{p}}\)</span>. The first term is <span
+class="math inline">\(\mathbf{v}\times m\mathbf{v} = 0\)</span>, since a
+vector crossed with itself is zero, and in the second <span
+class="math inline">\(\dot{\mathbf{p}} = \mathbf{F}\)</span>. So</p>
+<p><span class="math display">\[
+\frac{d\mathbf{L}}{dt} = \boldsymbol{\tau} .
+\]</span></p>
+<p>Torque changes angular momentum as force changes momentum. For a
+system of particles the internal torques cancel in pairs (if the forces
+between particles act along the line joining them, as Coulomb’s and
+gravity’s do), and the total angular momentum changes only by external
+torques. With none, it is conserved.</p>
+<p><strong>Conservation of angular momentum.</strong> A force that
+always points towards (or away from) the origin, <span
+class="math inline">\(\mathbf{F} \parallel \mathbf{r}\)</span>, has zero
+torque about it, so <span class="math inline">\(\mathbf{L}\)</span> is
+constant. Two things follow. The motion stays in one plane, the plane at
+right angles to the fixed <span
+class="math inline">\(\mathbf{L}\)</span>. And the line from the origin
+to the particle sweeps out area at a steady rate: in a short time <span
+class="math inline">\(dt\)</span> it sweeps a thin triangle of area
+<span
+class="math inline">\(\tfrac12|\mathbf{r}\times\mathbf{v}\,dt|\)</span>,
+so</p>
+<p><span class="math display">\[
+\frac{dA}{dt} = \frac{L}{2m} = \text{constant} .
+\]</span></p>
+<p>This is Kepler’s second law, equal areas in equal times, and it holds
+for any force towards a centre, not only for gravity. A planet moves
+fastest when closest to the Sun; an alpha passing a nucleus swings round
+fastest at its closest approach, which chapter 1’s <a
+href="01-why-accelerate.html#pre-requisite-rutherford-scattering">Rutherford
+scattering</a> uses.</p>
+<p><em>Example.</em> A proton circling in a cyclotron’s uniform field
+feels the magnetic force pointing at the centre of its circle, so its
+angular momentum about that centre is fixed while the field alone acts.
+A 10 MeV proton in 1 T circles with radius <span class="math inline">\(R
+= p/(eB) = 0.457\)</span> m (F2, section 4) and has <span
+class="math inline">\(L = pR = eBR^2 = 3.35 \times 10^{-20}\)</span> kg
+m<span class="math inline">\(^2\)</span>/s. Each accelerating gap adds
+momentum along the motion, a torque, and the orbit grows.</p>
+<p><strong>Rigid bodies: moment of inertia.</strong> A rigid body
+turning at <span class="math inline">\(\omega\)</span> about a fixed
+axis is many particles, each moving at <span
+class="math inline">\(\omega r_i\)</span>. Its kinetic energy and its
+angular momentum along the axis are</p>
+<p><span class="math display">\[
+W = \sum_i\tfrac12m_i(\omega r_i)^2 = \tfrac12I\omega^2, \qquad L =
+\sum_im_ir_i(\omega r_i) = I\omega, \qquad I = \sum_im_ir_i^2 .
+\]</span></p>
+<p>The <em>moment of inertia</em> <span class="math inline">\(I\)</span>
+(kg m<span class="math inline">\(^2\)</span>) plays the part of mass: it
+measures how hard the body is to set turning, and mass far from the axis
+counts most. (Here <span class="math inline">\(I\)</span> is not a
+current.) For a thin ring of mass <span class="math inline">\(M\)</span>
+and radius <span class="math inline">\(R\)</span>, <span
+class="math inline">\(I = MR^2\)</span>; for a uniform solid disc,
+cutting it into rings of width <span class="math inline">\(dr\)</span>
+and mass <span class="math inline">\(M\,2\pi r\,dr/\pi R^2\)</span> (F2,
+section 8),</p>
+<p><span class="math display">\[
+I = \int_0^R r^2\,\frac{2Mr\,dr}{R^2} = \tfrac12MR^2 .
+\]</span></p>
+<p>The rotational second law is <span class="math inline">\(\tau =
+I\,d\omega/dt\)</span> about a fixed axis.</p>
+<p><strong>Example: a turbomolecular pump.</strong> Chapter 3’s
+turbomolecular pumps spin rows of blades at up to 40 000 rpm. Model a
+rotor as a solid disc of 1 kg and 0.1 m across (a rough stand-in; real
+rotors are stacks of bladed discs). Then <span class="math inline">\(I =
+\tfrac12 \times 1 \times 0.05^2 = 1.25 \times 10^{-3}\)</span> kg m<span
+class="math inline">\(^2\)</span>, <span class="math inline">\(\omega =
+2\pi \times 40\,000/60 = 4189\)</span> rad/s, the blade tips move at
+<span class="math inline">\(\omega R = 209\)</span> m/s, and the stored
+energy is</p>
+<p><span class="math display">\[
+W = \tfrac12I\omega^2 = 11\ \text{kJ},
+\]</span></p>
+<p>the kinetic energy of a 1000 kg car at 17 km/h, held in a part the
+size of a hand. A motor giving a steady torque of 0.05 N m brings it up
+to speed in <span class="math inline">\(I\omega/\tau = 105\)</span> s.
+That stored energy is why a rotor that touches its housing destroys the
+pump, and why a pump must be bolted down to take the torque of a sudden
+stop.</p>
+<p><strong>Conservation at work.</strong> A skater pulling in her arms
+lowers <span class="math inline">\(I\)</span>; with <span
+class="math inline">\(L = I\omega\)</span> fixed, <span
+class="math inline">\(\omega\)</span> rises. A spinning rotor resists
+being tilted, because tilting it means changing the direction of a large
+<span class="math inline">\(\mathbf{L}\)</span>, which needs a torque.
+The proton, the electron and many nuclei carry an intrinsic angular
+momentum, <em>spin</em>, which is not anything turning but obeys the
+same rules; F7 and <a
+href="18-imperfections-and-resonances.html">chapter 18</a> meet it.</p>
+<h3 id="8-central-forces-and-orbits">8. Central forces and orbits</h3>
+<p><strong>The inverse-square force.</strong> Gravity and the Coulomb
+force both point along the line between two bodies and fall as <span
+class="math inline">\(1/r^2\)</span>. Write an attraction towards the
+origin as</p>
+<p><span class="math display">\[
+\mathbf{F} = -\frac{k}{r^2}\hat{\mathbf{r}}, \qquad U(r) = -\frac{k}{r},
+\]</span></p>
+<p>with <span class="math inline">\(k = GMm\)</span> for gravity or
+<span class="math inline">\(k = |q_1q_2|/4\pi\varepsilon_0\)</span> for
+opposite charges (J m). A repulsion has the opposite sign. (Here <span
+class="math inline">\(k\)</span> is the strength of the force, not a
+spring constant.) The heavy body is held at the origin; if it can move,
+replace <span class="math inline">\(m\)</span> by the reduced mass <span
+class="math inline">\(\mu\)</span> of section 6, and the problem becomes
+the motion relative to the centre of mass.</p>
+<p><strong>Circular orbits.</strong> For a circle of radius <span
+class="math inline">\(r\)</span>, the attraction supplies the force
+<span class="math inline">\(mv^2/r\)</span> towards the centre (F2,
+section 4):</p>
+<p><span class="math display">\[
+\frac{mv^2}{r} = \frac{k}{r^2} \quad\Rightarrow\quad W = \tfrac12mv^2 =
+\frac{k}{2r} .
+\]</span></p>
+<p>The potential energy is <span class="math inline">\(U =
+-k/r\)</span>, so the total is</p>
+<p><span class="math display">\[
+E = W + U = -\frac{k}{2r} = -W .
+\]</span></p>
+<p>The energy is negative: the body is <em>bound</em>, and it would take
+<span class="math inline">\(+k/2r\)</span> of work to free it. Lower
+orbits are faster and more tightly bound. The relation <span
+class="math inline">\(W = -U/2\)</span> for a <span
+class="math inline">\(1/r\)</span> potential (the <em>virial
+theorem</em>, here in its simplest case) recurs in the atom.</p>
+<p><strong>Example: the hydrogen atom, classically.</strong> Treat the
+electron as circling the proton at the Bohr radius <span
+class="math inline">\(a_0 = 5.29 \times 10^{-11}\)</span> m, with <span
+class="math inline">\(k = e^2/4\pi\varepsilon_0 = 2.307 \times
+10^{-28}\)</span> J m. Then</p>
+<p><span class="math display">\[
+v = \sqrt{\frac{k}{m_ea_0}} = 2.19 \times 10^6\ \text{m/s}, \qquad E =
+-\frac{k}{2a_0} = -2.18 \times 10^{-18}\ \text{J} = -13.6\ \text{eV} .
+\]</span></p>
+<p>It takes 13.6 eV to ionise hydrogen, which is right. The speed is
+<span class="math inline">\(1/137\)</span> of the speed of light, so the
+electron is slow and Newton is a fair guide. But the picture cannot be
+the whole truth: an electron going round is accelerating, and an
+accelerating charge radiates (<a
+href="01-why-accelerate.html#pre-requisite-larmor-formula-and-relativistic-radiated-power">chapter
+1</a>), so the orbit should collapse in about <span
+class="math inline">\(10^{-11}\)</span> s. Why it does not is quantum
+mechanics (F7). For the electrons in a storage ring the same radiation
+is real and sets the energy limit of every electron ring (<a
+href="20-synchrotron-radiation.html">chapter 20</a>).</p>
+<p><em>Example: a low orbit.</em> For a satellite just above the Earth,
+gravity is <span class="math inline">\(mg\)</span>, so <span
+class="math inline">\(mv^2/R_E = mg\)</span> and <span
+class="math inline">\(v = \sqrt{gR_E} = 7.9\)</span> km/s, once round in
+84 minutes. Escaping needs <span class="math inline">\(E \ge 0\)</span>,
+so a speed <span class="math inline">\(\sqrt2\)</span> times larger,
+11.2 km/s.</p>
+<p><strong>Orbits that are not circles.</strong> With angular momentum
+conserved, the energy of a particle in a central force can be written in
+terms of <span class="math inline">\(r\)</span> alone. Split the
+velocity into a radial part <span class="math inline">\(\dot r\)</span>
+and a sideways part <span class="math inline">\(r\dot\phi\)</span>; then
+<span class="math inline">\(L = mr^2\dot\phi\)</span> and</p>
+<p><span class="math display">\[
+E = \tfrac12m\dot r^2 + \frac{L^2}{2mr^2} + U(r) .
+\]</span></p>
+<p>The middle term, the sideways kinetic energy written with the fixed
+<span class="math inline">\(L\)</span>, acts as an extra potential
+energy that grows steeply at small <span
+class="math inline">\(r\)</span>: the <em>centrifugal barrier</em>. The
+radial motion is a one-dimensional problem in the <em>effective
+potential</em> <span class="math inline">\(U_{eff} = L^2/2mr^2 +
+U(r)\)</span>, and section 5’s picture applies. For an attraction <span
+class="math inline">\(-k/r\)</span>, <span
+class="math inline">\(U_{eff}\)</span> has a valley: an orbit with <span
+class="math inline">\(E &lt; 0\)</span> swings between two turning
+points, the nearest and farthest approach, and is an ellipse with the
+centre of force at one focus (Kepler’s first law; the derivation is in
+Kleppner and Kolenkow, chapter 10). Its energy depends only on the long
+semi-axis <span class="math inline">\(a\)</span>, <span
+class="math inline">\(E = -k/2a\)</span>, and its period <span
+class="math inline">\(t_p\)</span> obeys <span
+class="math inline">\(t_p^2 = 4\pi^2ma^3/k\)</span> (Kepler’s third
+law). An orbit with <span class="math inline">\(E &gt; 0\)</span> is a
+hyperbola: the particle comes in from far away, swings round and leaves.
+A repulsion has only that kind. Rutherford scattering is such a
+hyperbola, and chapter 1’s <a
+href="01-why-accelerate.html#pre-requisite-rutherford-scattering">pre-requisite</a>
+derives the angle from conservation of energy and angular momentum.</p>
+<h3 id="9-simple-harmonic-motion">9. Simple harmonic motion</h3>
+<p><strong>Why it is everywhere.</strong> Take any potential energy
+<span class="math inline">\(U(x)\)</span> with a minimum at <span
+class="math inline">\(x_0\)</span>. Near the minimum, Taylor’s series
+(F1, section 8) gives</p>
+<p><span class="math display">\[
+U(x) \approx U(x_0) + U&#39;(x_0)(x - x_0) + \tfrac12U&#39;&#39;(x_0)(x
+- x_0)^2 .
+\]</span></p>
+<p>At a minimum <span class="math inline">\(U&#39;(x_0) = 0\)</span>,
+and <span class="math inline">\(U&#39;&#39;(x_0) &gt; 0\)</span>.
+Measure <span class="math inline">\(x\)</span> from <span
+class="math inline">\(x_0\)</span> and drop the constant; what is left
+is <span class="math inline">\(U = \tfrac12kx^2\)</span> with <span
+class="math inline">\(k = U&#39;&#39;(x_0)\)</span>, and the force is
+<span class="math inline">\(F = -kx\)</span>: a pull back towards the
+minimum, in proportion to the distance. <em>Every</em> smooth valley
+looks like this when the motion is small. That is why the oscillator is
+the most important system in physics, and why a particle displaced
+slightly from the ideal path of an accelerator oscillates about it.</p>
+<p><strong>The motion.</strong> Newton’s law <span
+class="math inline">\(m\ddot x = -kx\)</span> is F1’s oscillation
+equation, <span class="math inline">\(\ddot x = -\omega^2x\)</span>
+with</p>
+<p><span class="math display">\[
+\omega = \sqrt{\frac{k}{m}} \qquad [\text{rad/s}] .
+\]</span></p>
+<p>Its solution, <span class="math inline">\(x = A&#39;\cos\omega t +
+B&#39;\sin\omega t\)</span>, is better written with an
+<em>amplitude</em> <span class="math inline">\(A\)</span> and a
+<em>phase</em> <span class="math inline">\(\phi\)</span>. By the
+addition formula, <span class="math inline">\(A\cos(\omega t + \phi) =
+A\cos\phi\cos\omega t - A\sin\phi\sin\omega t\)</span>, which is the
+same with <span class="math inline">\(A&#39; = A\cos\phi\)</span> and
+<span class="math inline">\(B&#39; = -A\sin\phi\)</span>. So</p>
+<p><span class="math display">\[
+x = A\cos(\omega t + \phi), \qquad \dot x = -A\omega\sin(\omega t +
+\phi) .
+\]</span></p>
+<p>The amplitude <span class="math inline">\(A\)</span> is the largest
+displacement; the phase <span class="math inline">\(\phi\)</span> says
+where in its cycle the motion was at <span class="math inline">\(t =
+0\)</span>. Both are fixed by the start: a body released from rest at
+<span class="math inline">\(x = A\)</span> has <span
+class="math inline">\(\phi = 0\)</span>. The motion repeats after a time
+<span class="math inline">\(t_p = 2\pi/\omega\)</span>, the
+<em>period</em>, and <span class="math inline">\(f =
+\omega/2\pi\)</span> times per second, the <em>frequency</em> in hertz.
+The period does not depend on the amplitude: big and small swings take
+the same time. That was Galileo’s observation of a swinging lamp, and it
+is exactly true only for a perfectly linear force.</p>
+<p><strong>Energy.</strong> With <span class="math inline">\(x\)</span>
+and <span class="math inline">\(\dot x\)</span> above,</p>
+<p><span class="math display">\[
+E = \tfrac12m\dot x^2 + \tfrac12kx^2 = \tfrac12mA^2\omega^2\sin^2(\omega
+t + \phi) + \tfrac12kA^2\cos^2(\omega t + \phi) = \tfrac12kA^2,
+\]</span></p>
+<p>since <span class="math inline">\(m\omega^2 = k\)</span> and <span
+class="math inline">\(\sin^2 + \cos^2 = 1\)</span>. The energy sloshes
+between kinetic and potential twice per cycle, and on average each has
+half. At the centre the body moves fastest, <span
+class="math inline">\(v_{max} = A\omega\)</span>; at the ends it
+stops.</p>
+<p><strong>Phase space.</strong> Plot <span
+class="math inline">\(x\)</span> across and <span
+class="math inline">\(\dot x/\omega\)</span> up. Since <span
+class="math inline">\(x^2 + (\dot x/\omega)^2 = A^2\)</span>, the point
+goes round a circle of radius <span class="math inline">\(A\)</span>
+once per period, clockwise. Each oscillator is a point on its circle,
+its amplitude the radius and its phase the angle. A beam of many
+particles with different amplitudes and phases fills an area in this
+plane, and that area, the <em>emittance</em>, is one of the central
+quantities of the course (<a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-phase-space-and-liouvilles-theorem">phase
+space</a>, chapter 7).</p>
+<p><strong>Example: the pendulum.</strong> A mass <span
+class="math inline">\(m\)</span> on a light rod of length <span
+class="math inline">\(\ell\)</span> swung to angle <span
+class="math inline">\(\theta\)</span> from the vertical has height <span
+class="math inline">\(\ell(1 - \cos\theta)\)</span> above the bottom and
+<span class="math inline">\(U = mg\ell(1 - \cos\theta)\)</span>. The
+distance along its arc is <span class="math inline">\(s =
+\ell\theta\)</span>. Taylor: <span class="math inline">\(1 - \cos\theta
+\approx \theta^2/2\)</span>, so <span class="math inline">\(U \approx
+\tfrac12(mg/\ell)s^2\)</span>, a spring of stiffness <span
+class="math inline">\(k = mg/\ell\)</span>, and</p>
+<p><span class="math display">\[
+\omega = \sqrt{\frac{g}{\ell}}, \qquad t_p = 2\pi\sqrt{\frac{\ell}{g}} .
+\]</span></p>
+<p>A 1 m pendulum has a period of 2.006 s. The mass has cancelled: every
+pendulum of the same length keeps the same time, the equality of
+inertial and gravitational mass of section 2. The approximation fails as
+the swing grows, because the true <span class="math inline">\(U\)</span>
+rises more slowly than <span class="math inline">\(\theta^2\)</span>;
+the period lengthens, by about <span
+class="math inline">\(\theta_0^2/16\)</span> for an amplitude <span
+class="math inline">\(\theta_0\)</span> in radians. At 10° that is 0.19
+per cent; at 30° the rule gives 1.71 per cent and the exact answer is
+1.74 per cent; at 90° it gives 15 per cent against the true 18 per cent.
+A particle in an RF bucket is exactly this pendulum, and near the top of
+its swing the period grows without bound (<a
+href="12-phase-stability.html#pre-requisite-the-pendulum-nonlinear-oscillation-and-the-separatrix">chapter
+12</a>).</p>
+<p><strong>Example: a proton in a focusing field.</strong> F2’s electric
+quadrupole, with <span class="math inline">\(V_0 = 10\)</span> kV on
+electrodes <span class="math inline">\(a = 2\)</span> cm from the axis,
+has the potential <span class="math inline">\(V = V_0x^2/a^2\)</span>
+along <span class="math inline">\(x\)</span>, so a proton has <span
+class="math inline">\(U = eV_0x^2/a^2\)</span> and</p>
+<p><span class="math display">\[
+k = U&#39;&#39; = \frac{2eV_0}{a^2} = 8.01 \times 10^{-12}\ \text{N/m},
+\qquad \omega = \sqrt{\frac{k}{m_p}} = 6.92 \times 10^7\ \text{rad/s},
+\]</span></p>
+<p>a frequency of 11.0 MHz. A proton swinging with an amplitude of 1 mm
+carries <span class="math inline">\(\tfrac12kA^2 = eV_0(A/a)^2 =
+25\)</span> eV of oscillation energy, however fast it moves along the
+axis. Along <span class="math inline">\(y\)</span>, the same quadrupole
+has <span class="math inline">\(U&#39;&#39; &lt; 0\)</span>, a hilltop,
+and the proton is pushed away (Earnshaw, F2 section 12). The
+<em>betatron oscillations</em> of every ring are oscillations of this
+kind about the ideal orbit, with alternating quadrupoles making a valley
+in both planes (<a href="16-strong-focusing.html">chapter 16</a>).</p>
+<h3 id="10-damped-and-driven-oscillation">10. Damped and driven
+oscillation</h3>
+<p><strong>Damping.</strong> Real oscillations die away. Add a drag
+force opposite and proportional to the velocity, <span
+class="math inline">\(-b\dot x\)</span>, as for a body moving slowly
+through a viscous fluid, or a current through a resistor in an
+electrical circuit (F5). Newton’s law becomes</p>
+<p><span class="math display">\[
+m\ddot x + b\dot x + kx = 0, \qquad\text{or}\qquad \ddot x +
+\frac{\omega_0}{Q}\dot x + \omega_0^2x = 0,
+\]</span></p>
+<p>with <span class="math inline">\(\omega_0 = \sqrt{k/m}\)</span> the
+undamped frequency and the <em>quality factor</em> <span
+class="math inline">\(Q = m\omega_0/b\)</span>, a pure number: large
+<span class="math inline">\(Q\)</span> means light damping.</p>
+<p><strong>How the energy decays.</strong> The drag does work at the
+rate <span class="math inline">\(-b\dot x \cdot \dot x\)</span> (section
+4), so the oscillator’s energy falls as</p>
+<p><span class="math display">\[
+\frac{dE}{dt} = -b\dot x^2 .
+\]</span></p>
+<p>When the damping is light (<span class="math inline">\(Q \gg
+1\)</span>), the motion over one cycle is still nearly <span
+class="math inline">\(A\cos\omega_0t\)</span> with <span
+class="math inline">\(A\)</span> changing slowly, and <span
+class="math inline">\(\dot x^2\)</span> averages to half its peak, <span
+class="math inline">\(\tfrac12A^2\omega_0^2 = E/m\)</span>. So, averaged
+over a cycle,</p>
+<p><span class="math display">\[
+\frac{dE}{dt} = -\frac{b}{m}E = -\frac{\omega_0}{Q}E
+\quad\Rightarrow\quad E = E_0\,e^{-\omega_0t/Q} .
+\]</span></p>
+<p>This is F1’s decay equation. The energy falls with time constant
+<span class="math inline">\(\tau_E = Q/\omega_0\)</span>, and since
+energy goes as <span class="math inline">\(A^2\)</span>, the amplitude
+falls twice as slowly, with time constant <span
+class="math inline">\(2Q/\omega_0\)</span>. In one period <span
+class="math inline">\(2\pi/\omega_0\)</span> the energy lost is <span
+class="math inline">\(2\pi E/Q\)</span>, which gives the definition used
+for cavities:</p>
+<p><span class="math display">\[
+Q = 2\pi\,\frac{\text{energy stored}}{\text{energy lost per cycle}} .
+\]</span></p>
+<p>The energy falls to <span class="math inline">\(1/e\)</span> in <span
+class="math inline">\(Q/2\pi\)</span> cycles. (Solving the equation
+exactly gives <span class="math inline">\(x =
+A_0e^{-\omega_0t/2Q}\cos(\omega_1t + \phi)\)</span> with <span
+class="math inline">\(\omega_1 = \omega_0\sqrt{1 - 1/4Q^2}\)</span>: the
+damping also lowers the frequency slightly. When <span
+class="math inline">\(Q &lt; \tfrac12\)</span> there is no oscillation
+at all, only a slow creep back. Chapter 7’s <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-simple-and-damped-harmonic-oscillator">pre-requisite</a>
+does this.)</p>
+<p><strong>Example: cavities.</strong> An accelerating cavity is an
+oscillator of electric and magnetic field, and its walls are its damping
+(<a href="13-rf-cavities-and-power.html">chapter 13</a>). A copper cell
+at 2856 MHz with <span class="math inline">\(Q_0 = 18\,400\)</span>
+(<span class="math inline">\(Q_0\)</span> is the course’s symbol for a
+cavity’s quality factor from its walls alone) loses its energy with
+<span class="math inline">\(\tau_E = Q_0/\omega_0 = 1.03\)</span> μs,
+after about 2900 cycles. A niobium cavity at 1.3 GHz, superconducting at
+2 K, has <span class="math inline">\(Q_0 \approx 10^{10}\)</span> and,
+left to itself, would ring for <span class="math inline">\(\tau_E =
+1.2\)</span> s.</p>
+<p><strong>Driving.</strong> Now push the oscillator with a force that
+oscillates at a frequency <span class="math inline">\(\omega\)</span> of
+our choosing, <span class="math inline">\(F_0\cos\omega t\)</span>:</p>
+<p><span class="math display">\[
+\ddot x + \frac{\omega_0}{Q}\dot x + \omega_0^2x =
+\frac{F_0}{m}\cos\omega t .
+\]</span></p>
+<p>After the start-up dies away (in a time of order <span
+class="math inline">\(2Q/\omega_0\)</span>), the oscillator moves at the
+drive frequency. Try <span class="math inline">\(x = C\cos\omega t +
+D\sin\omega t\)</span>. Putting it in and collecting the <span
+class="math inline">\(\cos\omega t\)</span> and <span
+class="math inline">\(\sin\omega t\)</span> terms separately (each must
+balance, since they are independent functions) gives two equations:</p>
+<p><span class="math display">\[
+(\omega_0^2 - \omega^2)C + \frac{\omega\omega_0}{Q}D = \frac{F_0}{m},
+\qquad (\omega_0^2 - \omega^2)D - \frac{\omega\omega_0}{Q}C = 0 .
+\]</span></p>
+<p>Solving them, the amplitude <span class="math inline">\(\sqrt{C^2 +
+D^2}\)</span> is</p>
+<p><span class="math display">\[
+A(\omega) = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega^2)^2 +
+(\omega\omega_0/Q)^2}} .
+\]</span></p>
+<p><strong>Resonance.</strong> Read it in three ranges. Driven slowly
+(<span class="math inline">\(\omega \ll \omega_0\)</span>), <span
+class="math inline">\(A = F_0/m\omega_0^2 = F_0/k\)</span>: the static
+stretch of a spring under force <span
+class="math inline">\(F_0\)</span>. Driven fast (<span
+class="math inline">\(\omega \gg \omega_0\)</span>), <span
+class="math inline">\(A \approx F_0/m\omega^2\)</span>, small: the body
+cannot follow. Driven at its own frequency, the first term in the root
+vanishes, <span class="math inline">\(C = 0\)</span>, and</p>
+<p><span class="math display">\[
+A(\omega_0) = Q\,\frac{F_0}{k} .
+\]</span></p>
+<p>The response is <span class="math inline">\(Q\)</span> times the
+static one: this is <em>resonance</em>. With <span
+class="math inline">\(C = 0\)</span> the motion is <span
+class="math inline">\(\sin\omega_0t\)</span>, a quarter cycle behind the
+force, so the velocity is exactly in step with the force and the force
+does positive work all the time. That is the secret of a swing pushed
+once per swing, and of every resonant accelerator from the cyclotron on
+(<a href="09-resonant-acceleration.html">chapter 9</a>): small pushes,
+each in step, add up.</p>
+<p><strong>The width.</strong> Near resonance, <span
+class="math inline">\(\omega_0^2 - \omega^2 \approx 2\omega_0(\omega_0 -
+\omega)\)</span> and <span class="math inline">\(\omega\omega_0/Q
+\approx \omega_0^2/Q\)</span>. The two terms under the root are equal,
+and <span class="math inline">\(A^2\)</span> (proportional to the stored
+energy) has fallen to half its peak, when <span
+class="math inline">\(|\omega_0 - \omega| = \omega_0/2Q\)</span>. So the
+resonance has a full width at half power of</p>
+<p><span class="math display">\[
+\Delta\omega = \frac{\omega_0}{Q}, \qquad \Delta f = \frac{f_0}{Q} .
+\]</span></p>
+<p>A high <span class="math inline">\(Q\)</span> means a large response
+over a narrow band, and a long ring-down: both are the same fact, the
+width times the decay time <span class="math inline">\(\tau_E\)</span>
+being 1. The copper cell above responds over <span
+class="math inline">\(2856/18\,400\)</span> MHz <span
+class="math inline">\(= 155\)</span> kHz; the niobium cavity over 0.13
+Hz, so narrow that in practice it is coupled strongly to its power line
+to widen it (<a href="13-rf-cavities-and-power.html">chapter 13</a>).
+The <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-driven-oscillator-resonance-and-quality-factor">driven-oscillator
+pre-requisite</a> in chapter 7 derives the full resonance curve and the
+phase, and F5 does all this more briefly with complex numbers.</p>
+<h3 id="11-frames-of-reference">11. Frames of reference</h3>
+<p><strong>Galilean relativity.</strong> Let a frame <span
+class="math inline">\(S&#39;\)</span> move at constant velocity <span
+class="math inline">\(\mathbf{V}\)</span> relative to a frame <span
+class="math inline">\(S\)</span>, their origins together at <span
+class="math inline">\(t = 0\)</span>. A point at <span
+class="math inline">\(\mathbf{r}\)</span> in <span
+class="math inline">\(S\)</span> is at</p>
+<p><span class="math display">\[
+\mathbf{r}&#39; = \mathbf{r} - \mathbf{V}t, \qquad t&#39; = t
+\]</span></p>
+<p>in <span class="math inline">\(S&#39;\)</span>. Differentiating,
+<span class="math inline">\(\mathbf{v}&#39; = \mathbf{v} -
+\mathbf{V}\)</span>: velocities subtract. Differentiating again, <span
+class="math inline">\(\mathbf{a}&#39; = \mathbf{a}\)</span>, since <span
+class="math inline">\(\mathbf{V}\)</span> is constant. Accelerations are
+the same in both frames, masses and forces between bodies (which depend
+on their separations) are the same, so <span
+class="math inline">\(\mathbf{F} = m\mathbf{a}\)</span> holds in <span
+class="math inline">\(S&#39;\)</span> if it holds in <span
+class="math inline">\(S\)</span>. Every frame moving uniformly relative
+to an inertial frame is inertial, and none is special: Galileo’s ship.
+Momentum and kinetic energy <em>do</em> differ between frames (<span
+class="math inline">\(\mathbf{p}&#39; = \mathbf{p} -
+m\mathbf{V}\)</span>), but if they are conserved in one frame they are
+conserved in all. Section 6 used this freedom when it moved to the
+centre-of-mass frame.</p>
+<p><strong>Frames that accelerate.</strong> In a frame that accelerates,
+the first law fails: a body with no force on it seems to accelerate.
+Newton’s law can be rescued by adding <em>fictitious forces</em>, which
+come from the frame and not from any body. In a frame accelerating at
+<span class="math inline">\(\mathbf{a}_0\)</span>, every body seems to
+feel <span class="math inline">\(-m\mathbf{a}_0\)</span>, which is why
+passengers lurch forward when a bus brakes. In a frame rotating at <span
+class="math inline">\(\boldsymbol{\omega}\)</span> there are two:</p>
+<ul>
+<li>the <em>centrifugal force</em> <span
+class="math inline">\(m\omega^2r\)</span>, outward from the axis, for a
+body at distance <span class="math inline">\(r\)</span>;</li>
+<li>the <em>Coriolis force</em> <span
+class="math inline">\(-2m\boldsymbol{\omega}\times\mathbf{v}\)</span>,
+sideways to a body’s velocity <span
+class="math inline">\(\mathbf{v}\)</span> in the rotating frame.</li>
+</ul>
+<p>(Their derivation, by differentiating a vector in a turning frame, is
+in Kleppner and Kolenkow, chapter 9.) The Earth turns at <span
+class="math inline">\(\omega = 7.29 \times 10^{-5}\)</span> rad/s, so
+the laboratory is not exactly inertial: the centrifugal acceleration at
+the equator is 0.034 m/s<span class="math inline">\(^2\)</span>, and
+Foucault’s pendulum of 1851 showed the Coriolis force turning its plane
+of swing. For a 2 kV electron the Coriolis acceleration is <span
+class="math inline">\(2\omega v = 3.9 \times 10^3\)</span> m/s<span
+class="math inline">\(^2\)</span>, while the Earth’s magnetic field
+gives it <span class="math inline">\(2.3 \times 10^{14}\)</span>
+m/s<span class="math inline">\(^2\)</span>: for beams the laboratory is
+inertial. Rotating frames return in accelerator physics as a
+convenience: the coordinates <span class="math inline">\(x\)</span>,
+<span class="math inline">\(y\)</span>, <span
+class="math inline">\(s\)</span> of every ring turn with the reference
+orbit, and the equations of motion in them carry terms of this kind (<a
+href="16-strong-focusing.html">chapter 16</a>).</p>
+<p><strong>Where Galileo breaks.</strong> The rule <span
+class="math inline">\(\mathbf{v}&#39; = \mathbf{v} - \mathbf{V}\)</span>
+says that light, too, should move at different speeds in different
+frames. Michelson and Morley in 1887 found that it does not: light has
+the same speed <span class="math inline">\(c\)</span> in every inertial
+frame. Newton’s mechanics also fails directly. Its kinetic energy <span
+class="math inline">\(\tfrac12mv^2\)</span> has no ceiling, so with
+enough energy any speed can be reached: a 1 MeV electron, by <span
+class="math inline">\(v = \sqrt{2W/m_e}\)</span>, would move at
+1.98<span class="math inline">\(c\)</span>. In 1964 William Bertozzi
+timed electrons from an electrostatic generator and a linear accelerator
+over a measured distance, at energies up to 15 MeV, and found that their
+speed crept towards <span class="math inline">\(c\)</span> and never
+passed it, while their energy, measured by the heat they deposited in a
+target, kept growing; a 1 MeV electron moves at 0.941<span
+class="math inline">\(c\)</span>. Galileo’s frames are the low-speed
+limit of Einstein’s, and Newton’s formulas are the low-speed limits of
+the relativistic ones, good to 1 per cent for an electron up to 6.8 keV
+and for a proton up to 12.5 MeV (<a
+href="01-why-accelerate.html#24-where-the-old-formulas-fail">chapter
+1</a>). Chapter 1’s <a
+href="01-why-accelerate.html#pre-requisite-lorentz-transformations-time-dilation-length-contraction">pre-requisite
+on Lorentz transformations</a> replaces the transformation of this
+section, and section 2.1 there rebuilds momentum and energy. What
+survives unchanged: momentum and energy are conserved, <span
+class="math inline">\(\mathbf{F} = d\mathbf{p}/dt\)</span>, the
+work–energy theorem, and the magnetic force doing no work.</p>
+<h3 id="12-from-forces-to-action">12. From forces to action</h3>
+<p><strong>Two ways to say the same thing.</strong> Newton’s law works
+from instant to instant: given where a body is and how fast it moves
+now, the force says what it will do next. There is another way, which
+looks at the whole path at once. Fix where a body starts at time <span
+class="math inline">\(t_1\)</span> and where it ends at <span
+class="math inline">\(t_2\)</span>. Of all the paths that join them, the
+body takes the one for which the <em>action</em></p>
+<p><span class="math display">\[
+S = \int_{t_1}^{t_2}(W - U)\,dt \qquad [\text{J s}]
+\]</span></p>
+<p>is <em>stationary</em>: no small change of the path changes <span
+class="math inline">\(S\)</span> to first order, as no small step from
+the bottom of a valley changes the height to first order. This is the
+<em>principle of least action</em>, found in rough forms by Pierre-Louis
+Maupertuis and Euler in 1744, made exact by Joseph-Louis Lagrange in his
+<em>Mécanique analytique</em> of 1788 and by William Rowan Hamilton in
+1834 and 1835. Fermat had found the same kind of law for light in 1662:
+light takes the path of least time.</p>
+<p><strong>A check with numbers.</strong> Throw a 1 kg ball straight up
+so that it lands 2 s later. The true path is <span
+class="math inline">\(x = \tfrac12gt(2 - t)\)</span>, rising 4.9 m. Its
+action, with <span class="math inline">\(W = \tfrac12m\dot x^2\)</span>
+and <span class="math inline">\(U = mgx\)</span>, is <span
+class="math inline">\(S = -g^2/3 = -32.08\)</span> J s. Now bend the
+path a little, keeping the ends fixed: <span class="math inline">\(x +
+\epsilon\sin(\pi t/2)\)</span> with <span class="math inline">\(\epsilon
+= 0.1\)</span> m. The action becomes larger by 0.0123 J s, and with
+<span class="math inline">\(\epsilon = 0.2\)</span> m by 0.0493 J s:
+four times as much for twice the bend. The change grows as <span
+class="math inline">\(\epsilon^2\)</span>, with no part in proportion to
+<span class="math inline">\(\epsilon\)</span>: the true path is a
+stationary point, and every nearby path has more action.</p>
+<p><strong>Why bother.</strong> For a single particle in a simple force,
+the principle only repeats Newton (chapter 1 shows it gives exactly
+<span class="math inline">\(m\ddot x = -dU/dx\)</span>). It earns its
+place in three ways the course needs. It works in any coordinates, such
+as the curved ones that follow a ring. It makes the link between
+symmetry and conservation plain: if the laws are the same at every
+place, momentum is conserved; if the same at every time, energy is; if
+the same in every direction, angular momentum is (Emmy Noether’s theorem
+of 1918). And a single number for a whole path is easy to make the same
+in every frame, which is how relativity and the magnetic force enter
+cleanly. From the action come the <em>Lagrangian</em> <span
+class="math inline">\(W - U\)</span> and the <em>Hamiltonian</em>, the
+energy written in terms of position and momentum, and from the
+Hamiltonian the phase-space picture of section 9 in which beams are
+described.</p>
+<p>All of that is taught in chapter 1’s <a
+href="01-why-accelerate.html#pre-requisite-lagrangian-and-hamiltonian-mechanics-the-charged-particle-hamiltonian">Lagrangian
+and Hamiltonian mechanics</a>, which begins exactly where this section
+stops.</p>
+<h2 id="where-the-course-uses-it">Where the course uses it</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th>First used in</th>
+<th>For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kinematics, constant acceleration</td>
+<td><a href="02-the-cathode-ray-tube.html">Chapter 2</a></td>
+<td>Electrons through gaps and deflecting plates</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mathbf{F} = d\mathbf{p}/dt\)</span>
+with the Lorentz force</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Every particle’s motion; rigidity, revolution frequency</td>
+</tr>
+<tr>
+<td>Momentum conservation, recoil</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Alpha decay, reactions, the push of a beam</td>
+</tr>
+<tr>
+<td>Work, kinetic energy, power, <span
+class="math inline">\(qV\)</span></td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="05-the-voltage-multiplier.html">chapter 5</a></td>
+<td>Energy gain in volts, beam power</td>
+</tr>
+<tr>
+<td>Potential energy, turning points</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="12-phase-stability.html">chapter 12</a></td>
+<td>Coulomb barrier, closest approach, RF buckets</td>
+</tr>
+<tr>
+<td>Elastic collisions, energy transfer</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="24-beam-cooling.html">chapter 24</a></td>
+<td>Energy loss to electrons, Rutherford, cooling</td>
+</tr>
+<tr>
+<td>Centre-of-mass frame, available energy</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="23-colliders.html">chapter 23</a></td>
+<td>Reaction thresholds, why colliders</td>
+</tr>
+<tr>
+<td>Angular momentum, central forces</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Rutherford scattering, orbits in a field</td>
+</tr>
+<tr>
+<td>Rotation, moment of inertia</td>
+<td><a href="03-vacuum.html">Chapter 3</a>, <a
+href="06-the-electrostatic-generator.html">chapter 6</a></td>
+<td>Turbomolecular pumps, generator belts and rotors</td>
+</tr>
+<tr>
+<td>Simple harmonic motion, phase space</td>
+<td><a href="07-ion-sources-and-electron-guns.html">Chapter 7</a>, <a
+href="16-strong-focusing.html">chapter 16</a></td>
+<td>Emittance, betatron oscillations</td>
+</tr>
+<tr>
+<td>Damping, resonance, <span class="math inline">\(Q\)</span></td>
+<td><a href="07-ion-sources-and-electron-guns.html">Chapter 7</a>, <a
+href="13-rf-cavities-and-power.html">chapter 13</a></td>
+<td>ECR heating, cavities</td>
+</tr>
+<tr>
+<td>Frames, where Newton fails</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Relativity, the rotating coordinates of a ring</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>A proton starts at rest and crosses a gap of 10 cm with 100 kV
+across it, in a uniform field. Find its acceleration, its final speed
+and the time it takes.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\mathcal{E} = 10^5/0.1 = 10^6\)</span>
+V/m, so <span class="math inline">\(a = e\mathcal{E}/m_p = 1.602 \times
+10^{-19} \times 10^6/1.673 \times 10^{-27} = 9.58 \times
+10^{13}\)</span> m/s<span class="math inline">\(^2\)</span>. By energy,
+<span class="math inline">\(v = \sqrt{2eV/m_p} = 4.38 \times
+10^6\)</span> m/s (or from <span class="math inline">\(v^2 =
+2ad\)</span>). Starting from rest with constant acceleration, the
+average speed is <span class="math inline">\(v/2\)</span>, so <span
+class="math inline">\(t = 2d/v = 2 \times 0.1/4.38 \times 10^6 =
+45.7\)</span> ns, the same as <span
+class="math inline">\(v/a\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>An electron from a 1 kV gun enters plates 3 cm long and 1 cm apart,
+with 40 V across them. Find the tangent of the angle at which it leaves,
+the sideways displacement at the exit, and the spot’s displacement on a
+screen 20 cm beyond the plates.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(v_z = \sqrt{2e \times 1000/m_e}\)</span>;
+time in the plates <span class="math inline">\(t = l/v_z\)</span>; <span
+class="math inline">\(a_x = eV_d/(m_ed)\)</span>. Then <span
+class="math inline">\(v_x/v_z = a_xt/v_z = eV_dl/(m_edv_z^2) =
+lV_d/(2dV_a) = 0.03 \times 40/(2 \times 0.01 \times 1000) =
+0.06\)</span>, an angle of <span class="math inline">\(3.4°\)</span>. At
+the exit <span class="math inline">\(x = \tfrac12a_xt^2 = 0.9\)</span>
+mm, half of <span class="math inline">\(l\tan\theta\)</span>. On the
+screen: <span class="math inline">\(0.9 + 200 \times 0.06 =
+12.9\)</span> mm, which is <span class="math inline">\((l/2 +
+L)\tan\theta = 215 \times 0.06\)</span> mm.</p>
+</details>
+<ol start="3" type="1">
+<li>Radium-226 at rest decays to radon-222 and an alpha particle,
+releasing <span class="math inline">\(Q = 4.871\)</span> MeV. Using mass
+numbers for the masses, find the kinetic energy of each fragment and the
+speed of the radon.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>Equal and opposite momenta, so <span class="math inline">\(W_\alpha =
+Q \times 222/226 = 4.785\)</span> MeV and <span
+class="math inline">\(W_{Rn} = 0.086\)</span> MeV. (The measured main
+alpha line is 4.784 MeV.) The radon moves at <span
+class="math inline">\(\sqrt{2W/m} = \sqrt{2 \times 0.0862 \times 1.602
+\times 10^{-13}/(222 \times 1.661 \times 10^{-27})} = 2.7 \times
+10^5\)</span> m/s.</p>
+</details>
+<ol start="4" type="1">
+<li>The 5.30 MeV alphas of polonium-210 are aimed straight at (a) a gold
+nucleus (<span class="math inline">\(Z = 79\)</span>) and (b) a copper
+nucleus (<span class="math inline">\(Z = 29\)</span>), held fixed. How
+close do they get? Compare with the nuclear radii <span
+class="math inline">\(1.2A^{1/3}\)</span> fm, <span
+class="math inline">\(A = 197\)</span> and <span
+class="math inline">\(63\)</span>.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(d = 2Z \times 1.440/5.30\)</span> fm. (a)
+<span class="math inline">\(158 \times 1.440/5.30 = 42.9\)</span> fm
+against a radius of 7.0 fm. (b) <span class="math inline">\(58 \times
+1.440/5.30 = 15.7\)</span> fm against 4.8 fm. Neither reaches the
+nucleus, so both scatter by the Coulomb force alone. (Allowing the
+nucleus to recoil reduces the available energy to <span
+class="math inline">\(W_{cm}\)</span> and makes <span
+class="math inline">\(d\)</span> slightly larger.)</p>
+</details>
+<ol start="5" type="1">
+<li>A 2 MeV neutron collides head on, elastically, with a carbon-12
+nucleus at rest. What fraction of its energy does it lose? If every
+collision were head on, how many would it take to slow it to 0.025 eV,
+the energy of a neutron at room temperature?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>The fraction handed over is <span class="math inline">\(4m_1m_2/(m_1
++ m_2)^2 = 4 \times 12/13^2 = 0.284\)</span>, so the neutron keeps 0.716
+and leaves with 1.43 MeV. After <span class="math inline">\(n\)</span>
+collisions it has <span class="math inline">\(2\ \text{MeV} \times
+0.716^n\)</span>; setting this to 0.025 eV gives <span
+class="math inline">\(n = \ln(8 \times 10^7)/\ln(1/0.716) =
+54.5\)</span>, so 55. Real collisions are mostly glancing and lose less,
+and a neutron in graphite takes about twice as many. In hydrogen a
+head-on collision would stop it at once.</p>
+</details>
+<ol start="6" type="1">
+<li>For the reaction <span class="math inline">\(^{4}\mathrm{He} +
+{}^{14}\mathrm{N} \to {}^{17}\mathrm{O} + p\)</span>, <span
+class="math inline">\(Q = -1.192\)</span> MeV. The masses are 4.0026 u
+and 14.0031 u. (a) Find the threshold kinetic energy of the alpha. (b) A
+7.69 MeV alpha strikes a nitrogen nucleus at rest. How much kinetic
+energy is there in the centre-of-mass frame, and how much is left in
+that frame after the reaction?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li><span class="math inline">\(W_{th} = 1.192 \times (4.0026 +
+14.0031)/14.0031 = 1.53\)</span> MeV. (b) <span
+class="math inline">\(W_{cm} = 7.69 \times 14.0031/18.0057 =
+5.98\)</span> MeV; after paying 1.19 MeV, 4.79 MeV is left as kinetic
+energy of the oxygen and the proton in the centre-of-mass frame. The
+other <span class="math inline">\(7.69 - 5.98 = 1.71\)</span> MeV
+belongs to the motion of the centre of mass and stays with it.</li>
+</ol>
+</details>
+<ol start="7" type="1">
+<li>A small turbomolecular pump has a rotor of 0.5 kg that can be
+treated as a uniform disc of radius 3 cm, turning at 60 000 rpm. Find
+its moment of inertia, angular momentum, stored energy and tip speed,
+and how long a motor torque of 0.02 N m takes to spin it up.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(I = \tfrac12 \times 0.5 \times 0.03^2 =
+2.25 \times 10^{-4}\)</span> kg m<span
+class="math inline">\(^2\)</span>. <span class="math inline">\(\omega =
+2\pi \times 1000 = 6283\)</span> rad/s. <span class="math inline">\(L =
+I\omega = 1.41\)</span> kg m<span class="math inline">\(^2\)</span>/s.
+<span class="math inline">\(W = \tfrac12I\omega^2 = 4.4\)</span> kJ,
+enough to lift a 70 kg person 6.5 m. Tip speed <span
+class="math inline">\(\omega R = 188\)</span> m/s. Spin-up <span
+class="math inline">\(t = L/\tau = 1.41/0.02 = 71\)</span> s.</p>
+</details>
+<ol start="8" type="1">
+<li>A geostationary satellite goes round once per sidereal day, 86 164
+s, keeping over one spot on the equator. With <span
+class="math inline">\(GM_E = 3.986 \times 10^{14}\)</span> m<span
+class="math inline">\(^3\)</span>/s<span
+class="math inline">\(^2\)</span>, find the radius of its orbit and its
+speed.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>For a circle, <span class="math inline">\(mv^2/r = GM_Em/r^2\)</span>
+and <span class="math inline">\(v = 2\pi r/t_p\)</span>, so <span
+class="math inline">\(r^3 = GM_Et_p^2/4\pi^2\)</span>: <span
+class="math inline">\(r = 4.216 \times 10^7\)</span> m, or 42 164 km
+from the Earth’s centre (35 786 km above the equator). <span
+class="math inline">\(v = 2\pi r/t_p = 3.07\)</span> km/s. This is
+Kepler’s third law with <span class="math inline">\(k =
+GM_Em\)</span>.</p>
+</details>
+<ol start="9" type="1">
+<li>A pendulum 0.5 m long is released from 20°. Find its period from the
+small-swing formula, then with the correction <span
+class="math inline">\(\theta_0^2/16\)</span>, and its speed at the
+bottom (exactly, from energy conservation, and from simple harmonic
+motion).</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(t_p = 2\pi\sqrt{0.5/9.807} =
+1.419\)</span> s. With <span class="math inline">\(\theta_0 =
+0.349\)</span> rad, the correction is <span
+class="math inline">\(0.349^2/16 = 0.0076\)</span>, giving 1.430 s (the
+exact value is 1.4296 s). Energy: <span class="math inline">\(v =
+\sqrt{2g\ell(1 - \cos20°)} = 0.769\)</span> m/s. Simple harmonic motion:
+<span class="math inline">\(v_{max} = A\omega =
+\ell\theta_0\sqrt{g/\ell} = 0.773\)</span> m/s, 0.5 per cent too high,
+because the true potential rises more slowly than the parabola.</p>
+</details>
+<ol start="10" type="1">
+<li>A copper cavity at 500 MHz has <span class="math inline">\(Q_0 =
+40\,000\)</span>. Find the time constant of its stored energy when the
+drive is switched off, the time for the energy to fall to 1 per cent,
+and the width of its resonance. If the drive is set half a width off
+resonance, what fraction of the peak amplitude does it reach?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\tau_E = Q_0/\omega_0 = 40\,000/(2\pi
+\times 5 \times 10^8) = 12.7\)</span> μs. To 1 per cent: <span
+class="math inline">\(\tau_E\ln100 = 58.6\)</span> μs. Width <span
+class="math inline">\(\Delta f = f_0/Q_0 = 12.5\)</span> kHz. Half a
+width off (<span class="math inline">\(6.25\)</span> kHz) is the
+half-power point, where the energy is half its peak, so the amplitude is
+<span class="math inline">\(1/\sqrt2 = 0.71\)</span> of the peak.</p>
+</details>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>G. Galilei, <em>Dialogue Concerning the Two Chief World Systems</em>
+(1632) and <em>Dialogues Concerning Two New Sciences</em> (1638;
+translated by H. Crew and A. de Salvio, Macmillan, 1914): the ship’s
+cabin, falling bodies and the parabola, for “Falling, rolling and a
+moving ship” (free, archive.org).</li>
+<li>C. Huygens, <em>Horologium Oscillatorium</em> (1673): the pendulum
+and the force on a circle; his rules of impact in the <em>Philosophical
+Transactions</em> and the <em>Journal des sçavans</em>, 1669.</li>
+<li>I. Newton, <em>Philosophiae Naturalis Principia Mathematica</em>
+(1687); <em>The Principia</em>, translated by I. B. Cohen and A. Whitman
+(University of California Press, 1999): the three laws, for section 2
+and “Newton’s Principia”. Andrew Motte’s English translation of 1729 is
+free on archive.org.</li>
+<li>G.-G. Coriolis, <em>Du calcul de l’effet des machines</em> (1829),
+and “Sur les équations du mouvement relatif des systèmes de corps”,
+<em>Journal de l’École polytechnique</em> (1835): work, the factor <span
+class="math inline">\(\tfrac12\)</span>, and the forces in a rotating
+frame.</li>
+<li>W. Bertozzi, “Speed and kinetic energy of relativistic electrons”,
+<em>American Journal of Physics</em> 32, 551 (1964): the experiment of
+section 11.</li>
+<li>D. Kleppner and R. Kolenkow, <em>An Introduction to Mechanics</em>
+(Cambridge University Press, 2nd edition 2014): the standard first-year
+text behind sections 1 to 11; chapters 4 (momentum), 5 and 6 (energy), 7
+and 8 (angular momentum and rigid bodies), 9 (non-inertial frames), 10
+(central forces) and 11 (the harmonic oscillator).</li>
+<li>R. P. Feynman, R. B. Leighton and M. Sands, <em>The Feynman Lectures
+on Physics</em>, volume I, chapters 9 (Newton’s laws), 10 (conservation
+of momentum), 13 and 14 (work and potential energy), 18 and 19
+(rotation, centre of mass), 21 (the harmonic oscillator), 23 (resonance)
+and 24 (transients); volume II, chapter 19 (the principle of least
+action): the approach of sections 9, 10 and 12 (free,
+feynmanlectures.caltech.edu).</li>
+<li>J. R. Taylor, <em>Classical Mechanics</em> (University Science
+Books, 2005), chapters 3 (momentum and angular momentum), 4 (energy), 5
+(oscillations), 6 and 7 (the calculus of variations and Lagrange’s
+equations), 8 (two-body central forces) and 9 (non-inertial frames): a
+step further than Kleppner, and a bridge to chapter 1’s
+pre-requisites.</li>
+<li>D. Tong, <em>Dynamics and Relativity</em> (lecture notes, University
+of Cambridge): Newtonian mechanics from the first law to orbits,
+rotating frames and the start of special relativity, in one short course
+(free, damtp.cam.ac.uk).</li>
+<li>L. D. Landau and E. M. Lifshitz, <em>Mechanics</em> (Course of
+Theoretical Physics volume 1, 3rd edition, Butterworth-Heinemann, 1976),
+sections 13 (reduced mass), 14 and 15 (central fields and Kepler’s
+problem), 17 (elastic collisions), 21, 22, 25 and 26 (free, forced and
+damped oscillations): the compact treatment that the chapter
+pre-requisites cite.</li>
+<li>R. Dugas, <em>A History of Mechanics</em> (Éditions du Griffon,
+1955; Dover, 1988): the history of the quarrel over <em>vis viva</em>,
+Huygens’s collisions and the principle of least action.</li>
+</ul>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="F2-vectors.html"><span>Previous</span>F2 Vectors and vector calculus</a>
+<a class="next" href="F4-electromagnetism.html"><span>Next</span>F4 Electricity and magnetism</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

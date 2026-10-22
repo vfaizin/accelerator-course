@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The physics of particle accelerators</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+<script type="module">
+  // On GitHub Pages the page draws its own mermaid diagram; the claude.ai
+  // artifact viewer draws it without this.
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default' });
+</script>
+</head>
+<body>
+<header class="bar">
+  <span class="home">The physics of particle accelerators</span>
+  <span class="where">Course notes, 2026-10-23, commit 88a6cb93, with uncommitted changes</span>
+</header>
+<div class="layout home-layout">
+<main>
+<p class="start"><a href="F1-calculus.html">Start at F1 Calculus</a> if calculus is new to you, or at <a href="01-why-accelerate.html">chapter 1</a> if Part 0 is familiar.</p>
+<h1 id="the-physics-of-particle-accelerators-course-notes">The physics
+of particle accelerators: course notes</h1>
+<p>These are course notes on the physics of particle accelerators, from
+the simplest machine to the most complex: a glass tube with a hot wire
+in it, then the multiplier and the belt generator, the cyclotron and the
+linac, the synchrotron and the collider, the free-electron laser and the
+plasma wake. Each chapter explains how one kind of machine works,
+derives the mathematics that matters, puts numbers from a real machine
+through every important formula, and tells how the machine was
+researched and built: who did it, where, when, with what, and what went
+wrong.</p>
+<p>They are reference material to study from. They are not a plan and
+not a design. The plan is the decisions in docs/decisions/, and nothing
+here decides anything.</p>
+<h2 id="how-to-read-it">How to read it</h2>
+<p>To read the notes as a PDF book, on a computer, tablet or phone, run
+<code>./docs/course/build.sh</code> from the repository root. It makes
+<code>build/course/course.pdf</code>, with a table of contents, an
+outline for jumping around, and links between chapters. The answers to
+the exercises are at the end of each chapter. To build one chapter, give
+its number: <code>./docs/course/build.sh 02</code>. To read them as a
+website instead, with each chapter on its own page, the sections beside
+the text and the answers folded under each exercise, run
+<code>./docs/course/build.sh site</code>: it makes
+<code>build/course/site/index.html</code>. The Markdown here stays the
+only source: edit it and build again.</p>
+<p>Start with Part 0, Foundations, for any tool you have not met: each
+of its chapters assumes only high-school mathematics and physics and the
+Foundations chapters before it. Then read the <strong>In one
+page</strong> section at the top of every chapter, in order, from
+chapter 1 to chapter 29. That takes an evening and gives the whole map:
+each machine, the limit that stopped it, the idea that got past the
+limit, the equations to remember and the numbers worth knowing by
+heart.</p>
+<p>Then read the parts in order. The course is built so that each
+chapter begins at the limit where the one before it stopped, and later
+chapters use earlier ones without repeating them: the phase stability of
+<a href="12-phase-stability.html">chapter 12</a> is assumed by every
+ring after it, and the optics of <a
+href="16-strong-focusing.html">chapter 16</a> by every chapter from 17
+on. Parts V to VII rest on Part IV; after it, chapters 23 to 25 are best
+read in order, and chapters 26 to 29 in any order. <a
+href="01-why-accelerate.html">Chapter 1</a> holds the relativity,
+rigidity, centre-of-mass energy and cross-sections that the rest of the
+course uses; read all of it, not only its first page.</p>
+<p>Do the exercises. Most take a few lines and a calculator; the answers
+are folded underneath, to be opened after trying.</p>
+<h3 id="what-you-need-first">What you need first</h3>
+<p>High-school mathematics and physics, at the level of SPM Additional
+Mathematics or A-level: algebra, graphs, powers and logarithms,
+trigonometry, and the ideas of force, speed, acceleration and energy.
+Nothing more is assumed. Everything after that, from calculus and
+vectors to Maxwell’s equations, special relativity, and Lagrangian and
+Hamiltonian mechanics, is taught in the notes: first in Part 0,
+Foundations, which gives the first-year toolkit, and then in the
+“Pre-requisite” sections inside each chapter, placed just before the
+topic that first needs them.</p>
+<p>The books in references/ (local only, not tracked by git) are further
+reading, for going deeper than the notes, not something to read
+first:</p>
+<ul>
+<li><strong>Landau and Lifshitz.</strong> <em>Mechanics</em> (volume 1)
+for small oscillations, parametric resonance, nonlinear oscillations,
+adiabatic invariants and Liouville’s theorem: these are the betatron
+oscillation, the resonances of <a
+href="18-imperfections-and-resonances.html">chapter 18</a>, the
+shrinking of a beam as it accelerates, and the conservation of
+emittance. <em>The Classical Theory of Fields</em> (volume 2) for
+relativistic mechanics, the motion of a charge in electric and magnetic
+fields, and the radiation of a moving charge, which is the subject of <a
+href="20-synchrotron-radiation.html">chapter 20</a>. <em>Statistical
+Physics</em> (volume 5) for the gas kinetics behind <a
+href="03-vacuum.html">chapter 3</a> and the temperature of a beam in <a
+href="24-beam-cooling.html">chapter 24</a>.</li>
+<li><strong>David Tong, Lectures on Theoretical Physics.</strong>
+<em>Classical Mechanics</em> (volume 1) for the Hamiltonian view and
+phase space; <em>Electromagnetism</em> (volume 2) for fields in
+conductors, waves in guides and cavities, and radiation.</li>
+</ul>
+<p><a href="C-reading.html">Appendix C</a> gives, for each part, the
+sections of these books and the standard accelerator texts that go
+deeper. Several of those are also in
+<code>references/accelerators/</code>: Livingston and Blewett’s
+<em>Particle Accelerators</em> (1962), S. Y. Lee’s <em>Accelerator
+Physics</em>, Chao and Tigner’s <em>Handbook of Accelerator Physics and
+Engineering</em> (third edition), Wangler’s <em>RF Linear
+Accelerators</em>, two books on RF superconductivity, Martin N. Wilson’s
+<em>Superconducting Magnets</em>, and books on ion sources, vacuum
+technology and high-voltage engineering.</p>
+<p>Nothing about accelerators is assumed. Every term is explained at its
+first use.</p>
+<h2 id="contents">Contents</h2>
+<p>The years after each chapter are the span of history it covers. Most
+chapters also carry the physics forward to what is used today.</p>
+<h3 id="part-0-foundations">Part 0. Foundations</h3>
+<p>The first-year mathematics and physics the rest of the course is
+built on, taught from high-school level.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="F1-calculus.html">F1 Calculus</a></td>
+<td>1665 to 1821</td>
+<td>The derivative as a rate and the integral as a sum, and why each
+undoes the other; the rules, the exponential and logarithm, small
+changes and errors, Taylor series, partial derivatives, the first
+differential equations (decay and oscillation), and numerical
+integration.</td>
+</tr>
+<tr>
+<td><a href="F2-vectors.html">F2 Vectors and vector calculus</a></td>
+<td>1843 to 1893</td>
+<td>Vectors, components, the dot and cross products and the Lorentz
+force; circular motion and the cyclotron frequency; fields, gradient and
+potential; line integrals and conservative fields; flux, divergence and
+Gauss’s theorem; curl and Stokes’s theorem; the Laplacian; cylindrical
+and spherical coordinates.</td>
+</tr>
+<tr>
+<td><a href="F3-mechanics.html">F3 Newtonian mechanics</a></td>
+<td>1632 to 1835</td>
+<td>Newton’s laws; momentum, impulse and the centre of mass; work,
+energy and power; collisions in the lab and centre-of-mass frames;
+rotation and angular momentum; central forces and orbits; simple, damped
+and driven oscillation; frames; the step to least action.</td>
+</tr>
+<tr>
+<td><a href="F4-electromagnetism.html">F4 Electricity and
+magnetism</a></td>
+<td>1600 to 1888</td>
+<td>Charge, Coulomb’s law, field and Gauss’s law; potential and the
+electron-volt; capacitance; current, Ohm’s law and circuits; magnetic
+force, Biot–Savart and Ampère; induction and inductance; Maxwell’s four
+equations, electromagnetic waves and energy flow.</td>
+</tr>
+<tr>
+<td><a href="F5-waves.html">F5 Oscillations and waves</a></td>
+<td>1545 to 1893</td>
+<td>Complex numbers and Euler’s formula; phasors; damped and driven
+oscillators and Q; circuits and impedance; coupled oscillators and
+normal modes; the wave equation, interference and standing waves;
+reflection and matching; dispersion and group velocity; light, the
+Doppler effect, diffraction; Fourier’s idea.</td>
+</tr>
+<tr>
+<td><a href="F6-heat-and-probability.html">F6 Heat, gases and
+probability</a></td>
+<td>1654 to 1877</td>
+<td>Probability, the binomial, Gaussian and Poisson distributions;
+means, spreads and the central limit theorem; measurement errors;
+temperature and the first law; the ideal gas and kinetic theory; the
+Boltzmann factor; wall rates and mean free paths; heat capacity, entropy
+and refrigeration.</td>
+</tr>
+<tr>
+<td><a href="F7-atoms-and-quanta.html">F7 Atoms, nuclei and
+quanta</a></td>
+<td>1897 to 1935</td>
+<td>Atoms and the mole; the electron; the electron-volt; photons and
+X-rays; Bohr’s atom; matter waves and uncertainty; quantum mechanics in
+brief; the nucleus, binding energy and Q values; radioactivity;
+antimatter; the particles of the course.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-i-the-toolkit">Part I. The toolkit</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="01-why-accelerate.html">01 Why accelerate, and the
+toolkit</a></td>
+<td>1895 to 1930</td>
+<td>Why radioactive sources were not enough; the four reasons to
+accelerate; relativity for particles, rigidity, centre-of-mass energy
+and cross-sections; a map of the course and the Livingston plot.</td>
+</tr>
+<tr>
+<td><a href="02-the-cathode-ray-tube.html">02 The cathode ray
+tube</a></td>
+<td>1858 to 1930</td>
+<td>From the discharge tube to an instrument: vacuum, hot cathode, fixed
+potential, deflecting plates and phosphor screen; Thomson’s crossed
+fields, Richardson’s emission and the Child-Langmuir limit.</td>
+</tr>
+<tr>
+<td><a href="03-vacuum.html">03 Vacuum</a></td>
+<td>1643 to today</td>
+<td>Gas as molecules: mean free path, wall flux, conductance, pumping
+speed and outgassing; why the pressure in a chamber is a balance, and
+what a beam’s lifetime in gas is.</td>
+</tr>
+<tr>
+<td><a href="04-high-voltage-and-breakdown.html">04 High voltage and
+breakdown</a></td>
+<td>1745 to today</td>
+<td>Breakdown is set by the field at the worst point, not the voltage:
+Townsend’s criterion, Paschen’s law, surface flashover and field
+emission in vacuum.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-ii-direct-voltage">Part II. Direct voltage</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="05-the-voltage-multiplier.html">05 The voltage multiplier
+and the split atom</a></td>
+<td>1919 to 1932, and since</td>
+<td>Tunnelling through the Coulomb barrier and the cascade of capacitors
+and rectifiers; Cockcroft and Walton split lithium in 1932; ripple,
+droop and why modern cascades run at tens of kilohertz.</td>
+</tr>
+<tr>
+<td><a href="06-the-electrostatic-generator.html">06 The electrostatic
+generator and the tandem</a></td>
+<td>1929 to today</td>
+<td>Charge carried on a belt into a smooth terminal in pressurised gas;
+the graded column and tube; the tandem, which uses the terminal voltage
+twice or more; why they stopped at 20 to 25 MV.</td>
+</tr>
+<tr>
+<td><a href="07-ion-sources-and-electron-guns.html">07 Ion sources and
+electron guns</a></td>
+<td>1886 to today</td>
+<td>The source sets a beam’s current and quality for good: emittance,
+brightness and Liouville; hot cathodes, the Pierce gun, photocathodes in
+RF guns; plasma, ECR and H<span class="math inline">\(^-\)</span>
+sources.</td>
+</tr>
+<tr>
+<td><a href="08-seeing-the-beam.html">08 Seeing the beam</a></td>
+<td>1896 to today</td>
+<td>Reading an invisible beam: image currents in transformers and
+position monitors; cups, screens and counters; energy loss in matter
+(Bethe), and shielding.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-iii-resonance-and-induction">Part III. Resonance and
+induction</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="09-resonant-acceleration.html">09 Resonant acceleration:
+Ising and Wideroe</a></td>
+<td>1924 to 1931</td>
+<td>A modest alternating voltage used many times: drift tubes in
+synchronism, the transit-time factor, and the first linacs for heavy
+ions.</td>
+</tr>
+<tr>
+<td><a href="10-the-cyclotron.html">10 The cyclotron</a></td>
+<td>1929 to the 1940s</td>
+<td>The row of gaps bent into a spiral in a uniform field; the
+revolution frequency, weak focusing by a falling field, and the
+relativistic phase slip that limits it.</td>
+</tr>
+<tr>
+<td><a href="11-the-betatron.html">11 The betatron</a></td>
+<td>1922 to the 1950s</td>
+<td>The electron as the secondary of a transformer: the betatron
+condition, weak focusing with <span class="math inline">\(Q_x =
+\sqrt{1-n}\)</span>, <span class="math inline">\(Q_y =
+\sqrt{n}\)</span>, and the iron and radiation that end it at a few
+hundred MeV.</td>
+</tr>
+<tr>
+<td><a href="12-phase-stability.html">12 Phase stability, the
+synchrocyclotron and the isochronous cyclotron</a></td>
+<td>1938 to the 1980s</td>
+<td>Why early and late particles correct themselves (Veksler, McMillan);
+the frequency-swept synchrocyclotron; Thomas’s sector focusing and the
+continuous isochronous cyclotron.</td>
+</tr>
+<tr>
+<td><a href="13-rf-cavities-and-power.html">13 RF cavities and power
+sources</a></td>
+<td>1937 to today</td>
+<td>The resonant cavity, its quality factor, shunt impedance and
+coupling; the klystron and the magnetron; copper limits and
+superconducting niobium.</td>
+</tr>
+<tr>
+<td><a href="14-linear-accelerators.html">14 Linear
+accelerators</a></td>
+<td>1946 to today</td>
+<td>The Alvarez drift-tube linac, the travelling-wave electron linac,
+focusing, longitudinal motion and beam loading; the RFQ; superconducting
+linacs from CEBAF to the European XFEL.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-iv-rings">Part IV. Rings</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="15-the-synchrotron.html">15 The synchrotron</a></td>
+<td>1944 to 1960</td>
+<td>A ring of fixed radius whose field and frequency follow the
+particle; weak focusing, momentum compaction and transition; the
+Cosmotron, the Bevatron and the cost of their iron.</td>
+</tr>
+<tr>
+<td><a href="16-strong-focusing.html">16 Strong focusing and linear
+optics</a></td>
+<td>1950 to 1960, and since</td>
+<td>Alternating gradients; transfer matrices, Hill’s equation and the
+Courant-Snyder functions; FODO cells, dispersion and chromaticity; the
+CERN PS and the AGS.</td>
+</tr>
+<tr>
+<td><a href="17-magnets.html">17 Magnets, from iron to
+superconducting</a></td>
+<td>1820 to today</td>
+<td>Iron magnets shaped by their poles; the <span
+class="math inline">\(\cos\theta\)</span> current shell;
+niobium-titanium and niobium-tin; forces, stored energy, quench
+protection and refrigeration.</td>
+</tr>
+<tr>
+<td><a href="18-imperfections-and-resonances.html">18 Imperfections,
+resonances and nonlinear dynamics</a></td>
+<td>1950s to today</td>
+<td>Errors as periodic drives on Hill’s equation; closed-orbit
+distortion, gradient errors, coupling and resonances <span
+class="math inline">\(mQ_x + nQ_y = p\)</span>; sextupoles, dynamic
+aperture and correction by the beam.</td>
+</tr>
+<tr>
+<td><a href="19-longitudinal-dynamics.html">19 Longitudinal dynamics in
+depth</a></td>
+<td>1945 to today</td>
+<td>The two-line map and its Hamiltonian; bucket, separatrix and
+longitudinal emittance; transition crossing; RF manipulations that
+split, merge and shape bunches.</td>
+</tr>
+<tr>
+<td><a href="20-synchrotron-radiation.html">20 Synchrotron radiation and
+light sources</a></td>
+<td>1898 to today</td>
+<td>The radiation of a bent charge; energy loss per turn, critical
+energy, damping and quantum excitation; equilibrium emittance;
+undulators and the light-source rings.</td>
+</tr>
+<tr>
+<td><a href="21-injection-and-extraction.html">21 Injection, extraction
+and the chain of machines</a></td>
+<td>1950s to today</td>
+<td>Kickers and septa; single-turn and multiturn injection;
+charge-exchange injection of H<span class="math inline">\(^-\)</span>;
+fast and slow extraction; why high energy is reached through a chain of
+rings.</td>
+</tr>
+<tr>
+<td><a href="22-intensity-limits.html">22 Intensity limits: space
+charge, wakefields and instabilities</a></td>
+<td>1959 to today</td>
+<td>The beam’s own fields and the fields it leaves behind; impedance,
+tune shift, coherent instabilities, Landau damping and feedback.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-v-colliders">Part V. Colliders</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="23-colliders.html">23 Colliders and luminosity</a></td>
+<td>1956 to today</td>
+<td>Why head-on collisions win; luminosity and what sets it; the
+low-beta insertion and the beam-beam limit; from AdA and the ISR to the
+LHC and SuperKEKB.</td>
+</tr>
+<tr>
+<td><a href="24-beam-cooling.html">24 Beam cooling and
+antiparticles</a></td>
+<td>1966 to today</td>
+<td>Getting round Liouville by coupling the beam to something outside
+its Hamiltonian: electron cooling (Budker) and stochastic cooling (van
+der Meer); the antiproton source.</td>
+</tr>
+<tr>
+<td><a href="25-linear-colliders.html">25 Linear colliders</a></td>
+<td>1965 to today</td>
+<td>Why electron rings stop near LEP’s energy; colliding each bunch once
+at nanometre spots; beamstrahlung, damping rings, final focus; the SLC
+and the proposals since.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-vi-light-new-methods-and-uses">Part VI. Light, new methods
+and uses</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="26-free-electron-lasers.html">26 Free-electron lasers and
+energy recovery</a></td>
+<td>1971 to today</td>
+<td>Microbunching in an undulator and coherent emission; the oscillator,
+SASE and the X-ray FELs; energy recovery linacs.</td>
+</tr>
+<tr>
+<td><a href="27-new-ways-to-accelerate.html">27 New ways to
+accelerate</a></td>
+<td>1950s to today</td>
+<td>Plasma wakefields driven by lasers and beams; dielectric structures;
+fixed-field rings (FFAGs); induction linacs; the muon collider and
+ionisation cooling.</td>
+</tr>
+<tr>
+<td><a href="28-accelerators-at-work.html">28 Accelerators at
+work</a></td>
+<td>1895 to today</td>
+<td>What a beam does when it stops in matter: X-rays and medical linacs,
+proton and carbon-ion therapy, isotope production, industrial
+irradiation and ion implantation, spallation neutron sources,
+accelerator mass spectrometry.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-vii-the-practice">Part VII. The practice</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Years</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="29-the-craft.html">29 How an accelerator is researched,
+designed, built, commissioned and run</a></td>
+<td>1930s to today</td>
+<td>The life of a machine, from the physics case and parameter list
+through design, prototypes, approval, construction, commissioning,
+operation and decommissioning; how the research is done, and how
+projects fail.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appendices">Appendices</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Appendix</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="A-formulas.html">A Constants, units and formulas</a></td>
+<td>The constants used, unit conversions, and the formulas of the course
+in one place.</td>
+</tr>
+<tr>
+<td><a href="B-timeline.html">B A timeline</a></td>
+<td>The dates of the course in one list.</td>
+</tr>
+<tr>
+<td><a href="C-reading.html">C Reading list</a></td>
+<td>The prerequisite sections in Landau and Lifshitz and in Tong, the
+standard texts, and the free sources.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-family-tree-of-machines">The family tree of machines</h2>
+<p>Every accelerator gives energy to a charged particle with an electric
+field. There are only a few ways to make that field, and each branch
+below is one of them. <strong>Direct voltage</strong> uses one potential
+difference once, and is limited by breakdown. <strong>Resonance</strong>
+uses a modest alternating voltage many times, on a particle that arrives
+in step. <strong>Induction</strong> makes the electric field from a
+changing magnetic flux. <strong>Rings</strong> combine resonance with a
+magnetic field that rises with the momentum, so the particle comes back
+to the same gap. The <strong>new methods</strong> look for fields that
+metal cannot hold, or for particles and geometries the older machines
+could not use.</p>
+<p>Each box gives the chapter and a year: the year the first machine of
+that kind worked, unless the box says otherwise. The arrows show which
+machine grew out of which, either by direct conversion or because the
+later one rests on the earlier one’s idea.</p>
+<pre class="mermaid">flowchart TD
+    subgraph DV["Direct voltage"]
+        tube["Cathode ray tube&lt;br/&gt;ch 2, 1897"]
+        mult["Voltage multiplier&lt;br/&gt;ch 5, 1932"]
+        esg["Electrostatic generator&lt;br/&gt;ch 6, 1929"]
+        tandem["Tandem&lt;br/&gt;ch 6, Chalk River 1959"]
+    end
+    subgraph RES["Resonance"]
+        wid["Wideroe linac&lt;br/&gt;ch 9, 1928"]
+        cyc["Cyclotron&lt;br/&gt;ch 10, 1931"]
+        sync["Synchrocyclotron&lt;br/&gt;ch 12, 1946"]
+        iso["Isochronous cyclotron&lt;br/&gt;ch 12, Delft 1958"]
+        alv["Alvarez linac&lt;br/&gt;ch 14, 1947"]
+        rfq["RFQ linac&lt;br/&gt;ch 14, 1980"]
+        elin["Electron linac&lt;br/&gt;ch 14, 1947"]
+        srf["Superconducting linac&lt;br/&gt;ch 13 and 14, CEBAF 1995"]
+    end
+    subgraph IND["Induction"]
+        bet["Betatron&lt;br/&gt;ch 11, 1940"]
+        ilin["Induction linac&lt;br/&gt;ch 27, 1963"]
+    end
+    subgraph RING["Rings"]
+        wfs["Weak-focusing synchrotron&lt;br/&gt;ch 15, 1946"]
+        sf["Strong-focusing synchrotron&lt;br/&gt;ch 16, CERN PS 1959"]
+        coll["Storage rings and colliders&lt;br/&gt;ch 23, 1961"]
+        light["Light sources&lt;br/&gt;ch 20, Daresbury 1980"]
+        fel["Free-electron laser&lt;br/&gt;ch 26, 1977"]
+        erl["Energy recovery&lt;br/&gt;ch 26, 1999"]
+    end
+    subgraph NEW["New methods"]
+        plasma["Plasma wakefield&lt;br/&gt;ch 27, proposed 1979"]
+        diel["Dielectric laser accelerator&lt;br/&gt;ch 27, 2013"]
+        ffag["FFAG&lt;br/&gt;ch 27, 1956"]
+        muon["Muon collider&lt;br/&gt;ch 27, cooling shown 2020"]
+    end
+
+    tube --&gt; mult
+    tube --&gt; esg
+    esg --&gt; tandem
+    tube --&gt; wid
+    wid --&gt; cyc
+    cyc --&gt; sync
+    cyc --&gt; iso
+    wid --&gt; alv
+    alv --&gt; rfq
+    wid --&gt; elin
+    elin --&gt; srf
+    bet --&gt; ilin
+    bet --&gt; wfs
+    sync --&gt; wfs
+    wfs --&gt; sf
+    sf --&gt; coll
+    sf --&gt; ffag
+    coll --&gt; light
+    light --&gt; fel
+    elin --&gt; fel
+    srf --&gt; erl
+    fel --&gt; erl
+    elin --&gt; plasma
+    elin --&gt; diel
+    coll --&gt; muon</pre>
+<p>Notes on the years, all taken from the chapters, where the sources
+are given:</p>
+<ul>
+<li>1897 is Braun’s tube and Thomson’s measurement; the tube was an
+instrument only by the 1920s (<a
+href="02-the-cathode-ray-tube.html">chapter 2</a>).</li>
+<li>1929 is Van de Graaff’s first model, 80 kV; his pair of spheres
+reached about 1.5 MV in 1931 (<a
+href="06-the-electrostatic-generator.html">chapter 6</a>). 1959 is the
+first HVEC tandem, at Chalk River, in operation.</li>
+<li>1928 is Wideroe’s paper on the machine he built at Aachen for his
+doctorate of 1927 (<a href="09-resonant-acceleration.html">chapter
+9</a>). 1931 is Livingston’s 4-inch cyclotron, 80 keV (<a
+href="10-the-cyclotron.html">chapter 10</a>).</li>
+<li>1958 is the Delft isochronous cyclotron, the first in the open;
+classified prototypes came earlier, and some sources date Delft 1956 to
+1958 (<a href="12-phase-stability.html">chapter 12</a>).</li>
+<li>1995 is CEBAF at its 4 GeV design energy; superconducting cavities
+had driven a smaller linac at Stanford in the 1970s (<a
+href="13-rf-cavities-and-power.html">chapter 13</a>, <a
+href="14-linear-accelerators.html">chapter 14</a>).</li>
+<li>1946 is Goward and Barnes’s betatron converted to an 8 MeV
+synchrotron at Woolwich (<a href="15-the-synchrotron.html">chapter
+15</a>). 1959 is the CERN PS at 24 GeV; the idea is of 1950 to 1952, and
+Cornell’s electron ring may have run earlier, a date the chapter could
+not confirm (<a href="16-strong-focusing.html">chapter 16</a>).</li>
+<li>1961 is AdA, the first stored beam meant for collisions; the ISR,
+the first hadron collider, followed in 1971 (<a
+href="23-colliders.html">chapter 23</a>). 1980 is the first ring built
+as a light source, at Daresbury (<a
+href="20-synchrotron-radiation.html">chapter 20</a>).</li>
+<li>1977 is the first FEL oscillator, at Stanford; 1999 is the Jefferson
+Lab FEL recovering its beam’s energy, an idea of Tigner’s from 1965 (<a
+href="26-free-electron-lasers.html">chapter 26</a>).</li>
+<li>1963 is the Astron injector at Livermore; 1956 the first MURA
+electron model; 1979 Tajima and Dawson’s proposal; 2013 the first
+dielectric laser acceleration above 250 MeV/m; 2020 the MICE result on
+ionisation cooling. No muon collider has been built (<a
+href="27-new-ways-to-accelerate.html">chapter 27</a>).</li>
+</ul>
+<h2 id="how-every-chapter-is-built">How every chapter is built</h2>
+<p>Each of the 29 chapters has the same sections, in the same order. The
+Foundations chapters of Part 0 follow the same plan with two changes:
+<em>The wall</em> becomes <em>The problem it solved</em>, a short
+history of the mathematics or physics, and <em>How it was researched and
+built</em>, <em>At the bench</em> and <em>Where it stops</em> become a
+table of where the course uses each tool.</p>
+<ul>
+<li><strong>The title and a line in italics.</strong> The years the
+chapter covers, the machines and people in it, and the wall it gets
+past.</li>
+<li><strong>In one page.</strong> A summary to read first and come back
+to: <em>the wall</em> (what stopped the machines before it), <em>the
+idea</em> (what got past), <em>the equations to remember</em>, with
+every symbol and unit given, and <em>the numbers worth knowing</em>,
+from real machines.</li>
+<li><strong>The wall.</strong> The history of the limit: what was tried,
+what failed and why, told with dates and the people involved.</li>
+<li><strong>The physics.</strong> The core of the chapter, in numbered
+sections. The physical picture comes before each equation; every symbol
+is defined at its first use with its unit; the results that matter are
+derived step by step; a result quoted without derivation says so and
+says where the derivation is; every approximation is stated with where
+it fails. After each important formula, a worked number from a real
+machine.</li>
+<li><strong>How it was researched and built.</strong> The laboratories,
+the people, the years, the parts and the money: how the idea was found,
+tested, built at full size and made to work, and what went wrong on the
+way.</li>
+<li><strong>At the bench.</strong> What working at such a machine was
+like in a real laboratory: what there was to read and set, how it was
+tuned and commissioned, the ways it failed and the signature of each
+failure.</li>
+<li><strong>Where it stops.</strong> The physical or practical limit the
+machine reaches, with numbers, and the idea that the next chapter brings
+to get past it.</li>
+<li><strong>Figures.</strong> Throughout, a figure wherever a picture
+does the work of a paragraph: the machine’s layout, the geometry of a
+derivation, a field, a phase-space picture, or a plot computed from the
+chapter’s own formula and numbers. Each is drawn as code in <a
+href="figures/">figures/</a> and has its caption in italics under
+it.</li>
+<li><strong>Exercises.</strong> Seven to ten problems, mostly numerical,
+with worked answers folded underneath each one.</li>
+<li><strong>Sources.</strong> The original papers, the standard texts
+with sections, and secondary sources, each with what it was used for.
+Sources free to read online are marked (free).</li>
+</ul>
+<h2 id="how-the-notes-were-made-and-checked">How the notes were made and
+checked</h2>
+<p>The notes were written and checked by AI agents on 2026-10-22, to an
+agreed outline and a shared notation. Each chapter’s numbers were then
+recomputed in Python with the CODATA 2018 constants of
+<code>scipy.constants</code>, and its facts, dates, names, machine
+parameters and citations were checked against sources: the original
+papers where they could be reached, the standard texts, and the
+proceedings of the CERN Accelerator School and the accelerator
+conferences. Where a figure could not be confirmed, the chapter gives a
+range or says so.</p>
+<p>Errors may remain. A chapter can be wrong where its sources disagree,
+where a source could not be reached, or where an agent misread one.
+Treat a surprising claim as something to verify, and go to the sources
+listed at the end of the chapter before relying on a number. Corrections
+are welcome in the files themselves.</p>
+<h2 id="notation-in-brief">Notation in brief</h2>
+<p>The whole course shares one notation, set out in full in <a
+href="A-formulas.html">Appendix A</a>. The essentials:</p>
+<ul>
+<li><strong>The particle.</strong> Charge <span
+class="math inline">\(q\)</span> (the elementary charge <span
+class="math inline">\(e\)</span> is positive), rest mass <span
+class="math inline">\(m\)</span>; <span class="math inline">\(\beta =
+v/c\)</span>, <span class="math inline">\(\gamma =
+1/\sqrt{1-\beta^2}\)</span>; total energy <span class="math inline">\(E
+= \gamma m c^2\)</span>, kinetic energy <span class="math inline">\(W =
+(\gamma - 1) m c^2\)</span>, momentum <span class="math inline">\(p =
+\gamma m v\)</span>. <span class="math inline">\(W\)</span> is always
+kinetic energy and <span class="math inline">\(T\)</span> always
+temperature.</li>
+<li><strong>Units.</strong> SI throughout, never Gaussian. Energies in
+eV with prefixes, momenta in eV/<span class="math inline">\(c\)</span>.
+Magnetic rigidity <span class="math inline">\(B\rho = p/q\)</span> in T
+m; for a singly charged particle <span
+class="math inline">\(B\rho\,[\mathrm{T\,m}] =
+3.3356\,p\,[\mathrm{GeV}/c]\)</span>.</li>
+<li><strong>Coordinates.</strong> <span class="math inline">\(s\)</span>
+along the reference orbit, <span class="math inline">\(x\)</span>
+horizontal (outward on a ring), <span class="math inline">\(y\)</span>
+vertical, <span class="math inline">\(x&#39; = dx/ds\)</span>; bending
+radius <span class="math inline">\(\rho\)</span>; average radius of a
+ring <span class="math inline">\(R = C/2\pi\)</span>.</li>
+<li><strong>Optics.</strong> The Courant-Snyder functions <span
+class="math inline">\(\beta_x\)</span>, <span
+class="math inline">\(\alpha_x\)</span>, <span
+class="math inline">\(\gamma_x\)</span> always carry a subscript <span
+class="math inline">\(x\)</span> or <span
+class="math inline">\(y\)</span>, to keep them apart from the
+relativistic <span class="math inline">\(\beta\)</span> and <span
+class="math inline">\(\gamma\)</span>. Tunes <span
+class="math inline">\(Q_x\)</span>, <span
+class="math inline">\(Q_y\)</span> and the synchrotron tune <span
+class="math inline">\(Q_s\)</span>; emittance <span
+class="math inline">\(\varepsilon\)</span> and normalised emittance
+<span class="math inline">\(\varepsilon_n =
+\beta\gamma\varepsilon\)</span>; dispersion <span
+class="math inline">\(D_x\)</span>; <span class="math inline">\(\delta =
+\Delta p/p\)</span>; momentum compaction <span
+class="math inline">\(\alpha_c\)</span> and phase-slip factor <span
+class="math inline">\(\eta = \alpha_c - 1/\gamma^2\)</span>; quadrupole
+gradient <span class="math inline">\(g\)</span> in T/m and strength
+<span class="math inline">\(k = g/(B\rho)\)</span> in m<span
+class="math inline">\(^{-2}\)</span>; field index <span
+class="math inline">\(n\)</span>.</li>
+<li><strong>Longitudinal motion.</strong> The energy gain at a gap is
+<span class="math inline">\(\Delta W = q\hat{V}\sin\phi\)</span>, with
+the phase <span class="math inline">\(\phi\)</span> increasing for later
+arrival, so a stable phase lies between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(\pi/2\)</span> below transition and between <span
+class="math inline">\(\pi/2\)</span> and <span
+class="math inline">\(\pi\)</span> above it. Linac texts often use a
+cosine with negative phases; the chapters convert where it matters.</li>
+<li><strong>Cavities.</strong> <span class="math inline">\(Q_0\)</span>,
+<span class="math inline">\(Q_L\)</span> and <span
+class="math inline">\(Q_{ext}\)</span>, never a bare <span
+class="math inline">\(Q\)</span>; shunt impedance <span
+class="math inline">\(R_{sh} = \hat{V}^2/P\)</span> (the linac
+definition; circuit texts use half of it); transit-time factor <span
+class="math inline">\(T_t\)</span>.</li>
+<li><strong>Colliders.</strong> Luminosity <span
+class="math inline">\(\mathcal{L}\)</span> in cm<span
+class="math inline">\(^{-2}\)</span> s<span
+class="math inline">\(^{-1}\)</span>; beam sizes <span
+class="math inline">\(\sigma_x\)</span>, <span
+class="math inline">\(\sigma_y\)</span>, <span
+class="math inline">\(\sigma_z\)</span>, <span
+class="math inline">\(\sigma_\delta\)</span>, always subscripted;
+beam-beam parameter <span class="math inline">\(\xi\)</span>; <span
+class="math inline">\(N\)</span> particles per bunch, <span
+class="math inline">\(n_b\)</span> bunches.</li>
+</ul>
+<p>Where a chapter must use a symbol for something else (a pressure
+<span class="math inline">\(p\)</span>, a skin depth <span
+class="math inline">\(\delta\)</span>, a gap length <span
+class="math inline">\(g\)</span>), it says so where the symbol first
+appears.</p>
+</main>
+</div>
+</body>
+</html>

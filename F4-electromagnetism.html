@@ -1,0 +1,2167 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F4 Electricity and
+magnetism · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Part 0, Foundations</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#f4-electricity-and-magnetism"
+id="toc-f4-electricity-and-magnetism">F4 Electricity and magnetism</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-problem-it-solved" id="toc-the-problem-it-solved">The
+problem it solved</a>
+<ul>
+<li><a href="#amber-and-lodestone" id="toc-amber-and-lodestone">Amber
+and lodestone</a></li>
+<li><a href="#charge-and-coulombs-law"
+id="toc-charge-and-coulombs-law">Charge, and Coulomb’s law</a></li>
+<li><a href="#currents-and-magnets"
+id="toc-currents-and-magnets">Currents and magnets</a></li>
+<li><a href="#induction" id="toc-induction">Induction</a></li>
+<li><a href="#maxwells-equations-and-light"
+id="toc-maxwells-equations-and-light">Maxwell’s equations, and
+light</a></li>
+</ul></li>
+<li><a href="#the-physics" id="toc-the-physics">The physics</a>
+<ul>
+<li><a href="#0-what-this-chapter-assumes-and-a-quick-check"
+id="toc-0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</a></li>
+<li><a href="#1-charge" id="toc-1-charge">1. Charge</a></li>
+<li><a href="#2-coulombs-law" id="toc-2-coulombs-law">2. Coulomb’s
+law</a></li>
+<li><a href="#3-the-electric-field-and-superposition"
+id="toc-3-the-electric-field-and-superposition">3. The electric field,
+and superposition</a></li>
+<li><a href="#4-gausss-law-in-use" id="toc-4-gausss-law-in-use">4.
+Gauss’s law in use</a></li>
+<li><a href="#5-potential-potential-energy-and-the-electron-volt"
+id="toc-5-potential-potential-energy-and-the-electron-volt">5.
+Potential, potential energy and the electron-volt</a></li>
+<li><a href="#6-capacitance-and-the-energy-in-the-field"
+id="toc-6-capacitance-and-the-energy-in-the-field">6. Capacitance, and
+the energy in the field</a></li>
+<li><a href="#7-dielectrics-briefly" id="toc-7-dielectrics-briefly">7.
+Dielectrics, briefly</a></li>
+<li><a href="#8-current-current-density-and-ohms-law"
+id="toc-8-current-current-density-and-ohms-law">8. Current, current
+density and Ohm’s law</a></li>
+<li><a href="#9-circuits-kirchhoffs-laws-and-rc"
+id="toc-9-circuits-kirchhoffs-laws-and-rc">9. Circuits: Kirchhoff’s
+laws, and RC</a></li>
+<li><a href="#10-the-magnetic-field-and-its-force"
+id="toc-10-the-magnetic-field-and-its-force">10. The magnetic field, and
+its force</a></li>
+<li><a href="#11-where-magnetic-fields-come-from-biotsavart"
+id="toc-11-where-magnetic-fields-come-from-biotsavart">11. Where
+magnetic fields come from: Biot–Savart</a></li>
+<li><a href="#12-ampères-law" id="toc-12-ampères-law">12. Ampère’s
+law</a></li>
+<li><a href="#13-magnetic-flux-and-nablacdotmathbfb--0"
+id="toc-13-magnetic-flux-and-nablacdotmathbfb--0">13. Magnetic flux, and
+<span class="math inline">\(\nabla\cdot\mathbf{B} = 0\)</span></a></li>
+<li><a href="#14-induction-faraday-and-lenz"
+id="toc-14-induction-faraday-and-lenz">14. Induction: Faraday and
+Lenz</a></li>
+<li><a href="#15-inductance-magnetic-energy-lr-circuits-and-iron"
+id="toc-15-inductance-magnetic-energy-lr-circuits-and-iron">15.
+Inductance, magnetic energy, LR circuits and iron</a></li>
+<li><a href="#16-the-displacement-current-and-maxwells-four-equations"
+id="toc-16-the-displacement-current-and-maxwells-four-equations">16. The
+displacement current, and Maxwell’s four equations</a></li>
+<li><a href="#17-electromagnetic-waves"
+id="toc-17-electromagnetic-waves">17. Electromagnetic waves</a></li>
+<li><a href="#18-energy-flow-the-poynting-vector"
+id="toc-18-energy-flow-the-poynting-vector">18. Energy flow: the
+Poynting vector</a></li>
+<li><a href="#19-the-units-together" id="toc-19-the-units-together">19.
+The units, together</a></li>
+</ul></li>
+<li><a href="#where-the-course-uses-it"
+id="toc-where-the-course-uses-it">Where the course uses it</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="f4-electricity-and-magnetism">F4 Electricity and magnetism</h1>
+<p><em>1600 to 1888: Gilbert’s amber and lodestone, Franklin’s charge,
+Coulomb’s balance, Volta’s pile, Ørsted’s compass, Ampère’s currents,
+Faraday’s induction, and Maxwell’s equations, proved by Hertz. Charge,
+field, potential, current, magnetism and induction, joined into four
+equations whose waves are light. Everything an accelerator does to a
+particle, it does through these laws.</em></p>
+<blockquote>
+<p><strong>What this chapter assumes.</strong> High-school physics
+(force, energy, work), <a href="F1-calculus.html">F1 Calculus</a>
+(derivatives, integrals, the exponential decay of section 10, partial
+derivatives), and <a href="F2-vectors.html">F2 Vectors and vector
+calculus</a> (vectors, the dot and cross products, the Lorentz force,
+fields, the gradient, line and flux integrals, divergence, curl, and the
+theorems of Gauss and Stokes). The mathematics of F2 is not derived
+again here; this chapter is about the physics it describes. <a
+href="F3-mechanics.html">F3 Newtonian mechanics</a> is useful for force
+and energy but not needed in detail.</p>
+<p><strong>What comes next.</strong> <a href="F5-waves.html">F5
+Oscillations and waves</a> takes the electromagnetic waves of section 17
+further, with phasors for alternating currents. Inside the course, the
+pre-requisite sections go deeper: <a
+href="01-why-accelerate.html#pre-requisite-gausss-law-and-potentials-of-simple-shapes">Gauss’s
+law and potentials of simple shapes</a> and <a
+href="01-why-accelerate.html#pre-requisite-faraday-induction-inductance-and-magnetic-energy">Faraday
+induction, inductance and magnetic energy</a> in chapter 1, <a
+href="02-the-cathode-ray-tube.html#pre-requisite-biot-savart-and-amperes-law">Biot-Savart
+and Ampère’s law</a> in chapter 2, and <a
+href="13-rf-cavities-and-power.html#pre-requisite-maxwells-equations-and-the-wave-equation">Maxwell’s
+equations and the wave equation</a> in chapter 13.</p>
+</blockquote>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The problem.</strong> An accelerator is a machine for pushing
+charged particles: giving them energy, steering them round bends, and
+squeezing them into a narrow beam. Every one of those pushes is electric
+or magnetic. To design one, or even to read about one, you need to know
+how charges make fields, how fields push charges, what a voltage is and
+why a particle’s energy can be quoted in volts, how currents make
+magnetic fields, how a changing magnetic field makes an electric one,
+and how energy is stored in fields and carried by them.</p>
+<p><strong>The idea.</strong> Charges fill the space round them with an
+<em>electric field</em>; moving charges, that is currents, also make a
+<em>magnetic field</em>. A charge feels the fields where it is, with the
+Lorentz force <span class="math inline">\(q(\boldsymbol{\mathcal{E}} +
+\mathbf{v}\times\mathbf{B})\)</span>. A static electric field is the
+downhill slope of a <em>potential</em>, so the energy a charge gains
+depends only on the voltage between start and end: one volt gives a
+charge <span class="math inline">\(e\)</span> one electron-volt.
+Currents flow when a field pushes the free charges in a conductor;
+resistance turns their energy into heat; capacitors store charge and
+energy in an electric field, coils store energy in a magnetic field. A
+changing magnetic flux makes an electric field that circulates, which is
+how transformers, generators and the betatron work. Maxwell added one
+term, the <em>displacement current</em>, and the four laws then predict
+waves that travel at <span
+class="math inline">\(1/\sqrt{\mu_0\varepsilon_0}\)</span>, the speed of
+light.</p>
+<p><strong>Equations to remember.</strong></p>
+<ul>
+<li>Coulomb’s law: <span class="math inline">\(F =
+\dfrac{q_1q_2}{4\pi\varepsilon_0r^2}\)</span>, with charges <span
+class="math inline">\(q\)</span> in coulombs (C), distance <span
+class="math inline">\(r\)</span> in m, and <span
+class="math inline">\(\varepsilon_0 = 8.854 \times 10^{-12}\)</span>
+F/m.</li>
+<li>Lorentz force: <span class="math inline">\(\mathbf{F} =
+q(\boldsymbol{\mathcal{E}} + \mathbf{v}\times\mathbf{B})\)</span>, with
+<span class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> in V/m and
+<span class="math inline">\(\mathbf{B}\)</span> in tesla (T).</li>
+<li>Gauss’s law: <span
+class="math inline">\(\displaystyle\oint\boldsymbol{\mathcal{E}}\cdot
+d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}\)</span>; a charged
+sphere outside, <span class="math inline">\(\mathcal{E} =
+\dfrac{Q}{4\pi\varepsilon_0r^2}\)</span>; a line, <span
+class="math inline">\(\dfrac{\lambda}{2\pi\varepsilon_0r}\)</span>; a
+sheet, <span
+class="math inline">\(\dfrac{\sigma}{2\varepsilon_0}\)</span>; between
+plates, <span
+class="math inline">\(\dfrac{\sigma}{\varepsilon_0}\)</span>.</li>
+<li>Potential: <span class="math inline">\(\boldsymbol{\mathcal{E}} =
+-\nabla V\)</span>, energy gained <span class="math inline">\(W =
+q\,\Delta V\)</span>; between plates <span
+class="math inline">\(\mathcal{E} = V/d\)</span>; 1 eV <span
+class="math inline">\(= 1.602 \times 10^{-19}\)</span> J.</li>
+<li>Capacitance: <span class="math inline">\(C = Q/V\)</span> in farads
+(F); plates <span class="math inline">\(C = \varepsilon_0A/d\)</span>,
+sphere <span class="math inline">\(C = 4\pi\varepsilon_0R\)</span>;
+stored energy <span class="math inline">\(\tfrac12CV^2\)</span>; energy
+density <span
+class="math inline">\(\tfrac12\varepsilon_0\mathcal{E}^2\)</span> in
+J/m<span class="math inline">\(^3\)</span>.</li>
+<li>Current: <span class="math inline">\(I = dQ/dt\)</span> in amperes
+(A); <span class="math inline">\(I = nqv_dA\)</span>; Ohm’s law <span
+class="math inline">\(V = IR\)</span>, with <span
+class="math inline">\(R = \rho L/A\)</span> in ohms (Ω); power <span
+class="math inline">\(P = IV = I^2R\)</span> in watts.</li>
+<li>RC circuit: <span class="math inline">\(V = V_0e^{-t/RC}\)</span>,
+time constant <span class="math inline">\(\tau = RC\)</span>.</li>
+<li>A long straight wire: <span class="math inline">\(B =
+\dfrac{\mu_0I}{2\pi r}\)</span>; a loop on its axis: <span
+class="math inline">\(B = \dfrac{\mu_0IR^2}{2(R^2 +
+z^2)^{3/2}}\)</span>; a long solenoid: <span class="math inline">\(B =
+\mu_0nI\)</span>; <span class="math inline">\(\mu_0 = 1.2566 \times
+10^{-6}\)</span> T m/A.</li>
+<li>Force on a wire: <span class="math inline">\(\mathbf{F} =
+I\mathbf{L}\times\mathbf{B}\)</span>.</li>
+<li>Faraday’s law: EMF <span class="math inline">\(=
+-\dfrac{d\Phi_B}{dt}\)</span>, flux <span class="math inline">\(\Phi_B =
+\int\mathbf{B}\cdot d\mathbf{A}\)</span> in webers (Wb <span
+class="math inline">\(=\)</span> T m<span
+class="math inline">\(^2\)</span>); moving rod: EMF <span
+class="math inline">\(= BLv\)</span>.</li>
+<li>Inductance: <span class="math inline">\(V = L\,dI/dt\)</span>, <span
+class="math inline">\(L\)</span> in henries (H); energy <span
+class="math inline">\(\tfrac12LI^2\)</span>; energy density <span
+class="math inline">\(B^2/2\mu_0\)</span>; LR time constant <span
+class="math inline">\(L/R\)</span>.</li>
+<li>Maxwell’s equations (section 16): <span
+class="math inline">\(\nabla\cdot\boldsymbol{\mathcal{E}} =
+\rho/\varepsilon_0\)</span>, <span
+class="math inline">\(\nabla\cdot\mathbf{B} = 0\)</span>, <span
+class="math inline">\(\nabla\times\boldsymbol{\mathcal{E}} =
+-\partial\mathbf{B}/\partial t\)</span>, <span
+class="math inline">\(\nabla\times\mathbf{B} = \mu_0\mathbf{J} +
+\mu_0\varepsilon_0\,\partial\boldsymbol{\mathcal{E}}/\partial
+t\)</span>.</li>
+<li>Light: <span class="math inline">\(c = 1/\sqrt{\mu_0\varepsilon_0} =
+2.998 \times 10^8\)</span> m/s; in a wave <span
+class="math inline">\(\mathcal{E} = cB\)</span>; Poynting vector <span
+class="math inline">\(\mathbf{S} =
+\boldsymbol{\mathcal{E}}\times\mathbf{B}/\mu_0\)</span> in W/m<span
+class="math inline">\(^2\)</span>.</li>
+</ul>
+<p><strong>Numbers worth knowing.</strong></p>
+<ul>
+<li>The electron’s charge is <span class="math inline">\(e = 1.602
+\times 10^{-19}\)</span> C, so one coulomb is <span
+class="math inline">\(6.24 \times 10^{18}\)</span> electrons, and a beam
+of 1 mA carries <span class="math inline">\(6.24 \times 10^{15}\)</span>
+electrons a second.</li>
+<li>Two protons push each other apart <span class="math inline">\(1.24
+\times 10^{36}\)</span> times harder than they attract by gravity. A
+handy product: <span class="math inline">\(e^2/(4\pi\varepsilon_0) =
+1.44\)</span> MeV fm.</li>
+<li>An electron from 2 kV has 2 keV <span class="math inline">\(= 3.20
+\times 10^{-16}\)</span> J and moves at <span class="math inline">\(2.65
+\times 10^7\)</span> m/s; a proton from 1 MV moves at <span
+class="math inline">\(1.38 \times 10^7\)</span> m/s.</li>
+<li>Air breaks down at about 3 MV/m. A sphere of radius 1 m can
+therefore be held at up to about 3 MV, and stores 55.6 J at 1 MV; a 1 cm
+ball sparks over at 30 kV.</li>
+<li>Electrons in a copper wire carrying 1 A per mm<span
+class="math inline">\(^2\)</span> drift at only 0.07 mm/s.</li>
+<li>A long solenoid with 2000 turns per metre and 5 A has 12.6 mT
+inside. An iron magnet with a 10 cm gap needs 119 000 ampere-turns for
+1.5 T.</li>
+<li>A magnetic field of 1 T stores 0.40 MJ per cubic metre; the LHC’s
+8.33 T stores 27.6 MJ per cubic metre, and each LHC dipole 6.93 MJ.</li>
+<li>Sunlight at the Earth, 1361 W/m<span
+class="math inline">\(^2\)</span>, has an electric field of amplitude
+about 1 kV/m and a magnetic field of 3.4 μT.</li>
+</ul>
+<h2 id="the-problem-it-solved">The problem it solved</h2>
+<h3 id="amber-and-lodestone">Amber and lodestone</h3>
+<p>Rubbed amber picks up straw, and the lodestone, a natural magnet,
+picks up iron; both were known in antiquity. William Gilbert, physician
+to Elizabeth I, studied them side by side in <em>De Magnete</em> (1600).
+He showed that the Earth itself is a great magnet, which is why a
+compass points north, and he coined the Latin <em>electricus</em>, “like
+amber”, for the power of rubbed bodies. To him the two effects were
+different things, and they stayed apart for two centuries.</p>
+<h3 id="charge-and-coulombs-law">Charge, and Coulomb’s law</h3>
+<p>In the 1740s Benjamin Franklin in Philadelphia described electricity
+as one fluid that could be in excess (positive) or short (negative),
+moved from body to body but never made or destroyed. That is the
+conservation of charge, and his signs are the ones used today. The
+Leyden jar, invented in 1745 to 1746, stored enough charge to give a
+serious shock: the first capacitor. In 1785 Charles-Augustin de Coulomb
+measured the force between small charged spheres with a torsion balance,
+a thin wire twisted by the force, and found it falls as the inverse
+square of the distance, like gravity.</p>
+<h3 id="currents-and-magnets">Currents and magnets</h3>
+<p>In 1800 Alessandro Volta stacked discs of zinc and copper separated
+by brine-soaked card, and the pile gave the first steady current. In
+1820 Hans Christian Ørsted saw a compass needle turn when a current
+flowed in a wire nearby: electricity and magnetism were linked. Within
+months Jean-Baptiste Biot and Félix Savart measured the field round a
+wire, and André-Marie Ampère showed that two currents push or pull on
+each other and built the mathematical theory of the forces between
+currents. Georg Simon Ohm published his law of resistance in 1827.</p>
+<h3 id="induction">Induction</h3>
+<p>If a current makes magnetism, can magnetism make a current? Michael
+Faraday at the Royal Institution found in 1831 that it can, but only
+while the magnetism is <em>changing</em>. Joseph Henry in America found
+the same independently. In 1834 Emil Lenz gave the rule for the
+direction. Faraday, who had little mathematics, pictured the space round
+charges and magnets filled with <em>lines of force</em>, and thought of
+these lines as real.</p>
+<h3 id="maxwells-equations-and-light">Maxwell’s equations, and
+light</h3>
+<p>James Clerk Maxwell put Faraday’s lines into mathematics. In <em>On
+Physical Lines of Force</em> (1861 to 1862) he added a new term to
+Ampère’s law, the displacement current, and found that the equations
+then allowed waves whose speed, computed from electrical measurements,
+was close to the measured speed of light. In <em>A Dynamical Theory of
+the Electromagnetic Field</em> (1865) he concluded that light is an
+electromagnetic wave, and his <em>Treatise on Electricity and
+Magnetism</em> followed in 1873. In 1884 John Henry Poynting showed how
+energy flows through the field. Oliver Heaviside cut Maxwell’s many
+equations down to the four used today (F2), and in 1887 to 1888 Heinrich
+Hertz in Karlsruhe made and detected electromagnetic waves with sparks
+across gaps, confirming Maxwell. The carrier of the charge was found
+last: J. J. Thomson identified the electron in 1897 (<a
+href="02-the-cathode-ray-tube.html">chapter 2</a>), and Robert Millikan
+measured its charge with oil drops between 1909 and 1913. Since 2019 the
+SI system fixes <span class="math inline">\(e\)</span> at exactly <span
+class="math inline">\(1.602176634 \times 10^{-19}\)</span> C.</p>
+<h2 id="the-physics">The physics</h2>
+<h3 id="0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</h3>
+<ul>
+<li><strong>Force and energy.</strong> Work is force times distance
+along the force; energy is the capacity to do work, in joules (J); power
+is energy per second, in watts (W <span class="math inline">\(=\)</span>
+J/s). Kinetic energy is <span
+class="math inline">\(\tfrac12mv^2\)</span> (at speeds well below
+light).</li>
+<li><strong>From F1.</strong> Derivatives as rates; integrals as sums;
+<span class="math inline">\(dN/dt = -N/\tau\)</span> has the solution
+<span class="math inline">\(N = N_0e^{-t/\tau}\)</span>.</li>
+<li><strong>From F2.</strong> The dot and cross products; the force
+<span class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span> on a
+moving charge and the circle it makes; <span
+class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla V\)</span>;
+line integrals <span class="math inline">\(\int\mathbf{F}\cdot
+d\mathbf{l}\)</span> and flux integrals <span
+class="math inline">\(\int\mathbf{F}\cdot d\mathbf{A}\)</span>;
+divergence and Gauss’s theorem; curl and Stokes’s theorem.</li>
+</ul>
+<p><strong>Check yourself.</strong> (a) A 2 g mass moves at 3 m/s; what
+is its kinetic energy? (b) A quantity decays with <span
+class="math inline">\(\tau = 2\)</span> s; what fraction is left after 4
+s? (c) Find <span class="math inline">\((1, 0, 0)\times(0, 0,
+1)\)</span>. (d) What is the flux of a uniform field <span
+class="math inline">\(\mathbf{F} = (0, 0, 5)\)</span> through a square
+of side 2 lying flat in the <span class="math inline">\(x\)</span>-<span
+class="math inline">\(y\)</span> plane? Answers: (a) 9 mJ; (b) <span
+class="math inline">\(e^{-2} = 0.135\)</span>; (c) <span
+class="math inline">\((0, -1, 0)\)</span>; (d) 20.</p>
+<h3 id="1-charge">1. Charge</h3>
+<p><strong>The picture.</strong> Matter is made of atoms, and atoms of a
+small heavy nucleus of protons and neutrons with electrons round it.
+Protons carry a positive charge, electrons an equal negative charge,
+neutrons none. A body with as many electrons as protons is neutral;
+rubbing two materials together moves a few electrons from one to the
+other, leaving one positive and the other negative. Like charges repel,
+unlike charges attract.</p>
+<p><strong>Two facts about charge.</strong> It comes in whole multiples
+of the <em>elementary charge</em></p>
+<p><span class="math display">\[
+e = 1.602 \times 10^{-19}\ \text{C},
+\]</span></p>
+<p>the size of the charge on a proton or an electron. (Quarks carry
+thirds of <span class="math inline">\(e\)</span>, but they are never
+found alone.) The unit, the coulomb (C), is the charge carried by a
+current of one ampere in one second; it is <span
+class="math inline">\(1/e = 6.24 \times 10^{18}\)</span> elementary
+charges. And charge is <em>conserved</em>: the total charge of an
+isolated system never changes. Charges can be moved, and positive and
+negative pairs can be made or destroyed together (a photon can make an
+electron and a positron), but no process changes the total. Section 8
+writes this as an equation, and section 16 shows Maxwell’s equations
+need it.</p>
+<p><strong>Conductors and insulators.</strong> In a metal, one or two
+electrons per atom are not tied to any atom and wander freely through
+the crystal: a metal is a <em>conductor</em>. In glass, ceramic, plastic
+or dry air, every electron is bound to its atom or molecule, and charge
+put on the surface stays where it was put: these are
+<em>insulators</em>, or <em>dielectrics</em>. Between them are
+<em>semiconductors</em>, and gases that become conductors when their
+molecules are broken into ions and electrons, as in a spark (<a
+href="04-high-voltage-and-breakdown.html">chapter 4</a>). An accelerator
+uses all of them: copper and aluminium for electrodes, coils and
+cavities, ceramic and glass for the insulators that hold them apart, and
+vacuum, the best insulator of all until the field pulls electrons out of
+the metal.</p>
+<p><strong>Charging by induction.</strong> Bring a positive rod near a
+neutral metal sphere without touching. The sphere’s free electrons are
+pulled to the near side, leaving the far side positive. Touch the far
+side to the earth, and electrons flow up from the earth to neutralise
+it; break the contact, take the rod away, and the sphere is left
+negative. Nothing touched the rod. This separation of charge in a
+conductor by a nearby charge is at work every time a beam passes a metal
+pipe: the beam’s charge draws an equal and opposite <em>image
+charge</em> onto the wall, which travels with it and is how beam
+monitors see it (<a href="08-seeing-the-beam.html">chapter 8</a>).</p>
+<h3 id="2-coulombs-law">2. Coulomb’s law</h3>
+<p><strong>The law.</strong> Two small charged bodies (point charges)
+<span class="math inline">\(q_1\)</span> and <span
+class="math inline">\(q_2\)</span>, a distance <span
+class="math inline">\(r\)</span> apart, push on each other along the
+line joining them with a force</p>
+<p><span class="math display">\[
+F = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2} .
+\]</span></p>
+<p>A positive <span class="math inline">\(F\)</span> (like charges) is a
+repulsion, a negative one an attraction. The constant <span
+class="math inline">\(\varepsilon_0 = 8.854 \times 10^{-12}\)</span> F/m
+is the <em>permittivity of free space</em>, and <span
+class="math inline">\(1/(4\pi\varepsilon_0) = 8.988 \times 10^9\)</span>
+N m<span class="math inline">\(^2\)</span>/C<span
+class="math inline">\(^2\)</span>. The <span
+class="math inline">\(4\pi\)</span> looks odd here, but it is put in so
+that it disappears from Gauss’s law (section 4), which is used far more
+often. As a vector, with <span
+class="math inline">\(\hat{\mathbf{r}}\)</span> the unit vector from
+<span class="math inline">\(q_1\)</span> to <span
+class="math inline">\(q_2\)</span>, the force on <span
+class="math inline">\(q_2\)</span> is <span
+class="math inline">\(\mathbf{F} =
+q_1q_2\hat{\mathbf{r}}/(4\pi\varepsilon_0r^2)\)</span>, and by Newton’s
+third law the force on <span class="math inline">\(q_1\)</span> is equal
+and opposite.</p>
+<p><strong>How strong it is.</strong> Two charges of 1 C a metre apart
+would push with <span class="math inline">\(9 \times 10^9\)</span> N,
+the weight of a million tonnes. A coulomb is an enormous charge to hold
+still; everyday static charges are microcoulombs or less. On the atomic
+scale the force dominates everything. In a hydrogen atom the electron is
+about <span class="math inline">\(a_0 = 5.29 \times 10^{-11}\)</span> m
+from the proton, and the attraction is</p>
+<p><span class="math display">\[
+F = 8.988 \times 10^9 \times \frac{(1.602 \times 10^{-19})^2}{(5.29
+\times 10^{-11})^2} = 8.24 \times 10^{-8}\ \text{N},
+\]</span></p>
+<p>which on the electron’s mass of <span class="math inline">\(9.11
+\times 10^{-31}\)</span> kg is an acceleration of <span
+class="math inline">\(9.0 \times 10^{22}\)</span> m/s<span
+class="math inline">\(^2\)</span>. The gravitational pull between two
+protons, <span class="math inline">\(Gm_p^2/r^2\)</span>, is <span
+class="math inline">\(1.24 \times 10^{36}\)</span> times weaker than
+their electric push at any distance, since both fall as <span
+class="math inline">\(1/r^2\)</span>. Gravity plays no part in this
+course except to make magnets sag.</p>
+<p><strong>Inside the nucleus.</strong> Two protons 1 fm (<span
+class="math inline">\(10^{-15}\)</span> m) apart push each other with
+231 N, on two particles each of <span class="math inline">\(1.7 \times
+10^{-27}\)</span> kg. Only the strong nuclear force, which acts over a
+few femtometres, holds a nucleus together against it. To bring a charged
+particle close enough to a nucleus to react, it must be given enough
+energy to climb this electric repulsion, the Coulomb barrier: the reason
+accelerators were built at all (<a href="01-why-accelerate.html">chapter
+1</a>).</p>
+<p><strong>Where it fails.</strong> Coulomb’s law is exact for charges
+at rest. For moving charges it still gives the right electric field of a
+slow charge, but a fast charge’s field is squeezed into a disc at right
+angles to its motion, and a changing one sends out waves (section 17);
+Maxwell’s equations cover both, Coulomb’s law alone does not.</p>
+<h3 id="3-the-electric-field-and-superposition">3. The electric field,
+and superposition</h3>
+<p><strong>From force to field.</strong> Coulomb’s law says how two
+charges act on each other across empty space. A more useful way to think
+splits it in two. A charge <span class="math inline">\(Q\)</span> fills
+the space round it with an <em>electric field</em> <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span>, a vector at
+every point (F2, section 5). A charge <span
+class="math inline">\(q\)</span> placed at a point feels the force</p>
+<p><span class="math display">\[
+\mathbf{F} = q\boldsymbol{\mathcal{E}}
+\]</span></p>
+<p>from the field there. The field is the force per unit charge, in
+newtons per coulomb, which section 5 shows is the same as volts per
+metre (V/m). For a point charge <span class="math inline">\(Q\)</span>,
+dividing Coulomb’s force by <span class="math inline">\(q\)</span>,</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{E}} =
+\frac{Q}{4\pi\varepsilon_0r^2}\,\hat{\mathbf{r}},
+\]</span></p>
+<p>pointing away from a positive <span class="math inline">\(Q\)</span>
+and towards a negative one. The field is not only bookkeeping: it
+carries energy (section 6) and momentum, and when charges move it
+changes at the speed of light, not instantly (section 17). The particle
+in an accelerator never “sees” the distant charges on the electrodes; it
+feels only the field where it is.</p>
+<p><strong>Superposition.</strong> The fields of several charges add as
+vectors: the field of <span class="math inline">\(Q_1\)</span> and <span
+class="math inline">\(Q_2\)</span> together is the field of <span
+class="math inline">\(Q_1\)</span> alone plus the field of <span
+class="math inline">\(Q_2\)</span> alone. This is an experimental fact,
+true to very high accuracy, and it is what makes electromagnetism
+solvable: any arrangement of charge can be cut into small pieces, each
+treated as a point, and their fields added (an integral, F2 section
+8).</p>
+<p><strong>Example: a dipole.</strong> Put <span
+class="math inline">\(+1\)</span> nC at <span class="math inline">\(x =
+-5\)</span> cm and <span class="math inline">\(-1\)</span> nC at <span
+class="math inline">\(x = +5\)</span> cm, a pair called an electric
+<em>dipole</em>. Find the field at the point <span
+class="math inline">\((0, 5\ \text{cm})\)</span>. Each charge is <span
+class="math inline">\(r = \sqrt{0.05^2 + 0.05^2} = 0.0707\)</span> m
+away, and makes a field of size <span class="math inline">\(8.988 \times
+10^9 \times 10^{-9}/0.005 = 1798\)</span> V/m. The positive charge’s
+field points away from it, along <span class="math inline">\((1,
+1)/\sqrt2\)</span>; the negative charge’s field points towards it, along
+<span class="math inline">\((1, -1)/\sqrt2\)</span>. The <span
+class="math inline">\(y\)</span> parts cancel, the <span
+class="math inline">\(x\)</span> parts add: <span
+class="math inline">\(2 \times 1798/\sqrt2 = 2542\)</span> V/m, pointing
+along <span class="math inline">\(+x\)</span>, from the positive
+charge’s side towards the negative one’s. Far from a dipole the two
+fields nearly cancel, and the field falls as <span
+class="math inline">\(1/r^3\)</span> instead of <span
+class="math inline">\(1/r^2\)</span>.</p>
+<p><strong>Field lines.</strong> Draw lines that run along the field
+everywhere (F2, section 5). For electrostatic fields they start on
+positive charges and end on negative ones (or at infinity), they never
+cross (the field has one direction at each point), and they are crowded
+where the field is strong. A dipole’s lines loop from <span
+class="math inline">\(+\)</span> to <span
+class="math inline">\(-\)</span>. Faraday thought of the lines as
+stretched strings that pull the charges together and push sideways on
+each other, a picture section 6 makes exact in terms of energy.</p>
+<h3 id="4-gausss-law-in-use">4. Gauss’s law in use</h3>
+<p><strong>The law.</strong> F2 (section 9) showed that the flux of a
+point charge’s field through any sphere round it is <span
+class="math inline">\(Q/\varepsilon_0\)</span>, whatever the radius,
+because the <span class="math inline">\(1/r^2\)</span> of the field
+cancels the <span class="math inline">\(r^2\)</span> of the area. By
+superposition this holds for any number of charges and any closed
+surface:</p>
+<p><span class="math display">\[
+\oint_S\boldsymbol{\mathcal{E}}\cdot d\mathbf{A} =
+\frac{Q_{\text{enc}}}{\varepsilon_0},
+\]</span></p>
+<p>where <span class="math inline">\(Q_{\text{enc}}\)</span> is the
+total charge inside <span class="math inline">\(S\)</span>. Charges
+outside send as many field lines in as out, and contribute nothing. With
+Gauss’s theorem this is <span
+class="math inline">\(\nabla\cdot\boldsymbol{\mathcal{E}} =
+\rho/\varepsilon_0\)</span>, the first of Maxwell’s equations (F2,
+section 10).</p>
+<p><strong>How to use it.</strong> Gauss’s law is always true, but it
+gives the field only when symmetry tells you the field’s direction and
+that its size is the same all over a suitable surface. Then the flux is
+(field) × (area), and one line of algebra gives the field. Four shapes
+come up again and again.</p>
+<p><strong>A sphere.</strong> A charge <span
+class="math inline">\(Q\)</span> spread over a sphere of radius <span
+class="math inline">\(R\)</span> (on its surface, or through it with a
+density that depends only on radius). By symmetry the field is radial
+and the same all round any concentric sphere of radius <span
+class="math inline">\(r\)</span>. For <span class="math inline">\(r &gt;
+R\)</span>: <span class="math inline">\(\mathcal{E}\cdot4\pi r^2 =
+Q/\varepsilon_0\)</span>, so</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{Q}{4\pi\varepsilon_0r^2} \qquad (r &gt; R),
+\]</span></p>
+<p>the field of a point charge at the centre. For a charge on the
+surface only, a sphere inside encloses nothing, and <span
+class="math inline">\(\mathcal{E} = 0\)</span> inside.</p>
+<p><em>Example: the Van de Graaff terminal.</em> The high-voltage
+terminal of an electrostatic generator is a smooth metal sphere (<a
+href="06-the-electrostatic-generator.html">chapter 6</a>). Air breaks
+down when the field reaches about 3 MV/m (<a
+href="04-high-voltage-and-breakdown.html">chapter 4</a>). At the surface
+of a 1 m sphere that field means <span class="math inline">\(Q =
+4\pi\varepsilon_0R^2\mathcal{E} = 3.34 \times 10^{-4}\)</span> C, a
+surface density of <span class="math inline">\(\varepsilon_0\mathcal{E}
+= 2.66 \times 10^{-5}\)</span> C/m<span
+class="math inline">\(^2\)</span>, and, by section 5, a voltage of 3 MV.
+More charge and the air round it sparks.</p>
+<p><strong>A line.</strong> A long straight line, or a thin round beam,
+with charge <span class="math inline">\(\lambda\)</span> per metre
+(C/m). The field points straight out from the axis, and a cylinder of
+radius <span class="math inline">\(r\)</span> and length <span
+class="math inline">\(L\)</span> round it gives <span
+class="math inline">\(\mathcal{E}\cdot2\pi rL = \lambda
+L/\varepsilon_0\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{\lambda}{2\pi\varepsilon_0r} .
+\]</span></p>
+<p>The field falls as <span class="math inline">\(1/r\)</span>, more
+slowly than a point’s. F2 used this for the 10 mA, 2 kV electron beam:
+<span class="math inline">\(\lambda = I/v = 3.77 \times
+10^{-10}\)</span> C/m, and 6.8 kV/m at its 1 mm edge.</p>
+<p><strong>A flat sheet.</strong> A large flat sheet with charge <span
+class="math inline">\(\sigma\)</span> per square metre (C/m<span
+class="math inline">\(^2\)</span>). By symmetry the field points
+straight away from the sheet on both sides, with the same size at any
+distance. Take a short box (a “pillbox”) straddling the sheet, with
+faces of area <span class="math inline">\(A\)</span> on each side. Flux
+leaves through both faces, <span
+class="math inline">\(2\mathcal{E}A\)</span>, and the charge inside is
+<span class="math inline">\(\sigma A\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{\sigma}{2\varepsilon_0} .
+\]</span></p>
+<p>The field of an infinite sheet does not weaken with distance at all:
+the further you go, the more of the sheet you see, and the two effects
+cancel. Real sheets are finite, so this holds at distances small
+compared with their size.</p>
+<p><strong>Parallel plates.</strong> Two large sheets facing each other,
+a distance <span class="math inline">\(d\)</span> apart, with <span
+class="math inline">\(+\sigma\)</span> and <span
+class="math inline">\(-\sigma\)</span>. Between them the two fields,
+each <span class="math inline">\(\sigma/2\varepsilon_0\)</span>, point
+the same way (away from <span class="math inline">\(+\)</span>, towards
+<span class="math inline">\(-\)</span>) and add; outside they point
+opposite ways and cancel:</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{\sigma}{\varepsilon_0}\ \text{between}, \qquad 0\
+\text{outside}.
+\]</span></p>
+<p>A uniform field in a box: the simplest accelerating gap and the
+simplest deflector. Near the edges the field bulges out (the <em>fringe
+field</em>), and the formula holds only well inside.</p>
+<p><em>Example: the deflecting plates.</em> In chapter 2’s cathode-ray
+tube, two plates 5 mm apart with 100 V across them make a field of <span
+class="math inline">\(100/0.005 = 2.0 \times 10^4\)</span> V/m (section
+5). The plates carry <span class="math inline">\(\sigma =
+\varepsilon_0\mathcal{E} = 1.77 \times 10^{-7}\)</span> C/m<span
+class="math inline">\(^2\)</span>, and an electron between them feels
+<span class="math inline">\(e\mathcal{E} = 3.2 \times 10^{-15}\)</span>
+N, an acceleration of <span class="math inline">\(3.5 \times
+10^{15}\)</span> m/s<span class="math inline">\(^2\)</span> (<a
+href="02-the-cathode-ray-tube.html">chapter 2</a>).</p>
+<p>Chapter 1’s <a
+href="01-why-accelerate.html#pre-requisite-gausss-law-and-potentials-of-simple-shapes">pre-requisite
+on Gauss’s law</a> adds the field inside a uniformly charged sphere, and
+why two charged spheres push like two points.</p>
+<h3 id="5-potential-potential-energy-and-the-electron-volt">5.
+Potential, potential energy and the electron-volt</h3>
+<p><strong>The picture.</strong> Lifting a stone stores energy that
+comes back when it falls, and it does not matter which way you carried
+it up: only the height counts. A static electric field behaves the same
+way. F2 (section 7) showed that the work done by a field that is a
+gradient depends only on the end points. So we can give every point a
+<em>potential</em> <span class="math inline">\(V\)</span>, an electrical
+height, such that the work done by the field on a charge <span
+class="math inline">\(q\)</span> moving from <span
+class="math inline">\(A\)</span> to <span
+class="math inline">\(B\)</span> is</p>
+<p><span class="math display">\[
+W_{A\to B} = q\,[V(A) - V(B)] .
+\]</span></p>
+<p>The potential is measured in volts (V), joules per coulomb. A
+positive charge rolls downhill in potential, gaining kinetic energy; an
+electron, with its negative charge, rolls <em>uphill</em>, towards
+higher potential. Only differences of potential matter; the zero is
+chosen for convenience, at infinity for isolated charges or at the earth
+(ground) for circuits. “Voltage” means a potential difference.</p>
+<p><strong>Field and potential.</strong> The field points downhill and
+its size is the slope (F2, section 6):</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{E}} = -\nabla V, \qquad V(A) - V(B) =
+\int_A^B\boldsymbol{\mathcal{E}}\cdot d\mathbf{l} .
+\]</span></p>
+<p>In one dimension, <span class="math inline">\(\mathcal{E}_x =
+-dV/dx\)</span>. Between parallel plates the field is uniform, so the
+potential falls steadily across the gap and</p>
+<p><span class="math display">\[
+\mathcal{E} = \frac{V}{d} .
+\]</span></p>
+<p>This is why the field is quoted in V/m: 2 kV across 1 cm is 200 kV/m.
+For a point charge, integrating <span
+class="math inline">\(Q/(4\pi\varepsilon_0r^2)\)</span> in from
+infinity, where <span class="math inline">\(V = 0\)</span>, gives</p>
+<p><span class="math display">\[
+V(r) = \frac{Q}{4\pi\varepsilon_0r},
+\]</span></p>
+<p>and the same outside any spherical charge. A sphere of radius <span
+class="math inline">\(R\)</span> carrying <span
+class="math inline">\(Q\)</span> is at <span class="math inline">\(V =
+Q/(4\pi\varepsilon_0R)\)</span>, and its surface field is <span
+class="math inline">\(\mathcal{E} = Q/(4\pi\varepsilon_0R^2) =
+V/R\)</span>. That simple ratio, surface field <span
+class="math inline">\(=\)</span> voltage over radius, sets the size of
+every high-voltage terminal: at 3 MV/m a 1 m sphere holds 3 MV, a 1 cm
+ball only 30 kV.</p>
+<p><strong>Potential energy of two charges.</strong> The work needed to
+bring <span class="math inline">\(q_2\)</span> from infinity to a
+distance <span class="math inline">\(r\)</span> from <span
+class="math inline">\(q_1\)</span> is <span
+class="math inline">\(q_2V\)</span>:</p>
+<p><span class="math display">\[
+U = \frac{q_1q_2}{4\pi\varepsilon_0r} .
+\]</span></p>
+<p>For two protons 1 fm apart this is <span class="math inline">\(2.31
+\times 10^{-13}\)</span> J, or 1.44 MeV in the unit below. Nuclear
+physicists use <span class="math inline">\(e^2/(4\pi\varepsilon_0) =
+1.44\)</span> MeV fm to work out Coulomb barriers in their heads: an
+alpha particle (<span class="math inline">\(2e\)</span>) and a gold
+nucleus (<span class="math inline">\(79e\)</span>) touching at about 10
+fm have <span class="math inline">\(2 \times 79 \times 1.44/10 =
+23\)</span> MeV of electric energy.</p>
+<p><strong>The electron-volt.</strong> A charge <span
+class="math inline">\(e\)</span> falling through 1 V gains <span
+class="math inline">\(e \times 1\ \text{V} = 1.602 \times
+10^{-19}\)</span> J. This amount is one <em>electron-volt</em>, 1 eV. A
+particle of charge <span class="math inline">\(e\)</span> accelerated
+through <span class="math inline">\(V\)</span> volts gains <span
+class="math inline">\(V\)</span> electron-volts, whatever path it took
+and whatever its mass: 1 keV <span class="math inline">\(= 10^3\)</span>
+eV, 1 MeV <span class="math inline">\(= 10^6\)</span> eV, 1 GeV <span
+class="math inline">\(= 10^9\)</span> eV, 1 TeV <span
+class="math inline">\(= 10^{12}\)</span> eV. That is why the energy of
+an accelerator is quoted in volts.</p>
+<p><em>Example: the electron from 2 kV.</em> An electron leaving a
+cathode at rest and reaching an anode 2 kV higher gains <span
+class="math inline">\(2000 \times 1.602 \times 10^{-19} = 3.20 \times
+10^{-16}\)</span> J. Setting this equal to <span
+class="math inline">\(\tfrac12m_ev^2\)</span>:</p>
+<p><span class="math display">\[
+v = \sqrt{\frac{2eV}{m_e}} = \sqrt{\frac{2 \times 1.602 \times 10^{-19}
+\times 2000}{9.109 \times 10^{-31}}} = 2.65 \times 10^7\ \text{m/s},
+\]</span></p>
+<p>9 per cent of the speed of light. (The exact relativistic answer,
+from <a href="01-why-accelerate.html">chapter 1</a>, is 0.3 per cent
+lower; the formula <span class="math inline">\(\tfrac12mv^2\)</span>
+fails when the energy gained is no longer small compared with <span
+class="math inline">\(mc^2\)</span>, 511 keV for an electron.) A proton
+through 1 MV, <span class="math inline">\(mc^2 = 938\)</span> MeV, gets
+<span class="math inline">\(v = 1.38 \times 10^7\)</span> m/s, 4.6 per
+cent of <span class="math inline">\(c\)</span>.</p>
+<p><strong>Equipotentials.</strong> Surfaces of constant potential are
+<em>equipotentials</em>, like contour lines on a map. Moving along one
+takes no work, so the field has no component along it: field lines cross
+equipotentials at right angles. Between parallel plates the
+equipotentials are planes parallel to the plates; round a point charge,
+spheres. Electron-gun and lens designers think in equipotentials,
+because the shape of the electrodes sets their shape (<a
+href="07-ion-sources-and-electron-guns.html">chapter 7</a>).</p>
+<p><strong>Conductors are equipotentials.</strong> In a conductor the
+free charges move whenever there is a field. When they have stopped
+moving, which takes much less than a nanosecond in a metal, the field
+inside must be zero; so the whole conductor is at one potential. Three
+consequences follow.</p>
+<ul>
+<li>Any excess charge sits on the <em>surface</em>: by Gauss’s law, a
+surface drawn just inside the metal, where <span
+class="math inline">\(\mathcal{E} = 0\)</span>, encloses no charge.</li>
+<li>The field just outside is at right angles to the surface (any part
+along it would move the surface charges), with size <span
+class="math inline">\(\mathcal{E} = \sigma/\varepsilon_0\)</span> (a
+pillbox with one face inside the metal).</li>
+<li>The field inside a closed, empty metal box is zero, whatever charges
+are outside. This <em>Faraday cage</em> is why the inside of a
+high-voltage terminal is a quiet place for an ion source and its
+electronics (<a href="06-the-electrostatic-generator.html">chapter
+6</a>), and why a beam pipe shields the beam from the world.</li>
+</ul>
+<p><strong>Sharp points.</strong> Join a big sphere of radius <span
+class="math inline">\(R_1\)</span> and a small one of radius <span
+class="math inline">\(R_2\)</span> by a long wire. They share one
+potential, so <span class="math inline">\(Q_1/R_1 = Q_2/R_2\)</span>,
+and their surface fields are <span class="math inline">\(V/R_1\)</span>
+and <span class="math inline">\(V/R_2\)</span>: the small sphere has the
+stronger field, in proportion <span
+class="math inline">\(R_1/R_2\)</span>. A pointed or sharply curved part
+of a conductor is a small radius, and the field there is large. That is
+why lightning conductors are pointed (to leak charge gently into the
+air), and why everything at high voltage in an accelerator is smooth and
+round (<a href="04-high-voltage-and-breakdown.html">chapter 4</a>).</p>
+<p><strong>Solving for the potential.</strong> Combining <span
+class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla V\)</span> with
+<span class="math inline">\(\nabla\cdot\boldsymbol{\mathcal{E}} =
+\rho/\varepsilon_0\)</span> gives Poisson’s equation, <span
+class="math inline">\(\nabla^2V = -\rho/\varepsilon_0\)</span> (F2,
+section 12). With conductors as fixed-potential boundaries, that is how
+real electrode shapes are designed; <a
+href="02-the-cathode-ray-tube.html#pre-requisite-laplace-and-poisson-equations-uniqueness-boundary-value-problems">chapter
+2’s pre-requisite</a> teaches the methods.</p>
+<h3 id="6-capacitance-and-the-energy-in-the-field">6. Capacitance, and
+the energy in the field</h3>
+<p><strong>Capacitance.</strong> Put charge <span
+class="math inline">\(+Q\)</span> on one conductor and <span
+class="math inline">\(-Q\)</span> on another. The field between them,
+and so the potential difference <span class="math inline">\(V\)</span>,
+is proportional to <span class="math inline">\(Q\)</span>: double the
+charge and every field line doubles. The ratio depends only on shape and
+size:</p>
+<p><span class="math display">\[
+C = \frac{Q}{V},
+\]</span></p>
+<p>the <em>capacitance</em>, in farads (F <span
+class="math inline">\(=\)</span> C/V). A farad is huge; real capacitors
+are picofarads (pF, <span class="math inline">\(10^{-12}\)</span> F) to
+microfarads (μF, <span class="math inline">\(10^{-6}\)</span> F), and
+only special ones reach farads. Any arrangement of two conductors is a
+capacitor; for a single conductor, the other one is “infinity”, or the
+walls of the room.</p>
+<p><strong>Parallel plates.</strong> Plates of area <span
+class="math inline">\(A\)</span> a distance <span
+class="math inline">\(d\)</span> apart: <span
+class="math inline">\(\mathcal{E} = \sigma/\varepsilon_0 =
+Q/(\varepsilon_0A)\)</span> and <span class="math inline">\(V =
+\mathcal{E}d\)</span>, so</p>
+<p><span class="math display">\[
+C = \frac{\varepsilon_0A}{d} .
+\]</span></p>
+<p>Large plates close together store a lot of charge per volt. Chapter
+2’s deflecting plates, 2 cm long and (say) 2 cm wide, 5 mm apart, have
+<span class="math inline">\(C = 8.854 \times 10^{-12} \times 4 \times
+10^{-4}/0.005 = 0.71\)</span> pF, and at 100 V carry <span
+class="math inline">\(7.1 \times 10^{-11}\)</span> C.</p>
+<p><strong>An isolated sphere.</strong> <span class="math inline">\(V =
+Q/(4\pi\varepsilon_0R)\)</span>, so</p>
+<p><span class="math display">\[
+C = 4\pi\varepsilon_0R .
+\]</span></p>
+<p>A sphere of 1 m has 111 pF; at 1 MV it holds <span
+class="math inline">\(1.11 \times 10^{-4}\)</span> C.</p>
+<p><strong>Capacitors in parallel and in series.</strong> Connected side
+by side (in parallel), capacitors share one voltage, and their charges
+add: <span class="math inline">\(C = C_1 + C_2 + \dots\)</span>.
+Connected end to end (in series), they carry the same charge (what
+leaves one plate arrives on the next), and their voltages add, <span
+class="math inline">\(V = Q/C_1 + Q/C_2 + \dots\)</span>, so</p>
+<p><span class="math display">\[
+\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} + \dots
+\]</span></p>
+<p>A series stack is weaker in capacitance but shares the voltage, so it
+can stand a voltage no single capacitor could. Four capacitors of 20 nF,
+each rated for 100 kV, in series make 5 nF that can stand 400 kV. Stacks
+like this are the backbone of the Cockcroft–Walton multiplier (<a
+href="05-the-voltage-multiplier.html">chapter 5</a>, and its <a
+href="05-the-voltage-multiplier.html#pre-requisite-diodes-rectifiers-and-capacitor-networks">pre-requisite
+on capacitor networks</a>).</p>
+<p><strong>Energy stored.</strong> Charging a capacitor takes work,
+because each new bit of charge <span class="math inline">\(dq\)</span>
+must be pushed onto a plate already at the voltage <span
+class="math inline">\(q/C\)</span>. From nothing to <span
+class="math inline">\(Q\)</span>:</p>
+<p><span class="math display">\[
+U = \int_0^Q\frac{q}{C}\,dq = \frac{Q^2}{2C} = \tfrac12CV^2 .
+\]</span></p>
+<p>The factor <span class="math inline">\(\tfrac12\)</span> is there
+because the voltage rose from 0 to <span
+class="math inline">\(V\)</span> during the charging, and the average
+was <span class="math inline">\(V/2\)</span>. The 1 m terminal at 1 MV
+stores <span class="math inline">\(\tfrac12 \times 1.11 \times 10^{-10}
+\times (10^6)^2 = 55.6\)</span> J, the energy of a spark when it flashes
+over. The 5 nF stack at 400 kV stores 400 J, enough to kill, which is
+why a high-voltage set is earthed with a grounding stick before anyone
+touches it.</p>
+<p><strong>The energy is in the field.</strong> Where is it stored? For
+parallel plates, <span class="math inline">\(\tfrac12CV^2 =
+\tfrac12(\varepsilon_0A/d)(\mathcal{E}d)^2 =
+\tfrac12\varepsilon_0\mathcal{E}^2 \times Ad\)</span>, and <span
+class="math inline">\(Ad\)</span> is the volume between the plates,
+where the field is. So the field carries an energy per unit volume</p>
+<p><span class="math display">\[
+u_E = \tfrac12\varepsilon_0\mathcal{E}^2 \quad [\text{J/m}^3] .
+\]</span></p>
+<p>This holds for any field, not only between plates: integrating <span
+class="math inline">\(u_E\)</span> over all space round the 1 m sphere,
+with <span class="math inline">\(\mathcal{E} =
+Q/(4\pi\varepsilon_0r^2)\)</span> and shells of volume <span
+class="math inline">\(4\pi r^2dr\)</span>, gives <span
+class="math inline">\(Q^2/(8\pi\varepsilon_0R) = 55.6\)</span> J again.
+Air at its breakdown field of 3 MV/m holds only 40 J/m<span
+class="math inline">\(^3\)</span>; that low ceiling is why electrostatic
+machines are big. The energy density is also a pressure: the field pulls
+on a charged conductor’s surface with <span
+class="math inline">\(\tfrac12\varepsilon_0\mathcal{E}^2\)</span>
+newtons per square metre, Faraday’s stretched lines made exact. Chapter
+1’s <a
+href="01-why-accelerate.html#pre-requisite-dielectrics-capacitance-and-field-energy">pre-requisite
+on capacitance and field energy</a> uses these results for the
+electroscope and the terminal.</p>
+<h3 id="7-dielectrics-briefly">7. Dielectrics, briefly</h3>
+<p><strong>The picture.</strong> Fill the gap of a capacitor with an
+insulator. Its electrons cannot leave their molecules, but the field
+pulls them a little one way and the nuclei a little the other: each
+molecule becomes a small dipole (section 3), and some molecules, like
+water, are dipoles already and turn to line up. The material is
+<em>polarised</em>. Its dipoles’ positive ends crowd against the
+negative plate and their negative ends against the positive plate, and
+these bound surface charges partly cancel the plates’ charge. The field
+inside, for the same charge on the plates, is smaller by a factor <span
+class="math inline">\(\varepsilon_r\)</span>, the <em>relative
+permittivity</em> (or dielectric constant), and so is the voltage. The
+capacitance is larger by the same factor:</p>
+<p><span class="math display">\[
+C = \frac{\varepsilon_r\varepsilon_0A}{d} .
+\]</span></p>
+<p><strong>Numbers.</strong> <span
+class="math inline">\(\varepsilon_r\)</span> is 1.0006 for air, about
+2.3 for polyethylene, 4 to 10 for glasses and ceramics, about 80 for
+water at low frequency. Chapter 2’s plates filled with polyethylene
+would have 1.6 pF instead of 0.71 pF.</p>
+<p><strong>Why it matters here.</strong> Insulators hold the
+high-voltage parts of an accelerator apart. Each has a <em>dielectric
+strength</em>, the field at which it breaks down, and in a stack of
+different insulators the field divides unevenly, crowding into the
+material with the lower <span
+class="math inline">\(\varepsilon_r\)</span>, often the gas or vacuum at
+a joint, which then fails first. The full treatment, with the
+displacement field <span class="math inline">\(\mathbf{D}\)</span> and
+the boundary conditions, is chapter 4’s <a
+href="04-high-voltage-and-breakdown.html#pre-requisite-continued-dielectrics-capacitance-and-field-energy">pre-requisite
+on dielectrics</a>.</p>
+<h3 id="8-current-current-density-and-ohms-law">8. Current, current
+density and Ohm’s law</h3>
+<p><strong>Current.</strong> A <em>current</em> is charge on the move.
+The current through a surface is the charge crossing it per second,</p>
+<p><span class="math display">\[
+I = \frac{dQ}{dt},
+\]</span></p>
+<p>in amperes (A <span class="math inline">\(=\)</span> C/s). By
+convention it flows the way positive charge would move; in a metal wire
+the electrons actually go the other way, and in an electron beam the
+current runs backwards from the beam. A beam of 1 mA carries <span
+class="math inline">\(10^{-3}/1.602 \times 10^{-19} = 6.24 \times
+10^{15}\)</span> particles of charge <span
+class="math inline">\(e\)</span> each second.</p>
+<p><strong>Current density and drift velocity.</strong> In a wire of
+cross-section <span class="math inline">\(A\)</span>, let there be <span
+class="math inline">\(n\)</span> free charges per cubic metre, each of
+charge <span class="math inline">\(q\)</span>, drifting along at an
+average speed <span class="math inline">\(v_d\)</span>. In a time <span
+class="math inline">\(dt\)</span> the charges within a length <span
+class="math inline">\(v_d\,dt\)</span> cross a given plane, a number
+<span class="math inline">\(nAv_d\,dt\)</span>, so</p>
+<p><span class="math display">\[
+I = nqv_dA, \qquad \mathbf{J} = nq\mathbf{v}_d,
+\]</span></p>
+<p>where the <em>current density</em> <span
+class="math inline">\(\mathbf{J}\)</span> is the current per unit area,
+in A/m<span class="math inline">\(^2\)</span>, a vector along the flow.
+Copper has about one free electron per atom, <span
+class="math inline">\(n = 8.49 \times 10^{28}\)</span> m<span
+class="math inline">\(^{-3}\)</span>. A current of 1 A in a wire of 1
+mm<span class="math inline">\(^2\)</span> needs</p>
+<p><span class="math display">\[
+v_d = \frac{I}{neA} = \frac{1}{8.49 \times 10^{28} \times 1.602 \times
+10^{-19} \times 10^{-6}} = 7.4 \times 10^{-5}\ \text{m/s},
+\]</span></p>
+<p>0.07 mm a second. The electrons crawl; yet a lamp lights at once when
+switched on, because the field that pushes them is set up along the
+whole wire at nearly the speed of light, and all the electrons start
+moving together. In a beam it is the other way round: few particles, at
+nearly the speed of light. The 10 mA, 2 kV beam has only <span
+class="math inline">\(\lambda/e = 2.4 \times 10^9\)</span> electrons per
+metre.</p>
+<p><strong>Conservation of charge, at a point.</strong> Take any closed
+surface. The current flowing out through it, <span
+class="math inline">\(\oint\mathbf{J}\cdot d\mathbf{A}\)</span>, must
+equal the rate at which the charge inside falls. With Gauss’s theorem
+(F2, section 10), and <span class="math inline">\(\rho\)</span> the
+charge density,</p>
+<p><span class="math display">\[
+\nabla\cdot\mathbf{J} = -\frac{\partial\rho}{\partial t} .
+\]</span></p>
+<p>This is the <em>continuity equation</em>: current flowing out of a
+point empties it of charge. Section 16 needs it.</p>
+<p><strong>Ohm’s law.</strong> In most conductors the current is
+proportional to the voltage driving it:</p>
+<p><span class="math display">\[
+V = IR,
+\]</span></p>
+<p>with <span class="math inline">\(R\)</span> the <em>resistance</em>
+in ohms (Ω <span class="math inline">\(=\)</span> V/A). The picture: the
+field pushes each electron, but every <span
+class="math inline">\(10^{-14}\)</span> s or so it collides with the
+vibrating ions of the crystal and loses its forward motion, so it
+reaches an average drift speed proportional to the field, as a ball
+falling through treacle reaches a steady speed. In terms of the
+material, <span class="math inline">\(\mathbf{J} =
+\sigma\boldsymbol{\mathcal{E}}\)</span> with <span
+class="math inline">\(\sigma\)</span> the <em>conductivity</em>, and a
+wire of length <span class="math inline">\(L\)</span> and area <span
+class="math inline">\(A\)</span> has</p>
+<p><span class="math display">\[
+R = \rho\frac{L}{A},
+\]</span></p>
+<p>with <span class="math inline">\(\rho = 1/\sigma\)</span> the
+<em>resistivity</em> in Ω m (the same Greek letter as charge density;
+context tells them apart). Copper at room temperature has <span
+class="math inline">\(\rho = 1.68 \times 10^{-8}\)</span> Ω m; 100 m of
+1 mm<span class="math inline">\(^2\)</span> copper wire has <span
+class="math inline">\(1.68 \times 10^{-8} \times 100/10^{-6} =
+1.68\)</span> Ω. Ohm’s law is not a law of nature like Coulomb’s but a
+property of many materials; it fails for diodes, vacuum tubes, gas
+discharges and beams, whose current depends on voltage in other ways. At
+low temperatures some metals lose their resistance completely:
+<em>superconductors</em>, which carry the LHC’s currents (<a
+href="17-magnets.html">chapter 17</a>).</p>
+<p><strong>Power.</strong> A charge <span
+class="math inline">\(dQ\)</span> falling through a voltage <span
+class="math inline">\(V\)</span> gives up energy <span
+class="math inline">\(V\,dQ\)</span>; per second that is</p>
+<p><span class="math display">\[
+P = IV = I^2R = \frac{V^2}{R}
+\]</span></p>
+<p>in watts. In a resistor it becomes heat, in a beam it becomes the
+particles’ energy. Ten amperes through the 1.68 Ω wire above waste 168
+W. The 10 mA beam from 2 kV carries <span class="math inline">\(0.01
+\times 2000 = 20\)</span> W, all of it delivered as heat where it stops;
+a 1 mA beam at 1 MeV carries 1 kW, and stopping it in a few millimetres
+of metal takes water cooling.</p>
+<h3 id="9-circuits-kirchhoffs-laws-and-rc">9. Circuits: Kirchhoff’s
+laws, and RC</h3>
+<p><strong>Kirchhoff’s laws.</strong> A <em>circuit</em> is a network of
+wires and components. Two rules, given by Gustav Kirchhoff in 1845,
+solve any network.</p>
+<ul>
+<li><strong>The junction rule.</strong> At any junction the currents
+flowing in add up to the currents flowing out. This is conservation of
+charge: in a steady state, charge cannot pile up at a point.</li>
+<li><strong>The loop rule.</strong> Round any closed loop the voltages
+add up to zero. This is the fact that a static field is the gradient of
+a potential (F2, section 7): go round a loop and you come back to the
+same height. (Section 13 shows where it fails: in a loop whose magnetic
+flux is changing.)</li>
+</ul>
+<p><strong>Resistors in series and in parallel.</strong> In series, the
+same current passes through each and the voltages add: <span
+class="math inline">\(R = R_1 + R_2 + \dots\)</span>. In parallel, they
+share a voltage and the currents add:</p>
+<p><span class="math display">\[
+\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \dots
+\]</span></p>
+<p>The opposite of the capacitor rules, because a capacitor’s voltage is
+<span class="math inline">\(Q/C\)</span> while a resistor’s is <span
+class="math inline">\(IR\)</span>.</p>
+<p><em>Example: a voltage divider.</em> How do you measure a million
+volts with a meter that reads a thousand? Connect a chain of resistors
+totalling 1000 MΩ from the high-voltage terminal to a 1 MΩ resistor to
+ground. The same current, <span class="math inline">\(10^6/(1.001 \times
+10^9) = 1.0\)</span> mA, flows through both, and the small resistor has
+<span class="math inline">\(999\)</span> V across it, a thousandth of
+the total, which an ordinary meter reads (<a
+href="04-high-voltage-and-breakdown.html">chapter 4</a>). The divider
+draws 1 mA from the terminal and dissipates 1 kW, which is why real ones
+use larger resistances.</p>
+<p><strong>The RC circuit.</strong> Connect a charged capacitor <span
+class="math inline">\(C\)</span>, at voltage <span
+class="math inline">\(V_0\)</span>, across a resistor <span
+class="math inline">\(R\)</span>. Current flows, <span
+class="math inline">\(I = V/R\)</span>, and it drains the capacitor:
+<span class="math inline">\(dQ/dt = -I\)</span>. With <span
+class="math inline">\(Q = CV\)</span>,</p>
+<p><span class="math display">\[
+C\frac{dV}{dt} = -\frac{V}{R} \quad\Rightarrow\quad V = V_0e^{-t/RC} .
+\]</span></p>
+<p>This is F1’s decay equation (section 10) with the <em>time
+constant</em> <span class="math inline">\(\tau = RC\)</span> (ohms times
+farads is seconds). After one <span class="math inline">\(\tau\)</span>
+the voltage has fallen to 37 per cent, after <span
+class="math inline">\(\tau\ln2 = 0.69\tau\)</span> to half, after <span
+class="math inline">\(4.6\tau\)</span> to 1 per cent. Charging through
+<span class="math inline">\(R\)</span> from a fixed voltage <span
+class="math inline">\(V_0\)</span> runs the other way: <span
+class="math inline">\(V = V_0(1 - e^{-t/RC})\)</span>.</p>
+<p><em>Example: the electrostatic generator.</em> A belt carries a
+steady charging current <span class="math inline">\(I\)</span> up to the
+111 pF terminal of a 1 m sphere. To spread the voltage evenly, a
+resistor column of <span class="math inline">\(R = 10^{11}\)</span> Ω
+runs from the terminal to ground, and leaks a current <span
+class="math inline">\(V/R\)</span>. The terminal’s charge grows at the
+difference:</p>
+<p><span class="math display">\[
+C\frac{dV}{dt} = I - \frac{V}{R} \quad\Rightarrow\quad V = IR\,(1 -
+e^{-t/RC}) .
+\]</span></p>
+<p>With <span class="math inline">\(I = 10\)</span> μA, the voltage
+starts rising at <span class="math inline">\(I/C = 90\)</span> kV/s and
+settles at <span class="math inline">\(IR = 1\)</span> MV, with <span
+class="math inline">\(\tau = RC = 1.11 \times 10^{-10} \times 10^{11} =
+11.1\)</span> s. It reaches 90 per cent of the final voltage after <span
+class="math inline">\(\tau\ln10 = 25.6\)</span> s. A real machine also
+feeds the beam current and the corona losses, which add to the leak (<a
+href="06-the-electrostatic-generator.html">chapter 6</a>). Inductors,
+alternating currents and phasors are chapter 4’s <a
+href="04-high-voltage-and-breakdown.html#pre-requisite-rlc-circuits-and-phasors">pre-requisite
+on RLC circuits</a> and F5.</p>
+<h3 id="10-the-magnetic-field-and-its-force">10. The magnetic field, and
+its force</h3>
+<p><strong>The picture.</strong> A compass needle near a wire turns when
+a current flows (Ørsted, 1820). Two parallel wires carrying currents the
+same way attract; opposite ways, they repel. Moving charges, and only
+moving charges, make a <em>magnetic field</em> <span
+class="math inline">\(\mathbf{B}\)</span>, and feel one. A permanent
+magnet is no exception: its field comes from the electrons inside it,
+each spinning like a tiny current loop, all lined up (section 15).</p>
+<p><strong>The force on a moving charge.</strong> F2 (section 3) gave
+it: a charge <span class="math inline">\(q\)</span> moving with velocity
+<span class="math inline">\(\mathbf{v}\)</span> feels</p>
+<p><span class="math display">\[
+\mathbf{F} = q\,\mathbf{v}\times\mathbf{B},
+\]</span></p>
+<p>at right angles to both the velocity and the field. The tesla is
+defined by it: 1 T is the field in which 1 C moving at 1 m/s across the
+field feels 1 N. The Earth’s field is about 50 μT, a fridge magnet’s
+about 5 mT, an iron electromagnet’s up to about 2 T, a superconducting
+magnet’s 8 to 16 T. Since the force is always sideways, it does no work:
+a magnetic field bends a charged particle’s path but never changes its
+speed (F2, section 4). In a uniform field a particle goes round a circle
+of radius <span class="math inline">\(R = p/(qB)\)</span> at the
+cyclotron frequency <span class="math inline">\(qB/(2\pi m)\)</span>,
+the basis of <a href="10-the-cyclotron.html">chapter 10</a> and of every
+ring.</p>
+<p><strong>The force on a wire.</strong> A current is many moving
+charges. In a length <span class="math inline">\(L\)</span> of wire
+there are <span class="math inline">\(nAL\)</span> charges, each with
+velocity <span class="math inline">\(\mathbf{v}_d\)</span>, and the
+total force is <span
+class="math inline">\(nAL\,q\,\mathbf{v}_d\times\mathbf{B}\)</span>.
+Since <span class="math inline">\(nqv_dA = I\)</span>,</p>
+<p><span class="math display">\[
+\mathbf{F} = I\,\mathbf{L}\times\mathbf{B},
+\]</span></p>
+<p>with <span class="math inline">\(\mathbf{L}\)</span> along the
+current. A wire of 1 m carrying 100 A across 1 T is pushed with 100 N.
+An LHC dipole conductor, carrying 11 850 A in 8.33 T, is pushed with
+<span class="math inline">\(11\,850 \times 8.33 = 98.7\)</span> kN per
+metre, the weight of ten tonnes: the coils of a strong magnet must be
+clamped like a pressure vessel (<a href="17-magnets.html">chapter
+17</a>). This force on a current is how every electric motor works.</p>
+<p><strong>Two wires.</strong> A wire carrying <span
+class="math inline">\(I_1\)</span> sits in the field <span
+class="math inline">\(\mu_0I_2/(2\pi d)\)</span> of a parallel wire a
+distance <span class="math inline">\(d\)</span> away (section 12), and
+so feels <span class="math inline">\(\mu_0I_1I_2/(2\pi d)\)</span> per
+metre. For 1 A in each, 1 m apart, that is <span class="math inline">\(2
+\times 10^{-7}\)</span> N per metre; until 2019 this defined the ampere.
+Two beams of particles moving the same way are two currents that
+attract, while their charges repel; at the speed of light the two nearly
+cancel, which is why fast beams suffer less from their own space charge
+(<a href="22-intensity-limits.html">chapter 22</a>).</p>
+<p><strong>A current loop is a magnet.</strong> A flat loop of area
+<span class="math inline">\(A\)</span> carrying current <span
+class="math inline">\(I\)</span>, in a uniform field, feels no net force
+(the pushes on opposite sides cancel) but feels a turning force, a
+torque, of up to <span class="math inline">\(IAB\)</span>, which turns
+it to face across the field. It behaves like a compass needle with
+<em>magnetic moment</em> <span class="math inline">\(m = IA\)</span>, in
+A m<span class="math inline">\(^2\)</span>. That is the principle of the
+moving-coil meter, and on the atomic scale the electron’s spin gives it
+a magnetic moment of its own (<a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-spin-and-magnetic-moments">chapter
+7’s pre-requisite on spin</a>, and F7).</p>
+<h3 id="11-where-magnetic-fields-come-from-biotsavart">11. Where
+magnetic fields come from: Biot–Savart</h3>
+<p><strong>The law.</strong> Biot and Savart found, and Ampère’s theory
+confirmed, that a short piece <span
+class="math inline">\(d\mathbf{l}\)</span> of wire carrying current
+<span class="math inline">\(I\)</span> makes at a point a distance <span
+class="math inline">\(r\)</span> away the field</p>
+<p><span class="math display">\[
+d\mathbf{B} =
+\frac{\mu_0}{4\pi}\,\frac{I\,d\mathbf{l}\times\hat{\mathbf{r}}}{r^2},
+\]</span></p>
+<p>where <span class="math inline">\(\hat{\mathbf{r}}\)</span> points
+from the wire piece to the point, and <span class="math inline">\(\mu_0
+= 1.2566 \times 10^{-6}\)</span> T m/A is the <em>permeability of free
+space</em>. Like Coulomb’s law, the field falls as <span
+class="math inline">\(1/r^2\)</span>; unlike it, it points at right
+angles to both the current and the line to the point, so the field lines
+circle round the current. The direction follows the right-hand rule:
+thumb along the current, fingers curl the way <span
+class="math inline">\(\mathbf{B}\)</span> goes. The whole field of a
+circuit is the sum (integral) of the pieces, by superposition.</p>
+<p><strong>A loop, on its axis.</strong> A circular loop of radius <span
+class="math inline">\(R\)</span> carrying <span
+class="math inline">\(I\)</span>; find the field at a point on its axis,
+a distance <span class="math inline">\(z\)</span> from its centre. Every
+piece <span class="math inline">\(d\mathbf{l}\)</span> is at the same
+distance <span class="math inline">\(\sqrt{R^2 + z^2}\)</span> from the
+point, and at right angles to the line joining them, so each makes a
+field of size <span class="math inline">\(\mu_0I\,dl/(4\pi(R^2 +
+z^2))\)</span>. These fields point in a cone round the axis; going round
+the loop, their sideways parts cancel in opposite pairs, and only the
+part along the axis survives, a fraction <span
+class="math inline">\(R/\sqrt{R^2 + z^2}\)</span> of each. Adding round
+the loop, <span class="math inline">\(\int dl = 2\pi R\)</span>:</p>
+<p><span class="math display">\[
+B = \frac{\mu_0I}{4\pi}\,\frac{2\pi R}{R^2 + z^2}\,\frac{R}{\sqrt{R^2 +
+z^2}} = \frac{\mu_0IR^2}{2(R^2 + z^2)^{3/2}} .
+\]</span></p>
+<p>At the centre, <span class="math inline">\(z = 0\)</span>, it is
+<span class="math inline">\(\mu_0I/(2R)\)</span>. A coil of <span
+class="math inline">\(N\)</span> turns multiplies this by <span
+class="math inline">\(N\)</span>. A coil of 100 turns of radius 20 cm
+carrying 1 A makes <span class="math inline">\(1.2566 \times 10^{-6}
+\times 100/(2 \times 0.2) = 314\)</span> μT at its centre, six times the
+Earth’s field, and at <span class="math inline">\(z = R\)</span> only
+<span class="math inline">\(2^{-3/2} = 0.354\)</span> of that, 111 μT.
+Two such coils one radius apart (a <em>Helmholtz pair</em>) give a field
+that is very uniform in the middle, 450 μT here; J. J. Thomson used a
+pair to bend his cathode rays, and chapter 2 uses one to cancel the
+Earth’s field over a bench (<a
+href="02-the-cathode-ray-tube.html#pre-requisite-biot-savart-and-amperes-law">chapter
+2’s pre-requisite</a>).</p>
+<h3 id="12-ampères-law">12. Ampère’s law</h3>
+<p><strong>The law.</strong> For steady currents, F2 (section 11) gave
+the circulation of <span class="math inline">\(\mathbf{B}\)</span> round
+any closed loop:</p>
+<p><span class="math display">\[
+\oint_C\mathbf{B}\cdot d\mathbf{l} = \mu_0I_{\text{enc}},
+\]</span></p>
+<p>where <span class="math inline">\(I_{\text{enc}}\)</span> is the
+current passing through any surface bounded by the loop. With Stokes’s
+theorem this is <span class="math inline">\(\nabla\times\mathbf{B} =
+\mu_0\mathbf{J}\)</span>. It follows from Biot–Savart (Griffiths,
+section 5.3) and plays the part for magnetic fields that Gauss’s law
+plays for electric ones: always true for steady currents, and quick to
+use when symmetry gives the field’s direction and makes its size
+constant along a suitable loop.</p>
+<p><strong>A long straight wire.</strong> A circle of radius <span
+class="math inline">\(r\)</span> round the wire: <span
+class="math inline">\(B\cdot2\pi r = \mu_0I\)</span>, so</p>
+<p><span class="math display">\[
+B = \frac{\mu_0I}{2\pi r} .
+\]</span></p>
+<p>1 A at 1 cm gives 20 μT. A beam is a current too: a 1 A proton beam
+has 20 μT at 1 cm from it, which a beam current monitor picks up (<a
+href="08-seeing-the-beam.html">chapter 8</a>).</p>
+<p><strong>A long solenoid.</strong> A coil wound tightly along a long
+tube, with <span class="math inline">\(n\)</span> turns per metre each
+carrying <span class="math inline">\(I\)</span>. Inside, the field runs
+along the axis and is uniform; outside, the fields of the two sides of
+each turn nearly cancel, and it is very small. Take a rectangular loop
+with one side of length <span class="math inline">\(\ell\)</span> inside
+along the axis and the opposite side outside. Only the inside side
+contributes, <span class="math inline">\(B\ell\)</span>; the sides
+crossing the winding are at right angles to the field. The loop encloses
+<span class="math inline">\(n\ell\)</span> turns, each with current
+<span class="math inline">\(I\)</span>:</p>
+<p><span class="math display">\[
+B\ell = \mu_0n\ell I \quad\Rightarrow\quad B = \mu_0nI .
+\]</span></p>
+<p>The field does not depend on the coil’s radius or on where inside you
+are. 2000 turns per metre with 5 A give <span
+class="math inline">\(1.2566 \times 10^{-6} \times 2000 \times 5 =
+12.6\)</span> mT. Solenoids of this kind focus the beams of electron
+guns and low-energy linacs (<a
+href="07-ion-sources-and-electron-guns.html">chapter 7</a>).</p>
+<p><strong>Why air coils are not enough.</strong> For 1.5 T, a typical
+cyclotron field, an air-cored solenoid needs <span
+class="math inline">\(nI = B/\mu_0 = 1.19 \times 10^6\)</span>
+ampere-turns per metre. Copper at a safe current density of a few
+A/mm<span class="math inline">\(^2\)</span> would need a winding half a
+metre thick per metre of length, and the power to drive it. Iron
+(section 15) reduces this by a large factor.</p>
+<p><strong>Where it fails.</strong> Ampère’s law in this form holds only
+for steady currents. When charge is piling up somewhere, as on a
+capacitor plate while it charges, it gives contradictory answers;
+section 16 shows the cure.</p>
+<h3 id="13-magnetic-flux-and-nablacdotmathbfb--0">13. Magnetic flux, and
+<span class="math inline">\(\nabla\cdot\mathbf{B} = 0\)</span></h3>
+<p><strong>Flux.</strong> The <em>magnetic flux</em> through a surface
+is the flux of <span class="math inline">\(\mathbf{B}\)</span> (F2,
+section 9):</p>
+<p><span class="math display">\[
+\Phi_B = \int_S\mathbf{B}\cdot d\mathbf{A},
+\]</span></p>
+<p>in webers (Wb <span class="math inline">\(=\)</span> T m<span
+class="math inline">\(^2\)</span>). For a uniform field straight through
+a flat loop of area <span class="math inline">\(A\)</span>, <span
+class="math inline">\(\Phi_B = BA\)</span>. A field of 0.5 T through an
+orbit of radius 0.1 m is a flux of <span class="math inline">\(0.5
+\times \pi \times 0.1^2 = 0.0157\)</span> Wb.</p>
+<p><strong>No magnetic charges.</strong> Break a bar magnet in two and
+you get two magnets, each with a north and a south pole; no one has ever
+isolated a single magnetic pole. Magnetic field lines never begin or
+end: they close on themselves, running round currents. So the magnetic
+flux out of any closed surface is zero:</p>
+<p><span class="math display">\[
+\oint_S\mathbf{B}\cdot d\mathbf{A} = 0, \qquad \nabla\cdot\mathbf{B} = 0
+.
+\]</span></p>
+<p>This is the second of Maxwell’s equations, the magnetic Gauss’s law.
+One consequence is used all the time: the flux through a loop is the
+same for every surface that has the loop as its edge, so “the flux
+through a loop” has one meaning. Another is that the flux in an iron
+yoke must come back round: what crosses a magnet’s gap returns through
+the iron (<a href="17-magnets.html">chapter 17</a>).</p>
+<h3 id="14-induction-faraday-and-lenz">14. Induction: Faraday and
+Lenz</h3>
+<p><strong>The discovery.</strong> Faraday wound two coils on one iron
+ring. A steady current in the first did nothing to the second; but at
+the moment the first was switched on or off, a meter on the second
+kicked. A magnet pushed into a coil did the same, and a magnet held
+still did nothing. What counts is <em>change</em>.</p>
+<p><strong>Faraday’s law.</strong> Round any loop, the <em>electromotive
+force</em> (EMF), the work done per unit charge by the electric field
+going once round, is</p>
+<p><span class="math display">\[
+\text{EMF} = \oint_C\boldsymbol{\mathcal{E}}\cdot d\mathbf{l} =
+-\frac{d\Phi_B}{dt},
+\]</span></p>
+<p>minus the rate of change of the magnetic flux through the loop. EMF
+is in volts: 1 V is 1 Wb/s. For a coil of <span
+class="math inline">\(N\)</span> turns the flux passes through each turn
+and the EMF is <span class="math inline">\(N\)</span> times larger. With
+Stokes’s theorem it is the third of Maxwell’s equations:</p>
+<p><span class="math display">\[
+\nabla\times\boldsymbol{\mathcal{E}} =
+-\frac{\partial\mathbf{B}}{\partial t} .
+\]</span></p>
+<p><strong>What it means.</strong> A static electric field has no
+circulation (section 5): carried round a loop, a charge gains nothing. A
+changing magnetic field makes an electric field whose lines close on
+themselves, swirling round the changing flux, and a charge carried round
+gains energy every time. No wire is needed; the field is there in empty
+space. Kirchhoff’s loop rule fails in such a loop. This is the one way
+round the rule that a static field cannot give energy on a closed
+path.</p>
+<p><strong>Lenz’s rule.</strong> The minus sign says which way: the EMF
+drives a current whose own magnetic field opposes the <em>change</em> of
+flux. Push a magnet’s north pole into a coil, and the induced current
+makes the coil’s near face a north pole, pushing back. If the sign were
+the other way, the induced current would increase the flux, which would
+induce more current, and energy would come from nothing. Lenz’s rule is
+conservation of energy.</p>
+<p><em>Example: the betatron.</em> An electron goes round an orbit of
+radius 0.1 m inside which the average field rises by 0.5 T in 2 ms. The
+flux changes by <span class="math inline">\(0.0157\)</span> Wb, so the
+EMF round the orbit is <span class="math inline">\(0.0157/0.002 =
+7.85\)</span> V, an electric field of <span
+class="math inline">\(7.85/(2\pi \times 0.1) = 12.5\)</span> V/m along
+the orbit. Small; but an electron near the speed of light goes round
+<span class="math inline">\(9.5 \times 10^5\)</span> times in the 2 ms,
+gaining 7.85 eV each time, about 7.5 MeV in all. This is Kerst’s
+betatron (<a href="11-the-betatron.html">chapter 11</a>).</p>
+<p><strong>Eddy currents.</strong> A changing field through a solid lump
+of metal drives currents round inside it, which heat it and, by Lenz’s
+rule, oppose the change. That is why the iron of a pulsed or ramped
+magnet is built of thin insulated sheets (laminations), which cut the
+current paths; and why a beam pipe of metal inside a fast-ramping magnet
+must be thin or made of ceramic. Fields at radio frequencies cannot
+enter a good conductor more than a few micrometres: the <em>skin
+effect</em> of chapter 13’s <a
+href="13-rf-cavities-and-power.html#pre-requisite-fields-in-conductors-skin-depth-surface-resistance">pre-requisite
+on fields in conductors</a>.</p>
+<p><strong>Motional EMF.</strong> A metal rod of length <span
+class="math inline">\(L\)</span> slides at speed <span
+class="math inline">\(v\)</span> along two rails, across a field <span
+class="math inline">\(B\)</span> at right angles to rod, rails and
+motion. Each free charge <span class="math inline">\(q\)</span> in the
+rod moves with the rod and feels <span
+class="math inline">\(qvB\)</span> along the rod, and so is pushed from
+one end to the other. The work done per unit charge along the rod is</p>
+<p><span class="math display">\[
+\text{EMF} = BLv .
+\]</span></p>
+<p>The same answer comes from Faraday’s law: the circuit of rod and
+rails grows in area by <span class="math inline">\(Lv\)</span> each
+second, so <span class="math inline">\(d\Phi_B/dt = BLv\)</span>.
+Faraday’s law covers both a field that changes and a circuit that moves.
+An aircraft with a 60 m wingspan flying at 250 m/s through a vertical
+Earth’s field of 50 μT has 0.75 V between its wing tips. A coil of <span
+class="math inline">\(N\)</span> turns and area <span
+class="math inline">\(A\)</span> spinning at angular rate <span
+class="math inline">\(\omega\)</span> in a field <span
+class="math inline">\(B\)</span> sees a flux <span
+class="math inline">\(BA\cos\omega t\)</span> and an EMF <span
+class="math inline">\(NBA\omega\sin\omega t\)</span>: the
+alternating-current generator. With 100 turns of 0.01 m<span
+class="math inline">\(^2\)</span> in 0.5 T at 50 Hz, the peak EMF is 157
+V.</p>
+<p>The deeper reading of <a
+href="01-why-accelerate.html#pre-requisite-faraday-induction-inductance-and-magnetic-energy">Faraday’s
+law in chapter 1</a> adds the “two-to-one rule” of the betatron and the
+induction linac.</p>
+<h3 id="15-inductance-magnetic-energy-lr-circuits-and-iron">15.
+Inductance, magnetic energy, LR circuits and iron</h3>
+<p><strong>Self-inductance.</strong> A current <span
+class="math inline">\(I\)</span> in a coil makes a field, and so a flux
+through its own turns, proportional to <span
+class="math inline">\(I\)</span>. The ratio of the total flux linkage to
+the current is the coil’s <em>inductance</em>:</p>
+<p><span class="math display">\[
+L = \frac{N\Phi_B}{I},
+\]</span></p>
+<p>in henries (H <span class="math inline">\(=\)</span> Wb/A). When the
+current changes, so does the flux, and Faraday’s law puts an EMF across
+the coil that opposes the change:</p>
+<p><span class="math display">\[
+V = L\frac{dI}{dt} .
+\]</span></p>
+<p>An inductor resists changes of current as a mass resists changes of
+speed. For a long solenoid of <span class="math inline">\(N\)</span>
+turns, length <span class="math inline">\(\ell\)</span> and
+cross-section <span class="math inline">\(A\)</span>, <span
+class="math inline">\(B = \mu_0NI/\ell\)</span> and <span
+class="math inline">\(\Phi_B = BA\)</span>, so</p>
+<p><span class="math display">\[
+L = \frac{\mu_0N^2A}{\ell} .
+\]</span></p>
+<p>1000 turns on a tube of radius 2 cm and length 50 cm have <span
+class="math inline">\(L = 3.16\)</span> mH.</p>
+<p><strong>Energy stored.</strong> To raise the current, a supply must
+push against the back EMF, delivering power <span
+class="math inline">\(VI = LI\,dI/dt\)</span>. From zero to <span
+class="math inline">\(I\)</span>:</p>
+<p><span class="math display">\[
+U = \int_0^IL\,i\,di = \tfrac12LI^2 .
+\]</span></p>
+<p>As with the capacitor, the energy is in the field. For the solenoid,
+<span class="math inline">\(\tfrac12LI^2 = \tfrac12(\mu_0N^2A/\ell)I^2 =
+(B^2/2\mu_0)\times A\ell\)</span>, and <span
+class="math inline">\(A\ell\)</span> is the volume inside, so a magnetic
+field stores</p>
+<p><span class="math display">\[
+u_B = \frac{B^2}{2\mu_0} \quad [\text{J/m}^3] .
+\]</span></p>
+<p>At 1 T that is 0.40 MJ per cubic metre; at the LHC’s 8.33 T, 27.6 MJ
+per cubic metre. Compare air’s 40 J/m<span
+class="math inline">\(^3\)</span> at its electric breakdown field: a
+magnetic field stores some ten thousand times more energy per volume
+than any electric field in air, which is why rings bend with magnets,
+not electrodes (<a href="01-why-accelerate.html">chapter 1</a>). The
+energy density is also a pressure, <span
+class="math inline">\(B^2/2\mu_0\)</span>, pushing the coils of a magnet
+outwards. One LHC dipole, with <span class="math inline">\(L =
+98.7\)</span> mH at 11 850 A, stores <span
+class="math inline">\(\tfrac12 \times 0.0987 \times 11\,850^2 =
+6.93\)</span> MJ; if a superconducting coil loses its superconductivity,
+that energy must be taken out safely in less than a second (<a
+href="17-magnets.html">chapter 17</a>).</p>
+<p><strong>The LR circuit.</strong> Connect a coil of inductance <span
+class="math inline">\(L\)</span> and resistance <span
+class="math inline">\(R\)</span> to a supply of fixed voltage <span
+class="math inline">\(V_0\)</span>. The loop rule, now with the coil’s
+EMF included, gives <span class="math inline">\(V_0 = IR +
+L\,dI/dt\)</span>. The current rises towards <span
+class="math inline">\(V_0/R\)</span> as</p>
+<p><span class="math display">\[
+I = \frac{V_0}{R}\,(1 - e^{-tR/L}),
+\]</span></p>
+<p>with time constant <span class="math inline">\(\tau = L/R\)</span>;
+switch the supply out (with the coil shorted through its resistance) and
+it decays as <span class="math inline">\(e^{-tR/L}\)</span>. A magnet of
+0.5 H and 0.1 Ω on a 100 V supply has <span class="math inline">\(\tau =
+5\)</span> s, and settles at 1000 A after about <span
+class="math inline">\(\tau\ln10 = 11.5\)</span> s to reach 90 per cent;
+its initial rate of rise is <span class="math inline">\(V_0/L =
+200\)</span> A/s. The bigger the inductance, the more voltage it takes
+to ramp the current fast. The Bevatron’s magnet stored 78 MJ at 8400 A,
+an inductance of <span class="math inline">\(2 \times 78 \times
+10^6/8400^2 = 2.2\)</span> H; with its 15 kV supply, the current could
+rise at most at <span class="math inline">\(15\,000/2.2 = 6800\)</span>
+A/s, and the ramp to full current took at least 1.2 s (<a
+href="15-the-synchrotron.html">chapter 15</a>).</p>
+<p><strong>Magnetic materials and iron.</strong> In most materials, the
+atoms’ magnetic moments (section 10) are weak or point at random, and
+the material hardly changes a field. In iron, nickel and cobalt
+(<em>ferromagnets</em>) the moments line up with each other in regions
+called domains, and an applied field turns whole domains to point along
+it. The iron’s own field then adds to the coil’s and multiplies it by
+the <em>relative permeability</em> <span
+class="math inline">\(\mu_r\)</span>, hundreds to thousands. The iron’s
+contribution is limited: once every domain is lined up, the iron is
+<em>saturated</em>, at about 2 T, and further current adds only what an
+air coil would. And a ferromagnet remembers: after the current is
+switched off, some field remains (<em>hysteresis</em>), which is why
+accelerator magnets are cycled the same way each time (<a
+href="15-the-synchrotron.html">chapter 15</a>).</p>
+<p><strong>The iron electromagnet.</strong> An accelerator dipole is a C
+or H shape of iron with a gap of height <span
+class="math inline">\(g\)</span> where the beam goes, driven by a coil
+of <span class="math inline">\(N\)</span> turns carrying <span
+class="math inline">\(I\)</span>. Ampère’s law round the iron and across
+the gap is easiest written with the field <span class="math inline">\(H
+= B/(\mu_0\mu_r)\)</span>, in A/m, whose circulation is the current:
+<span class="math inline">\(\oint H\,dl = NI\)</span>. In the iron,
+<span class="math inline">\(\mu_r\)</span> is large and <span
+class="math inline">\(H\)</span> tiny; nearly all of <span
+class="math inline">\(NI\)</span> is spent across the gap, where <span
+class="math inline">\(H = B/\mu_0\)</span>. So</p>
+<p><span class="math display">\[
+B \approx \frac{\mu_0NI}{g} .
+\]</span></p>
+<p>The iron’s job is to carry the flux round and back, cheaply; the gap
+sets the ampere-turns. A cyclotron magnet with 1.5 T across a 10 cm gap
+needs <span class="math inline">\(NI = Bg/\mu_0 = 1.19 \times
+10^5\)</span> ampere-turns, a tenth of what the metre-long air solenoid
+of section 12 needed per metre. Above 2 T the iron saturates, and the
+LHC’s 8.33 T comes from superconducting coils, with the iron only as a
+return path. The full theory is chapter 8’s <a
+href="08-seeing-the-beam.html#pre-requisite-magnetic-circuits-and-iron">pre-requisite
+on magnetic circuits and iron</a>.</p>
+<h3 id="16-the-displacement-current-and-maxwells-four-equations">16. The
+displacement current, and Maxwell’s four equations</h3>
+<p><strong>A gap in Ampère’s law.</strong> Charge a capacitor through a
+wire carrying current <span class="math inline">\(I\)</span>. Draw a
+loop round the wire. Ampère’s law says the circulation of <span
+class="math inline">\(\mathbf{B}\)</span> round it is <span
+class="math inline">\(\mu_0I\)</span>, where <span
+class="math inline">\(I\)</span> is the current through <em>any</em>
+surface bounded by the loop. A flat disc is cut by the wire: <span
+class="math inline">\(\mu_0I\)</span>. But a bag-shaped surface with the
+same edge, passing between the capacitor’s plates, is cut by no current
+at all: zero. The law gives two answers. The same trouble appears in the
+mathematics: the divergence of a curl is zero (F2, section 11), so <span
+class="math inline">\(\nabla\times\mathbf{B} = \mu_0\mathbf{J}\)</span>
+demands <span class="math inline">\(\nabla\cdot\mathbf{J} = 0\)</span>,
+which contradicts the continuity equation of section 8 wherever charge
+is piling up.</p>
+<p><strong>Maxwell’s cure.</strong> Between the plates there is no
+current, but there is a changing electric field. As the plates charge,
+<span class="math inline">\(\mathcal{E} = Q/(\varepsilon_0A)\)</span>
+grows, and <span class="math inline">\(\varepsilon_0A\,d\mathcal{E}/dt =
+dQ/dt = I\)</span>: the changing field through the gap carries exactly
+the current that the wire carries to the plate. Maxwell added this
+<em>displacement current</em> to Ampère’s law:</p>
+<p><span class="math display">\[
+\oint_C\mathbf{B}\cdot d\mathbf{l} = \mu_0I_{\text{enc}} +
+\mu_0\varepsilon_0\frac{d\Phi_E}{dt},
+\]</span></p>
+<p>with <span class="math inline">\(\Phi_E =
+\int\boldsymbol{\mathcal{E}}\cdot d\mathbf{A}\)</span> the electric flux
+through the surface. Now both surfaces give <span
+class="math inline">\(\mu_0I\)</span>. In differential form,</p>
+<p><span class="math display">\[
+\nabla\times\mathbf{B} = \mu_0\mathbf{J} +
+\mu_0\varepsilon_0\frac{\partial\boldsymbol{\mathcal{E}}}{\partial t},
+\]</span></p>
+<p>and taking the divergence of both sides now gives <span
+class="math inline">\(0 = \nabla\cdot\mathbf{J} + \partial\rho/\partial
+t\)</span>, the continuity equation: the new term is exactly what charge
+conservation requires. In words, a changing electric field makes a
+magnetic field, just as a changing magnetic field makes an electric
+one.</p>
+<p><em>Example: an RF gap.</em> In an accelerating cavity the field
+across a gap of area 0.01 m<span class="math inline">\(^2\)</span>
+swings with amplitude 1 MV/m at 200 MHz, <span
+class="math inline">\(\mathcal{E} = \mathcal{E}_0\sin\omega t\)</span>
+with <span class="math inline">\(\omega = 2\pi \times 200 \times
+10^6\)</span> s<span class="math inline">\(^{-1}\)</span>. The
+displacement current through the gap has amplitude <span
+class="math inline">\(\varepsilon_0\omega\mathcal{E}_0A = 8.854 \times
+10^{-12} \times 1.257 \times 10^9 \times 10^6 \times 0.01 = 111\)</span>
+A. It makes a magnetic field circling the gap, and real currents of the
+same size flow in the cavity’s walls: at radio frequencies the
+displacement current is not small at all (<a
+href="13-rf-cavities-and-power.html">chapter 13</a>). In a steady or
+slowly changing circuit, it is negligible, and Ampère’s original law is
+fine.</p>
+<p><strong>Maxwell’s equations.</strong> All of electromagnetism, in
+four equations. In integral form, for any closed surface <span
+class="math inline">\(S\)</span> or any loop <span
+class="math inline">\(C\)</span> bounding a surface:</p>
+<p><span class="math display">\[
+\oint_S\boldsymbol{\mathcal{E}}\cdot d\mathbf{A} =
+\frac{Q_{\text{enc}}}{\varepsilon_0}
+\]</span></p>
+<p><span class="math display">\[
+\oint_S\mathbf{B}\cdot d\mathbf{A} = 0
+\]</span></p>
+<p><span class="math display">\[
+\oint_C\boldsymbol{\mathcal{E}}\cdot d\mathbf{l} = -\frac{d\Phi_B}{dt}
+\]</span></p>
+<p><span class="math display">\[
+\oint_C\mathbf{B}\cdot d\mathbf{l} = \mu_0I_{\text{enc}} +
+\mu_0\varepsilon_0\frac{d\Phi_E}{dt}
+\]</span></p>
+<p>and in differential form, at every point:</p>
+<p><span class="math display">\[
+\nabla\cdot\boldsymbol{\mathcal{E}} = \frac{\rho}{\varepsilon_0}, \qquad
+\nabla\cdot\mathbf{B} = 0,
+\]</span></p>
+<p><span class="math display">\[
+\nabla\times\boldsymbol{\mathcal{E}} =
+-\frac{\partial\mathbf{B}}{\partial t}, \qquad \nabla\times\mathbf{B} =
+\mu_0\mathbf{J} +
+\mu_0\varepsilon_0\frac{\partial\boldsymbol{\mathcal{E}}}{\partial t} .
+\]</span></p>
+<p>What each says:</p>
+<ol type="1">
+<li><strong>Gauss’s law.</strong> Electric field lines start and end on
+charges; the flux out of a surface counts the charge inside. (Coulomb’s
+law, section 4.)</li>
+<li><strong>No magnetic charges.</strong> Magnetic field lines never
+end; they close on themselves. (Section 13.)</li>
+<li><strong>Faraday’s law.</strong> A changing magnetic field makes a
+circulating electric field. When nothing changes, the electric field has
+no circulation and is the gradient of a potential. (Section 14.)</li>
+<li><strong>The Ampère–Maxwell law.</strong> Currents and changing
+electric fields make a circulating magnetic field. (Sections 12 and
+16.)</li>
+</ol>
+<p>Add the Lorentz force, <span class="math inline">\(\mathbf{F} =
+q(\boldsymbol{\mathcal{E}} + \mathbf{v}\times\mathbf{B})\)</span>, which
+says what the fields do to charges, and nothing else is needed for the
+classical theory: every field in every chapter of this course is a
+solution of these equations for some arrangement of charges, currents
+and boundaries. The equations are <em>linear</em> in the fields and
+sources, so superposition holds. They also hold unchanged at any speed:
+special relativity was found in 1905 by taking them seriously (<a
+href="01-why-accelerate.html#pre-requisite-relativistic-motion-in-electric-and-magnetic-fields">chapter
+1’s pre-requisite on relativistic motion</a>). Inside matter they are
+often written with <span class="math inline">\(\mathbf{D}\)</span> and
+<span class="math inline">\(\mathbf{H}\)</span> to hide the bound
+charges and currents of sections 7 and 15; the forms above, with all
+charges and currents counted, are always true.</p>
+<h3 id="17-electromagnetic-waves">17. Electromagnetic waves</h3>
+<p><strong>Why there must be waves.</strong> By equations 3 and 4, a
+changing magnetic field makes an electric field, and a changing electric
+field makes a magnetic field. Each can keep the other going, with no
+charges at all, and the disturbance moves off through empty space. Here
+is the simplest case, done with F1’s partial derivatives.</p>
+<p><strong>The wave equation.</strong> In empty space (<span
+class="math inline">\(\rho = 0\)</span>, <span
+class="math inline">\(\mathbf{J} = 0\)</span>), suppose the electric
+field points along <span class="math inline">\(y\)</span> and the
+magnetic field along <span class="math inline">\(z\)</span>, and both
+depend only on <span class="math inline">\(x\)</span> and <span
+class="math inline">\(t\)</span>: <span
+class="math inline">\(\boldsymbol{\mathcal{E}} = (0, \mathcal{E}_y(x,
+t), 0)\)</span> and <span class="math inline">\(\mathbf{B} = (0, 0,
+B_z(x, t))\)</span>. Both divergences are zero. The curls, from F2’s
+formula with only <span class="math inline">\(x\)</span> derivatives
+surviving, are <span
+class="math inline">\(\nabla\times\boldsymbol{\mathcal{E}} = (0, 0,
+\partial\mathcal{E}_y/\partial x)\)</span> and <span
+class="math inline">\(\nabla\times\mathbf{B} = (0, -\partial
+B_z/\partial x, 0)\)</span>. So equations 3 and 4 become</p>
+<p><span class="math display">\[
+\frac{\partial\mathcal{E}_y}{\partial x} = -\frac{\partial B_z}{\partial
+t}, \qquad \frac{\partial B_z}{\partial x} =
+-\mu_0\varepsilon_0\frac{\partial\mathcal{E}_y}{\partial t} .
+\]</span></p>
+<p>Differentiate the first with respect to <span
+class="math inline">\(x\)</span>, and use the second (the order of
+partial derivatives does not matter, F1 section 9):</p>
+<p><span class="math display">\[
+\frac{\partial^2\mathcal{E}_y}{\partial x^2} = -\frac{\partial}{\partial
+t}\frac{\partial B_z}{\partial x} =
+\mu_0\varepsilon_0\frac{\partial^2\mathcal{E}_y}{\partial t^2} .
+\]</span></p>
+<p>This is the <em>wave equation</em>. Any shape <span
+class="math inline">\(f\)</span> moving along <span
+class="math inline">\(x\)</span> at speed <span
+class="math inline">\(v\)</span>, <span
+class="math inline">\(\mathcal{E}_y = f(x - vt)\)</span>, satisfies it
+if <span class="math inline">\(v^2 = 1/(\mu_0\varepsilon_0)\)</span>: by
+the chain rule, <span class="math inline">\(\partial^2/\partial
+x^2\)</span> gives <span class="math inline">\(f&#39;&#39;\)</span> and
+<span class="math inline">\(\partial^2/\partial t^2\)</span> gives <span
+class="math inline">\(v^2f&#39;&#39;\)</span>. So the field moves at</p>
+<p><span class="math display">\[
+c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} = \frac{1}{\sqrt{1.2566 \times
+10^{-6} \times 8.854 \times 10^{-12}}} = 2.998 \times 10^8\ \text{m/s},
+\]</span></p>
+<p>the speed of light, computed from the constants of electricity and
+magnetism. This was Maxwell’s discovery: light is an electromagnetic
+wave. Radio waves, the RF power that feeds cavities, X-rays and the
+synchrotron radiation of <a href="20-synchrotron-radiation.html">chapter
+20</a> are the same thing at other wavelengths.</p>
+<p><strong>The magnetic part.</strong> Putting <span
+class="math inline">\(\mathcal{E}_y = f(x - ct)\)</span> into the first
+equation, <span class="math inline">\(\partial B_z/\partial t =
+-f&#39;\)</span>, which is satisfied by <span class="math inline">\(B_z
+= f(x - ct)/c\)</span>. So in the wave the two fields are in step, at
+right angles to each other and to the direction of travel, with</p>
+<p><span class="math display">\[
+\mathcal{E} = cB .
+\]</span></p>
+<p>An electric field of 1 kV/m goes with a magnetic field of only 3.3
+μT. F5 develops waves fully, with sine waves, wavelength and frequency,
+and chapter 13’s <a
+href="13-rf-cavities-and-power.html#pre-requisite-maxwells-equations-and-the-wave-equation">pre-requisite
+on Maxwell’s equations and the wave equation</a> takes them into
+cavities and waveguides.</p>
+<h3 id="18-energy-flow-the-poynting-vector">18. Energy flow: the
+Poynting vector</h3>
+<p><strong>Energy on the move.</strong> Fields store energy, <span
+class="math inline">\(\tfrac12\varepsilon_0\mathcal{E}^2 +
+B^2/2\mu_0\)</span> per cubic metre (sections 6 and 15). When fields
+change, that energy moves. Poynting showed, from Maxwell’s equations,
+that the energy flows with the vector</p>
+<p><span class="math display">\[
+\mathbf{S} = \frac{1}{\mu_0}\,\boldsymbol{\mathcal{E}}\times\mathbf{B},
+\]</span></p>
+<p>whose size is the power crossing a square metre at right angles to
+it, in W/m<span class="math inline">\(^2\)</span>. Its direction, at
+right angles to both fields, is the direction the energy travels. The
+derivation, and the full energy balance called Poynting’s theorem, is in
+chapter 13’s <a
+href="13-rf-cavities-and-power.html#pre-requisite-poyntings-theorem-energy-and-power-flow">pre-requisite
+on Poynting’s theorem</a>.</p>
+<p><strong>In a wave.</strong> With <span
+class="math inline">\(\mathcal{E} = cB\)</span>, the two energy
+densities are equal: <span class="math inline">\(B^2/2\mu_0 =
+\mathcal{E}^2/(2\mu_0c^2) = \tfrac12\varepsilon_0\mathcal{E}^2\)</span>.
+The wave of section 17 has <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> along <span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(\mathbf{B}\)</span> along <span
+class="math inline">\(z\)</span>, so <span
+class="math inline">\(\mathbf{S}\)</span> points along <span
+class="math inline">\(\hat{\mathbf{y}}\times\hat{\mathbf{z}} =
+\hat{\mathbf{x}}\)</span>, the way the wave goes, with size <span
+class="math inline">\(\mathcal{E}B/\mu_0 =
+\varepsilon_0c\,\mathcal{E}^2\)</span>: the energy density, <span
+class="math inline">\(\varepsilon_0\mathcal{E}^2\)</span>, carried at
+speed <span class="math inline">\(c\)</span>. For a sine wave of
+amplitude <span class="math inline">\(\mathcal{E}_0\)</span> the average
+of <span class="math inline">\(\sin^2\)</span> is <span
+class="math inline">\(\tfrac12\)</span> (F1), so the average power per
+area, the <em>intensity</em>, is <span
+class="math inline">\(\tfrac12\varepsilon_0c\mathcal{E}_0^2\)</span>.
+Sunlight at the Earth delivers 1361 W/m<span
+class="math inline">\(^2\)</span>, so</p>
+<p><span class="math display">\[
+\mathcal{E}_0 = \sqrt{\frac{2 \times 1361}{8.854 \times 10^{-12} \times
+2.998 \times 10^8}} = 1013\ \text{V/m},
+\]</span></p>
+<p>with a magnetic amplitude of <span
+class="math inline">\(\mathcal{E}_0/c = 3.4\)</span> μT.</p>
+<p><strong>In a wire.</strong> The Poynting vector says something
+surprising about an ordinary wire. Take 10 A in 1 mm<span
+class="math inline">\(^2\)</span> copper (radius 0.564 mm), with 0.0168
+Ω per metre. Along the wire there is a field <span
+class="math inline">\(\mathcal{E} = IR/\ell = 0.168\)</span> V/m pushing
+the current; round it, <span class="math inline">\(B = \mu_0I/(2\pi r) =
+3.54\)</span> mT at the surface. <span
+class="math inline">\(\mathbf{S}\)</span> points radially <em>into</em>
+the wire, with size <span class="math inline">\(\mathcal{E}B/\mu_0 =
+474\)</span> W/m<span class="math inline">\(^2\)</span>. Over a metre of
+surface, <span class="math inline">\(2\pi r\)</span> square metres, that
+is <span class="math inline">\(474 \times 2\pi \times 0.000564 =
+1.68\)</span> W, exactly the <span class="math inline">\(I^2R\)</span>
+heating of a metre of wire. The energy that heats a wire does not travel
+inside it with the electrons; it flows in through the space round it,
+from the fields. In a coaxial cable or a waveguide carrying RF power to
+a cavity, the energy likewise travels in the field between the
+conductors, and the metal only guides it (<a
+href="13-rf-cavities-and-power.html">chapter 13</a>).</p>
+<h3 id="19-the-units-together">19. The units, together</h3>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>In other units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charge</td>
+<td><span class="math inline">\(q\)</span>, <span
+class="math inline">\(Q\)</span></td>
+<td>coulomb, C</td>
+<td>A s</td>
+</tr>
+<tr>
+<td>Current</td>
+<td><span class="math inline">\(I\)</span></td>
+<td>ampere, A</td>
+<td>C/s</td>
+</tr>
+<tr>
+<td>Potential, EMF</td>
+<td><span class="math inline">\(V\)</span></td>
+<td>volt, V</td>
+<td>J/C, W/A</td>
+</tr>
+<tr>
+<td>Electric field</td>
+<td><span class="math inline">\(\mathcal{E}\)</span></td>
+<td>V/m</td>
+<td>N/C</td>
+</tr>
+<tr>
+<td>Capacitance</td>
+<td><span class="math inline">\(C\)</span></td>
+<td>farad, F</td>
+<td>C/V</td>
+</tr>
+<tr>
+<td>Resistance</td>
+<td><span class="math inline">\(R\)</span></td>
+<td>ohm, Ω</td>
+<td>V/A</td>
+</tr>
+<tr>
+<td>Magnetic field</td>
+<td><span class="math inline">\(B\)</span></td>
+<td>tesla, T</td>
+<td>N/(A m), V s/m<span class="math inline">\(^2\)</span></td>
+</tr>
+<tr>
+<td>Magnetic flux</td>
+<td><span class="math inline">\(\Phi_B\)</span></td>
+<td>weber, Wb</td>
+<td>T m<span class="math inline">\(^2\)</span>, V s</td>
+</tr>
+<tr>
+<td>Inductance</td>
+<td><span class="math inline">\(L\)</span></td>
+<td>henry, H</td>
+<td>Wb/A, V s/A</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td><span class="math inline">\(U\)</span>, <span
+class="math inline">\(W\)</span></td>
+<td>joule, J</td>
+<td>C V; 1 eV <span class="math inline">\(= 1.602 \times
+10^{-19}\)</span> J</td>
+</tr>
+</tbody>
+</table>
+<p>Two useful checks: <span class="math inline">\(RC\)</span> and <span
+class="math inline">\(L/R\)</span> are times in seconds, and <span
+class="math inline">\(1/\sqrt{LC}\)</span> is an angular frequency in
+s<span class="math inline">\(^{-1}\)</span>, the ringing of a circuit
+with both (F5). The constants: <span class="math inline">\(\varepsilon_0
+= 8.854 \times 10^{-12}\)</span> F/m, <span class="math inline">\(\mu_0
+= 1.2566 \times 10^{-6}\)</span> H/m (the same as T m/A), and <span
+class="math inline">\(\mu_0\varepsilon_0 = 1/c^2\)</span>. Since 2019
+the SI fixes <span class="math inline">\(e\)</span> and <span
+class="math inline">\(c\)</span> exactly; <span
+class="math inline">\(\varepsilon_0\)</span> and <span
+class="math inline">\(\mu_0\)</span> are measured, and <span
+class="math inline">\(\mu_0\)</span> is <span class="math inline">\(4\pi
+\times 10^{-7}\)</span> to within a part in <span
+class="math inline">\(10^9\)</span>.</p>
+<p>Older books, and much of theoretical physics, use <em>Gaussian</em>
+units, in which Coulomb’s law is <span class="math inline">\(F =
+q_1q_2/r^2\)</span> with no <span
+class="math inline">\(\varepsilon_0\)</span>, charge is in statcoulombs
+and <span class="math inline">\(B\)</span> in gauss (1 T <span
+class="math inline">\(= 10^4\)</span> G). The physics is the same; the
+equations look different by factors of <span
+class="math inline">\(4\pi\)</span> and <span
+class="math inline">\(c\)</span>. This course uses SI throughout, but
+the accelerator literature quotes fields in kilogauss (1 kG <span
+class="math inline">\(= 0.1\)</span> T) well into the 1970s.</p>
+<h2 id="where-the-course-uses-it">Where the course uses it</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th>First used in</th>
+<th>For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coulomb’s law, potential energy</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>The Coulomb barrier, energy in eV</td>
+</tr>
+<tr>
+<td>Gauss’s law, fields of spheres, lines and plates</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="06-the-electrostatic-generator.html">chapter 6</a></td>
+<td>Terminals, deflecting plates, beam space charge</td>
+</tr>
+<tr>
+<td>Potential, equipotentials, conductors</td>
+<td><a href="02-the-cathode-ray-tube.html">Chapter 2</a>, <a
+href="07-ion-sources-and-electron-guns.html">chapter 7</a></td>
+<td>Electron guns, electrodes, lenses</td>
+</tr>
+<tr>
+<td>Capacitance, stored energy, dielectrics</td>
+<td><a href="04-high-voltage-and-breakdown.html">Chapter 4</a>, <a
+href="05-the-voltage-multiplier.html">chapter 5</a></td>
+<td>Insulation, multipliers, safety</td>
+</tr>
+<tr>
+<td>Current, Ohm’s law, RC circuits</td>
+<td><a href="05-the-voltage-multiplier.html">Chapter 5</a>, <a
+href="06-the-electrostatic-generator.html">chapter 6</a></td>
+<td>Ripple, charging, resistor columns</td>
+</tr>
+<tr>
+<td>Magnetic force, Biot–Savart, Ampère</td>
+<td><a href="02-the-cathode-ray-tube.html">Chapter 2</a>, <a
+href="10-the-cyclotron.html">chapter 10</a>, <a
+href="17-magnets.html">chapter 17</a></td>
+<td>Bending, coils, magnet design</td>
+</tr>
+<tr>
+<td>Faraday’s law, induction</td>
+<td><a href="08-seeing-the-beam.html">Chapter 8</a>, <a
+href="11-the-betatron.html">chapter 11</a></td>
+<td>Current transformers, the betatron</td>
+</tr>
+<tr>
+<td>Inductance, magnetic energy, iron</td>
+<td><a href="15-the-synchrotron.html">Chapter 15</a>, <a
+href="17-magnets.html">chapter 17</a></td>
+<td>Ramping magnets, stored energy, quench</td>
+</tr>
+<tr>
+<td>Displacement current, Maxwell’s equations</td>
+<td><a href="13-rf-cavities-and-power.html">Chapter 13</a>, <a
+href="14-linear-accelerators.html">chapter 14</a></td>
+<td>Cavities, waveguides</td>
+</tr>
+<tr>
+<td>Waves, Poynting vector</td>
+<td><a href="13-rf-cavities-and-power.html">Chapter 13</a>, <a
+href="20-synchrotron-radiation.html">chapter 20</a></td>
+<td>RF power, synchrotron radiation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>An alpha particle (charge <span class="math inline">\(2e\)</span>)
+is 30 fm from the centre of a gold nucleus (charge <span
+class="math inline">\(79e\)</span>). Find the force on it and the
+electric potential energy, in MeV.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(F = 8.988 \times 10^9 \times 2 \times 79
+\times (1.602 \times 10^{-19})^2/(30 \times 10^{-15})^2 = 40.5\)</span>
+N. <span class="math inline">\(U = 2 \times 79 \times 1.44\ \text{MeV
+fm}/30\ \text{fm} = 7.58\)</span> MeV. An alpha from a radioactive
+source, with 5 to 8 MeV, can get this close but no closer: Rutherford’s
+scattering (<a href="01-why-accelerate.html">chapter 1</a>).</p>
+</details>
+<ol start="2" type="1">
+<li>An electrostatic generator’s terminal is a sphere of radius 0.5 m in
+air, which breaks down at 3 MV/m. What is the highest voltage it can
+hold, the charge on it then, and its capacitance?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>Surface field <span class="math inline">\(= V/R\)</span>, so <span
+class="math inline">\(V_{\max} = 3 \times 10^6 \times 0.5 = 1.5\)</span>
+MV. <span class="math inline">\(C = 4\pi\varepsilon_0R = 55.6\)</span>
+pF, and <span class="math inline">\(Q = CV = 8.34 \times
+10^{-5}\)</span> C. Doubling the radius doubles the voltage; that, and
+pressurised gas, is why such machines grew large (<a
+href="06-the-electrostatic-generator.html">chapter 6</a>).</p>
+</details>
+<ol start="3" type="1">
+<li>A proton is accelerated from rest through 1 MV. What is its kinetic
+energy in eV and in joules, and its speed? Is the non-relativistic
+formula good enough?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>1 MeV <span class="math inline">\(= 1.602 \times 10^{-13}\)</span> J.
+<span class="math inline">\(v = \sqrt{2K/m_p} = \sqrt{2 \times 1.602
+\times 10^{-13}/1.673 \times 10^{-27}} = 1.384 \times 10^7\)</span> m/s,
+4.6 per cent of <span class="math inline">\(c\)</span>. The relativistic
+answer is <span class="math inline">\(1.383 \times 10^7\)</span> m/s,
+0.08 per cent lower: 1 MeV is only a thousandth of the proton’s 938 MeV
+rest energy, so <span class="math inline">\(\tfrac12mv^2\)</span> is
+good enough.</p>
+</details>
+<ol start="4" type="1">
+<li>Three 30 nF capacitors, each rated for 100 kV, are connected (a) in
+parallel and (b) in series. Give the capacitance, the highest voltage,
+and the energy stored at that voltage, in each case.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li>Parallel: 90 nF, 100 kV, <span class="math inline">\(\tfrac12 \times
+90 \times 10^{-9} \times 10^{10} = 450\)</span> J. (b) Series: 10 nF,
+300 kV, <span class="math inline">\(\tfrac12 \times 10^{-8} \times (3
+\times 10^5)^2 = 450\)</span> J. The energy is the same, three
+capacitors each holding 150 J; the arrangement only trades charge for
+voltage.</li>
+</ol>
+</details>
+<ol start="5" type="1">
+<li>A water-cooled copper bus bar of cross-section 5 cm<span
+class="math inline">\(^2\)</span> and length 20 m carries 1000 A to a
+magnet. Find its resistance, the voltage across it, the power it wastes,
+and the electrons’ drift speed. (<span class="math inline">\(\rho = 1.68
+\times 10^{-8}\)</span> Ω m, <span class="math inline">\(n = 8.49 \times
+10^{28}\)</span> m<span class="math inline">\(^{-3}\)</span>.)</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(R = \rho L/A = 1.68 \times 10^{-8} \times
+20/(5 \times 10^{-4}) = 6.72 \times 10^{-4}\)</span> Ω. <span
+class="math inline">\(V = IR = 0.672\)</span> V; <span
+class="math inline">\(P = I^2R = 672\)</span> W. <span
+class="math inline">\(v_d = I/(neA) = 1000/(8.49 \times 10^{28} \times
+1.602 \times 10^{-19} \times 5 \times 10^{-4}) = 1.47 \times
+10^{-4}\)</span> m/s.</p>
+</details>
+<ol start="6" type="1">
+<li>The terminal of a 1 m sphere (111 pF) is held at 1 MV and the belt
+is stopped. Its only leak is a resistor column of <span
+class="math inline">\(10^{11}\)</span> Ω. How long until it is at 500
+kV, and at 10 kV? What current flows at the start?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\tau = RC = 11.1\)</span> s. <span
+class="math inline">\(V = V_0e^{-t/\tau}\)</span>, so half takes <span
+class="math inline">\(\tau\ln2 = 7.7\)</span> s, and 1 per cent takes
+<span class="math inline">\(\tau\ln100 = 51\)</span> s. The starting
+current is <span class="math inline">\(V_0/R = 10\)</span> μA. A
+terminal can stay dangerously charged long after the machine is switched
+off; hence the grounding stick.</p>
+</details>
+<ol start="7" type="1">
+<li>A focusing solenoid on an electron gun has 500 turns wound along 10
+cm of a tube 5 cm across, and carries 2 A. Find the field inside. Find
+also the field at the centre of a single flat coil of 500 turns, radius
+5 cm, with the same current, and at 5 cm along its axis.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>Solenoid: <span class="math inline">\(n = 5000\)</span> per metre,
+<span class="math inline">\(B = \mu_0nI = 1.2566 \times 10^{-6} \times
+5000 \times 2 = 12.6\)</span> mT (strictly, a solenoid only twice as
+long as it is wide is not “long”: the field at its centre is less by the
+factor <span class="math inline">\(\ell/\sqrt{\ell^2 + D^2} =
+0.89\)</span>, with <span class="math inline">\(D\)</span> the
+diameter). Flat coil: <span class="math inline">\(B = \mu_0NI/(2R) =
+1.2566 \times 10^{-6} \times 500 \times 2/0.1 = 12.6\)</span> mT at the
+centre, and <span class="math inline">\(2^{-3/2}\)</span> of that, 4.44
+mT, at <span class="math inline">\(z = R = 5\)</span> cm.</p>
+</details>
+<ol start="8" type="1">
+<li>A search coil of 50 turns and area 4 cm<span
+class="math inline">\(^2\)</span> sits in the gap of a magnet whose
+field ramps at 1 T/s. What voltage does it give? How could you use it to
+measure the field?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>EMF <span class="math inline">\(= NA\,dB/dt = 50 \times 4 \times
+10^{-4} \times 1 = 0.020\)</span> V. The voltage is the rate of change
+of <span class="math inline">\(NBA\)</span>; integrating it over time
+(electronically) gives <span class="math inline">\(NA\,\Delta
+B\)</span>, and so the change in field. This is how synchrotron magnets’
+fields were tracked as they ramped (<a
+href="15-the-synchrotron.html">chapter 15</a>).</p>
+</details>
+<ol start="9" type="1">
+<li>A room-temperature magnet has <span class="math inline">\(L =
+0.5\)</span> H and <span class="math inline">\(R = 0.1\)</span> Ω and is
+connected to a 100 V supply at <span class="math inline">\(t =
+0\)</span>. Find the final current, the time constant, the time to reach
+90 per cent of the final current, and the energy stored at the end. What
+heat does the coil produce each second at full current?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(I_{\text{final}} = V/R = 1000\)</span> A.
+<span class="math inline">\(\tau = L/R = 5\)</span> s; 90 per cent after
+<span class="math inline">\(\tau\ln10 = 11.5\)</span> s. Stored energy
+<span class="math inline">\(\tfrac12LI^2 = \tfrac12 \times 0.5 \times
+10^6 = 250\)</span> kJ. Heat: <span class="math inline">\(I^2R =
+100\)</span> kW, all the supply’s power once the current is steady;
+hence water cooling.</p>
+</details>
+<ol start="10" type="1">
+<li>A radio wave has an electric field of amplitude 100 V/m. Find the
+magnetic field’s amplitude and the intensity. Check that <span
+class="math inline">\(1/\sqrt{\mu_0\varepsilon_0}\)</span> with the
+constants of this chapter gives the speed of light.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(B_0 = \mathcal{E}_0/c = 100/2.998 \times
+10^8 = 3.34 \times 10^{-7}\)</span> T. Intensity <span
+class="math inline">\(\tfrac12\varepsilon_0c\mathcal{E}_0^2 = \tfrac12
+\times 8.854 \times 10^{-12} \times 2.998 \times 10^8 \times 10^4 =
+13.3\)</span> W/m<span class="math inline">\(^2\)</span>. <span
+class="math inline">\(\mu_0\varepsilon_0 = 1.2566 \times 10^{-6} \times
+8.854 \times 10^{-12} = 1.1127 \times 10^{-17}\)</span> s<span
+class="math inline">\(^2\)</span>/m<span
+class="math inline">\(^2\)</span>, whose inverse square root is <span
+class="math inline">\(2.998 \times 10^8\)</span> m/s.</p>
+</details>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>W. Gilbert, <em>De Magnete</em> (London, 1600; English translation
+by S. P. Thompson, 1900): amber, lodestone and the Earth as a magnet
+(free, archive.org).</li>
+<li>C.-A. de Coulomb, “Premier mémoire sur l’électricité et le
+magnétisme”, <em>Histoire de l’Académie Royale des Sciences</em> (1785):
+the torsion balance and the inverse-square law.</li>
+<li>M. Faraday, <em>Experimental Researches in Electricity</em>, volume
+1 (1839), series 1 (1831): the discovery of induction (free,
+archive.org).</li>
+<li>J. C. Maxwell, “A dynamical theory of the electromagnetic field”,
+<em>Philosophical Transactions of the Royal Society</em> 155, 459
+(1865), and <em>A Treatise on Electricity and Magnetism</em> (Clarendon
+Press, 1873): the displacement current, the equations and light as an
+electromagnetic wave (free, archive.org).</li>
+<li>J. H. Poynting, “On the transfer of energy in the electromagnetic
+field”, <em>Philosophical Transactions of the Royal Society</em> 175,
+343 (1884): the energy flow of section 18.</li>
+<li>E. T. Whittaker, <em>A History of the Theories of Aether and
+Electricity</em> (Longmans, 1910): the history from Gilbert to Hertz
+(free, archive.org).</li>
+<li>E. M. Purcell and D. J. Morin, <em>Electricity and Magnetism</em>
+(Cambridge University Press, 3rd edition 2013): the level and order of
+this chapter, from Coulomb to Maxwell; chapters 1 to 10.</li>
+<li>D. J. Griffiths, <em>Introduction to Electrodynamics</em> (Cambridge
+University Press, 4th edition 2017), chapters 2 (electrostatics), 4
+(dielectrics), 5 (magnetostatics), 6 (magnetic materials), 7
+(electrodynamics) and 8 (conservation laws): sections 3 to 18.</li>
+<li>R. P. Feynman, R. B. Leighton and M. Sands, <em>The Feynman Lectures
+on Physics</em>, volume II, chapters 1 to 18 and 27 (field energy and
+momentum, including the energy flowing into a wire) (free,
+feynmanlectures.caltech.edu).</li>
+<li>D. Tong, <em>Lectures on Electromagnetism</em> (University of
+Cambridge, free at damtp.cam.ac.uk): the course’s pre-requisite sections
+build on it.</li>
+<li>E. Tiesinga, P. J. Mohr, D. B. Newell and B. N. Taylor, “CODATA
+recommended values of the fundamental physical constants: 2018”,
+<em>Reviews of Modern Physics</em> 93, 025010 (2021): <span
+class="math inline">\(e\)</span>, <span
+class="math inline">\(m_e\)</span>, <span
+class="math inline">\(m_p\)</span>, <span
+class="math inline">\(\varepsilon_0\)</span>, <span
+class="math inline">\(\mu_0\)</span> (free, physics.nist.gov).</li>
+<li>O. Brüning and others (editors), <em>LHC Design Report</em>, volume
+1 (CERN-2004-003, 2004), chapter 7: the main dipole, 8.33 T at 11 850 A,
+98.7 mH, 6.93 MJ (free, cds.cern.ch).</li>
+<li>Copper’s resistivity and free-electron density: C. Kittel,
+<em>Introduction to Solid State Physics</em> (Wiley, 8th edition 2005),
+chapter 6, and the <em>CRC Handbook of Chemistry and Physics</em>.</li>
+</ul>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="F3-mechanics.html"><span>Previous</span>F3 Newtonian mechanics</a>
+<a class="next" href="F5-waves.html"><span>Next</span>F5 Oscillations and waves</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

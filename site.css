@@ -1,0 +1,162 @@
+/* The course notes as a website: a long-form reading page, a section list
+   beside the text on wide screens, folded above it on phones.
+   Colours: a cool off-white page; the accent is the beam red of the figures,
+   links the field blue. Literata for reading, Archivo for headings and
+   navigation, JetBrains Mono for code. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --fg: #1b1f27;
+  --muted: #5a6273;
+  --rule: #dce0e7;
+  --accent: #b5342a;
+  --link: #1f5f99;
+  --answer: #eef3f8;
+  --font-body: "Literata", Georgia, "Times New Roman", serif;
+  --font-head: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", Menlo, Consolas, monospace;
+  --measure: 42rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151b; --surface: #191d25; --fg: #e3e6eb; --muted: #9aa3b2;
+    --rule: #2b313c; --accent: #e2705f; --link: #82b6ea; --answer: #1b2330;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12151b; --surface: #191d25; --fg: #e3e6eb; --muted: #9aa3b2;
+  --rule: #2b313c; --accent: #e2705f; --link: #82b6ea; --answer: #1b2330;
+  color-scheme: dark;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1.0625rem/1.65 var(--font-body);
+  font-optical-sizing: auto;
+}
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* The top bar: the course name, and where this page sits in it. */
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  align-items: baseline;
+  padding-block: 0.6rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-head);
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface);
+}
+.bar .home { font-weight: 700; color: var(--fg); text-decoration: none; letter-spacing: 0.01em; }
+.bar .where { color: var(--muted); font-size: 0.875rem; }
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding-block: 1.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { min-width: 0; max-width: var(--measure); }
+.home-layout main { max-width: 52rem; margin: 0 auto; }
+
+/* Sections list: folded above the text on narrow screens, a sticky column
+   beside it on wide ones. */
+.toc { font-family: var(--font-head); font-size: 0.875rem; }
+.toc summary { cursor: pointer; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; }
+.toc ul { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.toc ul ul { padding-left: 0.9rem; }
+.toc li { margin: 0.2rem 0; }
+.toc a { color: var(--fg); text-decoration: none; }
+.toc a:hover { color: var(--link); text-decoration: underline; }
+@media (min-width: 1100px) {
+  .layout { grid-template-columns: 16rem minmax(0, 1fr); gap: 3rem; }
+  .home-layout { grid-template-columns: minmax(0, 1fr); }
+  .toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 3.5rem); align-self: start; max-height: calc(100vh - 5rem); overflow-y: auto; }
+}
+
+/* Headings. */
+h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.25; text-wrap: balance; scroll-margin-top: 4rem; }
+h1 { font-size: 2.1rem; font-weight: 700; margin: 0.5rem 0 0.75rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.5rem; font-weight: 700; margin: 2.75rem 0 0.75rem; padding-top: 0.75rem; border-top: 2px solid var(--fg); }
+h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.5rem; }
+h4 { font-size: 1.02rem; font-weight: 600; margin: 1.5rem 0 0.4rem; }
+h1 + p em:only-child { color: var(--muted); }
+
+/* Pre-requisite sections are headed "Pre-requisite: ..."; their opening
+   blockquote says what they give and where it is used. */
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.97rem;
+}
+blockquote > :first-child { margin-top: 0; }
+blockquote > :last-child { margin-bottom: 0; }
+
+/* Folded answers under each exercise. */
+details:not(#toc) {
+  margin: 0.5rem 0 1.25rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--answer);
+  border-radius: 6px;
+}
+details:not(#toc) > summary { cursor: pointer; font-family: var(--font-head); font-weight: 600; font-size: 0.9rem; color: var(--link); }
+details[open]:not(#toc) > summary { margin-bottom: 0.4rem; }
+
+/* Figures are drawn on white plates, so they read the same in both themes. */
+img { max-width: 100%; height: auto; }
+p > img:only-child {
+  display: block;
+  margin: 1.5rem auto 0.25rem;
+  padding: 0.75rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+p:has(> img:only-child) + p > em:only-child { display: block; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
+
+/* Wide things scroll inside themselves, never the page. */
+table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.92rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; text-align: left; }
+th { font-family: var(--font-head); font-weight: 600; border-bottom: 2px solid var(--fg); }
+pre { overflow-x: auto; padding: 0.75rem 1rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+code { font-family: var(--font-mono); font-size: 0.88em; }
+mjx-container[display="true"] { display: block; overflow-x: auto; overflow-y: hidden; padding: 0.15rem 0; }
+mjx-container { color: var(--fg); }
+pre.mermaid { background: var(--surface); text-align: center; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+ul, ol { padding-left: 1.4rem; }
+li + li { margin-top: 0.25rem; }
+
+/* Previous and next chapter. */
+.pager { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-family: var(--font-head); }
+.pager a { display: flex; flex-direction: column; text-decoration: none; color: var(--fg); font-weight: 600; max-width: 48%; }
+.pager a span { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.pager .next { margin-left: auto; text-align: right; }
+
+/* The home page's first line. */
+.start { font-family: var(--font-head); font-size: 1.05rem; padding: 0.75rem 1rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

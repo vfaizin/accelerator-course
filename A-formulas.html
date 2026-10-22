@@ -1,0 +1,3762 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Appendix A: constants, units and
+formulas · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Appendix</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#appendix-a-constants-units-and-formulas"
+id="toc-appendix-a-constants-units-and-formulas">Appendix A: constants,
+units and formulas</a>
+<ul>
+<li><a href="#how-to-use-this-sheet" id="toc-how-to-use-this-sheet">How
+to use this sheet</a></li>
+<li><a href="#0-part-0-the-foundations"
+id="toc-0-part-0-the-foundations">0. Part 0: the foundations</a></li>
+<li><a href="#1-physical-constants" id="toc-1-physical-constants">1.
+Physical constants</a></li>
+<li><a href="#2-units-and-conversions"
+id="toc-2-units-and-conversions">2. Units and conversions</a></li>
+<li><a href="#3-practical-formulas" id="toc-3-practical-formulas">3.
+Practical formulas</a></li>
+<li><a href="#4-the-formulas-chapter-by-chapter"
+id="toc-4-the-formulas-chapter-by-chapter">4. The formulas, chapter by
+chapter</a>
+<ul>
+<li><a href="#part-i-the-toolkit" id="toc-part-i-the-toolkit">Part I.
+The toolkit</a></li>
+<li><a href="#part-ii-direct-voltage"
+id="toc-part-ii-direct-voltage">Part II. Direct voltage</a></li>
+<li><a href="#part-iii-resonance-and-induction"
+id="toc-part-iii-resonance-and-induction">Part III. Resonance and
+induction</a></li>
+<li><a href="#part-iv-rings" id="toc-part-iv-rings">Part IV.
+Rings</a></li>
+<li><a href="#part-v-colliders" id="toc-part-v-colliders">Part V.
+Colliders</a></li>
+<li><a href="#part-vi-light-new-methods-and-uses"
+id="toc-part-vi-light-new-methods-and-uses">Part VI. Light, new methods
+and uses</a></li>
+<li><a href="#part-vii-the-practice" id="toc-part-vii-the-practice">Part
+VII. The practice</a></li>
+</ul></li>
+<li><a href="#5-symbols-that-change-meaning"
+id="toc-5-symbols-that-change-meaning">5. Symbols that change
+meaning</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="appendix-a-constants-units-and-formulas">Appendix A: constants,
+units and formulas</h1>
+<p><em>A formula sheet for the whole course: first the key formulas of
+Part 0, Foundations, then the physical constants, the unit conversions,
+the practical formulas used every day, and then, chapter by chapter, the
+results each chapter derives, in that chapter’s own notation, with a
+link to where the derivation is.</em></p>
+<h2 id="how-to-use-this-sheet">How to use this sheet</h2>
+<p>Nothing here is derived. Each formula is stated as its chapter states
+it, with its symbols and units, one line on what it means, and a link to
+the section that derives it or says where it is quoted from. Read the
+chapter before trusting the formula: every one of them rests on
+approximations that the chapter names, and most fail somewhere.</p>
+<p>The course’s conventions hold throughout, and a few are easy to
+forget:</p>
+<ul>
+<li><span class="math inline">\(W\)</span> is kinetic energy, <span
+class="math inline">\(E = \gamma mc^2\)</span> total energy, <span
+class="math inline">\(T\)</span> temperature.</li>
+<li>The electric field is <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span>, of size <span
+class="math inline">\(\mathcal{E}\)</span> (V/m), in Part 0 and in every
+chapter, to keep it apart from an energy <span
+class="math inline">\(E\)</span>. Its components and amplitudes keep the
+script letter: <span class="math inline">\(\mathcal{E}_z\)</span>, <span
+class="math inline">\(\mathcal{E}_0\)</span>, <span
+class="math inline">\(\mathcal{E}_{acc}\)</span>.</li>
+<li>The energy gain at a gap is <span class="math inline">\(\Delta W =
+q\hat{V}\sin\phi\)</span>, with <span
+class="math inline">\(\phi\)</span> growing for later arrival: <span
+class="math inline">\(\phi = 90^\circ\)</span> is the crest.
+Linear-accelerator texts write <span
+class="math inline">\(q\mathcal{E}_0TL\cos\phi\)</span>, with their
+<span class="math inline">\(T\)</span> the course’s transit-time factor
+<span class="math inline">\(T_t\)</span>; then <span
+class="math inline">\(\phi_{\text{sine}} = \phi_{\text{cosine}} +
+90^\circ\)</span>.</li>
+<li>Shunt impedance is the linac definition <span
+class="math inline">\(R_{sh} = \hat{V}^2/P\)</span>. Circuit and
+synchrotron texts use <span class="math inline">\(\hat{V}^2/2P\)</span>,
+half of it; so does chapter 22 for its resonator impedances.</li>
+<li>Twiss functions always carry a plane subscript, <span
+class="math inline">\(\beta_x\)</span>, <span
+class="math inline">\(\alpha_y\)</span>, <span
+class="math inline">\(\gamma_x\)</span>, to keep them apart from the
+relativistic <span class="math inline">\(\beta\)</span> and <span
+class="math inline">\(\gamma\)</span>.</li>
+<li>Luminosity is quoted in cm<span class="math inline">\(^{-2}\)</span>
+s<span class="math inline">\(^{-1}\)</span>.</li>
+</ul>
+<p>Where a section heading contains mathematics, its link goes to the
+chapter and the text names the section number, because GitHub’s anchors
+for such headings are unreliable.</p>
+<h2 id="0-part-0-the-foundations">0. Part 0: the foundations</h2>
+<p>The formulas each Foundations chapter lists under “Equations to
+remember”, grouped by chapter, with their symbols and units and a link
+to the section that explains them. They need only high-school
+mathematics and the Foundations chapters before them, and every later
+chapter uses them without saying so. The chapters from 1 on derive the
+relativistic forms where Part 0 is non-relativistic: <a
+href="01-why-accelerate.html">chapter 1</a> replaces <span
+class="math inline">\(\tfrac12mv^2\)</span> and <span
+class="math inline">\(\mathbf{p} = m\mathbf{v}\)</span> by <span
+class="math inline">\((\gamma - 1)mc^2\)</span> and <span
+class="math inline">\(\gamma m\mathbf{v}\)</span>.</p>
+<h4 id="f1-calculus"><a href="F1-calculus.html">F1 Calculus</a></h4>
+<ul>
+<li><strong>Derivative.</strong> <span
+class="math inline">\(\dfrac{df}{dx} = \lim_{h\to0}\dfrac{f(x+h) -
+f(x)}{h}\)</span>: the slope of <span class="math inline">\(y =
+f(x)\)</span> at <span class="math inline">\(x\)</span>, in units of
+<span class="math inline">\(y\)</span> per unit of <span
+class="math inline">\(x\)</span>. <a
+href="F1-calculus.html#1-rate-of-change-the-derivative">Section
+1</a>.</li>
+<li><strong>Rules.</strong> <span class="math inline">\(\dfrac{d}{dx}x^n
+= nx^{n-1}\)</span>; product <span class="math inline">\((fg)&#39; =
+f&#39;g + fg&#39;\)</span>; chain <span
+class="math inline">\(\dfrac{d}{dx}f(g(x)) =
+f&#39;(g(x))\,g&#39;(x)\)</span>. <a
+href="F1-calculus.html#2-the-rules-for-derivatives">Section 2</a>.</li>
+<li><strong>Sine, cosine, exponential, logarithm.</strong> <span
+class="math inline">\(\dfrac{d}{dx}\sin x = \cos x\)</span>, <span
+class="math inline">\(\dfrac{d}{dx}\cos x = -\sin x\)</span>, with <span
+class="math inline">\(x\)</span> in radians; <span
+class="math inline">\(\dfrac{d}{dx}e^x = e^x\)</span>; <span
+class="math inline">\(\dfrac{d}{dx}\ln x = \dfrac1x\)</span>. <a
+href="F1-calculus.html#3-sine-and-cosine-in-radians">Section 3</a>, <a
+href="F1-calculus.html#4-the-exponential-and-the-logarithm">section
+4</a>.</li>
+<li><strong>Small changes.</strong> <span class="math inline">\(\Delta f
+\approx f&#39;(x)\,\Delta x\)</span>; for <span class="math inline">\(f
+= x^n\)</span>, <span class="math inline">\(\Delta f/f \approx n\,\Delta
+x/x\)</span>. How errors grow, and when the rule fails. <a
+href="F1-calculus.html#5-using-derivatives-small-changes-errors-maxima">Section
+5</a>.</li>
+<li><strong>Fundamental theorem.</strong> <span
+class="math inline">\(\displaystyle\int_a^b f&#39;(x)\,dx = f(b) -
+f(a)\)</span>: adding up the small changes gives the whole change. <a
+href="F1-calculus.html#7-the-fundamental-theorem-and-working-integrals-out">Section
+7</a>.</li>
+<li><strong>Taylor series.</strong> <span class="math inline">\(f(a + h)
+= f(a) + f&#39;(a)\,h + \tfrac12f&#39;&#39;(a)\,h^2 +
+\tfrac16f&#39;&#39;&#39;(a)\,h^3 + \dots\)</span>; in particular <span
+class="math inline">\((1 + x)^n \approx 1 + nx\)</span> for small <span
+class="math inline">\(x\)</span>. <a
+href="F1-calculus.html#8-approximating-a-function-taylor-series">Section
+8</a>.</li>
+<li><strong>Decay.</strong> <span class="math inline">\(dN/dt = -\lambda
+N\)</span> gives <span class="math inline">\(N = N_0e^{-\lambda
+t}\)</span>, with rate <span class="math inline">\(\lambda\)</span>
+(s<span class="math inline">\(^{-1}\)</span>) and time constant <span
+class="math inline">\(\tau = 1/\lambda\)</span> (s). <a
+href="F1-calculus.html#10-equations-of-change-first-differential-equations">Section
+10</a>.</li>
+<li><strong>Oscillation.</strong> <span class="math inline">\(d^2x/dt^2
+= -\omega^2x\)</span> gives <span class="math inline">\(x = A\cos\omega
+t + B\sin\omega t\)</span>, with <span
+class="math inline">\(\omega\)</span> in rad/s. <a
+href="F1-calculus.html#10-equations-of-change-first-differential-equations">Section
+10</a>.</li>
+</ul>
+<h4 id="f2-vectors-and-vector-calculus"><a href="F2-vectors.html">F2
+Vectors and vector calculus</a></h4>
+<ul>
+<li><strong>Components.</strong> <span class="math inline">\(\mathbf{A}
+= A_x\hat{\mathbf{x}} + A_y\hat{\mathbf{y}} +
+A_z\hat{\mathbf{z}}\)</span>, size <span
+class="math inline">\(|\mathbf{A}| = \sqrt{A_x^2 + A_y^2 +
+A_z^2}\)</span>. <a
+href="F2-vectors.html#1-vectors-and-their-components">Section
+1</a>.</li>
+<li><strong>Dot product.</strong> <span
+class="math inline">\(\mathbf{A}\cdot\mathbf{B} =
+|\mathbf{A}||\mathbf{B}|\cos\theta = A_xB_x + A_yB_y + A_zB_z\)</span>,
+a number. Work done by a force <span
+class="math inline">\(\mathbf{F}\)</span> (N) along a path: <span
+class="math inline">\(W = \int\mathbf{F}\cdot d\mathbf{l}\)</span> (J).
+<a href="F2-vectors.html#2-the-dot-product">Section 2</a>, <a
+href="F2-vectors.html#7-line-integrals-work-along-a-path">section
+7</a>.</li>
+<li><strong>Cross product.</strong> <span
+class="math inline">\(|\mathbf{A}\times\mathbf{B}| =
+|\mathbf{A}||\mathbf{B}|\sin\theta\)</span>, at right angles to both by
+the right-hand rule. Magnetic force <span
+class="math inline">\(\mathbf{F} =
+q\,\mathbf{v}\times\mathbf{B}\)</span>: <span
+class="math inline">\(q\)</span> in C, <span
+class="math inline">\(\mathbf{v}\)</span> in m/s, <span
+class="math inline">\(\mathbf{B}\)</span> in T, <span
+class="math inline">\(\mathbf{F}\)</span> in N. <a
+href="F2-vectors.html#3-the-cross-product">Section 3</a>.</li>
+<li><strong>Circular motion.</strong> Acceleration <span
+class="math inline">\(v^2/R\)</span> (m/s<span
+class="math inline">\(^2\)</span>) towards the centre, for speed <span
+class="math inline">\(v\)</span> on a circle of radius <span
+class="math inline">\(R\)</span>. <a
+href="F2-vectors.html#4-vectors-that-change-velocity-acceleration-and-circles">Section
+4</a>.</li>
+<li><strong>Gradient.</strong> <span class="math inline">\(\nabla f =
+(\partial f/\partial x, \partial f/\partial y, \partial f/\partial
+z)\)</span>, pointing uphill; the field from a potential, <span
+class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla V\)</span> (V/m
+from V). <a href="F2-vectors.html#6-the-gradient">Section 6</a>.</li>
+<li><strong>Divergence and Gauss’s theorem.</strong> <span
+class="math inline">\(\nabla\cdot\mathbf{F} = \partial F_x/\partial x +
+\partial F_y/\partial y + \partial F_z/\partial z\)</span>; <span
+class="math inline">\(\displaystyle\oint_S\mathbf{F}\cdot d\mathbf{A} =
+\int_V\nabla\cdot\mathbf{F}\,dV\)</span>: the flux out of a closed
+surface is the spreading inside it. <a
+href="F2-vectors.html#10-divergence-and-gausss-theorem">Section
+10</a>.</li>
+<li><strong>Curl and Stokes’s theorem.</strong> <span
+class="math inline">\(\displaystyle\oint_C\mathbf{F}\cdot d\mathbf{l} =
+\int_S(\nabla\times\mathbf{F})\cdot d\mathbf{A}\)</span>: the
+circulation round a loop is the swirl through any surface it bounds. Two
+identities: <span class="math inline">\(\nabla\times(\nabla f) =
+0\)</span> and <span
+class="math inline">\(\nabla\cdot(\nabla\times\mathbf{F}) = 0\)</span>.
+<a href="F2-vectors.html#11-curl-and-stokess-theorem">Section
+11</a>.</li>
+<li><strong>Laplacian.</strong> <span class="math inline">\(\nabla^2f =
+\partial^2f/\partial x^2 + \partial^2f/\partial y^2 +
+\partial^2f/\partial z^2\)</span>, the divergence of the gradient. <a
+href="F2-vectors.html#12-the-laplacian">Section 12</a>.</li>
+</ul>
+<h4 id="f3-newtonian-mechanics"><a href="F3-mechanics.html">F3 Newtonian
+mechanics</a></h4>
+<ul>
+<li><strong>Kinematics.</strong> <span class="math inline">\(\mathbf{v}
+= d\mathbf{r}/dt\)</span>, <span class="math inline">\(\mathbf{a} =
+d\mathbf{v}/dt\)</span>; at constant <span
+class="math inline">\(\mathbf{a}\)</span>, <span
+class="math inline">\(\mathbf{v} = \mathbf{v}_0 + \mathbf{a}t\)</span>
+and <span class="math inline">\(\mathbf{r} = \mathbf{r}_0 +
+\mathbf{v}_0t + \tfrac12\mathbf{a}t^2\)</span>. Position in m, velocity
+in m/s, acceleration in m/s<span class="math inline">\(^2\)</span>. <a
+href="F3-mechanics.html#1-describing-motion">Section 1</a>.</li>
+<li><strong>Newton’s second law.</strong> <span
+class="math inline">\(\mathbf{F} = d\mathbf{p}/dt =
+m\mathbf{a}\)</span>, momentum <span class="math inline">\(\mathbf{p} =
+m\mathbf{v}\)</span> (kg m/s), force in N <span
+class="math inline">\(=\)</span> kg m/s<span
+class="math inline">\(^2\)</span>. Impulse <span
+class="math inline">\(\Delta\mathbf{p} = \int\mathbf{F}\,dt\)</span>. <a
+href="F3-mechanics.html#2-newtons-three-laws">Section 2</a>, <a
+href="F3-mechanics.html#3-momentum-impulse-and-the-centre-of-mass">section
+3</a>.</li>
+<li><strong>Work, kinetic energy, power.</strong> <span
+class="math inline">\(\Delta W = \int\mathbf{F}\cdot
+d\mathbf{l}\)</span>, kinetic energy <span class="math inline">\(W =
+\tfrac12mv^2 = p^2/2m\)</span> (J); power <span class="math inline">\(P
+= \mathbf{F}\cdot\mathbf{v}\)</span> (W). <a
+href="F3-mechanics.html#4-work-kinetic-energy-and-power">Section
+4</a>.</li>
+<li><strong>Potential energy.</strong> <span
+class="math inline">\(\mathbf{F} = -\nabla U\)</span>, and then <span
+class="math inline">\(W + U\)</span> is constant; a charge at potential
+<span class="math inline">\(V\)</span> has <span class="math inline">\(U
+= qV\)</span>, two charges <span class="math inline">\(U =
+q_1q_2/(4\pi\varepsilon_0r)\)</span> (J). <a
+href="F3-mechanics.html#5-potential-energy-conservative-forces-and-energy-conservation">Section
+5</a>.</li>
+<li><strong>Collisions.</strong> Centre-of-mass velocity <span
+class="math inline">\(\mathbf{V}_{cm} = (m_1\mathbf{v}_1 +
+m_2\mathbf{v}_2)/(m_1 + m_2)\)</span>; a body of kinetic energy <span
+class="math inline">\(W\)</span> striking a mass <span
+class="math inline">\(m_2\)</span> at rest makes <span
+class="math inline">\(W_{cm} = Wm_2/(m_1 + m_2)\)</span> available;
+reduced mass <span class="math inline">\(\mu = m_1m_2/(m_1 +
+m_2)\)</span>. <a href="F3-mechanics.html#6-collisions">Section
+6</a>.</li>
+<li><strong>Rotation.</strong> <span class="math inline">\(\mathbf{L} =
+\mathbf{r}\times\mathbf{p}\)</span> (kg m<span
+class="math inline">\(^2\)</span>/s), torque <span
+class="math inline">\(\boldsymbol{\tau} =
+\mathbf{r}\times\mathbf{F}\)</span> (N m), <span
+class="math inline">\(d\mathbf{L}/dt = \boldsymbol{\tau}\)</span>; a
+rigid body has <span class="math inline">\(L = I\omega\)</span> and
+<span class="math inline">\(W = \tfrac12I\omega^2\)</span>, with <span
+class="math inline">\(I = \sum mr^2\)</span> (kg m<span
+class="math inline">\(^2\)</span>). <a
+href="F3-mechanics.html#7-rotation">Section 7</a>.</li>
+<li><strong>Orbits.</strong> Under an attraction <span
+class="math inline">\(k/r^2\)</span> (<span
+class="math inline">\(k\)</span> in J m): circular speed <span
+class="math inline">\(v^2 = k/(mr)\)</span>, energy <span
+class="math inline">\(E = W + U = -k/2r\)</span>, negative for a bound
+orbit. <a href="F3-mechanics.html#8-central-forces-and-orbits">Section
+8</a>.</li>
+<li><strong>Oscillator.</strong> <span class="math inline">\(m\ddot x =
+-kx\)</span> gives <span class="math inline">\(x = A\cos(\omega t +
+\phi)\)</span>, <span class="math inline">\(\omega =
+\sqrt{k/m}\)</span>, energy <span
+class="math inline">\(\tfrac12kA^2\)</span>; near a minimum of <span
+class="math inline">\(U(x)\)</span>, <span class="math inline">\(k =
+U&#39;&#39;(x_0)\)</span>. <a
+href="F3-mechanics.html#9-simple-harmonic-motion">Section 9</a>.</li>
+<li><strong>Damped and driven.</strong> With damping the energy falls as
+<span class="math inline">\(e^{-\omega_0t/Q}\)</span>; driven at <span
+class="math inline">\(\omega_0\)</span> the amplitude is <span
+class="math inline">\(Q\)</span> times the static deflection, over a
+width <span class="math inline">\(\Delta\omega = \omega_0/Q\)</span>. <a
+href="F3-mechanics.html#10-damped-and-driven-oscillation">Section
+10</a>.</li>
+<li><strong>Galilean change of frame.</strong> <span
+class="math inline">\(\mathbf{r}&#39; = \mathbf{r} -
+\mathbf{V}t\)</span>, <span class="math inline">\(\mathbf{v}&#39; =
+\mathbf{v} - \mathbf{V}\)</span>, <span
+class="math inline">\(\mathbf{a}&#39; = \mathbf{a}\)</span>, for a frame
+moving at constant <span class="math inline">\(\mathbf{V}\)</span>. It
+fails near the speed of light. <a
+href="F3-mechanics.html#11-frames-of-reference">Section 11</a>.</li>
+</ul>
+<h4 id="f4-electricity-and-magnetism"><a
+href="F4-electromagnetism.html">F4 Electricity and magnetism</a></h4>
+<ul>
+<li><strong>Coulomb’s law.</strong> <span class="math inline">\(F =
+q_1q_2/(4\pi\varepsilon_0r^2)\)</span>, charges in C, <span
+class="math inline">\(r\)</span> in m, <span
+class="math inline">\(\varepsilon_0 = 8.854 \times 10^{-12}\)</span>
+F/m. <a href="F4-electromagnetism.html#2-coulombs-law">Section
+2</a>.</li>
+<li><strong>Lorentz force.</strong> <span
+class="math inline">\(\mathbf{F} = q(\boldsymbol{\mathcal{E}} +
+\mathbf{v}\times\mathbf{B})\)</span>, <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> in V/m, <span
+class="math inline">\(\mathbf{B}\)</span> in T. <a
+href="F4-electromagnetism.html#10-the-magnetic-field-and-its-force">Section
+10</a>.</li>
+<li><strong>Gauss’s law.</strong> <span
+class="math inline">\(\displaystyle\oint\boldsymbol{\mathcal{E}}\cdot
+d\mathbf{A} = Q_{\text{enc}}/\varepsilon_0\)</span>. Outside a charged
+sphere <span class="math inline">\(\mathcal{E} =
+Q/(4\pi\varepsilon_0r^2)\)</span>; a line of charge <span
+class="math inline">\(\lambda\)</span> (C/m), <span
+class="math inline">\(\lambda/(2\pi\varepsilon_0r)\)</span>; a sheet of
+charge <span class="math inline">\(\sigma\)</span> (C/m<span
+class="math inline">\(^2\)</span>), <span
+class="math inline">\(\sigma/2\varepsilon_0\)</span>; between plates,
+<span class="math inline">\(\sigma/\varepsilon_0\)</span>. <a
+href="F4-electromagnetism.html#3-the-electric-field-and-superposition">Section
+3</a>, <a href="F4-electromagnetism.html#4-gausss-law-in-use">section
+4</a>.</li>
+<li><strong>Potential.</strong> <span
+class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla V\)</span>;
+energy gained <span class="math inline">\(W = q\,\Delta V\)</span>;
+between plates <span class="math inline">\(\mathcal{E} = V/d\)</span>; 1
+eV <span class="math inline">\(= 1.602 \times 10^{-19}\)</span> J. <a
+href="F4-electromagnetism.html#5-potential-potential-energy-and-the-electron-volt">Section
+5</a>.</li>
+<li><strong>Capacitance.</strong> <span class="math inline">\(C =
+Q/V\)</span> (F); plates <span class="math inline">\(C =
+\varepsilon_0A/d\)</span>, sphere <span class="math inline">\(C =
+4\pi\varepsilon_0R\)</span>; stored energy <span
+class="math inline">\(\tfrac12CV^2\)</span>; energy density <span
+class="math inline">\(\tfrac12\varepsilon_0\mathcal{E}^2\)</span>
+(J/m<span class="math inline">\(^3\)</span>). <a
+href="F4-electromagnetism.html#6-capacitance-and-the-energy-in-the-field">Section
+6</a>.</li>
+<li><strong>Current and resistance.</strong> <span
+class="math inline">\(I = dQ/dt\)</span> (A); <span
+class="math inline">\(I = nqv_dA\)</span>, with <span
+class="math inline">\(n\)</span> carriers per m<span
+class="math inline">\(^3\)</span> drifting at <span
+class="math inline">\(v_d\)</span> through area <span
+class="math inline">\(A\)</span>; <span class="math inline">\(V =
+IR\)</span>, <span class="math inline">\(R = \rho L/A\)</span> (Ω);
+power <span class="math inline">\(P = IV = I^2R\)</span> (W). <a
+href="F4-electromagnetism.html#8-current-current-density-and-ohms-law">Section
+8</a>.</li>
+<li><strong>RC circuit.</strong> <span class="math inline">\(V =
+V_0e^{-t/RC}\)</span>, time constant <span class="math inline">\(\tau =
+RC\)</span> (s). <a
+href="F4-electromagnetism.html#9-circuits-kirchhoffs-laws-and-rc">Section
+9</a>.</li>
+<li><strong>Magnetic fields of currents.</strong> Long straight wire
+<span class="math inline">\(B = \mu_0I/(2\pi r)\)</span>; loop of radius
+<span class="math inline">\(R\)</span> on its axis <span
+class="math inline">\(B = \mu_0IR^2/[2(R^2 + z^2)^{3/2}]\)</span>; long
+solenoid with <span class="math inline">\(n\)</span> turns per metre
+<span class="math inline">\(B = \mu_0nI\)</span>; <span
+class="math inline">\(\mu_0 = 1.2566 \times 10^{-6}\)</span> T m/A.
+Force on a wire <span class="math inline">\(\mathbf{F} =
+I\mathbf{L}\times\mathbf{B}\)</span>. <a
+href="F4-electromagnetism.html#10-the-magnetic-field-and-its-force">Section
+10</a>, <a
+href="F4-electromagnetism.html#11-where-magnetic-fields-come-from-biotsavart">section
+11</a>, <a href="F4-electromagnetism.html#12-ampères-law">section
+12</a>.</li>
+<li><strong>Faraday’s law.</strong> EMF <span class="math inline">\(=
+-d\Phi_B/dt\)</span>, flux <span class="math inline">\(\Phi_B =
+\int\mathbf{B}\cdot d\mathbf{A}\)</span> in Wb <span
+class="math inline">\(=\)</span> T m<span
+class="math inline">\(^2\)</span>; a rod of length <span
+class="math inline">\(L\)</span> moving at <span
+class="math inline">\(v\)</span> across <span
+class="math inline">\(B\)</span>: EMF <span class="math inline">\(=
+BLv\)</span>. <a
+href="F4-electromagnetism.html#14-induction-faraday-and-lenz">Section
+14</a>.</li>
+<li><strong>Inductance.</strong> <span class="math inline">\(V =
+L\,dI/dt\)</span>, <span class="math inline">\(L\)</span> in henries
+(H); energy <span class="math inline">\(\tfrac12LI^2\)</span>; energy
+density <span class="math inline">\(B^2/2\mu_0\)</span> (J/m<span
+class="math inline">\(^3\)</span>); LR time constant <span
+class="math inline">\(L/R\)</span>. <a
+href="F4-electromagnetism.html#15-inductance-magnetic-energy-lr-circuits-and-iron">Section
+15</a>.</li>
+<li><strong>Maxwell’s equations.</strong> <span
+class="math inline">\(\nabla\cdot\boldsymbol{\mathcal{E}} =
+\rho/\varepsilon_0\)</span>, <span
+class="math inline">\(\nabla\cdot\mathbf{B} = 0\)</span>, <span
+class="math inline">\(\nabla\times\boldsymbol{\mathcal{E}} =
+-\partial\mathbf{B}/\partial t\)</span>, <span
+class="math inline">\(\nabla\times\mathbf{B} = \mu_0\mathbf{J} +
+\mu_0\varepsilon_0\,\partial\boldsymbol{\mathcal{E}}/\partial
+t\)</span>, with <span class="math inline">\(\rho\)</span> in C/m<span
+class="math inline">\(^3\)</span> and <span
+class="math inline">\(\mathbf{J}\)</span> in A/m<span
+class="math inline">\(^2\)</span>. <a
+href="F4-electromagnetism.html#16-the-displacement-current-and-maxwells-four-equations">Section
+16</a>.</li>
+<li><strong>Light and energy flow.</strong> <span
+class="math inline">\(c = 1/\sqrt{\mu_0\varepsilon_0} = 2.998 \times
+10^8\)</span> m/s; in a wave <span class="math inline">\(\mathcal{E} =
+cB\)</span>; Poynting vector <span class="math inline">\(\mathbf{S} =
+\boldsymbol{\mathcal{E}}\times\mathbf{B}/\mu_0\)</span> (W/m<span
+class="math inline">\(^2\)</span>). <a
+href="F4-electromagnetism.html#17-electromagnetic-waves">Section 17</a>,
+<a
+href="F4-electromagnetism.html#18-energy-flow-the-poynting-vector">section
+18</a>.</li>
+</ul>
+<h4 id="f5-oscillations-and-waves"><a href="F5-waves.html">F5
+Oscillations and waves</a></h4>
+<ul>
+<li><strong>Complex numbers.</strong> <span class="math inline">\(z = x
++ iy = re^{i\theta}\)</span>, <span class="math inline">\(i^2 =
+-1\)</span>, modulus <span class="math inline">\(r = \sqrt{x^2 +
+y^2}\)</span>, argument <span class="math inline">\(\theta\)</span>;
+Euler’s formula <span class="math inline">\(e^{i\theta} = \cos\theta +
+i\sin\theta\)</span>. <a href="F5-waves.html#1-complex-numbers">Section
+1</a>, <a href="F5-waves.html#2-eulers-formula">section 2</a>.</li>
+<li><strong>Oscillation as a turning arrow.</strong> <span
+class="math inline">\(x(t) = \mathrm{Re}(Xe^{i\omega t})\)</span> with
+complex amplitude <span class="math inline">\(X = |X|e^{i\phi}\)</span>;
+<span class="math inline">\(d/dt\)</span> becomes multiplication by
+<span class="math inline">\(i\omega\)</span>; <span
+class="math inline">\(\omega = 2\pi f\)</span> (rad/s), <span
+class="math inline">\(f\)</span> in Hz. <a
+href="F5-waves.html#3-oscillations-as-turning-arrows">Section
+3</a>.</li>
+<li><strong>Damped oscillator.</strong> <span
+class="math inline">\(\ddot x + 2\Gamma\dot x + \omega_0^2x = 0\)</span>
+gives <span class="math inline">\(x = Ae^{-\Gamma t}\cos(\omega_dt +
+\phi)\)</span>, <span class="math inline">\(\omega_d = \sqrt{\omega_0^2
+- \Gamma^2}\)</span>, with damping rate <span
+class="math inline">\(\Gamma\)</span> (s<span
+class="math inline">\(^{-1}\)</span>). <a
+href="F5-waves.html#4-the-damped-oscillator-and-its-q">Section
+4</a>.</li>
+<li><strong>Quality factor.</strong> <span class="math inline">\(Q =
+\omega_0U/P = \omega_0/2\Gamma\)</span>, with <span
+class="math inline">\(U\)</span> the stored energy (J) and <span
+class="math inline">\(P\)</span> the power lost (W); the amplitude rings
+down with time constant <span
+class="math inline">\(2Q/\omega_0\)</span>. <a
+href="F5-waves.html#4-the-damped-oscillator-and-its-q">Section
+4</a>.</li>
+<li><strong>Driven oscillator.</strong> <span class="math inline">\(X =
+\dfrac{F_0/m}{\omega_0^2 - \omega^2 + 2i\Gamma\omega}\)</span>; near
+resonance the response is <span class="math inline">\(1/\sqrt{1 +
+y^2}\)</span> of its peak, lagging by <span
+class="math inline">\(\arctan y\)</span> more, with <span
+class="math inline">\(y = 2Q\,\Delta f/f_0\)</span>; full width at half
+power <span class="math inline">\(\Delta f = f_0/Q\)</span>. <a
+href="F5-waves.html#5-the-driven-oscillator-resonance-phase-and-bandwidth">Section
+5</a>.</li>
+<li><strong>Impedances.</strong> <span class="math inline">\(Z_R =
+R\)</span>, <span class="math inline">\(Z_L = i\omega L\)</span>, <span
+class="math inline">\(Z_C = 1/(i\omega C)\)</span>, in Ω; <span
+class="math inline">\(V = ZI\)</span> for complex amplitudes. <span
+class="math inline">\(LC\)</span> resonance <span
+class="math inline">\(\omega_0 = 1/\sqrt{LC}\)</span>; series <span
+class="math inline">\(RLC\)</span>, <span class="math inline">\(Q =
+\omega_0L/R\)</span>. <a
+href="F5-waves.html#6-lc-and-rlc-circuits-with-phasors">Section
+6</a>.</li>
+<li><strong>Beats.</strong> <span class="math inline">\(\cos\omega_1t +
+\cos\omega_2t = 2\cos\tfrac{(\omega_1 -
+\omega_2)t}{2}\cos\tfrac{(\omega_1 + \omega_2)t}{2}\)</span>; the
+loudness repeats at <span class="math inline">\(f_1 - f_2\)</span>. <a
+href="F5-waves.html#7-coupled-oscillators-normal-modes-and-beats">Section
+7</a>.</li>
+<li><strong>Wave equation.</strong> <span
+class="math inline">\(\partial^2y/\partial t^2 =
+v^2\,\partial^2y/\partial x^2\)</span>, solved by any <span
+class="math inline">\(f(x - vt) + g(x + vt)\)</span>; on a string <span
+class="math inline">\(v = \sqrt{T/\mu}\)</span>, tension <span
+class="math inline">\(T\)</span> (N), mass per length <span
+class="math inline">\(\mu\)</span> (kg/m). <a
+href="F5-waves.html#8-the-wave-equation-on-a-string">Section 8</a>.</li>
+<li><strong>Sinusoidal wave.</strong> <span class="math inline">\(y =
+A\cos(\omega t - kx)\)</span>, wavenumber <span class="math inline">\(k
+= 2\pi/\lambda\)</span> (rad/m), phase velocity <span
+class="math inline">\(v_{ph} = \omega/k = f\lambda\)</span>. <a
+href="F5-waves.html#9-sinusoidal-waves">Section 9</a>.</li>
+<li><strong>Standing waves.</strong> Between fixed ends a distance <span
+class="math inline">\(L\)</span> apart, <span class="math inline">\(f_n
+= nv/(2L)\)</span>, <span class="math inline">\(n = 1, 2, 3,
+\dots\)</span> <a
+href="F5-waves.html#10-superposition-interference-and-standing-waves">Section
+10</a>.</li>
+<li><strong>Reflection.</strong> On a line of impedance <span
+class="math inline">\(Z_0\)</span> ending in <span
+class="math inline">\(Z_L\)</span>, the voltage reflection is <span
+class="math inline">\(\Gamma = (Z_L - Z_0)/(Z_L + Z_0)\)</span>, and the
+fraction <span class="math inline">\(\Gamma^2\)</span> of the power is
+reflected. <a
+href="F5-waves.html#11-reflection-and-impedance-matching">Section
+11</a>.</li>
+<li><strong>Dispersion.</strong> Group velocity <span
+class="math inline">\(v_g = d\omega/dk\)</span>; in a waveguide, <span
+class="math inline">\(\omega^2 = \omega_c^2 + c^2k^2\)</span>, so <span
+class="math inline">\(v_g = c\sqrt{1 - (f_c/f)^2}\)</span> and <span
+class="math inline">\(v_{ph}v_g = c^2\)</span>. <a
+href="F5-waves.html#12-dispersion-phase-and-group-velocity">Section
+12</a>.</li>
+<li><strong>Electromagnetic waves.</strong> <span
+class="math inline">\(c = 1/\sqrt{\mu_0\varepsilon_0} =
+299\,792\,458\)</span> m/s, <span class="math inline">\(B_0 =
+\mathcal{E}_0/c\)</span>, intensity <span class="math inline">\(I =
+\mathcal{E}_0^2/(2\eta_0)\)</span> (W/m<span
+class="math inline">\(^2\)</span>), <span class="math inline">\(\eta_0 =
+\sqrt{\mu_0/\varepsilon_0} = 376.7\)</span> Ω. <a
+href="F5-waves.html#13-electromagnetic-waves">Section 13</a>.</li>
+<li><strong>Doppler.</strong> For a slow source or observer approaching
+at speed <span class="math inline">\(u\)</span>, in a wave of speed
+<span class="math inline">\(v\)</span>: <span
+class="math inline">\(f&#39; \approx f(1 + u/v)\)</span>. <a
+href="F5-waves.html#14-the-doppler-effect">Section 14</a>.</li>
+<li><strong>Interference and diffraction.</strong> Bright fringes at
+<span class="math inline">\(d\sin\theta = m\lambda\)</span>; nothing
+much smaller than <span class="math inline">\(\lambda\)</span> can be
+resolved. <a
+href="F5-waves.html#15-interference-and-diffraction">Section
+15</a>.</li>
+<li><strong>Fourier.</strong> A periodic signal is a sum of sinusoids at
+multiples of its frequency; a pulse of length <span
+class="math inline">\(\Delta t\)</span> (s) holds a band <span
+class="math inline">\(\Delta f \sim 1/\Delta t\)</span> (Hz). <a
+href="F5-waves.html#16-fouriers-idea">Section 16</a>.</li>
+</ul>
+<h4 id="f6-heat-gases-and-probability"><a
+href="F6-heat-and-probability.html">F6 Heat, gases and
+probability</a></h4>
+<p>In sections 1 to 8 of F6, <span class="math inline">\(p\)</span> is a
+probability and <span class="math inline">\(n\)</span> a number of
+trials; from section 9 on, <span class="math inline">\(p\)</span> is a
+pressure (Pa) and <span class="math inline">\(n\)</span> a number
+density (m<span class="math inline">\(^{-3}\)</span>).</p>
+<ul>
+<li><strong>Combining chances.</strong> Independent events: <span
+class="math inline">\(P(A\text{ and }B) = P(A)\,P(B)\)</span>. Exclusive
+events: <span class="math inline">\(P(A\text{ or }B) = P(A) +
+P(B)\)</span>. <a
+href="F6-heat-and-probability.html#1-chance-outcomes-and-probability">Section
+1</a>.</li>
+<li><strong>Binomial.</strong> <span class="math inline">\(k\)</span>
+successes in <span class="math inline">\(n\)</span> trials of
+probability <span class="math inline">\(p\)</span>: <span
+class="math inline">\(P(k) = \dbinom{n}{k}p^k(1 - p)^{n-k}\)</span>,
+mean <span class="math inline">\(np\)</span>, variance <span
+class="math inline">\(np(1 - p)\)</span>. <a
+href="F6-heat-and-probability.html#2-counting-ways-the-binomial-distribution">Section
+2</a>.</li>
+<li><strong>Mean and spread.</strong> Mean <span
+class="math inline">\(\mu = \langle x\rangle\)</span>; variance <span
+class="math inline">\(\sigma^2 = \langle(x - \mu)^2\rangle = \langle
+x^2\rangle - \mu^2\)</span>; standard deviation <span
+class="math inline">\(\sigma\)</span>, in the units of <span
+class="math inline">\(x\)</span>. <a
+href="F6-heat-and-probability.html#3-random-variables-mean-variance-and-standard-deviation">Section
+3</a>.</li>
+<li><strong>Gaussian.</strong> <span class="math inline">\(f(x) =
+\dfrac{1}{\sigma\sqrt{2\pi}}e^{-(x - \mu)^2/2\sigma^2}\)</span>; 68.3,
+95.4 and 99.73 per cent within <span
+class="math inline">\(1\sigma\)</span>, <span
+class="math inline">\(2\sigma\)</span>, <span
+class="math inline">\(3\sigma\)</span>; full width at half maximum <span
+class="math inline">\(2.355\sigma\)</span>; from <span
+class="math inline">\(\int_{-\infty}^{\infty}e^{-x^2}dx =
+\sqrt\pi\)</span>. <a
+href="F6-heat-and-probability.html#5-the-gaussian-distribution">Section
+5</a>.</li>
+<li><strong>Poisson.</strong> <span class="math inline">\(P(N) =
+\mu^Ne^{-\mu}/N!\)</span>, mean <span
+class="math inline">\(\mu\)</span>, standard deviation <span
+class="math inline">\(\sqrt\mu\)</span>: a count of <span
+class="math inline">\(N\)</span> is uncertain by about <span
+class="math inline">\(\sqrt N\)</span>. <a
+href="F6-heat-and-probability.html#6-counting-random-events-the-poisson-distribution">Section
+6</a>.</li>
+<li><strong>Errors.</strong> Independent errors add in quadrature, <span
+class="math inline">\(\sigma_{x+y} = \sqrt{\sigma_x^2 +
+\sigma_y^2}\)</span>; the mean of <span class="math inline">\(N\)</span>
+readings has error <span class="math inline">\(\sigma/\sqrt N\)</span>.
+<a
+href="F6-heat-and-probability.html#8-measurements-and-their-errors">Section
+8</a>.</li>
+<li><strong>First law.</strong> <span class="math inline">\(\Delta U = Q
+- W_{by}\)</span>: internal energy <span
+class="math inline">\(U\)</span>, heat <span
+class="math inline">\(Q\)</span> put in and work <span
+class="math inline">\(W_{by}\)</span> done by the gas, all in J. <a
+href="F6-heat-and-probability.html#9-temperature-heat-and-internal-energy">Section
+9</a>.</li>
+<li><strong>Ideal gas.</strong> <span class="math inline">\(pV = Nk_BT =
+\nu RT\)</span>, or <span class="math inline">\(p = nk_BT\)</span>:
+<span class="math inline">\(p\)</span> in Pa, <span
+class="math inline">\(V\)</span> in m<span
+class="math inline">\(^3\)</span>, <span
+class="math inline">\(N\)</span> molecules, <span
+class="math inline">\(\nu\)</span> moles, <span class="math inline">\(n
+= N/V\)</span>, <span class="math inline">\(T\)</span> in K, <span
+class="math inline">\(k_B = 1.380\,649 \times 10^{-23}\)</span> J/K,
+<span class="math inline">\(R = N_Ak_B = 8.314\)</span> J/(mol K). <a
+href="F6-heat-and-probability.html#10-the-ideal-gas">Section
+10</a>.</li>
+<li><strong>Kinetic theory.</strong> <span class="math inline">\(p =
+\tfrac13nm\langle v^2\rangle\)</span>, so <span
+class="math inline">\(\langle\tfrac12mv^2\rangle = \tfrac32k_BT\)</span>
+and <span class="math inline">\(v_{rms} = \sqrt{3k_BT/m}\)</span>; each
+quadratic term in the energy holds <span
+class="math inline">\(\tfrac12k_BT\)</span> on average. <a
+href="F6-heat-and-probability.html#11-kinetic-theory-pressure-from-molecular-impacts">Section
+11</a>.</li>
+<li><strong>Boltzmann factor and mean speed.</strong> The probability of
+a state of energy <span class="math inline">\(E\)</span> goes as <span
+class="math inline">\(e^{-E/k_BT}\)</span>; mean speed <span
+class="math inline">\(\bar v = \sqrt{8k_BT/\pi m}\)</span> (m/s). <a
+href="F6-heat-and-probability.html#13-the-boltzmann-factor-and-the-speeds-of-molecules">Section
+13</a>.</li>
+<li><strong>Wall rate and mean free path.</strong> <span
+class="math inline">\(\Phi = \tfrac14n\bar v\)</span> per m<span
+class="math inline">\(^2\)</span> per second; <span
+class="math inline">\(\lambda = 1/(\sqrt2\,n\sigma)\)</span> (m), with
+cross-section <span class="math inline">\(\sigma = \pi d^2\)</span> for
+molecules of diameter <span class="math inline">\(d\)</span>. <a
+href="F6-heat-and-probability.html#14-molecules-on-the-move-wall-collisions-and-the-mean-free-path">Section
+14</a>.</li>
+<li><strong>Second law and the price of cold.</strong> Entropy <span
+class="math inline">\(S\)</span> (J/K) never falls in an isolated
+system; heat <span class="math inline">\(Q\)</span> entering at <span
+class="math inline">\(T\)</span> brings entropy <span
+class="math inline">\(Q/T\)</span>. The least work to pump heat <span
+class="math inline">\(Q\)</span> from <span
+class="math inline">\(T\)</span> up to room temperature <span
+class="math inline">\(T_a\)</span> is <span class="math inline">\(W_{el}
+= Q(T_a - T)/T\)</span>. <a
+href="F6-heat-and-probability.html#16-entropy-and-the-second-law">Section
+16</a>.</li>
+</ul>
+<h4 id="f7-atoms-nuclei-and-quanta"><a
+href="F7-atoms-and-quanta.html">F7 Atoms, nuclei and quanta</a></h4>
+<ul>
+<li><strong>Electron-volt and rest energies.</strong> 1 eV <span
+class="math inline">\(= 1.602\,176\,634 \times 10^{-19}\)</span> J, the
+energy of a charge <span class="math inline">\(e\)</span> across 1 V;
+<span class="math inline">\(m_ec^2 = 0.511\)</span> MeV, <span
+class="math inline">\(m_pc^2 = 938.272\)</span> MeV, 1 u <span
+class="math inline">\(= 931.494\)</span> MeV<span
+class="math inline">\(/c^2\)</span>. <a
+href="F7-atoms-and-quanta.html#3-the-electron-volt">Section 3</a>.</li>
+<li><strong>Photon.</strong> <span class="math inline">\(E = hf =
+hc/\lambda\)</span>, momentum <span class="math inline">\(p = E/c =
+h/\lambda\)</span>, with <span class="math inline">\(hc =
+1239.84\)</span> eV nm <span class="math inline">\(= 1239.84\)</span>
+MeV fm. <a href="F7-atoms-and-quanta.html#4-light-as-particles">Section
+4</a>.</li>
+<li><strong>X-ray tube.</strong> At voltage <span
+class="math inline">\(V\)</span> the shortest wavelength is <span
+class="math inline">\(\lambda_{min} = hc/(eV)\)</span>. <a
+href="F7-atoms-and-quanta.html#5-x-rays">Section 5</a>.</li>
+<li><strong>Bohr’s hydrogen.</strong> <span class="math inline">\(E_n =
+-13.606\ \text{eV}/n^2\)</span>, <span class="math inline">\(r_n =
+n^2a_0\)</span> with <span class="math inline">\(a_0 = 0.0529\)</span>
+nm; a photon from level <span class="math inline">\(n_2\)</span> to
+<span class="math inline">\(n_1\)</span> has <span
+class="math inline">\(hf = E_{n_2} - E_{n_1}\)</span>. <a
+href="F7-atoms-and-quanta.html#7-bohrs-hydrogen-atom-and-energy-levels">Section
+7</a>.</li>
+<li><strong>Matter waves and uncertainty.</strong> De Broglie <span
+class="math inline">\(\lambda = h/p\)</span>; <span
+class="math inline">\(\Delta x\,\Delta p \gtrsim \hbar\)</span>, with
+<span class="math inline">\(\hbar = h/2\pi\)</span> and <span
+class="math inline">\(\hbar c = 197.327\)</span> MeV fm. <a
+href="F7-atoms-and-quanta.html#8-matter-waves">Section 8</a>.</li>
+<li><strong>Nuclear radius.</strong> <span class="math inline">\(R
+\approx 1.2\,A^{1/3}\)</span> fm, with <span
+class="math inline">\(A\)</span> the number of protons and neutrons. <a
+href="F7-atoms-and-quanta.html#10-the-nucleus">Section 10</a>.</li>
+<li><strong>Binding energy and Q value.</strong> <span
+class="math inline">\(B = [Z\,m(^1\mathrm{H}) + Nm_n -
+M_{atom}]c^2\)</span>, with <span class="math inline">\(Z\)</span>
+protons, <span class="math inline">\(N\)</span> neutrons and atomic
+masses; <span class="math inline">\(Q = (\text{masses before} -
+\text{masses after})\,c^2\)</span>, positive when a reaction gives out
+energy. <a
+href="F7-atoms-and-quanta.html#11-mass-and-binding-energy">Section
+11</a>, <a
+href="F7-atoms-and-quanta.html#12-reactions-q-values-and-the-coulomb-barrier">section
+12</a>.</li>
+<li><strong>Decay.</strong> <span class="math inline">\(N =
+N_0e^{-\lambda_dt}\)</span>, half-life <span
+class="math inline">\(t_{1/2} = \ln2/\lambda_d\)</span>, activity <span
+class="math inline">\(\mathcal{A} = \lambda_dN\)</span> in becquerels
+(decays per second); 1 Ci <span class="math inline">\(= 3.7 \times
+10^{10}\)</span> Bq. <a
+href="F7-atoms-and-quanta.html#13-radioactivity">Section 13</a>.</li>
+<li><strong>Pair creation.</strong> A photon needs at least <span
+class="math inline">\(2m_ec^2 = 1.022\)</span> MeV to make an electron
+and a positron. <a href="F7-atoms-and-quanta.html#14-antimatter">Section
+14</a>.</li>
+</ul>
+<h2 id="1-physical-constants">1. Physical constants</h2>
+<p>Values are CODATA 2018, read from the 2018 table that ships with
+SciPy (<code>scipy.constants</code>; the SciPy used here, version 1.18,
+gives CODATA 2022 by default, so the 2018 table was selected
+explicitly). Since the 2019 redefinition of the SI, <span
+class="math inline">\(c\)</span>, <span
+class="math inline">\(e\)</span>, <span
+class="math inline">\(h\)</span>, <span
+class="math inline">\(k_B\)</span> and <span
+class="math inline">\(N_A\)</span> are exact.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>Value</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed of light in vacuum</td>
+<td><span class="math inline">\(c\)</span></td>
+<td>299 792 458 (exact)</td>
+<td>m s<span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr>
+<td>Elementary charge</td>
+<td><span class="math inline">\(e\)</span></td>
+<td><span class="math inline">\(1.602\,176\,634 \times 10^{-19}\)</span>
+(exact)</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Planck constant</td>
+<td><span class="math inline">\(h\)</span></td>
+<td><span class="math inline">\(6.626\,070\,15 \times 10^{-34}\)</span>
+(exact)</td>
+<td>J s</td>
+</tr>
+<tr>
+<td>Reduced Planck constant</td>
+<td><span class="math inline">\(\hbar = h/2\pi\)</span></td>
+<td><span class="math inline">\(1.054\,571\,817 \times
+10^{-34}\)</span></td>
+<td>J s</td>
+</tr>
+<tr>
+<td>Boltzmann constant</td>
+<td><span class="math inline">\(k_B\)</span></td>
+<td><span class="math inline">\(1.380\,649 \times 10^{-23}\)</span>
+(exact)</td>
+<td>J K<span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr>
+<td>Avogadro constant</td>
+<td><span class="math inline">\(N_A\)</span></td>
+<td><span class="math inline">\(6.022\,140\,76 \times 10^{23}\)</span>
+(exact)</td>
+<td>mol<span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr>
+<td>Vacuum permittivity</td>
+<td><span class="math inline">\(\varepsilon_0\)</span></td>
+<td><span class="math inline">\(8.854\,187\,8128 \times
+10^{-12}\)</span></td>
+<td>F m<span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr>
+<td>Vacuum permeability</td>
+<td><span class="math inline">\(\mu_0\)</span></td>
+<td><span class="math inline">\(1.256\,637\,062\,12 \times
+10^{-6}\)</span></td>
+<td>N A<span class="math inline">\(^{-2}\)</span></td>
+</tr>
+<tr>
+<td>Impedance of free space</td>
+<td><span class="math inline">\(\eta_0 =
+\sqrt{\mu_0/\varepsilon_0}\)</span></td>
+<td>376.730 313 668</td>
+<td>Ω</td>
+</tr>
+<tr>
+<td>Electron mass</td>
+<td><span class="math inline">\(m_e\)</span></td>
+<td><span class="math inline">\(9.109\,383\,7015 \times
+10^{-31}\)</span></td>
+<td>kg</td>
+</tr>
+<tr>
+<td>Proton mass</td>
+<td><span class="math inline">\(m_p\)</span></td>
+<td><span class="math inline">\(1.672\,621\,923\,69 \times
+10^{-27}\)</span></td>
+<td>kg</td>
+</tr>
+<tr>
+<td>Neutron mass</td>
+<td><span class="math inline">\(m_n\)</span></td>
+<td><span class="math inline">\(1.674\,927\,498\,04 \times
+10^{-27}\)</span></td>
+<td>kg</td>
+</tr>
+<tr>
+<td>Atomic mass constant</td>
+<td><span class="math inline">\(m_u\)</span> (1 u)</td>
+<td><span class="math inline">\(1.660\,539\,066\,60 \times
+10^{-27}\)</span></td>
+<td>kg</td>
+</tr>
+<tr>
+<td>Muon mass</td>
+<td><span class="math inline">\(m_\mu\)</span></td>
+<td><span class="math inline">\(1.883\,531\,627 \times
+10^{-28}\)</span></td>
+<td>kg</td>
+</tr>
+<tr>
+<td>Electron rest energy</td>
+<td><span class="math inline">\(m_ec^2\)</span></td>
+<td>0.510 998 95</td>
+<td>MeV</td>
+</tr>
+<tr>
+<td>Proton rest energy</td>
+<td><span class="math inline">\(m_pc^2\)</span></td>
+<td>938.272 088 16</td>
+<td>MeV</td>
+</tr>
+<tr>
+<td>Neutron rest energy</td>
+<td><span class="math inline">\(m_nc^2\)</span></td>
+<td>939.565 420 52</td>
+<td>MeV</td>
+</tr>
+<tr>
+<td>Atomic mass unit, energy</td>
+<td><span class="math inline">\(m_uc^2\)</span></td>
+<td>931.494 102 42</td>
+<td>MeV</td>
+</tr>
+<tr>
+<td>Muon rest energy</td>
+<td><span class="math inline">\(m_\mu c^2\)</span></td>
+<td>105.658 3755</td>
+<td>MeV</td>
+</tr>
+<tr>
+<td>Deuteron rest energy</td>
+<td><span class="math inline">\(m_dc^2\)</span></td>
+<td>1875.612 942 57</td>
+<td>MeV</td>
+</tr>
+<tr>
+<td>Alpha particle rest energy</td>
+<td><span class="math inline">\(m_\alpha c^2\)</span></td>
+<td>3727.379 4066</td>
+<td>MeV</td>
+</tr>
+<tr>
+<td>Fine-structure constant</td>
+<td><span class="math inline">\(\alpha = e^2/(4\pi\varepsilon_0\hbar
+c)\)</span></td>
+<td><span class="math inline">\(7.297\,352\,5693 \times 10^{-3}\)</span>
+<span class="math inline">\(= 1/137.035\,999\)</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Classical electron radius</td>
+<td><span class="math inline">\(r_e = e^2/(4\pi\varepsilon_0
+m_ec^2)\)</span></td>
+<td><span class="math inline">\(2.817\,940\,3262 \times
+10^{-15}\)</span></td>
+<td>m</td>
+</tr>
+<tr>
+<td>Classical proton radius</td>
+<td><span class="math inline">\(r_p = e^2/(4\pi\varepsilon_0
+m_pc^2)\)</span></td>
+<td><span class="math inline">\(1.534\,698 \times 10^{-18}\)</span>
+(computed)</td>
+<td>m</td>
+</tr>
+<tr>
+<td>Reduced Compton wavelength of the electron</td>
+<td><span class="math inline">\(\bar\lambda_c = \hbar/(m_ec) =
+r_e/\alpha\)</span></td>
+<td><span class="math inline">\(3.861\,592\,6796 \times
+10^{-13}\)</span></td>
+<td>m</td>
+</tr>
+<tr>
+<td>Electron magnetic anomaly</td>
+<td><span class="math inline">\(a_e = (g_e - 2)/2\)</span></td>
+<td><span class="math inline">\(1.159\,652\,181\,28 \times
+10^{-3}\)</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shielded proton gyromagnetic ratio over <span
+class="math inline">\(2\pi\)</span></td>
+<td><span class="math inline">\(\gamma_p&#39;/2\pi\)</span></td>
+<td>42.576 384 74</td>
+<td>MHz T<span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr>
+<td>Standard atmosphere</td>
+<td></td>
+<td>101 325 (exact)</td>
+<td>Pa</td>
+</tr>
+</tbody>
+</table>
+<p>One constant from outside CODATA appears in the course: the muon’s
+mean life, <span class="math inline">\(\tau_\mu = 2.196\,9811\)</span>
+µs, which <a
+href="27-new-ways-to-accelerate.html#10-the-muon-collider">chapter
+27</a> takes from the Particle Data Group.</p>
+<p><strong>Combinations used often.</strong> All computed from the table
+above.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Combination</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(hc\)</span></td>
+<td>1239.842 MeV fm <span class="math inline">\(=\)</span> 1239.842 eV
+nm</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\hbar c\)</span></td>
+<td>197.327 MeV fm</td>
+</tr>
+<tr>
+<td><span class="math inline">\(e^2/(4\pi\varepsilon_0)\)</span></td>
+<td>1.439 96 MeV fm</td>
+</tr>
+<tr>
+<td><span class="math inline">\(1/(4\pi\varepsilon_0 c)\)</span></td>
+<td>29.979 Ω</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k_BT\)</span> at 20 °C (293.15 K)</td>
+<td>0.025 26 eV</td>
+</tr>
+<tr>
+<td>1 eV<span class="math inline">\(/k_B\)</span></td>
+<td>11 604.5 K</td>
+</tr>
+<tr>
+<td>Alfvén current, electrons, <span class="math inline">\(I_A =
+4\pi\varepsilon_0 m_ec^3/e\)</span></td>
+<td>17.045 kA</td>
+</tr>
+<tr>
+<td>Radiation constant, electrons, <span class="math inline">\(C_\gamma
+= \frac{4\pi}{3}\,r_e/(m_ec^2)^3\)</span></td>
+<td><span class="math inline">\(8.846 \times 10^{-5}\)</span> m GeV<span
+class="math inline">\(^{-3}\)</span></td>
+</tr>
+<tr>
+<td>Radiation constant, protons, <span class="math inline">\(C_\gamma =
+\frac{4\pi}{3}\,r_p/(m_pc^2)^3\)</span></td>
+<td><span class="math inline">\(7.783 \times 10^{-18}\)</span> m
+GeV<span class="math inline">\(^{-3}\)</span></td>
+</tr>
+<tr>
+<td>Quantum constant, electrons, <span class="math inline">\(C_q =
+\frac{55}{32\sqrt3}\,\hbar/(m_ec)\)</span></td>
+<td><span class="math inline">\(3.832 \times 10^{-13}\)</span> m</td>
+</tr>
+<tr>
+<td>Richardson constant, <span class="math inline">\(A_0 = 4\pi m_e e
+k_B^2/h^3\)</span></td>
+<td><span class="math inline">\(1.2017 \times 10^{6}\)</span> A m<span
+class="math inline">\(^{-2}\)</span> K<span
+class="math inline">\(^{-2}\)</span> <span
+class="math inline">\(=\)</span> 120.17 A cm<span
+class="math inline">\(^{-2}\)</span> K<span
+class="math inline">\(^{-2}\)</span></td>
+</tr>
+<tr>
+<td>Child-Langmuir constant, <span
+class="math inline">\(\frac49\varepsilon_0\sqrt{2e/m}\)</span></td>
+<td><span class="math inline">\(2.334 \times 10^{-6}\)</span> A V<span
+class="math inline">\(^{-3/2}\)</span> (electrons), <span
+class="math inline">\(5.447 \times 10^{-8}\)</span> A V<span
+class="math inline">\(^{-3/2}\)</span> (protons)</td>
+</tr>
+<tr>
+<td>Fowler-Nordheim constants, <span class="math inline">\(a_{FN} =
+e^3/(8\pi h)\)</span>, <span class="math inline">\(b_{FN} =
+8\pi\sqrt{2m_e}/(3eh)\)</span></td>
+<td><span class="math inline">\(1.5414 \times 10^{-6}\)</span> A eV
+V<span class="math inline">\(^{-2}\)</span>; 6.8309 eV<span
+class="math inline">\(^{-3/2}\)</span> V nm<span
+class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr>
+<td>Spin-tune energy, <span
+class="math inline">\(m_ec^2/a_e\)</span></td>
+<td>440.648 MeV</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-units-and-conversions">2. Units and conversions</h2>
+<p>The course works in SI. Energies are in electron-volts with prefixes,
+momenta in eV/<span class="math inline">\(c\)</span>, masses as rest
+energies in eV. Older sources use other units; these are the
+conversions.</p>
+<p><strong>Energy, momentum and mass.</strong> - 1 eV <span
+class="math inline">\(= 1.602\,176\,634 \times 10^{-19}\)</span> J
+exactly; 1 J <span class="math inline">\(= 6.241\,509 \times
+10^{18}\)</span> eV. - 1 GeV/<span class="math inline">\(c\)</span>
+<span class="math inline">\(= 5.344\,286 \times 10^{-19}\)</span> kg m
+s<span class="math inline">\(^{-1}\)</span>. - 1 eV of <span
+class="math inline">\(k_BT\)</span> is 11 604.5 K. - A photon of energy
+<span class="math inline">\(\varepsilon\)</span> has wavelength <span
+class="math inline">\(\lambda\,[\mathrm{nm}] =
+1239.842/\varepsilon\,[\mathrm{eV}]\)</span>; 1 keV is 1.2398 nm.</p>
+<p><strong>Pressure.</strong> - 1 Pa <span
+class="math inline">\(=\)</span> 1 N m<span
+class="math inline">\(^{-2}\)</span>; 1 mbar <span
+class="math inline">\(=\)</span> 100 Pa; 1 bar <span
+class="math inline">\(= 10^5\)</span> Pa. - 1 Torr <span
+class="math inline">\(=\)</span> 1 mm of mercury <span
+class="math inline">\(= 101\,325/760\)</span> Pa <span
+class="math inline">\(= 133.322\)</span> Pa <span
+class="math inline">\(= 1.333\,22\)</span> mbar. - 1 Pa <span
+class="math inline">\(= 7.500\,62 \times 10^{-3}\)</span> Torr <span
+class="math inline">\(= 0.01\)</span> mbar. - 1 atm <span
+class="math inline">\(=\)</span> 101 325 Pa <span
+class="math inline">\(=\)</span> 1013.25 mbar <span
+class="math inline">\(=\)</span> 760 Torr. - Throughput: 1 mbar l s<span
+class="math inline">\(^{-1}\)</span> <span
+class="math inline">\(=\)</span> 0.1 Pa m<span
+class="math inline">\(^3\)</span> s<span
+class="math inline">\(^{-1}\)</span>; 1 Torr l s<span
+class="math inline">\(^{-1}\)</span> <span
+class="math inline">\(=\)</span> 0.133 322 Pa m<span
+class="math inline">\(^3\)</span> s<span
+class="math inline">\(^{-1}\)</span>. - Number density of an ideal gas
+at 20 °C: <span class="math inline">\(2.471 \times 10^{20}\)</span>
+m<span class="math inline">\(^{-3}\)</span> per pascal.</p>
+<p><strong>Magnetic field.</strong> 1 gauss (G) <span
+class="math inline">\(= 10^{-4}\)</span> T; 1 T <span
+class="math inline">\(=\)</span> 10 000 G; 1 kG <span
+class="math inline">\(=\)</span> 0.1 T. (Lawrence’s “3,300 gauss” is
+0.33 T.) The gauss belongs to the Gaussian system; the course never uses
+that system’s equations, only converts its numbers.</p>
+<p><strong>Area, cross-section and luminosity.</strong> - 1 barn (b)
+<span class="math inline">\(= 10^{-28}\)</span> m<span
+class="math inline">\(^2\)</span> <span class="math inline">\(=
+10^{-24}\)</span> cm<span class="math inline">\(^2\)</span>; 1 mb <span
+class="math inline">\(= 10^{-27}\)</span> cm<span
+class="math inline">\(^2\)</span>; 1 nb <span class="math inline">\(=
+10^{-33}\)</span> cm<span class="math inline">\(^2\)</span>; 1 fb <span
+class="math inline">\(= 10^{-39}\)</span> cm<span
+class="math inline">\(^2\)</span>. - 1 cm<span
+class="math inline">\(^{-2}\)</span> s<span
+class="math inline">\(^{-1}\)</span> <span class="math inline">\(=
+10^{4}\)</span> m<span class="math inline">\(^{-2}\)</span> s<span
+class="math inline">\(^{-1}\)</span>, so <span
+class="math inline">\(10^{34}\)</span> cm<span
+class="math inline">\(^{-2}\)</span> s<span
+class="math inline">\(^{-1}\)</span> <span class="math inline">\(=
+10^{38}\)</span> m<span class="math inline">\(^{-2}\)</span> s<span
+class="math inline">\(^{-1}\)</span>. - Integrated luminosity: 1 fb<span
+class="math inline">\(^{-1}\)</span> <span class="math inline">\(=
+10^{39}\)</span> cm<span class="math inline">\(^{-2}\)</span> <span
+class="math inline">\(= 10^{43}\)</span> m<span
+class="math inline">\(^{-2}\)</span>; 1 pb<span
+class="math inline">\(^{-1}\)</span> <span class="math inline">\(=
+10^{36}\)</span> cm<span class="math inline">\(^{-2}\)</span>.</p>
+<p><strong>Current and particle number.</strong> A current of 1 µA
+carries <span class="math inline">\(6.2415 \times 10^{12}\)</span>
+singly charged particles a second; in general <span
+class="math inline">\(I = \dot{N}q\)</span>.</p>
+<p><strong>Length.</strong> 1 inch <span
+class="math inline">\(=\)</span> 25.4 mm exactly (cyclotrons were named
+by pole diameter in inches). 1 Å <span class="math inline">\(=
+10^{-10}\)</span> m <span class="math inline">\(=\)</span> 0.1 nm.</p>
+<p><strong>Radiation.</strong> 1 Gy <span
+class="math inline">\(=\)</span> 1 J kg<span
+class="math inline">\(^{-1}\)</span> (absorbed dose); the sievert (Sv)
+is the same unit weighted for biological effect (<a
+href="08-seeing-the-beam.html#12-radiation-protection-the-quantities">chapter
+8</a>). 1 Bq <span class="math inline">\(=\)</span> one decay a
+second.</p>
+<p><strong>Emittance.</strong> m rad, quoted as mm mrad or µm (the same
+unit), or nm and pm for electron rings. Check whether a source means rms
+or a multiple of rms (some use <span
+class="math inline">\(4\varepsilon\)</span> or <span
+class="math inline">\(6\varepsilon\)</span>, and some put a factor <span
+class="math inline">\(\pi\)</span> in front).</p>
+<h2 id="3-practical-formulas">3. Practical formulas</h2>
+<p>Each comes with a check computed from the constants above. Singly
+charged particles unless stated.</p>
+<p><strong>Relativistic kinematics.</strong> <span
+class="math inline">\(\gamma = 1 + W/mc^2\)</span>, <span
+class="math inline">\(\beta = \sqrt{1 - 1/\gamma^2}\)</span>, <span
+class="math inline">\(pc = \sqrt{W(W + 2mc^2)}\)</span>, <span
+class="math inline">\(\beta\gamma = p/mc\)</span>. A proton of <span
+class="math inline">\(W = 1\)</span> GeV has <span
+class="math inline">\(p = 1.696\)</span> GeV/<span
+class="math inline">\(c\)</span> and <span class="math inline">\(\beta =
+0.875\)</span>.</p>
+<p><strong>Magnetic rigidity</strong> (<a
+href="01-why-accelerate.html#41-rigidity">chapter 1, section
+4.1</a>):</p>
+<p><span class="math display">\[
+B\rho = \frac{p}{q}, \qquad B\rho\,[\mathrm{T\,m}] =
+3.3356\,p\,[\mathrm{GeV}/c] \quad (q = e)
+\]</span></p>
+<p>For an ion of charge <span class="math inline">\(Ze\)</span> divide
+by <span class="math inline">\(Z\)</span>. The 1 GeV proton above has
+<span class="math inline">\(B\rho = 5.657\)</span> T m.</p>
+<p><strong>Cyclotron (gyration) frequency in a uniform field</strong>
+(<a href="01-why-accelerate.html#42-the-revolution-frequency">chapter 1,
+section 4.2</a>): <span class="math inline">\(f = qB/(2\pi\gamma
+m)\)</span>. For slow particles, 15.245 MHz per tesla for protons and
+27.992 GHz per tesla for electrons.</p>
+<p><strong>Revolution frequency of a ring</strong> of circumference
+<span class="math inline">\(C\)</span> (<a
+href="15-the-synchrotron.html#3-the-frequency-follows-the-speed">chapter
+15, section 3</a>): <span class="math inline">\(f_0 = \beta
+c/C\)</span>, <span class="math inline">\(\omega_0 = 2\pi f_0\)</span>,
+and the RF runs at <span class="math inline">\(f_{RF} = hf_0\)</span>.
+The 1 GeV proton in a 1000 m ring goes round at 262.3 kHz.</p>
+<p><strong>Synchrotron radiation, energy lost per turn</strong> in a
+ring whose bends all have radius <span
+class="math inline">\(\rho\)</span> (<a
+href="20-synchrotron-radiation.html#3-energy-lost-per-turn">chapter 20,
+section 3</a>):</p>
+<p><span class="math display">\[
+U_0 = \frac{e^2\beta^3\gamma^4}{3\varepsilon_0\rho} =
+C_\gamma\,\frac{E^4}{\rho}, \qquad U_0\,[\mathrm{keV}] =
+88.46\,\frac{E^4\,[\mathrm{GeV}]}{\rho\,[\mathrm{m}]} \quad
+\text{(electrons, } \beta \approx 1\text{)}
+\]</span></p>
+<p>For protons the coefficient is <span class="math inline">\(7.78
+\times 10^{-12}\)</span> keV m GeV<span
+class="math inline">\(^{-4}\)</span>. The power the RF must give a beam
+of current <span class="math inline">\(I\)</span> is <span
+class="math inline">\(P = U_0I/e\)</span>, so <span
+class="math inline">\(P\,[\mathrm{kW}] = U_0\,[\mathrm{keV}] \times
+I\,[\mathrm{A}]\)</span>. A 1 GeV electron on a 1 m radius loses 88.46
+keV a turn.</p>
+<p><strong>Critical photon energy</strong> (<a
+href="20-synchrotron-radiation.html#5-the-critical-frequency">chapter
+20, section 5</a>):</p>
+<p><span class="math display">\[
+\varepsilon_c = \frac{3\hbar c\gamma^3}{2\rho}, \qquad
+\varepsilon_c\,[\mathrm{keV}] =
+2.218\,\frac{E^3\,[\mathrm{GeV}]}{\rho\,[\mathrm{m}]} =
+0.665\,E^2\,[\mathrm{GeV}]\,B\,[\mathrm{T}], \qquad
+\lambda_c\,[\mathrm{nm}] =
+0.559\,\frac{\rho\,[\mathrm{m}]}{E^3\,[\mathrm{GeV}]}
+\]</span></p>
+<p>The 1 GeV electron on 1 m: <span class="math inline">\(\varepsilon_c
+= 2.218\)</span> keV.</p>
+<p><strong>Undulator strength and wavelength</strong> (<a
+href="20-synchrotron-radiation.html#11-insertion-devices-wigglers-and-undulators">chapter
+20, section 11</a>):</p>
+<p><span class="math display">\[
+K = \frac{eB_0\lambda_u}{2\pi m_ec} =
+0.934\,B_0\,[\mathrm{T}]\,\lambda_u\,[\mathrm{cm}], \qquad \lambda_n =
+\frac{\lambda_u}{2n\gamma^2}\left(1 + \frac{K^2}{2} +
+\gamma^2\theta^2\right)
+\]</span></p>
+<p>On axis, in practical units, <span
+class="math inline">\(\lambda_1\,[\mathrm{nm}] =
+1.306\,\lambda_u\,[\mathrm{cm}]\,(1 +
+K^2/2)/E^2\,[\mathrm{GeV}]\)</span>, or <span
+class="math inline">\(\varepsilon_1\,[\mathrm{keV}] =
+0.950\,E^2\,[\mathrm{GeV}]/(\lambda_u\,[\mathrm{cm}]\,(1 +
+K^2/2))\)</span>. A 1 T peak field with a 2 cm period gives <span
+class="math inline">\(K = 1.87\)</span>; at 3 GeV with <span
+class="math inline">\(\lambda_u = 2\)</span> cm and <span
+class="math inline">\(K = 1\)</span> the fundamental is 0.435 nm, 2.85
+keV.</p>
+<p><strong>Electron cyclotron resonance</strong> (<a
+href="07-ion-sources-and-electron-guns.html#ecr-sources">chapter 7, ECR
+sources</a>): <span class="math inline">\(B_{ECR} = 2\pi
+f_{RF}m_e/e\)</span>, that is 35.72 mT per GHz, or <span
+class="math inline">\(f\,[\mathrm{GHz}] =
+27.99\,B\,[\mathrm{T}]\)</span>. 87.5 mT at 2.45 GHz; 0.518 T at 14.5
+GHz.</p>
+<p><strong>Plasma frequency, Debye length, wave-breaking field</strong>
+(<a
+href="07-ion-sources-and-electron-guns.html#plasmas-for-ion-sources">chapter
+7, plasmas</a>; <a
+href="27-new-ways-to-accelerate.html#1-why-a-plasma-holds-a-large-field">chapter
+27, section 1</a>):</p>
+<p><span class="math display">\[
+\omega_p = \sqrt{\frac{ne^2}{\varepsilon_0 m_e}}, \qquad \lambda_D =
+\sqrt{\frac{\varepsilon_0 k_BT_e}{ne^2}}, \qquad \mathcal{E}_0 =
+\frac{m_ec\,\omega_p}{e}
+\]</span></p>
+<p>In practical units <span class="math inline">\(f_p\,[\mathrm{Hz}] =
+8.979\sqrt{n\,[\mathrm{m^{-3}}]}\)</span>, <span
+class="math inline">\(\lambda_D\,[\mathrm{m}] =
+7434\sqrt{k_BT_e\,[\mathrm{eV}]/n\,[\mathrm{m^{-3}}]}\)</span>, and
+<span class="math inline">\(\mathcal{E}_0\,[\mathrm{V/m}] =
+96.16\sqrt{n\,[\mathrm{cm^{-3}}]}\)</span>. At <span
+class="math inline">\(n = 10^{18}\)</span> cm<span
+class="math inline">\(^{-3}\)</span>, <span
+class="math inline">\(\mathcal{E}_0 = 96\)</span> GV/m and <span
+class="math inline">\(f_p = 9.0\)</span> THz.</p>
+<p><strong>Laser strength parameter</strong> (<a
+href="27-new-ways-to-accelerate.html#2-pushing-electrons-with-light">chapter
+27, section 2</a>): <span class="math inline">\(a_0 =
+eE_L/(m_ec\,\omega_0) =
+0.855\,\lambda_0\,[\mu\mathrm{m}]\sqrt{I/10^{18}\
+\mathrm{W\,cm^{-2}}}\)</span> for linear polarisation.</p>
+<p><strong>Spin tune of electrons</strong> (<a
+href="18-imperfections-and-resonances.html#13-the-ground-moves-atl-tides-and-trains">chapter
+18, section 13</a>): <span class="math inline">\(\nu = a_e\gamma =
+E/440.65\)</span> MeV.</p>
+<p><strong>Polarisation time, Sokolov-Ternov</strong> (<a
+href="20-synchrotron-radiation.html#12-touschek-lifetime-and-spin-polarisation-in-outline">chapter
+20, section 12</a>): <span class="math inline">\(\tau_p\,[\mathrm{s}] =
+98.7\,\rho^3\,[\mathrm{m}]/E^5\,[\mathrm{GeV}]\)</span> for an
+isomagnetic ring, times <span class="math inline">\(R/\rho\)</span> with
+straight sections.</p>
+<p><strong>Kilpatrick criterion</strong> (<a
+href="13-rf-cavities-and-power.html#breakdown-and-the-kilpatrick-criterion">chapter
+13, section 10</a>): <span class="math inline">\(f\,[\mathrm{MHz}] =
+1.64\,\mathcal{E}_K^2\,e^{-8.5/\mathcal{E}_K}\)</span> with <span
+class="math inline">\(\mathcal{E}_K\)</span> in MV/m; 18.5 MV/m at 352.2
+MHz.</p>
+<p><strong>Muon turns in one lifetime</strong> (<a
+href="27-new-ways-to-accelerate.html#10-the-muon-collider">chapter 27,
+section 10</a>): <span class="math inline">\(N = \tau_\mu e\bar{B}/(2\pi
+m_\mu) = 297\,\bar{B}\,[\mathrm{T}]\)</span>, whatever the energy.</p>
+<h2 id="4-the-formulas-chapter-by-chapter">4. The formulas, chapter by
+chapter</h2>
+<h3 id="part-i-the-toolkit">Part I. The toolkit</h3>
+<h4 id="chapter-1-why-accelerate-and-the-toolkit"><a
+href="01-why-accelerate.html">Chapter 1. Why accelerate, and the
+toolkit</a></h4>
+<ul>
+<li><strong>Energy and momentum.</strong> <span class="math inline">\(L
+= -mc^2/\gamma\)</span>, <span class="math inline">\(\mathbf{p} = \gamma
+m\mathbf{v}\)</span>, <span class="math inline">\(E = \gamma
+mc^2\)</span>, <span class="math inline">\(E^2 = (pc)^2 +
+(mc^2)^2\)</span>, <span class="math inline">\(W = (\gamma -
+1)mc^2\)</span>. Lagrangian (J), momentum (kg m/s), energies (J). The
+relativistic particle from its action. <a
+href="01-why-accelerate.html#21-energy-and-momentum">Section
+2.1</a>.</li>
+<li><strong>Relations.</strong> <span class="math inline">\(\gamma =
+E/mc^2 = 1 + W/mc^2\)</span>; <span class="math inline">\(\beta =
+pc/E\)</span>; <span class="math inline">\(\beta\gamma = p/mc\)</span>;
+<span class="math inline">\(pc = \sqrt{W(W + 2mc^2)}\)</span>. <a
+href="01-why-accelerate.html#22-the-relations-among-them">Section
+2.2</a>.</li>
+<li><strong>Momentum spread from energy spread.</strong> <span
+class="math inline">\(\dfrac{dp}{p} = \dfrac{1}{\beta^2}\dfrac{dW}{E} =
+\dfrac{\gamma}{\gamma + 1}\dfrac{dW}{W}\)</span>. Rings sort by
+momentum; a 1 per cent energy spread is 0.5 per cent in momentum for
+slow particles, 1 per cent for fast ones. <a
+href="01-why-accelerate.html#22-the-relations-among-them">Section
+2.2</a>.</li>
+<li><strong>Lorentz force and energy.</strong> <span
+class="math inline">\(d\mathbf{p}/dt = q(\boldsymbol{\mathcal{E}} +
+\mathbf{v}\times\mathbf{B})\)</span> (N); <span
+class="math inline">\(dE/dt =
+q\,\mathbf{v}\cdot\boldsymbol{\mathcal{E}}\)</span> (W). Only the
+electric field changes the energy. <a
+href="01-why-accelerate.html#3-the-lorentz-force-and-why-only-the-electric-field-changes-energy">Section
+3</a>.</li>
+<li><strong>Static potential.</strong> <span
+class="math inline">\(\Delta W = q(\phi_1 - \phi_2) = qV\)</span> (J;
+<span class="math inline">\(V\)</span> in volts), whatever the path. <a
+href="01-why-accelerate.html#31-the-energy-gain-across-a-potential-difference">Section
+3.1</a>.</li>
+<li><strong>Rigidity and gyration.</strong> <span
+class="math inline">\(\rho = p_\perp/(qB)\)</span>; <span
+class="math inline">\(B\rho = p/q\)</span> (T m); <span
+class="math inline">\(\omega = qB/(\gamma m)\)</span> (rad/s). <a
+href="01-why-accelerate.html#41-rigidity">Sections 4.1</a> and <a
+href="01-why-accelerate.html#42-the-revolution-frequency">4.2</a>.</li>
+<li><strong>De Broglie wavelength.</strong> <span
+class="math inline">\(\lambda = h/p\)</span> (m); <span
+class="math inline">\(\lambda\,[\mathrm{fm}] =
+1239.842/pc\,[\mathrm{MeV}]\)</span>. A probe resolves down to about its
+wavelength. <a
+href="01-why-accelerate.html#11-to-see-small-things">Section
+1.1</a>.</li>
+<li><strong>Coulomb barrier.</strong> <span class="math inline">\(V_C =
+zZe^2/[4\pi\varepsilon_0(R_1 + R_2)]\)</span>, <span
+class="math inline">\(R_1 + R_2 = r_0(A_1^{1/3} + A_2^{1/3})\)</span>,
+with <span class="math inline">\(r_0\)</span> about 1.2 fm (charge
+radii) to 1.4 to 1.5 fm (barriers). The classical energy needed to touch
+a nucleus. <a
+href="01-why-accelerate.html#12-to-get-into-a-nucleus-the-coulomb-barrier">Section
+1.2</a>.</li>
+<li><strong>Invariant mass.</strong> <span class="math inline">\(s =
+(\sum E_i)^2 - |\sum\mathbf{p}_ic|^2\)</span> (eV<span
+class="math inline">\(^2\)</span>). Fixed target: <span
+class="math inline">\(s = m_1^2c^4 + m_2^2c^4 + 2Em_2c^2\)</span>, so
+<span class="math inline">\(\sqrt{s} \approx \sqrt{2Em_2c^2}\)</span>
+for <span class="math inline">\(E \gg mc^2\)</span>; head-on equal
+beams: <span class="math inline">\(\sqrt{s} = 2E\)</span>. <a
+href="01-why-accelerate.html#5-invariant-mass-and-the-centre-of-mass-energy">Section
+5</a>.</li>
+<li><strong>Antiproton threshold.</strong> <span class="math inline">\(p
++ p \to p + p + p + \bar{p}\)</span> needs <span class="math inline">\(E
+= 7m_pc^2\)</span>, <span class="math inline">\(W = 6m_pc^2 =
+5.63\)</span> GeV. <a
+href="01-why-accelerate.html#13-to-make-new-particles-rest-energy-and-threshold">Section
+1.3</a>.</li>
+<li><strong>Rate on a target.</strong> <span class="math inline">\(R =
+\dot{N}nt\sigma\)</span> (s<span class="math inline">\(^{-1}\)</span>),
+valid while <span class="math inline">\(nt\sigma \ll 1\)</span>; <span
+class="math inline">\(\mathcal{L} = \dot{N}nt\)</span> is the
+fixed-target luminosity. <a
+href="01-why-accelerate.html#61-the-picture">Section 6.1</a>.</li>
+<li><strong>Rutherford cross-section.</strong> <span
+class="math inline">\(\dfrac{d\sigma}{d\Omega} =
+\left(\dfrac{zZe^2}{16\pi\varepsilon_0W}\right)^2\dfrac{1}{\sin^4(\theta/2)}\)</span>
+(m<span class="math inline">\(^2\)</span> sr<span
+class="math inline">\(^{-1}\)</span>), point charges, no recoil. <a
+href="01-why-accelerate.html#62-the-rutherford-cross-section">Section
+6.2</a>.</li>
+</ul>
+<h4 id="chapter-2-the-cathode-ray-tube"><a
+href="02-the-cathode-ray-tube.html">Chapter 2. The cathode ray
+tube</a></h4>
+<ul>
+<li><strong>Speed after a potential.</strong> <span
+class="math inline">\(W = (\gamma - 1)mc^2 = |q|V\)</span>; for <span
+class="math inline">\(|q|V \ll mc^2\)</span>, <span
+class="math inline">\(v = \sqrt{2|q|V/m}\)</span>. <a
+href="02-the-cathode-ray-tube.html#1-energy-from-a-potential">Section
+1</a>.</li>
+<li><strong>Electric deflection on a screen.</strong> <span
+class="math inline">\(Y = \dfrac{l\,L_s\,V_d}{2\,d\,V_a}\)</span> (m):
+plates of length <span class="math inline">\(l\)</span> and gap <span
+class="math inline">\(d\)</span>, deflecting voltage <span
+class="math inline">\(V_d\)</span>, beam voltage <span
+class="math inline">\(V_a\)</span>, screen <span
+class="math inline">\(L_s\)</span> from the plates’ centre. Sensitivity
+<span class="math inline">\(Y/V_d\)</span> in m/V. <a
+href="02-the-cathode-ray-tube.html#2-bending-with-an-electric-field">Section
+2</a>.</li>
+<li><strong>Magnetic bending.</strong> <span class="math inline">\(r =
+p/(|q|B)\)</span>; over a flight path <span class="math inline">\(L \ll
+r\)</span> the spot moves <span class="math inline">\(y \approx
+L^2/(2r)\)</span>. <a
+href="02-the-cathode-ray-tube.html#3-bending-with-a-magnetic-field">Section
+3</a>.</li>
+<li><strong>Thomson’s crossed fields.</strong> <span
+class="math inline">\(v = \mathcal{E}/B\)</span>, <span
+class="math inline">\(e/m = \mathcal{E}\theta_E/(B^2l)\)</span>, with
+<span class="math inline">\(\mathcal{E}\)</span> the electric field
+(V/m). Opposed fields pass only speed <span
+class="math inline">\(\mathcal{E}/B\)</span>: a velocity filter. <a
+href="02-the-cathode-ray-tube.html#4-weighing-the-ray-thomsons-two-methods">Section
+4</a>.</li>
+<li><strong>Richardson-Dushman law.</strong> <span
+class="math inline">\(J = A_RT^2\exp(-e\phi_w/k_BT)\)</span> (A/m<span
+class="math inline">\(^2\)</span>), with <span
+class="math inline">\(\phi_w\)</span> the work function <strong>in
+volts</strong> in this chapter and <span class="math inline">\(A_R =
+4\pi m_eek_B^2/h^3 = 1.202 \times 10^6\)</span> A m<span
+class="math inline">\(^{-2}\)</span> K<span
+class="math inline">\(^{-2}\)</span> in theory (Dushman’s tungsten fit:
+60.2 A cm<span class="math inline">\(^{-2}\)</span> K<span
+class="math inline">\(^{-2}\)</span>, 4.53 V). <a
+href="02-the-cathode-ray-tube.html#6-the-hot-cathode-richardsons-law">Section
+6</a>.</li>
+<li><strong>Child-Langmuir law.</strong> <span class="math inline">\(J =
+\dfrac49\varepsilon_0\sqrt{\dfrac{2e}{m_e}}\,\dfrac{V_a^{3/2}}{d^2} =
+2.334 \times 10^{-6}\,\dfrac{V_a^{3/2}}{d^2}\)</span> A/m<span
+class="math inline">\(^2\)</span> (<span
+class="math inline">\(V_a\)</span> in V, <span
+class="math inline">\(d\)</span> in m). The potential goes as <span
+class="math inline">\(V_a(x/d)^{4/3}\)</span>. The space-charge limit of
+a planar diode. <a
+href="02-the-cathode-ray-tube.html#7-space-charge-the-childlangmuir-law">Section
+7</a>.</li>
+<li><strong>Knee of a diode.</strong> <span
+class="math inline">\(V_{knee} = (J_{RD}d^2/2.334 \times
+10^{-6})^{2/3}\)</span>: below it space charge limits the current, above
+it the cathode temperature. <a
+href="02-the-cathode-ray-tube.html#7-space-charge-the-childlangmuir-law">Section
+7</a>.</li>
+<li><strong>Busch’s theorem and the solenoid lens.</strong> <span
+class="math inline">\(\dot\theta = -qB_z/(2\gamma m)\)</span>; <span
+class="math inline">\(\dfrac{1}{f} =
+\dfrac{1}{4(B\rho)^2}\displaystyle\int B_z^2\,dz \to
+\dfrac{e}{8m_eV_a}\displaystyle\int B_z^2\,dz\)</span>
+(non-relativistic). For one thin loop of radius <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(NI\)</span> ampere-turns, <span
+class="math inline">\(f = 97.8\,V_aa/(NI)^2\)</span> m. <a
+href="02-the-cathode-ray-tube.html#9-electron-lenses">Section
+9</a>.</li>
+<li><strong>Screen brightness.</strong> <span class="math inline">\(L =
+K_L(V_a - V_0)^n\)</span>, <span class="math inline">\(n\)</span> about
+1.4 to 3, <span class="math inline">\(V_0\)</span> the dead voltage. <a
+href="02-the-cathode-ray-tube.html#10-the-screen">Section 10</a>.</li>
+<li><strong>Electron mean free path in gas.</strong> <span
+class="math inline">\(\lambda_e = 4k_BT/(\pi d_m^2p) =
+4\sqrt2\,\lambda\)</span>, with <span class="math inline">\(p\)</span>
+the pressure (Pa) and <span class="math inline">\(d_m\)</span> the
+molecular diameter; the fraction crossing <span
+class="math inline">\(L\)</span> unscattered is <span
+class="math inline">\(e^{-L/\lambda_e}\)</span>. <a
+href="02-the-cathode-ray-tube.html#11-why-the-tube-needs-a-vacuum">Section
+11</a>.</li>
+</ul>
+<h4 id="chapter-3-vacuum"><a href="03-vacuum.html">Chapter 3.
+Vacuum</a></h4>
+<p>In this chapter <span class="math inline">\(P\)</span> is the
+pressure (Pa) and <span class="math inline">\(Q\)</span> the gas load or
+throughput (Pa m<span class="math inline">\(^3\)</span>/s).</p>
+<ul>
+<li><strong>Ideal gas.</strong> <span class="math inline">\(P =
+nk_BT\)</span>, <span class="math inline">\(n\)</span> in m<span
+class="math inline">\(^{-3}\)</span>. <a
+href="03-vacuum.html#pressure-units-and-number-density">Pressure, units
+and number density</a>.</li>
+<li><strong>Mean molecular speed.</strong> <span
+class="math inline">\(\bar v = \sqrt{8k_BT/(\pi m)}\)</span> (m/s); 471
+m/s for nitrogen at 20 °C. <a
+href="03-vacuum.html#the-speeds-of-molecules">The speeds of
+molecules</a>.</li>
+<li><strong>Wall flux.</strong> <span class="math inline">\(\Phi =
+\frac14 n\bar v = P/\sqrt{2\pi mk_BT}\)</span> (m<span
+class="math inline">\(^{-2}\)</span> s<span
+class="math inline">\(^{-1}\)</span>). <a
+href="03-vacuum.html#how-often-molecules-hit-a-wall">How often molecules
+hit a wall</a>.</li>
+<li><strong>Monolayer time.</strong> <span
+class="math inline">\(t_{\mathrm{mono}} = N_s/\Phi\)</span> with <span
+class="math inline">\(N_s \approx 10^{19}\)</span> m<span
+class="math inline">\(^{-2}\)</span>: about an hour at <span
+class="math inline">\(10^{-7}\)</span> Pa. <a
+href="03-vacuum.html#the-monolayer-time">The monolayer time</a>.</li>
+<li><strong>Mean free path.</strong> <span class="math inline">\(\lambda
+= k_BT/(\sqrt2\,\pi d^2P)\)</span>; for a fast electron <span
+class="math inline">\(\lambda_e = 4\sqrt2\,\lambda\)</span>, a lower
+bound on what crosses. <a
+href="03-vacuum.html#the-mean-free-path-of-a-molecule">Molecule</a>, <a
+href="03-vacuum.html#the-mean-free-path-of-a-fast-electron">fast
+electron</a>.</li>
+<li><strong>Knudsen number.</strong> <span class="math inline">\(Kn =
+\lambda/D\)</span>: viscous flow below 0.01, molecular above 0.5. <a
+href="03-vacuum.html#flow-regimes-the-knudsen-number">Flow
+regimes</a>.</li>
+<li><strong>Conductance.</strong> <span class="math inline">\(C = Q/(P_1
+- P_2)\)</span> (m<span class="math inline">\(^3\)</span>/s); orifice
+<span class="math inline">\(C = \frac14\bar vA\)</span> (11.6 l/s per
+cm<span class="math inline">\(^2\)</span> for air); long tube <span
+class="math inline">\(C = \frac{\pi}{12}\bar v D^3/L\)</span> (12.1
+<span class="math inline">\(D^3/L\)</span> l/s for air, cm); in series
+<span class="math inline">\(1/C = 1/C_1 + 1/C_2\)</span>. <a
+href="03-vacuum.html#conductance-in-molecular-flow">Conductance in
+molecular flow</a>.</li>
+<li><strong>Effective pumping speed.</strong> <span
+class="math inline">\(1/S_{\mathrm{eff}} = 1/S + 1/C\)</span>. <a
+href="03-vacuum.html#pumping-speed-and-the-effective-speed">Pumping
+speed and the effective speed</a>.</li>
+<li><strong>Pump-down.</strong> <span class="math inline">\(V\,dP/dt = Q
+- SP\)</span>; <span class="math inline">\(P(t) = Q/S + (P_0 -
+Q/S)e^{-t/\tau}\)</span>, <span class="math inline">\(\tau =
+V/S\)</span>; ultimate pressure <span
+class="math inline">\(P_{\mathrm{ult}} = Q/S\)</span>. <a
+href="03-vacuum.html#the-pump-down-equation">The pump-down
+equation</a>.</li>
+<li><strong>Outgassing of unbaked metal.</strong> <span
+class="math inline">\(q_A \approx 3 \times
+10^{-9}/t\,[\mathrm{h}]\)</span> mbar l s<span
+class="math inline">\(^{-1}\)</span> cm<span
+class="math inline">\(^{-2}\)</span>; the <span
+class="math inline">\(1/t\)</span> comes from a spread of binding
+energies with sojourn time <span class="math inline">\(\tau =
+\tau_0e^{E_d/k_BT}\)</span>. <a
+href="03-vacuum.html#outgassing">Outgassing</a>.</li>
+<li><strong>Gauges.</strong> McLeod: <span class="math inline">\(P =
+\rho_{\mathrm{Hg}}gah^2/V\)</span>. Ionisation gauge: <span
+class="math inline">\(I_c = S_gI_eP\)</span>, <span
+class="math inline">\(S_g \approx 10\)</span> Torr<span
+class="math inline">\(^{-1}\)</span> for nitrogen. <a
+href="03-vacuum.html#how-gauges-work">How gauges work</a>.</li>
+<li><strong>Beam-gas lifetime.</strong> <span
+class="math inline">\(1/\tau_{\mathrm{beam}} =
+v\sum_in_i\sigma_i\)</span>. <a
+href="03-vacuum.html#vacuum-for-beams">Vacuum for beams</a>.</li>
+<li><strong>Ion-induced pressure runaway.</strong> <span
+class="math inline">\(P = P_0/[1 -
+\eta_i\sigma_{\mathrm{ion}}I/(eS&#39;)]\)</span>, diverging at <span
+class="math inline">\((\eta_iI)_{\mathrm{crit}} =
+eS&#39;/\sigma_{\mathrm{ion}}\)</span>, with <span
+class="math inline">\(S&#39;\)</span> the pumping speed per metre
+(m<span class="math inline">\(^2\)</span>/s). <a
+href="03-vacuum.html#vacuum-for-beams">Vacuum for beams</a>.</li>
+</ul>
+<h4 id="chapter-4-high-voltage-and-breakdown"><a
+href="04-high-voltage-and-breakdown.html">Chapter 4. High voltage and
+breakdown</a></h4>
+<p>In this chapter <span class="math inline">\(\mathcal{E}\)</span> is
+an electric field (V/m) and <span class="math inline">\(p\)</span> a gas
+pressure.</p>
+<ul>
+<li><strong>Fields of simple electrodes.</strong> Plates <span
+class="math inline">\(\mathcal{E} = V/d\)</span>; isolated sphere <span
+class="math inline">\(\mathcal{E} = V/R_s\)</span>; concentric spheres
+<span class="math inline">\(\mathcal{E}(a) = Vb/[a(b-a)]\)</span>, least
+(<span class="math inline">\(4V/b\)</span>) at <span
+class="math inline">\(a = b/2\)</span>; coaxial cylinders <span
+class="math inline">\(\mathcal{E}(a) = V/[a\ln(b/a)]\)</span>, least
+(<span class="math inline">\(\mathrm{e}V/b\)</span>) at <span
+class="math inline">\(a = b/\mathrm{e}\)</span>, with <span
+class="math inline">\(\mathrm{e} = 2.718\)</span>; needle <span
+class="math inline">\(\mathcal{E}_{tip} \approx
+2V/[r\ln(4d/r)]\)</span>. <a
+href="04-high-voltage-and-breakdown.html#1-field-not-voltage-and-the-fields-of-simple-electrodes">Section
+1</a>.</li>
+<li><strong>First Townsend coefficient.</strong> <span
+class="math inline">\(\alpha = A_Tp\exp(-B_Tp/\mathcal{E})\)</span>; for
+air <span class="math inline">\(A_T = 11.25\)</span> m<span
+class="math inline">\(^{-1}\)</span> Pa<span
+class="math inline">\(^{-1}\)</span>, <span class="math inline">\(B_T =
+273.8\)</span> V m<span class="math inline">\(^{-1}\)</span> Pa<span
+class="math inline">\(^{-1}\)</span> (Raizer’s 15 cm<span
+class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span> and 365 V cm<span
+class="math inline">\(^{-1}\)</span> Torr<span
+class="math inline">\(^{-1}\)</span>). <a
+href="04-high-voltage-and-breakdown.html#2-the-avalanche-and-paschens-law-derived">Section
+2</a>.</li>
+<li><strong>Townsend current and criterion.</strong> <span
+class="math inline">\(I = I_0e^{\alpha d}/[1 - \gamma_{se}(e^{\alpha d}
+- 1)]\)</span>; self-sustained when <span class="math inline">\(\alpha d
+= \ln(1 + 1/\gamma_{se}) \equiv K\)</span>. <a
+href="04-high-voltage-and-breakdown.html#2-the-avalanche-and-paschens-law-derived">Section
+2</a>.</li>
+<li><strong>Paschen’s law.</strong> <span class="math inline">\(V_b =
+\dfrac{B_T\,pd}{\ln(A_T\,pd/K)}\)</span>, minimum <span
+class="math inline">\(V_{b,min} = \mathrm{e}B_TK/A_T\)</span> at <span
+class="math inline">\((pd)_{min} = \mathrm{e}K/A_T\)</span>. Breakdown
+depends on <span class="math inline">\(pd\)</span> alone. <a
+href="04-high-voltage-and-breakdown.html#2-the-avalanche-and-paschens-law-derived">Section
+2</a>.</li>
+<li><strong>Air at one atmosphere (Schumann’s law).</strong> <span
+class="math inline">\(V_b = 24.36\,pd + 6.72\sqrt{pd}\)</span> kV (<span
+class="math inline">\(p\)</span> in bar, <span
+class="math inline">\(d\)</span> in cm, 20 °C), or <span
+class="math inline">\(24.36\,pd + 212.5\sqrt{pd}\)</span> V with <span
+class="math inline">\(pd\)</span> in Pa m; about 3 MV/m across a
+centimetre. <a
+href="04-high-voltage-and-breakdown.html#3-air-at-one-atmosphere-schumanns-law-and-the-3-mvm-rule">Section
+3</a>.</li>
+<li><strong>Streamer criterion.</strong> <span
+class="math inline">\(\alpha x_c \approx 18\)</span> to 20.
+<strong>Peek’s corona onset</strong> for a wire of radius <span
+class="math inline">\(r_w\)</span> (m): <span
+class="math inline">\(\mathcal{E}_c = \delta_r(3.153 +
+0.0963/\sqrt{\delta_rr_w})\)</span> MV/m. <a
+href="04-high-voltage-and-breakdown.html#4-streamers-corona-glow-and-arc">Section
+4</a>.</li>
+<li><strong>Fowler-Nordheim field emission.</strong> <span
+class="math inline">\(J =
+\dfrac{a_{FN}\mathcal{E}_{loc}^2}{\phi_w}\exp\left(-\dfrac{b_{FN}\phi_w^{3/2}}{\mathcal{E}_{loc}}\right)\)</span>,
+<span class="math inline">\(\mathcal{E}_{loc} =
+\beta_f\mathcal{E}\)</span>, with <span
+class="math inline">\(\phi_w\)</span> in eV, <span
+class="math inline">\(a_{FN} = 1.5414 \times 10^{-6}\)</span> A eV
+V<span class="math inline">\(^{-2}\)</span>, <span
+class="math inline">\(b_{FN} = 6.8309\)</span> eV<span
+class="math inline">\(^{-3/2}\)</span> V nm<span
+class="math inline">\(^{-1}\)</span> (put <span
+class="math inline">\(\mathcal{E}_{loc}\)</span> in V/nm in the
+exponent). <a
+href="04-high-voltage-and-breakdown.html#5-vacuum-breakdown">Section
+5</a>.</li>
+<li><strong>Total-voltage effect.</strong> <span
+class="math inline">\(V_b \propto d^{1/2}\)</span> for long vacuum gaps.
+<a href="04-high-voltage-and-breakdown.html#5-vacuum-breakdown">Section
+5</a>.</li>
+<li><strong>Kilpatrick.</strong> <span class="math inline">\(f =
+1.64\,\mathcal{E}_K^2e^{-8.5/\mathcal{E}_K}\)</span> (<span
+class="math inline">\(f\)</span> in MHz, <span
+class="math inline">\(\mathcal{E}_K\)</span> in MV/m). <a
+href="04-high-voltage-and-breakdown.html#7-solids-and-liquids-ratings-rf-and-x-rays">Section
+7</a>.</li>
+</ul>
+<h3 id="part-ii-direct-voltage">Part II. Direct voltage</h3>
+<h4 id="chapter-5-the-voltage-multiplier-and-the-split-atom"><a
+href="05-the-voltage-multiplier.html">Chapter 5. The voltage multiplier
+and the split atom</a></h4>
+<ul>
+<li><strong>Coulomb turning point.</strong> <span
+class="math inline">\(r_t =
+Z_1Z_2e^2/(4\pi\varepsilon_0W_{cm})\)</span>, with <span
+class="math inline">\(W_{cm} = Wm_2/(m_p + m_2)\)</span>. <a
+href="05-the-voltage-multiplier.html#1-the-target-a-proton-against-a-lithium-nucleus">Section
+1</a>.</li>
+<li><strong>Tunnelling (WKB).</strong> <span class="math inline">\(P =
+\exp\left(-\frac{2}{\hbar}\int_{R_N}^{r_t}\sqrt{2m_r[U(r) -
+W_{cm}]}\,dr\right)\)</span>, <span class="math inline">\(m_r\)</span>
+the reduced mass; <span class="math inline">\(G =
+4\eta_S[\arccos\sqrt{x} - \sqrt{x(1-x)}]\)</span>, <span
+class="math inline">\(x = R_N/r_t\)</span>. <a
+href="05-the-voltage-multiplier.html#2-tunnelling-the-gamow-factor">Section
+2</a>.</li>
+<li><strong>Gamow factor.</strong> <span
+class="math inline">\(e^{-2\pi\eta_S}\)</span> with <span
+class="math inline">\(\eta_S = Z_1Z_2\alpha/\beta\)</span> (Sommerfeld
+parameter), <span class="math inline">\(2\pi\eta_S =
+31.29\,Z_1Z_2\sqrt{m_r\,[\mathrm{u}]/W_{cm}\,[\mathrm{keV}]}\)</span>.
+<a
+href="05-the-voltage-multiplier.html#2-tunnelling-the-gamow-factor">Section
+2</a>.</li>
+<li><strong>Astrophysical S-factor.</strong> <span
+class="math inline">\(\sigma(W_{cm}) =
+\dfrac{S(W_{cm})}{W_{cm}}e^{-2\pi\eta_S}\)</span>. <a
+href="05-the-voltage-multiplier.html#2-tunnelling-the-gamow-factor">Section
+2</a>.</li>
+<li><strong>Thick-target yield.</strong> <span
+class="math inline">\(Y(W_0) =
+f_7\displaystyle\int_0^{W_0}\frac{\sigma(W)}{\varepsilon_{st}(W)}\,dW\)</span>,
+<span class="math inline">\(\varepsilon_{st}\)</span> the stopping
+cross-section (eV m<span class="math inline">\(^2\)</span>). <a
+href="05-the-voltage-multiplier.html#3-the-thick-target-yield">Section
+3</a>.</li>
+<li><strong>Energy release.</strong> <span class="math inline">\(Q_{nuc}
+= 17.346\)</span> MeV for <span class="math inline">\({}^7\mathrm{Li} +
+p \to 2\,{}^4\mathrm{He}\)</span>. <a
+href="05-the-voltage-multiplier.html#4-the-reaction-and-its-alphas">Section
+4</a>.</li>
+<li><strong>Cascade, no load.</strong> <span class="math inline">\(V_0 =
+2n_sV_p\)</span>; every capacitor and rectifier sees <span
+class="math inline">\(2V_p\)</span>. <a
+href="05-the-voltage-multiplier.html#6-the-cascade-with-no-load">Section
+6</a>.</li>
+<li><strong>Ripple and droop.</strong> <span
+class="math inline">\(\delta V =
+\dfrac{I}{fC_s}\dfrac{n_s(n_s+1)}{2}\)</span> (peak to peak); droop of
+the mean output <span class="math inline">\(\Delta V =
+\dfrac{I}{fC_s}\left(\dfrac23n_s^3 + \dfrac12n_s^2 +
+\dfrac13n_s\right)\)</span>. <a
+href="05-the-voltage-multiplier.html#7-the-cascade-under-load-ripple-and-droop">Section
+7</a>.</li>
+<li><strong>Optimum stages.</strong> <span class="math inline">\(n_{opt}
+\approx \sqrt{V_pfC_s/I}\)</span>, <span class="math inline">\(\bar
+V_{max} \approx \frac43n_{opt}V_p\)</span>. <a
+href="05-the-voltage-multiplier.html#8-the-optimum-number-of-stages">Section
+8</a>.</li>
+</ul>
+<h4 id="chapter-6-the-electrostatic-generator-and-the-tandem"><a
+href="06-the-electrostatic-generator.html">Chapter 6. The electrostatic
+generator and the tandem</a></h4>
+<p>In this chapter <span class="math inline">\(p\)</span> is a pressure
+in section 5.</p>
+<ul>
+<li><strong>Belt current.</strong> <span class="math inline">\(I =
+\sigma_swv_b\)</span> (A), with surface charge <span
+class="math inline">\(\sigma_s \le \varepsilon_0\mathcal{E}_b\)</span>.
+Motor power into charge <span class="math inline">\(P = VI\)</span>. <a
+href="06-the-electrostatic-generator.html#2-the-belt-current-and-the-surface-charge-limit">Section
+2</a>.</li>
+<li><strong>Terminal.</strong> <span class="math inline">\(V =
+Q/(4\pi\varepsilon_0a)\)</span>, <span class="math inline">\(\mathcal{E}
+= V/a\)</span>, <span class="math inline">\(C =
+4\pi\varepsilon_0a\)</span>; charge balance <span
+class="math inline">\(C\,dV/dt = I - I_{beam} - I_{col}(V) -
+I_{cor}(V)\)</span>. <a
+href="06-the-electrostatic-generator.html#3-the-terminal-voltage-field-and-capacitance">Section
+3</a>.</li>
+<li><strong>Terminal in a tank.</strong> <span
+class="math inline">\(\mathcal{E}_{max} = Vb/[a(b-a)]\)</span>, least,
+<span class="math inline">\(4V/b\)</span>, at <span
+class="math inline">\(a = b/2\)</span>. <a
+href="06-the-electrostatic-generator.html#4-a-terminal-inside-a-tank">Section
+4</a>.</li>
+<li><strong>Pressure.</strong> <span class="math inline">\(\mathcal{E}_b
+\approx (\mathcal{E}/p)_{crit}\,p\)</span> on the high side of the
+Paschen minimum. <a
+href="06-the-electrostatic-generator.html#5-why-pressure-helps">Section
+5</a>.</li>
+<li><strong>Inclined-field tube.</strong> <span
+class="math inline">\(\Delta x&#39; \approx qEL\sin\theta/(2W)\)</span>.
+<a
+href="06-the-electrostatic-generator.html#7-the-accelerating-tube">Section
+7</a>.</li>
+<li><strong>Analysing magnet.</strong> <span
+class="math inline">\(\Delta W/W = (1 + 1/\gamma)\,\Delta x/D_x \approx
+2\Delta x/D_x\)</span> for slow ions. <strong>Generating
+voltmeter</strong>: <span class="math inline">\(i =
+\varepsilon_0\mathcal{E}_n\,dA/dt\)</span>. <a
+href="06-the-electrostatic-generator.html#8-measuring-and-holding-the-energy">Section
+8</a>.</li>
+<li><strong>Reaction threshold.</strong> <span
+class="math inline">\(W_{th} = -Q(1 + m_1/m_2)\)</span>
+(non-relativistic). <a
+href="06-the-electrostatic-generator.html#9-calibration-by-nuclear-reactions">Section
+9</a>.</li>
+<li><strong>Tandem energy.</strong> <span class="math inline">\(W =
+W_{inj} + (1 + n_q)eV_T\)</span>; a fragment of mass <span
+class="math inline">\(m\)</span> from a molecule of mass <span
+class="math inline">\(M\)</span> gets <span
+class="math inline">\((m/M)(W_{inj} + eV_T) + n_qeV_T\)</span>. <a
+href="06-the-electrostatic-generator.html#11-the-tandem">Section
+11</a>.</li>
+<li><strong>Mean charge after a foil (Nikolaev-Dmitriev).</strong> <span
+class="math inline">\(\bar n_q = Z[1 +
+(v/(Z^{0.45}v&#39;))^{-1/0.6}]^{-0.6}\)</span>, <span
+class="math inline">\(v&#39; = 3.6 \times 10^6\)</span> m/s. <a
+href="06-the-electrostatic-generator.html#11-the-tandem">Section
+11</a>.</li>
+<li><strong>Rutherford backscattering kinematic factor.</strong> <span
+class="math inline">\(K = \left[\dfrac{\sqrt{M_2^2 - M_1^2\sin^2\theta}
++ M_1\cos\theta}{M_1 + M_2}\right]^2\)</span>, <span
+class="math inline">\(W_1 = KW_0\)</span>. <a
+href="06-the-electrostatic-generator.html#14-uses-at-the-level-of-the-physics">Section
+14</a>.</li>
+</ul>
+<h4 id="chapter-7-ion-sources-and-electron-guns"><a
+href="07-ion-sources-and-electron-guns.html">Chapter 7. Ion sources and
+electron guns</a></h4>
+<p>In this chapter <span class="math inline">\(\phi_w\)</span> is the
+work function <strong>as an energy</strong> (J or eV).</p>
+<ul>
+<li><strong>Rms emittance.</strong> <span
+class="math inline">\(\varepsilon = \sqrt{\langle x^2\rangle\langle
+x&#39;^2\rangle - \langle xx&#39;\rangle^2}\)</span> (m rad); normalised
+<span class="math inline">\(\varepsilon_n = \beta\gamma\varepsilon
+\approx \frac{1}{mc}\sqrt{\langle x^2\rangle\langle p_x^2\rangle -
+\langle xp_x\rangle^2}\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#phase-space-and-emittance-at-the-level-a-source-needs">Phase
+space and emittance</a>.</li>
+<li><strong>Normalised brightness.</strong> <span
+class="math inline">\(\mathcal{B} =
+I/(\varepsilon_{n,x}\varepsilon_{n,y})\)</span> (A m<span
+class="math inline">\(^{-2}\)</span> rad<span
+class="math inline">\(^{-2}\)</span>, rms emittances; other papers add
+factors of <span class="math inline">\(\pi^2\)</span> or <span
+class="math inline">\(8\pi^2\)</span>). <a
+href="07-ion-sources-and-electron-guns.html#phase-space-and-emittance-at-the-level-a-source-needs">Phase
+space and emittance</a>.</li>
+<li><strong>Thermal emittance.</strong> <span
+class="math inline">\(\varepsilon_n = \sigma_x\sqrt{k_BT/mc^2}\)</span>;
+for a uniform disc <span class="math inline">\(\sigma_x =
+r_c/2\)</span>; the cathode’s ceiling on brightness <span
+class="math inline">\(\mathcal{B}_{max} = 4\pi Jmc^2/(k_BT)\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#the-thermal-emittance-of-a-cathode">The
+thermal emittance of a cathode</a>.</li>
+<li><strong>Richardson’s law (Dushman’s form).</strong> <span
+class="math inline">\(J = A_GT^2\exp(-\phi_w/k_BT)\)</span>, <span
+class="math inline">\(A_G = \lambda_RA_0\)</span>, <span
+class="math inline">\(A_0 = 1.2017 \times 10^6\)</span> A m<span
+class="math inline">\(^{-2}\)</span> K<span
+class="math inline">\(^{-2}\)</span>. <strong>Schottky
+lowering</strong>: <span class="math inline">\(\Delta\phi_w =
+\sqrt{e^3\mathcal{E}/(4\pi\varepsilon_0)}\)</span> (J). <a
+href="07-ion-sources-and-electron-guns.html#thermionic-cathodes">Thermionic
+cathodes</a>.</li>
+<li><strong>Child-Langmuir and perveance.</strong> <span
+class="math inline">\(J_{CL} = \chi V^{3/2}/d^2\)</span>, <span
+class="math inline">\(\chi =
+\frac{4\varepsilon_0}{9}\sqrt{2q/m}\)</span>; perveance <span
+class="math inline">\(K = I/V^{3/2}\)</span> (A V<span
+class="math inline">\(^{-3/2}\)</span>; micropervs). At fixed field
+<span class="math inline">\(J_{CL} =
+\chi\mathcal{E}^{3/2}d^{-1/2}\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#space-charge-flow-and-the-pierce-gun">Space-charge
+flow</a>, <a
+href="07-ion-sources-and-electron-guns.html#extraction-the-meniscus-and-the-gap">extraction</a>.</li>
+<li><strong>Pierce electrode angle.</strong> <span
+class="math inline">\(\theta = 3\pi/8 = 67.5^\circ\)</span> from the
+beam edge. <a
+href="07-ion-sources-and-electron-guns.html#space-charge-flow-and-the-pierce-gun">Space-charge
+flow</a>.</li>
+<li><strong>Fowler-Nordheim.</strong> As in chapter 4, with <span
+class="math inline">\(\mathcal{E}\)</span> in V/nm giving <span
+class="math inline">\(J\)</span> in A/nm<span
+class="math inline">\(^2\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#field-emission">Field
+emission</a>.</li>
+<li><strong>Photocathodes.</strong> Laser energy <span
+class="math inline">\(U = Q\hbar\omega/(e\eta_Q)\)</span>; intrinsic
+emittance <span class="math inline">\(\varepsilon_n =
+\sigma_x\sqrt{(\hbar\omega - \phi_{\mathrm{eff}})/(3mc^2)}\)</span>;
+GaAs polarisation limit 50 per cent. <a
+href="07-ion-sources-and-electron-guns.html#photocathodes">Photocathodes</a>.</li>
+<li><strong>Surface-charge limit of an RF gun.</strong> <span
+class="math inline">\(Q_{max} \approx \varepsilon_0EA\)</span>.
+<strong>Emittance compensation</strong>: slices oscillate at <span
+class="math inline">\(\sqrt2\,k_f\)</span> whatever their current. <a
+href="07-ion-sources-and-electron-guns.html#rf-guns-and-photoinjectors">RF
+guns and photoinjectors</a>.</li>
+<li><strong>Plasma.</strong> <span class="math inline">\(\lambda_D =
+\sqrt{\varepsilon_0k_BT_e/(ne^2)}\)</span>; <span
+class="math inline">\(\omega_p =
+\sqrt{ne^2/(\varepsilon_0m_e)}\)</span>; critical density <span
+class="math inline">\(n_c = \varepsilon_0m_e\omega_{RF}^2/e^2\)</span>;
+Bohm criterion <span class="math inline">\(u_0 \ge c_s =
+\sqrt{k_BT_e/M}\)</span>; Bohm current <span
+class="math inline">\(J_{Bohm} = 0.61\,ne\sqrt{k_BT_e/M}\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#plasmas-for-ion-sources">Plasmas
+for ion sources</a>.</li>
+<li><strong>Meniscus balance.</strong> <span
+class="math inline">\(0.61\,ne\sqrt{k_BT_e/M} =
+\frac{4\varepsilon_0}{9}\sqrt{2q/M}\,V^{3/2}/d_{\mathrm{eff}}^2\)</span>.
+<a
+href="07-ion-sources-and-electron-guns.html#extraction-the-meniscus-and-the-gap">Extraction</a>.</li>
+<li><strong>ECR.</strong> <span class="math inline">\(\omega_{ce} =
+eB/(\gamma m_e)\)</span>; <span class="math inline">\(B_{ECR} = 2\pi
+f_{RF}m_e/e\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#ecr-sources">ECR
+sources</a>.</li>
+<li><strong>EBIS charge-breeding time.</strong> <span
+class="math inline">\(\tau_q \approx e/(j_e\sigma_q)\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#ebis-highly-charged-ions-by-brute-force">EBIS</a>.</li>
+<li><strong>Beam potential in a pipe.</strong> <span
+class="math inline">\(\Delta\varphi =
+\dfrac{I}{4\pi\varepsilon_0v}\left(1 + 2\ln\dfrac{b}{a}\right)\)</span>;
+neutralisation time <span class="math inline">\(\tau_N =
+1/(n_g\sigma_{ion}v)\)</span>. <a
+href="07-ion-sources-and-electron-guns.html#the-low-energy-beam-transport">The
+low-energy beam transport</a>.</li>
+</ul>
+<h4 id="chapter-8-seeing-the-beam"><a
+href="08-seeing-the-beam.html">Chapter 8. Seeing the beam</a></h4>
+<ul>
+<li><strong>Current.</strong> <span class="math inline">\(I =
+\dot{N}q\)</span>. <a href="08-seeing-the-beam.html#in-one-page">In one
+page</a>.</li>
+<li><strong>Field of a moving charge.</strong> <span
+class="math inline">\(\mathcal{E}_\perp(t) =
+\dfrac{q}{4\pi\varepsilon_0}\dfrac{\gamma b}{(b^2 +
+\gamma^2v^2t^2)^{3/2}}\)</span>, with <span
+class="math inline">\(\int\mathcal{E}_\perp\,dt =
+2q/(4\pi\varepsilon_0bv)\)</span> independent of <span
+class="math inline">\(\gamma\)</span>. <a
+href="08-seeing-the-beam.html#1-the-field-of-a-moving-charge-and-the-image-current">Section
+1</a>.</li>
+<li><strong>Image current on the wall.</strong> <span
+class="math inline">\(j_{im}(\phi) = \dfrac{I_{beam}}{2\pi a}\dfrac{a^2
+- r^2}{a^2 + r^2 - 2ar\cos(\phi - \theta)}\)</span> (A/m). <a
+href="08-seeing-the-beam.html#1-the-field-of-a-moving-charge-and-the-image-current">Section
+1</a>.</li>
+<li><strong>Bethe formula.</strong> <span
+class="math inline">\(-\dfrac{dW}{\rho_m\,dx} =
+Kz^2\dfrac{Z}{A}\dfrac{1}{\beta^2}\left[\dfrac12\ln\dfrac{2m_ec^2\beta^2\gamma^2W_{max}}{I_e^2}
+- \beta^2 - \dfrac{\delta(\beta\gamma)}{2}\right]\)</span>, <span
+class="math inline">\(K = 0.307\)</span> MeV cm<span
+class="math inline">\(^2\)</span>/mol, <span
+class="math inline">\(W_{max} = 2m_ec^2\beta^2\gamma^2/[1 + 2\gamma
+m_e/m + (m_e/m)^2]\)</span>. Range <span class="math inline">\(R(W) =
+\int_0^W dW&#39;/(-dW&#39;/dx)\)</span>. <a
+href="08-seeing-the-beam.html#2-energy-loss-in-matter-the-bethe-formula">Section
+2</a>.</li>
+<li><strong>Faraday cup suppression magnet.</strong> <span
+class="math inline">\(r_c = \sqrt{2m_eW_\perp}/(eB)\)</span>. <a
+href="08-seeing-the-beam.html#3-the-faraday-cup">Section 3</a>.</li>
+<li><strong>Current transformer.</strong> <span class="math inline">\(L
+= \frac{\mu_0\mu_r}{2\pi}lN^2\ln(r_o/r_i)\)</span>; sensitivity <span
+class="math inline">\(R/N\)</span> (V/A); <span
+class="math inline">\(\tau_{droop} = L/R\)</span>, <span
+class="math inline">\(\tau_{rise} = RC_S\)</span>. <a
+href="08-seeing-the-beam.html#4-transformers-and-the-wall-current-monitor">Section
+4</a>.</li>
+<li><strong>Beam position monitor.</strong> <span
+class="math inline">\(\dfrac{\Delta U}{\Sigma U} =
+\dfrac{4\sin(\alpha/2)}{\alpha}\dfrac{x}{a} \approx
+\dfrac{2x}{a}\)</span> for small buttons. <a
+href="08-seeing-the-beam.html#5-beam-position-monitors">Section
+5</a>.</li>
+<li><strong>Optical transition radiation.</strong> <span
+class="math inline">\(\dfrac{d^2W}{d\omega\,d\Omega} =
+\dfrac{e^2}{4\pi^3\varepsilon_0c}\dfrac{\theta^2}{(\gamma^{-2} +
+\theta^2)^2}\)</span>; a wire of radius <span
+class="math inline">\(r_w\)</span> adds <span
+class="math inline">\(\sigma_w^2 = r_w^2/4\)</span> in quadrature. <a
+href="08-seeing-the-beam.html#6-profiles">Section 6</a>.</li>
+<li><strong>Beam size.</strong> <span class="math inline">\(\sigma_x^2 =
+\varepsilon\beta_x + (D_x\delta)^2\)</span>. <strong>Quadrupole
+scan</strong>: <span class="math inline">\(\varepsilon =
+\sqrt{ac}/L^2\)</span> from the parabola <span
+class="math inline">\(\sigma_{11}(K) = a(K - b)^2 + c\)</span>.
+Slit-and-grid resolution <span class="math inline">\(\Delta x&#39; =
+(d_{slit} + 2r_w)/d\)</span>. <a
+href="08-seeing-the-beam.html#7-emittance">Section 7</a>.</li>
+<li><strong>Energy.</strong> 180° spectrometer <span
+class="math inline">\(\Delta x = 2\rho\delta\)</span>, resolution <span
+class="math inline">\(\delta_{min} = (w +
+\rho\alpha^2)/(2\rho)\)</span>; time of flight <span
+class="math inline">\(\Delta W/W = \gamma(\gamma + 1)\,\Delta
+t/t\)</span>. <a href="08-seeing-the-beam.html#8-energy">Section
+8</a>.</li>
+<li><strong>Proportional counter field.</strong> <span
+class="math inline">\(\mathcal{E}(r) = V/[r\ln(b/a_w)]\)</span>. <a
+href="08-seeing-the-beam.html#11-detecting-particles">Section
+11</a>.</li>
+<li><strong>Shielding.</strong> <span class="math inline">\(H =
+H_0\,10^{-d/\mathrm{TVL}}\)</span>, <span
+class="math inline">\(\mathrm{TVL} = \lambda\ln10\)</span>. <a
+href="08-seeing-the-beam.html#13-where-the-dose-comes-from-and-the-shield">Section
+13</a>.</li>
+</ul>
+<h3 id="part-iii-resonance-and-induction">Part III. Resonance and
+induction</h3>
+<h4 id="chapter-9-resonant-acceleration-ising-and-wideroe"><a
+href="09-resonant-acceleration.html">Chapter 9. Resonant acceleration:
+Ising and Wideroe</a></h4>
+<p>In this chapter <span class="math inline">\(g\)</span> is a gap
+length.</p>
+<ul>
+<li><strong>One gap.</strong> <span class="math inline">\(\Delta W =
+q\hat{V}\sin\phi\)</span>, the course’s phase convention. <a
+href="09-resonant-acceleration.html#1-one-gap-and-the-phase-convention">Section
+1</a>.</li>
+<li><strong>Synchronism (π mode).</strong> <span
+class="math inline">\(L_n = \beta_n\lambda/2\)</span>, <span
+class="math inline">\(\lambda = c/f_{RF}\)</span>. <a
+href="09-resonant-acceleration.html#2-the-drift-tube-and-the-synchronism-condition">Section
+2</a>.</li>
+<li><strong>Energy and tube lengths.</strong> <span
+class="math inline">\(W_n = W_0 + nq\hat{V}T_t\sin\phi_s\)</span>;
+non-relativistically <span class="math inline">\(L_n =
+\frac{1}{2f_{RF}}\sqrt{2W_n/m} \approx L_1\sqrt{n}\)</span>, and <span
+class="math inline">\(N\)</span> tubes are about <span
+class="math inline">\(\frac23L_1N^{3/2}\)</span> long. Chapter section
+3.</li>
+<li><strong>Transit-time factor.</strong> <span
+class="math inline">\(T_t = \dfrac{\sin(\pi g/\beta\lambda)}{\pi
+g/\beta\lambda}\)</span> for a uniform gap; in general <span
+class="math inline">\(T_t = \int\mathcal{E}_z\cos(2\pi
+z/\beta\lambda)\,dz/\int\mathcal{E}_z\,dz\)</span>. <a
+href="09-resonant-acceleration.html#5-the-transit-time-factor">Section
+5</a>.</li>
+<li><strong>Phase focusing.</strong> <span
+class="math inline">\(\Delta\phi_{n+1} \approx \Delta\phi_n -
+\frac{\pi}{2}\Delta W_n/W_{s,n}\)</span>, stable for <span
+class="math inline">\(0 &lt; \phi_s &lt; 90^\circ\)</span>. <a
+href="09-resonant-acceleration.html#6-phase-why-only-part-of-a-continuous-beam-is-accelerated">Section
+6</a>.</li>
+<li><strong>Resonant circuit.</strong> <span
+class="math inline">\(\omega_0 = 1/\sqrt{LC}\)</span>, <span
+class="math inline">\(Q_0 = \omega_0U/P = \omega_0R_pC =
+R_p/(\omega_0L)\)</span>, with <span class="math inline">\(P =
+\hat{V}^2/(2R_p)\)</span> (circuit convention). <a
+href="09-resonant-acceleration.html#7-rf-for-the-reader">Section
+7</a>.</li>
+<li><strong>Electric deflection measures energy per charge.</strong>
+<span class="math inline">\(\theta_E =
+\dfrac{V_dl_p}{2d}\dfrac{q}{W}\)</span>. <a
+href="09-resonant-acceleration.html#8-measuring-the-energy-electric-and-magnetic-deflection">Section
+8</a>.</li>
+</ul>
+<h4 id="chapter-10-the-cyclotron"><a
+href="10-the-cyclotron.html">Chapter 10. The cyclotron</a></h4>
+<ul>
+<li><strong>Cyclotron frequency.</strong> <span
+class="math inline">\(\omega_0 = qB/(\gamma m)\)</span>, <span
+class="math inline">\(f_0 = qB/(2\pi\gamma m)\)</span>: 15.25 MHz per
+tesla for slow protons. <a
+href="10-the-cyclotron.html#1-a-charge-in-a-uniform-magnetic-field">Section
+1</a>.</li>
+<li><strong>Resonance.</strong> <span class="math inline">\(\omega_{RF}
+= h\omega_0\)</span>, <span class="math inline">\(h\)</span> odd;
+resonant field <span class="math inline">\(B_c =
+m\omega_{RF}/q\)</span>. <a
+href="10-the-cyclotron.html#2-the-dees-and-the-resonance">Section
+2</a>.</li>
+<li><strong>Final energy.</strong> <span class="math inline">\(W =
+q^2B^2R^2/(2m)\)</span>; K-value <span class="math inline">\(W/A =
+K(Q_i/A)^2\)</span>, <span class="math inline">\(K =
+(eBR)^2/(2m_u)\)</span> in MeV. <a
+href="10-the-cyclotron.html#3-the-final-energy">Section 3</a>.</li>
+<li><strong>The spiral.</strong> <span class="math inline">\(\Delta
+W_{turn} = 2q\hat{V}\sin\phi\)</span>; <span class="math inline">\(r_n =
+R\sqrt{n/N}\)</span>, <span class="math inline">\(N =
+W_{final}/(2q\hat{V}\sin\phi)\)</span>; turn separation <span
+class="math inline">\(\Delta r = \frac{r}{2}\Delta W_{turn}/W\)</span>,
+<span class="math inline">\(R/(2N)\)</span> at the edge. <a
+href="10-the-cyclotron.html#4-the-spiral-turns-and-turn-separation">Section
+4</a>.</li>
+<li><strong>Weak focusing.</strong> <span class="math inline">\(n =
+-(r/B)\,\partial B/\partial r\)</span>; <span
+class="math inline">\(\ddot x + (1 - n)\omega_0^2x = 0\)</span>, <span
+class="math inline">\(\ddot y + n\omega_0^2y = 0\)</span>; <span
+class="math inline">\(Q_x = \sqrt{1-n}\)</span>, <span
+class="math inline">\(Q_y = \sqrt n\)</span>, <span
+class="math inline">\(Q_x^2 + Q_y^2 = 1\)</span>, stable for <span
+class="math inline">\(0 &lt; n &lt; 1\)</span>. <a
+href="10-the-cyclotron.html#6-weak-focusing-the-field-index-and-the-betatron-frequencies">Section
+6</a>.</li>
+<li><strong>Gap lens (Davisson-Calbick).</strong> <span
+class="math inline">\(1/f_{lens} \approx \frac{qE}{4}(1/W_1 -
+1/W_2)\)</span>, quoted. <a
+href="10-the-cyclotron.html#7-electric-focusing-at-the-gaps">Section
+7</a>.</li>
+<li><strong>Phase slip.</strong> <span
+class="math inline">\(\Delta\phi_{turn} = 2\pi(\gamma B_c/B(r) - 1)
+\approx 2\pi(W/mc^2 - \varepsilon_c + \delta_B(r))\)</span>. <a
+href="10-the-cyclotron.html#8-the-conflict-phase-slip">Section
+8</a>.</li>
+<li><strong>Energy limit.</strong> <span class="math inline">\(W_{max} =
+2\sqrt{q\hat{V}mc^2/\pi}\)</span> with the field tuned to the centre;
+<span class="math inline">\((2 + \sqrt2)\sqrt{q\hat{V}mc^2/\pi}\)</span>
+starting on crest with the best central excess; bound <span
+class="math inline">\(4\sqrt{q\hat{V}mc^2/\pi}\)</span>. <a
+href="10-the-cyclotron.html#8-the-conflict-phase-slip">Section
+8</a>.</li>
+<li><strong>Resonance width.</strong> <span
+class="math inline">\(|\varepsilon| &lt; 1/(2N)\)</span>. <a
+href="10-the-cyclotron.html#9-how-sharp-the-resonance-is">Section
+9</a>.</li>
+</ul>
+<h4 id="chapter-11-the-betatron"><a href="11-the-betatron.html">Chapter
+11. The betatron</a></h4>
+<p>In this chapter <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> is the electric
+field and <span class="math inline">\(R = \rho\)</span> the orbit
+radius.</p>
+<ul>
+<li><strong>Induction.</strong> <span class="math inline">\(2\pi
+R\,\mathcal{E}_\theta = -d\Phi/dt\)</span>; <span
+class="math inline">\(\mathcal{E}_\theta = \frac{R}{2}\,d\langle
+B\rangle/dt\)</span>; volts per turn <span
+class="math inline">\(|d\Phi/dt|\)</span>. <a
+href="11-the-betatron.html#1-faradays-law-around-an-orbit">Section
+1</a>.</li>
+<li><strong>Momentum gain.</strong> <span class="math inline">\(p(t) -
+p(0) = \dfrac{e}{2\pi R}[\Phi(t) - \Phi(0)]\)</span>, at any speed. <a
+href="11-the-betatron.html#2-the-momentum-gain">Section 2</a>.</li>
+<li><strong>Betatron (two-to-one) condition.</strong> <span
+class="math inline">\(\Delta\Phi = 2\pi R^2\Delta B_0\)</span>, or <span
+class="math inline">\(\Delta\langle B\rangle = 2\Delta B_0\)</span>;
+iron limit <span class="math inline">\(p_{max} = eB_sR\)</span> with
+full bias. <a
+href="11-the-betatron.html#3-keeping-the-radius-the-two-to-one-rule">Section
+3</a>.</li>
+<li><strong>Transverse motion.</strong> <span
+class="math inline">\(x&#39;&#39; + \dfrac{1-n}{R^2}x = 0\)</span>,
+<span class="math inline">\(y&#39;&#39; + \dfrac{n}{R^2}y = 0\)</span>;
+<span class="math inline">\(Q_x = \sqrt{1-n}\)</span>, <span
+class="math inline">\(Q_y = \sqrt n\)</span>. <a
+href="11-the-betatron.html#4-transverse-motion-the-field-index-and-betatron-oscillations">Section
+4</a>.</li>
+<li><strong>Off-momentum orbit.</strong> <span
+class="math inline">\(x_{co} = R\delta/(1-n)\)</span>, so <span
+class="math inline">\(D_x = R/(1-n)\)</span> and <span
+class="math inline">\(\alpha_c = 1/(1-n)\)</span>; during acceleration
+<span class="math inline">\(x_{co}(t) = R\Delta p/[(1-n)p(t)]\)</span>.
+<a
+href="11-the-betatron.html#5-off-momentum-orbits-and-the-instantaneous-circle">Section
+5</a>.</li>
+<li><strong>Adiabatic damping.</strong> <span class="math inline">\(J =
+\oint p_x\,dx = \frac{\pi\sqrt{1-n}}{R}\,pA^2\)</span> constant, so
+<span class="math inline">\(A \propto p^{-1/2}\)</span>. <a
+href="11-the-betatron.html#6-the-adiabatic-shrinking-of-the-oscillations">Section
+6</a>.</li>
+<li><strong>Radiation.</strong> <span class="math inline">\(U_0 =
+e^2\beta^3\gamma^4/(3\varepsilon_0\rho)\)</span>; orbit shrinkage from
+<span class="math inline">\(d(\Delta p)/dt = -U_0/(2\pi R)\)</span>. <a
+href="11-the-betatron.html#9-radiation-the-end-of-the-energy">Section
+9</a>.</li>
+</ul>
+<h4
+id="chapter-12-phase-stability-the-synchrocyclotron-and-the-isochronous-cyclotron"><a
+href="12-phase-stability.html">Chapter 12. Phase stability, the
+synchrocyclotron and the isochronous cyclotron</a></h4>
+<p>This chapter writes the vertical and radial tunes of a cyclotron as
+<span class="math inline">\(Q_z\)</span> and <span
+class="math inline">\(Q_r\)</span> (the course’s <span
+class="math inline">\(Q_y\)</span> and <span
+class="math inline">\(Q_x\)</span>), <span
+class="math inline">\(\hat{V}_t\)</span> for the voltage per turn and
+<span class="math inline">\(n_t\)</span> for the turn number.</p>
+<ul>
+<li><strong>Phase-slip factor in a cyclotron.</strong> <span
+class="math inline">\(\alpha_c = 1/(1-n)\)</span>; <span
+class="math inline">\(\eta = n/(1-n) + \beta^2 = \alpha_c -
+1/\gamma^2\)</span>; <span class="math inline">\(\Delta T_0/T_0 =
+\eta\delta\)</span>. <a
+href="12-phase-stability.html#1-who-comes-round-sooner-the-phase-slip-factor">Section
+1</a>.</li>
+<li><strong>Turn-by-turn map.</strong> <span
+class="math inline">\(\Delta E_{n_t+1} = \Delta E_{n_t} +
+q\hat{V}_t(\sin\phi_{n_t} - \sin\phi_s)\)</span>, <span
+class="math inline">\(\phi_{n_t+1} = \phi_{n_t} + \dfrac{2\pi
+h\eta}{\beta^2E}\Delta E_{n_t+1}\)</span>. <a
+href="12-phase-stability.html#2-phase-stability">Section 2</a>.</li>
+<li><strong>Synchrotron tune.</strong> <span class="math inline">\(Q_s^2
+= -\dfrac{h\eta q\hat{V}_t\cos\phi_s}{2\pi\beta^2E}\)</span>, stable
+when <span class="math inline">\(\eta\cos\phi_s &lt; 0\)</span>; <span
+class="math inline">\(\Omega_s = Q_s\omega_0\)</span>. <a
+href="12-phase-stability.html#2-phase-stability">Section 2</a>.</li>
+<li><strong>Frequency sweep.</strong> <span
+class="math inline">\(\dfrac{df_{RF}}{dt} =
+-\dfrac{f_{RF}\eta}{\beta^2E}f_0q\hat{V}_t\sin\phi_s\)</span>. <a
+href="12-phase-stability.html#3-the-synchrocyclotron">Section
+3</a>.</li>
+<li><strong>Isochronous field.</strong> <span class="math inline">\(\bar
+B(R) = \gamma(R)B_0\)</span>, <span class="math inline">\(n = -(\gamma^2
+- 1)\)</span>, <span class="math inline">\(\alpha_c =
+1/\gamma^2\)</span>, <span class="math inline">\(\eta = 0\)</span>,
+<span class="math inline">\(Q_r \approx \gamma\)</span>. <a
+href="12-phase-stability.html#4-the-isochronous-field-and-its-vertical-defocusing">Section
+4</a>.</li>
+<li><strong>Thomas focusing.</strong> <span class="math inline">\(Q_z^2
+= n + \dfrac{N_s^2}{N_s^2 - 1}F\)</span>, flutter <span
+class="math inline">\(F = (\langle B^2\rangle - \langle
+B\rangle^2)/\langle B\rangle^2\)</span> (<span
+class="math inline">\(A^2/2\)</span> for one harmonic). <a
+href="12-phase-stability.html#5-thomas-focusing-hills-valleys-and-the-scalloped-orbit">Section
+5</a>.</li>
+<li><strong>Spiral sectors (quoted).</strong> <span
+class="math inline">\(Q_z^2 \approx n + \dfrac{N_s^2}{N_s^2-1}F(1 +
+2\tan^2\xi)\)</span>, <span class="math inline">\(Q_r^2 \approx 1 - n +
+\dfrac{3N_s^2}{(N_s^2-1)(N_s^2-4)}F(1 + \tan^2\xi)\)</span>, <span
+class="math inline">\(\xi\)</span> the spiral angle. <a
+href="12-phase-stability.html#6-spiral-sectors-alternating-gradients-in-a-cyclotron">Section
+6</a>.</li>
+<li><strong>Turn separation.</strong> <span
+class="math inline">\(\dfrac{dR}{dn_t} = \dfrac{\gamma
+R}{(\gamma^2-1)(1-n)}\dfrac{\Delta W_t}{mc^2}\)</span>; isochronous:
+<span class="math inline">\(\dfrac{R\,\Delta
+W_t}{mc^2\gamma(\gamma^2-1)}\)</span>. <a
+href="12-phase-stability.html#7-resonances-turn-separation-and-isochronism">Section
+7</a>.</li>
+</ul>
+<h4 id="chapter-13-rf-cavities-and-power-sources"><a
+href="13-rf-cavities-and-power.html">Chapter 13. RF cavities and power
+sources</a></h4>
+<p>In this chapter <span class="math inline">\(\sigma\)</span> is a
+conductivity (S/m), <span class="math inline">\(\delta\)</span> the skin
+depth and <span class="math inline">\(R_s\)</span> the surface
+resistance.</p>
+<ul>
+<li><strong>Pillbox TM010.</strong> <span
+class="math inline">\(\mathcal{E}_z = \mathcal{E}_0J_0(kr)\)</span>,
+<span class="math inline">\(f_{010} = 2.405c/(2\pi a)\)</span>,
+independent of length; <span class="math inline">\(H_\varphi =
+(j\mathcal{E}_0/\eta_0)J_1(kr)\)</span>. <a
+href="13-rf-cavities-and-power.html#2-the-tm010-mode-of-the-pillbox">Section
+2</a>.</li>
+<li><strong>Skin depth and surface resistance.</strong> <span
+class="math inline">\(\delta = \sqrt{2/(\omega\mu_0\sigma)}\)</span>,
+<span class="math inline">\(R_s = 1/(\sigma\delta) =
+\sqrt{\omega\mu_0/(2\sigma)}\)</span>; wall loss <span
+class="math inline">\(\frac12R_s|H_t|^2\)</span> per area. <a
+href="13-rf-cavities-and-power.html#3-skin-depth-and-surface-resistance">Section
+3</a>.</li>
+<li><strong>Stored energy, wall power, <span
+class="math inline">\(Q_0\)</span>.</strong> <span
+class="math inline">\(U = \frac{\varepsilon_0}{2}\mathcal{E}_0^2\pi
+a^2LJ_1^2(2.405)\)</span>; <span class="math inline">\(P = \pi
+R_s(\mathcal{E}_0J_1(2.405)/\eta_0)^2a(L + a)\)</span>; <span
+class="math inline">\(Q_0 = \omega U/P = \dfrac{2.405\eta_0}{2R_s(1 +
+a/L)} = \dfrac{a}{\delta}\dfrac{L}{L + a}\)</span>; geometry factor
+<span class="math inline">\(G = Q_0R_s\)</span>. Chapter section 4.</li>
+<li><strong>Voltage, shunt impedance, <span
+class="math inline">\(R/Q\)</span>.</strong> <span
+class="math inline">\(\Delta W = qE_0LT_t\sin\phi\)</span>, <span
+class="math inline">\(T_t = \sin\theta/\theta\)</span>, <span
+class="math inline">\(\theta = \pi L/(\beta\lambda)\)</span>; <span
+class="math inline">\(R_{sh} = \hat{V}^2/P\)</span> (linac); <span
+class="math inline">\(R/Q = \hat{V}^2/(\omega U)\)</span>, set by shape
+alone. Chapter section 5.</li>
+<li><strong>Resonator impedance.</strong> <span
+class="math inline">\(Z(\omega) = R_p/[1 + jQ_0(\omega/\omega_0 -
+\omega_0/\omega)]\)</span>; full width <span
+class="math inline">\(f_0/Q_0\)</span>. <a
+href="13-rf-cavities-and-power.html#6-the-equivalent-circuit">Section
+6</a>.</li>
+<li><strong>Coupling.</strong> <span class="math inline">\(1/Q_L = 1/Q_0
++ 1/Q_{ext}\)</span>, <span class="math inline">\(\beta_c =
+Q_0/Q_{ext}\)</span>, <span class="math inline">\(Q_L = Q_0/(1 +
+\beta_c)\)</span>; <span class="math inline">\(\Gamma = (\beta_c -
+1)/(\beta_c + 1)\)</span>, <span class="math inline">\(P_c =
+P_f\,4\beta_c/(1 + \beta_c)^2\)</span>; matched to a beam, <span
+class="math inline">\(Q_{ext} = \hat{V}/[(R/Q)I_b]\)</span>. <a
+href="13-rf-cavities-and-power.html#7-coupling-filling-and-beam-loading">Section
+7</a>.</li>
+<li><strong>Waveguide TE10.</strong> <span class="math inline">\(k_g =
+\sqrt{\omega^2/c^2 - (\pi/a_w)^2}\)</span>, cutoff <span
+class="math inline">\(f_c = c/(2a_w)\)</span>; <span
+class="math inline">\(v_{ph}v_g = c^2\)</span>. <a
+href="13-rf-cavities-and-power.html#8-waveguides-the-te10-mode">Section
+8</a>.</li>
+<li><strong>Klystron bunching.</strong> <span class="math inline">\(I(t)
+= I_0 + 2I_0\sum_nJ_n(nX)\cos[n(\omega t - \omega L_d/v_0)]\)</span>,
+<span class="math inline">\(X = (V_1/2V_0)(\omega L_d/v_0)\)</span>;
+fundamental largest at <span class="math inline">\(X = 1.841\)</span>.
+<a href="13-rf-cavities-and-power.html#the-klystron">The
+klystron</a>.</li>
+<li><strong>Pulsed heating.</strong> <span class="math inline">\(\Delta
+T = R_s|H_t|^2\sqrt{t_p}/\sqrt{\pi\rho_mc_pk_{th}}\)</span>. <a
+href="13-rf-cavities-and-power.html#pulsed-heating">Pulsed
+heating</a>.</li>
+<li><strong>Two-surface multipacting.</strong> <span
+class="math inline">\(V = m\omega^2d^2/[e(N\pi\cos\phi_e +
+2\sin\phi_e)]\)</span>, <span class="math inline">\(W_{imp} =
+2e^2V^2\cos^2\phi_e/(md^2\omega^2)\)</span>. <a
+href="13-rf-cavities-and-power.html#multipacting">Multipacting</a>.</li>
+<li><strong>Superconducting losses.</strong> <span
+class="math inline">\(R_{BCS} \propto
+(\omega^2/T)\exp(-1.76T_c/T)\)</span>; wall loss <span
+class="math inline">\(P = \hat{V}^2/[(R/Q)Q_0]\)</span>; ideal
+refrigeration cost <span class="math inline">\((300 - T)/T\)</span>
+watts per watt. <a
+href="13-rf-cavities-and-power.html#11-superconducting-cavities">Section
+11</a>.</li>
+<li><strong>Slater’s perturbation theorem.</strong> <span
+class="math inline">\(\dfrac{\Delta\omega}{\omega_0} =
+\dfrac{\int_{\Delta V}(\mu_0|H|^2 -
+\varepsilon_0|\mathcal{E}|^2)\,dV}{\int_V(\mu_0|H|^2 +
+\varepsilon_0|\mathcal{E}|^2)\,dV}\)</span>. <a
+href="13-rf-cavities-and-power.html#the-bead-pull">The bead
+pull</a>.</li>
+</ul>
+<h4 id="chapter-14-linear-accelerators"><a
+href="14-linear-accelerators.html">Chapter 14. Linear
+accelerators</a></h4>
+<ul>
+<li><strong>Drift-tube linac (0 mode).</strong> <span
+class="math inline">\(L_n = \beta_n\lambda\)</span>. <a
+href="14-linear-accelerators.html#1-the-drift-tube-linac-one-cavity-all-gaps-in-phase">Section
+1</a>.</li>
+<li><strong>Energy gain and conventions.</strong> <span
+class="math inline">\(\Delta W = qE_0T_tL\sin\phi\)</span>; <span
+class="math inline">\(\phi_{\text{sine}} = \phi_{\text{cosine}} +
+90^\circ\)</span>. <a
+href="14-linear-accelerators.html#2-energy-gain-per-cell-and-the-two-phase-conventions">Section
+2</a>.</li>
+<li><strong>Longitudinal motion.</strong> <span
+class="math inline">\(d\Delta W/ds =
+qE_0T_t\cos\phi_s\,\Delta\phi\)</span>, <span
+class="math inline">\(d\Delta\phi/ds = -\dfrac{2\pi}{\lambda
+mc^2\beta^3\gamma^3}\Delta W\)</span>; <span class="math inline">\(k_l^2
+= \dfrac{2\pi qE_0T_t\cos\phi_s}{mc^2\lambda\beta^3\gamma^3}\)</span>
+(m<span class="math inline">\(^{-2}\)</span>). <a
+href="14-linear-accelerators.html#3-longitudinal-motion-in-outline">Section
+3</a>.</li>
+<li><strong>Separatrix height.</strong> <span
+class="math inline">\(\Delta W_{max}^2 = \dfrac{2qE_0T_t}{A}[2\cos\phi_s
+- (\pi - 2\phi_s)\sin\phi_s]\)</span>, <span class="math inline">\(A =
+2\pi/(\lambda mc^2\beta^3\gamma^3)\)</span>. <a
+href="14-linear-accelerators.html#3-longitudinal-motion-in-outline">Section
+3</a>.</li>
+<li><strong>Adiabatic phase damping.</strong> <span
+class="math inline">\(\Delta\phi_{max} \propto
+(\beta\gamma)^{-3/4}\)</span>, <span class="math inline">\(\Delta
+W_{max} \propto (\beta\gamma)^{3/4}\)</span>; transversely <span
+class="math inline">\(\varepsilon \propto (\beta\gamma)^{-1}\)</span>.
+<a
+href="14-linear-accelerators.html#3-longitudinal-motion-in-outline">Section
+3</a>.</li>
+<li><strong>RF defocusing.</strong> <span class="math inline">\(\Delta
+p_r = \dfrac{\pi qE_0T_tL\cos\phi}{c\beta^2\gamma^2\lambda}r\)</span>;
+<span class="math inline">\(k_{rf}^2 = -\frac12k_l^2\)</span>. <a
+href="14-linear-accelerators.html#4-rf-defocusing-earnshaws-theorem-with-time-in-it">Section
+4</a>.</li>
+<li><strong>RFQ.</strong> <span class="math inline">\(U =
+\frac{V}{2}[X(r/a)^2\cos2\theta + AI_0(kr)\cos kz]\)</span> with <span
+class="math inline">\(A = (M^2 - 1)/[M^2I_0(ka) + I_0(Mka)]\)</span>,
+<span class="math inline">\(X = [I_0(ka) + I_0(Mka)]/[M^2I_0(ka) +
+I_0(Mka)]\)</span>; <span class="math inline">\(\Delta W =
+\frac{\pi}{4}qAV\sin\phi\)</span>; <span class="math inline">\(\mu_0^2 =
+B^2/(8\pi^2) - \pi^2qAV\cos\phi_s/(2mc^2\beta^2)\)</span> with <span
+class="math inline">\(B = qXV\lambda^2/(mc^2a^2)\)</span>. <a
+href="14-linear-accelerators.html#5-the-radio-frequency-quadrupole">Section
+5</a>.</li>
+<li><strong>Coupled cells.</strong> <span class="math inline">\(\omega^2
+= \omega_c^2/(1 + k_c\cos\psi)\)</span>. Chapter section 6.</li>
+<li><strong>Electron capture.</strong> <span
+class="math inline">\(\cos\phi_0 - \cos\phi_\infty = \dfrac{2\pi
+mc^2}{\lambda qE_0}\sqrt{\dfrac{1-\beta_0}{1+\beta_0}}\)</span>. <a
+href="14-linear-accelerators.html#7-electron-linacs-the-travelling-wave">Section
+7</a>.</li>
+<li><strong>Travelling-wave section.</strong> <span
+class="math inline">\(dP/dz = -2\alpha P\)</span>, <span
+class="math inline">\(\alpha = \omega_{RF}/(2v_gQ_0)\)</span>; <span
+class="math inline">\(\mathcal{E}_0^2 = 2\alpha rP\)</span>; <span
+class="math inline">\(t_F = 2\tau Q_0/\omega_{RF}\)</span>. Constant
+impedance <span class="math inline">\(V = \sqrt{rLP_0}\sqrt{2/\tau}(1 -
+e^{-\tau})\)</span> (largest, <span
+class="math inline">\(0.903\sqrt{rLP_0}\)</span>, at <span
+class="math inline">\(\tau = 1.26\)</span>); constant gradient <span
+class="math inline">\(V = \sqrt{rLP_0(1 - e^{-2\tau})}\)</span>; with
+beam loading <span class="math inline">\(V = \sqrt{rLP_0(1 -
+e^{-2\tau})} - \dfrac{irL}{2}\left(1 - \dfrac{2\tau e^{-2\tau}}{1 -
+e^{-2\tau}}\right)\)</span>. <a
+href="14-linear-accelerators.html#7-electron-linacs-the-travelling-wave">Section
+7</a>.</li>
+<li><strong>Two-particle beam break-up.</strong> <span
+class="math inline">\(x_2&#39;&#39; + k_\beta^2x_2 = \kappa
+x_1\)</span>: the tail is driven on resonance. <a
+href="14-linear-accelerators.html#8-short-range-wakefields-and-bns-damping-in-outline">Section
+8</a>.</li>
+<li><strong>Phase scan at a BPM.</strong> <span
+class="math inline">\(\Delta\phi_{BPM} = -\dfrac{2\pi
+fD}{mc^3\beta^3\gamma^3}\Delta W\)</span>. <a
+href="14-linear-accelerators.html#at-the-bench">At the bench</a>.</li>
+</ul>
+<h3 id="part-iv-rings">Part IV. Rings</h3>
+<h4 id="chapter-15-the-synchrotron"><a
+href="15-the-synchrotron.html">Chapter 15. The synchrotron</a></h4>
+<ul>
+<li><strong>Field and frequency follow the beam.</strong> <span
+class="math inline">\(B(t) = p(t)/(q\rho)\)</span>; <span
+class="math inline">\(f_0 = \beta c/C\)</span>, <span
+class="math inline">\(f_{RF} = hf_0\)</span>; <span
+class="math inline">\(f_{RF}(B) = \dfrac{hc}{C}\dfrac{B}{\sqrt{B^2 +
+B_m^2}}\)</span>, <span class="math inline">\(B_m = mc/(q\rho)\)</span>.
+<a
+href="15-the-synchrotron.html#2-the-field-follows-the-momentum">Section
+2</a>, <a
+href="15-the-synchrotron.html#3-the-frequency-follows-the-speed">section
+3</a>.</li>
+<li><strong>Energy gain per turn.</strong> <span
+class="math inline">\(\Delta E_{turn} = qC\rho\,dB/dt\)</span>, so <span
+class="math inline">\(\hat{V}\sin\phi_s = C\rho\,dB/dt\)</span> (<span
+class="math inline">\(\hat{V}\)</span> summed over a turn). <a
+href="15-the-synchrotron.html#4-the-energy-gain-per-turn-and-the-synchronous-phase">Section
+4</a>.</li>
+<li><strong>Synchrotron tune (quoted).</strong> <span
+class="math inline">\(Q_s =
+\sqrt{h|\eta|q\hat{V}|\cos\phi_s|/(2\pi\beta^2E)}\)</span>. <a
+href="15-the-synchrotron.html#4-the-energy-gain-per-turn-and-the-synchronous-phase">Section
+4</a>.</li>
+<li><strong>Weak focusing.</strong> <span class="math inline">\(B_y(x) =
+B_0(1 - nx/\rho)\)</span>; <span class="math inline">\(x&#39;&#39; +
+\frac{1-n}{\rho^2}x = 0\)</span>, <span
+class="math inline">\(y&#39;&#39; + \frac{n}{\rho^2}y = 0\)</span>. <a
+href="15-the-synchrotron.html#5-weak-focusing-in-a-ring">Section
+5</a>.</li>
+<li><strong>Dispersion and compaction.</strong> <span
+class="math inline">\(x_{co} = D_x\delta\)</span>, <span
+class="math inline">\(D_x = \rho/(1-n)\)</span>; <span
+class="math inline">\(\alpha_c = 1/(1-n) = 1/Q_x^2\)</span> without
+straights, <span class="math inline">\(\alpha_c \approx
+(\rho/R)/(1-n)\)</span> with them; in general <span
+class="math inline">\(\alpha_c = \frac1C\oint D_x/\rho\,ds\)</span>. <a
+href="15-the-synchrotron.html#6-off-momentum-orbits-and-momentum-compaction">Section
+6</a>.</li>
+<li><strong>Phase slip and transition.</strong> <span
+class="math inline">\(\Delta T_0/T_0 = \eta\delta\)</span>, <span
+class="math inline">\(\eta = \alpha_c - 1/\gamma^2\)</span>, <span
+class="math inline">\(\gamma_t = 1/\sqrt{\alpha_c}\)</span>; a
+weak-focusing ring has <span class="math inline">\(\gamma_t = Q_x &lt;
+1\)</span>, always above transition. <a
+href="15-the-synchrotron.html#7-the-phase-slip-factor-and-transition">Section
+7</a>.</li>
+<li><strong>Radial steering by frequency.</strong> <span
+class="math inline">\(\delta = -\frac1\eta\frac{\Delta f}{f}\)</span>,
+<span class="math inline">\(\Delta x = -\frac{D_x}{\eta}\frac{\Delta
+f}{f}\)</span>. <a
+href="15-the-synchrotron.html#8-how-closely-the-frequency-must-follow-the-field">Section
+8</a>.</li>
+<li><strong>Magnet scaling.</strong> <span class="math inline">\(M
+\propto p^3\)</span> for weak focusing at fixed peak field. <a
+href="15-the-synchrotron.html#9-the-wall-of-the-weak-focusing-ring">Section
+9</a>.</li>
+<li><strong>Eddy loss in a sheet.</strong> <span
+class="math inline">\(P/V = \sigma d^2\dot B^2/12\)</span> (<span
+class="math inline">\(\sigma\)</span> the conductivity). <a
+href="15-the-synchrotron.html#12-eddy-currents-and-laminated-iron">Section
+12</a>.</li>
+</ul>
+<h4 id="chapter-16-strong-focusing-and-linear-optics"><a
+href="16-strong-focusing.html">Chapter 16. Strong focusing and linear
+optics</a></h4>
+<ul>
+<li><strong>Two thin lenses.</strong> <span class="math inline">\(1/F =
+1/f_1 + 1/f_2 - d/(f_1f_2)\)</span>; equal and opposite, <span
+class="math inline">\(1/F = d/f^2 &gt; 0\)</span>. <a
+href="16-strong-focusing.html#1-two-lenses-that-focus-together">Section
+1</a>.</li>
+<li><strong>Quadrupole.</strong> <span class="math inline">\(B_x =
+gy\)</span>, <span class="math inline">\(B_y = gx\)</span>; <span
+class="math inline">\(k = g/(B\rho)\)</span> (m<span
+class="math inline">\(^{-2}\)</span>); thin lens <span
+class="math inline">\(f = 1/(kl)\)</span>. <a
+href="16-strong-focusing.html#2-the-quadrupole-field">Section
+2</a>.</li>
+<li><strong>Hill’s equation.</strong> <span
+class="math inline">\(x&#39;&#39; + K_x(s)x = \delta/\rho\)</span>,
+<span class="math inline">\(K_x = 1/\rho^2 + k\)</span>; <span
+class="math inline">\(y&#39;&#39; + K_yy = 0\)</span>, <span
+class="math inline">\(K_y = -k\)</span>. <a
+href="16-strong-focusing.html#3-the-equations-of-motion-hills-equation">Section
+3</a>.</li>
+<li><strong>Transfer matrices.</strong> Drift <span
+class="math inline">\(\begin{pmatrix}1 &amp; l\\ 0 &amp;
+1\end{pmatrix}\)</span>; thin lens <span
+class="math inline">\(\begin{pmatrix}1 &amp; 0\\ -1/f &amp;
+1\end{pmatrix}\)</span>; focusing quadrupole <span
+class="math inline">\(\begin{pmatrix}\cos\phi &amp; \sin\phi/\sqrt K\\
+-\sqrt K\sin\phi &amp; \cos\phi\end{pmatrix}\)</span>, <span
+class="math inline">\(\phi = \sqrt Kl\)</span> (cosh, sinh for <span
+class="math inline">\(K &lt; 0\)</span>); sector bend with dispersion
+column <span class="math inline">\((\rho(1 - \cos\theta),
+\sin\theta)\)</span>. <a
+href="16-strong-focusing.html#4-transfer-matrices">Section 4</a>.</li>
+<li><strong>Stability.</strong> <span class="math inline">\(-2 &lt;
+\operatorname{tr}M &lt; 2\)</span>, with <span
+class="math inline">\(\det M = 1\)</span>. <a
+href="16-strong-focusing.html#5-when-is-the-motion-stable-the-trace-condition">Section
+5</a>.</li>
+<li><strong>Thin-lens FODO cell</strong> (length <span
+class="math inline">\(L\)</span> from F to F). <span
+class="math inline">\(\sin(\mu/2) = L/(4f)\)</span>; <span
+class="math inline">\(\beta_{x,\max} = L(1 +
+\sin\frac\mu2)/\sin\mu\)</span>, <span
+class="math inline">\(\beta_{x,\min} = L(1 -
+\sin\frac\mu2)/\sin\mu\)</span>. <a
+href="16-strong-focusing.html#6-the-fodo-cell">Section 6</a>.</li>
+<li><strong>Courant-Snyder.</strong> <span class="math inline">\(x =
+\sqrt{\varepsilon\beta_x}\cos(\psi + \psi_0)\)</span>, <span
+class="math inline">\(\psi&#39; = 1/\beta_x\)</span>, envelope <span
+class="math inline">\(w&#39;&#39; + Kw - 1/w^3 = 0\)</span> (<span
+class="math inline">\(w = \sqrt{\beta_x}\)</span>); <span
+class="math inline">\(\alpha_x = -\beta_x&#39;/2\)</span>, <span
+class="math inline">\(\gamma_x = (1 + \alpha_x^2)/\beta_x\)</span>;
+invariant <span class="math inline">\(\gamma_xx^2 + 2\alpha_xxx&#39; +
+\beta_xx&#39;^2 = \varepsilon\)</span>; Twiss transport <span
+class="math inline">\(B_2 = MB_1M^T\)</span>. <a
+href="16-strong-focusing.html#7-courant-snyder-theory-the-betatron-function">Section
+7</a>.</li>
+<li><strong>One-turn matrix.</strong> <span class="math inline">\(M =
+I\cos\mu + J\sin\mu\)</span>; <span class="math inline">\(\cos\mu =
+\frac12\operatorname{tr}M\)</span>, <span class="math inline">\(\beta_x
+= M_{12}/\sin\mu\)</span>, <span class="math inline">\(\alpha_x =
+(M_{11} - M_{22})/(2\sin\mu)\)</span>; tune <span
+class="math inline">\(Q_x = \frac1{2\pi}\oint ds/\beta_x\)</span>. <a
+href="16-strong-focusing.html#8-the-one-turn-matrix-and-the-tune">Section
+8</a>.</li>
+<li><strong>Emittance.</strong> Matched beam <span
+class="math inline">\(\langle x^2\rangle = \varepsilon\beta_x\)</span>,
+<span class="math inline">\(\langle xx&#39;\rangle =
+-\varepsilon\alpha_x\)</span>, <span class="math inline">\(\langle
+x&#39;^2\rangle = \varepsilon\gamma_x\)</span>; adiabatic damping <span
+class="math inline">\(\varepsilon \propto 1/(\beta\gamma)\)</span>;
+<span class="math inline">\(\varepsilon_n =
+\beta\gamma\varepsilon\)</span> conserved. <a
+href="16-strong-focusing.html#9-emittance-and-liouvilles-theorem">Section
+9</a>.</li>
+<li><strong>Dispersion.</strong> <span
+class="math inline">\(D_x&#39;&#39; + K_xD_x = 1/\rho\)</span>; FODO
+with bending <span class="math inline">\(\theta\)</span> per cell: <span
+class="math inline">\(D_{x,\max,\min} = \dfrac{L\theta(1 \pm
+\frac12\sin\frac\mu2)}{4\sin^2\frac\mu2}\)</span>; smooth approximation
+<span class="math inline">\(\beta_x \approx R/Q_x\)</span>, <span
+class="math inline">\(D_x \approx R/Q_x^2\)</span>, <span
+class="math inline">\(\alpha_c \approx 1/Q_x^2\)</span>. <a
+href="16-strong-focusing.html#10-dispersion-and-momentum-compaction">Section
+10</a>.</li>
+<li><strong>Transition.</strong> <span class="math inline">\(\Delta
+f_0/f_0 = -\eta\delta\)</span>; <span class="math inline">\(\gamma_t =
+1/\sqrt{\alpha_c} \approx Q_x\)</span>. <a
+href="16-strong-focusing.html#11-transition-the-price-of-strong-focusing">Section
+11</a>.</li>
+<li><strong>Chromaticity.</strong> <span class="math inline">\(\Delta
+Q_x = \frac1{4\pi}\oint\beta_x\Delta K\,ds\)</span>; natural <span
+class="math inline">\(Q_x&#39; =
+-\frac1{4\pi}\oint\beta_xk\,ds\)</span>; per thin FODO cell <span
+class="math inline">\(-\tan(\mu/2)/\pi\)</span>. <a
+href="16-strong-focusing.html#12-chromaticity">Section 12</a>.</li>
+<li><strong>Beam size and mismatch.</strong> <span
+class="math inline">\(\sigma_x = \sqrt{\varepsilon\beta_x +
+D_x^2\sigma_\delta^2}\)</span>; after filamentation <span
+class="math inline">\(\varepsilon_f =
+\varepsilon_1\cdot\frac12(\beta_{x1}\gamma_{x2} -
+2\alpha_{x1}\alpha_{x2} + \gamma_{x1}\beta_{x2})\)</span>. <a
+href="16-strong-focusing.html#13-beam-size-and-matching">Section
+13</a>.</li>
+<li><strong>Symplecticity.</strong> <span
+class="math inline">\(M^T\mathbf{S}M = \mathbf{S}\)</span>. <a
+href="16-strong-focusing.html#14-symplecticity">Section 14</a>.</li>
+<li><strong>Measurements.</strong> <span class="math inline">\(\Delta
+Q_x = \beta_x\Delta k\,l/(4\pi)\)</span> from one quadrupole; <span
+class="math inline">\(\delta = -\frac1\eta\Delta f_{RF}/f_{RF}\)</span>
+for dispersion. <a href="16-strong-focusing.html#at-the-bench">At the
+bench</a>.</li>
+</ul>
+<h4 id="chapter-17-magnets-from-iron-to-superconducting"><a
+href="17-magnets.html">Chapter 17. Magnets, from iron to
+superconducting</a></h4>
+<p>In this chapter <span class="math inline">\(G\)</span> is the gap
+height, <span class="math inline">\(\rho_e\)</span> the resistivity and
+<span class="math inline">\(p_B\)</span> the magnetic pressure.</p>
+<ul>
+<li><strong>Magnetic circuit.</strong> <span class="math inline">\(B =
+\eta_m\mu_0NI/G\)</span>, <span class="math inline">\(\eta_m = 1/[1 +
+l_{Fe}/(\mu_rG)]\)</span>. <a
+href="17-magnets.html#1-the-magnetic-circuit">Section 1</a>.</li>
+<li><strong>Multipole expansion.</strong> <span
+class="math inline">\(B_y + iB_x = \sum_n(B_n +
+iA_n)(z/R_r)^{n-1}\)</span>, <span class="math inline">\(z = x +
+iy\)</span>, <span class="math inline">\(n = 1\)</span> dipole, 2
+quadrupole, 3 sextupole (European count); field quality <span
+class="math inline">\(b_n + ia_n = 10^4C_n/B_1\)</span>. <a
+href="17-magnets.html#2-two-dimensional-fields-and-the-multipole-expansion">Section
+2</a>.</li>
+<li><strong>Pole shapes and ampere-turns.</strong> Equipotentials <span
+class="math inline">\(r^n\sin n\theta = \text{constant}\)</span>; <span
+class="math inline">\(NI = B_{tip}r_0/(n\mu_0)\)</span> per pole;
+quadrupole <span class="math inline">\(NI = gr_0^2/(2\mu_0)\)</span>. <a
+href="17-magnets.html#3-pole-shapes-from-the-scalar-potential">Section
+3</a>.</li>
+<li><strong>Iron.</strong> Remanent field <span
+class="math inline">\(B_{rem} \approx \mu_0H_cl_{Fe}/G\)</span>; eddy
+loss <span class="math inline">\(P_e = d^2\dot B^2/(12\rho_e)\)</span>.
+<a
+href="17-magnets.html#4-iron-saturation-hysteresis-and-eddy-currents">Section
+4</a>.</li>
+<li><strong>Copper coil power.</strong> <span class="math inline">\(P =
+\rho_eJ(NI)l_t\)</span>: only the current density is a free choice. <a
+href="17-magnets.html#6-copper-coils-power-and-cooling">Section
+6</a>.</li>
+<li><strong>Measurement.</strong> Rotating coil <span
+class="math inline">\(\Psi(\theta) =
+\mathrm{Re}\sum_nK_nC_ne^{in\theta}\)</span>; NMR <span
+class="math inline">\(f = 42.576\)</span> MHz/T <span
+class="math inline">\(\times B\)</span>. <a
+href="17-magnets.html#7-measuring-the-field">Section 7</a>.</li>
+<li><strong>Critical field of Nb-Ti (Lubell).</strong> <span
+class="math inline">\(B_{c2}(T) = B_{c20}[1 -
+(T/T_{c0})^{1.7}]\)</span>, <span class="math inline">\(B_{c20} \approx
+14.5\)</span> T, <span class="math inline">\(T_{c0} \approx 9.2\)</span>
+K. <a href="17-magnets.html#8-superconductors">Section 8</a>.</li>
+<li><strong>The <span class="math inline">\(\cos\theta\)</span>
+dipole.</strong> <span class="math inline">\(K_z =
+-K_0\cos\theta\)</span> gives <span class="math inline">\(B_0 =
+\mu_0K_0/2\)</span>, pure; 60° sector <span class="math inline">\(B_1 =
+\frac{2\mu_0Jw}{\pi}\sin\phi_0 = \frac{\sqrt3}{\pi}\mu_0Jw\)</span>, no
+sextupole. Chapter section 9.</li>
+<li><strong>Forces.</strong> <span class="math inline">\(p_B =
+B^2/(2\mu_0)\)</span> (27.6 MPa at 8.33 T); midplane force per length of
+a <span class="math inline">\(\cos\theta\)</span> coil <span
+class="math inline">\(F = B_0^2a/\mu_0\)</span>. <a
+href="17-magnets.html#10-forces-and-the-magnetic-pressure">Section
+10</a>.</li>
+<li><strong>Quench, adiabatic.</strong> <span
+class="math inline">\(\int_0^\infty J^2dt =
+\int_{T_0}^{T_{max}}C_V(T)/\rho_e(T)\,dT\)</span>. <a
+href="17-magnets.html#11-stored-energy-quench-and-protection">Section
+11</a>.</li>
+<li><strong>Flux-jump stability.</strong> <span
+class="math inline">\(a_f &lt; \frac{1}{J_c}\sqrt{3C_V(T_c -
+T_0)/\mu_0}\)</span>. <a
+href="17-magnets.html#12-filaments-flux-jumps-and-persistent-currents">Section
+12</a>.</li>
+<li><strong>Cryogenics.</strong> <span class="math inline">\(W_{el} \ge
+Q(T_a - T)/T\)</span>. <a href="17-magnets.html#13-cryogenics">Section
+13</a>.</li>
+<li><strong>Halbach ring (quoted).</strong> <span
+class="math inline">\(B = B_R\ln(r_o/r_i)K_1\)</span>, <span
+class="math inline">\(K_1 = \sin(2\pi/M)/(2\pi/M)\)</span>. <a
+href="17-magnets.html#14-permanent-magnets">Section 14</a>.</li>
+</ul>
+<h4 id="chapter-18-imperfections-resonances-and-nonlinear-dynamics"><a
+href="18-imperfections-and-resonances.html">Chapter 18. Imperfections,
+resonances and nonlinear dynamics</a></h4>
+<ul>
+<li><strong>Closed orbit from one kick.</strong> <span
+class="math inline">\(x_{co}(s) =
+\dfrac{\theta\sqrt{\beta_x(s)\beta_{x0}}}{2\sin\pi Q_x}\cos(|\psi_x(s) -
+\psi_{x0}| - \pi Q_x)\)</span>. <a
+href="18-imperfections-and-resonances.html#2-one-kick-the-closed-orbit">Section
+2</a>.</li>
+<li><strong>Random errors.</strong> <span class="math inline">\(\langle
+x_{co}^2\rangle = \dfrac{\beta_x(s)}{8\sin^2\pi
+Q_x}\sum_i\beta_{x,i}\langle\theta_i^2\rangle\)</span>; amplification
+<span class="math inline">\(\kappa =
+\sqrt{\dfrac{\beta_{x,\max}}{8\sin^2\pi Q_x}N_c(kL)^2(\beta_{x,\max} +
+\beta_{x,\min})}\)</span>. <a
+href="18-imperfections-and-resonances.html#3-many-random-kicks-and-the-alignment-tolerance">Section
+3</a>.</li>
+<li><strong>Gradient errors.</strong> <span class="math inline">\(\Delta
+Q_x = \frac1{4\pi}\oint\beta_x\Delta K\,ds\)</span>, <span
+class="math inline">\(\Delta Q_y = -\frac1{4\pi}\oint\beta_y\Delta
+K\,ds\)</span>; beta-beat <span
+class="math inline">\(\dfrac{\Delta\beta_x}{\beta_x} =
+-\dfrac{1}{2\sin2\pi Q_x}\oint\beta_x\Delta K\cos(2|\psi_x(s) -
+\psi_x(s&#39;)| - 2\pi Q_x)\,ds&#39;\)</span> (quoted); half-integer
+stopband width <span class="math inline">\(\beta_x\Delta
+KL/(2\pi)\)</span>. <a
+href="18-imperfections-and-resonances.html#4-gradient-errors-tune-shift-beta-beat-half-integer-stopband">Section
+4</a>.</li>
+<li><strong>Coupling.</strong> Skew kicks <span
+class="math inline">\(\Delta x&#39; = -k_sLy\)</span>, <span
+class="math inline">\(\Delta y&#39; = -k_sLx\)</span>; <span
+class="math inline">\(C^- =
+\frac1{2\pi}\oint\sqrt{\beta_x\beta_y}\,k_se^{i[\psi_x - \psi_y -
+\Delta\,2\pi s/C]}ds\)</span>; eigentunes <span
+class="math inline">\(Q_{1,2} = \frac{Q_x + Q_y}{2} \pm
+\frac12\sqrt{\Delta^2 + |C^-|^2}\)</span>; closest approach <span
+class="math inline">\(\Delta Q_{\min} = |C^-|\)</span>; solenoid <span
+class="math inline">\(\Delta Q_{\min} = B_sL/(2\pi B\rho)\)</span>. <a
+href="18-imperfections-and-resonances.html#5-linear-coupling-skew-quadrupoles-and-solenoids">Section
+5</a>.</li>
+<li><strong>Sextupoles.</strong> <span class="math inline">\(B_y =
+\frac12g&#39;(x^2 - y^2)\)</span>, <span class="math inline">\(B_x =
+g&#39;xy\)</span>, <span class="math inline">\(k_2 =
+g&#39;/(B\rho)\)</span>; corrected chromaticity <span
+class="math inline">\(Q_x&#39; = \frac1{4\pi}\oint\beta_x(-k +
+k_2D_x)\,ds\)</span>, <span class="math inline">\(Q_y&#39; =
+\frac1{4\pi}\oint\beta_y(k - k_2D_x)\,ds\)</span>. <a
+href="18-imperfections-and-resonances.html#6-sextupoles-and-the-correction-of-chromaticity">Section
+6</a>.</li>
+<li><strong>Third-integer resonance (Kobayashi).</strong> Kick <span
+class="math inline">\(\Delta P = -SX^2\)</span>, <span
+class="math inline">\(S = \frac12k_2L\beta_x^{3/2}\)</span>; <span
+class="math inline">\(H = 2\pi\,\delta Q\,J +
+\frac{S}{12}(2J)^{3/2}\cos3\varphi\)</span>; fixed points at <span
+class="math inline">\(r_{fp} = 8\pi|\delta Q|/S\)</span>; stable area
+<span class="math inline">\(48\sqrt3\,\pi^2\delta Q^2/S^2\)</span>. <a
+href="18-imperfections-and-resonances.html#7-the-price-the-third-integer-resonance">Section
+7</a>.</li>
+<li><strong>Resonance condition.</strong> <span
+class="math inline">\(mQ_x + nQ_y = p\)</span>, order <span
+class="math inline">\(|m| + |n|\)</span>. <a
+href="18-imperfections-and-resonances.html#8-the-general-resonance-condition-and-the-working-point">Section
+8</a>.</li>
+<li><strong>Octupole detuning.</strong> <span
+class="math inline">\(\Delta Q_x = \frac{k_3L}{16\pi}(\beta_x^2J_x -
+2\beta_x\beta_yJ_y)\)</span>; island half-width <span
+class="math inline">\(I_{\max} =
+\sqrt{2|h|J_r^{n/2}/(\pi|\alpha_d|)}\)</span>. <a
+href="18-imperfections-and-resonances.html#9-detuning-with-amplitude-islands-and-separatrices">Section
+9</a>.</li>
+<li><strong>Resonance driving terms.</strong> <span
+class="math inline">\(g_{mnp} = iV_{mnp}/[2\pi(mQ_x + nQ_y -
+p)]\)</span>. <a
+href="18-imperfections-and-resonances.html#10-perturbation-theory-kam-tori-and-the-onset-of-chaos">Section
+10</a>.</li>
+<li><strong>Orbit correction.</strong> Response matrix <span
+class="math inline">\(R_{ij} =
+\dfrac{\sqrt{\beta_{x,i}\beta_{x,j}}}{2\sin\pi Q_x}\cos(|\psi_{x,i} -
+\psi_{x,j}| - \pi Q_x)\)</span>; SVD solution <span
+class="math inline">\(\boldsymbol\theta =
+-VW^{-1}U^T\mathbf{x}\)</span>; LOCO minimises <span
+class="math inline">\(\chi^2 = \sum(R^{\text{meas}} -
+R^{\text{model}})^2/\sigma_i^2\)</span>. <a
+href="18-imperfections-and-resonances.html#12-correction-correctors-svd-beam-based-alignment-loco-feedback">Section
+12</a>.</li>
+<li><strong>Ground motion and energy.</strong> ATL law <span
+class="math inline">\(\langle\Delta Y^2\rangle = AtL\)</span>, <span
+class="math inline">\(t\)</span> the time; ring stretch <span
+class="math inline">\(\Delta E/E = -\frac{1}{\alpha_c}\Delta
+C/C\)</span>; spin tune <span class="math inline">\(\nu =
+a_e\gamma\)</span>. <a
+href="18-imperfections-and-resonances.html#13-the-ground-moves-atl-tides-and-trains">Section
+13</a>.</li>
+</ul>
+<h4 id="chapter-19-longitudinal-dynamics-in-depth"><a
+href="19-longitudinal-dynamics.html">Chapter 19. Longitudinal dynamics
+in depth</a></h4>
+<ul>
+<li><strong>The map.</strong> <span class="math inline">\(\Delta E_{n+1}
+= \Delta E_n + q\hat{V}(\sin\phi_n - \sin\phi_s)\)</span>, <span
+class="math inline">\(\phi_{n+1} = \phi_n + \dfrac{2\pi
+h\eta}{\beta^2E}\Delta E_{n+1}\)</span>. <a
+href="19-longitudinal-dynamics.html#1-the-two-difference-equations">Section
+1</a>.</li>
+<li><strong>Hamiltonian.</strong> With <span
+class="math inline">\(W_\phi = \Delta E/(h\omega_0)\)</span> (eV s):
+<span class="math inline">\(H =
+\dfrac{h^2\omega_0^2\eta}{2\beta^2E}W_\phi^2 + \dfrac{q\hat{V}}{2\pi
+h}[\cos\phi - \cos\phi_s + (\phi - \phi_s)\sin\phi_s]\)</span>. <a
+href="19-longitudinal-dynamics.html#2-the-continuous-limit-and-the-hamiltonian">Section
+2</a>.</li>
+<li><strong>Small oscillations.</strong> <span
+class="math inline">\(\Omega_s^2 = -\dfrac{h\omega_0^2\eta
+q\hat{V}\cos\phi_s}{2\pi\beta^2E}\)</span>, <span
+class="math inline">\(Q_s = \Omega_s/\omega_0\)</span>; stable for <span
+class="math inline">\(0 &lt; \phi_s &lt; \pi/2\)</span> below
+transition, <span class="math inline">\(\pi/2 &lt; \phi_s &lt;
+\pi\)</span> above. Large amplitude: <span
+class="math inline">\(\Omega(\hat\phi)/\Omega_s \approx 1 -
+\hat\phi^2/16\)</span>. <a
+href="19-longitudinal-dynamics.html#3-small-oscillations-and-the-synchrotron-tune">Section
+3</a>.</li>
+<li><strong>Separatrix.</strong> <span class="math inline">\(\Delta
+E_{sep}(\phi)^2 = \dfrac{q\hat{V}\beta^2E}{\pi h|\eta|}[\cos\phi +
+\cos\phi_s - (\pi - \phi - \phi_s)\sin\phi_s]\)</span>. <a
+href="19-longitudinal-dynamics.html#4-fixed-points-and-the-separatrix">Section
+4</a>.</li>
+<li><strong>Stationary bucket.</strong> <span
+class="math inline">\(\Delta E_{bucket} =
+\sqrt{\dfrac{2q\hat{V}\beta^2E}{\pi h|\eta|}}\)</span>, <span
+class="math inline">\(A_{bucket} = 8\Delta
+E_{bucket}/(h\omega_0)\)</span> (eV s). <a
+href="19-longitudinal-dynamics.html#5-the-stationary-bucket-height-and-area">Section
+5</a>.</li>
+<li><strong>Moving bucket.</strong> Height <span
+class="math inline">\(\Delta E_{bucket}Y(\phi_s)\)</span>, <span
+class="math inline">\(Y = \sqrt{\cos\phi_s - (\pi/2 -
+\phi_s)\sin\phi_s}\)</span>; area approximately <span
+class="math inline">\((1 - \sin\phi_s)/(1 + \sin\phi_s)\)</span> of the
+stationary one. <a
+href="19-longitudinal-dynamics.html#6-the-moving-bucket">Section
+6</a>.</li>
+<li><strong>Bunch length and spread.</strong> <span
+class="math inline">\(\sigma_\delta = \Omega_s\sigma_t/|\eta|\)</span>,
+<span class="math inline">\(\sigma_z = \beta
+c|\eta|\sigma_\delta/\Omega_s\)</span>. <a
+href="19-longitudinal-dynamics.html#7-bunch-length-energy-spread-and-longitudinal-emittance">Section
+7</a>.</li>
+<li><strong>Adiabatic scaling.</strong> Adiabatic when <span
+class="math inline">\(\varepsilon_{ad} = |d\Omega_s/dt|/\Omega_s^2 &lt;
+0.1\)</span>; at fixed <span class="math inline">\(\varepsilon_l =
+4\pi\sigma_E\sigma_t\)</span>, <span class="math inline">\(\sigma_t
+\propto
+(|\eta|/(\beta^2E\hat{V}h|\cos\phi_s|\omega_0^2))^{1/4}\)</span>. <a
+href="19-longitudinal-dynamics.html#8-slow-change-adiabatic-invariance-and-its-scaling-laws">Section
+8</a>.</li>
+<li><strong>Debunching time.</strong> <span class="math inline">\(t_D
+\approx (2\pi - \Delta\phi)/(h\omega_0|\eta|\Delta\delta)\)</span>. <a
+href="19-longitudinal-dynamics.html#9-capture-filamentation-and-debunching">Section
+9</a>.</li>
+<li><strong>Transition crossing.</strong> <span
+class="math inline">\(\eta(t) \approx 2\dot\gamma t/\gamma_t^3\)</span>;
+non-adiabatic time <span class="math inline">\(T_c =
+\left(\dfrac{\pi\beta^2mc^2\gamma_t^4}{h\omega_0^2q\hat{V}|\cos\phi_s|\dot\gamma}\right)^{1/3}\)</span>.
+<a href="19-longitudinal-dynamics.html#10-transition-crossing">Section
+10</a>.</li>
+<li><strong>Barrier bucket.</strong> <span
+class="math inline">\(\Delta\hat E =
+\sqrt{2\beta^2EqV_0T_1/(|\eta|T_0)}\)</span>. <a
+href="19-longitudinal-dynamics.html#11-rf-gymnastics">Section
+11</a>.</li>
+<li><strong>Linac limit.</strong> <span class="math inline">\(k_l^2 =
+\dfrac{2\pi qE_0T_t\cos\phi_s}{mc^2\lambda\beta^3\gamma^3}\)</span>, the
+ring result with <span class="math inline">\(\eta \to
+-1/\gamma^2\)</span>. <a
+href="19-longitudinal-dynamics.html#12-the-linac-as-a-ring-without-transition">Section
+12</a>.</li>
+</ul>
+<h4 id="chapter-20-synchrotron-radiation-and-light-sources"><a
+href="20-synchrotron-radiation.html">Chapter 20. Synchrotron radiation
+and light sources</a></h4>
+<ul>
+<li><strong>Larmor.</strong> <span class="math inline">\(P =
+q^2a^2/(6\pi\varepsilon_0c^3)\)</span>, pattern <span
+class="math inline">\(\propto\sin^2\Theta\)</span>. <a
+href="20-synchrotron-radiation.html#1-the-power-radiated-by-a-slow-charge-larmor">Section
+1</a>.</li>
+<li><strong>Liénard.</strong> <span class="math inline">\(P =
+\dfrac{q^2\gamma^6}{6\pi\varepsilon_0c^3}\left[a^2 -
+\dfrac{|\mathbf{v}\times\mathbf{a}|^2}{c^2}\right]\)</span>; per force,
+<span class="math inline">\(P_\perp =
+q^2\gamma^2F_\perp^2/(6\pi\varepsilon_0m^2c^3)\)</span>, <span
+class="math inline">\(P_\parallel =
+q^2F_\parallel^2/(6\pi\varepsilon_0m^2c^3)\)</span>. <a
+href="20-synchrotron-radiation.html#2-the-relativistic-generalisation-liénard-1898">Section
+2</a>.</li>
+<li><strong>On a circle.</strong> <span class="math inline">\(P =
+q^2c\beta^4\gamma^4/(6\pi\varepsilon_0\rho^2)\)</span>; <span
+class="math inline">\(U_0 = q^2\beta^3\gamma^4/(3\varepsilon_0\rho) =
+C_\gamma E^4/\rho\)</span>; with straights <span
+class="math inline">\(U_0 = \frac{C_\gamma E^4}{2\pi}I_2\)</span>, <span
+class="math inline">\(I_2 = \oint ds/\rho^2\)</span>. <a
+href="20-synchrotron-radiation.html#3-energy-lost-per-turn">Section
+3</a>.</li>
+<li><strong>Opening angle.</strong> <span
+class="math inline">\(\tan\theta =
+\sin\theta&#39;/[\gamma(\cos\theta&#39; + \beta)]\)</span>: a cone of
+about <span class="math inline">\(1/\gamma\)</span>. <a
+href="20-synchrotron-radiation.html#4-the-opening-angle">Section
+4</a>.</li>
+<li><strong>Critical frequency.</strong> <span
+class="math inline">\(\omega_c = \frac32\gamma^3c/\rho\)</span>, <span
+class="math inline">\(\varepsilon_c = \hbar\omega_c\)</span>. <a
+href="20-synchrotron-radiation.html#5-the-critical-frequency">Section
+5</a>.</li>
+<li><strong>Spectrum (quoted).</strong> <span
+class="math inline">\(\dfrac{dP}{d\omega} =
+\dfrac{P}{\omega_c}S(\omega/\omega_c)\)</span>, <span
+class="math inline">\(S(x) =
+\dfrac{9\sqrt3}{8\pi}x\displaystyle\int_x^\infty
+K_{5/3}(t)\,dt\)</span>. <a
+href="20-synchrotron-radiation.html#6-the-spectrum-schwingers-universal-function">Section
+6</a>.</li>
+<li><strong>Damping.</strong> <span class="math inline">\(\tau_y =
+2ET_0/U_0\)</span>; <span class="math inline">\(\mathcal{D} =
+I_4/I_2\)</span>, <span class="math inline">\(I_4 =
+\oint\frac{D_x}{\rho}(\frac1{\rho^2} + 2k)\,ds\)</span>; <span
+class="math inline">\(J_x = 1 - \mathcal{D}\)</span>, <span
+class="math inline">\(J_y = 1\)</span>, <span class="math inline">\(J_E
+= 2 + \mathcal{D}\)</span>, sum 4 (Robinson); <span
+class="math inline">\(\tau_i = 2ET_0/(J_iU_0)\)</span> (amplitude). <a
+href="20-synchrotron-radiation.html#8-radiation-damping">Section
+8</a>.</li>
+<li><strong>Equilibrium.</strong> <span
+class="math inline">\(\sigma_\delta^2 =
+C_q\gamma^2I_3/(J_EI_2)\)</span>; <span
+class="math inline">\(\mathcal{H}_x = \gamma_xD_x^2 +
+2\alpha_xD_xD_x&#39; + \beta_xD_x&#39;^2\)</span>; natural emittance
+<span class="math inline">\(\varepsilon_{x0} =
+C_q\gamma^2I_5/(J_xI_2)\)</span>, <span class="math inline">\(I_5 =
+\oint\mathcal{H}_x/|\rho|^3\,ds\)</span>. <a
+href="20-synchrotron-radiation.html#9-quantum-excitation-and-the-equilibrium-beam">Section
+9</a>.</li>
+<li><strong>Lattice scaling.</strong> <span
+class="math inline">\(\varepsilon_{x0} =
+FC_q\gamma^2\theta^3/J_x\)</span>, <span
+class="math inline">\(F\)</span> set by the lattice type. <a
+href="20-synchrotron-radiation.html#10-how-emittance-scales-lattices">Section
+10</a>.</li>
+<li><strong>Insertion devices.</strong> <span class="math inline">\(B_y
+= B_0\cos(2\pi s/\lambda_u)\)</span>; <span class="math inline">\(K =
+eB_0\lambda_u/(2\pi m_ec)\)</span>; <span
+class="math inline">\(\bar\beta_s \approx 1 - (1 +
+K^2/2)/(2\gamma^2)\)</span>; <span class="math inline">\(\lambda_n =
+\frac{\lambda_u}{2n\gamma^2}(1 + K^2/2 + \gamma^2\theta^2)\)</span>;
+brightness <span class="math inline">\(\mathcal{B} = \dot
+N_{ph}/(4\pi^2\Sigma_x\Sigma_{x&#39;}\Sigma_y\Sigma_{y&#39;})\)</span>.
+<a
+href="20-synchrotron-radiation.html#11-insertion-devices-wigglers-and-undulators">Section
+11</a>.</li>
+<li><strong>Touschek (outline) and polarisation.</strong> <span
+class="math inline">\(1/\tau_T \propto
+Nr_e^2c\,D(\zeta)/(\gamma^2\sigma_x\sigma_y\sigma_z\delta_{acc}^3)\)</span>;
+<span class="math inline">\(\tau_p =
+\frac{8}{5\sqrt3}\frac{m_e\rho^3}{r_e\hbar\gamma^5}\)</span>, limit 92.4
+per cent. <a
+href="20-synchrotron-radiation.html#12-touschek-lifetime-and-spin-polarisation-in-outline">Section
+12</a>.</li>
+</ul>
+<h4 id="chapter-21-injection-extraction-and-the-chain-of-machines"><a
+href="21-injection-and-extraction.html">Chapter 21. Injection,
+extraction and the chain of machines</a></h4>
+<p>In this chapter <span class="math inline">\(g\)</span> is a kicker
+gap and <span class="math inline">\(\ell\)</span> a sextupole
+length.</p>
+<ul>
+<li><strong>Space-charge scaling.</strong> <span
+class="math inline">\(\Delta Q \propto
+-N/(\varepsilon_n\beta\gamma^2)\)</span>. <a
+href="21-injection-and-extraction.html#1-why-a-chain">Section
+1</a>.</li>
+<li><strong>Normalised coordinates.</strong> <span
+class="math inline">\(X = x/\sqrt{\beta_x}\)</span>, <span
+class="math inline">\(P = (\alpha_xx +
+\beta_xx&#39;)/\sqrt{\beta_x}\)</span>; action <span
+class="math inline">\(J = (X^2 + P^2)/2\)</span>; <span
+class="math inline">\(\varepsilon = \langle J\rangle\)</span>. <a
+href="21-injection-and-extraction.html#3-phase-space-at-the-injection-point">Section
+3</a>.</li>
+<li><strong>Kick to the orbit.</strong> <span
+class="math inline">\(\theta_k =
+x_s/\sqrt{\beta_{x,s}\beta_{x,k}}\)</span> at <span
+class="math inline">\(\pi/2\)</span> phase advance. <a
+href="21-injection-and-extraction.html#3-phase-space-at-the-injection-point">Section
+3</a>.</li>
+<li><strong>Kickers and septa.</strong> <span class="math inline">\(B =
+\mu_0I/g\)</span>, <span class="math inline">\(L = \mu_0wl/g\)</span>;
+travelling-wave kicker <span class="math inline">\(Z =
+\sqrt{L_c/C_c}\)</span>, fill time <span
+class="math inline">\(n\sqrt{L_cC_c}\)</span>; electrostatic septum
+<span class="math inline">\(\theta = q\mathcal{E}L_E/(pv)\)</span>. <a
+href="21-injection-and-extraction.html#4-kickers-and-septa">Section
+4</a>.</li>
+<li><strong>Injection errors.</strong> Steering: <span
+class="math inline">\(\varepsilon_f = \varepsilon(1 + a^2/2)\)</span>;
+mismatch: <span class="math inline">\(\varepsilon_f = \varepsilon
+H\)</span>, <span class="math inline">\(H =
+\frac12(\beta_{x,1}\gamma_{x,2} - 2\alpha_{x,1}\alpha_{x,2} +
+\gamma_{x,1}\beta_{x,2}) \ge 1\)</span>. <a
+href="21-injection-and-extraction.html#5-injection-errors-and-mismatch">Section
+5</a>.</li>
+<li><strong>Multi-turn injection.</strong> <span
+class="math inline">\(\varepsilon_r \gtrsim
+1.5N_t\varepsilon_i\)</span>. <a
+href="21-injection-and-extraction.html#6-multi-turn-injection">Section
+6</a>.</li>
+<li><strong>Charge exchange.</strong> <span class="math inline">\(f_- =
+e^{-\sigma_-n}\)</span>, <span class="math inline">\(f_0 =
+\dfrac{\sigma_{-0}}{\sigma_{0+} - \sigma_-}(e^{-\sigma_-n} -
+e^{-\sigma_{0+}n})\)</span>; Highland <span
+class="math inline">\(\theta_0 = \dfrac{13.6\ \mathrm{MeV}}{\beta
+cp}\sqrt{\dfrac{N_hx}{X_0}}\left(1 +
+0.038\ln\dfrac{N_hx}{X_0}\right)\)</span>; growth <span
+class="math inline">\(\Delta\varepsilon_n =
+\frac12\beta_{x,f}\beta\gamma\theta_0^2\)</span>. <a
+href="21-injection-and-extraction.html#7-charge-exchange-injection">Section
+7</a>.</li>
+<li><strong>Third-integer slow extraction.</strong> <span
+class="math inline">\(\Delta P = SX^2\)</span>, <span
+class="math inline">\(S = \frac12\beta_x^{3/2}k_2\ell\)</span>; <span
+class="math inline">\(\mathcal{H}_K = \frac\kappa2(X^2 + P^2) + \frac
+S4(3XP^2 - X^3)\)</span> per three turns, <span
+class="math inline">\(\kappa = 6\pi\Delta Q\)</span>; inscribed radius
+<span class="math inline">\(h = 4\pi\Delta Q/S\)</span>, area <span
+class="math inline">\(3\sqrt3h^2\)</span>; spiral step <span
+class="math inline">\(\Delta x_3 \approx \frac38\beta_xk_2\ell
+x^2\)</span>; ripple limit <span class="math inline">\(\delta
+Q_{\mathrm{crit}} = \dot Q/\omega\)</span>. <a
+href="21-injection-and-extraction.html#11-slow-extraction-on-the-third-integer-resonance">Section
+11</a>.</li>
+<li><strong>Twiss transport in a line</strong> with <span
+class="math inline">\(C\)</span>, <span class="math inline">\(S\)</span>
+the cosine- and sine-like solutions: <span
+class="math inline">\((\beta_x, \alpha_x, \gamma_x)_2\)</span> from the
+<span class="math inline">\(3 \times 3\)</span> matrix of <span
+class="math inline">\(C^2\)</span>, <span
+class="math inline">\(-2CS\)</span>, <span
+class="math inline">\(S^2\)</span>, and so on. Collimator hexagon <span
+class="math inline">\(a_{\max} = n/\cos30^\circ\)</span>. <a
+href="21-injection-and-extraction.html#12-transfer-lines-and-matching">Section
+12</a>.</li>
+<li><strong>Stored energy.</strong> <span class="math inline">\(U =
+n_bNE\)</span>. <a
+href="21-injection-and-extraction.html#13-beam-dumps-and-machine-protection">Section
+13</a>.</li>
+</ul>
+<h4
+id="chapter-22-intensity-limits-space-charge-wakefields-and-instabilities"><a
+href="22-intensity-limits.html">Chapter 22. Intensity limits: space
+charge, wakefields and instabilities</a></h4>
+<p>In this chapter <span class="math inline">\(\lambda\)</span> is a
+line density, <span class="math inline">\(K\)</span> the generalised
+perveance, <span class="math inline">\(W_\parallel\)</span> and <span
+class="math inline">\(W_\perp\)</span> wake functions, and <span
+class="math inline">\(R_s\)</span> a resonator’s shunt resistance in the
+circuit convention.</p>
+<ul>
+<li><strong>Fields of a round uniform beam.</strong> <span
+class="math inline">\(\mathcal{E}_r = q\lambda
+r/(2\pi\varepsilon_0a^2)\)</span>, <span class="math inline">\(B_\theta
+= \mu_0q\lambda\beta cr/(2\pi a^2)\)</span>; net force <span
+class="math inline">\(F_r = q\mathcal{E}_r/\gamma^2\)</span>. <a
+href="22-intensity-limits.html#1-the-beams-own-fields">Section 1</a>,
+chapter section 2.</li>
+<li><strong>Generalised perveance.</strong> <span
+class="math inline">\(x&#39;&#39; = (K/a^2)x\)</span>, <span
+class="math inline">\(K = 2\lambda r_c/(\beta^2\gamma^3) =
+2I/(I_A\beta^3\gamma^3)\)</span>. Chapter section 2.</li>
+<li><strong>Envelope equation.</strong> <span
+class="math inline">\(\sigma_x&#39;&#39; + k_x\sigma_x - K/(4\sigma_x) -
+\varepsilon^2/\sigma_x^3 = 0\)</span>; for the edge radius <span
+class="math inline">\(a&#39;&#39; + k_xa - K/a -
+\varepsilon_{edge}^2/a^3 = 0\)</span>. <a
+href="22-intensity-limits.html#3-the-kv-distribution-and-the-envelope-equation-1959">Section
+3</a>.</li>
+<li><strong>Laslett tune shift.</strong> KV: <span
+class="math inline">\(\Delta Q = -KC/(4\pi\varepsilon_{edge})\)</span>;
+Gaussian peak <span class="math inline">\(\Delta Q_{max} =
+-\dfrac{Nr_p}{4\pi\beta\gamma^2\varepsilon_nB_f}\)</span>; general <span
+class="math inline">\(\Delta Q_y =
+-\dfrac{r_p\lambda}{2\pi\beta^2\gamma^3}\oint\dfrac{\beta_y}{\sigma_y(\sigma_x
++ \sigma_y)}ds\)</span>. <a
+href="22-intensity-limits.html#4-the-incoherent-tune-shift-laslett-1963">Section
+4</a>.</li>
+<li><strong>Wakes and impedance.</strong> <span
+class="math inline">\(\Delta W_2 = -q_1q_2W_\parallel(z)\)</span>; <span
+class="math inline">\(\Delta y_2&#39; =
+-\frac{q_1q_2}{E}W_\perp(z)\Delta y_1\)</span>; <span
+class="math inline">\(Z_\parallel(\omega) = \frac1c\int_0^\infty
+W_\parallel(z)e^{i\omega z/c}dz\)</span> (time dependence <span
+class="math inline">\(e^{-i\omega t}\)</span>). <a
+href="22-intensity-limits.html#6-wake-functions-and-impedance">Section
+6</a>.</li>
+<li><strong>Resonator and resistive wall.</strong> <span
+class="math inline">\(Z_\parallel = R_s/[1 + iQ_r(\omega_r/\omega -
+\omega/\omega_r)]\)</span>; <span
+class="math inline">\(\mathrm{Re}Z_\parallel/L = 1/(2\pi
+b\sigma_c\delta_s)\)</span>, <span class="math inline">\(Z_\perp/L =
+(2c/(b^2\omega))Z_\parallel/L\)</span>. <a
+href="22-intensity-limits.html#7-three-kinds-of-impedance">Section
+7</a>.</li>
+<li><strong>Loss factor.</strong> <span class="math inline">\(\Delta W =
+-q_b^2k_\parallel\)</span>, <span class="math inline">\(k_\parallel =
+\frac1\pi\int_0^\infty|\tilde\lambda(\omega)|^2\mathrm{Re}Z_\parallel\,d\omega\)</span>.
+<a
+href="22-intensity-limits.html#8-energy-loss-the-loss-factor-and-heating">Section
+8</a>.</li>
+<li><strong>Robinson instability.</strong> <span
+class="math inline">\(\dfrac{1}{\tau_g} =
+\dfrac{qI_0\eta\omega_{RF}}{2\beta^2ET_0\Omega_s}[\mathrm{Re}Z(\omega_{RF}
++ \Omega_s) - \mathrm{Re}Z(\omega_{RF} - \Omega_s)]\)</span>; above
+transition, tune the cavity below the RF frequency. <a
+href="22-intensity-limits.html#9-the-robinson-instability-a-growth-rate-derived">Section
+9</a>.</li>
+<li><strong>Coupled bunches.</strong> <span
+class="math inline">\(1/\tau_g = \dfrac{\eta
+I_0\omega_p\mathrm{Re}Z(\omega_p)}{4\pi
+Q_s(E/q)}e^{-(\omega_p\sigma_t)^2}\)</span>, <span
+class="math inline">\(\omega_p\)</span> a beam line here. <a
+href="22-intensity-limits.html#10-coupled-bunch-instabilities">Section
+10</a>.</li>
+<li><strong>Negative mass and Keil-Schnell.</strong> <span
+class="math inline">\((\Omega - n\omega_0)^2 = i\dfrac{\eta
+nqI_0\omega_0^2}{2\pi\beta^2E}Z_n\)</span>; stable if <span
+class="math inline">\(|Z_\parallel/n| \le
+F\dfrac{\beta^2(E/q)|\eta|}{I}\left(\dfrac{\Delta
+p}{p}\right)_{FWHM}^2\)</span>, <span class="math inline">\(F \approx
+1\)</span>. <a
+href="22-intensity-limits.html#11-coasting-beams-negative-mass-and-the-microwave-instability">Section
+11</a>.</li>
+<li><strong>Head-tail phase.</strong> <span class="math inline">\(\chi =
+Q&#39;\omega_0\tau_L/\eta\)</span>. <a
+href="22-intensity-limits.html#13-head-tail-and-chromaticity">Section
+13</a>.</li>
+<li><strong>TMCI, two-particle model.</strong> <span
+class="math inline">\(\Upsilon = \dfrac{\pi
+Nq^2W_0c^2}{4EC\omega_\beta\Omega_s}\)</span> (dimensionless; <span
+class="math inline">\(W_0\)</span> the wake integrated round the ring,
+V/(C m)), unstable for <span class="math inline">\(\Upsilon &gt;
+2\)</span>; threshold <span class="math inline">\(N_{th} =
+\dfrac{8p\Omega_sC}{\pi q^2\beta_yW_0}\)</span>. <a
+href="22-intensity-limits.html#14-transverse-mode-coupling-the-two-particle-model">Section
+14</a>.</li>
+<li><strong>Landau damping.</strong> <span class="math inline">\(1 =
+\Delta\Omega_c\int\rho(\omega)\,d\omega/(\Omega - \omega)\)</span>;
+Lorentzian spread subtracts its half-width <span
+class="math inline">\(\Gamma\)</span> from the growth rate. <a
+href="22-intensity-limits.html#15-landau-damping">Section 15</a>.</li>
+<li><strong>Feedback.</strong> <span class="math inline">\(\tau_d =
+2/g_d\)</span> turns. <a
+href="22-intensity-limits.html#16-feedback">Section 16</a>.</li>
+<li><strong>Electron cloud kick.</strong> <span
+class="math inline">\(\Delta W = 2m_ec^2(Nr_e/r)^2\)</span>. <strong>Ion
+trapping</strong>: ions heavier than <span class="math inline">\(A_c =
+NL_br_p/[2\sigma_y(\sigma_x + \sigma_y)]\)</span> are trapped. <a
+href="22-intensity-limits.html#17-the-electron-cloud">Section 17</a>, <a
+href="22-intensity-limits.html#18-ions-in-electron-rings">section
+18</a>.</li>
+<li><strong>Touschek momentum transfer.</strong> <span
+class="math inline">\(\delta \approx \gamma x&#39;\)</span>. <a
+href="22-intensity-limits.html#19-intra-beam-scattering-and-the-touschek-effect">Section
+19</a>.</li>
+</ul>
+<h3 id="part-v-colliders">Part V. Colliders</h3>
+<h4 id="chapter-23-colliders-and-luminosity"><a
+href="23-colliders.html">Chapter 23. Colliders and luminosity</a></h4>
+<ul>
+<li><strong>Centre-of-mass energy.</strong> <span
+class="math inline">\(s = m_1^2c^4 + m_2^2c^4 + 2(E_1E_2 +
+|\mathbf{p}_1||\mathbf{p}_2|c^2) \approx 4E_1E_2\)</span> head on;
+equivalent fixed-target energy <span class="math inline">\(E_{FT} = (s -
+2m^2c^4)/(2mc^2)\)</span>. <a
+href="23-colliders.html#1-the-centre-of-mass-energy">Section 1</a>.</li>
+<li><strong>Definition.</strong> <span class="math inline">\(dN_{ev}/dt
+= \mathcal{L}\sigma\)</span>; <span class="math inline">\(\mathcal{L} =
+K\int n_1n_2\,dV\)</span> with <span class="math inline">\(K =
+\sqrt{(\mathbf{v}_1 - \mathbf{v}_2)^2 -
+(\mathbf{v}_1\times\mathbf{v}_2)^2/c^2}\)</span>. <a
+href="23-colliders.html#2-luminosity-the-definition">Section 2</a>.</li>
+<li><strong>Gaussian bunches.</strong> <span
+class="math inline">\(\mathcal{L} =
+\dfrac{f_0n_bN_1N_2}{4\pi\sigma_x\sigma_y}\)</span>; unequal beams <span
+class="math inline">\(f_0n_bN_1N_2/(2\pi\Sigma_x\Sigma_y)\)</span>. <a
+href="23-colliders.html#3-luminosity-of-two-gaussian-bunches">Section
+3</a>.</li>
+<li><strong>Crossing angle.</strong> <span class="math inline">\(S =
+1/\sqrt{1 + \phi_P^2}\)</span>, <span class="math inline">\(\phi_P =
+(\sigma_z/\sigma_x)\tan(\theta_c/2)\)</span>; coasting beams <span
+class="math inline">\(\mathcal{L} =
+I_1I_2/[e^2ch_{\text{eff}}\tan(\theta_c/2)]\)</span>. <a
+href="23-colliders.html#4-the-crossing-angle-and-the-piwinski-factor">Section
+4</a>.</li>
+<li><strong>Hourglass.</strong> <span class="math inline">\(R_{hg} =
+\sqrt\pi\,te^{t^2}\operatorname{erfc}(t)\)</span>, <span
+class="math inline">\(t = \beta^*/\sigma_z\)</span>. <a
+href="23-colliders.html#5-the-hourglass-effect">Section 5</a>.</li>
+<li><strong>Low-beta waist.</strong> <span
+class="math inline">\(\beta_x(s) = \beta^* + s^2/\beta^*\)</span>, <span
+class="math inline">\(\alpha_x = -s/\beta^*\)</span>. <a
+href="23-colliders.html#6-the-low-beta-insertion">Section 6</a>.</li>
+<li><strong>Beam-beam.</strong> <span
+class="math inline">\(\mathcal{E}_r =
+\dfrac{\lambda}{2\pi\varepsilon_0r}(1 -
+e^{-r^2/2\sigma_\perp^2})\)</span>; <span class="math inline">\(\Delta
+r&#39; = \mp\dfrac{2Nr_{cl}}{\gamma r}(1 -
+e^{-r^2/2\sigma_\perp^2})\)</span>; round <span
+class="math inline">\(\xi = Nr_{cl}/(4\pi\varepsilon_n)\)</span>; flat
+<span class="math inline">\(\xi_y =
+Nr_{cl}\beta_y^*/[2\pi\gamma\sigma_y(\sigma_x + \sigma_y)]\)</span>; at
+the limit <span class="math inline">\(\mathcal{L} = \dfrac{\gamma
+I\xi_y}{2er_e\beta_y^*}(1 + \sigma_y/\sigma_x)\)</span>. <a
+href="23-colliders.html#7-the-beam-beam-force">Section 7</a>.</li>
+<li><strong>Van der Meer scan.</strong> <span
+class="math inline">\(h_{\text{eff}} = \int R(\Delta y)\,d\Delta
+y/R(0)\)</span>; small-angle Bhabha <span class="math inline">\(\sigma
+\approx \dfrac{16\pi\alpha^2(\hbar
+c)^2}{s}\left(\dfrac{1}{\theta_{\min}^2} -
+\dfrac{1}{\theta_{\max}^2}\right)\)</span>. <a
+href="23-colliders.html#9-measuring-luminosity">Section 9</a>.</li>
+<li><strong>Burn-off and pile-up.</strong> <span
+class="math inline">\(\tau_N =
+n_bN_0/(\sigma_rn_{IP}\mathcal{L}_0)\)</span>, <span
+class="math inline">\(\mathcal{L}(t) = \mathcal{L}_0/(1 +
+t/\tau_N)^2\)</span>, <span
+class="math inline">\(\int_0^{t_f}\mathcal{L}\,dt =
+\mathcal{L}_0\tau_Nt_f/(\tau_N + t_f)\)</span>; <span
+class="math inline">\(\mu_{pu} =
+\mathcal{L}\sigma_{inel}/(n_bf_0)\)</span>. <a
+href="23-colliders.html#10-lifetime-burn-off-levelling-and-pile-up">Section
+10</a>.</li>
+</ul>
+<h4 id="chapter-24-beam-cooling-and-antiparticles"><a
+href="24-beam-cooling.html">Chapter 24. Beam cooling and
+antiparticles</a></h4>
+<p>In this chapter <span class="math inline">\(\Delta\)</span> is the
+electrons’ rms velocity spread in the rest frame, <span
+class="math inline">\(W_{\text{bw}}\)</span> a bandwidth, and <span
+class="math inline">\(\beta_\perp\)</span> the beta function at the
+cooler or absorber.</p>
+<ul>
+<li><strong>Damping against diffusion.</strong> <span
+class="math inline">\(\langle p^2\rangle_{eq} = D/(2\lambda)\)</span>.
+<strong>Beam temperatures</strong>: <span
+class="math inline">\(k_BT_\perp =
+\beta^2\gamma^2mc^2\sigma_{x&#39;}^2\)</span>, <span
+class="math inline">\(k_BT_\parallel =
+mc^2\beta^2\sigma_\delta^2\)</span>. <a
+href="24-beam-cooling.html#1-phase-space-liouville-and-the-temperature-of-a-beam">Section
+1</a>.</li>
+<li><strong>Matched electrons.</strong> <span class="math inline">\(W_e
+= (m_e/m_i)W_i\)</span>: about 549 eV per MeV per nucleon. <a
+href="24-beam-cooling.html#2-electron-cooling-the-energy-of-the-electrons">Section
+2</a>.</li>
+<li><strong>Friction force.</strong> <span class="math inline">\(dE/dx =
+\dfrac{4\pi n_{e,r}Z^2e^4}{(4\pi\varepsilon_0)^2m_ev^2}L_C\)</span>; for
+slow ions <span class="math inline">\(\mathbf{F} \approx
+-C_F\dfrac{\sqrt{2/\pi}}{3\Delta^3}\mathbf{v}\)</span>, <span
+class="math inline">\(C_F = \dfrac{4\pi
+n_{e,r}Z^2e^4L_C}{(4\pi\varepsilon_0)^2m_e}\)</span>. <a
+href="24-beam-cooling.html#3-the-friction-force">Section 3</a>.</li>
+<li><strong>Cooling time.</strong> <span class="math inline">\(\tau
+\propto A\beta^4\gamma^5\theta_e^3/(Z^2f_cj)\)</span> (Budker); cold
+longitudinal electrons <span class="math inline">\(k_BT_\parallel =
+(k_BT_c)^2/(\beta^2\gamma^2m_ec^2)\)</span>. <a
+href="24-beam-cooling.html#4-the-cooling-time-and-why-the-electrons-are-colder-than-their-cathode">Section
+4</a>.</li>
+<li><strong>Magnetised force (Parkhomchuk, quoted).</strong> <span
+class="math inline">\(\mathbf{F} =
+-\dfrac{4Z^2e^4n_{e,r}}{(4\pi\varepsilon_0)^2m_e}\dfrac{\mathbf{v}}{(v^2
++ v_{\text{eff}}^2)^{3/2}}\ln\dfrac{b_{\max} + b_{\min} + r_L}{b_{\min}
++ r_L}\)</span>. <a
+href="24-beam-cooling.html#5-magnetised-cooling">Section 5</a>.</li>
+<li><strong>Space-charge potential of the electron beam.</strong> <span
+class="math inline">\(\Delta V = I/(4\pi\varepsilon_0\beta c) = (30\
+\Omega)I/\beta\)</span>. <a
+href="24-beam-cooling.html#6-the-cooler-itself">Section 6</a>.</li>
+<li><strong>Stochastic cooling.</strong> Samples of <span
+class="math inline">\(N_s = N/(2W_{\text{bw}}T_{\text{rev}})\)</span>;
+<span class="math inline">\(1/\tau = \dfrac{W_{\text{bw}}}{2N}[2G -
+G^2(M + U)]\)</span>, best <span
+class="math inline">\(W_{\text{bw}}/[2N(M + U)]\)</span>; mixing <span
+class="math inline">\(M \approx
+1/(2W_{\text{bw}}T_{\text{rev}}|\eta|\Delta\delta)\)</span>. <a
+href="24-beam-cooling.html#8-stochastic-cooling">Section 8</a>.</li>
+<li><strong>Schottky signal.</strong> <span
+class="math inline">\(\langle I_n^2\rangle = 2e^2f_0^2N\)</span> per
+harmonic; <span class="math inline">\(\Delta f_n/(nf_0) =
+-\eta\delta\)</span>. <strong>Stacking</strong>: <span
+class="math inline">\(\Phi = F\psi - D\,\partial\psi/\partial
+f\)</span>. <a href="24-beam-cooling.html#8-stochastic-cooling">Section
+8</a>.</li>
+<li><strong>Ionisation cooling heating term.</strong> <span
+class="math inline">\(\dfrac{d\varepsilon_n}{ds}\Big|_{\text{heat}} =
+\dfrac{\beta_\perp(13.6\ \mathrm{MeV})^2}{2\beta^3Em_\mu
+c^2X_0}\)</span>. <a href="24-beam-cooling.html#where-it-stops">Where it
+stops</a>.</li>
+</ul>
+<h4 id="chapter-25-linear-colliders"><a
+href="25-linear-colliders.html">Chapter 25. Linear colliders</a></h4>
+<p>In this chapter <span class="math inline">\(D_{x,y}\)</span> are
+disruption parameters (not dispersion) and <span
+class="math inline">\(\xi_y\)</span> is the chromaticity of the final
+focus (not a beam-beam parameter).</p>
+<ul>
+<li><strong>Ring cost.</strong> <span
+class="math inline">\(\mathcal{C}(R) = aR + bE^4/R\)</span>, <span
+class="math inline">\(R_{opt} = \sqrt{b/a}\,E^2\)</span>, <span
+class="math inline">\(\mathcal{C}_{min} = 2\sqrt{ab}\,E^2\)</span>. <a
+href="25-linear-colliders.html#1-the-cost-of-a-ring-and-the-cost-of-a-line">Section
+1</a>.</li>
+<li><strong>Single-pass luminosity.</strong> <span
+class="math inline">\(\mathcal{L} =
+\dfrac{f_{rep}n_bN^2}{4\pi\sigma_x\sigma_y}H_D =
+H_D\dfrac{P_b}{eE_{cm}}\dfrac{N}{4\pi\sigma_x\sigma_y}\)</span>. <a
+href="25-linear-colliders.html#2-luminosity-in-a-single-pass">Section
+2</a>.</li>
+<li><strong>Spot size.</strong> <span class="math inline">\(\sigma_y =
+\sqrt{\beta_y^*\varepsilon_{n,y}/\gamma}\)</span>. <a
+href="25-linear-colliders.html#3-nanometre-spots-and-flat-beams">Section
+3</a>.</li>
+<li><strong>Damping ring.</strong> <span
+class="math inline">\(\varepsilon(t) = \varepsilon_{eq} +
+(\varepsilon_{inj} - \varepsilon_{eq})e^{-2t/\tau_y}\)</span>.
+<strong>Bunch compressor</strong> (this chapter’s sign: <span
+class="math inline">\(R_{56} &gt; 0\)</span> for a chicane): <span
+class="math inline">\(z_f = (1 + h_zR_{56})z_i +
+R_{56}\delta_0\)</span>, <span class="math inline">\(\sigma_{z,f}^2 = (1
++ h_zR_{56})^2\sigma_{z,i}^2 + R_{56}^2\sigma_{\delta,0}^2\)</span>. <a
+href="25-linear-colliders.html#4-making-the-emittance-damping-rings-and-bunch-compressors">Section
+4</a>.</li>
+<li><strong>Dispersive emittance growth.</strong> <span
+class="math inline">\(\Delta\varepsilon \approx
+\frac12N_q\beta_y(\sigma_q/f)^2\sigma_\delta^2\)</span>; ATL <span
+class="math inline">\(\langle\Delta Y^2\rangle = AtL\)</span>. <a
+href="25-linear-colliders.html#5-keeping-the-emittance-the-main-linac">Section
+5</a>.</li>
+<li><strong>Final-focus chromaticity.</strong> <span
+class="math inline">\(\sigma_{eff}/\sigma^* = \sqrt{1 +
+\xi_y^2\sigma_\delta^2}\)</span>, <span class="math inline">\(\xi_y
+\approx L^*/\beta_y^*\)</span>. <a
+href="25-linear-colliders.html#6-the-final-focus">Section 6</a>.</li>
+<li><strong>Disruption.</strong> <span class="math inline">\(\Delta
+y&#39; = -\dfrac{2Nr_e}{\gamma}\dfrac{y}{\sigma_y(\sigma_x +
+\sigma_y)}\)</span>; <span class="math inline">\(D_{x,y} =
+\dfrac{2Nr_e\sigma_z}{\gamma\sigma_{x,y}(\sigma_x + \sigma_y)}\)</span>.
+<a
+href="25-linear-colliders.html#7-beam-beam-in-a-single-pass-disruption-and-pinch">Section
+7</a>.</li>
+<li><strong>Beamstrahlung.</strong> <span class="math inline">\(n_\gamma
+\approx 2.12\)</span> to <span class="math inline">\(2.14 \times \alpha
+r_eN/(\sigma_x + \sigma_y)\)</span>; <span
+class="math inline">\(\delta_B \approx 0.86\)</span> to <span
+class="math inline">\(0.91 \times r_e^3N^2\gamma/[\sigma_z(\sigma_x +
+\sigma_y)^2]\)</span>; <span class="math inline">\(\Upsilon =
+\gamma^2\bar\lambda_c/\rho\)</span>, averaged <span
+class="math inline">\(\Upsilon \approx
+\frac56Nr_e^2\gamma/[\alpha\sigma_z(\sigma_x + \sigma_y)]\)</span>; at
+fixed beamstrahlung <span class="math inline">\(\mathcal{L} \approx
+\dfrac{H_D}{8\pi\alpha
+r_e}\dfrac{P_b}{eE_{cm}}\dfrac{n_\gamma}{\sigma_y}\)</span>, or <span
+class="math inline">\(\mathcal{L} \propto
+(P_b/E_{cm})(\delta_B/\varepsilon_{n,y})^{1/2}H_D\)</span>. <a
+href="25-linear-colliders.html#8-beamstrahlung">Section 8</a>.</li>
+<li><strong>Shintake monitor.</strong> Modulation <span
+class="math inline">\(M = |\cos\theta|e^{-2k_y^2\sigma_y^2}\)</span>. <a
+href="25-linear-colliders.html#at-the-bench">At the bench</a>.</li>
+</ul>
+<h3 id="part-vi-light-new-methods-and-uses">Part VI. Light, new methods
+and uses</h3>
+<h4 id="chapter-26-free-electron-lasers-and-energy-recovery"><a
+href="26-free-electron-lasers.html">Chapter 26. Free-electron lasers and
+energy recovery</a></h4>
+<p>In this chapter <span class="math inline">\(\rho_F\)</span> is the
+Pierce parameter and <span class="math inline">\(\delta\)</span> the
+relative energy deviation.</p>
+<ul>
+<li><strong>Coherence.</strong> <span class="math inline">\(P(k) =
+N^2|b(k)|^2P_1(k)\)</span>, <span class="math inline">\(b(k) = \langle
+e^{-ikz}\rangle\)</span>. <a
+href="26-free-electron-lasers.html#1-undulator-radiation-and-coherence">Section
+1</a>.</li>
+<li><strong>Resonance.</strong> <span class="math inline">\(\lambda_r =
+\dfrac{\lambda_u}{2\gamma^2}\left(1 + \dfrac{K^2}{2}\right)\)</span>. <a
+href="26-free-electron-lasers.html#2-the-resonance-condition-one-wavelength-per-period">Section
+2</a>.</li>
+<li><strong>Pendulum equations.</strong> <span
+class="math inline">\(\theta = (k_r + k_u)s - \omega_rt +
+\phi_0\)</span>; <span class="math inline">\(d\theta/ds =
+2k_u\delta\)</span>, <span class="math inline">\(d\delta/ds =
+-\dfrac{eK[JJ]\mathcal{E}_L}{2\gamma_r^2mc^2}\sin\theta\)</span>, <span
+class="math inline">\([JJ] = J_0(\xi) - J_1(\xi)\)</span>, <span
+class="math inline">\(\xi = K^2/(4 + 2K^2)\)</span>. <a
+href="26-free-electron-lasers.html#3-the-energy-exchange-and-the-ponderomotive-phase">Section
+3</a>, <a
+href="26-free-electron-lasers.html#4-the-pendulum-and-microbunching">section
+4</a>.</li>
+<li><strong>Low gain (Madey, quoted).</strong> <span
+class="math inline">\(G(\nu) = (4\pi
+N_u\rho_F)^3(-d/d\nu)[\sin(\nu/2)/(\nu/2)]^2\)</span>, <span
+class="math inline">\(\nu = 4\pi N_u\delta_0\)</span>. <a
+href="26-free-electron-lasers.html#5-low-gain-madeys-theorem-and-the-oscillator">Section
+5</a>.</li>
+<li><strong>High gain.</strong> <span class="math inline">\(d^3b/ds^3 =
+i(2k_u\rho_F)^3b\)</span>; <span class="math inline">\(\rho_F =
+\left[\dfrac1{16}\dfrac{I}{I_A}\dfrac{K^2[JJ]^2}{\gamma_r^3\sigma_x^2k_u^2}\right]^{1/3}\)</span>;
+power gain length <span class="math inline">\(L_G =
+\lambda_u/(4\pi\sqrt3\rho_F)\)</span>. <a
+href="26-free-electron-lasers.html#6-high-gain-the-collective-instability">Section
+6</a>.</li>
+<li><strong>Saturation.</strong> <span class="math inline">\(P_{sat}
+\approx \rho_FP_b\)</span>, <span class="math inline">\(P_b =
+(E/e)I\)</span>, after about 18 to 20 gain lengths. <a
+href="26-free-electron-lasers.html#7-sase-from-noise-to-saturation">Section
+7</a>.</li>
+<li><strong>Beam requirements.</strong> <span
+class="math inline">\(\sigma_\delta \lesssim \rho_F\)</span>; <span
+class="math inline">\(\varepsilon \lesssim \lambda_r/(4\pi)\)</span>,
+<span class="math inline">\(\varepsilon_n \lesssim
+\gamma\lambda_r/(4\pi)\)</span>. <a
+href="26-free-electron-lasers.html#8-what-the-beam-must-be">Section
+8</a>.</li>
+<li><strong>Chicane</strong> (this chapter’s sign: <span
+class="math inline">\(R_{56} &lt; 0\)</span> for a chicane). <span
+class="math inline">\(z_f = z_i - R_{56}\delta\)</span>; <span
+class="math inline">\(R_{56} \approx -2\theta_B^2(\Delta L +
+\frac23L_B)\)</span>; compression <span class="math inline">\(C = 1/|1 -
+R_{56}\chi|\)</span>; chirp from off-crest RF <span
+class="math inline">\(\chi = -e\hat Vk_{RF}\cos\phi_s/E_f\)</span>. <a
+href="26-free-electron-lasers.html#9-bunch-compression">Section
+9</a>.</li>
+<li><strong>CSR and the laser heater.</strong> <span
+class="math inline">\(\langle dW/ds\rangle \approx
+-0.35\,Nr_emc^2/(\rho^{2/3}\sigma_z^{4/3})\)</span>; ripple suppression
+<span class="math inline">\(e^{-(kR_{56}\sigma_\delta)^2/2}\)</span>. <a
+href="26-free-electron-lasers.html#10-coherent-synchrotron-radiation-the-microbunching-instability-and-the-laser-heater">Section
+10</a>.</li>
+<li><strong>Harmonic bunching (HGHG).</strong> <span
+class="math inline">\(|b_{n_h}| =
+|J_{n_h}(n_h\mathcal{M}\mathcal{D})|e^{-n_h^2\mathcal{D}^2/2}\)</span>.
+<a
+href="26-free-electron-lasers.html#11-seeding-and-short-pulses">Section
+11</a>.</li>
+<li><strong>Generator power.</strong> <span class="math inline">\(P_g =
+\dfrac{\hat V^2}{4(R/Q)Q_L}\left[\left(1 + \dfrac{(R/Q)Q_LI_{net}}{\hat
+V}\right)^2 + \left(\dfrac{2Q_L\Delta
+f}{f_{RF}}\right)^2\right]\)</span>; with energy recovery, <span
+class="math inline">\(P_g = \hat V^2\Delta f/[(R/Q)f_{RF}]\)</span>. <a
+href="26-free-electron-lasers.html#12-energy-recovery">Section
+12</a>.</li>
+<li><strong>Transverse deflector resolution.</strong> <span
+class="math inline">\(\sigma_{z,res} = \dfrac{E}{eV_\perp
+k_{RF}}\sqrt{\dfrac{\varepsilon}{\beta_{y,d}}}\dfrac{1}{|\sin\Delta\psi|}\)</span>.
+<a href="26-free-electron-lasers.html#at-the-bench">At the
+bench</a>.</li>
+</ul>
+<h4 id="chapter-27-new-ways-to-accelerate"><a
+href="27-new-ways-to-accelerate.html">Chapter 27. New ways to
+accelerate</a></h4>
+<p>In this chapter <span class="math inline">\(n\)</span> is the plasma
+electron density, <span class="math inline">\(\mathcal{E}_0\)</span> the
+wave-breaking field, and <span class="math inline">\(k\)</span> the FFAG
+field index.</p>
+<ul>
+<li><strong>Plasma oscillation and wave breaking.</strong> <span
+class="math inline">\(\omega_p =
+\sqrt{ne^2/(\varepsilon_0m_e)}\)</span>; <span
+class="math inline">\(\mathcal{E}_{\max} \le \mathcal{E}_0 =
+m_ec\omega_p/e = 96.16\sqrt{n\,[\mathrm{cm^{-3}}]}\)</span> V/m. <a
+href="27-new-ways-to-accelerate.html#1-why-a-plasma-holds-a-large-field">Section
+1</a>.</li>
+<li><strong>Electron in a plane wave.</strong> <span
+class="math inline">\(\gamma - u_z = 1\)</span>, <span
+class="math inline">\(u_z = a^2/2\)</span>; ponderomotive force <span
+class="math inline">\(\mathbf{F}_p \approx -m_ec^2\nabla\langle
+a^2\rangle/2\)</span>; <span class="math inline">\(a_0 =
+0.855\lambda_0[\mu\mathrm{m}]\sqrt{I/10^{18}\
+\mathrm{W\,cm^{-2}}}\)</span>. <a
+href="27-new-ways-to-accelerate.html#2-pushing-electrons-with-light">Section
+2</a>.</li>
+<li><strong>Linear wake.</strong> <span
+class="math inline">\(d^2\mathcal{E}/d\zeta^2 + k_p^2\mathcal{E} =
+(k_p^2/e)F_p\)</span>; Gaussian pulse <span
+class="math inline">\(\mathcal{E}_{\max}/\mathcal{E}_0 =
+\frac{\sqrt{\pi/2}}{4}a_0^2k_pLe^{-k_p^2L^2/8}\)</span>, largest (<span
+class="math inline">\(0.380a_0^2\)</span>) at <span
+class="math inline">\(k_pL = 2\)</span>. <a
+href="27-new-ways-to-accelerate.html#3-the-linear-wake">Section
+3</a>.</li>
+<li><strong>Dephasing and self-focusing.</strong> <span
+class="math inline">\(L_d \approx \lambda_p^3/\lambda_0^2\)</span>;
+<span class="math inline">\(P_c \approx
+17.4\,\omega_0^2/\omega_p^2\)</span> GW. <a
+href="27-new-ways-to-accelerate.html#4-phase-velocity-dephasing-depletion-and-diffraction">Section
+4</a>.</li>
+<li><strong>Bubble.</strong> Matched beta <span
+class="math inline">\(\beta_m = \sqrt{2\gamma}/k_p\)</span>; <span
+class="math inline">\(k_pR \approx 2\sqrt{a_0}\)</span>; <span
+class="math inline">\(L_d \approx
+\frac23(\omega_0^2/\omega_p^2)R\)</span>; <span
+class="math inline">\(\Delta W \approx
+\frac23m_ec^2(\omega_0/\omega_p)^2a_0\)</span>, or <span
+class="math inline">\(\Delta W\,[\mathrm{GeV}] \approx 1.7(P/100\
+\mathrm{TW})^{1/3}(10^{18}/n\,[\mathrm{cm^{-3}}])^{2/3}(0.8/\lambda_0\,[\mu\mathrm{m}])^{4/3}\)</span>.
+<a href="27-new-ways-to-accelerate.html#5-the-bubble">Section
+5</a>.</li>
+<li><strong>Energy spread spoils emittance in a drift.</strong> <span
+class="math inline">\(\varepsilon_n^2 \approx \varepsilon_{n0}^2(1 +
+\sigma_\delta^2s^2/\beta^{*2})\)</span>. <a
+href="27-new-ways-to-accelerate.html#7-staging-emittance-and-energy-spread">Section
+7</a>.</li>
+<li><strong>Scaling FFAG.</strong> <span class="math inline">\(B =
+B_0(r/r_0)^kF(\theta)\)</span>; <span class="math inline">\(p_2/p_1 =
+(r_2/r_1)^{k+1}\)</span>. <a
+href="27-new-ways-to-accelerate.html#9-fixed-field-alternating-gradient-rings">Section
+9</a>.</li>
+<li><strong>Muon collider.</strong> <span class="math inline">\(N =
+\tau_\mu e\bar B/(2\pi m_\mu) = 297\,\bar B\,[\mathrm{T}]\)</span>;
+ionisation cooling <span
+class="math inline">\(\dfrac{d\varepsilon_n}{ds} =
+-\dfrac{\varepsilon_n}{\beta^2E}\dfrac{dE}{ds} +
+\dfrac{\beta_\perp(13.6\ \mathrm{MeV})^2}{2\beta^3Em_\mu
+c^2X_0}\)</span>, equilibrium <span
+class="math inline">\(\varepsilon_{n,eq} = \dfrac{\beta_\perp(13.6\
+\mathrm{MeV})^2}{2\beta m_\mu c^2X_0(dE/ds)}\)</span>. <a
+href="27-new-ways-to-accelerate.html#10-the-muon-collider">Section
+10</a>.</li>
+<li><strong>Induction cell.</strong> <span class="math inline">\(Vt_p =
+\Delta B\,A_c\)</span>. <a
+href="27-new-ways-to-accelerate.html#11-induction-linacs">Section
+11</a>.</li>
+</ul>
+<h4 id="chapter-28-accelerators-at-work"><a
+href="28-accelerators-at-work.html">Chapter 28. Accelerators at
+work</a></h4>
+<p>In this chapter <span class="math inline">\(\mu_a\)</span> is an
+attenuation coefficient, <span
+class="math inline">\(\mathcal{R}\)</span> a range, <span
+class="math inline">\(\mathcal{A}\)</span> an activity and <span
+class="math inline">\(D\)</span> an absorbed dose.</p>
+<ul>
+<li><strong>Duane-Hunt limit.</strong> <span
+class="math inline">\(\lambda_{min} = hc/(eV)\)</span>: 0.0124 nm at 100
+kV. <a
+href="28-accelerators-at-work.html#2-x-rays-from-an-electron-beam">Section
+2</a>.</li>
+<li><strong>Attenuation.</strong> <span class="math inline">\(I(z) =
+I_0e^{-\mu_az}\)</span>. <a
+href="28-accelerators-at-work.html#3-photons-in-tissue-attenuation-and-build-up">Section
+3</a>.</li>
+<li><strong>Range and Bragg-Kleeman.</strong> <span
+class="math inline">\(\mathcal{R}(W) =
+\int_0^WdW&#39;/S(W&#39;)\)</span>; <span
+class="math inline">\(\mathcal{R} \approx a_{BK}W^{p_{BK}}\)</span>,
+<span class="math inline">\(a_{BK} = 0.00226\)</span> cm, <span
+class="math inline">\(p_{BK} = 1.765\)</span> (50 to 250 MeV protons in
+water). <a
+href="28-accelerators-at-work.html#4-protons-and-ions-in-tissue-the-bragg-peak">Section
+4</a>.</li>
+<li><strong>Range straggling.</strong> <span
+class="math inline">\(\dfrac{d\sigma_W^2}{dx} = 4\pi
+r_e^2(m_ec^2)^2N_A\dfrac ZA\dfrac{1 - \beta^2/2}{1 - \beta^2}\)</span>
+(MeV<span class="math inline">\(^2\)</span> per g cm<span
+class="math inline">\(^{-2}\)</span>, <span
+class="math inline">\(r_e\)</span> in cm); <span
+class="math inline">\(\sigma_{\mathcal R}^2 =
+\int_0^W\dfrac{d\sigma_W^2/dx}{S(W&#39;)^3}dW&#39;\)</span>. <a
+href="28-accelerators-at-work.html#4-protons-and-ions-in-tissue-the-bragg-peak">Section
+4</a>.</li>
+<li><strong>Ion scaling and rigidity.</strong> <span
+class="math inline">\(\mathcal{R}(\beta) = (M/z^2)g(\beta)\)</span>;
+<span class="math inline">\(B\rho = \sqrt{(W + Mc^2)^2 -
+(Mc^2)^2}/(qc)\)</span>. <a
+href="28-accelerators-at-work.html#5-carbon-ions-and-the-size-of-the-gantry">Section
+5</a>.</li>
+<li><strong>Activation.</strong> <span class="math inline">\(R_p =
+(I/ze)n_t\sigma\)</span>; <span class="math inline">\(\mathcal{A}(t) =
+R_p(1 - e^{-\lambda_dt}) = Y_{sat}I(1 - e^{-\lambda_dt})\)</span>, <span
+class="math inline">\(\lambda_d = \ln2/t_{1/2}\)</span>. <a
+href="28-accelerators-at-work.html#6-making-radioactive-nuclei-with-a-beam">Section
+6</a>.</li>
+<li><strong>Parent and daughter.</strong> <span
+class="math inline">\(\mathcal{A}_2(t) = b\dfrac{\lambda_2}{\lambda_2 -
+\lambda_1}\mathcal{A}_1(0)(e^{-\lambda_1t} - e^{-\lambda_2t})\)</span>,
+peak at <span class="math inline">\(t_{max} =
+\ln(\lambda_2/\lambda_1)/(\lambda_2 - \lambda_1)\)</span>. <a
+href="28-accelerators-at-work.html#7-two-isotopes-fluorine-18-and-technetium-99m">Section
+7</a>.</li>
+<li><strong>Throughput.</strong> <span class="math inline">\(\dot m =
+\eta_uP/D\)</span>. <a
+href="28-accelerators-at-work.html#9-beams-in-industry-dose-throughput-implantation">Section
+9</a>.</li>
+<li><strong>Surface muons.</strong> <span class="math inline">\(p_\mu c
+= (m_\pi^2c^4 - m_\mu^2c^4)/(2m_\pi c^2) = 29.79\)</span> MeV. <a
+href="28-accelerators-at-work.html#10-neutrons-and-muons-by-the-megawatt">Section
+10</a>.</li>
+<li><strong>Radiocarbon age.</strong> <span
+class="math inline">\(t_{age} = -8033\ \text{years}\times\ln F\)</span>.
+<a
+href="28-accelerators-at-work.html#11-counting-atoms-accelerator-mass-spectrometry">Section
+11</a>.</li>
+</ul>
+<h3 id="part-vii-the-practice">Part VII. The practice</h3>
+<h4
+id="chapter-29-how-an-accelerator-is-researched-designed-built-commissioned-and-run"><a
+href="29-the-craft.html">Chapter 29. How an accelerator is researched,
+designed, built, commissioned and run</a></h4>
+<ul>
+<li><strong>Events and size.</strong> <span class="math inline">\(N_{ev}
+= \sigma\int\mathcal{L}\,dt\)</span>; <span class="math inline">\(C =
+2\pi p/(qBF)\)</span>, <span class="math inline">\(F\)</span> the
+fraction of the ring filled with dipoles. <a
+href="29-the-craft.html#1-from-a-physics-case-to-a-parameter-list">Section
+1</a>.</li>
+<li><strong>Cost uncertainty.</strong> <span
+class="math inline">\(\sigma_{\text{var}}^2 = \sum_i\sigma_i^2 +
+2\sum_{i&lt;j}\rho_{ij}\sigma_i\sigma_j\)</span>. <a
+href="29-the-craft.html#2-cost-scaling-and-contingency">Section
+2</a>.</li>
+<li><strong>Alignment tolerance.</strong> <span
+class="math inline">\(\sigma_{x,co} = \kappa\sigma_\Delta\)</span> with
+<span class="math inline">\(\kappa\)</span> as in chapter 18. <a
+href="29-the-craft.html#3-tolerances-survey-and-geodesy">Section
+3</a>.</li>
+<li><strong>Joints and cavities.</strong> <span class="math inline">\(P
+= I^2R\)</span>; <span class="math inline">\(P_c = \hat
+V^2/[(R/Q)Q_0]\)</span>; <span class="math inline">\(\tau_U =
+Q_L/\omega_{RF}\)</span>; <span class="math inline">\(Q_0 = (1 +
+\beta_{cp})Q_L\)</span>. <a
+href="29-the-craft.html#4-hardware-commissioning-energy-heat-and-joints">Section
+4</a>.</li>
+<li><strong>Trajectory response.</strong> <span
+class="math inline">\(x_j = \sqrt{\beta_{x,i}\beta_{x,j}}\sin(\psi_j -
+\psi_i)\theta_i\)</span> for <span class="math inline">\(j\)</span>
+after <span class="math inline">\(i\)</span>. <a
+href="29-the-craft.html#5-beam-commissioning-threading-the-first-turn">Section
+5</a>.</li>
+<li><strong>Tune resolution and chromaticity.</strong> <span
+class="math inline">\(\sigma_Q = 1/(N\sqrt{12})\)</span> from the peak
+FFT bin; <span class="math inline">\(\delta = -\frac1\eta\Delta
+f_{RF}/f_{RF}\)</span>. <a
+href="29-the-craft.html#6-measuring-tune-and-chromaticity">Section
+6</a>.</li>
+<li><strong>Integrated luminosity.</strong> <span
+class="math inline">\(\int\mathcal{L}\,dt =
+\bar{\mathcal{L}}T_{sb}\)</span>. <a
+href="29-the-craft.html#7-running-availability-and-integrated-luminosity">Section
+7</a>.</li>
+<li><strong>Shield thickness.</strong> <span class="math inline">\(d =
+\mathrm{TVL}\times\log_{10}(D/P)\)</span>. <a
+href="29-the-craft.html#8-radiation-protection">Section 8</a>.</li>
+</ul>
+<h2 id="5-symbols-that-change-meaning">5. Symbols that change
+meaning</h2>
+<p>The shared notation holds everywhere except where a chapter says
+otherwise. These are the places a reader moving between chapters is most
+likely to stumble.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Usual meaning</th>
+<th>Other meanings, and where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(K\)</span></td>
+<td>focusing function <span class="math inline">\(K_x(s)\)</span>
+(chapter 16)</td>
+<td>gun perveance <span class="math inline">\(I/V^{3/2}\)</span> (7);
+generalised perveance (22); cyclotron K-value in MeV (10); undulator
+strength (20, 26); Bethe constant (8); thin-lens strength <span
+class="math inline">\(-1/f\)</span> (8); kinematic flux factor (23);
+Townsend constant <span class="math inline">\(\ln(1 +
+1/\gamma_{se})\)</span> (4)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>normalised quadrupole strength (m<span
+class="math inline">\(^{-2}\)</span>)</td>
+<td>wavenumber (F5, 13, 14, 27); spring constant and strength of a
+central force (F3); FFAG field index (27)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(g\)</span></td>
+<td>quadrupole gradient (T/m)</td>
+<td>gap length (9); kicker gap (21)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(R_s\)</span></td>
+<td>surface resistance (13)</td>
+<td>resonator shunt resistance, circuit convention (22)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(p\)</span>, <span
+class="math inline">\(P\)</span></td>
+<td>momentum; power</td>
+<td>gas pressure <span class="math inline">\(p\)</span> (4, 6) and <span
+class="math inline">\(P\)</span> (3)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(D\)</span></td>
+<td>dispersion <span class="math inline">\(D_x\)</span></td>
+<td>disruption <span class="math inline">\(D_{x,y}\)</span> (25);
+absorbed dose (28); diffusion coefficient (24)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\xi\)</span></td>
+<td>beam-beam parameter (23)</td>
+<td>final-focus chromaticity <span class="math inline">\(\xi_y\)</span>
+(25); spiral angle (12); Bessel argument (26); displacement (7, 27)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\phi\)</span></td>
+<td>RF phase</td>
+<td>electrostatic potential (1, 6); work function <span
+class="math inline">\(\phi_w\)</span>, in volts in chapter 2 and as an
+energy in chapters 4 and 7</td>
+</tr>
+<tr>
+<td><span class="math inline">\(Q\)</span></td>
+<td>always subscripted (<span class="math inline">\(Q_x\)</span>, <span
+class="math inline">\(Q_0\)</span>, …)</td>
+<td>quality factor, unsubscripted (F3, F5); charge (F4); heat (F6); Q
+value of a reaction (F7), <span class="math inline">\(Q_{nuc}\)</span>
+in (5); <span class="math inline">\(Q_z\)</span>, <span
+class="math inline">\(Q_r\)</span> for cyclotron tunes (12); gas
+throughput (3) and bunch charge (7)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>wavelength</td>
+<td>decay rate (F1), <span class="math inline">\(\lambda_d\)</span> (F7,
+28); line charge (F4); mean free path (F6, 2, 3); line density (22, 23,
+25); damping rate (24); eigenvalue (16, 22)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varepsilon\)</span></td>
+<td>rms emittance</td>
+<td>critical photon energy <span
+class="math inline">\(\varepsilon_c\)</span> (20); central field excess
+<span class="math inline">\(\varepsilon_c\)</span> and resonance error
+<span class="math inline">\(\varepsilon\)</span> (10); stopping
+cross-section <span class="math inline">\(\varepsilon_{st}\)</span> (5);
+adiabaticity <span class="math inline">\(\varepsilon_{ad}\)</span>
+(19)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\sigma\)</span></td>
+<td>rms beam size <span class="math inline">\(\sigma_x\)</span>, <span
+class="math inline">\(\sigma_y\)</span>, <span
+class="math inline">\(\sigma_z\)</span></td>
+<td>standard deviation (F6); cross-section (F6, 1, 3, 23); surface
+charge (F4), <span class="math inline">\(\sigma_s\)</span> (6);
+conductivity (15)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mu\)</span></td>
+<td></td>
+<td>reduced mass (F3; written <span class="math inline">\(m_r\)</span>
+in 5); mass per length of a string (F5); mean (F6); <span
+class="math inline">\(\mu_0\)</span> the permeability of free space</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Gamma\)</span></td>
+<td></td>
+<td>damping rate and voltage reflection coefficient, both in F5</td>
+</tr>
+<tr>
+<td><span class="math inline">\(W\)</span></td>
+<td>kinetic energy</td>
+<td>wake functions <span class="math inline">\(W_\parallel\)</span>,
+<span class="math inline">\(W_\perp\)</span> (22); <span
+class="math inline">\(W_\phi\)</span> in eV s (19); bandwidth <span
+class="math inline">\(W_{\text{bw}}\)</span> (24)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(R_{56}\)</span></td>
+<td>path length per <span class="math inline">\(\delta\)</span></td>
+<td>positive for a chicane in chapter 25, negative in chapter 26
+(opposite sign conventions for the same physics)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\beta_\perp\)</span></td>
+<td></td>
+<td>a beta function without plane subscript (24, 27)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\beta^*\)</span></td>
+<td></td>
+<td>the beta function at the collision point or a waist, written without
+plane subscript where the planes are alike (23, 27); <span
+class="math inline">\(\beta_y^*\)</span> where they differ (23, 25)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sources">Sources</h2>
+<p>All numerical values in sections 1 to 3 were computed with Python
+from the CODATA 2018 table distributed with SciPy
+(<code>scipy.constants._codata</code>, table <code>txt2018</code>),
+which reproduces E. Tiesinga, P. J. Mohr, D. B. Newell and B. N. Taylor,
+<em>CODATA recommended values of the fundamental physical constants:
+2018</em>, Reviews of Modern Physics 93, 025010 (2021). The muon
+lifetime is the Particle Data Group value as given in <a
+href="27-new-ways-to-accelerate.html#10-the-muon-collider">chapter
+27</a>. The formulas of sections 0 and 4 are those of the Foundations
+chapters and the chapters, each of which lists its own sources.</p>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="29-the-craft.html"><span>Previous</span>29 How an accelerator is researched, designed, built, commissioned and run</a>
+<a class="next" href="B-timeline.html"><span>Next</span>Appendix B: a timeline</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

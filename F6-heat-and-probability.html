@@ -1,0 +1,2267 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F6 Heat, gases and
+probability · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Part 0, Foundations</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#f6-heat-gases-and-probability"
+id="toc-f6-heat-gases-and-probability">F6 Heat, gases and
+probability</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-problem-it-solved" id="toc-the-problem-it-solved">The
+problem it solved</a>
+<ul>
+<li><a href="#dice-and-the-bell-curve"
+id="toc-dice-and-the-bell-curve">Dice, and the bell curve</a></li>
+<li><a href="#rare-events" id="toc-rare-events">Rare events</a></li>
+<li><a href="#heat-is-motion" id="toc-heat-is-motion">Heat is
+motion</a></li>
+<li><a href="#molecules" id="toc-molecules">Molecules</a></li>
+</ul></li>
+<li><a href="#the-physics" id="toc-the-physics">The physics</a>
+<ul>
+<li><a href="#0-what-this-chapter-assumes-and-a-quick-check"
+id="toc-0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</a></li>
+<li><a href="#1-chance-outcomes-and-probability"
+id="toc-1-chance-outcomes-and-probability">1. Chance: outcomes and
+probability</a></li>
+<li><a href="#2-counting-ways-the-binomial-distribution"
+id="toc-2-counting-ways-the-binomial-distribution">2. Counting ways: the
+binomial distribution</a></li>
+<li><a href="#3-random-variables-mean-variance-and-standard-deviation"
+id="toc-3-random-variables-mean-variance-and-standard-deviation">3.
+Random variables: mean, variance and standard deviation</a></li>
+<li><a href="#4-continuous-distributions-probability-density"
+id="toc-4-continuous-distributions-probability-density">4. Continuous
+distributions: probability density</a></li>
+<li><a href="#5-the-gaussian-distribution"
+id="toc-5-the-gaussian-distribution">5. The Gaussian
+distribution</a></li>
+<li><a href="#6-counting-random-events-the-poisson-distribution"
+id="toc-6-counting-random-events-the-poisson-distribution">6. Counting
+random events: the Poisson distribution</a></li>
+<li><a
+href="#7-why-the-bell-curve-is-everywhere-the-central-limit-theorem"
+id="toc-7-why-the-bell-curve-is-everywhere-the-central-limit-theorem">7.
+Why the bell curve is everywhere: the central limit theorem</a></li>
+<li><a href="#8-measurements-and-their-errors"
+id="toc-8-measurements-and-their-errors">8. Measurements and their
+errors</a></li>
+<li><a href="#9-temperature-heat-and-internal-energy"
+id="toc-9-temperature-heat-and-internal-energy">9. Temperature, heat and
+internal energy</a></li>
+<li><a href="#10-the-ideal-gas" id="toc-10-the-ideal-gas">10. The ideal
+gas</a></li>
+<li><a href="#11-kinetic-theory-pressure-from-molecular-impacts"
+id="toc-11-kinetic-theory-pressure-from-molecular-impacts">11. Kinetic
+theory: pressure from molecular impacts</a></li>
+<li><a href="#12-the-energy-scale-k_bt-in-electronvolts"
+id="toc-12-the-energy-scale-k_bt-in-electronvolts">12. The energy scale:
+<span class="math inline">\(k_BT\)</span> in electronvolts</a></li>
+<li><a href="#13-the-boltzmann-factor-and-the-speeds-of-molecules"
+id="toc-13-the-boltzmann-factor-and-the-speeds-of-molecules">13. The
+Boltzmann factor and the speeds of molecules</a></li>
+<li><a
+href="#14-molecules-on-the-move-wall-collisions-and-the-mean-free-path"
+id="toc-14-molecules-on-the-move-wall-collisions-and-the-mean-free-path">14.
+Molecules on the move: wall collisions and the mean free path</a></li>
+<li><a href="#15-heat-capacity" id="toc-15-heat-capacity">15. Heat
+capacity</a></li>
+<li><a href="#16-entropy-and-the-second-law"
+id="toc-16-entropy-and-the-second-law">16. Entropy and the second
+law</a></li>
+</ul></li>
+<li><a href="#where-the-course-uses-it"
+id="toc-where-the-course-uses-it">Where the course uses it</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="f6-heat-gases-and-probability">F6 Heat, gases and
+probability</h1>
+<p><em>1654 to 1877: Pascal and Fermat’s dice, the bell curve of de
+Moivre, Laplace and Gauss, Poisson’s rare events; Joule’s heat as
+energy, Clausius’s entropy, and the molecules of Maxwell and Boltzmann.
+The mathematics of chance and the physics of hot and cold, which turn
+out to be one subject. The course needs both for the gas in a vacuum
+chamber, the electrons boiled off a cathode, the spread of particles in
+a beam, the scatter of every measurement, and the price of
+cold.</em></p>
+<blockquote>
+<p><strong>What this chapter assumes.</strong> High-school mathematics
+and physics, <a href="F1-calculus.html">F1 Calculus</a> (derivatives,
+integrals, the exponential, integration by parts, exponential decay) and
+<a href="F2-vectors.html">F2 Vectors and vector calculus</a> (integrals
+over areas in polar coordinates, section 13). From <a
+href="F3-mechanics.html">F3 Newtonian mechanics</a> it uses only
+momentum <span class="math inline">\(mv\)</span> and Newton’s second law
+in the form force = rate of change of momentum, which high-school
+physics already gives.</p>
+<p><strong>What comes next.</strong> Chapter 1’s pre-requisites on <a
+href="01-why-accelerate.html#pre-requisite-counting-statistics-poisson">counting
+statistics (Poisson)</a> and <a
+href="01-why-accelerate.html#pre-requisite-errors-and-their-propagation">errors
+and their propagation</a>, chapter 2’s on the <a
+href="02-the-cathode-ray-tube.html#pre-requisite-maxwell-boltzmann-distribution">Maxwell-Boltzmann
+distribution</a> and <a
+href="02-the-cathode-ray-tube.html#pre-requisite-mean-free-path-and-collision-rates">mean
+free path and collision rates</a>, and all of <a
+href="03-vacuum.html">chapter 3</a> take each section here further. <a
+href="F7-atoms-and-quanta.html">F7 Atoms, nuclei and quanta</a> explains
+why heat capacities fall at low temperature.</p>
+</blockquote>
+<p>A note on symbols. Sections 1 to 8 are about chance, sections 9 to 16
+about gases, and a few letters change meaning between them, as they do
+between the books on each. In sections 1 to 8, <span
+class="math inline">\(p\)</span> is a probability, <span
+class="math inline">\(n\)</span> a number of trials and <span
+class="math inline">\(P(\ldots)\)</span> “the probability of”. From
+section 9 on, <span class="math inline">\(p\)</span> is a pressure in
+pascals and <span class="math inline">\(n\)</span> a number density in
+m<span class="math inline">\(^{-3}\)</span>. <span
+class="math inline">\(\sigma\)</span> is a standard deviation everywhere
+except in section 14, where it is also a collision cross-section, as in
+chapter 3. <span class="math inline">\(Q\)</span> is a quantity of heat
+in joules. The course keeps <span class="math inline">\(W\)</span> for
+kinetic energy, so work is written <span
+class="math inline">\(W_{by}\)</span> (done by a gas) or <span
+class="math inline">\(W_{el}\)</span> (electrical work fed to a
+refrigerator). <span class="math inline">\(T\)</span> is always a
+temperature in kelvin.</p>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The problem.</strong> A litre of air holds <span
+class="math inline">\(2.5 \times 10^{22}\)</span> molecules, each moving
+at hundreds of metres per second and changing direction billions of
+times a second. Newton’s laws apply to every one of them, but nobody can
+follow them all, and nobody needs to: a pressure gauge reads one steady
+number. In the same way, a radioactive source sends out alphas at random
+moments, a cathode emits electrons at random, and a beam holds <span
+class="math inline">\(10^{10}\)</span> particles each a little off the
+ideal path. A measurement repeated gives a slightly different answer
+each time. Physics needs a way to say exact things about quantities that
+are random in detail.</p>
+<p><strong>The idea.</strong> Give up predicting one molecule, one decay
+or one reading, and predict averages and spreads instead. Probability
+supplies the rules: how chances combine, what the mean and the standard
+deviation of a random quantity are, and three shapes of distribution
+that keep appearing, the Gaussian (the bell curve), the Poisson (counts
+of rare events) and the exponential (waiting times and free paths). The
+central limit theorem says why the Gaussian is everywhere: anything that
+is the sum of many small independent random pushes ends up Gaussian.
+Applied to a gas, the same rules turn molecular chaos into the ideal gas
+law <span class="math inline">\(p = nk_BT\)</span>, show that
+temperature measures the average kinetic energy of the molecules, and
+give the Boltzmann factor <span
+class="math inline">\(e^{-E/k_BT}\)</span>, which says how rarely a
+molecule or an electron has an energy <span
+class="math inline">\(E\)</span> far above <span
+class="math inline">\(k_BT\)</span>. Heat is energy passed on by those
+random motions; entropy counts how spread out it is, and the second law
+says it never spontaneously gathers again. That law sets the price of
+cold.</p>
+<p><strong>Equations to remember.</strong></p>
+<ul>
+<li>Independent events: <span class="math inline">\(P(A \text{ and } B)
+= P(A)\,P(B)\)</span>. Exclusive events: <span class="math inline">\(P(A
+\text{ or } B) = P(A) + P(B)\)</span>.</li>
+<li>Binomial: the probability of <span class="math inline">\(k\)</span>
+successes in <span class="math inline">\(n\)</span> independent trials,
+each with probability <span class="math inline">\(p\)</span>, is <span
+class="math inline">\(P(k) = \dbinom{n}{k}p^k(1-p)^{n-k}\)</span>, with
+mean <span class="math inline">\(np\)</span> and variance <span
+class="math inline">\(np(1-p)\)</span>.</li>
+<li>Mean <span class="math inline">\(\mu = \langle x\rangle\)</span>,
+variance <span class="math inline">\(\sigma^2 = \langle(x -
+\mu)^2\rangle = \langle x^2\rangle - \mu^2\)</span>, standard deviation
+<span class="math inline">\(\sigma\)</span> (same units as <span
+class="math inline">\(x\)</span>).</li>
+<li>Gaussian: <span class="math inline">\(f(x) =
+\dfrac{1}{\sigma\sqrt{2\pi}}\,e^{-(x-\mu)^2/2\sigma^2}\)</span>; 68.3,
+95.4 and 99.73 per cent within <span
+class="math inline">\(1\sigma\)</span>, <span
+class="math inline">\(2\sigma\)</span>, <span
+class="math inline">\(3\sigma\)</span>; full width at half maximum <span
+class="math inline">\(= 2.355\,\sigma\)</span>. From <span
+class="math inline">\(\displaystyle\int_{-\infty}^{\infty}e^{-x^2}dx =
+\sqrt\pi\)</span>.</li>
+<li>Poisson: <span class="math inline">\(P(N) = \dfrac{\mu^N
+e^{-\mu}}{N!}\)</span>, mean <span class="math inline">\(\mu\)</span>,
+standard deviation <span class="math inline">\(\sqrt\mu\)</span>. A
+count of <span class="math inline">\(N\)</span> is uncertain by about
+<span class="math inline">\(\sqrt N\)</span>.</li>
+<li>Errors: independent errors add in quadrature, <span
+class="math inline">\(\sigma_{x+y} = \sqrt{\sigma_x^2 +
+\sigma_y^2}\)</span>; the mean of <span class="math inline">\(N\)</span>
+readings has error <span class="math inline">\(\sigma/\sqrt
+N\)</span>.</li>
+<li>Ideal gas: <span class="math inline">\(pV = Nk_BT = \nu RT\)</span>,
+or <span class="math inline">\(p = nk_BT\)</span>; <span
+class="math inline">\(p\)</span> in Pa, <span
+class="math inline">\(V\)</span> in m<span
+class="math inline">\(^3\)</span>, <span
+class="math inline">\(N\)</span> molecules, <span
+class="math inline">\(\nu\)</span> moles, <span class="math inline">\(n
+= N/V\)</span> in m<span class="math inline">\(^{-3}\)</span>, <span
+class="math inline">\(T\)</span> in K, <span class="math inline">\(k_B =
+1.380649 \times 10^{-23}\)</span> J/K, <span class="math inline">\(R =
+N_Ak_B = 8.314\)</span> J/(mol K).</li>
+<li>Kinetic theory: <span class="math inline">\(p = \tfrac13 nm\langle
+v^2\rangle\)</span>, so <span class="math inline">\(\langle\tfrac12
+mv^2\rangle = \tfrac32 k_BT\)</span>; <span
+class="math inline">\(v_{rms} = \sqrt{3k_BT/m}\)</span>; mean speed
+<span class="math inline">\(\bar v = \sqrt{8k_BT/\pi m}\)</span>; each
+quadratic term in the energy holds <span class="math inline">\(\tfrac12
+k_BT\)</span> on average.</li>
+<li>Boltzmann factor: the probability of a state of energy <span
+class="math inline">\(E\)</span> goes as <span
+class="math inline">\(e^{-E/k_BT}\)</span>.</li>
+<li>Wall collision rate: <span class="math inline">\(\Phi = \tfrac14
+n\bar v\)</span> per m<span class="math inline">\(^2\)</span> per
+second. Mean free path: <span class="math inline">\(\lambda =
+1/(\sqrt2\,n\sigma)\)</span>, with <span class="math inline">\(\sigma =
+\pi d^2\)</span> for molecules of diameter <span
+class="math inline">\(d\)</span>.</li>
+<li>First law: <span class="math inline">\(\Delta U = Q -
+W_{by}\)</span>. Second law: entropy <span
+class="math inline">\(S\)</span> never falls in an isolated system; heat
+<span class="math inline">\(Q\)</span> entering at temperature <span
+class="math inline">\(T\)</span> brings entropy <span
+class="math inline">\(Q/T\)</span>. Least work to pump heat <span
+class="math inline">\(Q\)</span> from <span
+class="math inline">\(T\)</span> to room temperature <span
+class="math inline">\(T_a\)</span>: <span class="math inline">\(W_{el} =
+Q\,(T_a - T)/T\)</span>.</li>
+</ul>
+<p><strong>Numbers worth knowing.</strong></p>
+<ul>
+<li><span class="math inline">\(k_BT = 0.02526\)</span> eV at 20 °C
+(293.15 K), 0.2154 eV at a 2500 K tungsten cathode, <span
+class="math inline">\(3.88 \times 10^{-4}\)</span> eV at 4.5 K; 1 eV
+corresponds to 11 604.5 K.</li>
+<li>At 20 °C a gas holds <span class="math inline">\(2.47 \times
+10^{25}\)</span> molecules per m<span class="math inline">\(^3\)</span>
+at <span class="math inline">\(10^5\)</span> Pa and <span
+class="math inline">\(2.47 \times 10^{14}\)</span> per m<span
+class="math inline">\(^3\)</span> at <span
+class="math inline">\(10^{-6}\)</span> Pa. A mole of it fills 24.06
+litres at atmospheric pressure.</li>
+<li>Nitrogen at 20 °C: mean speed 471 m/s, rms speed 511 m/s. Hydrogen:
+1755 m/s mean.</li>
+<li>Nitrogen at <span class="math inline">\(10^{-6}\)</span> Pa strikes
+each square metre of wall <span class="math inline">\(2.9 \times
+10^{16}\)</span> times a second, enough to cover a clean surface in
+about 6 minutes. The mean free path of air at that pressure is 6.7
+km.</li>
+<li>A Gaussian beam has 31.7 per cent of its particles more than <span
+class="math inline">\(1\sigma\)</span> from the centre in one plane, and
+0.27 per cent beyond <span class="math inline">\(3\sigma\)</span>.</li>
+<li>A count of 100 is uncertain by 10 per cent; for 1 per cent, count
+<span class="math inline">\(10^4\)</span>.</li>
+<li>At the 4.53 eV work function of tungsten, the Boltzmann factor is
+<span class="math inline">\(7.4 \times 10^{-10}\)</span> at 2500 K and
+<span class="math inline">\(10^{-78}\)</span> at room temperature.</li>
+<li>Removing 1 W at 4.5 K needs at least 65.7 W of work at 300 K; real
+plants use 235 to 280 W. One watt into liquid helium boils off about 1.4
+litres an hour.</li>
+</ul>
+<h2 id="the-problem-it-solved">The problem it solved</h2>
+<h3 id="dice-and-the-bell-curve">Dice, and the bell curve</h3>
+<p>In 1654 the Chevalier de Méré put gambling questions to Blaise
+Pascal, among them how to divide the stakes of a game broken off before
+the end. Pascal’s letters with Pierre de Fermat on these questions began
+the mathematics of chance: count the equally likely cases, and the
+probability is the fraction that win. Jacob Bernoulli’s <em>Ars
+Conjectandi</em>, published in 1713 after his death, proved the first
+law of large numbers: over many trials, the fraction of successes
+settles on the probability. Abraham de Moivre showed in 1733 that the
+binomial distribution of many coin tosses approaches a smooth
+bell-shaped curve. Pierre-Simon Laplace generalised this around 1810 to
+sums of almost any small random quantities, the first form of the
+central limit theorem, and set out the whole subject in his <em>Théorie
+analytique des probabilités</em> (1812). Meanwhile Carl Friedrich Gauss,
+in his <em>Theoria motus</em> of 1809 on the orbits of planets, took the
+same curve as the law of errors of measurement and from it justified the
+method of least squares. Physicists still call the curve “Gaussian”;
+statisticians call it “normal”.</p>
+<h3 id="rare-events">Rare events</h3>
+<p>Siméon Denis Poisson, in a book of 1837 on the probability of
+judgements in courts, worked out the limit of the binomial distribution
+when there are very many chances, each very small: the Poisson
+distribution. It waited seventy years for its most famous physical test.
+In 1910 Ernest Rutherford and Hans Geiger counted the scintillations of
+alpha particles from a source on a screen in 2608 intervals of 7.5
+seconds, 10 097 alphas in all, and the mathematician Harry Bateman
+showed that the numbers of intervals with 0, 1, 2, … alphas followed
+Poisson’s law. Radioactive decay was random, event by event.</p>
+<h3 id="heat-is-motion">Heat is motion</h3>
+<p>Around 1800 most chemists thought of heat as a fluid,
+<em>caloric</em>, that flowed from hot bodies to cold. Count Rumford in
+1798 noticed that boring a cannon made heat without limit, which a
+conserved fluid could not do. Sadi Carnot in 1824, still thinking in
+terms of caloric, asked how much work a heat engine could give, and
+found that the answer depends only on the temperatures between which it
+works. Between 1840 and 1850 James Prescott Joule measured the heat made
+by falling weights turning a paddle wheel in water, by electric currents
+and by compressing gas, and found always the same exchange rate: heat is
+energy. Julius Robert Mayer (1842) and Hermann von Helmholtz (1847)
+stated the conservation of energy in general. Rudolf Clausius (1850) and
+William Thomson, later Lord Kelvin (1851), reconciled Carnot with Joule
+and stated the second law; Thomson had already proposed in 1848 a
+temperature scale with an absolute zero. Clausius named entropy in
+1865.</p>
+<h3 id="molecules">Molecules</h3>
+<p>Robert Boyle found in 1662 that squeezing air raises its pressure in
+proportion. Daniel Bernoulli in his <em>Hydrodynamica</em> of 1738
+explained this as the impacts of many particles on the walls, an idea
+ignored for a century. Clausius revived it in 1857, and in 1858,
+answering the objection that fast molecules should make smells cross a
+room at once, introduced the mean free path. James Clerk Maxwell found
+the distribution of molecular speeds in 1860. Ludwig Boltzmann
+generalised it from 1868 to the factor <span
+class="math inline">\(e^{-E/k_BT}\)</span>, and in 1877 connected
+entropy with the number of ways a state can be made, which turned the
+second law into a statement of probability. The constant <span
+class="math inline">\(k_B\)</span> is named after him. Since 2019 the
+kelvin itself is defined by fixing <span
+class="math inline">\(k_B\)</span> at exactly <span
+class="math inline">\(1.380649 \times 10^{-23}\)</span> J/K.</p>
+<h2 id="the-physics">The physics</h2>
+<h3 id="0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</h3>
+<ul>
+<li><strong>Fractions and powers.</strong> <span
+class="math inline">\((5/6)^4\)</span>, <span
+class="math inline">\(0.95^{20}\)</span>, <span
+class="math inline">\(2^{-10}\)</span>; factorials <span
+class="math inline">\(n! = 1 \times 2 \times \cdots \times n\)</span>,
+with <span class="math inline">\(0! = 1\)</span>.</li>
+<li><strong>The exponential and logarithm</strong> (F1, section 4), and
+the limit <span class="math inline">\((1 - x/n)^n \to e^{-x}\)</span> as
+<span class="math inline">\(n\)</span> grows (F1 gives <span
+class="math inline">\((1 + 1/n)^n \to e\)</span>; the same argument
+gives this).</li>
+<li><strong>Integrals</strong> (F1, sections 6 and 7), including
+integration by parts and <span class="math inline">\(\int_0^\infty
+e^{-x/\lambda}dx = \lambda\)</span>.</li>
+<li><strong>Polar coordinates</strong> (F2, section 13): an area element
+is <span class="math inline">\(dA = r\,dr\,d\phi\)</span>.</li>
+<li><strong>Mechanics.</strong> Momentum is mass times velocity, <span
+class="math inline">\(mv\)</span>; force is the rate of change of
+momentum; kinetic energy is <span class="math inline">\(\tfrac12
+mv^2\)</span>; pressure is force per unit area, in pascals (1 Pa = 1
+N/m<span class="math inline">\(^2\)</span>).</li>
+</ul>
+<p><strong>Check yourself.</strong> (a) Evaluate <span
+class="math inline">\(1 - (5/6)^4\)</span>. (b) What is <span
+class="math inline">\(5!/(2!\,3!)\)</span>? (c) Evaluate <span
+class="math inline">\(\int_0^\infty x e^{-x}\,dx\)</span>. (d) A force
+of 10 N acts on 2 cm<span class="math inline">\(^2\)</span>; what is the
+pressure? Answers: (a) 0.5177; (b) 10; (c) 1 (F1, section 7); (d) <span
+class="math inline">\(5 \times 10^4\)</span> Pa. If any of these is
+unclear, revise it first.</p>
+<h3 id="1-chance-outcomes-and-probability">1. Chance: outcomes and
+probability</h3>
+<p><strong>The picture.</strong> Throw a die. Nothing in high-school
+physics forbids predicting the result from the throw, but the result
+depends on details far too fine to control. What <em>can</em> be said is
+that in a long run of throws each face comes up about one time in six.
+Probability is the language for that kind of statement.</p>
+<p><strong>Definitions.</strong> A trial (a throw, a decay, a molecule
+hitting a wall) has a set of possible <em>outcomes</em>. An
+<em>event</em> is a set of outcomes: “the die shows a six”, or “shows an
+even number”. The <em>probability</em> <span
+class="math inline">\(P(A)\)</span> of an event <span
+class="math inline">\(A\)</span> is the fraction of a very long run of
+trials in which <span class="math inline">\(A\)</span> happens. It lies
+between 0 (never) and 1 (always). When the outcomes are equally likely,
+as for a fair die, it is the number of outcomes in <span
+class="math inline">\(A\)</span> divided by the number of outcomes:
+<span class="math inline">\(P(\text{six}) = 1/6\)</span>, <span
+class="math inline">\(P(\text{even}) = 3/6 = 1/2\)</span>.</p>
+<p><strong>Three rules.</strong></p>
+<ul>
+<li><em>Not.</em> Either <span class="math inline">\(A\)</span> happens
+or it does not, so <span class="math inline">\(P(\text{not } A) = 1 -
+P(A)\)</span>.</li>
+<li><em>Or, for exclusive events.</em> If <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> cannot both happen (a six and a five on
+the same die), then <span class="math inline">\(P(A \text{ or } B) =
+P(A) + P(B)\)</span>.</li>
+<li><em>And, for independent events.</em> <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> are <em>independent</em> if knowing
+that one happened does not change the chance of the other: two different
+dice, or two different atoms decaying. Then <span
+class="math inline">\(P(A \text{ and } B) = P(A)\,P(B)\)</span>. In a
+long run, <span class="math inline">\(A\)</span> happens in a fraction
+<span class="math inline">\(P(A)\)</span> of trials, and of those, <span
+class="math inline">\(B\)</span> happens in a fraction <span
+class="math inline">\(P(B)\)</span>.</li>
+</ul>
+<p><strong>Example: de Méré’s bet.</strong> What is the chance of at
+least one six in four throws of a die? “At least one” is easiest through
+its opposite. The chance of no six in one throw is <span
+class="math inline">\(5/6\)</span>; the four throws are independent, so
+the chance of no six in four is <span class="math inline">\((5/6)^4 =
+0.4823\)</span>, and the chance of at least one six is <span
+class="math inline">\(1 - 0.4823 = 0.5177\)</span>, a little better than
+even. The same reasoning for at least one double six in 24 throws of two
+dice gives <span class="math inline">\(1 - (35/36)^{24} =
+0.4914\)</span>, a little worse. De Méré had noticed, from losing money,
+that the second bet was not as good as the first.</p>
+<p><strong>Example: a detector in layers.</strong> A particle detector
+has three layers, each of which fires for a passing particle with
+probability 0.95, independently. A track is recognised only if all three
+fire: probability <span class="math inline">\(0.95^3 = 0.857\)</span>.
+One particle in seven is missed, though each layer misses only one in
+twenty. Chances multiply, and losses compound.</p>
+<p><strong>Where independence fails.</strong> The “and” rule needs
+independence. Two readings of the same gauge taken a second apart are
+not independent if the gauge drifts; the molecules in a liquid are not
+independent because they push on one another. Assuming independence when
+it does not hold is one of the commonest mistakes in physics (section 8
+returns to it).</p>
+<h3 id="2-counting-ways-the-binomial-distribution">2. Counting ways: the
+binomial distribution</h3>
+<p><strong>The question.</strong> Twenty electrons cross a short gap of
+gas, and each, independently, has a probability <span
+class="math inline">\(p = 0.05\)</span> of hitting a molecule. What is
+the chance that exactly <span class="math inline">\(k\)</span> of them
+hit?</p>
+<p><strong>Counting.</strong> Take <span class="math inline">\(k =
+2\)</span>. One way is for electrons 1 and 2 to hit and the other 18
+not: probability <span class="math inline">\(p^2(1-p)^{18}\)</span>, by
+the “and” rule. Any other choice of which two hit has the same
+probability. These choices are exclusive, so the “or” rule adds them:
+the answer is <span class="math inline">\(p^2(1-p)^{18}\)</span> times
+the number of ways of choosing 2 electrons from 20.</p>
+<p><strong>The number of ways.</strong> Choosing <span
+class="math inline">\(k\)</span> things from <span
+class="math inline">\(n\)</span> in order can be done in <span
+class="math inline">\(n(n-1)\cdots(n-k+1)\)</span> ways (<span
+class="math inline">\(n\)</span> choices for the first, <span
+class="math inline">\(n - 1\)</span> for the second, and so on). Each
+set of <span class="math inline">\(k\)</span> is counted <span
+class="math inline">\(k!\)</span> times, once for each order. So the
+number of distinct sets is</p>
+<p><span class="math display">\[
+\binom{n}{k} = \frac{n(n-1)\cdots(n-k+1)}{k!} = \frac{n!}{k!\,(n-k)!},
+\]</span></p>
+<p>read “<span class="math inline">\(n\)</span> choose <span
+class="math inline">\(k\)</span>”. For example <span
+class="math inline">\(\binom{20}{2} = 190\)</span> and <span
+class="math inline">\(\binom{10}{5} = 252\)</span>. These are the
+coefficients of the binomial theorem of high school, <span
+class="math inline">\((a + b)^n = \sum_k
+\binom{n}{k}a^kb^{n-k}\)</span>, hence the name.</p>
+<p><strong>The binomial distribution.</strong> The probability of
+exactly <span class="math inline">\(k\)</span> successes in <span
+class="math inline">\(n\)</span> independent trials, each with
+probability <span class="math inline">\(p\)</span>, is</p>
+<p><span class="math display">\[
+P(k) = \binom{n}{k}p^k(1 - p)^{n-k}, \qquad k = 0, 1, \ldots, n .
+\]</span></p>
+<p>By the binomial theorem with <span class="math inline">\(a =
+p\)</span> and <span class="math inline">\(b = 1 - p\)</span>, the
+probabilities add to <span class="math inline">\((p + 1 - p)^n =
+1\)</span>, as they must: something happens.</p>
+<p><strong>The electrons.</strong> With <span class="math inline">\(n =
+20\)</span> and <span class="math inline">\(p = 0.05\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(k\)</span></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P(k)\)</span></td>
+<td>0.3585</td>
+<td>0.3774</td>
+<td>0.1887</td>
+<td>0.0596</td>
+<td>0.0133</td>
+</tr>
+</tbody>
+</table>
+<p>On average one electron in twenty hits (section 3 proves the mean is
+<span class="math inline">\(np = 1\)</span>), but in more than a third
+of crossings none does, and in a quarter (0.264) two or more do. An
+average says little about any one trial.</p>
+<p><strong>Ten coins.</strong> With <span class="math inline">\(n =
+10\)</span> and <span class="math inline">\(p = \tfrac12\)</span>, the
+chance of exactly five heads is <span class="math inline">\(252/2^{10} =
+0.246\)</span>. The most likely result happens less than a quarter of
+the time. As <span class="math inline">\(n\)</span> grows, the chance of
+<em>exactly</em> half falls, but the <em>fraction</em> of heads gathers
+ever more tightly round one half: Bernoulli’s law of large numbers, made
+precise in section 3.</p>
+<h3 id="3-random-variables-mean-variance-and-standard-deviation">3.
+Random variables: mean, variance and standard deviation</h3>
+<p><strong>Random variables.</strong> A <em>random variable</em> is a
+number that comes out of a trial: the face of a die, the number of
+electrons that hit, the reading of a gauge. Its <em>distribution</em>
+gives the probability <span class="math inline">\(P(x)\)</span> of each
+value <span class="math inline">\(x\)</span>. Two numbers summarise a
+distribution: where it is centred and how wide it is.</p>
+<p><strong>The mean.</strong> The <em>mean</em>, <em>expectation</em> or
+<em>average</em> is</p>
+<p><span class="math display">\[
+\mu = \langle x\rangle = \sum_x x\,P(x) .
+\]</span></p>
+<p>The angle brackets mean “average over the distribution”, the
+convention used in the course’s pre-requisites. In a long run of <span
+class="math inline">\(N\)</span> trials, the value <span
+class="math inline">\(x\)</span> turns up about <span
+class="math inline">\(NP(x)\)</span> times, so the ordinary average of
+the results tends to <span class="math inline">\(\langle
+x\rangle\)</span>. For a die, <span class="math inline">\(\langle
+x\rangle = (1 + 2 + \cdots + 6)/6 = 3.5\)</span>, which is never thrown:
+a mean need not be a possible value.</p>
+<p><strong>The variance and standard deviation.</strong> How far do
+values typically fall from the mean? The average of <span
+class="math inline">\(x - \mu\)</span> is zero (the positive and
+negative deviations cancel), so average its square instead. The
+<em>variance</em> is</p>
+<p><span class="math display">\[
+\sigma^2 = \big\langle(x - \mu)^2\big\rangle = \langle x^2\rangle -
+\mu^2,
+\]</span></p>
+<p>the second form following from expanding the square: <span
+class="math inline">\(\langle x^2 - 2\mu x + \mu^2\rangle = \langle
+x^2\rangle - 2\mu^2 + \mu^2\)</span>. Its square root <span
+class="math inline">\(\sigma\)</span>, the <em>standard deviation</em>,
+has the units of <span class="math inline">\(x\)</span> and is the
+typical size of a deviation. It is also called the <em>rms</em> (root
+mean square) deviation. For a die, <span class="math inline">\(\langle
+x^2\rangle = 91/6\)</span>, so <span class="math inline">\(\sigma^2 =
+91/6 - 3.5^2 = 35/12 = 2.917\)</span> and <span
+class="math inline">\(\sigma = 1.708\)</span>.</p>
+<p><strong>Rules for sums.</strong> For any two random variables, the
+mean of a sum is the sum of the means: <span
+class="math inline">\(\langle x + y\rangle = \langle x\rangle + \langle
+y\rangle\)</span>. For <em>independent</em> ones, the variances also
+add:</p>
+<p><span class="math display">\[
+\sigma_{x+y}^2 = \big\langle(\delta x + \delta y)^2\big\rangle =
+\langle\delta x^2\rangle + 2\langle\delta x\,\delta y\rangle +
+\langle\delta y^2\rangle = \sigma_x^2 + \sigma_y^2,
+\]</span></p>
+<p>where <span class="math inline">\(\delta x = x - \mu_x\)</span> and
+<span class="math inline">\(\delta y = y - \mu_y\)</span> are the
+deviations. The middle term vanishes because, for independent variables,
+a positive <span class="math inline">\(\delta x\)</span> is as likely to
+come with a negative <span class="math inline">\(\delta y\)</span> as
+with a positive one, so <span class="math inline">\(\langle\delta
+x\,\delta y\rangle = \langle\delta x\rangle\langle\delta y\rangle =
+0\)</span>. Standard deviations do not add; their squares do. Also,
+multiplying a variable by a constant <span
+class="math inline">\(a\)</span> multiplies its mean by <span
+class="math inline">\(a\)</span> and its variance by <span
+class="math inline">\(a^2\)</span>.</p>
+<p><strong>The binomial’s mean and variance.</strong> A binomial count
+is the sum of <span class="math inline">\(n\)</span> independent trials,
+each scoring 1 with probability <span class="math inline">\(p\)</span>
+and 0 otherwise. One trial has mean <span
+class="math inline">\(p\)</span> and <span class="math inline">\(\langle
+x^2\rangle = p\)</span>, so variance <span class="math inline">\(p - p^2
+= p(1-p)\)</span>. Adding <span class="math inline">\(n\)</span> of
+them,</p>
+<p><span class="math display">\[
+\langle k\rangle = np, \qquad \sigma_k^2 = np(1 - p) .
+\]</span></p>
+<p>For the twenty electrons, <span class="math inline">\(\langle
+k\rangle = 1\)</span> and <span class="math inline">\(\sigma_k =
+\sqrt{0.95} = 0.975\)</span>.</p>
+<p><strong>The law of large numbers.</strong> The <em>fraction</em> of
+successes <span class="math inline">\(k/n\)</span> has mean <span
+class="math inline">\(p\)</span> and standard deviation <span
+class="math inline">\(\sqrt{p(1-p)/n}\)</span>. It shrinks as <span
+class="math inline">\(1/\sqrt n\)</span>: a hundred times more trials
+pin the fraction down ten times more tightly. This <span
+class="math inline">\(1/\sqrt n\)</span> is everywhere in measurement,
+and section 8 meets it again.</p>
+<h3 id="4-continuous-distributions-probability-density">4. Continuous
+distributions: probability density</h3>
+<p><strong>The picture.</strong> The position of an electron leaving a
+cathode, the speed of a molecule, the distance a molecule flies before a
+collision: these take any value in a range, not a list of separate
+values. The chance of any one exact value, say a speed of exactly
+471.000… m/s, is zero. What makes sense is the chance of a value in a
+small range.</p>
+<p><strong>Probability density.</strong> A continuous random variable
+<span class="math inline">\(x\)</span> has a <em>probability
+density</em> <span class="math inline">\(f(x)\)</span>, defined so that
+the probability of a value between <span
+class="math inline">\(x\)</span> and <span class="math inline">\(x +
+dx\)</span> is <span class="math inline">\(f(x)\,dx\)</span>. Over a
+finite range,</p>
+<p><span class="math display">\[
+P(a &lt; x &lt; b) = \int_a^b f(x)\,dx,
+\]</span></p>
+<p>the area under the curve. The density has units of 1/(units of <span
+class="math inline">\(x\)</span>): a density of speeds is in s/m. It
+must be normalised, <span class="math inline">\(\int f\,dx = 1\)</span>
+over all values. Means and variances become integrals, the sums of
+section 3 with <span class="math inline">\(P(x)\)</span> replaced by
+<span class="math inline">\(f(x)\,dx\)</span>:</p>
+<p><span class="math display">\[
+\mu = \int x f(x)\,dx, \qquad \sigma^2 = \int (x - \mu)^2 f(x)\,dx .
+\]</span></p>
+<p>A <em>histogram</em> of measured values, the number of values in each
+bin divided by the total and by the bin width, approaches <span
+class="math inline">\(f(x)\)</span> as the number of values grows and
+the bins narrow.</p>
+<p><strong>The uniform distribution.</strong> Equal density over a range
+of width <span class="math inline">\(w\)</span> and zero outside: <span
+class="math inline">\(f = 1/w\)</span>. Centred on zero, the mean is 0
+and</p>
+<p><span class="math display">\[
+\sigma^2 = \int_{-w/2}^{w/2} x^2\,\frac{dx}{w} =
+\frac{1}{w}\left[\frac{x^3}{3}\right]_{-w/2}^{w/2} = \frac{w^2}{12},
+\qquad \sigma = \frac{w}{\sqrt{12}} .
+\]</span></p>
+<p><em>Example.</em> A silicon strip detector with strips 50 μm apart
+records only which strip a particle crossed. The particle could have
+been anywhere across the strip, uniformly, so the error of the position
+is <span class="math inline">\(50/\sqrt{12} = 14.4\)</span> μm, not 50
+μm and not 25 μm. Every digital reading has this error: a meter that
+shows whole millivolts has an rms rounding error of <span
+class="math inline">\(1/\sqrt{12} = 0.29\)</span> mV.</p>
+<p><strong>The exponential distribution.</strong> The waiting time to a
+radioactive decay, and the distance a molecule flies before it hits
+another, have the density</p>
+<p><span class="math display">\[
+f(x) = \frac{1}{\lambda}\,e^{-x/\lambda}, \qquad x \ge 0 .
+\]</span></p>
+<p>Why? A molecule flying through a gas has the same small chance <span
+class="math inline">\(dx/\lambda\)</span> of a collision in each step
+<span class="math inline">\(dx\)</span>, whatever it has done before
+(the gas has no memory). Of <span class="math inline">\(N\)</span>
+molecules setting out, <span class="math inline">\(dN =
+-N\,dx/\lambda\)</span> collide in <span
+class="math inline">\(dx\)</span>, which is F1’s decay equation, so the
+number still flying after <span class="math inline">\(x\)</span> is
+<span class="math inline">\(N_0e^{-x/\lambda}\)</span>. The fraction
+that stop in <span class="math inline">\(dx\)</span> at <span
+class="math inline">\(x\)</span> is <span
+class="math inline">\(e^{-x/\lambda}\,dx/\lambda\)</span>, which is
+<span class="math inline">\(f(x)\,dx\)</span>. Its mean is <span
+class="math inline">\(\int_0^\infty x e^{-x/\lambda}\,dx/\lambda =
+\lambda\)</span> (integration by parts, F1 section 7), so <span
+class="math inline">\(\lambda\)</span> is the <em>mean free path</em>;
+its standard deviation is also <span
+class="math inline">\(\lambda\)</span>. The probability of flying
+further than <span class="math inline">\(L\)</span> is <span
+class="math inline">\(e^{-L/\lambda}\)</span>.</p>
+<p><em>Example.</em> In air at 1 Pa and 20 °C the mean free path of a
+molecule is 6.65 mm (section 14). The fraction of molecules that fly
+more than 1 cm without a collision is <span
+class="math inline">\(e^{-10/6.65} = 0.22\)</span>. Chapter 2 uses the
+same law to find what fraction of a tube’s electrons cross it
+unscattered.</p>
+<h3 id="5-the-gaussian-distribution">5. The Gaussian distribution</h3>
+<p><strong>The shape.</strong> The bell curve is</p>
+<p><span class="math display">\[
+f(x) = \frac{1}{\sigma\sqrt{2\pi}}\,\exp\!\left(-\frac{(x -
+\mu)^2}{2\sigma^2}\right),
+\]</span></p>
+<p>centred on <span class="math inline">\(\mu\)</span>, falling off on
+both sides, and with <span class="math inline">\(\sigma\)</span> setting
+the width. It describes the horizontal positions of the particles in
+most beams, the velocities of molecules along one direction (chapter 2),
+and the scatter of most measurements. Section 7 says why it turns up so
+often. First, the constant in front.</p>
+<p><strong>The Gaussian integral.</strong> Normalising <span
+class="math inline">\(f\)</span> needs <span class="math inline">\(I =
+\int_{-\infty}^{\infty}e^{-x^2}\,dx\)</span>. F1 noted that <span
+class="math inline">\(e^{-x^2}\)</span> has no antiderivative made of
+ordinary functions. The trick, usually credited to Poisson, is to square
+it. Write the second copy with a different letter:</p>
+<p><span class="math display">\[
+I^2 = \int_{-\infty}^{\infty}e^{-x^2}dx\int_{-\infty}^{\infty}e^{-y^2}dy
+= \iint e^{-(x^2 + y^2)}\,dx\,dy ,
+\]</span></p>
+<p>an integral over the whole <span class="math inline">\((x,
+y)\)</span> plane. The integrand depends only on <span
+class="math inline">\(r^2 = x^2 + y^2\)</span>, the squared distance
+from the origin, so change to polar coordinates (F2, section 13), with
+<span class="math inline">\(dA = r\,dr\,d\phi\)</span>:</p>
+<p><span class="math display">\[
+I^2 = \int_0^{2\pi}\!\!\int_0^\infty e^{-r^2}\,r\,dr\,d\phi =
+2\pi\left[-\tfrac12 e^{-r^2}\right]_0^\infty = \pi .
+\]</span></p>
+<p>The extra factor <span class="math inline">\(r\)</span> from the area
+of a thin ring is exactly what makes the integral easy (substitute <span
+class="math inline">\(u = r^2\)</span>). So</p>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}e^{-x^2}\,dx = \sqrt\pi .
+\]</span></p>
+<p><strong>Normalising, and checking <span
+class="math inline">\(\sigma\)</span>.</strong> In <span
+class="math inline">\(f\)</span>, substitute <span
+class="math inline">\(x = \mu + \sqrt2\,\sigma t\)</span>, so <span
+class="math inline">\(dx = \sqrt2\,\sigma\,dt\)</span>: <span
+class="math inline">\(\int f\,dx =
+\dfrac{\sqrt2\,\sigma}{\sigma\sqrt{2\pi}}\int e^{-t^2}dt =
+\dfrac{\sqrt\pi}{\sqrt\pi} = 1\)</span>. The variance is</p>
+<p><span class="math display">\[
+\int (x - \mu)^2 f\,dx =
+\frac{2\sigma^2}{\sqrt\pi}\int_{-\infty}^{\infty}t^2e^{-t^2}\,dt =
+\frac{2\sigma^2}{\sqrt\pi}\cdot\frac{\sqrt\pi}{2} = \sigma^2,
+\]</span></p>
+<p>using integration by parts with <span class="math inline">\(u =
+t\)</span> and <span class="math inline">\(dv = te^{-t^2}dt\)</span>:
+<span class="math inline">\(\int t^2e^{-t^2}dt = \big[-\tfrac12
+te^{-t^2}\big] + \tfrac12\int e^{-t^2}dt = \tfrac12\sqrt\pi\)</span>. So
+the <span class="math inline">\(\sigma\)</span> in the formula is the
+standard deviation, as the notation promised.</p>
+<p><strong>The 68/95/99.7 rule.</strong> The fraction within <span
+class="math inline">\(k\)</span> standard deviations of the mean has no
+simple formula; it is tabulated as the <em>error function</em> (chapter
+2’s <a
+href="02-the-cathode-ray-tube.html#pre-requisite-special-functions-and-integrals-bessel-gaussian-error-function">special
+functions</a>). Three values are worth knowing by heart:</p>
+<table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Inside</th>
+<th>Outside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\mu \pm 1\sigma\)</span></td>
+<td>68.27 %</td>
+<td>31.73 %</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mu \pm 2\sigma\)</span></td>
+<td>95.45 %</td>
+<td>4.55 %</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mu \pm 3\sigma\)</span></td>
+<td>99.73 %</td>
+<td>0.27 %</td>
+</tr>
+</tbody>
+</table>
+<p>So a value 3σ away from what was expected happens by chance about 3
+times in a thousand. Physicists usually ask for 5σ before claiming a
+discovery, a chance of about 3 in 10 million on one side.</p>
+<p><strong>Full width at half maximum.</strong> The peak height is <span
+class="math inline">\(1/(\sigma\sqrt{2\pi})\)</span>. A screen or an
+oscilloscope shows a peak, and its width is easiest to read halfway up.
+The curve falls to half its peak where <span
+class="math inline">\(e^{-(x-\mu)^2/2\sigma^2} = \tfrac12\)</span>, at
+<span class="math inline">\(x - \mu = \pm\sigma\sqrt{2\ln 2}\)</span>,
+so</p>
+<p><span class="math display">\[
+\text{FWHM} = 2\sqrt{2\ln 2}\;\sigma = 2.355\,\sigma .
+\]</span></p>
+<p><em>Example: a beam on a screen.</em> A beam profile monitor shows a
+horizontal profile with a full width at half maximum of 4.7 mm. If the
+beam is Gaussian, <span class="math inline">\(\sigma_x = 4.7/2.355 =
+2.0\)</span> mm, and 0.27 per cent of the particles lie more than 6 mm
+from the centre. Accelerator physicists quote beam sizes as <span
+class="math inline">\(\sigma\)</span>; experimenters reading a screen
+often quote FWHM. Mixing them up is an error of a factor 2.355.</p>
+<p><strong>A round beam.</strong> For a beam that is Gaussian in both
+<span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> with the same <span
+class="math inline">\(\sigma\)</span>, the density in the plane is the
+product of two Gaussians, <span class="math inline">\(\propto
+e^{-r^2/2\sigma^2}\)</span>. The fraction outside a radius <span
+class="math inline">\(r\)</span> is then the integral of the squaring
+trick above, without the infinity: <span
+class="math inline">\(\int_r^\infty
+e^{-r&#39;^2/2\sigma^2}r&#39;\,dr&#39;/\sigma^2 =
+e^{-r^2/2\sigma^2}\)</span>. Outside <span
+class="math inline">\(1\sigma\)</span> lies 60.7 per cent, outside <span
+class="math inline">\(2\sigma\)</span> 13.5 per cent, outside <span
+class="math inline">\(3\sigma\)</span> 1.1 per cent: four times the
+one-plane figure, because a particle can be far out in <span
+class="math inline">\(x\)</span>, in <span
+class="math inline">\(y\)</span>, or both. A round aperture of radius
+<span class="math inline">\(3\sigma\)</span> scrapes off 1.1 per cent of
+such a beam. Chapter 7’s <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-distribution-functions-vlasov-equation-beam-temperature">beam
+temperature</a> and chapter 22 work with these beams.</p>
+<h3 id="6-counting-random-events-the-poisson-distribution">6. Counting
+random events: the Poisson distribution</h3>
+<p><strong>The question.</strong> An alpha source sends on average <span
+class="math inline">\(\mu = 3.87\)</span> alphas to a screen in each
+interval of 7.5 seconds. What is the chance of exactly <span
+class="math inline">\(N\)</span> in a given interval? The source holds
+an enormous number <span class="math inline">\(n\)</span> of atoms, each
+with a tiny chance <span class="math inline">\(p\)</span> of sending an
+alpha to the screen in the interval, with <span class="math inline">\(np
+= \mu\)</span>. The count is binomial with <span
+class="math inline">\(n\)</span> huge and <span
+class="math inline">\(p\)</span> tiny.</p>
+<p><strong>The limit.</strong> Write the binomial with <span
+class="math inline">\(p = \mu/n\)</span>:</p>
+<p><span class="math display">\[
+P(N) = \frac{n(n-1)\cdots(n - N + 1)}{N!}\,\frac{\mu^N}{n^N}\left(1 -
+\frac{\mu}{n}\right)^{n - N} .
+\]</span></p>
+<p>Now let <span class="math inline">\(n \to \infty\)</span> with <span
+class="math inline">\(\mu\)</span> and <span
+class="math inline">\(N\)</span> fixed. The fraction <span
+class="math inline">\(n(n-1)\cdots(n-N+1)/n^N\)</span> is a product of
+<span class="math inline">\(N\)</span> factors each tending to 1; <span
+class="math inline">\((1 - \mu/n)^{-N} \to 1\)</span>; and <span
+class="math inline">\((1 - \mu/n)^n \to e^{-\mu}\)</span> (section 0).
+What is left is the <em>Poisson distribution</em>:</p>
+<p><span class="math display">\[
+P(N) = \frac{\mu^N e^{-\mu}}{N!}, \qquad N = 0, 1, 2, \ldots
+\]</span></p>
+<p>It depends only on the mean <span class="math inline">\(\mu\)</span>.
+Its probabilities add to <span
+class="math inline">\(e^{-\mu}\sum\mu^N/N! = e^{-\mu}e^{\mu} =
+1\)</span> (the series of <span class="math inline">\(e^\mu\)</span>, F1
+section 8). Its mean is <span class="math inline">\(\mu\)</span>, and
+its variance is the limit of <span class="math inline">\(np(1 -
+p)\)</span> as <span class="math inline">\(p \to 0\)</span>, which is
+also <span class="math inline">\(\mu\)</span>:</p>
+<p><span class="math display">\[
+\langle N\rangle = \mu, \qquad \sigma_N = \sqrt\mu .
+\]</span></p>
+<p>How good is the limit? For <span class="math inline">\(n =
+1000\)</span> and <span class="math inline">\(p = 0.003\)</span> (mean
+3), the binomial gives <span class="math inline">\(P(0) =
+0.0496\)</span> and <span class="math inline">\(P(3) = 0.2244\)</span>;
+Poisson gives 0.0498 and 0.2240.</p>
+<p><strong>Rutherford and Geiger’s alphas.</strong> With <span
+class="math inline">\(\mu = 10\,097/2608 = 3.872\)</span>, the expected
+numbers of intervals with <span class="math inline">\(N\)</span> alphas,
+<span class="math inline">\(2608\,P(N)\)</span>, against those counted
+in 1910:</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(N\)</span></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poisson</td>
+<td>54</td>
+<td>210</td>
+<td>407</td>
+<td>525</td>
+<td>508</td>
+<td>394</td>
+<td>254</td>
+<td>141</td>
+</tr>
+<tr>
+<td>Counted</td>
+<td>57</td>
+<td>203</td>
+<td>383</td>
+<td>525</td>
+<td>532</td>
+<td>408</td>
+<td>273</td>
+<td>139</td>
+</tr>
+</tbody>
+</table>
+<p>The differences are about the size of the square root of each number,
+as they should be if the counts in each column are themselves
+random.</p>
+<p><strong>The square-root rule.</strong> In practice the mean is
+unknown and one count <span class="math inline">\(N\)</span> is all
+there is. The best estimate of <span class="math inline">\(\mu\)</span>
+is <span class="math inline">\(N\)</span>, and its uncertainty is about
+<span class="math inline">\(\sqrt N\)</span>. The relative uncertainty
+is <span class="math inline">\(1/\sqrt N\)</span>: a count of 100 is
+known to 10 per cent, a count of <span
+class="math inline">\(10^4\)</span> to 1 per cent. To halve the error,
+count four times as long. This is why the observers of chapter 1 sat for
+hours at their microscopes (<a
+href="01-why-accelerate.html#counting-scintillations">counting
+scintillations</a>).</p>
+<p><strong>Nothing happens.</strong> The chance of zero events is <span
+class="math inline">\(e^{-\mu}\)</span>. If a background counter
+averages 2.3 counts per second, a second with no counts at all happens
+10 per cent of the time. Turned round: if a careful search finds
+nothing, the mean is probably below about 2.3, since a larger mean would
+give zero counts less than 10 per cent of the time.</p>
+<p><strong>Where Poisson fails.</strong> The events must be independent
+and the rate steady. A detector that is dead for a microsecond after
+each count, a source that is decaying away during the count, or a beam
+that arrives in bunches, each break the rule; chapter 1’s pre-requisite
+on <a
+href="01-why-accelerate.html#pre-requisite-counting-statistics-poisson">counting
+statistics</a> goes on to counting times, background and dead time.</p>
+<h3 id="7-why-the-bell-curve-is-everywhere-the-central-limit-theorem">7.
+Why the bell curve is everywhere: the central limit theorem</h3>
+<p><strong>The statement.</strong> Add up many independent random
+quantities, none of which dominates. Whatever their individual
+distributions, the distribution of the sum approaches a Gaussian, with
+mean the sum of the means and variance the sum of the variances (section
+3). This is the <em>central limit theorem</em>. A proof needs more
+mathematics than this chapter has (it is given in the probability texts
+listed in the sources); a demonstration shows that it is true and how
+fast it works.</p>
+<p><strong>A demonstration with dice.</strong> One die is flat: each
+face has probability <span class="math inline">\(1/6\)</span>, and the
+shape is nothing like a bell. Its mean is 3.5 and its <span
+class="math inline">\(\sigma\)</span> is 1.708. Throw ten dice and add
+them. The sum has mean 35 and <span class="math inline">\(\sigma =
+\sqrt{10 \times 35/12} = 5.40\)</span>. Counting all <span
+class="math inline">\(6^{10}\)</span> equally likely outcomes
+exactly:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Exact, ten dice</th>
+<th>Gaussian with <span class="math inline">\(\mu = 35\)</span>, <span
+class="math inline">\(\sigma = 5.40\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Probability of a sum of exactly 35</td>
+<td>0.0727</td>
+<td>0.0739 (the peak density <span class="math inline">\(\times\)</span>
+1)</td>
+</tr>
+<tr>
+<td>Within <span class="math inline">\(\pm 1\sigma\)</span> (30 to
+40)</td>
+<td>0.687</td>
+<td>0.683</td>
+</tr>
+<tr>
+<td>Within <span class="math inline">\(\pm 2\sigma\)</span> (25 to
+45)</td>
+<td>0.950</td>
+<td>0.954</td>
+</tr>
+</tbody>
+</table>
+<p>Ten flat distributions have already made a bell to within a per cent.
+(Twelve numbers drawn uniformly between 0 and 1 and added make a sum
+with <span class="math inline">\(\mu = 6\)</span> and <span
+class="math inline">\(\sigma = 1\)</span>; 67.9 per cent of the sums
+fall within <span class="math inline">\(\pm 1\)</span> and 95.5 per cent
+within <span class="math inline">\(\pm 2\)</span>. Programs used to make
+Gaussian random numbers this way.)</p>
+<p><strong>Poisson becomes Gaussian.</strong> A Poisson count with a
+large mean is the sum of many small independent counts (the counts in
+each tenth of the interval, say), so it too becomes Gaussian, with <span
+class="math inline">\(\sigma = \sqrt\mu\)</span>. For <span
+class="math inline">\(\mu = 100\)</span> the probability of a count
+between 90 and 110 is 0.707, close to the Gaussian 0.683 for <span
+class="math inline">\(\pm 1\sigma\)</span> (the difference comes mostly
+from counting both end values, 90 and 110). So for large counts, the
+68/95/99.7 rule applies to <span class="math inline">\(\sqrt N\)</span>
+errors.</p>
+<p><strong>Why it matters.</strong> A particle in a beam receives many
+small independent kicks: from the noise of the source, from scattering
+on gas, from the random emission of photons in an electron ring (chapter
+20). Its position is the sum of all of them, so beams settle into
+Gaussian profiles. A measurement error is often the sum of many small
+disturbances (electrical noise, vibration, temperature drift), so
+measurement errors tend to be Gaussian too. The theorem fails when one
+contribution dominates (then the sum looks like that contribution), when
+the contributions are not independent, or when a distribution has tails
+so long that its variance is infinite.</p>
+<h3 id="8-measurements-and-their-errors">8. Measurements and their
+errors</h3>
+<p><strong>Random and systematic.</strong> Every measurement differs
+from the true value. A <em>random error</em> changes from one repetition
+to the next, as likely high as low: electrical noise on a current
+reading, the Poisson scatter of a count. Repeating and averaging reduces
+it. A <em>systematic error</em> is the same every time: a gauge
+calibrated for nitrogen reading a chamber full of hydrogen, a ruler that
+has stretched, a current transformer whose gain is 2 per cent off.
+Repeating does not reduce it, and the scatter of the readings does not
+reveal it. It is found only by checking the instrument against a
+different method or a known standard. Quote the two separately when they
+matter.</p>
+<p><strong>The best value and its scatter.</strong> Ten readings of a
+beam current, in mA: 10.3, 9.8, 10.1, 10.4, 9.7, 10.0, 10.2, 9.9, 10.5,
+10.1. The best estimate of the true current is their mean, <span
+class="math inline">\(\bar x = 10.10\)</span> mA. The scatter of a
+single reading is estimated by the <em>sample standard
+deviation</em></p>
+<p><span class="math display">\[
+s = \sqrt{\frac{1}{N - 1}\sum_{i=1}^{N}(x_i - \bar x)^2} = 0.258\
+\text{mA} .
+\]</span></p>
+<p>Dividing by <span class="math inline">\(N - 1\)</span> rather than
+<span class="math inline">\(N\)</span> corrects for using <span
+class="math inline">\(\bar x\)</span>, which was itself fitted to these
+readings and so sits a little closer to them than the true value does.
+For large <span class="math inline">\(N\)</span> the difference does not
+matter.</p>
+<p><strong>The error of a mean.</strong> The mean is the sum of <span
+class="math inline">\(N\)</span> independent readings divided by <span
+class="math inline">\(N\)</span>. The variance of the sum is <span
+class="math inline">\(N\sigma^2\)</span> (variances add), and dividing
+by <span class="math inline">\(N\)</span> divides the variance by <span
+class="math inline">\(N^2\)</span>, so</p>
+<p><span class="math display">\[
+\sigma_{\bar x} = \frac{\sigma}{\sqrt N} .
+\]</span></p>
+<p>For the ten readings, <span class="math inline">\(\sigma_{\bar x} =
+0.258/\sqrt{10} = 0.082\)</span> mA, and the result is <span
+class="math inline">\(10.10 \pm 0.08\)</span> mA. Averaging a hundred
+readings would bring it to about 0.026 mA, but only for the random part:
+a 2 per cent calibration error (0.2 mA) stays at 0.2 mA however long one
+averages. That is why careful measurements spend as much effort on
+calibration as on statistics.</p>
+<p><strong>Adding errors in quadrature.</strong> When a result is the
+sum or difference of independent measured quantities, their variances
+add (section 3):</p>
+<p><span class="math display">\[
+\sigma_{x \pm y} = \sqrt{\sigma_x^2 + \sigma_y^2} .
+\]</span></p>
+<p>Errors add like the sides of a right-angled triangle, “in
+quadrature”. Two errors of 3 and 4 make 5, not 7. The larger error
+dominates quickly: an error of 1 and one of 3 make 3.16.
+<em>Example.</em> A count of 400 with a measured background of 100 gives
+a signal of <span class="math inline">\(300 \pm \sqrt{400 + 100} = 300
+\pm 22\)</span>: subtracting the background adds its error. For products
+and ratios, relative errors add in quadrature in the same way, and for a
+power <span class="math inline">\(x^n\)</span> the relative error is
+multiplied by <span class="math inline">\(n\)</span> (F1, section 5).
+Chapter 1’s pre-requisite on <a
+href="01-why-accelerate.html#pre-requisite-errors-and-their-propagation">errors
+and their propagation</a> derives the general rule with partial
+derivatives, and chapter 8’s on <a
+href="08-seeing-the-beam.html#pre-requisite-least-squares-fitting">least-squares
+fitting</a> fits curves to data with errors.</p>
+<p><strong>Widths add in quadrature too.</strong> A screen with a
+resolution of <span class="math inline">\(\sigma_{res} = 0.5\)</span> mm
+shows a beam of true size <span class="math inline">\(\sigma_b\)</span>
+as a spot of size <span class="math inline">\(\sqrt{\sigma_b^2 +
+\sigma_{res}^2}\)</span>, since the beam’s spread and the screen’s blur
+are independent. A measured 1.2 mm means a true <span
+class="math inline">\(\sqrt{1.2^2 - 0.5^2} = 1.09\)</span> mm. When the
+resolution approaches the measured size, the subtraction becomes very
+sensitive to it, and the measurement says little.</p>
+<h3 id="9-temperature-heat-and-internal-energy">9. Temperature, heat and
+internal energy</h3>
+<p><strong>Temperature and the zeroth law.</strong> Put a hot body and a
+cold one in contact, and the hot one cools and the cold one warms until
+nothing more changes: they are in <em>thermal equilibrium</em>.
+Experience says that if A is in equilibrium with B, and B with C, then A
+is in equilibrium with C. This is the <em>zeroth law</em> (named after
+the first and second, because it was seen later to come before them). It
+makes a thermometer possible: B is the thermometer, and two bodies that
+give it the same reading will not exchange heat. <em>Temperature</em> is
+the quantity that is equal in bodies in equilibrium.</p>
+<p><strong>The kelvin scale.</strong> Gases at low pressure all behave
+alike (section 10): at fixed volume, their pressure falls in a straight
+line as they are cooled, and the lines all head to zero pressure at the
+same temperature, <span class="math inline">\(-273.15\)</span> °C. That
+is <em>absolute zero</em>, and the kelvin scale counts from it, in steps
+the size of a degree Celsius: <span class="math inline">\(T\,[\text{K}]
+= t\,[°\text{C}] + 273.15\)</span>. Room temperature, 20 °C, is 293.15
+K; liquid nitrogen boils at 77 K, liquid helium at 4.2 K (at atmospheric
+pressure); a tungsten cathode runs near 2500 K. In physics formulas
+<span class="math inline">\(T\)</span> is always in kelvin.</p>
+<p><strong>Heat is energy in transit.</strong> <em>Heat</em>, <span
+class="math inline">\(Q\)</span>, is energy passed from one body to
+another because of a difference of temperature, measured in joules. A
+body does not “contain heat”; it contains <em>internal energy</em> <span
+class="math inline">\(U\)</span>: the kinetic energy of its molecules’
+random motion plus the energy stored in the forces between them. Heat
+and work are two ways of changing <span
+class="math inline">\(U\)</span>.</p>
+<p><strong>The first law.</strong> Energy is conserved:</p>
+<p><span class="math display">\[
+\Delta U = Q - W_{by},
+\]</span></p>
+<p>where <span class="math inline">\(Q\)</span> is the heat put into a
+body and <span class="math inline">\(W_{by}\)</span> is the work it does
+on its surroundings. A gas at pressure <span
+class="math inline">\(p\)</span> that expands by a small volume <span
+class="math inline">\(dV\)</span> pushes the walls out against a force
+<span class="math inline">\(pA\)</span> through a distance <span
+class="math inline">\(dV/A\)</span>, doing work <span
+class="math inline">\(W_{by} = p\,dV\)</span>. Joule’s experiments were
+the first law measured: work done by falling weights on water raised its
+temperature exactly as much as an equal energy of heat would.</p>
+<p><em>Example: an anode with no cooling.</em> A beam of 10 mA at 2 kV
+ends on a copper anode of 100 g. The beam brings energy at <span
+class="math inline">\(10^{-2} \times 2000 = 20\)</span> W, all of which
+becomes internal energy of the copper. It takes 385 J to warm a kilogram
+of copper by one kelvin (its <em>specific heat</em>, section 15), so the
+anode warms at <span class="math inline">\(20/(0.1 \times 385) =
+0.52\)</span> K per second, 31 K a minute. Every beam dump, collimator
+and cavity wall in the course has this problem, and chapter 13 counts it
+for the walls of an RF cavity.</p>
+<h3 id="10-the-ideal-gas">10. The ideal gas</h3>
+<p><strong>Three laws in one.</strong> Experiment on any gas at low
+enough pressure gives three facts. At fixed temperature, <span
+class="math inline">\(pV\)</span> is constant (Boyle, 1662). At fixed
+pressure, <span class="math inline">\(V\)</span> grows in proportion to
+the absolute temperature (Charles and Gay-Lussac). Equal volumes at the
+same pressure and temperature hold equal numbers of molecules (Avogadro,
+1811). Together:</p>
+<p><span class="math display">\[
+pV = Nk_BT,
+\]</span></p>
+<p>with <span class="math inline">\(N\)</span> the number of molecules
+and <span class="math inline">\(k_B = 1.380649 \times 10^{-23}\)</span>
+J/K, Boltzmann’s constant. Dividing by <span
+class="math inline">\(V\)</span>, with <span class="math inline">\(n =
+N/V\)</span> the <em>number density</em>,</p>
+<p><span class="math display">\[
+p = nk_BT, \qquad n = \frac{p}{k_BT} .
+\]</span></p>
+<p>The pressure depends on how many molecules there are per cubic metre
+and on the temperature, not on what they are: hydrogen and argon at the
+same <span class="math inline">\(n\)</span> and <span
+class="math inline">\(T\)</span> press equally. Section 11 shows
+why.</p>
+<p><strong>Moles.</strong> Chemists count in <em>moles</em>: one mole is
+<span class="math inline">\(N_A = 6.02214076 \times 10^{23}\)</span>
+particles (Avogadro’s number, exact since 2019). A mole of molecules of
+molecular mass <span class="math inline">\(M\)</span> (in atomic mass
+units) weighs <span class="math inline">\(M\)</span> grams: nitrogen,
+N<span class="math inline">\(_2\)</span>, has <span
+class="math inline">\(M = 28.01\)</span>, so 28.01 g. With <span
+class="math inline">\(\nu\)</span> moles, <span class="math inline">\(N
+= \nu N_A\)</span> and</p>
+<p><span class="math display">\[
+pV = \nu RT, \qquad R = N_Ak_B = 8.314\ \text{J/(mol K)} .
+\]</span></p>
+<p>A mole of any gas at 20 °C and atmospheric pressure (101 325 Pa)
+fills <span class="math inline">\(RT/p = 24.06\)</span> litres.</p>
+<p><strong>Numbers for a vacuum chamber.</strong> At 20 °C:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Pressure</th>
+<th><span class="math inline">\(n\)</span> (m<span
+class="math inline">\(^{-3}\)</span>)</th>
+<th>Molecules in a 100-litre chamber</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(10^5\)</span> Pa (about 1
+atmosphere)</td>
+<td><span class="math inline">\(2.47 \times 10^{25}\)</span></td>
+<td><span class="math inline">\(2.47 \times 10^{24}\)</span> (4.1
+mol)</td>
+</tr>
+<tr>
+<td>1 Pa</td>
+<td><span class="math inline">\(2.47 \times 10^{20}\)</span></td>
+<td><span class="math inline">\(2.47 \times 10^{19}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(10^{-6}\)</span> Pa</td>
+<td><span class="math inline">\(2.47 \times 10^{14}\)</span></td>
+<td><span class="math inline">\(2.47 \times 10^{13}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Pumping a chamber down to <span
+class="math inline">\(10^{-6}\)</span> Pa removes all but one molecule
+in <span class="math inline">\(10^{11}\)</span>, and still leaves 25
+million million behind, about 16 μm apart. The beam meets molecules, not
+pressure, so the LHC states its vacuum as a density, at most <span
+class="math inline">\(10^{15}\)</span> molecules per m<span
+class="math inline">\(^3\)</span>; in its beam pipe at 1.9 K that is a
+pressure of only <span class="math inline">\(nk_BT = 2.6 \times
+10^{-8}\)</span> Pa. The same density at room temperature would read
+<span class="math inline">\(4.0 \times 10^{-6}\)</span> Pa. <a
+href="03-vacuum.html#pressure-units-and-number-density">Chapter 3</a>
+works in these units throughout.</p>
+<p><strong>Where it fails.</strong> The ideal gas law assumes molecules
+that take up no room and do not attract one another. At high density
+they do both, and the law fails; near the boiling point it fails badly
+(helium at 4.5 K and atmospheric pressure is about to condense). In a
+vacuum chamber, where molecules are far apart, it is exact for practical
+purposes.</p>
+<h3 id="11-kinetic-theory-pressure-from-molecular-impacts">11. Kinetic
+theory: pressure from molecular impacts</h3>
+<p><strong>The picture.</strong> A gas is a crowd of molecules flying in
+straight lines between collisions. When one bounces off a wall, its
+momentum perpendicular to the wall reverses, and the wall must supply
+the force that reverses it. Billions of billions of such impacts each
+second add up to a steady push: pressure. Bernoulli had this idea in
+1738; here is the calculation.</p>
+<p><strong>One molecule in a box.</strong> Take a cubical box of side
+<span class="math inline">\(L\)</span> and one molecule of mass <span
+class="math inline">\(m\)</span> with velocity components <span
+class="math inline">\(v_x\)</span>, <span
+class="math inline">\(v_y\)</span>, <span
+class="math inline">\(v_z\)</span>. It bounces elastically off the wall
+at <span class="math inline">\(x = L\)</span>: <span
+class="math inline">\(v_x\)</span> becomes <span
+class="math inline">\(-v_x\)</span>, a change of momentum <span
+class="math inline">\(2mv_x\)</span>. It returns to that wall after
+crossing the box and back, a distance <span
+class="math inline">\(2L\)</span>, which takes <span
+class="math inline">\(2L/v_x\)</span>. (Collisions with the other walls
+change <span class="math inline">\(v_y\)</span> and <span
+class="math inline">\(v_z\)</span> but not <span
+class="math inline">\(v_x\)</span>; collisions with other molecules only
+swap momentum around and do not change the average.) The average force
+on the wall is the momentum delivered per unit time:</p>
+<p><span class="math display">\[
+F = \frac{2mv_x}{2L/v_x} = \frac{mv_x^2}{L} .
+\]</span></p>
+<p><strong>Many molecules.</strong> With <span
+class="math inline">\(N\)</span> molecules, add their forces and divide
+by the wall’s area <span class="math inline">\(L^2\)</span>:</p>
+<p><span class="math display">\[
+p = \frac{1}{L^2}\sum_i\frac{mv_{x,i}^2}{L} = \frac{Nm\langle
+v_x^2\rangle}{V} = nm\langle v_x^2\rangle,
+\]</span></p>
+<p>with <span class="math inline">\(V = L^3\)</span>. No direction is
+special in a gas at rest, so <span class="math inline">\(\langle
+v_x^2\rangle = \langle v_y^2\rangle = \langle v_z^2\rangle\)</span>, and
+since <span class="math inline">\(v^2 = v_x^2 + v_y^2 + v_z^2\)</span>,
+each is <span class="math inline">\(\tfrac13\langle
+v^2\rangle\)</span>:</p>
+<p><span class="math display">\[
+p = \tfrac13\,nm\langle v^2\rangle = \tfrac23\,n\,\big\langle\tfrac12
+mv^2\big\rangle .
+\]</span></p>
+<p>The pressure is two-thirds of the kinetic energy per unit volume. The
+shape of the box does not matter (chapter 3’s <a
+href="03-vacuum.html#pre-requisite-continued-maxwell-boltzmann-distribution">Maxwell-Boltzmann
+pre-requisite</a> does it for a piece of wall of any shape, and for
+walls that hold molecules briefly and let them go in random
+directions).</p>
+<p><strong>What temperature is.</strong> Compare with the ideal gas law,
+<span class="math inline">\(p = nk_BT\)</span>:</p>
+<p><span class="math display">\[
+\big\langle\tfrac12 mv^2\big\rangle = \tfrac32\,k_BT .
+\]</span></p>
+<p>This is the meaning of temperature in a gas: it measures the average
+kinetic energy of the molecules’ random motion, <span
+class="math inline">\(\tfrac32 k_B\)</span> joules per kelvin per
+molecule. At absolute zero this motion would stop (in classical physics;
+F7 adds a quantum correction). At 20 °C each molecule has on average
+<span class="math inline">\(\tfrac32 k_BT = 6.07 \times
+10^{-21}\)</span> J <span class="math inline">\(= 0.0379\)</span> eV,
+whatever its mass. That is why the pressure does not depend on the kind
+of gas.</p>
+<p><strong>The rms speed.</strong> Solving for the speed,</p>
+<p><span class="math display">\[
+v_{rms} = \sqrt{\langle v^2\rangle} = \sqrt{\frac{3k_BT}{m}} .
+\]</span></p>
+<p>Light molecules move fast. At 20 °C:</p>
+<table>
+<thead>
+<tr>
+<th>Gas</th>
+<th>Mass (u)</th>
+<th><span class="math inline">\(v_{rms}\)</span> (m/s)</th>
+<th>Mean speed <span class="math inline">\(\bar v\)</span> (m/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H<span class="math inline">\(_2\)</span></td>
+<td>2.016</td>
+<td>1904</td>
+<td>1755</td>
+</tr>
+<tr>
+<td>He</td>
+<td>4.003</td>
+<td>1352</td>
+<td>1245</td>
+</tr>
+<tr>
+<td>H<span class="math inline">\(_2\)</span>O</td>
+<td>18.02</td>
+<td>637</td>
+<td>587</td>
+</tr>
+<tr>
+<td>N<span class="math inline">\(_2\)</span></td>
+<td>28.01</td>
+<td>511</td>
+<td>471</td>
+</tr>
+<tr>
+<td>Ar</td>
+<td>39.95</td>
+<td>428</td>
+<td>394</td>
+</tr>
+</tbody>
+</table>
+<p>(The mass in kg is the mass in atomic mass units times <span
+class="math inline">\(1.66054 \times 10^{-27}\)</span> kg. The mean
+speed is introduced in section 13.) Helium at 4.5 K, the temperature of
+a superconducting magnet’s coolant, has <span
+class="math inline">\(v_{rms} = 167\)</span> m/s. The electrons that
+boil off a tungsten cathode at 2500 K, nearly two thousand times lighter
+than a hydrogen atom, leave with <span class="math inline">\(v_{rms} =
+3.4 \times 10^5\)</span> m/s, which a 2 kV gun then multiplies by about
+80.</p>
+<p><strong>Equipartition.</strong> The energy <span
+class="math inline">\(\tfrac32 k_BT\)</span> is <span
+class="math inline">\(\tfrac12 k_BT\)</span> for each of the three
+directions of motion, since <span class="math inline">\(\langle\tfrac12
+mv_x^2\rangle = \tfrac12 k_BT\)</span> and the same for <span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span>. This is a case of a general rule of
+classical physics, the <em>equipartition</em> theorem: in equilibrium at
+temperature <span class="math inline">\(T\)</span>, each term in a
+molecule’s energy that is a square of a position or a velocity holds, on
+average, <span class="math inline">\(\tfrac12 k_BT\)</span>. A diatomic
+molecule like N<span class="math inline">\(_2\)</span> can also rotate
+about two axes, each a squared angular velocity, so at room temperature
+it holds <span class="math inline">\(\tfrac52 k_BT\)</span>. An atom in
+a solid vibrates in three directions, with both kinetic and spring
+energy in each, six squares, so it holds <span
+class="math inline">\(3k_BT\)</span>. Section 15 checks these against
+measured heat capacities. A beam has a temperature in the same sense:
+chapter 7 defines the <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-distribution-functions-vlasov-equation-beam-temperature">transverse
+temperature of a beam</a> by <span class="math inline">\(\langle
+p_x^2\rangle/2m = \tfrac12 k_BT\)</span>.</p>
+<h3 id="12-the-energy-scale-k_bt-in-electronvolts">12. The energy scale:
+<span class="math inline">\(k_BT\)</span> in electronvolts</h3>
+<p>Atomic and accelerator physics measure energy in electronvolts (1 eV
+<span class="math inline">\(= 1.602177 \times 10^{-19}\)</span> J, the
+energy one electron gains crossing one volt). Then <span
+class="math inline">\(k_B = 8.617 \times 10^{-5}\)</span> eV/K, and the
+thermal energy <span class="math inline">\(k_BT\)</span> at a few
+temperatures of the course is:</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th><span class="math inline">\(T\)</span> (K)</th>
+<th><span class="math inline">\(k_BT\)</span> (eV)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Liquid helium, superconducting magnets</td>
+<td>4.5</td>
+<td><span class="math inline">\(3.88 \times 10^{-4}\)</span></td>
+</tr>
+<tr>
+<td>Liquid nitrogen</td>
+<td>77</td>
+<td>0.00664</td>
+</tr>
+<tr>
+<td>Room, 20 °C</td>
+<td>293.15</td>
+<td>0.02526</td>
+</tr>
+<tr>
+<td>Tungsten cathode</td>
+<td>2500</td>
+<td>0.2154</td>
+</tr>
+</tbody>
+</table>
+<p>and 1 eV of <span class="math inline">\(k_BT\)</span> is 11 604.5 K.
+The rule of thumb is <span class="math inline">\(k_BT \approx
+1/40\)</span> eV at room temperature. Comparing an energy with <span
+class="math inline">\(k_BT\)</span> is the first thing to do with it. An
+energy far below <span class="math inline">\(k_BT\)</span> is shaken
+about freely by heat; an energy far above it is reached only rarely, how
+rarely being the subject of the next section. The work function of
+tungsten, the energy an electron needs to leave the metal, is 4.53 eV:
+179 times <span class="math inline">\(k_BT\)</span> at room temperature,
+21 times at 2500 K. That ratio decides whether a cathode emits.</p>
+<h3 id="13-the-boltzmann-factor-and-the-speeds-of-molecules">13. The
+Boltzmann factor and the speeds of molecules</h3>
+<p><strong>The atmosphere.</strong> Air is denser at sea level than on a
+mountain. Why exactly? Take a column of gas at one temperature <span
+class="math inline">\(T\)</span>, of molecules of mass <span
+class="math inline">\(m\)</span>, in gravity <span
+class="math inline">\(g\)</span>. A thin slab of thickness <span
+class="math inline">\(dh\)</span> and area <span
+class="math inline">\(A\)</span> holds <span
+class="math inline">\(nA\,dh\)</span> molecules; the pressure below it
+must exceed the pressure above by their weight per unit area, so <span
+class="math inline">\(dp = -nmg\,dh\)</span>. With <span
+class="math inline">\(p = nk_BT\)</span> at fixed <span
+class="math inline">\(T\)</span>, <span class="math inline">\(dp =
+k_BT\,dn\)</span>, and</p>
+<p><span class="math display">\[
+\frac{dn}{n} = -\frac{mg}{k_BT}\,dh \quad\Longrightarrow\quad n(h) =
+n(0)\,e^{-mgh/k_BT} .
+\]</span></p>
+<p>The density falls by a factor <span class="math inline">\(e\)</span>
+for every <em>scale height</em> <span class="math inline">\(H =
+k_BT/mg\)</span>. For air (average mass 28.97 u) at 20 °C, <span
+class="math inline">\(H = 8.58\)</span> km; at the top of Everest, 8848
+m, an isothermal atmosphere would have 36 per cent of sea-level density
+(the real air there is colder, so the figure is approximate). Helium,
+seven times lighter, would have a scale height of 62 km.</p>
+<p><strong>The general rule.</strong> Look at what appeared in the
+exponent: <span class="math inline">\(mgh\)</span>, the potential energy
+of one molecule at height <span class="math inline">\(h\)</span>,
+divided by <span class="math inline">\(k_BT\)</span>. The chance of
+finding a molecule at height <span class="math inline">\(h\)</span> goes
+as <span class="math inline">\(e^{-E/k_BT}\)</span> with <span
+class="math inline">\(E\)</span> its energy there. Boltzmann showed this
+holds for any kind of energy and any system in equilibrium at
+temperature <span class="math inline">\(T\)</span>: the probability of a
+small part of the system being in a particular state of energy <span
+class="math inline">\(E\)</span> is proportional to</p>
+<p><span class="math display">\[
+e^{-E/k_BT},
+\]</span></p>
+<p>the <em>Boltzmann factor</em>. It is the most-used result of this
+chapter. A derivation from counting states is given in chapter 2’s
+pre-requisite on the <a
+href="02-the-cathode-ray-tube.html#pre-requisite-maxwell-boltzmann-distribution">Maxwell-Boltzmann
+distribution</a> and in the textbooks of the sources; here the
+atmosphere is the evidence. The factor says: energies up to a few <span
+class="math inline">\(k_BT\)</span> are common; each further <span
+class="math inline">\(k_BT\)</span> costs a factor <span
+class="math inline">\(e\)</span>; and energies of 20 or more <span
+class="math inline">\(k_BT\)</span> are extremely rare, but because the
+factor changes so steeply with <span class="math inline">\(T\)</span>, a
+small rise in temperature makes them much less rare.</p>
+<p><em>Example: a hot cathode.</em> For an electron to leave tungsten it
+needs at least the work function, 4.53 eV, of energy in the right
+direction. The Boltzmann factor for that energy is <span
+class="math inline">\(e^{-4.53/0.2154} = e^{-21.03} = 7.4 \times
+10^{-10}\)</span> at 2500 K and <span class="math inline">\(e^{-179}
+\approx 10^{-78}\)</span> at room temperature. The metal holds so many
+electrons, hitting the surface so often, that one in <span
+class="math inline">\(10^9\)</span> is a large current; one in <span
+class="math inline">\(10^{78}\)</span> is none. Between 2000 K and 2500
+K the factor grows 190 times. This factor is the heart of <a
+href="02-the-cathode-ray-tube.html#6-the-hot-cathode-richardsons-law">Richardson’s
+law</a> in chapter 2, and F1 (section 5) found the steep sensitivity
+that follows from it.</p>
+<p><strong>The Maxwell-Boltzmann distribution.</strong> Apply the factor
+to the kinetic energy of a molecule. For the velocity component <span
+class="math inline">\(v_x\)</span>, the energy is <span
+class="math inline">\(\tfrac12 mv_x^2\)</span>, so the density of <span
+class="math inline">\(v_x\)</span> is proportional to <span
+class="math inline">\(e^{-mv_x^2/2k_BT}\)</span>: a Gaussian (section 5)
+with mean zero and <span class="math inline">\(\sigma^2 =
+k_BT/m\)</span>, which agrees with <span
+class="math inline">\(\langle\tfrac12 mv_x^2\rangle = \tfrac12
+k_BT\)</span> from section 11. The three components are independent. The
+density of <em>speeds</em> <span class="math inline">\(v\)</span>, found
+by collecting all the velocities with the same speed (they fill a thin
+spherical shell of area <span class="math inline">\(4\pi v^2\)</span> in
+a space whose axes are <span class="math inline">\(v_x\)</span>, <span
+class="math inline">\(v_y\)</span>, <span
+class="math inline">\(v_z\)</span>), is</p>
+<p><span class="math display">\[
+F(v) = 4\pi v^2\left(\frac{m}{2\pi k_BT}\right)^{3/2}e^{-mv^2/2k_BT} .
+\]</span></p>
+<p>It rises from zero (few velocities are that small), peaks, and falls
+off in a long tail. Three speeds describe it: the most probable <span
+class="math inline">\(\sqrt{2k_BT/m}\)</span>, the mean <span
+class="math inline">\(\bar v = \sqrt{8k_BT/\pi m}\)</span>, and the rms
+<span class="math inline">\(\sqrt{3k_BT/m}\)</span>, in the ratio <span
+class="math inline">\(1 : 1.128 : 1.225\)</span>. For nitrogen at 20 °C
+they are 417, 471 and 511 m/s. Chapter 3’s <a
+href="03-vacuum.html#pre-requisite-continued-maxwell-boltzmann-distribution">Maxwell-Boltzmann
+pre-requisite</a> derives <span class="math inline">\(\bar v\)</span> by
+integrating <span class="math inline">\(vF(v)\)</span>, and <a
+href="03-vacuum.html#the-speeds-of-molecules">the speeds of
+molecules</a> lists them for the gases of a vacuum system.</p>
+<p><strong>Escape over a barrier.</strong> A molecule stuck on a surface
+with binding energy <span class="math inline">\(E_d\)</span> vibrates in
+its place about <span class="math inline">\(10^{13}\)</span> times a
+second. Each vibration has a chance of about <span
+class="math inline">\(e^{-E_d/k_BT}\)</span> of carrying enough energy
+to leave. So the mean time it stays, the <em>sojourn time</em>, is
+about</p>
+<p><span class="math display">\[
+\tau = \tau_0\,e^{E_d/k_BT}, \qquad \tau_0 \approx 10^{-13}\ \text{s} .
+\]</span></p>
+<p>For a molecule weakly held with <span class="math inline">\(E_d =
+0.1\)</span> eV, <span class="math inline">\(\tau = 5 \times
+10^{-12}\)</span> s at 20 °C: it bounces off almost at once. At 20 K,
+<span class="math inline">\(E_d/k_BT = 58\)</span> and <span
+class="math inline">\(\tau = 1.6 \times 10^{12}\)</span> s, about 50 000
+years: it stays. A cold enough surface is a pump (section 16). The same
+law sets how fast water leaves the walls of a chamber, and why baking a
+chamber at a few hundred degrees Celsius for a day or so drives off
+water that would otherwise leave over weeks (<a
+href="03-vacuum.html#outgassing">chapter 3, outgassing</a>).</p>
+<h3
+id="14-molecules-on-the-move-wall-collisions-and-the-mean-free-path">14.
+Molecules on the move: wall collisions and the mean free path</h3>
+<p><strong>How often molecules hit a wall.</strong> The rate at which
+molecules strike each square metre of wall sets how fast a surface is
+covered with gas, how much gas a hole lets through, and how fast a pump
+can remove gas. Consider first only molecules moving with speed <span
+class="math inline">\(v\)</span> at angle <span
+class="math inline">\(\theta\)</span> to the wall’s normal. Those that
+reach an area <span class="math inline">\(A\)</span> in time <span
+class="math inline">\(dt\)</span> are inside a slanted cylinder of base
+<span class="math inline">\(A\)</span> and height <span
+class="math inline">\(v\cos\theta\,dt\)</span>. So the rate per unit
+area is the number density times the average of <span
+class="math inline">\(v\cos\theta\)</span> over all molecules, counting
+only those heading towards the wall (<span
+class="math inline">\(\cos\theta &gt; 0\)</span>) and counting the
+others as zero.</p>
+<p>The speeds and directions are independent, so the average is <span
+class="math inline">\(\bar v\)</span> times the average of “<span
+class="math inline">\(\cos\theta\)</span> if positive, else 0” over
+random directions. A random direction is a random point on a sphere of
+radius 1. Archimedes showed that a slice of a sphere between two
+parallel planes has an area proportional to the distance between the
+planes (the slice between heights <span class="math inline">\(c\)</span>
+and <span class="math inline">\(c + dc\)</span> has area <span
+class="math inline">\(2\pi\,dc\)</span>, whatever <span
+class="math inline">\(c\)</span>). So <span
+class="math inline">\(\cos\theta\)</span>, the height of the point, is
+<em>uniformly</em> distributed between <span
+class="math inline">\(-1\)</span> and 1, with density <span
+class="math inline">\(\tfrac12\)</span>. The average is</p>
+<p><span class="math display">\[
+\int_0^1 c\cdot\tfrac12\,dc = \tfrac14,
+\]</span></p>
+<p>and the wall collision rate is</p>
+<p><span class="math display">\[
+\Phi = \tfrac14\,n\bar v \qquad \text{(per m}^2\text{ per second)} .
+\]</span></p>
+<p>The <span class="math inline">\(\tfrac14\)</span> is half (half the
+molecules are heading away) times a half (those heading in have on
+average half their speed along the normal). Chapter 3 derives the same
+result as an integral in spherical coordinates (<a
+href="03-vacuum.html#how-often-molecules-hit-a-wall">how often molecules
+hit a wall</a>).</p>
+<p><em>Example: the monolayer time.</em> Nitrogen at <span
+class="math inline">\(10^{-6}\)</span> Pa and 20 °C has <span
+class="math inline">\(n = 2.47 \times 10^{14}\)</span> m<span
+class="math inline">\(^{-3}\)</span> and <span
+class="math inline">\(\bar v = 471\)</span> m/s, so <span
+class="math inline">\(\Phi = 2.9 \times 10^{16}\)</span> m<span
+class="math inline">\(^{-2}\)</span> s<span
+class="math inline">\(^{-1}\)</span>. A clean surface holds about <span
+class="math inline">\(10^{19}\)</span> molecules per m<span
+class="math inline">\(^2\)</span> in one layer. If every molecule that
+arrives sticks, a fresh surface is covered in <span
+class="math inline">\(10^{19}/2.9 \times 10^{16} = 344\)</span> s, about
+6 minutes. At atmospheric pressure it takes a few nanoseconds. This is
+why surface science and accelerator vacuum both need ultra-high vacuum,
+and the <a href="03-vacuum.html#the-monolayer-time">monolayer time</a>
+of chapter 3 builds on it.</p>
+<p><em>Example: a hole.</em> Every molecule that reaches a hole of area
+<span class="math inline">\(A\)</span> in a wall goes through it, so the
+hole passes the gas in a volume <span class="math inline">\(\tfrac14\bar
+vA\)</span> every second, whatever the pressure (when the mean free path
+is long). For nitrogen at 20 °C that is 11.8 litres per second for each
+cm<span class="math inline">\(^2\)</span> of hole. This is the
+<em>conductance</em> of an orifice in chapter 3, and an upper limit to
+the speed of any pump with an inlet of that area.</p>
+<p><strong>The mean free path.</strong> How far does a molecule go
+between collisions? Model molecules as hard spheres of diameter <span
+class="math inline">\(d\)</span>. Two collide when their centres pass
+within <span class="math inline">\(d\)</span>, so a moving molecule
+sweeps out a cylinder of cross-section <span
+class="math inline">\(\sigma = \pi d^2\)</span> (here <span
+class="math inline">\(\sigma\)</span> is an area, the <em>collision
+cross-section</em>). Flying a distance <span
+class="math inline">\(x\)</span>, it sweeps a volume <span
+class="math inline">\(\sigma x\)</span>, which holds on average <span
+class="math inline">\(n\sigma x\)</span> other molecules. If the others
+stood still, it would hit one on average every <span
+class="math inline">\(1/(n\sigma)\)</span> of distance. They do not
+stand still, and moving targets are met more often: the average relative
+speed of two molecules is <span class="math inline">\(\sqrt2\,\bar
+v\)</span>, not <span class="math inline">\(\bar v\)</span> (for two
+independent Gaussian velocities the variances add, section 3), so</p>
+<p><span class="math display">\[
+\lambda = \frac{1}{\sqrt2\,n\sigma} = \frac{k_BT}{\sqrt2\,\pi d^2\,p} .
+\]</span></p>
+<p>For air, <span class="math inline">\(d \approx 3.7 \times
+10^{-10}\)</span> m and <span class="math inline">\(\sigma = 4.3 \times
+10^{-19}\)</span> m<span class="math inline">\(^2\)</span>. At 20
+°C:</p>
+<table>
+<thead>
+<tr>
+<th>Pressure</th>
+<th><span class="math inline">\(\lambda\)</span> for air</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101 325 Pa</td>
+<td>66 nm</td>
+</tr>
+<tr>
+<td>1 Pa</td>
+<td>6.7 mm</td>
+</tr>
+<tr>
+<td><span class="math inline">\(10^{-3}\)</span> Pa</td>
+<td>6.7 m</td>
+</tr>
+<tr>
+<td><span class="math inline">\(10^{-6}\)</span> Pa</td>
+<td>6.7 km</td>
+</tr>
+</tbody>
+</table>
+<p>At atmospheric pressure a molecule collides <span
+class="math inline">\(\bar v/\lambda = 7 \times 10^9\)</span> times a
+second. At <span class="math inline">\(10^{-6}\)</span> Pa it crosses a
+chamber wall to wall thousands of times between collisions with other
+molecules: the gas no longer behaves as a fluid, and pipes and pumps
+work differently (chapter 3’s <a
+href="03-vacuum.html#pre-requisite-gas-flow-regimes">gas flow
+regimes</a>). The free paths are distributed exponentially about <span
+class="math inline">\(\lambda\)</span> (section 4). A fast electron or a
+beam particle is far smaller than a molecule and much faster than it, so
+its mean free path is longer, by a factor of at least <span
+class="math inline">\(4\sqrt2\)</span>: chapter 2’s <a
+href="02-the-cathode-ray-tube.html#pre-requisite-mean-free-path-and-collision-rates">mean
+free path and collision rates</a> works it out, and <a
+href="03-vacuum.html#the-mean-free-path-of-a-molecule">chapter 3</a>
+gives the details for molecules.</p>
+<p><strong>Random walks.</strong> A molecule that changes direction at
+random every <span class="math inline">\(\lambda\)</span> does not get
+far: after <span class="math inline">\(N\)</span> steps its distance
+from the start is the sum of <span class="math inline">\(N\)</span>
+independent random steps, whose variance is <span
+class="math inline">\(N\)</span> times that of one step (section 3). So
+its distance grows as <span class="math inline">\(\sqrt N\)</span>, not
+<span class="math inline">\(N\)</span>: this is <em>diffusion</em>, and
+it is why a smell takes minutes to cross a room though molecules fly at
+500 m/s. Chapter 3’s <a
+href="03-vacuum.html#pre-requisite-diffusion-and-fokker-planck">diffusion
+and Fokker-Planck</a> pre-requisite takes it further, and chapter 20
+meets the same <span class="math inline">\(\sqrt N\)</span> growth in
+the random photon kicks that set an electron beam’s size.</p>
+<h3 id="15-heat-capacity">15. Heat capacity</h3>
+<p><strong>Definition.</strong> Put heat <span
+class="math inline">\(Q\)</span> into a body and its temperature rises
+by <span class="math inline">\(\Delta T\)</span>. The <em>heat
+capacity</em> is <span class="math inline">\(C = Q/\Delta T\)</span>, in
+J/K. Per kilogram it is the <em>specific heat</em> <span
+class="math inline">\(c\)</span>, in J/(kg K); per mole the <em>molar
+heat capacity</em>, in J/(mol K). Water’s specific heat is 4186 J/(kg
+K), copper’s 385 J/(kg K).</p>
+<p><strong>A gas at constant volume.</strong> The internal energy of a
+monatomic ideal gas (helium, argon) is the kinetic energy of its atoms,
+<span class="math inline">\(U = \tfrac32 Nk_BT\)</span> (section 11).
+Heated in a closed box, it does no work, so all the heat goes into <span
+class="math inline">\(U\)</span> and</p>
+<p><span class="math display">\[
+C_V = \frac{dU}{dT} = \tfrac32 Nk_B, \qquad \text{per mole } \tfrac32 R
+= 12.47\ \text{J/(mol K)} .
+\]</span></p>
+<p>For a diatomic gas, with <span class="math inline">\(\tfrac52
+k_BT\)</span> per molecule, it is <span class="math inline">\(\tfrac52 R
+= 20.79\)</span> J/(mol K). Measurements on helium and argon, and on
+nitrogen and oxygen at room temperature, agree: a triumph of the
+equipartition rule.</p>
+<p><strong>At constant pressure.</strong> Heated in a cylinder with a
+free piston, a gas expands and pushes the piston, doing work <span
+class="math inline">\(p\,\Delta V = Nk_B\,\Delta T\)</span>. The heat
+must supply this as well as <span class="math inline">\(\Delta
+U\)</span>, so <span class="math inline">\(C_p = C_V + Nk_B\)</span>, or
+per mole <span class="math inline">\(C_p = C_V + R\)</span>. For a
+diatomic gas <span class="math inline">\(C_p = \tfrac72 R =
+29.10\)</span> J/(mol K).</p>
+<p><strong>Solids.</strong> An atom in a solid holds <span
+class="math inline">\(3k_BT\)</span> (section 11), so a mole holds <span
+class="math inline">\(3RT\)</span> and has heat capacity <span
+class="math inline">\(3R = 24.94\)</span> J/(mol K), the rule found by
+Dulong and Petit in 1819. For copper (63.55 g/mol) this predicts <span
+class="math inline">\(24.94/0.06355 = 392\)</span> J/(kg K), against the
+measured 385.</p>
+<p><strong>Where it fails: the cold.</strong> At low temperature, the
+heat capacities of solids fall far below <span
+class="math inline">\(3R\)</span>, and towards zero near absolute zero;
+the rotations of diatomic gases also stop taking up energy when cold.
+Classical equipartition cannot explain this. Energy comes in quanta, and
+when <span class="math inline">\(k_BT\)</span> is smaller than the
+smallest quantum, the motion cannot be excited at all (<a
+href="F7-atoms-and-quanta.html">F7</a>). The consequence for
+accelerators is practical: at 4.5 K a superconducting magnet’s coil has
+a tiny heat capacity, so a small deposit of energy (a millijoule from a
+slipping wire or a few lost beam particles) warms it a lot, and can tip
+it out of the superconducting state (chapter 17).</p>
+<p><strong>Latent heat.</strong> Boiling a liquid takes heat without
+raising its temperature: the energy goes into pulling the molecules
+apart. This <em>latent heat</em> per kilogram is about 20.7 kJ/kg for
+liquid helium at 4.2 K, and the liquid’s density is about 125 kg/m<span
+class="math inline">\(^3\)</span>. One watt of heat leaking into a bath
+of liquid helium therefore boils off <span
+class="math inline">\(3600/20\,700 = 0.174\)</span> kg an hour, about
+1.4 litres. The same watt boils only 22 ml of liquid nitrogen (199
+kJ/kg, 807 kg/m<span class="math inline">\(^3\)</span>). Every watt that
+reaches the cold part of a superconducting accelerator is paid for, and
+the next section says how much.</p>
+<h3 id="16-entropy-and-the-second-law">16. Entropy and the second
+law</h3>
+<p><strong>In words.</strong> Heat flows by itself from hot to cold,
+never from cold to hot. A dropped ball warms the floor, but a warm floor
+never throws a ball up. Gas let into an empty chamber fills it, and
+never gathers itself back into one corner. Each of these processes runs
+one way only, though Newton’s laws run equally well backwards. The
+<em>second law of thermodynamics</em> names what decides the direction.
+Clausius’s form: heat cannot pass from a colder body to a hotter one
+without some other change, such as work being spent. Kelvin’s form: no
+engine working in a cycle can turn heat from a single body entirely into
+work.</p>
+<p><strong>Why: counting ways.</strong> Think of the gas filling the
+chamber. Each molecule is equally likely to be in either half,
+independently, so the chance that all <span
+class="math inline">\(N\)</span> are in the left half at once is <span
+class="math inline">\((\tfrac12)^N\)</span> (section 1). For 10
+molecules that is 1 in 1024, and it happens. For 100 molecules it is
+<span class="math inline">\(7.9 \times 10^{-31}\)</span>. For the <span
+class="math inline">\(2.5 \times 10^{22}\)</span> molecules in a litre
+of air, it is <span class="math inline">\(10^{-7.5 \times
+10^{21}}\)</span>. The spread-out arrangements are not favoured by any
+force; there are overwhelmingly more of them. Boltzmann defined the
+<em>entropy</em> of a state as <span class="math inline">\(S =
+k_B\ln\Omega\)</span>, with <span class="math inline">\(\Omega\)</span>
+the number of microscopic arrangements that look the same from outside.
+The second law is then a law of large numbers: an isolated system moves
+towards the states with most arrangements, and its entropy does not
+fall.</p>
+<p><strong>Entropy and heat.</strong> Clausius found the measurable form
+first. When a small amount of heat <span
+class="math inline">\(Q\)</span> enters a body at temperature <span
+class="math inline">\(T\)</span> (slowly, so that <span
+class="math inline">\(T\)</span> is well defined), the body’s entropy
+rises by</p>
+<p><span class="math display">\[
+\Delta S = \frac{Q}{T},
+\]</span></p>
+<p>in J/K. The <span class="math inline">\(1/T\)</span> makes sense from
+counting: adding energy to a cold body, whose molecules have little,
+opens up many more new arrangements than adding the same energy to a hot
+one. Now let heat <span class="math inline">\(Q\)</span> flow from a hot
+body at <span class="math inline">\(T_h\)</span> to a cold one at <span
+class="math inline">\(T_c\)</span>. The hot one loses entropy <span
+class="math inline">\(Q/T_h\)</span>, the cold one gains <span
+class="math inline">\(Q/T_c\)</span>, and since <span
+class="math inline">\(T_c &lt; T_h\)</span> the total rises:</p>
+<p><span class="math display">\[
+\Delta S = \frac{Q}{T_c} - \frac{Q}{T_h} &gt; 0 .
+\]</span></p>
+<p>Heat flowing from cold to hot would make the total fall, so it does
+not happen by itself. <em>Example.</em> One watt leaking from the 300 K
+outside of a cryostat into its 4.5 K interior makes <span
+class="math inline">\(1/4.5 - 1/300 = 0.219\)</span> J/K of entropy
+every second.</p>
+<p><strong>The price of cold.</strong> A refrigerator does what heat
+will not do by itself: it takes heat <span
+class="math inline">\(Q\)</span> out of a cold space at <span
+class="math inline">\(T\)</span> and dumps it into the room at <span
+class="math inline">\(T_a\)</span>. Taking <span
+class="math inline">\(Q\)</span> out at <span
+class="math inline">\(T\)</span> removes entropy <span
+class="math inline">\(Q/T\)</span> from the cold space. The second law
+says this entropy cannot vanish, so at least as much must be delivered
+to the room. The refrigerator delivers the heat <span
+class="math inline">\(Q\)</span> plus the electrical work <span
+class="math inline">\(W_{el}\)</span> it uses (by the first law, that
+energy too ends as heat), bringing entropy <span
+class="math inline">\((Q + W_{el})/T_a\)</span> to the room. So</p>
+<p><span class="math display">\[
+\frac{Q + W_{el}}{T_a} \ge \frac{Q}{T} \quad\Longrightarrow\quad W_{el}
+\ge Q\,\frac{T_a - T}{T} .
+\]</span></p>
+<p>The equality holds only for a perfect, reversible machine, Carnot’s
+ideal. With <span class="math inline">\(T_a = 300\)</span> K:</p>
+<table>
+<thead>
+<tr>
+<th>Cold end</th>
+<th><span class="math inline">\(T\)</span> (K)</th>
+<th>Least work per watt removed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Liquid nitrogen shield</td>
+<td>80</td>
+<td>2.75 W</td>
+</tr>
+<tr>
+<td>Helium, Tevatron, HERA</td>
+<td>4.5</td>
+<td>65.7 W</td>
+</tr>
+<tr>
+<td>Helium, LHC magnets</td>
+<td>1.9</td>
+<td>157 W</td>
+</tr>
+</tbody>
+</table>
+<p>The colder the cold end, the steeper the price, growing as <span
+class="math inline">\(1/T\)</span>. Real plants reach between a quarter
+and under a third of this ideal: about 235 to 280 W of electricity per
+watt at 4.5 K (<a href="17-magnets.html#13-cryogenics">chapter 17,
+cryogenics</a>). A string of superconducting magnets with a heat leak of
+50 W at 4.5 K needs at least 3.3 kW, and in practice 12 to 14 kW. This
+is why every cryostat in the course is wrapped in vacuum, polished
+shields and a nitrogen-cooled jacket, and why chapter 13 finds
+superconducting cavities worthwhile only when the RF losses they save
+outweigh the refrigeration.</p>
+<p><strong>Why a cold surface pumps gas.</strong> A surface at 20 K in a
+vacuum chamber catches nitrogen, oxygen and water: each molecule that
+lands sticks for thousands of years (section 13), and the chamber’s
+pressure falls. Gas gathered from a whole chamber onto a small panel
+looks like a fall in entropy. It is, for the gas; but the panel is kept
+cold by a refrigerator that dumps heat, and with it more entropy, into
+the room. The total rises, and the second law is safe. Seen through the
+Boltzmann factor: the vapour pressure of a frozen gas, the pressure at
+which as many molecules leave the solid as land on it, goes as <span
+class="math inline">\(e^{-E/k_BT}\)</span> with <span
+class="math inline">\(E\)</span> the binding energy, so cooling the
+panel by a factor of a few lowers it by many powers of ten. That is a
+<em>cryopump</em> (<a href="03-vacuum.html#how-pumps-work">chapter 3,
+how pumps work</a>). In the LHC’s arcs the beam pipe, at 1.9 K, is a
+cryopump kilometres long.</p>
+<h2 id="where-the-course-uses-it">Where the course uses it</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th>First used in</th>
+<th>For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Probability, binomial</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Counting scintillations, detector efficiency</td>
+</tr>
+<tr>
+<td>Poisson statistics, <span class="math inline">\(\sqrt
+N\)</span></td>
+<td><a
+href="01-why-accelerate.html#pre-requisite-counting-statistics-poisson">Chapter
+1</a></td>
+<td>Counting alphas, background, counting time</td>
+</tr>
+<tr>
+<td>Errors in quadrature, <span class="math inline">\(\sigma/\sqrt
+N\)</span></td>
+<td><a
+href="01-why-accelerate.html#pre-requisite-errors-and-their-propagation">Chapter
+1</a></td>
+<td>Every measured result</td>
+</tr>
+<tr>
+<td>Gaussian, FWHM, error function</td>
+<td><a
+href="02-the-cathode-ray-tube.html#pre-requisite-special-functions-and-integrals-bessel-gaussian-error-function">Chapter
+2</a></td>
+<td>Beam profiles, thermal velocities</td>
+</tr>
+<tr>
+<td>Boltzmann factor, <span class="math inline">\(k_BT\)</span> in
+eV</td>
+<td><a
+href="02-the-cathode-ray-tube.html#pre-requisite-maxwell-boltzmann-distribution">Chapter
+2</a></td>
+<td>Hot cathodes, Richardson’s law</td>
+</tr>
+<tr>
+<td>Ideal gas, <span class="math inline">\(n = p/k_BT\)</span></td>
+<td><a href="03-vacuum.html">Chapter 3</a></td>
+<td>Pressure and density in a vacuum system</td>
+</tr>
+<tr>
+<td>Mean speed, wall collision rate</td>
+<td><a href="03-vacuum.html#how-often-molecules-hit-a-wall">Chapter
+3</a></td>
+<td>Monolayer time, conductance, pumping speed</td>
+</tr>
+<tr>
+<td>Mean free path, exponential survival</td>
+<td><a
+href="02-the-cathode-ray-tube.html#pre-requisite-mean-free-path-and-collision-rates">Chapter
+2</a>, <a href="03-vacuum.html#the-mean-free-path-of-a-molecule">chapter
+3</a></td>
+<td>Why the tube needs a vacuum, beam lifetime</td>
+</tr>
+<tr>
+<td>Sojourn time <span
+class="math inline">\(\tau_0e^{E/k_BT}\)</span></td>
+<td><a href="03-vacuum.html#outgassing">Chapter 3</a></td>
+<td>Outgassing, baking, cryopumping</td>
+</tr>
+<tr>
+<td>Beam temperature, equipartition</td>
+<td><a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-distribution-functions-vlasov-equation-beam-temperature">Chapter
+7</a></td>
+<td>Thermal emittance of a cathode</td>
+</tr>
+<tr>
+<td>Least squares, noise</td>
+<td><a
+href="08-seeing-the-beam.html#pre-requisite-least-squares-fitting">Chapter
+8</a></td>
+<td>Fitting beam profiles, measuring with noise</td>
+</tr>
+<tr>
+<td>Second law, Carnot work</td>
+<td><a href="13-rf-cavities-and-power.html">Chapter 13</a>, <a
+href="17-magnets.html#13-cryogenics">chapter 17</a></td>
+<td>The cost of superconducting cavities and magnets</td>
+</tr>
+<tr>
+<td>Central limit theorem, random walks</td>
+<td><a href="20-synchrotron-radiation.html">Chapter 20</a>, <a
+href="24-beam-cooling.html">chapter 24</a></td>
+<td>Gaussian beams, diffusion, cooling</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>A tracking detector has four layers, each firing for a passing
+particle with probability 0.90, independently. A track is recognised if
+at least three layers fire. What fraction of particles is recognised?
+Compare with a detector that needs all three of three layers.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>All four fire with probability <span class="math inline">\(0.9^4 =
+0.6561\)</span>. Exactly three fire with probability <span
+class="math inline">\(\binom43\,0.9^3 \times 0.1 = 4 \times 0.729 \times
+0.1 = 0.2916\)</span>. These are exclusive, so the total is 0.948. A
+three-of-three detector recognises <span class="math inline">\(0.9^3 =
+0.729\)</span>. Allowing one layer to miss raises the efficiency from 73
+to 95 per cent, which is why real trackers have spare layers.</p>
+</details>
+<ol start="2" type="1">
+<li>A beam profile on a screen has a full width at half maximum of 4.7
+mm. Assuming it is Gaussian, what is <span
+class="math inline">\(\sigma\)</span>? What fraction of the particles
+lies more than 5 mm from the centre in the horizontal plane? If the beam
+is round, with the same <span class="math inline">\(\sigma\)</span> in
+both planes, what fraction lies outside a circle of radius 5 mm?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\sigma = 4.7/2.355 = 2.0\)</span> mm. 5
+mm is <span class="math inline">\(2.5\sigma\)</span>; the fraction
+beyond <span class="math inline">\(\pm 2.5\sigma\)</span> in one plane
+is 1.24 per cent (from the error function, or a table). For the round
+beam, the fraction outside radius <span class="math inline">\(r\)</span>
+is <span class="math inline">\(e^{-r^2/2\sigma^2} = e^{-25/8} =
+e^{-3.125} = 0.044\)</span>, 4.4 per cent: more than three times the
+one-plane figure.</p>
+</details>
+<ol start="3" type="1">
+<li>A counter with no source present records on average 0.5 counts per
+second of background. (a) What is the chance of no counts in a 10 s
+window? (b) With a source present the counter records about 50 counts
+per second. How long must it count to know the rate to 1 per cent
+(ignoring the background)?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li>The mean in 10 s is <span class="math inline">\(\mu = 5\)</span>,
+and <span class="math inline">\(P(0) = e^{-5} = 0.0067\)</span>: less
+than 1 per cent. (b) A relative error <span
+class="math inline">\(1/\sqrt N = 0.01\)</span> needs <span
+class="math inline">\(N = 10^4\)</span> counts, which at 50 per second
+takes 200 s.</li>
+</ol>
+</details>
+<ol start="4" type="1">
+<li>Ten readings of a beam current, in mA, are 10.3, 9.8, 10.1, 10.4,
+9.7, 10.0, 10.2, 9.9, 10.5, 10.1. Find the mean, the sample standard
+deviation and the error of the mean. How many readings would bring the
+error of the mean down to 0.02 mA? Would that make the result accurate
+to 0.02 mA?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>Mean 10.10 mA. The deviations are 0.2, <span
+class="math inline">\(-0.3\)</span>, 0, 0.3, <span
+class="math inline">\(-0.4\)</span>, <span
+class="math inline">\(-0.1\)</span>, 0.1, <span
+class="math inline">\(-0.2\)</span>, 0.4, 0; their squares add to 0.60,
+so <span class="math inline">\(s = \sqrt{0.60/9} = 0.258\)</span> mA,
+and <span class="math inline">\(\sigma_{\bar x} = 0.258/\sqrt{10} =
+0.082\)</span> mA. For 0.02 mA, <span class="math inline">\(N =
+(0.258/0.02)^2 = 167\)</span> readings. Not necessarily: averaging
+reduces only the random error. A calibration error of the meter is
+untouched, and must be checked separately.</p>
+</details>
+<ol start="5" type="1">
+<li>A screen with a resolution of <span
+class="math inline">\(\sigma_{res} = 0.5\)</span> mm shows a beam spot
+of <span class="math inline">\(\sigma = 1.2\)</span> mm. What is the
+true beam size? What would it be if the screen’s resolution were 1.0 mm,
+and why is that second result less trustworthy?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>Widths add in quadrature, so <span class="math inline">\(\sigma_b =
+\sqrt{1.2^2 - 0.5^2} = 1.09\)</span> mm. With <span
+class="math inline">\(\sigma_{res} = 1.0\)</span> mm, <span
+class="math inline">\(\sigma_b = \sqrt{1.44 - 1.00} = 0.66\)</span> mm.
+In the second case the answer is a small difference of two nearly equal
+squares: a 10 per cent error in the resolution (0.1 mm) would change
+<span class="math inline">\(\sigma_{res}^2\)</span> by 0.21 mm<span
+class="math inline">\(^2\)</span> and the answer from 0.66 mm to about
+0.48 or 0.79 mm. A measurement is only good when the instrument’s
+resolution is well below the size measured.</p>
+</details>
+<ol start="6" type="1">
+<li>A 100-litre chamber at 20 °C is pumped to <span
+class="math inline">\(10^{-6}\)</span> Pa. How many molecules are left,
+and how far apart are they on average? The LHC asks for at most <span
+class="math inline">\(10^{15}\)</span> molecules per m<span
+class="math inline">\(^3\)</span> in a beam pipe at 1.9 K: what pressure
+is that?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(n = p/k_BT = 10^{-6}/(1.380649 \times
+10^{-23} \times 293.15) = 2.47 \times 10^{14}\)</span> m<span
+class="math inline">\(^{-3}\)</span>, so <span
+class="math inline">\(0.1\)</span> m<span
+class="math inline">\(^3\)</span> holds <span class="math inline">\(2.47
+\times 10^{13}\)</span> molecules. Each has on average a volume <span
+class="math inline">\(1/n\)</span>, a cube of side <span
+class="math inline">\(n^{-1/3} = 1.6 \times 10^{-5}\)</span> m, 16 μm.
+At 1.9 K, <span class="math inline">\(p = nk_BT = 10^{15} \times
+1.380649 \times 10^{-23} \times 1.9 = 2.6 \times 10^{-8}\)</span>
+Pa.</p>
+</details>
+<ol start="7" type="1">
+<li>Find the rms speed of helium atoms (4.003 u) at 4.5 K and at 300 K,
+and <span class="math inline">\(k_BT\)</span> in eV at 4.5 K. By what
+factor do the speeds differ, and why?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(m = 4.003 \times 1.66054 \times 10^{-27}
+= 6.647 \times 10^{-27}\)</span> kg. <span class="math inline">\(v_{rms}
+= \sqrt{3k_BT/m}\)</span> gives 167 m/s at 4.5 K and 1367 m/s at 300 K.
+The ratio is <span class="math inline">\(\sqrt{300/4.5} = 8.16\)</span>:
+the mean kinetic energy is proportional to <span
+class="math inline">\(T\)</span>, so the speed goes as <span
+class="math inline">\(\sqrt T\)</span>. At 4.5 K, <span
+class="math inline">\(k_BT = 8.617 \times 10^{-5} \times 4.5 = 3.88
+\times 10^{-4}\)</span> eV.</p>
+</details>
+<ol start="8" type="1">
+<li>A tungsten cathode has a work function of 4.53 eV. Find the
+Boltzmann factor <span class="math inline">\(e^{-E/k_BT}\)</span> for
+<span class="math inline">\(E = 4.53\)</span> eV at 2000 K and at 2500
+K, and their ratio. Richardson’s law multiplies the factor by <span
+class="math inline">\(T^2\)</span>; what is the ratio of the emitted
+currents?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>At 2000 K, <span class="math inline">\(k_BT = 0.1723\)</span> eV and
+<span class="math inline">\(4.53/0.1723 = 26.28\)</span>, so the factor
+is <span class="math inline">\(e^{-26.28} = 3.8 \times
+10^{-12}\)</span>. At 2500 K it is <span
+class="math inline">\(e^{-21.03} = 7.4 \times 10^{-10}\)</span>. The
+ratio is 192. With <span class="math inline">\(T^2\)</span>, <span
+class="math inline">\((2500/2000)^2 = 1.5625\)</span>, and the currents
+differ by a factor of 300. A 25 per cent rise in temperature gives three
+hundred times the current: the exponential, not the <span
+class="math inline">\(T^2\)</span>, does almost all of it.</p>
+</details>
+<ol start="9" type="1">
+<li><ol type="a">
+<li>How often does hydrogen (2.016 u) at <span
+class="math inline">\(10^{-7}\)</span> Pa and 20 °C strike each square
+metre of wall? How long would it take to cover a clean surface holding
+<span class="math inline">\(10^{19}\)</span> molecules per m<span
+class="math inline">\(^2\)</span>, if every molecule stuck? (b) What is
+the mean free path of air at <span
+class="math inline">\(10^{-6}\)</span> Pa?</li>
+</ol></li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li><span class="math inline">\(n = 10^{-7}/(k_B \times 293.15) = 2.47
+\times 10^{13}\)</span> m<span class="math inline">\(^{-3}\)</span> and
+<span class="math inline">\(\bar v = \sqrt{8k_BT/\pi m} = 1755\)</span>
+m/s, so <span class="math inline">\(\Phi = \tfrac14 n\bar v = 1.08
+\times 10^{16}\)</span> m<span class="math inline">\(^{-2}\)</span>
+s<span class="math inline">\(^{-1}\)</span>. A monolayer takes <span
+class="math inline">\(10^{19}/1.08 \times 10^{16} = 920\)</span> s,
+about 15 minutes. (Hydrogen, being light and fast, hits 3.7 times as
+often as nitrogen at the same pressure.) (b) <span
+class="math inline">\(\lambda = k_BT/(\sqrt2\,\pi d^2p)\)</span> with
+<span class="math inline">\(d = 3.7 \times 10^{-10}\)</span> m: <span
+class="math inline">\(4.047 \times 10^{-21}/(1.414 \times 4.30 \times
+10^{-19} \times 10^{-6}) = 6.65 \times 10^3\)</span> m, 6.7 km.</li>
+</ol>
+</details>
+<ol start="10" type="1">
+<li>A string of superconducting magnets has a heat leak of 50 W at 4.5
+K. (a) What is the least electrical power, with the room at 300 K, to
+remove it? (b) What does a real plant using 250 W per W need? (c) If
+instead the heat simply boiled away liquid helium, how many litres an
+hour would be lost?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li><span class="math inline">\(W_{el} = Q(T_a - T)/T = 50 \times
+295.5/4.5 = 3.28\)</span> kW. (b) <span class="math inline">\(50 \times
+250 = 12.5\)</span> kW. (c) Each watt boils about 1.39 litres an hour,
+so 50 W boils about 70 litres an hour, which is why large machines
+recondense their helium instead of buying it.</li>
+</ol>
+</details>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>B. Pascal and P. de Fermat, correspondence of 1654 (in <em>Œuvres de
+Pascal</em>): the problems of de Méré and the beginning of probability,
+for “Dice, and the bell curve”.</li>
+<li>C. F. Gauss, <em>Theoria motus corporum coelestium</em> (1809): the
+Gaussian law of errors and least squares. P.-S. Laplace, <em>Théorie
+analytique des probabilités</em> (1812): the central limit theorem.</li>
+<li>S. D. Poisson, <em>Recherches sur la probabilité des jugements en
+matière criminelle et en matière civile</em> (1837): the Poisson
+distribution.</li>
+<li>E. Rutherford and H. Geiger, with a note by H. Bateman, “The
+probability variations in the distribution of α particles”,
+<em>Philosophical Magazine</em> 20 (1910): the counts of section 6.</li>
+<li>J. C. Maxwell, “Illustrations of the dynamical theory of gases”,
+<em>Philosophical Magazine</em> (1860): the distribution of molecular
+speeds.</li>
+<li>R. P. Feynman, R. B. Leighton and M. Sands, <em>The Feynman Lectures
+on Physics</em>, volume I (Addison-Wesley, 1963): chapter 6
+“Probability” (sections 1 to 3), chapter 39 “The kinetic theory of
+gases” (sections 11 and 12), chapter 40 “The principles of statistical
+mechanics” (the exponential atmosphere and the Boltzmann law, section
+13), chapter 43 “Diffusion” (the mean free path, section 14), chapter 44
+“The laws of thermodynamics” (sections 9 and 16) (free,
+feynmanlectures.caltech.edu).</li>
+<li>J. R. Taylor, <em>An Introduction to Error Analysis</em> (University
+Science Books, 2nd edition 1997): random and systematic errors,
+quadrature, the error of the mean, the binomial, Poisson and Gaussian
+distributions, for sections 2 to 8.</li>
+<li>C. M. Grinstead and J. L. Snell, <em>Introduction to
+Probability</em> (American Mathematical Society, 2nd edition 1997):
+probability from the beginning, the binomial and Poisson distributions
+and the central limit theorem with its proof (free, from the authors’
+Dartmouth pages).</li>
+<li>S. J. Blundell and K. M. Blundell, <em>Concepts in Thermal
+Physics</em> (Oxford University Press, 2nd edition 2010): temperature,
+the Boltzmann factor, the Maxwell-Boltzmann distribution, kinetic
+theory, the mean free path, heat capacities, entropy and the second law,
+for sections 9 to 16.</li>
+<li>F. Reif, <em>Fundamentals of Statistical and Thermal Physics</em>
+(McGraw-Hill, 1965): the same ground at the next level, the step after
+this chapter.</li>
+<li>L. D. Landau and E. M. Lifshitz, <em>Statistical Physics</em>, Part
+1 (Course of Theoretical Physics, volume 5): the Maxwellian distribution
+(§29) and impacts on a wall (§39), as used by chapters 2 and 3.</li>
+<li>J. F. O’Hanlon, <em>A User’s Guide to Vacuum Technology</em> (Wiley,
+3rd edition 2003), chapter 2: the gas laws, wall collisions and the mean
+free path in the units of vacuum work.</li>
+<li>Chapter 17 of this course, section 13, and its sources (Lebrun; the
+<em>Handbook of Accelerator Physics and Engineering</em>): the
+efficiency of real helium refrigerators quoted in section 16.</li>
+</ul>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="F5-waves.html"><span>Previous</span>F5 Oscillations and waves</a>
+<a class="next" href="F7-atoms-and-quanta.html"><span>Next</span>F7 Atoms, nuclei and quanta</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

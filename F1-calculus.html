@@ -1,0 +1,1387 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F1 Calculus · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Part 0, Foundations</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#f1-calculus" id="toc-f1-calculus">F1 Calculus</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-problem-it-solved" id="toc-the-problem-it-solved">The
+problem it solved</a>
+<ul>
+<li><a href="#motion-that-will-not-hold-still"
+id="toc-motion-that-will-not-hold-still">Motion that will not hold
+still</a></li>
+<li><a href="#newton-and-leibniz" id="toc-newton-and-leibniz">Newton and
+Leibniz</a></li>
+<li><a href="#making-it-sound" id="toc-making-it-sound">Making it
+sound</a></li>
+</ul></li>
+<li><a href="#the-mathematics" id="toc-the-mathematics">The
+mathematics</a>
+<ul>
+<li><a href="#0-what-this-chapter-assumes-and-a-quick-check"
+id="toc-0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</a></li>
+<li><a href="#1-rate-of-change-the-derivative"
+id="toc-1-rate-of-change-the-derivative">1. Rate of change: the
+derivative</a></li>
+<li><a href="#2-the-rules-for-derivatives"
+id="toc-2-the-rules-for-derivatives">2. The rules for
+derivatives</a></li>
+<li><a href="#3-sine-and-cosine-in-radians"
+id="toc-3-sine-and-cosine-in-radians">3. Sine and cosine, in
+radians</a></li>
+<li><a href="#4-the-exponential-and-the-logarithm"
+id="toc-4-the-exponential-and-the-logarithm">4. The exponential and the
+logarithm</a></li>
+<li><a href="#5-using-derivatives-small-changes-errors-maxima"
+id="toc-5-using-derivatives-small-changes-errors-maxima">5. Using
+derivatives: small changes, errors, maxima</a></li>
+<li><a href="#6-accumulation-the-integral"
+id="toc-6-accumulation-the-integral">6. Accumulation: the
+integral</a></li>
+<li><a href="#7-the-fundamental-theorem-and-working-integrals-out"
+id="toc-7-the-fundamental-theorem-and-working-integrals-out">7. The
+fundamental theorem, and working integrals out</a></li>
+<li><a href="#8-approximating-a-function-taylor-series"
+id="toc-8-approximating-a-function-taylor-series">8. Approximating a
+function: Taylor series</a></li>
+<li><a href="#9-several-variables-partial-derivatives"
+id="toc-9-several-variables-partial-derivatives">9. Several variables:
+partial derivatives</a></li>
+<li><a href="#10-equations-of-change-first-differential-equations"
+id="toc-10-equations-of-change-first-differential-equations">10.
+Equations of change: first differential equations</a></li>
+<li><a href="#11-when-there-is-no-formula-numbers-on-a-computer"
+id="toc-11-when-there-is-no-formula-numbers-on-a-computer">11. When
+there is no formula: numbers on a computer</a></li>
+</ul></li>
+<li><a href="#where-the-course-uses-it"
+id="toc-where-the-course-uses-it">Where the course uses it</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="f1-calculus">F1 Calculus</h1>
+<p><em>1665 to 1821: Newton’s fluxions, Leibniz’s differentials,
+Cauchy’s limits. The mathematics of anything that changes: how fast it
+changes, how much it adds up to, and how to approximate it. Every
+chapter of the course after this one uses it.</em></p>
+<blockquote>
+<p><strong>What this chapter assumes.</strong> High-school mathematics
+and physics, at the level of SPM Additional Mathematics or A-level:
+algebra, graphs of functions, powers and roots, logarithms, trigonometry
+(sine, cosine and tangent, and the identity <span
+class="math inline">\(\sin^2\theta + \cos^2\theta = 1\)</span>), and the
+ideas of force, speed, acceleration and energy. Nothing else. Section 0
+lists exactly what is used, with a short check.</p>
+<p><strong>What comes next.</strong> <a href="F2-vectors.html">F2
+Vectors and vector calculus</a> uses everything here in three
+dimensions. The pre-requisite sections inside the chapters (for example
+<a
+href="02-the-cathode-ray-tube.html#pre-requisite-ordinary-differential-equations-linear-constant-and-varying-coefficients">Ordinary
+differential equations</a> in chapter 2) take the last sections of this
+chapter further.</p>
+</blockquote>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The problem.</strong> Physics is about things that change:
+the position of an electron between two plates, the pressure in a
+chamber being pumped, the number of atoms left in a radioactive source.
+Algebra handles quantities that are fixed or change at a steady rate. It
+cannot say how fast something is changing at one instant when the rate
+itself is changing, and it cannot add up a quantity whose rate keeps
+changing. Calculus does both.</p>
+<p><strong>The idea.</strong> Look closely enough at any smooth curve
+and it looks straight. Over a small enough step, every changing quantity
+changes at a steady rate, and algebra works again. The
+<em>derivative</em> is the rate over a step so small that the curve is
+straight. The <em>integral</em> adds up many such small steps. The two
+are inverse operations: this is the fundamental theorem of calculus.
+Once it is understood, differential equations (laws that say how a
+quantity changes) can be solved, and functions can be approximated by
+polynomials (Taylor series), which is how most formulas in the course
+are simplified.</p>
+<p><strong>Equations to remember.</strong></p>
+<ul>
+<li>Derivative: <span class="math inline">\(\dfrac{df}{dx} = \lim_{h\to
+0}\dfrac{f(x+h) - f(x)}{h}\)</span>, the slope of the curve <span
+class="math inline">\(y = f(x)\)</span> at <span
+class="math inline">\(x\)</span>.</li>
+<li>Rules: <span class="math inline">\(\dfrac{d}{dx}x^n =
+nx^{n-1}\)</span>; <span class="math inline">\((fg)&#39; = f&#39;g +
+fg&#39;\)</span>; <span class="math inline">\(\dfrac{d}{dx}f(g(x)) =
+f&#39;(g(x))\,g&#39;(x)\)</span>.</li>
+<li><span class="math inline">\(\dfrac{d}{dx}\sin x = \cos x\)</span>
+and <span class="math inline">\(\dfrac{d}{dx}\cos x = -\sin x\)</span>,
+with <span class="math inline">\(x\)</span> in radians; <span
+class="math inline">\(\dfrac{d}{dx}e^x = e^x\)</span>; <span
+class="math inline">\(\dfrac{d}{dx}\ln x = \dfrac{1}{x}\)</span>.</li>
+<li>Small changes: <span class="math inline">\(\Delta f \approx
+f&#39;(x)\,\Delta x\)</span>; for <span class="math inline">\(f =
+x^n\)</span>, <span class="math inline">\(\dfrac{\Delta f}{f} \approx
+n\dfrac{\Delta x}{x}\)</span>.</li>
+<li>Fundamental theorem: <span
+class="math inline">\(\displaystyle\int_a^b f&#39;(x)\,dx = f(b) -
+f(a)\)</span>.</li>
+<li>Taylor series: <span class="math inline">\(f(a + h) = f(a) +
+f&#39;(a)\,h + \tfrac{1}{2}f&#39;&#39;(a)\,h^2 +
+\tfrac{1}{6}f&#39;&#39;&#39;(a)\,h^3 + \dots\)</span>; in particular
+<span class="math inline">\((1+x)^n \approx 1 + nx\)</span> for small
+<span class="math inline">\(x\)</span>.</li>
+<li>Decay: <span class="math inline">\(\dfrac{dN}{dt} = -\lambda
+N\)</span> has the solution <span class="math inline">\(N = N_0
+e^{-\lambda t}\)</span>, with time constant <span
+class="math inline">\(\tau = 1/\lambda\)</span>.</li>
+<li>Oscillation: <span class="math inline">\(\dfrac{d^2x}{dt^2} =
+-\omega^2 x\)</span> has the solution <span class="math inline">\(x =
+A\cos\omega t + B\sin\omega t\)</span>.</li>
+</ul>
+<p><strong>Numbers worth knowing.</strong></p>
+<ul>
+<li><span class="math inline">\(e = 2.71828\)</span>; <span
+class="math inline">\(\ln 2 = 0.6931\)</span>, <span
+class="math inline">\(\ln 10 = 2.3026\)</span>.</li>
+<li>An electron in a field of 200 kV/m (2 kV across 1 cm) accelerates at
+<span class="math inline">\(3.52 \times 10^{16}\)</span> m/s<span
+class="math inline">\(^2\)</span> and crosses the centimetre in 0.754
+ns.</li>
+<li>A 100-litre chamber pumped at 50 litres per second loses pressure
+with a time constant of 2 s, and falls from atmospheric pressure to 1 Pa
+in 23 s, if nothing else feeds gas in.</li>
+<li><span class="math inline">\(\gamma = 1/\sqrt{1 - \beta^2} \approx 1
++ \beta^2/2\)</span> for small <span
+class="math inline">\(\beta\)</span>; at <span
+class="math inline">\(\beta = 0.5\)</span> this gives 1.125 against the
+true 1.1547.</li>
+<li>At 2500 K, a 1 per cent rise in a tungsten cathode’s temperature
+raises its current by 23 per cent on the small-change rule and by 26 per
+cent exactly: small-change rules fail when the change is not small.</li>
+</ul>
+<h2 id="the-problem-it-solved">The problem it solved</h2>
+<h3 id="motion-that-will-not-hold-still">Motion that will not hold
+still</h3>
+<p>Galileo, around 1604, found that a ball rolling down a ramp covers
+distances in proportion to the square of the time. He could state that,
+but he had no general way to say how fast the ball was going at a given
+instant, since its speed was different at every instant. Kepler, in
+1609, found that a planet sweeps out equal areas in equal times. Adding
+up an area bounded by a curve was a problem the Greeks had solved only
+for special shapes, by long and clever arguments.</p>
+<h3 id="newton-and-leibniz">Newton and Leibniz</h3>
+<p>Isaac Newton, in 1665 and 1666, with Cambridge closed by plague,
+worked out what he called the method of fluxions: a “fluent” quantity
+flows in time, and its “fluxion” is its rate of flow. He used it for
+tangents, areas, and later for the motion of the planets, but published
+little of it for decades. Gottfried Wilhelm Leibniz developed the same
+mathematics independently and published first, in 1684, in a paper
+titled <em>Nova Methodus pro Maximis et Minimis</em> (A new method for
+maxima and minima). His notation, <span
+class="math inline">\(dy/dx\)</span> for a rate and <span
+class="math inline">\(\int y\,dx\)</span> for a sum (the long S of
+<em>summa</em>), is the one used today. The two men and their followers
+fought for decades over who had priority. Both had it: Newton first,
+Leibniz independently and in print.</p>
+<h3 id="making-it-sound">Making it sound</h3>
+<p>Neither Newton nor Leibniz could say exactly what a quantity
+“infinitely small but not zero” was, and the bishop George Berkeley
+mocked them for it in 1734. The answer came in 1821, when Augustin-Louis
+Cauchy’s <em>Cours d’analyse</em> built calculus on the <em>limit</em>:
+not a number that is infinitely small, but what a ratio approaches as a
+step is made as small as one likes. That is the version taught here.</p>
+<h2 id="the-mathematics">The mathematics</h2>
+<h3 id="0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</h3>
+<p>Everything here is built from high-school mathematics. These are the
+facts used, in the form they are used.</p>
+<ul>
+<li><strong>Powers.</strong> <span class="math inline">\(x^a x^b =
+x^{a+b}\)</span>, <span class="math inline">\((x^a)^b = x^{ab}\)</span>,
+<span class="math inline">\(x^{-a} = 1/x^a\)</span>, <span
+class="math inline">\(x^{1/2} = \sqrt{x}\)</span>, <span
+class="math inline">\(x^0 = 1\)</span>.</li>
+<li><strong>Logarithms.</strong> <span class="math inline">\(\log_{10}
+1000 = 3\)</span> because <span class="math inline">\(10^3 =
+1000\)</span>. The rules: <span class="math inline">\(\log(xy) = \log x
++ \log y\)</span>, <span class="math inline">\(\log(x^n) = n\log
+x\)</span>. Section 4 introduces the natural logarithm <span
+class="math inline">\(\ln\)</span>, the logarithm to base <span
+class="math inline">\(e\)</span>.</li>
+<li><strong>Trigonometry.</strong> In a right-angled triangle with
+hypotenuse 1 and angle <span class="math inline">\(\theta\)</span>, the
+sides are <span class="math inline">\(\sin\theta\)</span> and <span
+class="math inline">\(\cos\theta\)</span>. Then <span
+class="math inline">\(\sin^2\theta + \cos^2\theta = 1\)</span>, and the
+addition formulas are <span class="math inline">\(\sin(a + b) = \sin
+a\cos b + \cos a\sin b\)</span> and <span class="math inline">\(\cos(a +
+b) = \cos a\cos b - \sin a\sin b\)</span>.</li>
+<li><strong>Straight lines.</strong> The line through <span
+class="math inline">\((x_1, y_1)\)</span> and <span
+class="math inline">\((x_2, y_2)\)</span> has slope <span
+class="math inline">\((y_2 - y_1)/(x_2 - x_1)\)</span>. A line with
+slope <span class="math inline">\(m\)</span> rises <span
+class="math inline">\(m\)</span> units for every unit along.</li>
+<li><strong>Speed and acceleration.</strong> At a steady speed <span
+class="math inline">\(v\)</span>, distance is <span
+class="math inline">\(vt\)</span>. With a steady acceleration <span
+class="math inline">\(a\)</span> from rest, the speed is <span
+class="math inline">\(at\)</span> and the distance <span
+class="math inline">\(\tfrac12 at^2\)</span>.</li>
+</ul>
+<p><strong>Check yourself.</strong> (a) Simplify <span
+class="math inline">\(x^3/x^{-2}\)</span>. (b) Solve <span
+class="math inline">\(10^x = 50\)</span>. (c) If <span
+class="math inline">\(\sin\theta = 0.6\)</span> and <span
+class="math inline">\(\theta\)</span> is acute, find <span
+class="math inline">\(\cos\theta\)</span>. (d) Find the slope of the
+line through <span class="math inline">\((1, 2)\)</span> and <span
+class="math inline">\((4, 11)\)</span>. Answers: (a) <span
+class="math inline">\(x^5\)</span>; (b) <span class="math inline">\(x =
+\log_{10}50 = 1.699\)</span>; (c) <span
+class="math inline">\(0.8\)</span>; (d) <span
+class="math inline">\(3\)</span>. If any of these is unclear, revise it
+first; the rest of the chapter builds on all four.</p>
+<h3 id="1-rate-of-change-the-derivative">1. Rate of change: the
+derivative</h3>
+<p><strong>The picture.</strong> A car’s speedometer shows the speed at
+this instant, not the average over the trip. How can a speed belong to
+an instant, when in an instant the car goes nowhere? The answer is to
+take the average speed over a short interval, then a shorter one, then a
+shorter one, and see what number the averages settle on.</p>
+<p><strong>An example.</strong> An electron starts at rest between two
+parallel plates 1 cm apart, with 2 kV between them. The field, the
+voltage per metre, is <span class="math inline">\(\mathcal{E} =
+2000/0.01 = 2 \times 10^5\)</span> V/m. (The script letter <span
+class="math inline">\(\mathcal{E}\)</span> is the course’s symbol for
+electric field, keeping <span class="math inline">\(E\)</span> for
+energy.) The force on the electron is <span
+class="math inline">\(e\mathcal{E}\)</span>, and Newton’s second law
+gives its acceleration <span class="math inline">\(a =
+e\mathcal{E}/m_e\)</span>. With <span class="math inline">\(e/m_e =
+1.7588 \times 10^{11}\)</span> C/kg,</p>
+<p><span class="math display">\[
+a = 1.7588 \times 10^{11} \times 2 \times 10^5 = 3.518 \times 10^{16}\
+\text{m/s}^2 .
+\]</span></p>
+<p>That is <span class="math inline">\(3.6 \times 10^{15}\)</span> times
+the acceleration of gravity, so gravity can be forgotten. From
+high-school physics, its distance from the starting plate after time
+<span class="math inline">\(t\)</span> is <span
+class="math inline">\(x(t) = \tfrac12 at^2\)</span>.</p>
+<p>What is its speed at <span class="math inline">\(t = 0.5\)</span> ns?
+Take the average speed over a short interval from <span
+class="math inline">\(t\)</span> to <span class="math inline">\(t +
+h\)</span>:</p>
+<p><span class="math display">\[
+\frac{x(t+h) - x(t)}{h} = \frac{\tfrac12 a (t+h)^2 - \tfrac12 a t^2}{h}
+= \frac{\tfrac12 a (2th + h^2)}{h} = at + \tfrac12 ah .
+\]</span></p>
+<p>The average depends on the interval <span
+class="math inline">\(h\)</span>. But as <span
+class="math inline">\(h\)</span> is made smaller, the term <span
+class="math inline">\(\tfrac12 ah\)</span> shrinks towards zero and the
+average settles on <span class="math inline">\(at\)</span>. That number
+is the speed at the instant <span class="math inline">\(t\)</span>:
+<span class="math inline">\(v = at = 3.518 \times 10^{16} \times 0.5
+\times 10^{-9} = 1.76 \times 10^7\)</span> m/s.</p>
+<p><strong>The definition.</strong> For any function <span
+class="math inline">\(f(x)\)</span>, the <em>derivative</em> at <span
+class="math inline">\(x\)</span> is</p>
+<p><span class="math display">\[
+f&#39;(x) = \frac{df}{dx} = \lim_{h \to 0}\frac{f(x + h) - f(x)}{h} .
+\]</span></p>
+<p>The symbol <span class="math inline">\(\lim_{h \to 0}\)</span> means:
+the number the fraction approaches as <span
+class="math inline">\(h\)</span> is made as small as one likes, without
+<span class="math inline">\(h\)</span> ever being zero. (At <span
+class="math inline">\(h = 0\)</span> the fraction would be <span
+class="math inline">\(0/0\)</span>, which means nothing; the limit asks
+what happens on the way there.) Geometrically, <span
+class="math inline">\((f(x+h) - f(x))/h\)</span> is the slope of the
+straight line through two points of the curve, and as <span
+class="math inline">\(h\)</span> shrinks the line turns into the
+<em>tangent</em>, the straight line that just touches the curve at <span
+class="math inline">\(x\)</span>. The derivative is the slope of the
+tangent.</p>
+<p><strong>Notation.</strong> Three notations are in common use, and the
+course uses all of them:</p>
+<ul>
+<li><span class="math inline">\(f&#39;(x)\)</span>, Lagrange’s, for a
+function of one variable.</li>
+<li><span class="math inline">\(\dfrac{df}{dx}\)</span>, Leibniz’s. It
+reads as “a small change in <span class="math inline">\(f\)</span>
+divided by the small change in <span class="math inline">\(x\)</span>
+that caused it”, which is exactly what it is in the limit. Its units are
+the units of <span class="math inline">\(f\)</span> divided by the units
+of <span class="math inline">\(x\)</span>: a derivative of metres with
+respect to seconds is in m/s.</li>
+<li><span class="math inline">\(\dot x\)</span>, Newton’s dot, for a
+derivative with respect to time only: <span class="math inline">\(\dot x
+= dx/dt\)</span> is a speed, and two dots, <span
+class="math inline">\(\ddot x = d^2x/dt^2\)</span>, the derivative of
+the derivative, is an acceleration.</li>
+</ul>
+<p><strong>The second derivative.</strong> Differentiate twice and the
+result is the rate at which the slope changes, written <span
+class="math inline">\(f&#39;&#39;(x)\)</span> or <span
+class="math inline">\(d^2f/dx^2\)</span>. For the electron, <span
+class="math inline">\(\dot x = at\)</span> and <span
+class="math inline">\(\ddot x = a\)</span>: the speed grows at the
+steady rate <span class="math inline">\(a\)</span>, as it should. Where
+<span class="math inline">\(f&#39;&#39; &gt; 0\)</span> the curve bends
+upwards (the slope is increasing); where <span
+class="math inline">\(f&#39;&#39; &lt; 0\)</span> it bends
+downwards.</p>
+<p><strong>When there is no derivative.</strong> The limit has to exist.
+At a sharp corner, like <span class="math inline">\(|x|\)</span> at
+<span class="math inline">\(x = 0\)</span>, the slope from the left is
+<span class="math inline">\(-1\)</span> and from the right is <span
+class="math inline">\(+1\)</span>, and no single tangent exists.
+Physical quantities are almost always smooth enough; where they are not
+(a voltage switched on at an instant, the edge of a magnet’s field in a
+simple model), the course says so.</p>
+<h3 id="2-the-rules-for-derivatives">2. The rules for derivatives</h3>
+<p>Working out every derivative from the limit would be slow. A few
+rules, each proved once from the definition, handle every function in
+the course.</p>
+<p><strong>Constants and sums.</strong> A constant does not change, so
+its derivative is 0. Multiplying a function by a constant multiplies its
+slope by the same constant: <span class="math inline">\((cf)&#39; =
+cf&#39;\)</span>. The slope of a sum is the sum of the slopes: <span
+class="math inline">\((f + g)&#39; = f&#39; + g&#39;\)</span>.</p>
+<p><strong>Powers.</strong> For <span class="math inline">\(f(x) =
+x^n\)</span> with <span class="math inline">\(n\)</span> a whole number,
+expand <span class="math inline">\((x + h)^n\)</span> by the binomial
+theorem: <span class="math inline">\((x + h)^n = x^n + nx^{n-1}h +
+(\text{terms with } h^2, h^3, \dots)\)</span>. Then</p>
+<p><span class="math display">\[
+\frac{(x+h)^n - x^n}{h} = nx^{n-1} + (\text{terms with } h, h^2, \dots)
+\ \longrightarrow\ nx^{n-1} .
+\]</span></p>
+<p>So <span class="math inline">\(\dfrac{d}{dx}x^n = nx^{n-1}\)</span>.
+The same rule holds for any real power <span
+class="math inline">\(n\)</span>, including negative and fractional ones
+(section 4 shows why): <span
+class="math inline">\(\dfrac{d}{dx}\dfrac{1}{x} =
+-\dfrac{1}{x^2}\)</span> and <span
+class="math inline">\(\dfrac{d}{dx}\sqrt{x} =
+\dfrac{1}{2\sqrt{x}}\)</span>.</p>
+<p><strong>Products.</strong> For <span
+class="math inline">\(f(x)g(x)\)</span>, the change over a small step
+is</p>
+<p><span class="math display">\[
+f(x+h)g(x+h) - f(x)g(x) = \big[f(x+h) - f(x)\big]g(x+h) +
+f(x)\big[g(x+h) - g(x)\big] .
+\]</span></p>
+<p>Divide by <span class="math inline">\(h\)</span> and let <span
+class="math inline">\(h \to 0\)</span>:</p>
+<p><span class="math display">\[
+(fg)&#39; = f&#39;g + fg&#39; .
+\]</span></p>
+<p>Picture a rectangle of sides <span class="math inline">\(f\)</span>
+and <span class="math inline">\(g\)</span>. When both sides grow a
+little, the area grows by a strip along each side, <span
+class="math inline">\(g\,\Delta f\)</span> and <span
+class="math inline">\(f\,\Delta g\)</span>, plus a tiny corner <span
+class="math inline">\(\Delta f\,\Delta g\)</span> that vanishes faster
+than the strips.</p>
+<p><strong>Quotients.</strong> From the product rule applied to <span
+class="math inline">\(f = (f/g)\,g\)</span>:</p>
+<p><span class="math display">\[
+\left(\frac{f}{g}\right)&#39; = \frac{f&#39;g - fg&#39;}{g^2} .
+\]</span></p>
+<p><strong>The chain rule.</strong> Most functions in physics are
+functions of functions. The Lorentz factor <span
+class="math inline">\(\gamma = (1 - \beta^2)^{-1/2}\)</span> is a power
+of <span class="math inline">\(u = 1 - \beta^2\)</span>, which is itself
+a function of <span class="math inline">\(\beta\)</span>. If <span
+class="math inline">\(y\)</span> depends on <span
+class="math inline">\(u\)</span> and <span
+class="math inline">\(u\)</span> depends on <span
+class="math inline">\(x\)</span>, a small change <span
+class="math inline">\(\Delta x\)</span> causes <span
+class="math inline">\(\Delta u \approx \dfrac{du}{dx}\Delta x\)</span>,
+which causes <span class="math inline">\(\Delta y \approx
+\dfrac{dy}{du}\Delta u\)</span>. So</p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{dy}{du}\,\frac{du}{dx} .
+\]</span></p>
+<p>Rates multiply along the chain: if <span
+class="math inline">\(u\)</span> changes 3 times as fast as <span
+class="math inline">\(x\)</span>, and <span
+class="math inline">\(y\)</span> changes 2 times as fast as <span
+class="math inline">\(u\)</span>, then <span
+class="math inline">\(y\)</span> changes 6 times as fast as <span
+class="math inline">\(x\)</span>. Leibniz’s notation makes it look like
+cancelling the <span class="math inline">\(du\)</span>, which is a good
+way to remember it.</p>
+<p><strong>Example: how fast <span class="math inline">\(\gamma\)</span>
+grows with speed.</strong> With <span class="math inline">\(u = 1 -
+\beta^2\)</span>, <span class="math inline">\(\gamma =
+u^{-1/2}\)</span>:</p>
+<p><span class="math display">\[
+\frac{d\gamma}{d\beta} = -\tfrac12 u^{-3/2} \times (-2\beta) = \beta\,(1
+- \beta^2)^{-3/2} = \beta\gamma^3 .
+\]</span></p>
+<p>At <span class="math inline">\(\beta = 0.9\)</span>, <span
+class="math inline">\(\gamma = 2.294\)</span> and <span
+class="math inline">\(d\gamma/d\beta = 10.9\)</span>. At <span
+class="math inline">\(\beta = 0.99\)</span>, <span
+class="math inline">\(\gamma = 7.089\)</span> and <span
+class="math inline">\(d\gamma/d\beta = 353\)</span>. Near the speed of
+light, a tiny gain in speed needs a huge gain in energy (energy is <span
+class="math inline">\(\gamma m c^2\)</span>, chapter 1). This is the
+first sign of why accelerators stop measuring progress in speed and
+measure it in energy.</p>
+<h3 id="3-sine-and-cosine-in-radians">3. Sine and cosine, in
+radians</h3>
+<p><strong>Radians.</strong> An angle in radians is the length of arc it
+cuts from a circle of radius 1. A full turn is <span
+class="math inline">\(2\pi\)</span> radians, so <span
+class="math inline">\(180°\)</span> is <span
+class="math inline">\(\pi\)</span> radians and 1 radian is <span
+class="math inline">\(57.30°\)</span>. Calculus uses radians because
+then, for a small angle <span class="math inline">\(\theta\)</span>, the
+arc <span class="math inline">\(\theta\)</span> and the half-chord <span
+class="math inline">\(\sin\theta\)</span> are almost the same
+length:</p>
+<p><span class="math display">\[
+\lim_{\theta \to 0}\frac{\sin\theta}{\theta} = 1 .
+\]</span></p>
+<p>Numerically, <span class="math inline">\(\sin 0.1 = 0.09983\)</span>,
+within 0.17 per cent of 0.1. In degrees the ratio would tend to <span
+class="math inline">\(\pi/180\)</span> instead, and every formula below
+would carry that factor.</p>
+<p>The second limit needed is for the cosine. Since <span
+class="math inline">\(1 - \cos\theta = \dfrac{\sin^2\theta}{1 +
+\cos\theta}\)</span> (multiply top and bottom by <span
+class="math inline">\(1 + \cos\theta\)</span> and use <span
+class="math inline">\(\sin^2 + \cos^2 = 1\)</span>),</p>
+<p><span class="math display">\[
+\frac{1 - \cos\theta}{\theta} =
+\frac{\sin\theta}{\theta}\cdot\frac{\sin\theta}{1 + \cos\theta} \
+\longrightarrow\ 1 \times \frac{0}{2} = 0 .
+\]</span></p>
+<p><strong>The derivatives.</strong> With the addition formula,</p>
+<p><span class="math display">\[
+\frac{\sin(x + h) - \sin x}{h} = \sin x\,\frac{\cos h - 1}{h} + \cos
+x\,\frac{\sin h}{h} \ \longrightarrow\ \cos x .
+\]</span></p>
+<p>The same steps with the cosine’s addition formula give <span
+class="math inline">\((\cos x)&#39; = -\sin x\)</span>. So:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\sin x = \cos x, \qquad \frac{d}{dx}\cos x = -\sin x .
+\]</span></p>
+<p>Differentiate the sine twice and it comes back as minus itself: <span
+class="math inline">\((\sin x)&#39;&#39; = -\sin x\)</span>. That one
+fact is behind every oscillation in the course (section 10).</p>
+<p><strong>With a rate inside.</strong> An RF voltage (a voltage that
+oscillates at radio frequency, chapter 9 onwards) is written <span
+class="math inline">\(V(t) = V_0\sin(\omega t)\)</span>, with <span
+class="math inline">\(\omega\)</span> the angular frequency in radians
+per second, <span class="math inline">\(\omega = 2\pi f\)</span> for a
+frequency <span class="math inline">\(f\)</span> in hertz. By the chain
+rule, <span class="math inline">\(\dfrac{dV}{dt} =
+V_0\,\omega\cos(\omega t)\)</span>. The voltage changes fastest as it
+crosses zero, at the rate <span
+class="math inline">\(V_0\omega\)</span>. For <span
+class="math inline">\(V_0 = 100\)</span> kV at <span
+class="math inline">\(f = 200\)</span> MHz, that is <span
+class="math inline">\(10^5 \times 2\pi \times 2 \times 10^8 = 1.26
+\times 10^{14}\)</span> volts per second.</p>
+<h3 id="4-the-exponential-and-the-logarithm">4. The exponential and the
+logarithm</h3>
+<p><strong>A function that is its own rate.</strong> Many quantities
+change at a rate proportional to themselves: the number of radioactive
+atoms that decay each second is proportional to the number present, and
+the gas a pump removes each second is proportional to the gas there is.
+The simplest such function is the one whose rate equals itself:</p>
+<p><span class="math display">\[
+\frac{d}{dx}f(x) = f(x), \qquad f(0) = 1 .
+\]</span></p>
+<p>This function is called the <em>exponential</em>, <span
+class="math inline">\(e^x\)</span> or <span
+class="math inline">\(\exp(x)\)</span>. Why is it a power of a number?
+Any power <span class="math inline">\(a^x\)</span> has the
+derivative</p>
+<p><span class="math display">\[
+\frac{a^{x+h} - a^x}{h} = a^x\,\frac{a^h - 1}{h},
+\]</span></p>
+<p>which is <span class="math inline">\(a^x\)</span> times a constant
+that depends only on <span class="math inline">\(a\)</span>. For <span
+class="math inline">\(a = 2\)</span> the constant is <span
+class="math inline">\(0.693\)</span>; for <span class="math inline">\(a
+= 3\)</span> it is <span class="math inline">\(1.099\)</span>. In
+between there is one number for which the constant is exactly 1. That
+number is <span class="math inline">\(e = 2.71828\ldots\)</span>, and it
+can be computed as the limit of <span class="math inline">\((1 +
+1/n)^n\)</span> as <span class="math inline">\(n\)</span> grows: <span
+class="math inline">\((1.01)^{100} = 2.7048\)</span>, <span
+class="math inline">\((1.0001)^{10000} = 2.7181\)</span>.</p>
+<p><strong>The natural logarithm.</strong> The inverse of <span
+class="math inline">\(e^x\)</span> is the natural logarithm, <span
+class="math inline">\(\ln x\)</span>: <span
+class="math inline">\(\ln(e^x) = x\)</span> and <span
+class="math inline">\(e^{\ln x} = x\)</span>. It obeys the usual rules
+of logarithms. Its derivative follows from the chain rule applied to
+<span class="math inline">\(e^{\ln x} = x\)</span>: differentiating both
+sides, <span class="math inline">\(e^{\ln x}\,(\ln x)&#39; = 1\)</span>,
+so</p>
+<p><span class="math display">\[
+\frac{d}{dx}\ln x = \frac{1}{x} .
+\]</span></p>
+<p>Two consequences used throughout the course:</p>
+<ul>
+<li>Any power can be written with base <span
+class="math inline">\(e\)</span>: <span class="math inline">\(a^x =
+e^{x\ln a}\)</span>, so <span class="math inline">\((a^x)&#39; = a^x\ln
+a\)</span>. The constant 0.693 above was <span class="math inline">\(\ln
+2\)</span>.</li>
+<li>For any real power <span class="math inline">\(n\)</span>, <span
+class="math inline">\(x^n = e^{n\ln x}\)</span>, so <span
+class="math inline">\((x^n)&#39; = x^n \cdot n/x = nx^{n-1}\)</span>.
+This proves the power rule for every <span
+class="math inline">\(n\)</span>, not only whole numbers.</li>
+</ul>
+<p><strong>Exponential decay.</strong> The function <span
+class="math inline">\(e^{-x/\tau}\)</span> falls by a factor <span
+class="math inline">\(e\)</span> for every step <span
+class="math inline">\(\tau\)</span> in <span
+class="math inline">\(x\)</span>, and its slope at any point is <span
+class="math inline">\(-1/\tau\)</span> times its value. After one <span
+class="math inline">\(\tau\)</span> it is at <span
+class="math inline">\(1/e = 36.8\)</span> per cent; after two, 13.5 per
+cent; after <span class="math inline">\(\tau\ln 2 = 0.693\tau\)</span>,
+at one half. Section 10 shows where it comes from in physics.</p>
+<p><strong>The logarithmic derivative.</strong> Since <span
+class="math inline">\((\ln f)&#39; = f&#39;/f\)</span>, the derivative
+of a logarithm measures <em>relative</em> change: the fractional change
+of <span class="math inline">\(f\)</span> per unit change of <span
+class="math inline">\(x\)</span>. Chapter 2 uses this to find how
+sensitive a hot cathode’s current is to its temperature.</p>
+<h3 id="5-using-derivatives-small-changes-errors-maxima">5. Using
+derivatives: small changes, errors, maxima</h3>
+<p><strong>Small changes.</strong> Close to a point, a curve is nearly
+its tangent. So a small change <span class="math inline">\(\Delta
+x\)</span> causes a change</p>
+<p><span class="math display">\[
+\Delta f \approx f&#39;(x)\,\Delta x .
+\]</span></p>
+<p>For a power <span class="math inline">\(f = Cx^n\)</span>, dividing
+by <span class="math inline">\(f\)</span> gives a rule worth
+remembering:</p>
+<p><span class="math display">\[
+\frac{\Delta f}{f} \approx n\,\frac{\Delta x}{x} .
+\]</span></p>
+<p>A quantity that goes as the square doubles any small relative error;
+one that goes as the square root halves it. The Child–Langmuir law of
+chapter 2 says the current through a gap goes as <span
+class="math inline">\(V^{3/2}/d^2\)</span>, so a 1 per cent error in the
+gap <span class="math inline">\(d\)</span> becomes a 2 per cent error in
+the current, and a 1 per cent error in the voltage a 1.5 per cent
+error.</p>
+<p><strong>When “small” stops being small.</strong> A hot tungsten
+cathode emits a current density <span class="math inline">\(J = A T^2
+e^{-W/(k_B T)}\)</span> (chapter 2), where <span
+class="math inline">\(T\)</span> is the temperature, <span
+class="math inline">\(W = 4.53\)</span> eV the work function and <span
+class="math inline">\(k_B = 8.617 \times 10^{-5}\)</span> eV/K
+Boltzmann’s constant. Its logarithmic derivative is</p>
+<p><span class="math display">\[
+\frac{d\ln J}{d\ln T} = 2 + \frac{W}{k_B T} .
+\]</span></p>
+<p>At 2500 K this is <span class="math inline">\(2 + 21.03 =
+23.03\)</span>. A 1 per cent rise in temperature should raise the
+current by about 23 per cent. The exact calculation gives <span
+class="math inline">\(1.01^2 \times e^{21.03 \times (1 - 1/1.01)} =
+1.256\)</span>, a 26 per cent rise. The small-change rule is only the
+first term of an approximation (section 8 gives the rest); it is good
+when <span class="math inline">\(f&#39;\Delta x\)</span> is small
+compared with <span class="math inline">\(f\)</span>, and here 23 per
+cent is not small.</p>
+<p><strong>Maxima and minima.</strong> At the top of a hill or the
+bottom of a valley the tangent is level, so <span
+class="math inline">\(f&#39;(x) = 0\)</span>. The second derivative
+tells which: <span class="math inline">\(f&#39;&#39; &lt; 0\)</span> for
+a maximum, <span class="math inline">\(f&#39;&#39; &gt; 0\)</span> for a
+minimum.</p>
+<p><em>Example: matching a load.</em> A source of voltage <span
+class="math inline">\(V\)</span> with internal resistance <span
+class="math inline">\(r\)</span> drives a load resistance <span
+class="math inline">\(R\)</span>. The current is <span
+class="math inline">\(I = V/(R + r)\)</span> and the power into the load
+is</p>
+<p><span class="math display">\[
+P(R) = I^2R = \frac{V^2 R}{(R + r)^2} .
+\]</span></p>
+<p>By the quotient rule, <span class="math inline">\(P&#39;(R) =
+V^2\,\dfrac{(R + r)^2 - 2R(R + r)}{(R + r)^4} = V^2\,\dfrac{r - R}{(R +
+r)^3}\)</span>, which is zero at <span class="math inline">\(R =
+r\)</span>. The power is largest when the load matches the source, and
+is then <span class="math inline">\(V^2/(4r)\)</span>: 50 W from a 100 V
+source with <span class="math inline">\(r = 50\ \Omega\)</span>. Chapter
+13 meets the same idea when RF power has to pass from a klystron into a
+cavity without being reflected.</p>
+<h3 id="6-accumulation-the-integral">6. Accumulation: the integral</h3>
+<p><strong>The picture.</strong> If a car’s speed is steady at <span
+class="math inline">\(v\)</span>, the distance after time <span
+class="math inline">\(t\)</span> is <span
+class="math inline">\(vt\)</span>: the area of a rectangle of height
+<span class="math inline">\(v\)</span> and width <span
+class="math inline">\(t\)</span> on a graph of speed against time. If
+the speed changes, cut the time into many short intervals <span
+class="math inline">\(\Delta t\)</span>. In each, the speed is nearly
+steady, and the distance is nearly <span class="math inline">\(v\,\Delta
+t\)</span>, the area of a thin strip. Add the strips:</p>
+<p><span class="math display">\[
+\text{distance} \approx \sum_i v(t_i)\,\Delta t .
+\]</span></p>
+<p>As the strips are made thinner, the sum settles on the area under the
+curve of <span class="math inline">\(v(t)\)</span>. That limit is the
+<em>integral</em>:</p>
+<p><span class="math display">\[
+\int_{t_1}^{t_2} v(t)\,dt = \lim_{\Delta t \to 0}\sum_i v(t_i)\,\Delta t
+.
+\]</span></p>
+<p>The <span class="math inline">\(\int\)</span> is a stretched S for
+<em>sum</em>, <span class="math inline">\(dt\)</span> is the width of a
+strip that has become infinitely thin, and <span
+class="math inline">\(t_1\)</span> and <span
+class="math inline">\(t_2\)</span> are the <em>limits</em> of the
+integral, where the adding starts and stops. The units are those of
+<span class="math inline">\(v\)</span> times those of <span
+class="math inline">\(t\)</span>: m/s times s gives metres. Where <span
+class="math inline">\(v\)</span> is negative the strips count as
+negative area: going backwards subtracts distance.</p>
+<p><strong>Integrals in physics.</strong> The same pattern appears every
+time a rate is added up over a range:</p>
+<ul>
+<li>Distance is the integral of speed over time; speed is the integral
+of acceleration over time.</li>
+<li>Charge is the integral of current over time: <span
+class="math inline">\(Q = \int I\,dt\)</span>.</li>
+<li>Work is the integral of force over distance: <span
+class="math inline">\(W = \int F\,dx\)</span>. When a charge <span
+class="math inline">\(q\)</span> crosses a region with electric field
+<span class="math inline">\(\mathcal{E}(x)\)</span>, the force is <span
+class="math inline">\(q\mathcal{E}\)</span> and the energy it gains is
+<span class="math inline">\(q\int\mathcal{E}\,dx = qV\)</span>, the
+charge times the voltage. That is why accelerators are rated in
+volts.</li>
+<li>Mass is the integral of density over volume; the number of particles
+in a beam is the integral of the beam’s density.</li>
+</ul>
+<h3 id="7-the-fundamental-theorem-and-working-integrals-out">7. The
+fundamental theorem, and working integrals out</h3>
+<p><strong>Why integrating undoes differentiating.</strong> Let <span
+class="math inline">\(F(t)\)</span> be the distance travelled by time
+<span class="math inline">\(t\)</span>. Over a small extra interval
+<span class="math inline">\(h\)</span> the distance grows by about <span
+class="math inline">\(v(t)\,h\)</span>, so <span
+class="math inline">\(F&#39;(t) = v(t)\)</span>: the rate at which the
+area under a curve grows is the height of the curve. Then, for any
+function <span class="math inline">\(F\)</span> whose derivative is
+<span class="math inline">\(f\)</span>,</p>
+<p><span class="math display">\[
+\int_a^b f(x)\,dx = F(b) - F(a) .
+\]</span></p>
+<p>This is the <em>fundamental theorem of calculus</em>. It turns the
+hard problem (adding up infinitely many strips) into an easier one
+(finding a function whose derivative is <span
+class="math inline">\(f\)</span>). Such a function <span
+class="math inline">\(F\)</span> is an <em>antiderivative</em> of <span
+class="math inline">\(f\)</span>, also written <span
+class="math inline">\(\int f\,dx\)</span> without limits. It is fixed
+only up to an added constant, since a constant has no slope; the
+constant cancels in <span class="math inline">\(F(b) - F(a)\)</span>.
+The bracket notation <span
+class="math inline">\(\big[F(x)\big]_a^b\)</span> means <span
+class="math inline">\(F(b) - F(a)\)</span>.</p>
+<p><strong>A table to start from.</strong> Each line is a derivative
+from sections 2 to 4, read backwards:</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(f(x)\)</span></th>
+<th><span class="math inline">\(\int f\,dx\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(x^n\)</span> (any <span
+class="math inline">\(n \neq -1\)</span>)</td>
+<td><span class="math inline">\(\dfrac{x^{n+1}}{n+1}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(1/x\)</span></td>
+<td><span class="math inline">\(\ln\lvert x\rvert\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(e^{kx}\)</span></td>
+<td><span class="math inline">\(\dfrac{e^{kx}}{k}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\sin kx\)</span></td>
+<td><span class="math inline">\(-\dfrac{\cos kx}{k}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\cos kx\)</span></td>
+<td><span class="math inline">\(\dfrac{\sin kx}{k}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: the electron again.</strong> With <span
+class="math inline">\(v(t) = at\)</span>, the distance after time <span
+class="math inline">\(t\)</span> is <span class="math inline">\(\int_0^t
+at&#39;\,dt&#39; = \big[\tfrac12 at&#39;^2\big]_0^t = \tfrac12
+at^2\)</span>, the high-school formula, now derived. (The variable
+inside the integral is renamed <span
+class="math inline">\(t&#39;\)</span> because <span
+class="math inline">\(t\)</span> is being used as the upper limit.) The
+electron crosses <span class="math inline">\(d = 1\)</span> cm when
+<span class="math inline">\(\tfrac12 at^2 = d\)</span>:</p>
+<p><span class="math display">\[
+t = \sqrt{\frac{2d}{a}} = \sqrt{\frac{0.02}{3.518 \times 10^{16}}} =
+7.54 \times 10^{-10}\ \text{s},
+\]</span></p>
+<p>arriving at <span class="math inline">\(v = at = 2.65 \times
+10^7\)</span> m/s, <span class="math inline">\(0.088c\)</span>. Energy
+gives the same: <span class="math inline">\(\tfrac12 m_e v^2 =
+eV\)</span>, so <span class="math inline">\(v = \sqrt{2eV/m_e} = 2.65
+\times 10^7\)</span> m/s for <span class="math inline">\(V =
+2000\)</span> V, as chapter 2 finds.</p>
+<p><strong>Example: an integral to infinity.</strong> How close does an
+alpha particle of kinetic energy <span class="math inline">\(K =
+5\)</span> MeV get to a gold nucleus, head on? The force between charges
+<span class="math inline">\(q_1\)</span> and <span
+class="math inline">\(q_2\)</span> at distance <span
+class="math inline">\(r\)</span> is <span
+class="math inline">\(q_1q_2/(4\pi\varepsilon_0 r^2)\)</span>. The work
+needed to bring the alpha from very far away to distance <span
+class="math inline">\(d\)</span> against it is</p>
+<p><span class="math display">\[
+W = \int_d^{\infty}\frac{q_1 q_2}{4\pi\varepsilon_0 r^2}\,dr =
+\frac{q_1q_2}{4\pi\varepsilon_0}\left[-\frac{1}{r}\right]_d^{\infty} =
+\frac{q_1q_2}{4\pi\varepsilon_0\,d} .
+\]</span></p>
+<p>An upper limit of infinity means: take the limit as the upper end
+grows without bound. Here <span class="math inline">\(-1/r \to
+0\)</span>, so the integral is finite even though the range is not.
+Setting <span class="math inline">\(W = K\)</span>, with <span
+class="math inline">\(q_1 = 2e\)</span>, <span class="math inline">\(q_2
+= 79e\)</span> and the handy combination <span
+class="math inline">\(e^2/(4\pi\varepsilon_0) = 1.440\)</span> MeV fm (1
+fm <span class="math inline">\(= 10^{-15}\)</span> m),</p>
+<p><span class="math display">\[
+d = \frac{2 \times 79 \times 1.440\ \text{MeV fm}}{5\ \text{MeV}} =
+45.5\ \text{fm} .
+\]</span></p>
+<p>That is the distance of closest approach of chapter 1, and the reason
+Rutherford’s alphas could not reach a heavy nucleus.</p>
+<p><strong>Example: the charge in a pulse.</strong> A current that dies
+away as <span class="math inline">\(I(t) = I_0 e^{-t/\tau}\)</span>
+carries the charge</p>
+<p><span class="math display">\[
+Q = \int_0^{\infty} I_0 e^{-t/\tau}\,dt = I_0\big[-\tau
+e^{-t/\tau}\big]_0^{\infty} = I_0\tau .
+\]</span></p>
+<p>The total is the same as a steady current <span
+class="math inline">\(I_0\)</span> flowing for one time constant.</p>
+<p><strong>Substitution.</strong> The chain rule read backwards. If the
+integrand contains a function <span class="math inline">\(u(x)\)</span>
+and its derivative <span class="math inline">\(u&#39;(x)\)</span>,
+change variable to <span class="math inline">\(u\)</span>, with <span
+class="math inline">\(du = u&#39;(x)\,dx\)</span>. For example <span
+class="math inline">\(\int 2x\,e^{x^2}\,dx\)</span>: with <span
+class="math inline">\(u = x^2\)</span>, <span class="math inline">\(du =
+2x\,dx\)</span>, and the integral is <span class="math inline">\(\int
+e^u\,du = e^{x^2}\)</span> plus a constant. (Check: differentiate <span
+class="math inline">\(e^{x^2}\)</span> by the chain rule.)</p>
+<p><strong>Integration by parts.</strong> The product rule read
+backwards. Integrating <span class="math inline">\((fg)&#39; = f&#39;g +
+fg&#39;\)</span> gives</p>
+<p><span class="math display">\[
+\int_a^b f\,g&#39;\,dx = \big[fg\big]_a^b - \int_a^b f&#39;\,g\,dx .
+\]</span></p>
+<p>It helps when <span class="math inline">\(f\)</span> becomes simpler
+when differentiated. Example: <span
+class="math inline">\(\int_0^{\infty} x e^{-x}\,dx\)</span>. Take <span
+class="math inline">\(f = x\)</span>, <span class="math inline">\(g&#39;
+= e^{-x}\)</span>, so <span class="math inline">\(g = -e^{-x}\)</span>:
+the result is <span class="math inline">\(\big[-xe^{-x}\big]_0^{\infty}
++ \int_0^{\infty}e^{-x}\,dx = 0 + 1 = 1\)</span>.</p>
+<p><strong>Not every integral has a formula.</strong> <span
+class="math inline">\(\int e^{-x^2}\,dx\)</span>, the area under the
+bell curve that describes the spread of particles in a beam, cannot be
+written with the functions above. The integral from <span
+class="math inline">\(-\infty\)</span> to <span
+class="math inline">\(\infty\)</span> is known exactly, <span
+class="math inline">\(\sqrt{\pi}\)</span>, by a trick taught in <a
+href="02-the-cathode-ray-tube.html#pre-requisite-special-functions-and-integrals-bessel-gaussian-error-function">chapter
+2</a>; integrals over a part of the range are given new names (the error
+function) and tabulated, or computed numerically (section 11).</p>
+<h3 id="8-approximating-a-function-taylor-series">8. Approximating a
+function: Taylor series</h3>
+<p><strong>The idea.</strong> The small-change rule of section 5
+replaces a curve by its tangent, a straight line. A better approximation
+also matches the curvature, and better still the rate at which the
+curvature changes. Choose a polynomial <span class="math inline">\(f(a +
+h) \approx c_0 + c_1h + c_2h^2 + c_3h^3 + \dots\)</span> whose value and
+first few derivatives at <span class="math inline">\(h = 0\)</span>
+equal those of <span class="math inline">\(f\)</span> at <span
+class="math inline">\(a\)</span>. Differentiating the polynomial term by
+term and setting <span class="math inline">\(h = 0\)</span> gives <span
+class="math inline">\(c_0 = f(a)\)</span>, <span
+class="math inline">\(c_1 = f&#39;(a)\)</span>, <span
+class="math inline">\(2c_2 = f&#39;&#39;(a)\)</span>, <span
+class="math inline">\(6c_3 = f&#39;&#39;&#39;(a)\)</span>, and in
+general <span class="math inline">\(n!\,c_n = f^{(n)}(a)\)</span>, the
+<span class="math inline">\(n\)</span>th derivative (<span
+class="math inline">\(n! = 1 \times 2 \times \dots \times n\)</span>).
+So</p>
+<p><span class="math display">\[
+f(a + h) = f(a) + f&#39;(a)\,h + \frac{f&#39;&#39;(a)}{2!}h^2 +
+\frac{f&#39;&#39;&#39;(a)}{3!}h^3 + \dots
+\]</span></p>
+<p>This is the <em>Taylor series</em> (Brook Taylor, 1715). For small
+<span class="math inline">\(h\)</span> each term is much smaller than
+the one before, and a few terms are enough.</p>
+<p><strong>The series used most.</strong></p>
+<ul>
+<li><span class="math inline">\(e^x = 1 + x + \dfrac{x^2}{2!} +
+\dfrac{x^3}{3!} + \dots\)</span> (every derivative of <span
+class="math inline">\(e^x\)</span> is 1 at <span class="math inline">\(x
+= 0\)</span>). This series converges for every <span
+class="math inline">\(x\)</span>.</li>
+<li><span class="math inline">\(\sin x = x - \dfrac{x^3}{3!} +
+\dots\)</span> and <span class="math inline">\(\cos x = 1 -
+\dfrac{x^2}{2!} + \dots\)</span> For <span class="math inline">\(x =
+0.1\)</span>: <span class="math inline">\(\cos 0.1 = 0.995004\)</span>
+against <span class="math inline">\(1 - 0.005 = 0.995\)</span>.</li>
+<li><span class="math inline">\((1 + x)^n = 1 + nx +
+\dfrac{n(n-1)}{2}x^2 + \dots\)</span> for any real <span
+class="math inline">\(n\)</span>, for <span class="math inline">\(\lvert
+x\rvert &lt; 1\)</span>. For instance <span
+class="math inline">\(\sqrt{1.1} \approx 1 + 0.05 - 0.00125 =
+1.04875\)</span>, against the true 1.048809.</li>
+<li><span class="math inline">\(\ln(1 + x) = x - \dfrac{x^2}{2} +
+\dfrac{x^3}{3} - \dots\)</span> for <span class="math inline">\(\lvert
+x\rvert &lt; 1\)</span>.</li>
+</ul>
+<p><strong>Example: kinetic energy at low speed.</strong> A particle’s
+kinetic energy is <span class="math inline">\((\gamma - 1)mc^2\)</span>
+(chapter 1), with <span class="math inline">\(\gamma = (1 -
+\beta^2)^{-1/2}\)</span>. The binomial series with <span
+class="math inline">\(x = -\beta^2\)</span> and <span
+class="math inline">\(n = -\tfrac12\)</span> gives</p>
+<p><span class="math display">\[
+\gamma = 1 + \frac{\beta^2}{2} + \frac{3\beta^4}{8} + \dots, \qquad
+(\gamma - 1)mc^2 = \tfrac12 mv^2\left(1 + \frac{3}{4}\beta^2 +
+\dots\right) .
+\]</span></p>
+<p>At low speed, relativity’s kinetic energy <em>is</em> Newton’s <span
+class="math inline">\(\tfrac12 mv^2\)</span>, and the first correction
+is <span class="math inline">\(\tfrac34\beta^2\)</span> of it. For the 2
+kV electron, <span class="math inline">\(\beta = 0.088\)</span> and the
+correction is 0.59 per cent, which is why chapter 2 can use Newton’s
+formula there. At <span class="math inline">\(\beta = 0.5\)</span>, two
+terms give <span class="math inline">\(\gamma \approx 1.125\)</span> and
+three give 1.1484, against the true 1.1547: the series still works, but
+needs more terms. At <span class="math inline">\(\beta = 0.99\)</span>
+it is useless, and the exact formula must be used.</p>
+<p><strong>How good is the approximation?</strong> The error of stopping
+after the <span class="math inline">\(h^n\)</span> term is roughly the
+size of the first term left out. That is the rule the course uses
+whenever it writes “to first order” (keeping terms in <span
+class="math inline">\(h\)</span>) or “to second order” (keeping <span
+class="math inline">\(h^2\)</span>): it means the next term was checked
+to be small.</p>
+<h3 id="9-several-variables-partial-derivatives">9. Several variables:
+partial derivatives</h3>
+<p><strong>The picture.</strong> Most quantities depend on more than one
+thing. The radius of a charged particle’s path in a magnetic field is
+<span class="math inline">\(\rho = p/(qB)\)</span>: it depends on the
+momentum <span class="math inline">\(p\)</span>, the charge <span
+class="math inline">\(q\)</span> and the field <span
+class="math inline">\(B\)</span>. How does it change when only <span
+class="math inline">\(B\)</span> changes?</p>
+<p><strong>The definition.</strong> The <em>partial derivative</em>
+<span class="math inline">\(\partial f/\partial x\)</span> is the
+derivative with respect to <span class="math inline">\(x\)</span> with
+every other variable held fixed. The curly <span
+class="math inline">\(\partial\)</span> is a reminder that the others
+are being held. For <span class="math inline">\(\rho =
+p/(qB)\)</span>,</p>
+<p><span class="math display">\[
+\frac{\partial\rho}{\partial p} = \frac{1}{qB}, \qquad
+\frac{\partial\rho}{\partial B} = -\frac{p}{qB^2} .
+\]</span></p>
+<p><strong>Changing several at once.</strong> If every variable changes
+by a small amount, the changes add, each through its own slope:</p>
+<p><span class="math display">\[
+\Delta f \approx \frac{\partial f}{\partial x}\Delta x + \frac{\partial
+f}{\partial y}\Delta y + \dots
+\]</span></p>
+<p>For <span class="math inline">\(\rho = p/(qB)\)</span>, dividing by
+<span class="math inline">\(\rho\)</span>:</p>
+<p><span class="math display">\[
+\frac{\Delta\rho}{\rho} \approx \frac{\Delta p}{p} - \frac{\Delta B}{B}
+.
+\]</span></p>
+<p><em>Example.</em> A proton of momentum 1 GeV/<span
+class="math inline">\(c\)</span> in a field of 1 T moves on a circle of
+radius <span class="math inline">\(\rho = 3.336\)</span> m (chapter 1
+shows <span class="math inline">\(B\rho\,[\text{T m}] =
+3.3356\,p\,[\text{GeV}/c]\)</span>). A proton with 0.1 per cent more
+momentum moves on a radius 3.3 mm larger. Rings are built around this
+fact: chapter 16 calls it <em>dispersion</em>.</p>
+<p><strong>Second partial derivatives.</strong> One can differentiate
+twice with respect to the same variable, <span
+class="math inline">\(\partial^2 f/\partial x^2\)</span>, or once with
+respect to each, <span class="math inline">\(\partial^2 f/\partial
+x\,\partial y\)</span>. For smooth functions the order does not matter:
+<span class="math inline">\(\dfrac{\partial^2 f}{\partial x\,\partial y}
+= \dfrac{\partial^2 f}{\partial y\,\partial x}\)</span>. <a
+href="F2-vectors.html">F2</a> combines the partial derivatives with
+respect to <span class="math inline">\(x\)</span>, <span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span> into the gradient, the divergence and
+the curl, the language of electric and magnetic fields.</p>
+<h3 id="10-equations-of-change-first-differential-equations">10.
+Equations of change: first differential equations</h3>
+<p><strong>What they are.</strong> Most laws of physics do not say what
+a quantity <em>is</em>; they say how it <em>changes</em>. Newton’s
+second law says that a body’s acceleration is the force divided by the
+mass. A <em>differential equation</em> is an equation relating a
+function to its derivatives. Solving it means finding the function. Most
+of the course’s physics comes as differential equations, so this section
+shows the three kinds that recur most.</p>
+<p><strong>Kind 1: the rate is given.</strong> <span
+class="math inline">\(\dfrac{dx}{dt} = g(t)\)</span>. The solution is an
+integral: <span class="math inline">\(x(t) = x(0) + \int_0^t
+g(t&#39;)\,dt&#39;\)</span>. The electron of section 7 was this kind,
+twice: <span class="math inline">\(\dot v = a\)</span>, then <span
+class="math inline">\(\dot x = v\)</span>.</p>
+<p><strong>Kind 2: the rate is proportional to the amount.</strong>
+<span class="math inline">\(\dfrac{dN}{dt} = -\lambda N\)</span>, with
+<span class="math inline">\(\lambda &gt; 0\)</span> a constant. Section
+4 already knows a function whose derivative is a constant times itself:
+try <span class="math inline">\(N = N_0 e^{-\lambda t}\)</span>. Then
+<span class="math inline">\(\dot N = -\lambda N_0 e^{-\lambda t} =
+-\lambda N\)</span>, and at <span class="math inline">\(t = 0\)</span>,
+<span class="math inline">\(N = N_0\)</span>. The solution is</p>
+<p><span class="math display">\[
+N(t) = N_0\,e^{-\lambda t} = N_0\,e^{-t/\tau}, \qquad \tau =
+\frac{1}{\lambda} .
+\]</span></p>
+<p><em>A general method: separating the variables.</em> Treat <span
+class="math inline">\(dN\)</span> and <span
+class="math inline">\(dt\)</span> as small amounts, put everything with
+<span class="math inline">\(N\)</span> on one side and with <span
+class="math inline">\(t\)</span> on the other, and integrate both: <span
+class="math inline">\(\dfrac{dN}{N} = -\lambda\,dt\)</span>, so <span
+class="math inline">\(\ln N = -\lambda t + \text{const}\)</span>, which
+gives the same solution. This works whenever the rate is a function of
+<span class="math inline">\(N\)</span> times a function of <span
+class="math inline">\(t\)</span>.</p>
+<p>Three places the course meets it:</p>
+<ul>
+<li><strong>Radioactive decay.</strong> Each atom has the same chance
+per second, <span class="math inline">\(\lambda\)</span>, of decaying.
+Polonium-210, the alpha source of the early experiments, has a half-life
+of 138.4 days, so <span class="math inline">\(\lambda = \ln 2/138.4 =
+0.00501\)</span> per day, the mean life is <span
+class="math inline">\(\tau = 199.6\)</span> days, and after a year 16.0
+per cent of it is left.</li>
+<li><strong>Pumping a chamber.</strong> A pump with speed <span
+class="math inline">\(S\)</span> (volume of gas removed per second) on a
+chamber of volume <span class="math inline">\(V\)</span> removes the
+fraction <span class="math inline">\(S/V\)</span> of the gas each
+second, so <span class="math inline">\(\dot p = -(S/V)\,p\)</span> and
+the pressure falls as <span class="math inline">\(e^{-t/\tau}\)</span>
+with <span class="math inline">\(\tau = V/S\)</span>. For <span
+class="math inline">\(V = 0.1\)</span> m<span
+class="math inline">\(^3\)</span> and <span class="math inline">\(S =
+0.05\)</span> m<span class="math inline">\(^3\)</span>/s, <span
+class="math inline">\(\tau = 2\)</span> s, and the pressure falls from
+<span class="math inline">\(10^5\)</span> Pa to 1 Pa in <span
+class="math inline">\(2\ln(10^5) = 23\)</span> s. Real chambers stop
+falling long before this predicts, because gas keeps coming off the
+walls; <a href="03-vacuum.html">chapter 3</a> adds that term.</li>
+<li><strong>A capacitor discharging.</strong> A capacitor <span
+class="math inline">\(C\)</span> discharging through a resistor <span
+class="math inline">\(R\)</span> loses charge at the rate of the
+current, <span class="math inline">\(V/R\)</span>, so <span
+class="math inline">\(C\dot V = -V/R\)</span> and <span
+class="math inline">\(\tau = RC\)</span>. A 1 nF capacitor through 1 MΩ
+has <span class="math inline">\(\tau = 1\)</span> ms.</li>
+</ul>
+<p><strong>Kind 3: oscillation.</strong> A body pulled back towards a
+centre with a force proportional to its distance from it, <span
+class="math inline">\(F = -kx\)</span> (a spring, or, in chapter 10
+onwards, a particle in a focusing field), obeys</p>
+<p><span class="math display">\[
+m\ddot x = -kx, \qquad \text{or} \qquad \ddot x = -\omega^2 x, \quad
+\omega = \sqrt{k/m} .
+\]</span></p>
+<p>Section 3 found functions that come back as minus themselves after
+two derivatives. Try <span class="math inline">\(x = A\cos\omega t +
+B\sin\omega t\)</span>: then <span class="math inline">\(\ddot x =
+-\omega^2(A\cos\omega t + B\sin\omega t) = -\omega^2 x\)</span>. It
+works for any constants <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span>, which are fixed by where the body
+starts (<span class="math inline">\(x(0) = A\)</span>) and how fast
+(<span class="math inline">\(\dot x(0) = B\omega\)</span>). The motion
+repeats every <span class="math inline">\(2\pi/\omega\)</span> seconds,
+whatever the size of the swing. The particles in every ring of the
+course oscillate about their ideal path this way; chapter 2’s
+pre-requisite on <a
+href="02-the-cathode-ray-tube.html#pre-requisite-ordinary-differential-equations-linear-constant-and-varying-coefficients">ordinary
+differential equations</a> and chapter 16 go on from here.</p>
+<p><strong>Why two constants?</strong> An equation with a second
+derivative needs two facts to pin down a solution (a position and a
+speed); one with a first derivative needs one (a starting amount).
+Physically: Newton’s law says what the acceleration is, but where the
+body is and how fast it moves now are up to how it was set going.</p>
+<h3 id="11-when-there-is-no-formula-numbers-on-a-computer">11. When
+there is no formula: numbers on a computer</h3>
+<p>Many integrals and differential equations in accelerator physics have
+no solution in formulas. They are done numerically, and the methods are
+the definitions of this chapter with a finite step.</p>
+<p><strong>Integrals.</strong> The <em>trapezoid rule</em> joins
+neighbouring points of the curve by straight lines and adds the areas of
+the trapezoids: with <span class="math inline">\(n\)</span> strips of
+width <span class="math inline">\(h\)</span>,</p>
+<p><span class="math display">\[
+\int_a^b f\,dx \approx h\left[\tfrac12 f(x_0) + f(x_1) + \dots +
+f(x_{n-1}) + \tfrac12 f(x_n)\right] .
+\]</span></p>
+<p><em>Simpson’s rule</em> fits parabolas through the points instead,
+weighting them <span class="math inline">\(1, 4, 2, 4, \dots, 4,
+1\)</span> times <span class="math inline">\(h/3\)</span>. For <span
+class="math inline">\(\int_0^1 e^{-x^2}dx = 0.746824\)</span>, four
+strips give 0.742984 by the trapezoid rule (0.5 per cent low) and
+0.746855 by Simpson’s (0.004 per cent high). Halving the strip width
+cuts the trapezoid’s error by about 4 and Simpson’s by about 16.</p>
+<p><strong>Differential equations.</strong> <em>Euler’s method</em>
+steps the equation forward: from <span class="math inline">\(\dot x =
+g(x, t)\)</span>, take <span class="math inline">\(x(t + h) \approx x(t)
++ g(x, t)\,h\)</span>, the small-change rule, and repeat. It is easy and
+inaccurate; better methods (Runge–Kutta, and for orbits the
+<em>symplectic</em> methods of chapter 16) take a few evaluations per
+step. Every simulation code that tracks particles round a ring is, at
+heart, a careful version of this step.</p>
+<h2 id="where-the-course-uses-it">Where the course uses it</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th>First used in</th>
+<th>For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Derivative as a rate</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Speed, force, the rate of energy gain</td>
+</tr>
+<tr>
+<td>Chain rule</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Relativistic energy and momentum</td>
+</tr>
+<tr>
+<td>Small changes, logarithmic derivative</td>
+<td><a href="02-the-cathode-ray-tube.html">Chapter 2</a></td>
+<td>Errors, the sensitivity of a hot cathode</td>
+</tr>
+<tr>
+<td>Integral of force, <span class="math inline">\(qV\)</span></td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Energy gained across a voltage, the Coulomb barrier</td>
+</tr>
+<tr>
+<td>Exponential decay</td>
+<td><a href="03-vacuum.html">Chapter 3</a></td>
+<td>Pumping down, beam lifetime</td>
+</tr>
+<tr>
+<td>Taylor series</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a> onwards</td>
+<td>Every “for small <span class="math inline">\(x\)</span>” in the
+course</td>
+</tr>
+<tr>
+<td>Partial derivatives</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Rigidity, the Lagrangian and Hamiltonian</td>
+</tr>
+<tr>
+<td>Oscillation equation</td>
+<td><a href="10-the-cyclotron.html">Chapter 10</a> onwards</td>
+<td>Focusing, betatron and synchrotron oscillations</td>
+</tr>
+<tr>
+<td>Numerical integration</td>
+<td><a href="16-strong-focusing.html">Chapter 16</a> onwards</td>
+<td>Tracking particles round a ring</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>The electron of section 1 accelerates at <span
+class="math inline">\(3.518 \times 10^{16}\)</span> m/s<span
+class="math inline">\(^2\)</span> from rest. Starting from <span
+class="math inline">\(x(t) = \tfrac12 at^2\)</span> and the definition
+of the derivative, find its speed at <span class="math inline">\(t =
+0.5\)</span> ns, and its acceleration.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>The average speed over <span class="math inline">\([t, t+h]\)</span>
+is <span class="math inline">\(at + \tfrac12 ah\)</span>, which tends to
+<span class="math inline">\(v = at\)</span> as <span
+class="math inline">\(h \to 0\)</span>: <span class="math inline">\(v =
+3.518 \times 10^{16} \times 0.5 \times 10^{-9} = 1.76 \times
+10^7\)</span> m/s. Differentiating again, <span
+class="math inline">\(\ddot x = a = 3.518 \times 10^{16}\)</span>
+m/s<span class="math inline">\(^2\)</span>, the same at every
+instant.</p>
+</details>
+<ol start="2" type="1">
+<li>Differentiate: (a) <span class="math inline">\(x^3e^{-2x}\)</span>;
+(b) <span class="math inline">\(V_0\sin(\omega t + \phi)\)</span> with
+respect to <span class="math inline">\(t\)</span>; (c) <span
+class="math inline">\(\ln(1 + x^2)\)</span>; (d) <span
+class="math inline">\(1/\sqrt{1 - x^2}\)</span>.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li>Product rule and chain rule: <span class="math inline">\(3x^2e^{-2x}
+- 2x^3e^{-2x} = x^2(3 - 2x)e^{-2x}\)</span>. (b) <span
+class="math inline">\(V_0\,\omega\cos(\omega t + \phi)\)</span>. (c)
+<span class="math inline">\(\dfrac{2x}{1 + x^2}\)</span>. (d) Write it
+as <span class="math inline">\((1 - x^2)^{-1/2}\)</span>: <span
+class="math inline">\(-\tfrac12(1 - x^2)^{-3/2}(-2x) = x(1 -
+x^2)^{-3/2}\)</span>. With <span class="math inline">\(x =
+\beta\)</span> this is section 2’s <span
+class="math inline">\(\beta\gamma^3\)</span>.</li>
+</ol>
+</details>
+<ol start="3" type="1">
+<li>At <span class="math inline">\(\beta = 0.99\)</span>, <span
+class="math inline">\(\gamma = 7.089\)</span>. Use <span
+class="math inline">\(d\gamma/d\beta = \beta\gamma^3\)</span> to
+estimate <span class="math inline">\(\gamma\)</span> at <span
+class="math inline">\(\beta = 0.991\)</span>. Compare with the exact
+value, 7.470. Why is the estimate low?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(d\gamma/d\beta = 0.99 \times 7.089^3 =
+352.7\)</span>, so <span class="math inline">\(\Delta\gamma \approx
+352.7 \times 0.001 = 0.353\)</span> and <span
+class="math inline">\(\gamma \approx 7.442\)</span>. The true rise is
+0.382. The estimate is low because the curve bends upwards (<span
+class="math inline">\(\gamma&#39;&#39; &gt; 0\)</span>): its slope at
+0.991 is larger than at 0.99, and the tangent lies below the curve. Near
+<span class="math inline">\(\beta = 1\)</span> the curvature is large,
+and even a step of 0.001 is not small.</p>
+</details>
+<ol start="4" type="1">
+<li>A chamber of 0.2 m<span class="math inline">\(^3\)</span> is pumped
+by a pump of speed 0.05 m<span class="math inline">\(^3\)</span>/s.
+Ignoring gas from the walls, how long does it take to fall from <span
+class="math inline">\(10^5\)</span> Pa to 10 Pa?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\tau = V/S = 4\)</span> s. The pressure
+falls as <span class="math inline">\(e^{-t/\tau}\)</span>, so <span
+class="math inline">\(t = \tau\ln(10^5/10) = 4 \times \ln 10^4 = 4
+\times 9.21 = 36.8\)</span> s.</p>
+</details>
+<ol start="5" type="1">
+<li>Show that the average of <span class="math inline">\(\sin^2(\omega
+t)\)</span> over one period <span class="math inline">\(T =
+2\pi/\omega\)</span> is <span class="math inline">\(\tfrac12\)</span>.
+(Hint: <span class="math inline">\(\sin^2\theta = \tfrac12(1 - \cos
+2\theta)\)</span>.) An RF cavity’s voltage is <span
+class="math inline">\(V_0\sin\omega t\)</span> across a resistance <span
+class="math inline">\(R\)</span>; what is the average power?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\dfrac{1}{T}\displaystyle\int_0^T
+\tfrac12(1 - \cos 2\omega t)\,dt = \dfrac{1}{T}\left[\tfrac12 t -
+\dfrac{\sin 2\omega t}{4\omega}\right]_0^T = \tfrac12\)</span>, since
+<span class="math inline">\(\sin(2\omega T) = \sin 4\pi = 0\)</span>.
+The power is <span class="math inline">\(V^2/R = (V_0^2/R)\sin^2\omega
+t\)</span>, whose average is <span
+class="math inline">\(V_0^2/(2R)\)</span>. That factor of <span
+class="math inline">\(\tfrac12\)</span> appears in every RF power
+formula in chapter 13.</p>
+</details>
+<ol start="6" type="1">
+<li>Rutherford’s alphas from radium C′ had a kinetic energy of 7.69 MeV.
+How close could one come to a gold nucleus (<span
+class="math inline">\(Z = 79\)</span>), head on?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(d = 2 \times 79 \times 1.440/7.69 =
+29.6\)</span> fm. (A gold nucleus has a radius of about 7 fm, so the
+alpha stays well outside it, which is why Rutherford’s scattering law
+held.)</p>
+</details>
+<ol start="7" type="1">
+<li>Use the binomial series to two and three terms to estimate <span
+class="math inline">\(\sqrt{1.1}\)</span>. How big is the error of each,
+compared with the first term left out?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\((1 + x)^{1/2} = 1 + \tfrac12 x - \tfrac18
+x^2 + \tfrac1{16}x^3 - \dots\)</span> With <span class="math inline">\(x
+= 0.1\)</span>: two terms give 1.05 and three give 1.04875. The true
+value is 1.048809. The errors are <span class="math inline">\(1.2 \times
+10^{-3}\)</span> and <span class="math inline">\(5.9 \times
+10^{-5}\)</span>; the first terms left out are <span
+class="math inline">\(-1.25 \times 10^{-3}\)</span> and <span
+class="math inline">\(+6.25 \times 10^{-5}\)</span>, close to the errors
+as the rule says.</p>
+</details>
+<ol start="8" type="1">
+<li>For a hot cathode, <span class="math inline">\(J =
+AT^2e^{-W/(k_BT)}\)</span>. Find <span class="math inline">\(d\ln J/d\ln
+T\)</span> at 2000 K for <span class="math inline">\(W = 4.53\)</span>
+eV. How steady must the temperature be held to keep the current steady
+to 1 per cent?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\ln J = \ln A + 2\ln T -
+W/(k_BT)\)</span>. With <span class="math inline">\(u = \ln T\)</span>,
+<span class="math inline">\(T = e^u\)</span> and <span
+class="math inline">\(-W/(k_BT) = -(W/k_B)e^{-u}\)</span>, so <span
+class="math inline">\(d\ln J/du = 2 + W/(k_BT) = 2 + 4.53/(8.617 \times
+10^{-5} \times 2000) = 2 + 26.3 = 28.3\)</span>. To hold <span
+class="math inline">\(J\)</span> to 1 per cent, hold <span
+class="math inline">\(T\)</span> to <span
+class="math inline">\(1/28.3\)</span> per cent: 0.035 per cent, or 0.71
+K at 2000 K. (Chapter 2, exercises on errors, does the same.)</p>
+</details>
+<ol start="9" type="1">
+<li>A 10 nF capacitor charged to 10 kV discharges through a 100 MΩ
+resistor (a voltage divider of the kind in chapter 4). What is the time
+constant, and how long until the voltage is below 1 kV?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\tau = RC = 10^8 \times 10^{-8} =
+1\)</span> s. <span class="math inline">\(V = V_0e^{-t/\tau}\)</span>
+falls to <span class="math inline">\(V_0/10\)</span> at <span
+class="math inline">\(t = \tau\ln 10 = 2.30\)</span> s.</p>
+</details>
+<ol start="10" type="1">
+<li>Estimate <span class="math inline">\(\int_1^2 dx/x\)</span> with the
+trapezoid rule and four strips. Compare with the exact value.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(h = 0.25\)</span>: <span
+class="math inline">\(0.25 \times (\tfrac12 \times 1 + 0.8 + 0.6667 +
+0.5714 + \tfrac12 \times 0.5) = 0.6970\)</span>. The exact value is
+<span class="math inline">\(\ln 2 = 0.6931\)</span>; the error is 0.56
+per cent, high because <span class="math inline">\(1/x\)</span> bends
+upwards and the straight chords lie above it.</p>
+</details>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>I. Newton, <em>The Method of Fluxions and Infinite Series</em>,
+written 1671, published in English 1736: the fluxions, for the history
+of section “Newton and Leibniz”.</li>
+<li>G. W. Leibniz, “Nova methodus pro maximis et minimis”, <em>Acta
+Eruditorum</em> (1684): the first published calculus, and the <span
+class="math inline">\(d\)</span> notation.</li>
+<li>A.-L. Cauchy, <em>Cours d’analyse de l’École royale
+polytechnique</em> (1821): calculus built on limits.</li>
+<li>R. Penrose, <em>The Road to Reality</em> (Jonathan Cape, 2004),
+chapter 6, “Real-number calculus”: the derivative, the integral and the
+fundamental theorem (in <code>references/</code>).</li>
+<li>S. P. Thompson, <em>Calculus Made Easy</em> (Macmillan, 1910; 2nd
+edition 1914): the gentlest classic introduction, small quantities and
+the rules of section 2 (free, Project Gutenberg).</li>
+<li>G. Strang, <em>Calculus</em> (Wellesley-Cambridge Press, 1991; 3rd
+edition 2017): derivatives, integrals, the exponential, Taylor series
+and first differential equations, for sections 1 to 10 (free, MIT
+OpenCourseWare).</li>
+<li>R. P. Feynman, R. B. Leighton and M. Sands, <em>The Feynman Lectures
+on Physics</em>, volume I (Addison-Wesley, 1963), chapter 8 “Motion”
+(speed as a derivative, distance as an integral) and chapter 22
+“Algebra” (the exponential and <span class="math inline">\(e\)</span>)
+(free, feynmanlectures.caltech.edu).</li>
+<li>M. L. Boas, <em>Mathematical Methods in the Physical Sciences</em>
+(Wiley, 3rd edition 2006), chapter 1 (series and Taylor expansions) and
+chapter 4 (partial differentiation): the next step after this
+chapter.</li>
+</ul>
+<nav class="pager" aria-label="Chapters">
+
+<a class="next" href="F2-vectors.html"><span>Next</span>F2 Vectors and vector calculus</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

@@ -1,0 +1,2254 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F5 Oscillations and
+waves · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Part 0, Foundations</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#f5-oscillations-and-waves"
+id="toc-f5-oscillations-and-waves">F5 Oscillations and waves</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-problem-it-solved" id="toc-the-problem-it-solved">The
+problem it solved</a>
+<ul>
+<li><a href="#square-roots-of-negative-numbers"
+id="toc-square-roots-of-negative-numbers">Square roots of negative
+numbers</a></li>
+<li><a href="#the-vibrating-string" id="toc-the-vibrating-string">The
+vibrating string</a></li>
+<li><a href="#light-sound-and-the-moving-source"
+id="toc-light-sound-and-the-moving-source">Light, sound and the moving
+source</a></li>
+<li><a href="#alternating-currents"
+id="toc-alternating-currents">Alternating currents</a></li>
+</ul></li>
+<li><a href="#the-mathematics" id="toc-the-mathematics">The
+mathematics</a>
+<ul>
+<li><a href="#0-what-this-chapter-assumes-and-a-quick-check"
+id="toc-0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</a></li>
+<li><a href="#1-complex-numbers" id="toc-1-complex-numbers">1. Complex
+numbers</a></li>
+<li><a href="#2-eulers-formula" id="toc-2-eulers-formula">2. Euler’s
+formula</a></li>
+<li><a href="#3-oscillations-as-turning-arrows"
+id="toc-3-oscillations-as-turning-arrows">3. Oscillations as turning
+arrows</a></li>
+<li><a href="#4-the-damped-oscillator-and-its-q"
+id="toc-4-the-damped-oscillator-and-its-q">4. The damped oscillator and
+its Q</a></li>
+<li><a href="#5-the-driven-oscillator-resonance-phase-and-bandwidth"
+id="toc-5-the-driven-oscillator-resonance-phase-and-bandwidth">5. The
+driven oscillator: resonance, phase and bandwidth</a></li>
+<li><a href="#6-lc-and-rlc-circuits-with-phasors"
+id="toc-6-lc-and-rlc-circuits-with-phasors">6. LC and RLC circuits with
+phasors</a></li>
+<li><a href="#7-coupled-oscillators-normal-modes-and-beats"
+id="toc-7-coupled-oscillators-normal-modes-and-beats">7. Coupled
+oscillators, normal modes and beats</a></li>
+<li><a href="#8-the-wave-equation-on-a-string"
+id="toc-8-the-wave-equation-on-a-string">8. The wave equation on a
+string</a></li>
+<li><a href="#9-sinusoidal-waves" id="toc-9-sinusoidal-waves">9.
+Sinusoidal waves</a></li>
+<li><a href="#10-superposition-interference-and-standing-waves"
+id="toc-10-superposition-interference-and-standing-waves">10.
+Superposition, interference and standing waves</a></li>
+<li><a href="#11-reflection-and-impedance-matching"
+id="toc-11-reflection-and-impedance-matching">11. Reflection and
+impedance matching</a></li>
+<li><a href="#12-dispersion-phase-and-group-velocity"
+id="toc-12-dispersion-phase-and-group-velocity">12. Dispersion: phase
+and group velocity</a></li>
+<li><a href="#13-electromagnetic-waves"
+id="toc-13-electromagnetic-waves">13. Electromagnetic waves</a></li>
+<li><a href="#14-the-doppler-effect" id="toc-14-the-doppler-effect">14.
+The Doppler effect</a></li>
+<li><a href="#15-interference-and-diffraction"
+id="toc-15-interference-and-diffraction">15. Interference and
+diffraction</a></li>
+<li><a href="#16-fouriers-idea" id="toc-16-fouriers-idea">16. Fourier’s
+idea</a></li>
+</ul></li>
+<li><a href="#where-the-course-uses-it"
+id="toc-where-the-course-uses-it">Where the course uses it</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="f5-oscillations-and-waves">F5 Oscillations and waves</h1>
+<p><em>1545 to 1893: Cardano’s impossible roots, Euler’s formula,
+d’Alembert’s vibrating string, Fourier’s sums of sines, Young’s fringes,
+Doppler’s moving stars and Steinmetz’s complex currents. Complex numbers
+as the natural language of anything that repeats; the oscillator, its
+resonance and its quality factor; and waves, from a string to a
+waveguide. Every RF cavity, every betatron oscillation and every photon
+of synchrotron light in the course is one of these.</em></p>
+<blockquote>
+<p><strong>What this chapter assumes.</strong> High-school mathematics
+and physics, <a href="F1-calculus.html">F1 Calculus</a> (derivatives,
+the exponential, Taylor series, partial derivatives, and the oscillation
+equation <span class="math inline">\(\ddot x = -\omega^2x\)</span> with
+its solution <span class="math inline">\(A\cos\omega t + B\sin\omega
+t\)</span>), <a href="F2-vectors.html">F2 Vectors and vector
+calculus</a> for section 13, and from <a href="F3-mechanics.html">F3
+Newtonian mechanics</a> and <a href="F4-electromagnetism.html">F4
+Electricity and magnetism</a> only Newton’s second law, Hooke’s law, the
+energy of a spring, and the facts that a capacitor stores charge <span
+class="math inline">\(Q = CV\)</span>, an inductor resists a change of
+current with a voltage <span class="math inline">\(L\,dI/dt\)</span>,
+and Maxwell’s equations give waves travelling at <span
+class="math inline">\(c = 1/\sqrt{\mu_0\varepsilon_0}\)</span>.</p>
+<p><strong>What comes next.</strong> The pre-requisite sections inside
+the chapters take this further: <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-complex-numbers-and-complex-functions">Complex
+numbers and complex functions</a>, <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-simple-and-damped-harmonic-oscillator">Simple
+and damped harmonic oscillator</a> and <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-driven-oscillator-resonance-and-quality-factor">Driven
+oscillator, resonance and quality factor</a> in chapter 7, <a
+href="04-high-voltage-and-breakdown.html#pre-requisite-rlc-circuits-and-phasors">RLC
+circuits and phasors</a> in chapter 4, <a
+href="08-seeing-the-beam.html#pre-requisite-fourier-series-and-transforms">Fourier
+series and transforms</a> and <a
+href="08-seeing-the-beam.html#pre-requisite-transmission-lines-matching-s-parameters">Transmission
+lines</a> in chapter 8, and <a
+href="13-rf-cavities-and-power.html#pre-requisite-coupled-oscillators-and-normal-modes">Coupled
+oscillators</a>, <a
+href="13-rf-cavities-and-power.html#pre-requisite-maxwells-equations-and-the-wave-equation">Maxwell’s
+equations and the wave equation</a> and <a
+href="13-rf-cavities-and-power.html#pre-requisite-waveguides-te-and-tm-modes-cutoff-phase-and-group-velocity">Waveguides</a>
+in chapter 13. <a href="F7-atoms-and-quanta.html">F7 Atoms, nuclei and
+quanta</a> turns waves into photons and matter waves.</p>
+</blockquote>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The problem.</strong> An accelerator is full of things that
+repeat. The voltage across an RF cavity swings hundreds of millions of
+times a second; a particle in a ring wobbles about its ideal path a few
+times a turn; the light from a bending magnet or an undulator is a wave;
+a signal travelling down a cable to a cavity is a wave, and part of it
+bounces back if the cavity is not matched to the cable. Writing every
+one of these with sines and cosines works, but the algebra grows fast:
+every derivative turns a sine into a cosine, every phase shift needs an
+addition formula, and two oscillations added together need a page of
+trigonometry.</p>
+<p><strong>The idea.</strong> Represent an oscillation as an arrow
+turning steadily in a plane, and the plane as the plane of <em>complex
+numbers</em>. Euler’s formula, <span class="math inline">\(e^{i\theta} =
+\cos\theta + i\sin\theta\)</span>, says that the turning arrow is an
+exponential, <span class="math inline">\(e^{i\omega t}\)</span>.
+Differentiating it multiplies it by <span
+class="math inline">\(i\omega\)</span>; shifting its phase multiplies it
+by a fixed complex number; adding two oscillations is adding two arrows.
+A linear differential equation becomes algebra. With that tool, the
+damped and driven oscillator, its resonance curve and its quality factor
+<span class="math inline">\(Q\)</span>, and the circuits that make up a
+cavity (impedances <span class="math inline">\(R\)</span>, <span
+class="math inline">\(i\omega L\)</span> and <span
+class="math inline">\(1/(i\omega C)\)</span>) each take a few lines. A
+wave is an oscillation that also moves: the wave equation, derived for a
+string, has solutions that travel at a fixed speed, and its sinusoidal
+solutions are <span class="math inline">\(e^{i(\omega t - kx)}\)</span>.
+Two waves add (interference); two waves running opposite ways make a
+standing wave, whose allowed frequencies are the <em>modes</em> of a
+string, a pipe or a cavity. Where the medium changes, part of a wave is
+reflected, unless the <em>impedances</em> match. Where the speed depends
+on frequency (dispersion), a pulse travels at the <em>group
+velocity</em>. Light is the electromagnetic case. And by Fourier’s idea,
+any signal is a sum of such sinusoids.</p>
+<p><strong>Equations to remember.</strong></p>
+<ul>
+<li>Complex numbers: <span class="math inline">\(z = x + iy =
+re^{i\theta}\)</span>, with <span class="math inline">\(i^2 =
+-1\)</span>, modulus <span class="math inline">\(r = |z| = \sqrt{x^2 +
+y^2}\)</span>, argument <span class="math inline">\(\theta\)</span>;
+Euler’s formula <span class="math inline">\(e^{i\theta} = \cos\theta +
+i\sin\theta\)</span>.</li>
+<li>An oscillation: <span class="math inline">\(x(t) =
+\mathrm{Re}(Xe^{i\omega t})\)</span>, with complex amplitude <span
+class="math inline">\(X = |X|e^{i\phi}\)</span>; <span
+class="math inline">\(\dfrac{d}{dt}\)</span> becomes multiplication by
+<span class="math inline">\(i\omega\)</span>. <span
+class="math inline">\(\omega = 2\pi f\)</span> (rad/s), <span
+class="math inline">\(f\)</span> in Hz.</li>
+<li>Damped oscillator: <span class="math inline">\(\ddot x + 2\Gamma\dot
+x + \omega_0^2x = 0\)</span> gives <span class="math inline">\(x =
+Ae^{-\Gamma t}\cos(\omega_d t + \phi)\)</span>, <span
+class="math inline">\(\omega_d = \sqrt{\omega_0^2 - \Gamma^2}\)</span>;
+<span class="math inline">\(\Gamma\)</span> is the damping rate (s<span
+class="math inline">\(^{-1}\)</span>).</li>
+<li>Quality factor: <span class="math inline">\(Q = \dfrac{\omega_0
+U}{P} = \dfrac{\omega_0}{2\Gamma}\)</span>, with <span
+class="math inline">\(U\)</span> the stored energy (J) and <span
+class="math inline">\(P\)</span> the power lost (W); the amplitude rings
+down with time constant <span
+class="math inline">\(2Q/\omega_0\)</span>.</li>
+<li>Driven oscillator: <span class="math inline">\(X =
+\dfrac{F_0/m}{\omega_0^2 - \omega^2 + 2i\Gamma\omega}\)</span>; near
+resonance the response falls to <span class="math inline">\(1/\sqrt{1 +
+y^2}\)</span> of its peak and lags by <span
+class="math inline">\(\arctan y\)</span> more, with <span
+class="math inline">\(y = 2Q\,\Delta f/f_0\)</span>; full width at half
+power <span class="math inline">\(\Delta f = f_0/Q\)</span>.</li>
+<li>Impedances: <span class="math inline">\(Z_R = R\)</span>, <span
+class="math inline">\(Z_L = i\omega L\)</span>, <span
+class="math inline">\(Z_C = 1/(i\omega C)\)</span>; <span
+class="math inline">\(V = ZI\)</span> for complex amplitudes. An <span
+class="math inline">\(LC\)</span> circuit resonates at <span
+class="math inline">\(\omega_0 = 1/\sqrt{LC}\)</span>; a series <span
+class="math inline">\(RLC\)</span> has <span class="math inline">\(Q =
+\omega_0L/R\)</span>.</li>
+<li>Beats: <span class="math inline">\(\cos\omega_1 t + \cos\omega_2 t =
+2\cos\tfrac{(\omega_1 - \omega_2)t}{2}\cos\tfrac{(\omega_1 +
+\omega_2)t}{2}\)</span>; the loudness repeats at <span
+class="math inline">\(f_1 - f_2\)</span>.</li>
+<li>Wave equation: <span
+class="math inline">\(\dfrac{\partial^2y}{\partial t^2} =
+v^2\dfrac{\partial^2y}{\partial x^2}\)</span>, solved by any <span
+class="math inline">\(f(x - vt) + g(x + vt)\)</span>; on a string <span
+class="math inline">\(v = \sqrt{T/\mu}\)</span>, with tension <span
+class="math inline">\(T\)</span> (N) and mass per length <span
+class="math inline">\(\mu\)</span> (kg/m).</li>
+<li>A sinusoidal wave: <span class="math inline">\(y = A\cos(\omega t -
+kx)\)</span>, wavenumber <span class="math inline">\(k =
+2\pi/\lambda\)</span> (rad/m), phase velocity <span
+class="math inline">\(v_{ph} = \omega/k = f\lambda\)</span>.</li>
+<li>Standing waves between fixed ends a distance <span
+class="math inline">\(L\)</span> apart: <span class="math inline">\(f_n
+= nv/(2L)\)</span>, <span class="math inline">\(n = 1, 2, 3,
+\dots\)</span></li>
+<li>Reflection at a change of impedance (voltage on a line): <span
+class="math inline">\(\Gamma = \dfrac{Z_L - Z_0}{Z_L + Z_0}\)</span>;
+the fraction <span class="math inline">\(\Gamma^2\)</span> of the power
+is reflected.</li>
+<li>Dispersion: group velocity <span class="math inline">\(v_g =
+d\omega/dk\)</span>; for <span class="math inline">\(\omega^2 =
+\omega_c^2 + c^2k^2\)</span> (a waveguide), <span
+class="math inline">\(v_g = c\sqrt{1 - (f_c/f)^2}\)</span> and <span
+class="math inline">\(v_{ph}v_g = c^2\)</span>.</li>
+<li>Electromagnetic waves: <span class="math inline">\(c =
+1/\sqrt{\mu_0\varepsilon_0} = 299\,792\,458\)</span> m/s, <span
+class="math inline">\(B_0 = \mathcal{E}_0/c\)</span>, intensity <span
+class="math inline">\(I = \mathcal{E}_0^2/(2\eta_0)\)</span> with <span
+class="math inline">\(\eta_0 = \sqrt{\mu_0/\varepsilon_0} = 376.7\
+\Omega\)</span>.</li>
+<li>Doppler, slow source or observer approaching at speed <span
+class="math inline">\(u\)</span>: <span class="math inline">\(f&#39;
+\approx f(1 + u/v)\)</span>.</li>
+<li>Interference and diffraction: bright fringes at <span
+class="math inline">\(d\sin\theta = m\lambda\)</span>; nothing much
+smaller than <span class="math inline">\(\lambda\)</span> can be
+resolved.</li>
+<li>Fourier: any periodic signal is a sum of sinusoids at multiples of
+its frequency; a pulse of length <span class="math inline">\(\Delta
+t\)</span> contains a band of frequencies <span
+class="math inline">\(\Delta f \sim 1/\Delta t\)</span>.</li>
+</ul>
+<p><strong>Numbers worth knowing.</strong></p>
+<ul>
+<li>Wavelengths in free space: 1.499 m at 200 MHz, 0.749 m at 400 MHz,
+0.2306 m at 1.3 GHz, 0.1050 m at 2.856 GHz. A photon of 1 eV has a
+wavelength of 1.240 µm; of 12.4 keV, 0.1 nm.</li>
+<li>A copper cell at 2856 MHz with <span class="math inline">\(Q_0 =
+18\,400\)</span> has a bandwidth of 155 kHz and rings down with an
+amplitude time constant of 2.05 µs, about 4060 cycles to half amplitude.
+A superconducting 1.3 GHz cavity with <span class="math inline">\(Q_0 =
+10^{10}\)</span> would ring for seconds.</li>
+<li>A resonator with <span class="math inline">\(Q = 200\)</span> at 10
+MHz detuned by 19 kHz gives only 0.80 of its peak voltage, 37° late: a
+resonator must be held on tune to a small part of its bandwidth.</li>
+<li>A 50 Ω cable into a 75 Ω load reflects 20 per cent of the voltage
+and 4 per cent of the power.</li>
+<li>In the WR-284 waveguide at 2856 MHz, the cutoff is 2.078 GHz, the
+group velocity <span class="math inline">\(0.686c\)</span>, the phase
+velocity <span class="math inline">\(1.458c\)</span> and the guide
+wavelength 153.0 mm.</li>
+<li>Sunlight at the top of the atmosphere, 1361 W/m<span
+class="math inline">\(^2\)</span>, has an electric field of 1013 V/m
+(peak).</li>
+<li>To see a structure of 1 fm, a probe needs a wavelength of about 1
+fm, which for an electron means a momentum of about 1.24 GeV/<span
+class="math inline">\(c\)</span>.</li>
+</ul>
+<h2 id="the-problem-it-solved">The problem it solved</h2>
+<h3 id="square-roots-of-negative-numbers">Square roots of negative
+numbers</h3>
+<p>Girolamo Cardano’s <em>Ars Magna</em> (1545), the book that published
+the solution of the cubic equation, asks for two numbers that add to 10
+and multiply to 40. The answer comes out as <span
+class="math inline">\(5 + \sqrt{-15}\)</span> and <span
+class="math inline">\(5 - \sqrt{-15}\)</span>; Cardano noted that the
+product works and called the exercise as subtle as it was useless.
+Rafael Bombelli, in his <em>L’Algebra</em> (1572), went further: the
+cubic formula sometimes passes through square roots of negative numbers
+on the way to a perfectly real answer, and he wrote down the rules for
+computing with them. For two centuries they stayed “imaginary”,
+tolerated as a device. Leonhard Euler, in his <em>Introductio in
+analysin infinitorum</em> (1748), gave the formula <span
+class="math inline">\(e^{iv} = \cos v + i\sin v\)</span> that joins them
+to the exponential and to trigonometry. Caspar Wessel (a paper read to
+the Royal Danish Academy in 1797 and printed in 1799) and Jean-Robert
+Argand (1806) independently drew complex numbers as points in a plane,
+with multiplication as turning and stretching, and Carl Friedrich Gauss
+gave them their name, complex numbers, in 1831.</p>
+<h3 id="the-vibrating-string">The vibrating string</h3>
+<p>Jean le Rond d’Alembert, in a memoir dated 1747 for the Berlin
+Academy, wrote down the partial differential equation of a vibrating
+string and showed that its solutions are two shapes travelling in
+opposite directions without change: the wave equation and its general
+solution, both in section 8. Daniel Bernoulli argued in 1753 that every
+motion of the string is a sum of its simple modes, each a sine. Euler
+and d’Alembert doubted that a sum of smooth sines could make an
+arbitrary shape, such as a string plucked into a corner. The question
+was settled by Joseph Fourier, who in a memoir on the flow of heat
+presented to the Paris Academy in 1807, and in his book <em>Théorie
+analytique de la chaleur</em> (1822), claimed and used that any
+reasonable function on an interval is such a sum (section 16).</p>
+<h3 id="light-sound-and-the-moving-source">Light, sound and the moving
+source</h3>
+<p>Thomas Young, in lectures to the Royal Society between 1801 and 1803,
+explained the coloured bands seen where light crosses itself as
+<em>interference</em> of waves, and measured the wavelengths of the
+colours, about half a micrometre. Augustin Fresnel’s memoir on
+diffraction won the French Academy’s prize in 1819. Christian Doppler
+argued in 1842 that the colour of a star should change with its speed
+towards or away from us. Christophorus Buys Ballot tested the idea for
+sound in 1845, with musicians playing a steady note on a train near
+Utrecht and listeners by the track. James Clerk Maxwell showed in 1865
+that his equations of electricity and magnetism carry waves at the speed
+of light, and Heinrich Hertz made and detected such waves in 1887 and
+1888, measuring their wavelength from the standing waves in front of a
+metal sheet.</p>
+<h3 id="alternating-currents">Alternating currents</h3>
+<p>When electric power and telephones arrived, engineers had to
+calculate circuits driven by alternating voltages. Oliver Heaviside
+coined the word <em>impedance</em> in 1886. Charles Proteus Steinmetz,
+at the International Electrical Congress in Chicago in 1893, showed that
+if every sinusoidal voltage and current is written as a complex number,
+a circuit of resistors, coils and capacitors obeys Ohm’s law with
+complex resistances, and the calculus disappears. Every RF engineer
+since has worked that way, and so does section 6. Lord Rayleigh, in
+1897, solved for waves inside a hollow metal tube and found that they
+travel only above a cutoff frequency (section 12), the theory that made
+the waveguides of chapter 13 possible.</p>
+<h2 id="the-mathematics">The mathematics</h2>
+<h3 id="0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</h3>
+<ul>
+<li><strong>Trigonometry.</strong> Radians; <span
+class="math inline">\(\sin^2\theta + \cos^2\theta = 1\)</span>; <span
+class="math inline">\(\cos(a \pm b) = \cos a\cos b \mp \sin a\sin
+b\)</span> and <span class="math inline">\(\sin(a \pm b) = \sin a\cos b
+\pm \cos a\sin b\)</span>.</li>
+<li><strong>Calculus (<a href="F1-calculus.html">F1</a>).</strong> <span
+class="math inline">\((\sin\omega t)&#39; = \omega\cos\omega t\)</span>,
+<span class="math inline">\((e^{st})&#39; = se^{st}\)</span>, the chain
+rule, partial derivatives, and the Taylor series of <span
+class="math inline">\(e^x\)</span>, <span class="math inline">\(\sin
+x\)</span> and <span class="math inline">\(\cos x\)</span>.</li>
+<li><strong>The oscillator (<a href="F1-calculus.html">F1</a>, section
+10).</strong> A mass <span class="math inline">\(m\)</span> (kg) on a
+spring of stiffness <span class="math inline">\(k\)</span> (N/m) obeys
+<span class="math inline">\(m\ddot x = -kx\)</span>, which is solved by
+<span class="math inline">\(x = A\cos\omega_0 t + B\sin\omega_0
+t\)</span> with <span class="math inline">\(\omega_0 =
+\sqrt{k/m}\)</span>. Its energy <span class="math inline">\(\tfrac12
+m\dot x^2 + \tfrac12 kx^2\)</span> stays constant.</li>
+<li><strong>Circuits (<a
+href="F4-electromagnetism.html">F4</a>).</strong> Ohm’s law <span
+class="math inline">\(V = IR\)</span>; a capacitor holds charge <span
+class="math inline">\(Q = CV\)</span> (farads, F); an inductor has a
+voltage <span class="math inline">\(V = L\,dI/dt\)</span> across it
+(henries, H); current is the rate of flow of charge, <span
+class="math inline">\(I = dQ/dt\)</span>.</li>
+</ul>
+<p><strong>Check yourself.</strong> (a) Write <span
+class="math inline">\(3\cos\omega t + 4\sin\omega t\)</span> as <span
+class="math inline">\(R\cos(\omega t - \phi)\)</span>. (b) What is <span
+class="math inline">\(\dfrac{d^2}{dt^2}e^{-2t}\)</span>? (c) A 50 pF
+capacitor at 10 kV holds how much charge? (d) Expand <span
+class="math inline">\(\cos x\)</span> to the <span
+class="math inline">\(x^4\)</span> term. Answers: (a) <span
+class="math inline">\(R = 5\)</span>, <span class="math inline">\(\phi =
+53.13°\)</span> (from <span class="math inline">\(R\cos\phi =
+3\)</span>, <span class="math inline">\(R\sin\phi = 4\)</span>); (b)
+<span class="math inline">\(4e^{-2t}\)</span>; (c) 0.5 µC; (d) <span
+class="math inline">\(1 - x^2/2 + x^4/24\)</span>.</p>
+<h3 id="1-complex-numbers">1. Complex numbers</h3>
+<p><strong>Why invent them.</strong> The equation <span
+class="math inline">\(x^2 = -1\)</span> has no real solution, since
+every real number squared is positive or zero. Rather than give up,
+admit a new number <span class="math inline">\(i\)</span> with</p>
+<p><span class="math display">\[
+i^2 = -1,
+\]</span></p>
+<p>and keep every other rule of algebra (adding, multiplying, brackets)
+as it was. Nothing contradictory follows, and the reward, as this
+chapter shows, is that oscillations become as easy as exponentials.
+Electrical engineers write <span class="math inline">\(j\)</span>
+instead of <span class="math inline">\(i\)</span>, since <span
+class="math inline">\(i\)</span> is their symbol for current; chapter 13
+follows them. The two mean the same thing.</p>
+<p><strong>Complex numbers and their arithmetic.</strong> A complex
+number is <span class="math inline">\(z = x + iy\)</span> with <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> real. <span
+class="math inline">\(x\)</span> is its <em>real part</em>, <span
+class="math inline">\(\mathrm{Re}\,z\)</span>, and <span
+class="math inline">\(y\)</span> its <em>imaginary part</em>, <span
+class="math inline">\(\mathrm{Im}\,z\)</span> (a real number, despite
+the name). Add part by part. Multiply by expanding the brackets and
+replacing <span class="math inline">\(i^2\)</span> by <span
+class="math inline">\(-1\)</span>. With <span class="math inline">\(z_1
+= 3 + 4i\)</span> and <span class="math inline">\(z_2 = 1 -
+2i\)</span>:</p>
+<p><span class="math display">\[
+z_1 + z_2 = 4 + 2i, \qquad z_1z_2 = 3 - 6i + 4i - 8i^2 = 11 - 2i .
+\]</span></p>
+<p><strong>The conjugate and division.</strong> The <em>complex
+conjugate</em> of <span class="math inline">\(z = x + iy\)</span> is
+<span class="math inline">\(z^* = x - iy\)</span> (also written <span
+class="math inline">\(\bar z\)</span>). Its use: <span
+class="math inline">\(zz^* = x^2 + y^2\)</span> is real and never
+negative. To divide, multiply top and bottom by the conjugate of the
+bottom, which makes the bottom real:</p>
+<p><span class="math display">\[
+\frac{z_1}{z_2} = \frac{(3 + 4i)(1 + 2i)}{(1 - 2i)(1 + 2i)} = \frac{-5 +
+10i}{5} = -1 + 2i .
+\]</span></p>
+<p>Check: <span class="math inline">\((-1 + 2i)(1 - 2i) = -1 + 2i + 2i +
+4 = 3 + 4i\)</span>.</p>
+<p><strong>The complex plane.</strong> Draw <span
+class="math inline">\(z = x + iy\)</span> as the point <span
+class="math inline">\((x, y)\)</span>, or as the arrow from the origin
+to it: real parts along the horizontal axis, imaginary parts up the
+vertical one. Adding complex numbers is adding arrows nose to tail,
+exactly like adding vectors in <a href="F2-vectors.html">F2</a>. The
+length of the arrow is the <em>modulus</em>,</p>
+<p><span class="math display">\[
+|z| = \sqrt{x^2 + y^2} = \sqrt{zz^*},
+\]</span></p>
+<p>and its angle from the positive real axis is the <em>argument</em>
+<span class="math inline">\(\theta = \arg z\)</span>, with <span
+class="math inline">\(x = |z|\cos\theta\)</span> and <span
+class="math inline">\(y = |z|\sin\theta\)</span>. For <span
+class="math inline">\(z_1 = 3 + 4i\)</span>: <span
+class="math inline">\(|z_1| = 5\)</span> and <span
+class="math inline">\(\theta = \arctan(4/3) = 53.13°\)</span>. (Take
+care with the quadrant: <span class="math inline">\(-3 - 4i\)</span>
+also has <span class="math inline">\(y/x = 4/3\)</span>, but its angle
+is <span class="math inline">\(233.13°\)</span>, or <span
+class="math inline">\(-126.87°\)</span>. Draw the point.) The conjugate
+is the mirror image in the real axis: same modulus, opposite angle.</p>
+<p><strong>Polar form.</strong> So every complex number can be
+written</p>
+<p><span class="math display">\[
+z = |z|(\cos\theta + i\sin\theta) .
+\]</span></p>
+<p>Multiply two numbers in this form and use the addition formulas:</p>
+<p><span class="math display">\[
+\begin{aligned}
+z_1z_2 &amp;= r_1r_2\big[(\cos\theta_1\cos\theta_2 -
+\sin\theta_1\sin\theta_2) \\
+&amp;\qquad + i(\sin\theta_1\cos\theta_2 +
+\cos\theta_1\sin\theta_2)\big] \\
+&amp;= r_1r_2\big[\cos(\theta_1 + \theta_2) + i\sin(\theta_1 +
+\theta_2)\big] .
+\end{aligned}
+\]</span></p>
+<p><strong>Moduli multiply and angles add.</strong> This is the
+geometric meaning of complex multiplication: multiplying by a complex
+number of modulus <span class="math inline">\(r\)</span> and angle <span
+class="math inline">\(\theta\)</span> stretches every arrow by <span
+class="math inline">\(r\)</span> and turns it by <span
+class="math inline">\(\theta\)</span>. In particular, multiplying by
+<span class="math inline">\(i\)</span> (modulus 1, angle <span
+class="math inline">\(90°\)</span>) turns an arrow a quarter turn
+anticlockwise without changing its length, and doing it twice turns it
+half a turn, which is multiplying by <span
+class="math inline">\(-1\)</span>. That is what <span
+class="math inline">\(i^2 = -1\)</span> means geometrically.</p>
+<h3 id="2-eulers-formula">2. Euler’s formula</h3>
+<p><strong>The claim.</strong> For any real <span
+class="math inline">\(\theta\)</span>,</p>
+<p><span class="math display">\[
+e^{i\theta} = \cos\theta + i\sin\theta .
+\]</span></p>
+<p><strong>The proof, by Taylor series.</strong> <a
+href="F1-calculus.html">F1</a> section 8 gave <span
+class="math inline">\(e^x = 1 + x + x^2/2! + x^3/3! + \dots\)</span> for
+every real <span class="math inline">\(x\)</span>. Use the same series
+to <em>define</em> <span class="math inline">\(e^z\)</span> for complex
+<span class="math inline">\(z\)</span>; it converges for every <span
+class="math inline">\(z\)</span> for the same reason. Put <span
+class="math inline">\(z = i\theta\)</span>, and use <span
+class="math inline">\(i^2 = -1\)</span>, <span class="math inline">\(i^3
+= -i\)</span>, <span class="math inline">\(i^4 = 1\)</span>, after which
+the powers repeat:</p>
+<p><span class="math display">\[
+\begin{aligned}
+e^{i\theta} &amp;= 1 + i\theta - \frac{\theta^2}{2!} -
+i\frac{\theta^3}{3!} + \frac{\theta^4}{4!} + i\frac{\theta^5}{5!} -
+\dots \\
+&amp;= \Big(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \dots\Big) +
+i\Big(\theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \dots\Big) .
+\end{aligned}
+\]</span></p>
+<p>The two brackets are the Taylor series of <span
+class="math inline">\(\cos\theta\)</span> and <span
+class="math inline">\(\sin\theta\)</span>. That is the proof.
+Numerically, at <span class="math inline">\(\theta = 1\)</span> rad the
+real bracket to <span class="math inline">\(\theta^6\)</span> gives
+0.540278 against <span class="math inline">\(\cos 1 = 0.540302\)</span>,
+and the imaginary bracket to <span
+class="math inline">\(\theta^5\)</span> gives 0.841667 against <span
+class="math inline">\(\sin 1 = 0.841471\)</span>.</p>
+<p><strong>A second view.</strong> The function <span
+class="math inline">\(g(\theta) = \cos\theta + i\sin\theta\)</span> has
+the derivative <span class="math inline">\(-\sin\theta + i\cos\theta =
+i(\cos\theta + i\sin\theta) = ig(\theta)\)</span>, and <span
+class="math inline">\(g(0) = 1\)</span>. The exponential <span
+class="math inline">\(e^{i\theta}\)</span> has the same two properties,
+and a first-order equation with a starting value has only one solution
+(<a href="F1-calculus.html">F1</a> section 10). So they are the same
+function.</p>
+<p><strong>What it means.</strong> <span
+class="math inline">\(e^{i\theta}\)</span> is the point at angle <span
+class="math inline">\(\theta\)</span> on the circle of radius 1. Every
+complex number is</p>
+<p><span class="math display">\[
+z = re^{i\theta},
+\]</span></p>
+<p>and the rule “moduli multiply, angles add” is just the law of
+exponents: <span class="math inline">\(r_1e^{i\theta_1}\cdot
+r_2e^{i\theta_2} = r_1r_2e^{i(\theta_1 + \theta_2)}\)</span>. Some
+values worth knowing: <span class="math inline">\(e^{i\pi/2} =
+i\)</span>, <span class="math inline">\(e^{i\pi} = -1\)</span>, <span
+class="math inline">\(e^{2\pi i} = 1\)</span>, <span
+class="math inline">\(e^{i\pi/3} = 0.5 + 0.866i\)</span>. Powers become
+easy: <span class="math inline">\((re^{i\theta})^n =
+r^ne^{in\theta}\)</span>, which is de Moivre’s formula.</p>
+<p><strong>Cosine and sine from exponentials.</strong> Adding <span
+class="math inline">\(e^{i\theta} = \cos\theta + i\sin\theta\)</span>
+and <span class="math inline">\(e^{-i\theta} = \cos\theta -
+i\sin\theta\)</span>, and subtracting them,</p>
+<p><span class="math display">\[
+\cos\theta = \frac{e^{i\theta} + e^{-i\theta}}{2}, \qquad \sin\theta =
+\frac{e^{i\theta} - e^{-i\theta}}{2i} .
+\]</span></p>
+<p>A cosine is two arrows turning in opposite directions, whose
+imaginary parts cancel. Every trigonometric identity can be derived from
+these two lines and the law of exponents, without memorising it. For
+example <span class="math inline">\(\cos^2\theta = \tfrac14(e^{2i\theta}
++ 2 + e^{-2i\theta}) = \tfrac12(1 + \cos 2\theta)\)</span>.</p>
+<h3 id="3-oscillations-as-turning-arrows">3. Oscillations as turning
+arrows</h3>
+<p><strong>The picture.</strong> Let an arrow of length <span
+class="math inline">\(A\)</span> turn anticlockwise in the complex plane
+at a steady <span class="math inline">\(\omega\)</span> radians per
+second, starting at angle <span class="math inline">\(\phi\)</span>. Its
+tip is at <span class="math inline">\(z(t) = Ae^{i(\omega t +
+\phi)}\)</span>, and the shadow of the tip on the real axis is</p>
+<p><span class="math display">\[
+x(t) = \mathrm{Re}\,z(t) = A\cos(\omega t + \phi) .
+\]</span></p>
+<p>That shadow is a simple harmonic oscillation of amplitude <span
+class="math inline">\(A\)</span>, angular frequency <span
+class="math inline">\(\omega\)</span> and phase <span
+class="math inline">\(\phi\)</span>. Every sinusoidal quantity in the
+course, a cavity voltage, a betatron oscillation, the field of a light
+wave, can be pictured as the shadow of a turning arrow.</p>
+<p><strong>The complex amplitude.</strong> Collect the length and
+starting angle into one complex number, the <em>complex amplitude</em>
+<span class="math inline">\(X = Ae^{i\phi}\)</span>. Then</p>
+<p><span class="math display">\[
+x(t) = \mathrm{Re}\big(Xe^{i\omega t}\big) .
+\]</span></p>
+<p><span class="math inline">\(X\)</span> holds everything about the
+oscillation except the frequency, which is shared by everything in a
+circuit driven at one frequency. In circuits <span
+class="math inline">\(X\)</span> is called a <em>phasor</em>. (Some
+books use <span class="math inline">\(\mathrm{Re}(Xe^{-i\omega
+t})\)</span>; quantum mechanics does. The physics is the same, but signs
+of phases flip. This chapter, like most of the course, uses <span
+class="math inline">\(e^{+i\omega t}\)</span>.)</p>
+<p><strong>Why this is so useful.</strong> Three operations become
+simple:</p>
+<ul>
+<li><em>Differentiating</em> multiplies by <span
+class="math inline">\(i\omega\)</span>: <span
+class="math inline">\(\dfrac{d}{dt}Xe^{i\omega t} = i\omega Xe^{i\omega
+t}\)</span>. Since <span class="math inline">\(i = e^{i\pi/2}\)</span>,
+the velocity of an oscillation is <span
+class="math inline">\(\omega\)</span> times its displacement, turned a
+quarter cycle ahead. Twice: the acceleration is <span
+class="math inline">\((i\omega)^2 = -\omega^2\)</span> times the
+displacement, opposite to it.</li>
+<li><em>Shifting the phase</em> by <span
+class="math inline">\(\delta\)</span> multiplies by <span
+class="math inline">\(e^{i\delta}\)</span>.</li>
+<li><em>Adding</em> oscillations of the same frequency adds their
+complex amplitudes, arrow to arrow.</li>
+</ul>
+<p>And taking the real part can wait until the end. If the coefficients
+of a linear equation are real, the real part of any complex solution is
+itself a solution, because the real part of a sum is the sum of the real
+parts, and the real part of (real number) <span
+class="math inline">\(\times z\)</span> is that real number times <span
+class="math inline">\(\mathrm{Re}\,z\)</span>. So: solve with complex
+exponentials, take the real part last.</p>
+<p><strong>Example: the free oscillator again.</strong> For <span
+class="math inline">\(\ddot x = -\omega_0^2x\)</span> try <span
+class="math inline">\(x = e^{st}\)</span>, with <span
+class="math inline">\(s\)</span> a number to be found. Then <span
+class="math inline">\(\ddot x = s^2e^{st}\)</span>, and the equation
+needs <span class="math inline">\(s^2 = -\omega_0^2\)</span>, so <span
+class="math inline">\(s = \pm i\omega_0\)</span>. The general solution
+is <span class="math inline">\(x = c_1e^{i\omega_0 t} + c_2e^{-i\omega_0
+t}\)</span>, and for <span class="math inline">\(x\)</span> to be real
+<span class="math inline">\(c_2\)</span> must be <span
+class="math inline">\(c_1^*\)</span>, which gives back <span
+class="math inline">\(A\cos(\omega_0 t + \phi)\)</span>, as in F1. The
+trial <span class="math inline">\(e^{st}\)</span> will solve every
+equation in sections 4 to 7.</p>
+<p><strong>Example: two cavities adding.</strong> A particle crosses two
+RF gaps, each with a peak voltage of 100 kV at the same frequency, but
+the second reaches its peak <span class="math inline">\(60°\)</span>
+later as seen by the particle. The voltage it gains in total is the real
+part of the sum of the two phasors:</p>
+<p><span class="math display">\[
+100 + 100e^{i\pi/3} = 150 + 86.6i = 173.2\,e^{i\,30°}\ \text{kV} .
+\]</span></p>
+<p>At best it gains 173.2 kV, not 200 kV, and the best moment is <span
+class="math inline">\(30°\)</span> after the first gap’s peak. In a real
+linac every cell is phased so that the arrows line up; chapter 12 shows
+why they are deliberately set a little off the crest.</p>
+<p><strong>Example: the rate of change.</strong> <span
+class="math inline">\(V(t) = \mathrm{Re}(V_0e^{i\omega t})\)</span> with
+<span class="math inline">\(V_0 = 100\)</span> kV at 200 MHz has <span
+class="math inline">\(\dot V = \mathrm{Re}(i\omega V_0e^{i\omega
+t})\)</span>, of amplitude <span class="math inline">\(\omega V_0 = 1.26
+\times 10^{14}\)</span> V/s, as F1 found the long way.</p>
+<p><strong>Example: what one detector sees.</strong> A particle in a
+ring makes <span class="math inline">\(Q\)</span> betatron oscillations
+per turn: <span class="math inline">\(Q\)</span> is the <em>tune</em>
+(<a href="11-the-betatron.html">chapter 11</a>). A pickup at one place
+sees its oscillation once a turn, so between readings the arrow turns by
+<span class="math inline">\(2\pi Q\)</span>. For <span
+class="math inline">\(Q = 6.23\)</span> that is 6 full turns and <span
+class="math inline">\(0.23\)</span> of a turn more; since <span
+class="math inline">\(e^{2\pi i\times 6} = 1\)</span>, the pickup sees
+exactly what a tune of 0.23 would give. Only the fractional part of the
+tune can be read from one pickup, which is why ring physicists speak of
+it so often.</p>
+<h3 id="4-the-damped-oscillator-and-its-q">4. The damped oscillator and
+its Q</h3>
+<p><strong>The picture.</strong> A real oscillator loses energy: a
+pendulum to air, a circuit to resistance, a cavity to the walls in which
+its currents flow. The simplest loss is a force against the velocity,
+<span class="math inline">\(-b\dot x\)</span>, like the drag on a slowly
+moving body in a fluid. Newton’s law becomes <span
+class="math inline">\(m\ddot x = -kx - b\dot x\)</span>, or</p>
+<p><span class="math display">\[
+\ddot x + 2\Gamma\dot x + \omega_0^2x = 0, \qquad \omega_0 =
+\sqrt{k/m},\quad \Gamma = \frac{b}{2m} .
+\]</span></p>
+<p><span class="math inline">\(\Gamma\)</span> (s<span
+class="math inline">\(^{-1}\)</span>) is the <em>damping rate</em>; the
+factor 2 makes the answer tidy.</p>
+<p><strong>Solving it.</strong> Try <span class="math inline">\(x =
+e^{st}\)</span>: <span class="math inline">\(s^2 + 2\Gamma s +
+\omega_0^2 = 0\)</span>, a quadratic with roots</p>
+<p><span class="math display">\[
+s = -\Gamma \pm \sqrt{\Gamma^2 - \omega_0^2} = -\Gamma \pm i\omega_d,
+\qquad \omega_d = \sqrt{\omega_0^2 - \Gamma^2} .
+\]</span></p>
+<p>For light damping (<span class="math inline">\(\Gamma &lt;
+\omega_0\)</span>, every resonator in the course) the square root is
+imaginary and <span class="math inline">\(e^{st} = e^{-\Gamma t}e^{\pm
+i\omega_d t}\)</span>. Taking the real part,</p>
+<p><span class="math display">\[
+x(t) = Ae^{-\Gamma t}\cos(\omega_d t + \phi) .
+\]</span></p>
+<p>The oscillation goes on at nearly the old frequency, inside an
+envelope that decays as <span class="math inline">\(e^{-\Gamma
+t}\)</span>. (For <span class="math inline">\(\Gamma &gt;
+\omega_0\)</span> both roots are real and negative: the body creeps back
+without swinging, which is how a car’s shock absorbers are meant to
+work. At <span class="math inline">\(\Gamma = \omega_0\)</span>,
+<em>critical damping</em>, it returns fastest without overshoot. Chapter
+7’s <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-simple-and-damped-harmonic-oscillator">pre-requisite</a>
+treats all three cases.)</p>
+<p><strong>The energy and the quality factor.</strong> The energy goes
+as the square of the amplitude, so <span class="math inline">\(U(t) =
+U_0e^{-2\Gamma t}\)</span>, and the power lost is <span
+class="math inline">\(P = -dU/dt = 2\Gamma U\)</span>. The <em>quality
+factor</em> is defined by energy:</p>
+<p><span class="math display">\[
+Q = \frac{\omega_0 U}{P} = 2\pi\,\frac{\text{energy
+stored}}{\text{energy lost per cycle}} = \frac{\omega_0}{2\Gamma} .
+\]</span></p>
+<p><span class="math inline">\(Q\)</span> is a pure number: roughly the
+number of radians of oscillation (or <span
+class="math inline">\(Q/2\pi\)</span> cycles) over which the energy
+falls by a factor <span class="math inline">\(e\)</span>. Three
+consequences:</p>
+<ul>
+<li>The amplitude falls with time constant <span
+class="math inline">\(1/\Gamma = 2Q/\omega_0\)</span>, the energy with
+<span class="math inline">\(Q/\omega_0\)</span>.</li>
+<li>Per cycle the amplitude falls by the factor <span
+class="math inline">\(e^{-\Gamma/f_0} = e^{-\pi/Q}\)</span>. Half
+amplitude takes <span class="math inline">\(Q\ln 2/\pi\)</span>
+cycles.</li>
+<li>The frequency is lowered by damping, <span
+class="math inline">\(\omega_d/\omega_0 = \sqrt{1 - 1/(4Q^2)}\)</span>,
+by a second-order amount: for <span class="math inline">\(Q =
+18\,400\)</span>, by 4 parts in <span
+class="math inline">\(10^{10}\)</span>. For a good resonator, <span
+class="math inline">\(\omega_d = \omega_0\)</span>.</li>
+</ul>
+<p><strong>Worked number: a copper cell.</strong> Chapter 13’s idealised
+copper pillbox cell at 2856 MHz has <span class="math inline">\(Q_0 =
+18\,400\)</span> (the subscript 0 marks the <em>unloaded</em> <span
+class="math inline">\(Q\)</span>, with only the walls taking energy).
+Its field rings down with time constant</p>
+<p><span class="math display">\[
+\frac{2Q_0}{\omega_0} = \frac{2 \times 18\,400}{2\pi \times 2.856 \times
+10^9} = 2.05\ \mu\text{s},
+\]</span></p>
+<p>about <span class="math inline">\(Q_0\ln2/\pi = 4060\)</span> cycles
+to half amplitude. A niobium cavity at 1.3 GHz and 2 K with <span
+class="math inline">\(Q_0 = 10^{10}\)</span> would, with nothing coupled
+to it, ring with a time constant of 2.45 s, three billion cycles:
+superconductivity makes the walls almost lossless. (In practice the
+coupler that feeds power in also lets it out, and sets a <em>loaded</em>
+<span class="math inline">\(Q\)</span> near <span
+class="math inline">\(3 \times 10^6\)</span>; chapter 13 explains.)</p>
+<h3 id="5-the-driven-oscillator-resonance-phase-and-bandwidth">5. The
+driven oscillator: resonance, phase and bandwidth</h3>
+<p><strong>The picture.</strong> Push a swing at the right moment of
+every swing and the amplitude grows until the friction takes out per
+cycle what you put in. Push at the wrong rhythm and your pushes fight
+the swing half the time. An RF cavity is driven by a klystron or a
+tetrode in the same way, and must be pushed at its own frequency.</p>
+<p><strong>The equation and its steady answer.</strong> Add a driving
+force <span class="math inline">\(F_0\cos\omega t =
+\mathrm{Re}(F_0e^{i\omega t})\)</span>:</p>
+<p><span class="math display">\[
+\ddot x + 2\Gamma\dot x + \omega_0^2x = \frac{F_0}{m}\cos\omega t .
+\]</span></p>
+<p>After the start-up has died away (as <span
+class="math inline">\(e^{-\Gamma t}\)</span>, section 4), the body
+oscillates at the drive’s frequency <span
+class="math inline">\(\omega\)</span>, not its own. Try <span
+class="math inline">\(x = \mathrm{Re}(Xe^{i\omega t})\)</span>: every
+<span class="math inline">\(d/dt\)</span> becomes <span
+class="math inline">\(i\omega\)</span>, so</p>
+<p><span class="math display">\[
+(-\omega^2 + 2i\Gamma\omega + \omega_0^2)X = \frac{F_0}{m}, \qquad X =
+\frac{F_0/m}{\omega_0^2 - \omega^2 + 2i\Gamma\omega} .
+\]</span></p>
+<p>A differential equation has become a division. The modulus of <span
+class="math inline">\(X\)</span> is the amplitude and its argument the
+phase:</p>
+<p><span class="math display">\[
+|X| = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega^2)^2 +
+4\Gamma^2\omega^2}}, \qquad \tan\delta = \frac{2\Gamma\omega}{\omega_0^2
+- \omega^2},
+\]</span></p>
+<p>where <span class="math inline">\(\delta\)</span> is how far the
+displacement lags behind the force.</p>
+<p><strong>Reading the answer.</strong> Three regions:</p>
+<ul>
+<li><em>Driven slowly</em> (<span class="math inline">\(\omega \ll
+\omega_0\)</span>): <span class="math inline">\(X \approx
+F_0/(m\omega_0^2) = F_0/k\)</span>, the static stretch of the spring.
+The body follows the force, in step.</li>
+<li><em>At resonance</em> (<span class="math inline">\(\omega =
+\omega_0\)</span>): <span class="math inline">\(X =
+F_0/(2im\Gamma\omega_0)\)</span>. The amplitude is <span
+class="math inline">\(Q\)</span> times the static stretch, and the
+factor <span class="math inline">\(1/i = e^{-i\pi/2}\)</span> means the
+displacement lags the force by <span class="math inline">\(90°\)</span>.
+The velocity, a quarter cycle ahead of the displacement, is then exactly
+in step with the force, and the force does positive work all the time.
+That is why resonance gives the largest response.</li>
+<li><em>Driven fast</em> (<span class="math inline">\(\omega \gg
+\omega_0\)</span>): <span class="math inline">\(X \approx
+-F_0/(m\omega^2)\)</span>. The body barely moves, half a cycle out of
+step: its inertia dominates.</li>
+</ul>
+<p><strong>The resonance curve near the peak.</strong> Close to
+resonance write <span class="math inline">\(\omega = \omega_0 +
+\Delta\omega\)</span>. Then <span class="math inline">\(\omega_0^2 -
+\omega^2 \approx -2\omega_0\Delta\omega\)</span> and <span
+class="math inline">\(2\Gamma\omega \approx 2\Gamma\omega_0\)</span>,
+so</p>
+<p><span class="math display">\[
+X \approx \frac{F_0/m}{2\omega_0(-\Delta\omega + i\Gamma)}, \qquad |X|^2
+\propto \frac{1}{\Delta\omega^2 + \Gamma^2} .
+\]</span></p>
+<p>The power absorbed goes as <span class="math inline">\(|X|^2\)</span>
+and is a peaked curve called a <em>Lorentzian</em>. It falls to half its
+peak where <span class="math inline">\(\Delta\omega =
+\pm\Gamma\)</span>, so the full width at half power is <span
+class="math inline">\(2\Gamma = \omega_0/Q\)</span>, or in hertz</p>
+<p><span class="math display">\[
+\Delta f = \frac{f_0}{Q} .
+\]</span></p>
+<p>A high <span class="math inline">\(Q\)</span> means a narrow
+resonance: the oscillator responds strongly, but only to a drive very
+close to its own frequency. With the <em>detuning parameter</em> <span
+class="math inline">\(y = 2Q\,\Delta f/f_0 =
+\Delta\omega/\Gamma\)</span>, the amplitude relative to the peak is
+<span class="math inline">\(1/\sqrt{1 + y^2}\)</span>, and the extra
+phase lag is <span class="math inline">\(\arctan y\)</span>.</p>
+<p><strong>Worked numbers.</strong></p>
+<ul>
+<li>Chapter 9’s resonator at 10 MHz with <span class="math inline">\(Q_0
+= 200\)</span> has a bandwidth of 50 kHz. Detuned by 19 kHz, <span
+class="math inline">\(y = 2 \times 200 \times 0.0019 = 0.76\)</span>:
+the voltage falls to <span class="math inline">\(1/\sqrt{1 + 0.76^2} =
+0.80\)</span> of its peak, <span class="math inline">\(37°\)</span>
+late. (The full formula, not the near-resonance form, gives 0.795 and
+<span class="math inline">\(37.2°\)</span>.) Chapter 9 shows that 5 per
+cent too little voltage already loses the beam.</li>
+<li>The 2856 MHz copper cell of section 4 has a bandwidth of <span
+class="math inline">\(2.856 \times 10^9/18\,400 = 155\)</span> kHz; a
+copper cavity at 200 MHz with <span class="math inline">\(Q_0 =
+50\,000\)</span>, only 4 kHz. A temperature change that makes copper
+expand by a few parts in <span class="math inline">\(10^5\)</span> moves
+such a cavity by a large part of its bandwidth, which is why cavities
+have tuners and cooling water held to a fraction of a degree.</li>
+</ul>
+<p><strong>Bandwidth and ring-down are the same fact.</strong> The field
+time constant was <span class="math inline">\(\tau =
+2Q/\omega_0\)</span>, and the bandwidth <span
+class="math inline">\(\Delta f = f_0/Q\)</span>. Multiply: <span
+class="math inline">\(\tau\,\Delta f = 1/\pi\)</span>. A resonator that
+rings for a long time can only be driven in a narrow band, and the 155
+kHz cell above responds to a change of drive in about 2 µs. Section 16
+shows this is a case of a general rule. The driven oscillator is taken
+further, with the energy absorbed per cycle and the cavity’s response,
+in chapter 7’s <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-driven-oscillator-resonance-and-quality-factor">Driven
+oscillator, resonance and quality factor</a> and its <a
+href="09-resonant-acceleration.html#pre-requisite-continued-driven-oscillator-resonance-and-quality-factor">continuation
+in chapter 9</a>.</p>
+<h3 id="6-lc-and-rlc-circuits-with-phasors">6. LC and RLC circuits with
+phasors</h3>
+<p><strong>The LC circuit.</strong> A charged capacitor <span
+class="math inline">\(C\)</span> connected across a coil <span
+class="math inline">\(L\)</span> starts to discharge through it. The
+coil resists the growth of the current, and once the current flows it
+resists its decay, so the current overshoots and charges the capacitor
+the other way. Energy passes back and forth between the capacitor’s
+electric field, <span class="math inline">\(\tfrac12 CV^2\)</span>, and
+the coil’s magnetic field, <span class="math inline">\(\tfrac12
+LI^2\)</span>, as between a spring’s stretch and a mass’s motion. Around
+the loop the two voltages must cancel: <span class="math inline">\(L\dot
+I + Q/C = 0\)</span>, and with <span class="math inline">\(I = \dot
+Q\)</span>,</p>
+<p><span class="math display">\[
+L\ddot Q + \frac{Q}{C} = 0, \qquad \omega_0 = \frac{1}{\sqrt{LC}} .
+\]</span></p>
+<p>This is the oscillator of section 3, with charge for displacement,
+<span class="math inline">\(L\)</span> for mass and <span
+class="math inline">\(1/C\)</span> for stiffness. <em>Worked
+number:</em> chapter 9’s Wideroe drift tubes present 50 pF, and a coil
+of 5.07 µH makes them resonate at <span
+class="math inline">\(1/(2\pi\sqrt{5.07 \times 10^{-6} \times 50 \times
+10^{-12}}) = 10.0\)</span> MHz. For 200 MHz with 10 pF the coil would be
+only 63 nH, a single loop of wire: at high frequency, the “circuit”
+becomes a shaped metal box, the cavity, but the mathematics is the
+same.</p>
+<p><strong>Impedance.</strong> Drive a circuit at one frequency <span
+class="math inline">\(\omega\)</span> and write every voltage and
+current as a phasor: <span class="math inline">\(V(t) =
+\mathrm{Re}(Ve^{i\omega t})\)</span>, <span class="math inline">\(I(t) =
+\mathrm{Re}(Ie^{i\omega t})\)</span>, with <span
+class="math inline">\(V\)</span> and <span
+class="math inline">\(I\)</span> complex amplitudes. Each element then
+obeys a complex Ohm’s law, <span class="math inline">\(V = ZI\)</span>,
+with its <em>impedance</em> <span class="math inline">\(Z\)</span>
+(ohms):</p>
+<ul>
+<li><em>Resistor</em>: <span class="math inline">\(V = RI\)</span>, so
+<span class="math inline">\(Z_R = R\)</span>. Voltage and current in
+step.</li>
+<li><em>Inductor</em>: <span class="math inline">\(V = L\,dI/dt =
+i\omega L\,I\)</span>, so <span class="math inline">\(Z_L = i\omega
+L\)</span>. The voltage leads the current by <span
+class="math inline">\(90°\)</span>, and the impedance grows with
+frequency: a coil blocks fast changes.</li>
+<li><em>Capacitor</em>: <span class="math inline">\(I = C\,dV/dt =
+i\omega C\,V\)</span>, so <span class="math inline">\(Z_C = 1/(i\omega
+C) = -i/(\omega C)\)</span>. The voltage lags the current by <span
+class="math inline">\(90°\)</span>, and the impedance falls with
+frequency: a capacitor passes fast changes and blocks steady
+current.</li>
+</ul>
+<p>Impedances in series add, and in parallel their reciprocals add,
+exactly like resistances. The imaginary part of <span
+class="math inline">\(Z\)</span> is called the <em>reactance</em>: <span
+class="math inline">\(\omega L\)</span> for a coil, <span
+class="math inline">\(-1/(\omega C)\)</span> for a capacitor.</p>
+<p><strong>The series RLC circuit.</strong> A source of voltage
+amplitude <span class="math inline">\(V\)</span> drives <span
+class="math inline">\(R\)</span>, <span class="math inline">\(L\)</span>
+and <span class="math inline">\(C\)</span> in series. The total
+impedance is</p>
+<p><span class="math display">\[
+Z = R + i\Big(\omega L - \frac{1}{\omega C}\Big) .
+\]</span></p>
+<p>At <span class="math inline">\(\omega_0 = 1/\sqrt{LC}\)</span> the
+two reactances cancel, <span class="math inline">\(Z = R\)</span>, and
+the current <span class="math inline">\(V/R\)</span> is largest:
+resonance. The circuit’s quality factor is</p>
+<p><span class="math display">\[
+Q = \frac{\omega_0L}{R} = \frac{1}{\omega_0CR},
+\]</span></p>
+<p>the reactance of either element over the resistance (exercise 5
+checks this is the <span class="math inline">\(Q\)</span> of section 4).
+At resonance the voltage across the capacitor is <span
+class="math inline">\(|Z_C|\,V/R = QV\)</span>: the circuit multiplies
+the source voltage by <span class="math inline">\(Q\)</span>, while the
+coil’s equal and opposite voltage cancels it around the loop.</p>
+<p><em>Worked numbers.</em> <span class="math inline">\(L = 1\)</span>
+µH, <span class="math inline">\(R = 1\ \Omega\)</span>, and <span
+class="math inline">\(C = 253.3\)</span> pF for <span
+class="math inline">\(f_0 = 10\)</span> MHz. Then <span
+class="math inline">\(\omega_0L = 62.8\ \Omega\)</span>, <span
+class="math inline">\(Q = 62.8\)</span> and the bandwidth is 159 kHz. At
+10.5 MHz, <span class="math inline">\(Z = 1 + 6.13i\)</span> Ω, of
+modulus 6.21 Ω and angle <span class="math inline">\(80.7°\)</span>: the
+current is down to <span class="math inline">\(1/6.21 = 0.16\)</span> of
+its peak and lags the voltage by nearly a quarter cycle. At 9.5 MHz,
+<span class="math inline">\(Z = 1 - 6.45i\)</span> Ω, and the current
+leads.</p>
+<p><strong>Power.</strong> The average power into an impedance is <span
+class="math inline">\(\tfrac12\mathrm{Re}(VI^*)\)</span>: only the part
+of the current in step with the voltage does work, and the <span
+class="math inline">\(\tfrac12\)</span> is the average of <span
+class="math inline">\(\cos^2\)</span> (<a href="F1-calculus.html">F1</a>
+exercise 5). Into a pure coil or capacitor it is zero; they store energy
+and give it back each cycle.</p>
+<p><strong>A cavity as a circuit.</strong> Near one of its resonances,
+an RF cavity behaves like a parallel <span
+class="math inline">\(L\)</span>, <span class="math inline">\(C\)</span>
+and <span class="math inline">\(R\)</span>, where <span
+class="math inline">\(R\)</span> (the <em>shunt impedance</em>) stands
+for the wall losses. Chapter 9 derives <span class="math inline">\(Q_0 =
+\omega_0R_pC = R_p/(\omega_0L)\)</span> for it, and chapter 13 measures
+every cavity by <span class="math inline">\(R\)</span> and <span
+class="math inline">\(Q\)</span>. The circuit model is in chapter 4’s <a
+href="04-high-voltage-and-breakdown.html#pre-requisite-rlc-circuits-and-phasors">RLC
+circuits and phasors</a>, and the idea of an impedance as the response
+of a system at each frequency in chapter 8’s <a
+href="08-seeing-the-beam.html#pre-requisite-impulse-response-transfer-functions-impedance">Impulse
+response, transfer functions, impedance</a>.</p>
+<h3 id="7-coupled-oscillators-normal-modes-and-beats">7. Coupled
+oscillators, normal modes and beats</h3>
+<p><strong>The picture.</strong> Hang two identical pendulums from a
+slack string and set one swinging. Its swing slowly dies while the
+other’s grows, until the first is still and the second swings fully;
+then the energy flows back. Christiaan Huygens noticed in 1665 that two
+pendulum clocks on one beam fell into step, through the small motions of
+the beam. Coupled oscillators are everywhere in an accelerator: the
+cells of a multi-cell cavity, the horizontal and vertical betatron
+motions in a ring with a tilted quadrupole, and the bunches of a beam
+talking to each other through the fields they leave behind.</p>
+<p><strong>Two masses and three springs.</strong> Two equal masses <span
+class="math inline">\(m\)</span>, each held by a spring <span
+class="math inline">\(k\)</span> to a wall, are joined to each other by
+a weaker spring <span class="math inline">\(\kappa\)</span> (N/m). With
+<span class="math inline">\(x_1\)</span> and <span
+class="math inline">\(x_2\)</span> their displacements, the middle
+spring is stretched by <span class="math inline">\(x_2 - x_1\)</span>,
+so</p>
+<p><span class="math display">\[
+m\ddot x_1 = -kx_1 + \kappa(x_2 - x_1), \qquad m\ddot x_2 = -kx_2 -
+\kappa(x_2 - x_1) .
+\]</span></p>
+<p>Each equation contains both coordinates. The trick is to find
+combinations that move on their own. Add the equations and subtract
+them:</p>
+<p><span class="math display">\[
+\begin{aligned}
+m(\ddot x_1 + \ddot x_2) &amp;= -k(x_1 + x_2), \\
+m(\ddot x_1 - \ddot x_2) &amp;= -(k + 2\kappa)(x_1 - x_2) .
+\end{aligned}
+\]</span></p>
+<p>The sum <span class="math inline">\(x_1 + x_2\)</span> oscillates at
+<span class="math inline">\(\omega_1 = \sqrt{k/m}\)</span>: the masses
+move together, the middle spring is never stretched, and it does not
+matter. The difference <span class="math inline">\(x_1 - x_2\)</span>
+oscillates at <span class="math inline">\(\omega_2 = \sqrt{(k +
+2\kappa)/m}\)</span>: the masses move oppositely, the middle spring is
+stretched twice over, and the frequency is higher. These two patterns
+are the <em>normal modes</em>. In each, every part moves at one
+frequency with a fixed pattern of amplitudes; any motion of the system
+is a sum of the normal modes. With <span
+class="math inline">\(N\)</span> coupled oscillators there are <span
+class="math inline">\(N\)</span> normal modes.</p>
+<p><strong>Energy passing back and forth.</strong> Start with <span
+class="math inline">\(x_1 = A\)</span>, <span class="math inline">\(x_2
+= 0\)</span>, both at rest. That is half of each mode: <span
+class="math inline">\(x_1 + x_2 = A\cos\omega_1 t\)</span> and <span
+class="math inline">\(x_1 - x_2 = A\cos\omega_2 t\)</span>, so</p>
+<p><span class="math display">\[
+x_1 = \tfrac{A}{2}(\cos\omega_1 t + \cos\omega_2 t), \qquad x_2 =
+\tfrac{A}{2}(\cos\omega_1 t - \cos\omega_2 t) .
+\]</span></p>
+<p>By the sum formulas of trigonometry (or by section 2’s
+exponentials),</p>
+<p><span class="math display">\[
+x_1 = A\cos\Big(\frac{\omega_2 -
+\omega_1}{2}t\Big)\cos\Big(\frac{\omega_1 + \omega_2}{2}t\Big),
+\]</span></p>
+<p>and <span class="math inline">\(x_2\)</span> is the same with sines.
+Each mass oscillates at the average frequency inside a slow envelope.
+The energy is all in mass 2 when <span
+class="math inline">\(\tfrac12(\omega_2 - \omega_1)t = \pi/2\)</span>,
+at <span class="math inline">\(t = \pi/(\omega_2 - \omega_1)\)</span>.
+<em>Worked number:</em> <span class="math inline">\(m = 0.1\)</span> kg,
+<span class="math inline">\(k = 10\)</span> N/m, <span
+class="math inline">\(\kappa = 0.5\)</span> N/m: <span
+class="math inline">\(\omega_1 = 10.000\)</span> rad/s, <span
+class="math inline">\(\omega_2 = 10.488\)</span> rad/s, and the energy
+moves fully across in 6.4 s, about ten swings. The weaker the coupling,
+the closer the two frequencies and the slower the exchange.</p>
+<p><strong>Beats.</strong> The same identity explains <em>beats</em>.
+Two oscillations of nearly equal frequency added together,</p>
+<p><span class="math display">\[
+\cos\omega_1 t + \cos\omega_2 t = 2\cos\frac{(\omega_1 -
+\omega_2)t}{2}\,\cos\frac{(\omega_1 + \omega_2)t}{2},
+\]</span></p>
+<p>make a tone at the average frequency whose loudness swells and fades.
+The envelope’s size <span class="math inline">\(|\cos|\)</span> repeats
+twice in each of its own cycles, so the loudness repeats at <span
+class="math inline">\(f_1 - f_2\)</span>, the <em>beat frequency</em>.
+Two tuning forks at 440 and 442 Hz beat twice a second; a musician tunes
+until the beats stop. In RF work the same thing is done on purpose:
+mixing a 400 MHz signal with a reference at 400.004 MHz (multiplying
+them, which by the identity read backwards gives sum and difference
+frequencies) brings the information down to a 4 kHz signal that slow
+electronics can measure. This is called <em>heterodyning</em>.</p>
+<p><strong>Coupled cells.</strong> A cavity made of <span
+class="math inline">\(N\)</span> coupled cells, such as the nine-cell
+1.3 GHz TESLA cavity, has <span class="math inline">\(N\)</span> modes
+of its accelerating family at slightly different frequencies, a
+<em>passband</em>. The one used has neighbouring cells in opposite
+phase, the <span class="math inline">\(\pi\)</span> mode. Chapter 13’s
+<a
+href="13-rf-cavities-and-power.html#pre-requisite-coupled-oscillators-and-normal-modes">Coupled
+oscillators and normal modes</a> does the <span
+class="math inline">\(N\)</span>-cell chain with matrices, and <a
+href="18-imperfections-and-resonances.html">chapter 18</a> the coupling
+of horizontal and vertical motion.</p>
+<h3 id="8-the-wave-equation-on-a-string">8. The wave equation on a
+string</h3>
+<p><strong>The picture.</strong> Pluck a stretched string near one end.
+The kink does not stay where it was made; it runs along the string,
+reflects at the far end and comes back. Each bit of string only moves up
+and down, but the <em>shape</em> travels. That is a wave: a disturbance
+that moves through a medium while the medium stays where it is.</p>
+<p><strong>Deriving the equation.</strong> A string of mass per length
+<span class="math inline">\(\mu\)</span> (kg/m) is stretched with
+tension <span class="math inline">\(T\)</span> (N) along the <span
+class="math inline">\(x\)</span> axis. Its sideways displacement is
+<span class="math inline">\(y(x, t)\)</span>, and we assume it small:
+the slope <span class="math inline">\(\partial y/\partial x\)</span> is
+much less than 1, so the tension is the same everywhere and the string’s
+length hardly changes. Look at a short piece between <span
+class="math inline">\(x\)</span> and <span class="math inline">\(x +
+\Delta x\)</span>. The tension pulls along the string at each end. At
+the right end its upward part is <span class="math inline">\(T\)</span>
+times the sine of the string’s angle, which for a small angle is the
+slope: <span class="math inline">\(T\,\partial y/\partial x\)</span> at
+<span class="math inline">\(x + \Delta x\)</span>. At the left end the
+pull is the other way, <span class="math inline">\(-T\,\partial
+y/\partial x\)</span> at <span class="math inline">\(x\)</span>. The net
+upward force is</p>
+<p><span class="math display">\[
+T\Big[\frac{\partial y}{\partial x}\Big|_{x + \Delta x} - \frac{\partial
+y}{\partial x}\Big|_x\Big] \approx T\frac{\partial^2y}{\partial
+x^2}\Delta x .
+\]</span></p>
+<p>A straight string feels no net force; a curved one is pulled towards
+its centre of curvature, more where it is more curved. Newton’s law for
+the piece, mass <span class="math inline">\(\mu\Delta x\)</span>, then
+gives</p>
+<p><span class="math display">\[
+\mu\,\Delta x\,\frac{\partial^2y}{\partial t^2} =
+T\frac{\partial^2y}{\partial x^2}\Delta x,
+\]</span></p>
+<p>which is the <em>wave equation</em>:</p>
+<p><span class="math display">\[
+\frac{\partial^2y}{\partial t^2} = v^2\frac{\partial^2y}{\partial x^2},
+\qquad v = \sqrt{\frac{T}{\mu}} .
+\]</span></p>
+<p><span class="math inline">\(v\)</span> has units of <span
+class="math inline">\(\sqrt{\text{N}/(\text{kg/m})}\)</span>, which is
+m/s: a speed. A tighter string is faster, a heavier one slower. The
+approximation fails when the slope is not small: a string plucked hard
+does not obey the equation exactly, and its waves change shape.</p>
+<p><strong>The travelling solutions.</strong> Take any function <span
+class="math inline">\(f\)</span> of one variable and set <span
+class="math inline">\(y = f(x - vt)\)</span>. Write <span
+class="math inline">\(u = x - vt\)</span>. By the chain rule, <span
+class="math inline">\(\partial y/\partial x = f&#39;(u)\)</span> and
+<span class="math inline">\(\partial y/\partial t =
+-vf&#39;(u)\)</span>, so <span
+class="math inline">\(\partial^2y/\partial x^2 = f&#39;&#39;(u)\)</span>
+and <span class="math inline">\(\partial^2y/\partial t^2 =
+v^2f&#39;&#39;(u)\)</span>. The equation holds, whatever the shape <span
+class="math inline">\(f\)</span>. And <span class="math inline">\(f(x -
+vt)\)</span> is the shape <span class="math inline">\(f(x)\)</span>
+moved a distance <span class="math inline">\(vt\)</span> to the right:
+at time <span class="math inline">\(t\)</span> the value that was at
+<span class="math inline">\(x = 0\)</span> is at <span
+class="math inline">\(x = vt\)</span>. Likewise <span
+class="math inline">\(g(x + vt)\)</span> moves to the left. d’Alembert’s
+result is that every solution is a sum of the two:</p>
+<p><span class="math display">\[
+y(x, t) = f(x - vt) + g(x + vt) .
+\]</span></p>
+<p><strong>Worked number.</strong> A steel wire 0.25 mm in diameter
+(density 7850 kg/m<span class="math inline">\(^3\)</span>) has <span
+class="math inline">\(\mu = 7850 \times \pi \times (0.125 \times
+10^{-3})^2 = 3.85 \times 10^{-4}\)</span> kg/m. Under 70 N of tension,
+its waves travel at <span class="math inline">\(\sqrt{70/3.85 \times
+10^{-4}} = 426\)</span> m/s.</p>
+<p><strong>The same equation elsewhere.</strong> The wave equation
+appears wherever a quantity’s acceleration is set by its curvature.
+Sound in air is one case (the pressure); a transmission line is another,
+with <span class="math inline">\(v = 1/\sqrt{L&#39;C&#39;}\)</span> for
+<span class="math inline">\(L&#39;\)</span> and <span
+class="math inline">\(C&#39;\)</span> the inductance and capacitance per
+metre; and <a href="F4-electromagnetism.html">F4</a> shows that each
+component of the electric and magnetic field in empty space obeys it
+with <span class="math inline">\(v = c\)</span> (section 13).</p>
+<h3 id="9-sinusoidal-waves">9. Sinusoidal waves</h3>
+<p><strong>The picture.</strong> Shake the end of a string up and down
+steadily. Every point of the string then oscillates at the shaking
+frequency, each a little later than the one before: a sinusoidal
+wave,</p>
+<p><span class="math display">\[
+y(x, t) = A\cos(\omega t - kx + \phi) =
+\mathrm{Re}\big(Ae^{i\phi}e^{i(\omega t - kx)}\big) .
+\]</span></p>
+<p>It is <span class="math inline">\(f(x - vt)\)</span> for a cosine
+shape, since <span class="math inline">\(\omega t - kx = -k(x -
+(\omega/k)t)\)</span>.</p>
+<p><strong>The names.</strong></p>
+<ul>
+<li><em>Amplitude</em> <span class="math inline">\(A\)</span>: the
+largest displacement.</li>
+<li><em>Angular frequency</em> <span
+class="math inline">\(\omega\)</span> (rad/s) and <em>frequency</em>
+<span class="math inline">\(f = \omega/2\pi\)</span> (Hz): how fast each
+point oscillates. The <em>period</em> is <span class="math inline">\(T =
+1/f\)</span>.</li>
+<li><em>Wavenumber</em> <span class="math inline">\(k\)</span> (rad/m)
+and <em>wavelength</em> <span class="math inline">\(\lambda =
+2\pi/k\)</span> (m): a snapshot of the string repeats every <span
+class="math inline">\(\lambda\)</span>. <span
+class="math inline">\(k\)</span> is to space what <span
+class="math inline">\(\omega\)</span> is to time.</li>
+<li><em>Phase</em> <span class="math inline">\(\omega t - kx +
+\phi\)</span>: where in its cycle each point is. A crest is a place of
+constant phase.</li>
+<li><em>Phase velocity</em>: a crest moves so that <span
+class="math inline">\(\omega t - kx\)</span> stays fixed, so <span
+class="math inline">\(x\)</span> grows at <span
+class="math inline">\(dx/dt = \omega/k\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+v_{ph} = \frac{\omega}{k} = f\lambda .
+\]</span></p>
+<p>In one period a crest moves one wavelength. For the string, <span
+class="math inline">\(v_{ph}\)</span> is <span class="math inline">\(v =
+\sqrt{T/\mu}\)</span> at every frequency; section 12 meets waves where
+it is not.</p>
+<p><strong>Worked numbers.</strong> Electromagnetic waves in free space
+travel at <span class="math inline">\(c = 299\,792\,458\)</span> m/s, so
+<span class="math inline">\(\lambda = c/f\)</span>: 1.499 m at 200 MHz,
+0.749 m at 400 MHz, 0.2306 m at 1.3 GHz and 0.1050 m at 2.856 GHz. These
+wavelengths set the size of everything RF in an accelerator: a cavity is
+about half a wavelength across, and a cell of a linac for electrons at
+<span class="math inline">\(\beta = 1\)</span> is <span
+class="math inline">\(\lambda/2\)</span> or <span
+class="math inline">\(\lambda/3\)</span> long.</p>
+<p><strong>Riding a wave.</strong> An electron linac (<a
+href="14-linear-accelerators.html">chapter 14</a>) sends a wave <span
+class="math inline">\(\mathcal{E}_z = \hat{\mathcal{E}}\cos(\omega t -
+kz)\)</span> along the beam’s direction <span
+class="math inline">\(z\)</span>. An electron at <span
+class="math inline">\(z = vt\)</span> sees the phase <span
+class="math inline">\(\omega t - kvt = (\omega - kv)t\)</span>. If its
+speed equals the phase velocity, <span class="math inline">\(v =
+\omega/k\)</span>, the phase it sees is constant: it sits on one point
+of the wave and feels a steady force, like a surfer on a breaker. The
+engineering of chapter 14 is about making <span
+class="math inline">\(v_{ph}\)</span> equal <span
+class="math inline">\(c\)</span>.</p>
+<p><strong>The energy a wave carries.</strong> Each piece of string has
+kinetic energy <span class="math inline">\(\tfrac12\mu\,\Delta
+x\,(\partial y/\partial t)^2\)</span>, and stretched energy <span
+class="math inline">\(\tfrac12 T\,\Delta x\,(\partial y/\partial
+x)^2\)</span> (the work done lengthening it, to the same small-slope
+approximation). For the wave <span class="math inline">\(A\cos(\omega t
+- kx)\)</span> the two are equal, since <span class="math inline">\(T
+k^2 = T\omega^2/v^2 = \mu\omega^2\)</span>, and each averages to <span
+class="math inline">\(\tfrac14\mu\omega^2A^2\)</span> per metre (<span
+class="math inline">\(\sin^2\)</span> averages to <span
+class="math inline">\(\tfrac12\)</span>). The energy per metre is <span
+class="math inline">\(\tfrac12\mu\omega^2A^2\)</span>, and it moves at
+<span class="math inline">\(v\)</span>, so the power passing any point
+is</p>
+<p><span class="math display">\[
+P = \tfrac12\mu v\,\omega^2A^2 = \tfrac12 Z\omega^2A^2, \qquad Z = \mu v
+= \sqrt{T\mu} .
+\]</span></p>
+<p><span class="math inline">\(Z\)</span> (N s/m) is the string’s
+<em>impedance</em>: the force needed to move its end at unit speed.
+Section 11 shows it decides reflections. <em>Worked number:</em> the
+steel wire above, 0.648 m long and vibrating at its fundamental 329 Hz
+(section 10), carries 0.35 W in each direction for a 1 mm amplitude,
+since <span class="math inline">\(Z = 0.164\)</span> N s/m. Note the
+scaling: power goes as amplitude squared and frequency squared, as for
+every wave in the course.</p>
+<h3 id="10-superposition-interference-and-standing-waves">10.
+Superposition, interference and standing waves</h3>
+<p><strong>Superposition.</strong> The wave equation is <em>linear</em>:
+if <span class="math inline">\(y_1\)</span> and <span
+class="math inline">\(y_2\)</span> are solutions, so is <span
+class="math inline">\(y_1 + y_2\)</span>. Two waves pass through each
+other and each carries on as if the other were not there; where they
+overlap the displacement is the sum. (This is true as long as the
+small-slope approximation holds. Large waves in water, and the most
+intense laser light in matter, break it.)</p>
+<p><strong>Interference.</strong> Two waves of the same frequency
+arriving at one place add as phasors. Equal amplitudes <span
+class="math inline">\(A\)</span> with a phase difference <span
+class="math inline">\(\varphi\)</span> give <span
+class="math inline">\(A + Ae^{i\varphi}\)</span>, of modulus <span
+class="math inline">\(2A|\cos(\varphi/2)|\)</span>. In step (<span
+class="math inline">\(\varphi = 0\)</span>) the amplitude doubles and
+the intensity, which goes as amplitude squared, quadruples:
+<em>constructive</em> interference. Half a cycle apart (<span
+class="math inline">\(\varphi = \pi\)</span>) they cancel:
+<em>destructive</em> interference. The energy is not lost; it is
+redistributed, more in some places and less in others, and the total
+averages out (section 15).</p>
+<p><strong>Standing waves.</strong> A wave running right and an equal
+one running left add to</p>
+<p><span class="math display">\[
+A\cos(\omega t - kx) + A\cos(\omega t + kx) = 2A\cos kx\,\cos\omega t .
+\]</span></p>
+<p>The pattern <span class="math inline">\(\cos kx\)</span> no longer
+moves; it just swells and shrinks in time. Points where <span
+class="math inline">\(\cos kx = 0\)</span>, every half wavelength, never
+move: <em>nodes</em>. Halfway between them are the <em>antinodes</em>,
+which swing hardest. Since the two travelling waves carry equal power in
+opposite directions, a standing wave carries no net power: the energy
+sloshes between kinetic and stretched energy, a quarter cycle apart, as
+in a single oscillator.</p>
+<p><strong>Modes of a string.</strong> A string fixed at <span
+class="math inline">\(x = 0\)</span> and <span class="math inline">\(x =
+L\)</span> must have nodes at both ends. The standing wave <span
+class="math inline">\(\sin kx\,\cos\omega t\)</span> has a node at 0; it
+has one at <span class="math inline">\(L\)</span> only if <span
+class="math inline">\(kL = n\pi\)</span> for a whole number <span
+class="math inline">\(n\)</span>. So only certain wavelengths fit, <span
+class="math inline">\(\lambda_n = 2L/n\)</span>, and only certain
+frequencies:</p>
+<p><span class="math display">\[
+f_n = \frac{v}{\lambda_n} = \frac{nv}{2L}, \qquad n = 1, 2, 3, \dots
+\]</span></p>
+<p>These are the string’s <em>modes</em> (its normal modes, as in
+section 7, now infinitely many because the string has infinitely many
+parts). <span class="math inline">\(n = 1\)</span> is the fundamental
+and the rest are its harmonics. The steel wire at 70 N, 0.648 m long,
+has <span class="math inline">\(f_1 = 426/(2 \times 0.648) =
+329\)</span> Hz, close to the top string of a guitar, and harmonics at
+658, 987 Hz and so on.</p>
+<p><strong>Modes of a pipe.</strong> Sound in a pipe open at both ends
+has pressure nodes at the ends, and the same <span
+class="math inline">\(f_n = nv/(2L)\)</span>. Closed at one end (a
+pressure antinode there), only odd quarter-wavelengths fit: <span
+class="math inline">\(f_n = (2n - 1)v/(4L)\)</span>.</p>
+<p><strong>The seed of cavity modes.</strong> Light between two parallel
+metal plates behaves like the string: the electric field along a good
+conductor’s surface must be zero (charges in the metal move to cancel
+it), so the field parallel to the plates has nodes at both. Modes exist
+at <span class="math inline">\(f_n = nc/(2L)\)</span>. Plates 52.5 mm
+apart resonate first at <span class="math inline">\(c/(2 \times 0.0525)
+= 2.855\)</span> GHz. A real cavity is closed on all sides, and its
+lowest accelerating mode, with the field along the axis, is set mainly
+by its radius rather than its length: for a pillbox of radius <span
+class="math inline">\(a\)</span> it is <span class="math inline">\(f =
+2.405c/(2\pi a)\)</span> (the 2.405 comes from a Bessel function, a
+cousin of the sine for round shapes), which gives 2.854 GHz for <span
+class="math inline">\(a = 40.2\)</span> mm, chapter 13’s cell. But the
+idea is the string’s: walls force nodes, so only waves that fit between
+them survive, at a discrete set of frequencies. See chapter 7’s <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-resonant-cavity-modes">Resonant
+cavity modes</a>.</p>
+<p><strong>Phasing a standing-wave linac.</strong> A particle at nearly
+<span class="math inline">\(c\)</span> crosses a cell <span
+class="math inline">\(\lambda/2\)</span> long in half an RF period. If
+neighbouring cells are in opposite phase (the <span
+class="math inline">\(\pi\)</span> mode), the field in the next cell has
+just reversed as it arrives, and points the right way again. That is why
+the cells of chapter 13’s 2856 MHz structure are 52.5 mm long.</p>
+<h3 id="11-reflection-and-impedance-matching">11. Reflection and
+impedance matching</h3>
+<p><strong>The picture.</strong> Tie a light string to a heavy rope and
+send a pulse along the string. At the knot, part of the pulse goes on
+into the rope, slower and smaller, and part comes back along the string,
+upside down. Send it the other way, from rope to string, and the
+reflection comes back the right way up. Whenever a wave meets a change
+in the medium, some of it reflects. The same happens to an RF signal
+reaching the end of a cable, or a cavity whose input does not match its
+feed line.</p>
+<p><strong>Working it out.</strong> Strings 1 and 2 (same tension <span
+class="math inline">\(T\)</span>, different <span
+class="math inline">\(\mu\)</span>) are joined at <span
+class="math inline">\(x = 0\)</span>. At frequency <span
+class="math inline">\(\omega\)</span> they have wavenumbers <span
+class="math inline">\(k_1 = \omega/v_1\)</span> and <span
+class="math inline">\(k_2 = \omega/v_2\)</span>. Let an incident wave
+<span class="math inline">\(Ae^{i(\omega t - k_1x)}\)</span> arrive from
+the left; there will be a reflected wave <span
+class="math inline">\(Be^{i(\omega t + k_1x)}\)</span> on the left and a
+transmitted one <span class="math inline">\(Ce^{i(\omega t -
+k_2x)}\)</span> on the right. Two conditions hold at the knot:</p>
+<ul>
+<li>The strings are joined, so the displacement is the same on both
+sides: <span class="math inline">\(A + B = C\)</span>.</li>
+<li>The knot has no mass, so the sideways forces on it must balance (any
+net force would give it infinite acceleration). The force is <span
+class="math inline">\(T\,\partial y/\partial x\)</span>, so the slopes
+match: <span class="math inline">\(-ik_1(A - B) = -ik_2C\)</span>.</li>
+</ul>
+<p>Solve: <span class="math inline">\(B/A = (k_1 - k_2)/(k_1 +
+k_2)\)</span> and <span class="math inline">\(C/A = 2k_1/(k_1 +
+k_2)\)</span>. Since <span class="math inline">\(Z = \sqrt{T\mu} =
+Tk/\omega\)</span> is proportional to <span
+class="math inline">\(k\)</span> at fixed <span
+class="math inline">\(T\)</span> and <span
+class="math inline">\(\omega\)</span>,</p>
+<p><span class="math display">\[
+r = \frac{B}{A} = \frac{Z_1 - Z_2}{Z_1 + Z_2}, \qquad t = \frac{C}{A} =
+\frac{2Z_1}{Z_1 + Z_2} .
+\]</span></p>
+<p>From light string into heavy rope, <span class="math inline">\(Z_2
+&gt; Z_1\)</span> and <span class="math inline">\(r\)</span> is
+negative: the reflection is inverted. From heavy to light, <span
+class="math inline">\(r &gt; 0\)</span>. Into a wall (<span
+class="math inline">\(Z_2 \to \infty\)</span>), <span
+class="math inline">\(r = -1\)</span>: total reflection, inverted, which
+is why a fixed end is a node. Into a free end (<span
+class="math inline">\(Z_2 = 0\)</span>), <span class="math inline">\(r =
++1\)</span>.</p>
+<p><strong>Energy.</strong> With <span class="math inline">\(P =
+\tfrac12 Z\omega^2|A|^2\)</span> from section 9, the reflected fraction
+of the power is <span class="math inline">\(r^2\)</span> and the
+transmitted fraction <span class="math inline">\((Z_2/Z_1)t^2\)</span>.
+For <span class="math inline">\(Z_2 = 2Z_1\)</span>: <span
+class="math inline">\(r = -1/3\)</span>, <span class="math inline">\(t =
+2/3\)</span>, and the power splits <span
+class="math inline">\(1/9\)</span> reflected and <span
+class="math inline">\(2 \times 4/9 = 8/9\)</span> transmitted, adding to
+1 as it must.</p>
+<p><strong>Matching.</strong> If <span class="math inline">\(Z_2 =
+Z_1\)</span>, <span class="math inline">\(r = 0\)</span>: the wave
+passes the join without noticing it. Nothing is reflected when the
+impedances match, whatever else differs. That is the general rule for
+every wave in the course, and engineers spend much effort on it.</p>
+<p><strong>Transmission lines.</strong> An RF cable or waveguide has a
+<em>characteristic impedance</em> <span
+class="math inline">\(Z_0\)</span>, the ratio of voltage to current in a
+wave travelling along it: 50 Ω for most laboratory cable. A load <span
+class="math inline">\(Z_L\)</span> at its end (an antenna, a cavity, a
+resistor) reflects the fraction</p>
+<p><span class="math display">\[
+\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0}
+\]</span></p>
+<p>of the incident voltage. It is the string’s formula with the sign
+reversed, because on the line the voltage plays the part of the string’s
+force and the current the part of its velocity; <span
+class="math inline">\(r\)</span> above was for the displacement, like
+the current. A 75 Ω load on a 50 Ω cable gives <span
+class="math inline">\(\Gamma = 0.2\)</span>, and reflects <span
+class="math inline">\(\Gamma^2 = 4\)</span> per cent of the power. A
+short circuit (<span class="math inline">\(Z_L = 0\)</span>) gives <span
+class="math inline">\(\Gamma = -1\)</span> and an open end <span
+class="math inline">\(+1\)</span>: everything comes back. The reflected
+and incident waves together make a partial standing wave on the line,
+whose largest and smallest voltages are in the ratio <span
+class="math inline">\((1 + |\Gamma|)/(1 - |\Gamma|)\)</span>, the
+<em>voltage standing-wave ratio</em>, 1.5 here: it is what an engineer
+measures to judge a match.</p>
+<p>The match of a klystron’s waveguide to a cavity, and why the power
+reflected from an unmatched cavity can destroy the klystron unless a
+circulator diverts it, are in chapter 13 (via chapter 8’s <a
+href="08-seeing-the-beam.html#pre-requisite-transmission-lines-matching-s-parameters">Transmission
+lines, matching, S-parameters</a>). <a href="F1-calculus.html">F1</a>
+section 5 met the same idea from the other side: a source delivers most
+power to a load equal to its own internal resistance.</p>
+<h3 id="12-dispersion-phase-and-group-velocity">12. Dispersion: phase
+and group velocity</h3>
+<p><strong>The picture.</strong> On a string, waves of every frequency
+travel at the same speed, so a pulse, which is a sum of many frequencies
+(section 16), keeps its shape. In many media this is not so: waves of
+different frequencies travel at different speeds, and the medium is
+called <em>dispersive</em> (a prism disperses white light into colours
+because red and blue travel through glass at different speeds). Then the
+relation between <span class="math inline">\(\omega\)</span> and <span
+class="math inline">\(k\)</span>, the <em>dispersion relation</em>, is
+no longer <span class="math inline">\(\omega = vk\)</span>, and two
+speeds must be told apart.</p>
+<p><strong>Group velocity from beats.</strong> Add two waves of equal
+amplitude and slightly different frequency and wavenumber, <span
+class="math inline">\((\omega_1, k_1)\)</span> and <span
+class="math inline">\((\omega_2, k_2)\)</span>. By the beat identity of
+section 7,</p>
+<p><span class="math display">\[
+\cos(\omega_1 t - k_1x) + \cos(\omega_2 t - k_2x) =
+2\cos\Big(\frac{\Delta\omega}{2}t - \frac{\Delta
+k}{2}x\Big)\cos(\bar\omega t - \bar kx),
+\]</span></p>
+<p>with <span class="math inline">\(\Delta\omega = \omega_1 -
+\omega_2\)</span>, <span class="math inline">\(\Delta k = k_1 -
+k_2\)</span>, and bars for averages. The fast wave inside moves at <span
+class="math inline">\(\bar\omega/\bar k\)</span>, the phase velocity.
+The envelope, the groups of waves, moves at <span
+class="math inline">\(\Delta\omega/\Delta k\)</span>. In the limit of
+close frequencies this is the <em>group velocity</em>:</p>
+<p><span class="math display">\[
+v_g = \frac{d\omega}{dk} .
+\]</span></p>
+<p>Energy and information travel with the envelope, at <span
+class="math inline">\(v_g\)</span>; the crests slide through it at <span
+class="math inline">\(v_{ph}\)</span>. When <span
+class="math inline">\(\omega = vk\)</span>, both are <span
+class="math inline">\(v\)</span> and there is no difference.</p>
+<p><strong>The waveguide example.</strong> Section 10’s waves between
+two plates bounce back and forth across a hollow metal pipe as they
+travel along it. Chapter 13 shows that in a rectangular guide of broad
+width <span class="math inline">\(a_w\)</span>, the lowest mode has the
+dispersion relation</p>
+<p><span class="math display">\[
+\omega^2 = \omega_c^2 + c^2k^2, \qquad \omega_c = \frac{\pi c}{a_w},
+\]</span></p>
+<p>where <span class="math inline">\(k\)</span> is the wavenumber along
+the guide and <span class="math inline">\(\omega_c = 2\pi f_c\)</span>
+the <em>cutoff</em> frequency. (The picture: the wave’s total wavenumber
+<span class="math inline">\(\omega/c\)</span> is split between the
+across-guide part, fixed at <span class="math inline">\(\pi/a_w\)</span>
+by the walls, and the along-guide part <span
+class="math inline">\(k\)</span>, by Pythagoras.) Then</p>
+<p><span class="math display">\[
+v_{ph} = \frac{\omega}{k} = \frac{c}{\sqrt{1 - (f_c/f)^2}}, \qquad v_g =
+\frac{d\omega}{dk} = \frac{c^2k}{\omega} = c\sqrt{1 - (f_c/f)^2} .
+\]</span></p>
+<p>(For <span class="math inline">\(v_g\)</span>, differentiate <span
+class="math inline">\(\omega^2 = \omega_c^2 + c^2k^2\)</span>: <span
+class="math inline">\(2\omega\,d\omega = 2c^2k\,dk\)</span>.) The phase
+velocity is above <span class="math inline">\(c\)</span>, and the group
+velocity below; their product is exactly <span
+class="math inline">\(c^2\)</span>. The phase velocity breaking the
+speed of light breaks no law: no energy or signal moves at it. The guide
+wavelength <span class="math inline">\(\lambda_g = 2\pi/k =
+\lambda/\sqrt{1 - (f_c/f)^2}\)</span> is longer than in free space.</p>
+<p><em>Worked numbers: WR-284 at 2856 MHz.</em> The broad width is 72.14
+mm, so <span class="math inline">\(f_c = c/(2a_w) = 2.078\)</span> GHz.
+At 2856 MHz, <span class="math inline">\(\sqrt{1 - (2.078/2.856)^2} =
+0.686\)</span>, so <span class="math inline">\(v_g = 0.686c\)</span>,
+<span class="math inline">\(v_{ph} = 1.458c\)</span>, and <span
+class="math inline">\(\lambda_g = 105.0/0.686 = 153.0\)</span> mm. A
+numerical check, <span class="math inline">\((\omega_2 - \omega_1)/(k_2
+- k_1)\)</span> between 2855 and 2857 MHz, gives <span
+class="math inline">\(0.68607c\)</span>, the same to five figures.</p>
+<p><strong>Below cutoff.</strong> For <span class="math inline">\(\omega
+&lt; \omega_c\)</span>, <span class="math inline">\(k^2 = (\omega^2 -
+\omega_c^2)/c^2\)</span> is negative, so <span
+class="math inline">\(k\)</span> is imaginary, <span
+class="math inline">\(k = -i\kappa\)</span> with <span
+class="math inline">\(\kappa = \sqrt{\omega_c^2 - \omega^2}/c\)</span>.
+The wave <span class="math inline">\(e^{i(\omega t - kx)}\)</span>
+becomes <span class="math inline">\(e^{-\kappa x}e^{i\omega t}\)</span>:
+it does not travel at all, but dies away exponentially into the guide.
+Such a wave is <em>evanescent</em>. A 1.5 GHz signal in WR-284 falls as
+<span class="math inline">\(e^{-x/(33.2\ \text{mm})}\)</span>, by a
+factor 1000 in 23 cm. This is how a beam pipe, too narrow to carry an
+accelerating cavity’s frequency, keeps the cavity’s field from leaking
+along it.</p>
+<p><strong>Other dispersive waves.</strong> Electromagnetic waves in an
+ionised gas obey the same relation with <span
+class="math inline">\(\omega_c\)</span> replaced by the plasma frequency
+<span class="math inline">\(\omega_p\)</span> (chapter 7’s <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-waves-in-plasmas">Waves
+in plasmas</a>, and chapter 27’s plasma accelerators); a chain of
+coupled cavity cells has a passband with a curved <span
+class="math inline">\(\omega(k)\)</span> (chapter 14). Chapter 13’s <a
+href="13-rf-cavities-and-power.html#pre-requisite-waveguides-te-and-tm-modes-cutoff-phase-and-group-velocity">Waveguides</a>
+derives the guide’s modes from Maxwell’s equations.</p>
+<h3 id="13-electromagnetic-waves">13. Electromagnetic waves</h3>
+<p><strong>From F4.</strong> In empty space, with no charges or
+currents, Maxwell’s equations combine (in <a
+href="F4-electromagnetism.html">F4</a>, using the vector calculus of <a
+href="F2-vectors.html">F2</a>) into the wave equation for each component
+of the electric field <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> and the magnetic
+field <span class="math inline">\(\mathbf{B}\)</span>, with speed</p>
+<p><span class="math display">\[
+c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} = 299\,792\,458\ \text{m/s} .
+\]</span></p>
+<p>A changing magnetic field makes an electric field, and a changing
+electric field makes a magnetic field; each keeps the other going, and
+the pair moves off at <span class="math inline">\(c\)</span>. In 1865
+Maxwell noticed that this speed, computed from laboratory measurements
+of electricity and magnetism, matched the measured speed of light, and
+concluded that light is such a wave.</p>
+<p><strong>A plane wave.</strong> The simplest solution travelling along
+<span class="math inline">\(z\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{E}_x = \mathcal{E}_0\cos(\omega t - kz), \qquad B_y =
+\frac{\mathcal{E}_0}{c}\cos(\omega t - kz),
+\]</span></p>
+<p>with <span class="math inline">\(\omega = ck\)</span>. Three facts,
+all from Maxwell’s equations: the fields are <em>transverse</em>
+(perpendicular to the direction of travel); <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> and <span
+class="math inline">\(\mathbf{B}\)</span> are perpendicular to each
+other and in step, with the direction of travel along <span
+class="math inline">\(\boldsymbol{\mathcal{E}} \times
+\mathbf{B}\)</span>; and <span class="math inline">\(B =
+\mathcal{E}/c\)</span>.</p>
+<p><strong>Intensity.</strong> The power per unit area carried by the
+wave, averaged over a cycle, is</p>
+<p><span class="math display">\[
+I = \frac{\mathcal{E}_0^2}{2\eta_0} = \tfrac12
+c\varepsilon_0\mathcal{E}_0^2, \qquad \eta_0 =
+\sqrt{\frac{\mu_0}{\varepsilon_0}} = 376.7\ \Omega .
+\]</span></p>
+<p>(The derivation, from the energy densities <span
+class="math inline">\(\tfrac12\varepsilon_0\mathcal{E}^2\)</span> and
+<span class="math inline">\(B^2/2\mu_0\)</span> moving at <span
+class="math inline">\(c\)</span>, is chapter 13’s <a
+href="13-rf-cavities-and-power.html#pre-requisite-poyntings-theorem-energy-and-power-flow">Poynting’s
+theorem</a>.) <span class="math inline">\(\eta_0\)</span>, the
+<em>impedance of free space</em>, is the ratio <span
+class="math inline">\(\mathcal{E}/H\)</span> in the wave, with <span
+class="math inline">\(H = B/\mu_0\)</span>: the wave in space has an
+impedance like a cable’s, and an antenna is a device for matching a line
+to it. <em>Worked number:</em> sunlight above the atmosphere brings 1361
+W/m<span class="math inline">\(^2\)</span>. Then <span
+class="math inline">\(\mathcal{E}_0 = \sqrt{2 \times 376.7 \times 1361}
+= 1013\)</span> V/m and <span class="math inline">\(B_0 = 3.4\)</span>
+µT. Compare the 30 MV/m on the axis of a copper accelerating cell: an
+accelerator’s fields are confined and resonant, and vastly stronger than
+light’s.</p>
+<p><strong>Polarisation.</strong> The direction of <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> is the wave’s
+<em>polarisation</em>. Above it is fixed along <span
+class="math inline">\(x\)</span>: <em>linear</em> polarisation. Add a
+second wave polarised along <span class="math inline">\(y\)</span>, a
+quarter cycle behind:</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{E}} = \mathcal{E}_0\big(\hat{\mathbf{x}}\cos(\omega
+t - kz) + \hat{\mathbf{y}}\sin(\omega t - kz)\big) .
+\]</span></p>
+<p>At any fixed <span class="math inline">\(z\)</span> the field arrow
+keeps its length and turns round once per period: <em>circular</em>
+polarisation. A planar undulator, whose electrons wiggle in one plane,
+gives linearly polarised light; a helical one, whose electrons spiral,
+gives circular. Any polarisation is a sum of two linear ones with some
+phase between them, which complex amplitudes <span
+class="math inline">\(\mathcal{E}_x\)</span> and <span
+class="math inline">\(\mathcal{E}_y\)</span> describe at once.</p>
+<p><strong>The spectrum.</strong> Electromagnetic waves are named by
+frequency; physics is the same throughout. <a
+href="F7-atoms-and-quanta.html">F7</a> explains that light also comes in
+photons of energy <span class="math inline">\(E = hf\)</span>, with
+Planck’s constant <span class="math inline">\(h = 4.136 \times
+10^{-15}\)</span> eV s, or <span class="math inline">\(E\,[\text{eV}] =
+1239.84/\lambda\,[\text{nm}]\)</span>.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Source</th>
+<th><span class="math inline">\(f\)</span></th>
+<th><span class="math inline">\(\lambda\)</span></th>
+<th>Photon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wideroe resonator, cyclotron</td>
+<td>10 MHz</td>
+<td>30 m</td>
+<td>41 neV</td>
+</tr>
+<tr>
+<td>Proton linac, 200 MHz</td>
+<td>200 MHz</td>
+<td>1.50 m</td>
+<td>0.83 µeV</td>
+</tr>
+<tr>
+<td>Superconducting cavity</td>
+<td>1.3 GHz</td>
+<td>23 cm</td>
+<td>5.4 µeV</td>
+</tr>
+<tr>
+<td>SLAC klystron</td>
+<td>2.856 GHz</td>
+<td>10.5 cm</td>
+<td>11.8 µeV</td>
+</tr>
+<tr>
+<td>X-band linac</td>
+<td>12 GHz</td>
+<td>25 mm</td>
+<td>50 µeV</td>
+</tr>
+<tr>
+<td>Infrared FEL</td>
+<td>187 THz</td>
+<td>1.6 µm</td>
+<td>0.775 eV</td>
+</tr>
+<tr>
+<td>Green laser</td>
+<td>564 THz</td>
+<td>532 nm</td>
+<td>2.33 eV</td>
+</tr>
+<tr>
+<td>Undulator X-rays (BioMAX)</td>
+<td><span class="math inline">\(1.15 \times 10^{18}\)</span> Hz</td>
+<td>0.261 nm</td>
+<td>4.75 keV</td>
+</tr>
+<tr>
+<td>X-ray FEL (LCLS)</td>
+<td><span class="math inline">\(2.0 \times 10^{18}\)</span> Hz</td>
+<td>0.15 nm</td>
+<td>8.27 keV</td>
+</tr>
+<tr>
+<td>Gamma ray</td>
+<td><span class="math inline">\(2.4 \times 10^{20}\)</span> Hz</td>
+<td>1.24 pm</td>
+<td>1 MeV</td>
+</tr>
+</tbody>
+</table>
+<p>RF photons carry so little energy that RF can be treated as a
+classical wave without error; X-ray photons are energetic enough to
+knock electrons out of atoms. One kind of wave covers both, and chapter
+20 shows a single electron ring making light across most of this
+table.</p>
+<h3 id="14-the-doppler-effect">14. The Doppler effect</h3>
+<p><strong>The picture.</strong> An ambulance’s siren sounds higher as
+it comes towards you and lower as it goes away. A source that moves
+towards you emits each crest from a little closer than the last, so the
+crests arrive bunched: shorter wavelength, higher frequency.</p>
+<p><strong>Moving source.</strong> A source emits sound of frequency
+<span class="math inline">\(f\)</span> (period <span
+class="math inline">\(1/f\)</span>) while moving towards a listener at
+speed <span class="math inline">\(u\)</span>; sound travels at <span
+class="math inline">\(v\)</span> through still air. Between one crest
+and the next, the first crest travels <span
+class="math inline">\(v/f\)</span> but the source follows it by <span
+class="math inline">\(u/f\)</span>, so the crests are spaced <span
+class="math inline">\(\lambda&#39; = (v - u)/f\)</span> apart. They
+arrive at speed <span class="math inline">\(v\)</span>, so</p>
+<p><span class="math display">\[
+f&#39; = \frac{v}{\lambda&#39;} = \frac{f}{1 - u/v} .
+\]</span></p>
+<p><strong>Moving listener.</strong> A listener running at <span
+class="math inline">\(u\)</span> towards a still source meets crests at
+the relative speed <span class="math inline">\(v + u\)</span>, so <span
+class="math inline">\(f&#39; = f(1 + u/v)\)</span>.</p>
+<p>For <span class="math inline">\(u \ll v\)</span> the two formulas
+agree to first order (since <span class="math inline">\(1/(1 - x)
+\approx 1 + x\)</span>, <a href="F1-calculus.html">F1</a>): <span
+class="math inline">\(f&#39; \approx f(1 + u/v)\)</span>, a fractional
+shift <span class="math inline">\(u/v\)</span>, upwards for approach and
+downwards for recession. For a source at 30 m/s and <span
+class="math inline">\(v = 343\)</span> m/s, a 1000 Hz tone becomes 1096
+Hz from a moving source and 1087 Hz for a moving listener: for sound,
+who is moving matters, because the air is a reference.</p>
+<p><strong>Light.</strong> For light there is no air; only the relative
+speed can matter, and the exact formula needs relativity (<a
+href="01-why-accelerate.html#pre-requisite-lorentz-transformations-time-dilation-length-contraction">chapter
+1</a>): for approach at <span class="math inline">\(\beta =
+u/c\)</span>, <span class="math inline">\(f&#39; = f\sqrt{(1 + \beta)/(1
+- \beta)}\)</span>. To first order in <span
+class="math inline">\(\beta\)</span> it is again <span
+class="math inline">\(f(1 + \beta)\)</span>. If the motion is at an
+angle <span class="math inline">\(\theta\)</span> to the line of sight,
+only the part along it counts: the shift is <span
+class="math inline">\(\beta\cos\theta\)</span> to first order.</p>
+<p><em>Worked number.</em> A beam of hydrogen atoms at 100 keV (<span
+class="math inline">\(\beta = \sqrt{2K/mc^2} = \sqrt{0.2/938.8} =
+0.0146\)</span>) emits the red Balmer line, 656.28 nm at rest. Seen head
+on as it approaches, the first-order formula gives <span
+class="math inline">\(656.28 \times (1 - 0.0146) = 646.70\)</span> nm,
+and the exact one 646.77 nm; seen at <span
+class="math inline">\(45°\)</span>, 649.51 nm. Measuring this shift is a
+standard way to find the speed of a neutral beam. The first-order
+formula is off by <span class="math inline">\(\beta^2/2\)</span>, 0.07
+nm here.</p>
+<p><strong>Where first order fails.</strong> For an electron of 3 GeV
+(<span class="math inline">\(\gamma = 5871\)</span>) in an undulator,
+the first-order picture is useless. Chapter 20 shows that the
+undulator’s period of 18 mm comes out as light of 0.26 nm, shortened by
+<span class="math inline">\(2\gamma^2\)</span>: a factor of about <span
+class="math inline">\(2\gamma\)</span> from the Doppler effect and <span
+class="math inline">\(\gamma\)</span> from relativity’s contraction of
+the undulator. See chapter 20’s <a
+href="20-synchrotron-radiation.html#pre-requisite-continued-lorentz-transformations-time-dilation-length-contraction">Lorentz
+transformations, continued</a>.</p>
+<h3 id="15-interference-and-diffraction">15. Interference and
+diffraction</h3>
+<p><strong>Two slits.</strong> Light of wavelength <span
+class="math inline">\(\lambda\)</span> falls on two narrow slits a
+distance <span class="math inline">\(d\)</span> apart. Each slit sends
+out waves in every direction. At an angle <span
+class="math inline">\(\theta\)</span>, the wave from one slit has
+travelled <span class="math inline">\(d\sin\theta\)</span> further than
+the other’s. They arrive in step, and make a bright band, when the extra
+path is a whole number of wavelengths:</p>
+<p><span class="math display">\[
+d\sin\theta = m\lambda, \qquad m = 0, \pm1, \pm2, \dots
+\]</span></p>
+<p>Halfway between, they cancel. On a screen a distance <span
+class="math inline">\(L\)</span> away, for small angles, the bright
+fringes are spaced <span class="math inline">\(\lambda L/d\)</span>.
+<em>Worked number:</em> green laser light (532 nm) through slits 0.1 mm
+apart gives fringes 5.32 mm apart on a screen 1 m away. Measuring
+fringes this size is how Young found that light’s wavelength is about
+half a micrometre.</p>
+<p><strong>Diffraction.</strong> A wave passing a single opening of
+width <span class="math inline">\(a\)</span> spreads. Each part of the
+opening acts as a source, and at the angle where <span
+class="math inline">\(a\sin\theta = \lambda\)</span> the parts pair off
+and cancel, so the beam spreads over an angle of about <span
+class="math inline">\(\lambda/a\)</span>. For a round hole of diameter
+<span class="math inline">\(D\)</span> the first dark ring is at <span
+class="math inline">\(\sin\theta = 1.22\lambda/D\)</span>. A wave
+squeezed through a narrow opening spreads widely; through a wide one,
+hardly at all.</p>
+<p><strong>Resolution.</strong> The same fact limits every instrument
+that sees with waves. A lens of diameter <span
+class="math inline">\(D\)</span> blurs a point into a spot of angular
+size about <span class="math inline">\(\lambda/D\)</span>, and a
+microscope cannot separate details much smaller than the wavelength it
+uses, about 0.2 µm for visible light. To see smaller things, use shorter
+waves. X-rays of 12.4 keV have <span class="math inline">\(\lambda =
+0.1\)</span> nm, the spacing of atoms in a crystal, which is why
+synchrotron light sources are used to find the structure of proteins
+(chapter 20). To see inside a nucleus, a few femtometres across, the
+probe needs a wavelength of femtometres: a particle with de Broglie
+wavelength <span class="math inline">\(\lambda = h/p\)</span>, so that
+<span class="math inline">\(pc = hc/\lambda = 1240\)</span> MeV fm<span
+class="math inline">\(/\lambda\)</span>. A 1 fm wavelength needs <span
+class="math inline">\(pc \approx 1.24\)</span> GeV. This is the argument
+of <a
+href="01-why-accelerate.html#pre-requisite-de-broglie-waves-and-uncertainty">chapter
+1</a>: to see small things, accelerate.</p>
+<h3 id="16-fouriers-idea">16. Fourier’s idea</h3>
+<p><strong>The claim.</strong> Any periodic signal of period <span
+class="math inline">\(T_0\)</span>, however jagged, can be written as a
+sum of sines and cosines at the frequencies <span
+class="math inline">\(f_0 = 1/T_0\)</span>, <span
+class="math inline">\(2f_0\)</span>, <span
+class="math inline">\(3f_0\)</span>, …: its <em>harmonics</em>. A smooth
+signal needs only a few; a signal with sharp corners needs many.</p>
+<p><strong>A first example: a square wave.</strong> A signal that is
+<span class="math inline">\(+1\)</span> for half of each period and
+<span class="math inline">\(-1\)</span> for the other half is</p>
+<p><span class="math display">\[
+s(t) = \frac{4}{\pi}\Big(\sin\omega_0t + \frac{\sin 3\omega_0t}{3} +
+\frac{\sin 5\omega_0t}{5} + \dots\Big) .
+\]</span></p>
+<p>Only odd harmonics appear (the shape is the same upside down half a
+period later), with amplitudes <span class="math inline">\(4/(\pi
+n)\)</span>: 1.273, 0.424, 0.255, 0.182 for <span
+class="math inline">\(n = 1, 3, 5, 7\)</span>. At the middle of the
+positive half (<span class="math inline">\(\omega_0t = \pi/2\)</span>),
+the sums of one, two and three terms are 1.273, 0.849 and 1.103, and of
+100 terms 0.997: closing in on 1. Near the jumps the partial sums always
+overshoot by about 9 per cent however many terms are taken (the Gibbs
+phenomenon), but the overshoot gets narrower. How the coefficients are
+found, by multiplying by each sine and averaging, is in chapter 8’s <a
+href="08-seeing-the-beam.html#pre-requisite-fourier-series-and-transforms">Fourier
+series and transforms</a>.</p>
+<p><strong>Why it matters.</strong> For a linear system (a circuit, a
+cavity, a string), the response to a sum is the sum of the responses. So
+find the response to each sinusoid separately (a complex division, as in
+section 5) and add. Fourier analysis plus phasors is how every RF
+system, every beam pickup and every impedance calculation of the course
+is done.</p>
+<p><strong>Pulses contain a band of frequencies.</strong> A signal that
+is not periodic, such as a single pulse, needs a continuous band of
+frequencies instead of a ladder of harmonics. The rule of thumb: a pulse
+lasting <span class="math inline">\(\Delta t\)</span> contains
+frequencies spread over</p>
+<p><span class="math display">\[
+\Delta f \sim \frac{1}{\Delta t} .
+\]</span></p>
+<p>The exact number depends on how the widths are defined; for a
+Gaussian pulse with rms length <span
+class="math inline">\(\sigma_t\)</span> the rms spread is <span
+class="math inline">\(\sigma_f = 1/(2\pi\sigma_t)\)</span>. Three
+consequences in the course:</p>
+<ul>
+<li>A 1 µs pulse of 2856 MHz RF is not one frequency but a band about 1
+MHz wide around it.</li>
+<li>A resonator of bandwidth <span class="math inline">\(\Delta
+f\)</span> cannot follow changes faster than about <span
+class="math inline">\(1/\Delta f\)</span>: section 5 found <span
+class="math inline">\(\tau\,\Delta f = 1/\pi\)</span> exactly. The 155
+kHz copper cell responds in 2 µs; the TESLA cavity, with a loaded
+bandwidth of about 400 Hz, in about a millisecond.</li>
+<li>A bunch of particles 1 ps long (0.3 mm at <span
+class="math inline">\(c\)</span>) has a current containing frequencies
+up to about <span class="math inline">\(1/(2\pi \times 1\ \text{ps}) =
+159\)</span> GHz. Short bunches excite fields at high frequencies in
+every pipe and cavity they pass (<a
+href="22-intensity-limits.html">chapter 22</a>) and radiate coherently
+at long wavelengths (chapter 26).</li>
+</ul>
+<p>And the converse: a beam going round a ring repeats every turn, so
+its signal at a pickup contains only harmonics of the revolution
+frequency, 11.245 kHz in the LHC’s 26.7 km. A spectrum analyser on a
+ring pickup shows lines at these harmonics, with betatron sidebands
+beside them at the fractional tune times the revolution frequency, which
+is how tunes are measured.</p>
+<h2 id="where-the-course-uses-it">Where the course uses it</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th>First used in</th>
+<th>For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complex numbers, <span
+class="math inline">\(e^{i\theta}\)</span></td>
+<td><a href="07-ion-sources-and-electron-guns.html">Chapter 7</a>, <a
+href="16-strong-focusing.html">chapter 16</a></td>
+<td>The Pierce gun’s potential; one-turn matrices and their
+eigenvalues</td>
+</tr>
+<tr>
+<td>Phasors, adding RF voltages</td>
+<td><a href="09-resonant-acceleration.html">Chapter 9</a> onwards</td>
+<td>Voltage gained across many gaps; beam loading</td>
+</tr>
+<tr>
+<td>Damped oscillator, <span class="math inline">\(Q\)</span></td>
+<td><a href="09-resonant-acceleration.html">Chapter 9</a>, <a
+href="13-rf-cavities-and-power.html">chapter 13</a></td>
+<td>Ring-down, stored energy, wall losses</td>
+</tr>
+<tr>
+<td>Resonance curve, bandwidth</td>
+<td><a href="07-ion-sources-and-electron-guns.html">Chapter 7</a>, <a
+href="13-rf-cavities-and-power.html">chapter 13</a></td>
+<td>ECR heating; tuning a cavity, power off resonance</td>
+</tr>
+<tr>
+<td>Impedance, <span class="math inline">\(RLC\)</span></td>
+<td><a href="04-high-voltage-and-breakdown.html">Chapter 4</a>, <a
+href="08-seeing-the-beam.html">chapter 8</a></td>
+<td>Dividers, pickups, cavity models</td>
+</tr>
+<tr>
+<td>Normal modes, beats</td>
+<td><a href="13-rf-cavities-and-power.html">Chapter 13</a>, <a
+href="18-imperfections-and-resonances.html">chapter 18</a></td>
+<td>Multi-cell cavities; coupled betatron motion</td>
+</tr>
+<tr>
+<td>Wave equation, modes</td>
+<td><a href="13-rf-cavities-and-power.html">Chapter 13</a>, <a
+href="14-linear-accelerators.html">chapter 14</a></td>
+<td>Cavity modes, standing and travelling waves</td>
+</tr>
+<tr>
+<td>Reflection, matching</td>
+<td><a href="08-seeing-the-beam.html">Chapter 8</a>, <a
+href="13-rf-cavities-and-power.html">chapter 13</a></td>
+<td>Cables, couplers, circulators</td>
+</tr>
+<tr>
+<td>Phase and group velocity</td>
+<td><a href="13-rf-cavities-and-power.html">Chapter 13</a>, <a
+href="14-linear-accelerators.html">chapter 14</a></td>
+<td>Waveguides, filling a travelling-wave linac</td>
+</tr>
+<tr>
+<td>EM waves, spectrum</td>
+<td><a href="20-synchrotron-radiation.html">Chapter 20</a>, <a
+href="26-free-electron-lasers.html">chapter 26</a></td>
+<td>Synchrotron light, undulators, FELs</td>
+</tr>
+<tr>
+<td>Doppler effect</td>
+<td><a href="20-synchrotron-radiation.html">Chapter 20</a>, <a
+href="24-beam-cooling.html">chapter 24</a></td>
+<td>Undulator wavelength; laser cooling</td>
+</tr>
+<tr>
+<td>Diffraction, resolution</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Why seeing small things needs high energy</td>
+</tr>
+<tr>
+<td>Fourier analysis</td>
+<td><a href="08-seeing-the-beam.html">Chapter 8</a> onwards</td>
+<td>Beam signals, tune measurement, bunch spectra</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>For <span class="math inline">\(z = 1 + i\sqrt3\)</span>, find <span
+class="math inline">\(|z|\)</span>, <span class="math inline">\(\arg
+z\)</span>, <span class="math inline">\(z^3\)</span> and <span
+class="math inline">\(1/z\)</span>. Do <span
+class="math inline">\(z^3\)</span> twice: by expanding the brackets and
+by polar form.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(|z| = \sqrt{1 + 3} = 2\)</span> and <span
+class="math inline">\(\arg z = \arctan\sqrt3 = 60°\)</span>, so <span
+class="math inline">\(z = 2e^{i\pi/3}\)</span>. Polar form: <span
+class="math inline">\(z^3 = 8e^{i\pi} = -8\)</span>. Expanding: <span
+class="math inline">\(z^2 = 1 + 2i\sqrt3 - 3 = -2 + 2i\sqrt3\)</span>,
+and <span class="math inline">\(z^3 = (-2 + 2i\sqrt3)(1 + i\sqrt3) = -2
+- 2i\sqrt3 + 2i\sqrt3 - 6 = -8\)</span>. Finally <span
+class="math inline">\(1/z = z^*/|z|^2 = (1 - i\sqrt3)/4 = 0.25 -
+0.433i\)</span>, which is <span
+class="math inline">\(\tfrac12e^{-i\pi/3}\)</span>: modulus inverted,
+angle reversed.</p>
+</details>
+<ol start="2" type="1">
+<li>Two RF cells each give a particle a peak of 1 MV, but the particle
+reaches the second <span class="math inline">\(40°\)</span> later in its
+RF cycle than the first. What is the most it can gain from the pair? At
+what phase difference would the pair give no more than one cell
+alone?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>The phasor sum is <span class="math inline">\(1 +
+e^{i\,40°}\)</span>, of modulus <span class="math inline">\(2\cos 20° =
+1.879\)</span> MV (section 10’s <span
+class="math inline">\(2A|\cos(\varphi/2)|\)</span>). The pair gives only
+1 MV when <span class="math inline">\(2\cos(\varphi/2) = 1\)</span>, at
+<span class="math inline">\(\varphi = 120°\)</span>. At <span
+class="math inline">\(180°\)</span> the two cancel.</p>
+</details>
+<ol start="3" type="1">
+<li>A TESLA cavity at 1.3 GHz is run with a loaded <span
+class="math inline">\(Q_L = 3.13 \times 10^6\)</span>. Find its
+bandwidth, the time constant with which its field rings down when the RF
+stops, and how many RF cycles that is. How long until the field is 1 per
+cent of its starting value?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\Delta f = f_0/Q_L = 1.3 \times 10^9/3.13
+\times 10^6 = 415\)</span> Hz. <span class="math inline">\(\tau =
+2Q_L/\omega_0 = 2 \times 3.13 \times 10^6/(2\pi \times 1.3 \times 10^9)
+= 766\)</span> µs, about <span class="math inline">\(10^6\)</span>
+cycles. The field falls to 1 per cent after <span
+class="math inline">\(\tau\ln 100 = 3.53\)</span> ms. Check: <span
+class="math inline">\(\tau\,\Delta f = 766 \times 10^{-6} \times 415 =
+0.318 = 1/\pi\)</span>.</p>
+</details>
+<ol start="4" type="1">
+<li>A copper cavity at 200 MHz has <span class="math inline">\(Q_0 =
+50\,000\)</span>. What is its bandwidth? If it drifts 1 kHz off the
+drive frequency, by what factor does its voltage fall for the same
+drive, and how far does its phase move? How much more power is then
+needed to restore the voltage?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\Delta f = 200 \times 10^6/50\,000 =
+4\)</span> kHz. <span class="math inline">\(y = 2Q\,\Delta f/f_0 = 2
+\times 50\,000 \times 1000/(2 \times 10^8) = 0.5\)</span>, so the
+voltage falls to <span class="math inline">\(1/\sqrt{1.25} =
+0.894\)</span> and the phase moves <span class="math inline">\(\arctan
+0.5 = 26.6°\)</span>. The power goes as voltage squared, so restoring
+the voltage needs <span class="math inline">\(1 + y^2 = 1.25\)</span>
+times the power: 25 per cent more, from a 1 kHz drift, a quarter of the
+bandwidth.</p>
+</details>
+<ol start="5" type="1">
+<li><ol type="a">
+<li>For a series <span class="math inline">\(RLC\)</span> circuit, show
+that <span class="math inline">\(\omega_0L/R\)</span> equals <span
+class="math inline">\(\omega_0 U/P\)</span>, with <span
+class="math inline">\(U\)</span> the stored energy and <span
+class="math inline">\(P\)</span> the average power lost at resonance.
+(b) With <span class="math inline">\(L = 1\)</span> µH, <span
+class="math inline">\(C = 253.3\)</span> pF and <span
+class="math inline">\(R = 1\ \Omega\)</span> driven by 1 V amplitude,
+find the current at 10 MHz and at 10.5 MHz, and the voltage across the
+capacitor at 10 MHz.</li>
+</ol></li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li>At resonance the current amplitude is <span
+class="math inline">\(I_0\)</span>. The energy sloshes between coil and
+capacitor, and when the current peaks it is all in the coil: <span
+class="math inline">\(U = \tfrac12 LI_0^2\)</span>. The average power in
+<span class="math inline">\(R\)</span> is <span
+class="math inline">\(\tfrac12 I_0^2R\)</span>. So <span
+class="math inline">\(\omega_0U/P = \omega_0L/R\)</span>. (b) At 10 MHz,
+<span class="math inline">\(Z = R = 1\ \Omega\)</span> and <span
+class="math inline">\(I = 1\)</span> A. At 10.5 MHz, <span
+class="math inline">\(Z = 1 + 6.13i\)</span> Ω, <span
+class="math inline">\(|Z| = 6.21\ \Omega\)</span> and <span
+class="math inline">\(I = 0.161\)</span> A, lagging by <span
+class="math inline">\(80.7°\)</span>. At 10 MHz the capacitor’s voltage
+is <span class="math inline">\(I/(\omega_0C) = 1 \times 62.8 =
+62.8\)</span> V, <span class="math inline">\(Q\)</span> times the
+source.</li>
+</ol>
+</details>
+<ol start="6" type="1">
+<li>Two masses of 0.1 kg, each on a spring of 10 N/m to a wall, are
+joined by a spring of 0.5 N/m. Find the two normal-mode frequencies, and
+how long it takes for the energy to pass from one mass to the other.
+Separately: what beat frequency do 400.000 MHz and 400.004 MHz
+make?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\omega_1 = \sqrt{10/0.1} =
+10.000\)</span> rad/s (masses together) and <span
+class="math inline">\(\omega_2 = \sqrt{11/0.1} = 10.488\)</span> rad/s
+(masses opposed): 1.592 and 1.669 Hz. The energy passes fully across in
+<span class="math inline">\(\pi/(\omega_2 - \omega_1) = \pi/0.488 =
+6.44\)</span> s, and comes back after 12.9 s. The two RF signals beat at
+<span class="math inline">\(f_1 - f_2 = 4\)</span> kHz, a period of 0.25
+ms.</p>
+</details>
+<ol start="7" type="1">
+<li>A steel wire with <span class="math inline">\(\mu = 3.85 \times
+10^{-4}\)</span> kg/m and length 0.648 m is under 70 N of tension. Find
+the wave speed, the fundamental frequency and the third harmonic. What
+tension would tune the fundamental to 329.63 Hz?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(v = \sqrt{70/3.85 \times 10^{-4}} =
+426\)</span> m/s. <span class="math inline">\(f_1 = v/(2L) = 426/1.296 =
+329\)</span> Hz (328.9 Hz); <span class="math inline">\(f_3 =
+987\)</span> Hz. Since <span class="math inline">\(f \propto \sqrt
+T\)</span>, the tension needed is <span class="math inline">\(T =
+\mu(2Lf)^2 = 3.85 \times 10^{-4} \times (1.296 \times 329.63)^2 =
+70.3\)</span> N.</p>
+</details>
+<ol start="8" type="1">
+<li>A 50 Ω cable feeds a 100 Ω load. What fractions of the voltage and
+the power are reflected, and what is the voltage standing-wave ratio?
+What range of loads keeps the reflected power below 1 per cent?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\Gamma = (100 - 50)/(100 + 50) =
+1/3\)</span>; the power reflected is <span class="math inline">\(1/9 =
+11.1\)</span> per cent, and 88.9 per cent reaches the load. VSWR <span
+class="math inline">\(= (1 + 1/3)/(1 - 1/3) = 2\)</span>. Below 1 per
+cent of the power means <span class="math inline">\(|\Gamma| &lt;
+0.1\)</span>: <span class="math inline">\(Z_L/Z_0\)</span> between <span
+class="math inline">\(0.9/1.1\)</span> and <span
+class="math inline">\(1.1/0.9\)</span>, so between 40.9 Ω and 61.1
+Ω.</p>
+</details>
+<ol start="9" type="1">
+<li>WR-650 waveguide has a broad width of 165.1 mm and is used at 1.3
+GHz. Find its cutoff frequency, the group and phase velocities, and the
+guide wavelength. How long does the front of an RF pulse take to cross
+100 m of it?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(f_c = c/(2a_w) = 299\,792\,458/0.3302 =
+908\)</span> MHz. <span class="math inline">\(\sqrt{1 - (0.908/1.3)^2} =
+0.716\)</span>, so <span class="math inline">\(v_g = 0.716c\)</span> and
+<span class="math inline">\(v_{ph} = c/0.716 = 1.397c\)</span>. In free
+space <span class="math inline">\(\lambda = 230.6\)</span> mm, so <span
+class="math inline">\(\lambda_g = 230.6/0.716 = 322\)</span> mm. The
+front moves at <span class="math inline">\(v_g\)</span>: <span
+class="math inline">\(100/(0.716 \times 2.998 \times 10^8) =
+0.466\)</span> µs.</p>
+</details>
+<ol start="10" type="1">
+<li>A neutral hydrogen beam is viewed at <span
+class="math inline">\(45°\)</span> to its direction, approaching the
+spectrometer. The Balmer line, 656.28 nm at rest, is seen at 650.00 nm.
+To first order, what is the beam’s speed and its kinetic energy per atom
+(<span class="math inline">\(mc^2 = 938.8\)</span> MeV)? About how big
+an error does first order make?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>First order: <span class="math inline">\(\lambda&#39; = \lambda(1 -
+\beta\cos 45°)\)</span>, so <span class="math inline">\(\beta = (1 -
+650.00/656.28)/0.7071 = 0.01353\)</span>, <span class="math inline">\(v
+= 4.06 \times 10^6\)</span> m/s, and <span class="math inline">\(K =
+\tfrac12 mc^2\beta^2 = 0.5 \times 938.8 \times 0.01353^2\)</span> MeV
+<span class="math inline">\(= 86\)</span> keV. The neglected terms are
+of order <span class="math inline">\(\beta^2\)</span>, about <span
+class="math inline">\(2 \times 10^{-4}\)</span> of the wavelength,
+against a measured shift of <span
+class="math inline">\(10^{-2}\)</span>: they change <span
+class="math inline">\(\beta\)</span> by about 1 per cent, so the energy
+by about 2 per cent. (The exact relativistic formula, <span
+class="math inline">\(\lambda&#39; = \gamma\lambda(1 -
+\beta\cos\theta)\)</span>, gives <span class="math inline">\(\beta =
+0.01366\)</span>, 1.0 per cent higher.)</p>
+</details>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>G. Cardano, <em>Ars Magna</em> (1545), and R. Bombelli,
+<em>L’Algebra</em> (1572): the first square roots of negative numbers,
+for “Square roots of negative numbers”.</li>
+<li>L. Euler, <em>Introductio in analysin infinitorum</em>, volume 1
+(1748), chapter 8: the formula <span class="math inline">\(e^{iv} = \cos
+v + i\sin v\)</span>.</li>
+<li>P. J. Nahin, <em>An Imaginary Tale: The Story of <span
+class="math inline">\(\sqrt{-1}\)</span></em> (Princeton University
+Press, 1998): the history of complex numbers from Cardano to Wessel,
+Argand and Gauss, and Euler’s formula.</li>
+<li>J. le R. d’Alembert, “Recherches sur la courbe que forme une corde
+tendue mise en vibration”, <em>Histoire de l’Académie royale des
+sciences et belles lettres de Berlin</em> for 1747 (published 1749): the
+wave equation and its travelling solutions, section 8.</li>
+<li>J. Fourier, <em>Théorie analytique de la chaleur</em> (Paris, 1822):
+functions as sums of sines, section 16 (free, archive.org).</li>
+<li>T. Young, “On the theory of light and colours”, <em>Philosophical
+Transactions</em> 92, 12 (1802), and <em>A Course of Lectures on Natural
+Philosophy and the Mechanical Arts</em> (1807): interference and the
+wavelengths of light (free, archive.org).</li>
+<li>C. Doppler, “Über das farbige Licht der Doppelsterne und einiger
+anderer Gestirne des Himmels” (Prague, 1842): the Doppler effect.</li>
+<li>C. P. Steinmetz, “Complex quantities and their use in electrical
+engineering”, <em>Proceedings of the International Electrical
+Congress</em>, Chicago (1893): phasors and complex impedance, section
+6.</li>
+<li>R. Penrose, <em>The Road to Reality</em> (Jonathan Cape, 2004),
+chapters 4 (“Magical complex numbers”) and 5 (“Geometry of logarithms,
+powers and roots”) for sections 1 and 2, and chapter 9 (“Fourier
+decompositions and hyperfunctions”) for section 16 (in
+<code>references/</code>).</li>
+<li>R. P. Feynman, R. B. Leighton and M. Sands, <em>The Feynman Lectures
+on Physics</em>, volume I (Addison-Wesley, 1963), chapters 21 to 25 (the
+harmonic oscillator, Euler’s formula in “Algebra”, resonance,
+transients, linear systems), 28 to 30 (electromagnetic radiation,
+interference, diffraction), 34 (the Doppler effect) and 47 to 50 (the
+wave equation, beats and group velocity, modes, harmonics and Fourier
+series) (free, feynmanlectures.caltech.edu).</li>
+<li>A. P. French, <em>Vibrations and Waves</em> (Norton, 1971): the
+damped and driven oscillator, coupled oscillators, the string,
+reflection and dispersion; the level of sections 4 to 12.</li>
+<li>H. J. Pain, <em>The Physics of Vibrations and Waves</em> (Wiley, 6th
+edition 2005): the impedance of a string, reflection and matching
+(section 11), and group velocity.</li>
+<li>H. Georgi, <em>The Physics of Waves</em> (Prentice Hall, 1993):
+normal modes, from coupled masses to continuous systems, and dispersion
+(free, from the author’s Harvard page).</li>
+<li>E. Hecht, <em>Optics</em> (Pearson, 5th edition 2017), chapters 7 to
+10: polarisation, interference, diffraction and Fourier optics, for
+sections 13, 15 and 16.</li>
+<li>T. P. Wangler, <em>RF Linear Accelerators</em> (Wiley-VCH, 2nd
+edition 2008), chapter 1: waveguides, cutoff, phase and group velocity,
+and the cavity as a resonant circuit, for the accelerator examples of
+sections 5, 6 and 12.</li>
+</ul>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="F4-electromagnetism.html"><span>Previous</span>F4 Electricity and magnetism</a>
+<a class="next" href="F6-heat-and-probability.html"><span>Next</span>F6 Heat, gases and probability</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F2 Vectors and vector
+calculus · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Part 0, Foundations</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#f2-vectors-and-vector-calculus"
+id="toc-f2-vectors-and-vector-calculus">F2 Vectors and vector
+calculus</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-problem-it-solved" id="toc-the-problem-it-solved">The
+problem it solved</a>
+<ul>
+<li><a href="#numbers-that-point" id="toc-numbers-that-point">Numbers
+that point</a></li>
+<li><a href="#maxwell-and-a-quarrel"
+id="toc-maxwell-and-a-quarrel">Maxwell, and a quarrel</a></li>
+<li><a href="#the-two-theorems" id="toc-the-two-theorems">The two
+theorems</a></li>
+</ul></li>
+<li><a href="#the-mathematics" id="toc-the-mathematics">The
+mathematics</a>
+<ul>
+<li><a href="#0-what-this-chapter-assumes-and-a-quick-check"
+id="toc-0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</a></li>
+<li><a href="#1-vectors-and-their-components"
+id="toc-1-vectors-and-their-components">1. Vectors and their
+components</a></li>
+<li><a href="#2-the-dot-product" id="toc-2-the-dot-product">2. The dot
+product</a></li>
+<li><a href="#3-the-cross-product" id="toc-3-the-cross-product">3. The
+cross product</a></li>
+<li><a href="#4-vectors-that-change-velocity-acceleration-and-circles"
+id="toc-4-vectors-that-change-velocity-acceleration-and-circles">4.
+Vectors that change: velocity, acceleration and circles</a></li>
+<li><a href="#5-fields" id="toc-5-fields">5. Fields</a></li>
+<li><a href="#6-the-gradient" id="toc-6-the-gradient">6. The
+gradient</a></li>
+<li><a href="#7-line-integrals-work-along-a-path"
+id="toc-7-line-integrals-work-along-a-path">7. Line integrals: work
+along a path</a></li>
+<li><a href="#8-integrals-over-areas-and-volumes"
+id="toc-8-integrals-over-areas-and-volumes">8. Integrals over areas and
+volumes</a></li>
+<li><a href="#9-flux" id="toc-9-flux">9. Flux</a></li>
+<li><a href="#10-divergence-and-gausss-theorem"
+id="toc-10-divergence-and-gausss-theorem">10. Divergence, and Gauss’s
+theorem</a></li>
+<li><a href="#11-curl-and-stokess-theorem"
+id="toc-11-curl-and-stokess-theorem">11. Curl, and Stokes’s
+theorem</a></li>
+<li><a href="#12-the-laplacian" id="toc-12-the-laplacian">12. The
+Laplacian</a></li>
+<li><a href="#13-coordinates-that-fit-round-things"
+id="toc-13-coordinates-that-fit-round-things">13. Coordinates that fit
+round things</a></li>
+</ul></li>
+<li><a href="#where-the-course-uses-it"
+id="toc-where-the-course-uses-it">Where the course uses it</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="f2-vectors-and-vector-calculus">F2 Vectors and vector
+calculus</h1>
+<p><em>1843 to 1893: Hamilton’s quaternions, Grassmann’s extension, and
+the vector analysis of Gibbs and Heaviside. Quantities with a direction,
+fields that fill space, and the calculus of fields: gradient, divergence
+and curl, and the two theorems that join them to flux and circulation.
+The language in which Maxwell’s equations, and every accelerator magnet,
+are written.</em></p>
+<blockquote>
+<p><strong>What this chapter assumes.</strong> High-school mathematics
+and physics (Pythagoras’s theorem, coordinates, trigonometry), and <a
+href="F1-calculus.html">F1 Calculus</a>: derivatives and their rules,
+integrals and the fundamental theorem, partial derivatives, and Taylor
+series to first order.</p>
+<p><strong>What comes next.</strong> <a
+href="F4-electromagnetism.html">F4 Electricity and magnetism</a> turns
+the theorems of sections 9 to 11 into Maxwell’s equations. Chapter 1’s
+pre-requisite on <a
+href="01-why-accelerate.html#pre-requisite-gausss-law-and-potentials-of-simple-shapes">Gauss’s
+law</a> and chapter 2’s on <a
+href="02-the-cathode-ray-tube.html#pre-requisite-laplace-and-poisson-equations-uniqueness-boundary-value-problems">Laplace
+and Poisson equations</a> use them at once.</p>
+</blockquote>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The problem.</strong> A temperature or a voltage is one
+number at each point. A velocity, a force or an electric field is not:
+it has a size and a direction, and in three dimensions it needs three
+numbers. Writing every law three times, once for each direction, is slow
+and hides what the law says. Worse, the laws of electricity and
+magnetism are about how fields <em>spread out</em> from charges and
+<em>circulate</em> round currents, and ordinary calculus has no words
+for that.</p>
+<p><strong>The idea.</strong> Treat a quantity with a direction as one
+object, a <em>vector</em>, with its own algebra: adding, scaling, and
+two kinds of product, the dot product (how much two vectors point the
+same way) and the cross product (a vector at right angles to both). Then
+do calculus with vectors and with <em>fields</em>, quantities that have
+a value at every point of space. Three derivatives of a field matter.
+The <em>gradient</em> of a scalar field points uphill. The
+<em>divergence</em> of a vector field measures how much it spreads out
+from a point. The <em>curl</em> measures how much it swirls round a
+point. Two theorems, Gauss’s and Stokes’s, say that adding up divergence
+inside a volume gives the flux out through its surface, and adding up
+curl over a surface gives the circulation round its edge. Each is F1’s
+fundamental theorem of calculus, in three dimensions.</p>
+<p><strong>Equations to remember.</strong></p>
+<ul>
+<li>Components: <span class="math inline">\(\mathbf{A} =
+A_x\hat{\mathbf{x}} + A_y\hat{\mathbf{y}} +
+A_z\hat{\mathbf{z}}\)</span>, with size <span
+class="math inline">\(|\mathbf{A}| = \sqrt{A_x^2 + A_y^2 +
+A_z^2}\)</span>.</li>
+<li>Dot product: <span class="math inline">\(\mathbf{A}\cdot\mathbf{B} =
+|\mathbf{A}||\mathbf{B}|\cos\theta = A_xB_x + A_yB_y + A_zB_z\)</span>.
+Work: <span class="math inline">\(W = \int\mathbf{F}\cdot
+d\mathbf{l}\)</span>.</li>
+<li>Cross product: <span
+class="math inline">\(|\mathbf{A}\times\mathbf{B}| =
+|\mathbf{A}||\mathbf{B}|\sin\theta\)</span>, at right angles to both by
+the right-hand rule. Magnetic force: <span
+class="math inline">\(\mathbf{F} =
+q\,\mathbf{v}\times\mathbf{B}\)</span>.</li>
+<li>Circular motion: acceleration <span
+class="math inline">\(v^2/R\)</span> towards the centre.</li>
+<li>Gradient: <span class="math inline">\(\nabla f =
+\left(\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y},
+\dfrac{\partial f}{\partial z}\right)\)</span>; field from potential:
+<span class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla
+V\)</span>.</li>
+<li>Divergence: <span class="math inline">\(\nabla\cdot\mathbf{F} =
+\dfrac{\partial F_x}{\partial x} + \dfrac{\partial F_y}{\partial y} +
+\dfrac{\partial F_z}{\partial z}\)</span>; Gauss’s theorem: <span
+class="math inline">\(\displaystyle\oint_S\mathbf{F}\cdot d\mathbf{A} =
+\int_V\nabla\cdot\mathbf{F}\,dV\)</span>.</li>
+<li>Curl: <span class="math inline">\(\nabla\times\mathbf{F}\)</span>,
+components in section 11; Stokes’s theorem: <span
+class="math inline">\(\displaystyle\oint_C\mathbf{F}\cdot d\mathbf{l} =
+\int_S(\nabla\times\mathbf{F})\cdot d\mathbf{A}\)</span>.</li>
+<li>Two identities: <span class="math inline">\(\nabla\times(\nabla f) =
+0\)</span> and <span
+class="math inline">\(\nabla\cdot(\nabla\times\mathbf{F}) =
+0\)</span>.</li>
+<li>Laplacian: <span class="math inline">\(\nabla^2 f =
+\dfrac{\partial^2 f}{\partial x^2} + \dfrac{\partial^2 f}{\partial y^2}
++ \dfrac{\partial^2 f}{\partial z^2}\)</span>.</li>
+</ul>
+<p><strong>Numbers worth knowing.</strong></p>
+<ul>
+<li>An electron from 2 kV (<span class="math inline">\(v = 2.65 \times
+10^7\)</span> m/s) in the Earth’s field of 50 μT feels a force of <span
+class="math inline">\(2.1 \times 10^{-16}\)</span> N at right angles to
+its motion and curves on a circle of radius 3.0 m.</li>
+<li>A proton in a field of 1 T goes round at 15.2 MHz, whatever its
+speed (while it is slow compared with light): the cyclotron frequency of
+chapter 10.</li>
+<li>A sphere of radius 1 m at 1 MV holds a charge of <span
+class="math inline">\(1.11 \times 10^{-4}\)</span> C and has a field of
+1 MV/m at its surface.</li>
+<li>A current of 1 A in a long straight wire makes a magnetic field of
+20 μT at 1 cm, less than the Earth’s.</li>
+<li>An electron beam of 10 mA at 2 kV, 1 mm in radius, has a field of
+6.8 kV/m at its edge from its own charge: the space charge of chapter 2
+and chapter 22.</li>
+</ul>
+<h2 id="the-problem-it-solved">The problem it solved</h2>
+<h3 id="numbers-that-point">Numbers that point</h3>
+<p>Forces had been added by the parallelogram rule since Simon Stevin
+around 1586 and Newton’s <em>Principia</em> of 1687: put two arrows head
+to tail and the sum is the arrow from the first tail to the last head.
+But algebra with directed quantities had no general method. In 1843
+William Rowan Hamilton, walking along the Royal Canal in Dublin, found
+the rule for multiplying <em>quaternions</em>, numbers with one ordinary
+part and three directed parts, and cut it into the stone of Brougham
+Bridge. The year after, Hermann Grassmann published a broader algebra of
+directed quantities in any number of dimensions, which almost nobody
+read for decades.</p>
+<h3 id="maxwell-and-a-quarrel">Maxwell, and a quarrel</h3>
+<p>James Clerk Maxwell’s <em>Treatise on Electricity and Magnetism</em>
+of 1873 wrote its equations mostly component by component, about twenty
+of them, with some quaternion notation alongside. In the 1880s Josiah
+Willard Gibbs at Yale and Oliver Heaviside in England, independently,
+cut quaternions down to what physics needed: the vector, the dot product
+and the cross product, and the operator <span
+class="math inline">\(\nabla\)</span> for derivatives. Gibbs printed his
+<em>Elements of Vector Analysis</em> privately for his students between
+1881 and 1884; Heaviside set out his in his articles and in
+<em>Electromagnetic Theory</em> (volume 1, 1893), and wrote Maxwell’s
+equations as the four used today. The defenders of quaternions, led by
+Peter Guthrie Tait, fought the new notation through the 1890s, and
+lost.</p>
+<h3 id="the-two-theorems">The two theorems</h3>
+<p>The theorem relating divergence to flux was found by Lagrange in
+1762, by Gauss in 1813 and by Mikhail Ostrogradsky, who gave a general
+proof in 1826. The theorem relating curl to circulation appeared in a
+letter from William Thomson (later Lord Kelvin) to George Gabriel Stokes
+in 1850; Stokes set it as a question in the Cambridge Smith’s Prize
+examination of 1854, and it has carried his name since.</p>
+<h2 id="the-mathematics">The mathematics</h2>
+<h3 id="0-what-this-chapter-assumes-and-a-quick-check">0. What this
+chapter assumes, and a quick check</h3>
+<ul>
+<li><strong>Pythagoras.</strong> A right-angled triangle with sides
+<span class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span> has hypotenuse <span
+class="math inline">\(\sqrt{a^2 + b^2}\)</span>.</li>
+<li><strong>Coordinates.</strong> A point in space is <span
+class="math inline">\((x, y, z)\)</span>: distances along three
+perpendicular axes from an origin. The axes are <em>right-handed</em>:
+point the fingers of the right hand along <span
+class="math inline">\(x\)</span>, curl them towards <span
+class="math inline">\(y\)</span>, and the thumb points along <span
+class="math inline">\(z\)</span>.</li>
+<li><strong>From F1.</strong> Derivatives, the chain rule, integrals,
+the fundamental theorem, and partial derivatives such as <span
+class="math inline">\(\partial f/\partial x\)</span> (the slope in <span
+class="math inline">\(x\)</span> with <span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span> held fixed).</li>
+</ul>
+<p><strong>Check yourself.</strong> (a) How far is the point <span
+class="math inline">\((1, 2, 2)\)</span> from the origin? (b) For <span
+class="math inline">\(f(x, y) = x^2y\)</span>, find <span
+class="math inline">\(\partial f/\partial x\)</span> and <span
+class="math inline">\(\partial f/\partial y\)</span>. (c) <span
+class="math inline">\(\int_0^R 2\pi r\,dr\)</span>. Answers: (a) 3; (b)
+<span class="math inline">\(2xy\)</span> and <span
+class="math inline">\(x^2\)</span>; (c) <span class="math inline">\(\pi
+R^2\)</span>, the area of a circle (section 8 shows why).</p>
+<h3 id="1-vectors-and-their-components">1. Vectors and their
+components</h3>
+<p><strong>The picture.</strong> A vector is an arrow: a size (its
+<em>magnitude</em>) and a direction, with no fixed starting point. A
+displacement of 3 m east is the same vector wherever it starts.
+Velocity, acceleration, force, momentum and the electric and magnetic
+fields are vectors. Quantities with only a size, like mass, energy,
+temperature and voltage, are <em>scalars</em>. Vectors are printed in
+bold, <span class="math inline">\(\mathbf{v}\)</span>; by hand, with an
+arrow on top, <span class="math inline">\(\vec v\)</span>. The magnitude
+is <span class="math inline">\(|\mathbf{v}|\)</span>, or just <span
+class="math inline">\(v\)</span>.</p>
+<p><strong>Adding and scaling.</strong> To add two vectors, put them
+head to tail; the sum runs from the first tail to the second head. Order
+does not matter: <span class="math inline">\(\mathbf{A} + \mathbf{B} =
+\mathbf{B} + \mathbf{A}\)</span>. Multiplying by a number <span
+class="math inline">\(c\)</span> stretches the arrow by <span
+class="math inline">\(c\)</span>, and reverses it if <span
+class="math inline">\(c &lt; 0\)</span>. So <span
+class="math inline">\(\mathbf{A} - \mathbf{B} = \mathbf{A} +
+(-1)\mathbf{B}\)</span>.</p>
+<p><strong>Components.</strong> Choose three <em>unit vectors</em>, of
+length 1, along the axes: <span
+class="math inline">\(\hat{\mathbf{x}}\)</span>, <span
+class="math inline">\(\hat{\mathbf{y}}\)</span>, <span
+class="math inline">\(\hat{\mathbf{z}}\)</span> (also written <span
+class="math inline">\(\mathbf{i}\)</span>, <span
+class="math inline">\(\mathbf{j}\)</span>, <span
+class="math inline">\(\mathbf{k}\)</span>). Any vector is a sum of steps
+along them:</p>
+<p><span class="math display">\[
+\mathbf{A} = A_x\hat{\mathbf{x}} + A_y\hat{\mathbf{y}} +
+A_z\hat{\mathbf{z}} = (A_x, A_y, A_z) .
+\]</span></p>
+<p>The numbers <span class="math inline">\(A_x\)</span>, <span
+class="math inline">\(A_y\)</span>, <span
+class="math inline">\(A_z\)</span> are the <em>components</em>. Adding
+vectors adds components, and scaling scales them: <span
+class="math inline">\(\mathbf{A} + \mathbf{B} = (A_x + B_x, A_y + B_y,
+A_z + B_z)\)</span>. By Pythagoras, used twice,</p>
+<p><span class="math display">\[
+|\mathbf{A}| = \sqrt{A_x^2 + A_y^2 + A_z^2} .
+\]</span></p>
+<p>A unit vector in the direction of <span
+class="math inline">\(\mathbf{A}\)</span> is <span
+class="math inline">\(\hat{\mathbf{A}} =
+\mathbf{A}/|\mathbf{A}|\)</span>. The <em>position vector</em> of a
+point is the arrow from the origin to it, <span
+class="math inline">\(\mathbf{r} = (x, y, z)\)</span>, with length <span
+class="math inline">\(r = \sqrt{x^2 + y^2 + z^2}\)</span>.</p>
+<p><strong>Example: leaving the deflecting plates.</strong> In chapter
+2, a 2 kV electron moves along <span class="math inline">\(z\)</span> at
+<span class="math inline">\(v_z = 2.65 \times 10^7\)</span> m/s between
+plates 2 cm long and 5 mm apart, with 100 V across them. It leaves with
+a sideways velocity <span class="math inline">\(v_x\)</span> that is 0.1
+of <span class="math inline">\(v_z\)</span> (chapter 2 derives the
+factor <span class="math inline">\(lV_d/(2dV_a) = 0.02 \times 100/(2
+\times 0.005 \times 2000) = 0.1\)</span>). Its velocity is <span
+class="math inline">\(\mathbf{v} = (2.65 \times 10^6, 0, 2.65 \times
+10^7)\)</span> m/s, and it is turned through the angle whose tangent is
+<span class="math inline">\(v_x/v_z = 0.1\)</span>, <span
+class="math inline">\(5.71°\)</span>.</p>
+<h3 id="2-the-dot-product">2. The dot product</h3>
+<p><strong>The definition.</strong> The dot product of two vectors is a
+number:</p>
+<p><span class="math display">\[
+\mathbf{A}\cdot\mathbf{B} = |\mathbf{A}|\,|\mathbf{B}|\cos\theta,
+\]</span></p>
+<p>where <span class="math inline">\(\theta\)</span> is the angle
+between them. It is the length of <span
+class="math inline">\(\mathbf{A}\)</span> times the part of <span
+class="math inline">\(\mathbf{B}\)</span> that lies along <span
+class="math inline">\(\mathbf{A}\)</span>. Two vectors at right angles
+have <span class="math inline">\(\mathbf{A}\cdot\mathbf{B} = 0\)</span>;
+parallel vectors have the product of their lengths; and <span
+class="math inline">\(\mathbf{A}\cdot\mathbf{A} =
+|\mathbf{A}|^2\)</span>.</p>
+<p><strong>In components.</strong> Since the unit vectors are
+perpendicular and of length 1, <span
+class="math inline">\(\hat{\mathbf{x}}\cdot\hat{\mathbf{x}} = 1\)</span>
+and <span class="math inline">\(\hat{\mathbf{x}}\cdot\hat{\mathbf{y}} =
+0\)</span>, and so on. Multiplying out the components term by term
+leaves only the matching pairs:</p>
+<p><span class="math display">\[
+\mathbf{A}\cdot\mathbf{B} = A_xB_x + A_yB_y + A_zB_z .
+\]</span></p>
+<p>That the two forms agree is the cosine rule of trigonometry: <span
+class="math inline">\(|\mathbf{A} - \mathbf{B}|^2 = |\mathbf{A}|^2 +
+|\mathbf{B}|^2 - 2|\mathbf{A}||\mathbf{B}|\cos\theta\)</span>, and
+expanding the left side in components gives <span
+class="math inline">\(|\mathbf{A}|^2 + |\mathbf{B}|^2 - 2(A_xB_x +
+A_yB_y + A_zB_z)\)</span>.</p>
+<p><strong>Work.</strong> A force <span
+class="math inline">\(\mathbf{F}\)</span> acting on a body that moves a
+displacement <span class="math inline">\(\mathbf{d}\)</span> does work
+<span class="math inline">\(W = \mathbf{F}\cdot\mathbf{d}\)</span>: only
+the part of the force along the motion counts. A force of <span
+class="math inline">\((3, 0, 4)\)</span> N moving its point of action by
+<span class="math inline">\((2, 1, 0)\)</span> m does <span
+class="math inline">\(3 \times 2 + 0 \times 1 + 4 \times 0 = 6\)</span>
+J of work, although the force is 5 N and the displacement <span
+class="math inline">\(\sqrt5 = 2.24\)</span> m; the angle between them
+is <span class="math inline">\(57.5°\)</span>.</p>
+<p><strong>A force that does no work.</strong> Section 3 shows that the
+magnetic force on a moving charge is always at right angles to its
+velocity. Then <span class="math inline">\(\mathbf{F}\cdot\mathbf{v} =
+0\)</span>: the force does no work, and a magnetic field can bend a
+particle but never change its energy. That single fact is why
+accelerators use electric fields to accelerate and magnetic fields to
+steer (<a href="01-why-accelerate.html">chapter 1</a>).</p>
+<h3 id="3-the-cross-product">3. The cross product</h3>
+<p><strong>The definition.</strong> The cross product of two vectors is
+a vector, <span
+class="math inline">\(\mathbf{A}\times\mathbf{B}\)</span>, with</p>
+<ul>
+<li>magnitude <span
+class="math inline">\(|\mathbf{A}||\mathbf{B}|\sin\theta\)</span>, the
+area of the parallelogram the two vectors span;</li>
+<li>direction at right angles to both, given by the right-hand rule:
+fingers along <span class="math inline">\(\mathbf{A}\)</span>, curled
+towards <span class="math inline">\(\mathbf{B}\)</span>, thumb along
+<span class="math inline">\(\mathbf{A}\times\mathbf{B}\)</span>.</li>
+</ul>
+<p>Parallel vectors have zero cross product. Reversing the order
+reverses the result: <span
+class="math inline">\(\mathbf{B}\times\mathbf{A} =
+-\mathbf{A}\times\mathbf{B}\)</span>.</p>
+<p><strong>In components.</strong> From <span
+class="math inline">\(\hat{\mathbf{x}}\times\hat{\mathbf{y}} =
+\hat{\mathbf{z}}\)</span>, <span
+class="math inline">\(\hat{\mathbf{y}}\times\hat{\mathbf{z}} =
+\hat{\mathbf{x}}\)</span>, <span
+class="math inline">\(\hat{\mathbf{z}}\times\hat{\mathbf{x}} =
+\hat{\mathbf{y}}\)</span> and <span
+class="math inline">\(\hat{\mathbf{x}}\times\hat{\mathbf{x}} =
+0\)</span>, multiplying out gives</p>
+<p><span class="math display">\[
+\mathbf{A}\times\mathbf{B} = (A_yB_z - A_zB_y,\ A_zB_x - A_xB_z,\ A_xB_y
+- A_yB_x) .
+\]</span></p>
+<p>The pattern: the <span class="math inline">\(x\)</span> component
+uses only <span class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span>, in the cyclic order <span
+class="math inline">\(x \to y \to z \to x\)</span>. For example <span
+class="math inline">\((1, 2, 3)\times(4, 5, 6) = (2 \cdot 6 - 3 \cdot
+5,\ 3 \cdot 4 - 1 \cdot 6,\ 1 \cdot 5 - 2 \cdot 4) = (-3, 6,
+-3)\)</span>. Check: its dot product with <span
+class="math inline">\((1, 2, 3)\)</span> is <span
+class="math inline">\(-3 + 12 - 9 = 0\)</span>, as it must be.</p>
+<p><strong>The magnetic force.</strong> A charge <span
+class="math inline">\(q\)</span> moving with velocity <span
+class="math inline">\(\mathbf{v}\)</span> through a magnetic field <span
+class="math inline">\(\mathbf{B}\)</span> feels the force</p>
+<p><span class="math display">\[
+\mathbf{F} = q\,\mathbf{v}\times\mathbf{B} .
+\]</span></p>
+<p>The field <span class="math inline">\(B\)</span> is measured in tesla
+(T): 1 T is the field in which a charge of 1 C moving at 1 m/s at right
+angles to it feels 1 N. The force is zero for motion along the field and
+largest, <span class="math inline">\(qvB\)</span>, for motion across it.
+Together with the electric force, <span class="math inline">\(\mathbf{F}
+= q(\boldsymbol{\mathcal{E}} + \mathbf{v}\times\mathbf{B})\)</span>,
+this is the <em>Lorentz force</em>, which drives everything in the
+course.</p>
+<p><em>Example.</em> A 2 kV electron moving horizontally at <span
+class="math inline">\(2.65 \times 10^7\)</span> m/s across the Earth’s
+field of 50 μT feels a force <span class="math inline">\(evB = 1.602
+\times 10^{-19} \times 2.65 \times 10^7 \times 5 \times 10^{-5} = 2.1
+\times 10^{-16}\)</span> N. Small, but on an electron it is an
+acceleration of <span class="math inline">\(2.3 \times 10^{14}\)</span>
+m/s<span class="math inline">\(^2\)</span>, and chapter 2 shows it moves
+the spot of a 30 cm tube by 15 mm.</p>
+<p><strong>Other cross products.</strong> The <em>torque</em> of a force
+<span class="math inline">\(\mathbf{F}\)</span> applied at position
+<span class="math inline">\(\mathbf{r}\)</span> is <span
+class="math inline">\(\mathbf{r}\times\mathbf{F}\)</span>, and the
+<em>angular momentum</em> of a body of momentum <span
+class="math inline">\(\mathbf{p}\)</span> at <span
+class="math inline">\(\mathbf{r}\)</span> is <span
+class="math inline">\(\mathbf{L} = \mathbf{r}\times\mathbf{p}\)</span>.
+<a href="F3-mechanics.html">F3</a> uses both.</p>
+<h3 id="4-vectors-that-change-velocity-acceleration-and-circles">4.
+Vectors that change: velocity, acceleration and circles</h3>
+<p><strong>Differentiating a vector.</strong> A moving point has a
+position vector <span class="math inline">\(\mathbf{r}(t)\)</span> that
+changes with time. Its velocity is the rate of change of position, done
+component by component, since the unit vectors themselves do not
+change:</p>
+<p><span class="math display">\[
+\mathbf{v} = \frac{d\mathbf{r}}{dt} = \left(\frac{dx}{dt},
+\frac{dy}{dt}, \frac{dz}{dt}\right), \qquad \mathbf{a} =
+\frac{d\mathbf{v}}{dt} .
+\]</span></p>
+<p>The product rules of F1 carry over: <span
+class="math inline">\(\dfrac{d}{dt}(\mathbf{A}\cdot\mathbf{B}) =
+\dot{\mathbf{A}}\cdot\mathbf{B} +
+\mathbf{A}\cdot\dot{\mathbf{B}}\)</span>, and the same for the cross
+product, keeping the order.</p>
+<p><strong>Speed stays fixed when the push is sideways.</strong> Apply
+this to <span class="math inline">\(v^2 =
+\mathbf{v}\cdot\mathbf{v}\)</span>: <span
+class="math inline">\(\dfrac{d}{dt}(v^2) =
+2\,\mathbf{v}\cdot\mathbf{a}\)</span>. If the acceleration is always at
+right angles to the velocity, the speed does not change. That is the
+magnetic force of section 3, now proved in one line.</p>
+<p><strong>Circular motion.</strong> A point going round a circle of
+radius <span class="math inline">\(R\)</span> at a steady angular rate
+<span class="math inline">\(\omega\)</span> (radians per second) has
+position</p>
+<p><span class="math display">\[
+\mathbf{r} = (R\cos\omega t,\ R\sin\omega t,\ 0) .
+\]</span></p>
+<p>Differentiating with F1’s rules,</p>
+<p><span class="math display">\[
+\mathbf{v} = (-R\omega\sin\omega t,\ R\omega\cos\omega t,\ 0), \qquad
+\mathbf{a} = (-R\omega^2\cos\omega t,\ -R\omega^2\sin\omega t,\ 0) =
+-\omega^2\mathbf{r} .
+\]</span></p>
+<p>The speed is <span class="math inline">\(v = R\omega\)</span>, and
+the acceleration points to the centre with size <span
+class="math inline">\(R\omega^2 = v^2/R\)</span>. Moving in a circle at
+steady speed is accelerating: the direction changes. Something must
+supply the force <span class="math inline">\(mv^2/R\)</span> towards the
+centre.</p>
+<p><strong>The cyclotron frequency.</strong> In a uniform magnetic field
+<span class="math inline">\(B\)</span> at right angles to the motion,
+the magnetic force <span class="math inline">\(qvB\)</span> is always
+sideways, so the speed is fixed and the path is a circle. Setting the
+force equal to <span class="math inline">\(mv^2/R\)</span>:</p>
+<p><span class="math display">\[
+qvB = \frac{mv^2}{R} \quad\Rightarrow\quad R = \frac{mv}{qB} =
+\frac{p}{qB}, \qquad \omega = \frac{v}{R} = \frac{qB}{m} .
+\]</span></p>
+<p>The radius grows with the momentum, but the time to go round does not
+depend on the speed at all. For a proton in 1 T, <span
+class="math inline">\(f = \omega/2\pi = qB/(2\pi m_p) = 15.2\)</span>
+MHz; a 10 MeV proton circles with radius 0.457 m. Lawrence built the
+cyclotron on that independence of speed (<a
+href="10-the-cyclotron.html">chapter 10</a>). The 2 kV electron in the
+Earth’s field circles with <span class="math inline">\(R = v/(\omega) =
+m_ev/(eB) = 3.0\)</span> m. (Near the speed of light <span
+class="math inline">\(m\)</span> becomes <span
+class="math inline">\(\gamma m\)</span>; chapter 1 shows why, and
+chapter 12 what it does to the cyclotron.)</p>
+<h3 id="5-fields">5. Fields</h3>
+<p><strong>Scalar and vector fields.</strong> A <em>field</em> is a
+quantity with a value at every point of space, and possibly changing in
+time. The temperature in a room, <span class="math inline">\(T(x, y,
+z)\)</span>, is a <em>scalar field</em>: one number at each point. The
+velocity of water in a river, <span class="math inline">\(\mathbf{v}(x,
+y, z)\)</span>, is a <em>vector field</em>: an arrow at each point. The
+electric potential <span class="math inline">\(V\)</span> is a scalar
+field; the electric field <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> and the magnetic
+field <span class="math inline">\(\mathbf{B}\)</span> are vector
+fields.</p>
+<p><strong>Pictures of fields.</strong> A scalar field is drawn with
+<em>contours</em>, surfaces (or, on paper, lines) where it is constant,
+like the height contours of a map. A vector field is drawn with
+<em>field lines</em>, curves that run along the arrow at every point,
+drawn closer together where the field is stronger. The electric field of
+a point charge <span class="math inline">\(Q\)</span> at the origin,</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{E}} = \frac{Q}{4\pi\varepsilon_0
+r^2}\,\hat{\mathbf{r}},
+\]</span></p>
+<p>has straight field lines pointing out from the charge, spreading
+apart as <span class="math inline">\(1/r^2\)</span>; its potential,
+<span class="math inline">\(V = Q/(4\pi\varepsilon_0 r)\)</span>, has
+spherical contours. Here <span class="math inline">\(\varepsilon_0 =
+8.854 \times 10^{-12}\)</span> F/m and <span
+class="math inline">\(\hat{\mathbf{r}} = \mathbf{r}/r\)</span> points
+away from the charge.</p>
+<h3 id="6-the-gradient">6. The gradient</h3>
+<p><strong>The picture.</strong> Stand on a hillside of height <span
+class="math inline">\(h(x, y)\)</span>. Which way is uphill, and how
+steep? In the <span class="math inline">\(x\)</span> direction the slope
+is <span class="math inline">\(\partial h/\partial x\)</span>, in the
+<span class="math inline">\(y\)</span> direction <span
+class="math inline">\(\partial h/\partial y\)</span>. In a direction
+given by a unit vector <span
+class="math inline">\(\hat{\mathbf{u}}\)</span>, a small step <span
+class="math inline">\(ds\,\hat{\mathbf{u}}\)</span> changes the height
+by (F1, section 9)</p>
+<p><span class="math display">\[
+dh = \frac{\partial h}{\partial x}u_x\,ds + \frac{\partial h}{\partial
+y}u_y\,ds = (\nabla h\cdot\hat{\mathbf{u}})\,ds,
+\]</span></p>
+<p>where the <em>gradient</em> is the vector of the partial
+derivatives:</p>
+<p><span class="math display">\[
+\nabla h = \left(\frac{\partial h}{\partial x}, \frac{\partial
+h}{\partial y}, \frac{\partial h}{\partial z}\right) .
+\]</span></p>
+<p>The slope in direction <span
+class="math inline">\(\hat{\mathbf{u}}\)</span> is <span
+class="math inline">\(\nabla h\cdot\hat{\mathbf{u}} = |\nabla
+h|\cos\theta\)</span>. It is largest when <span
+class="math inline">\(\hat{\mathbf{u}}\)</span> points along <span
+class="math inline">\(\nabla h\)</span>. So the gradient points straight
+uphill, its size is the steepest slope, and it is at right angles to the
+contours (along a contour, the height does not change, so <span
+class="math inline">\(\nabla h\cdot\hat{\mathbf{u}} = 0\)</span>). The
+symbol <span class="math inline">\(\nabla\)</span>, “del” or “nabla”, is
+the vector of derivatives <span class="math inline">\((\partial/\partial
+x, \partial/\partial y, \partial/\partial z)\)</span>, waiting for a
+function to act on.</p>
+<p><strong>Field from potential.</strong> The electric field points
+downhill in potential, and its size is the potential’s steepest
+slope:</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{E}} = -\nabla V .
+\]</span></p>
+<p>Between parallel plates, <span class="math inline">\(V =
+-\mathcal{E}x\)</span> and <span class="math inline">\(\nabla V =
+(-\mathcal{E}, 0, 0)\)</span>, a uniform field. For a point charge,
+<span class="math inline">\(V = Q/(4\pi\varepsilon_0 r)\)</span> with
+<span class="math inline">\(r = \sqrt{x^2 + y^2 + z^2}\)</span>. By the
+chain rule, <span class="math inline">\(\partial r/\partial x =
+x/r\)</span>, so <span class="math inline">\(\partial(1/r)/\partial x =
+-x/r^3\)</span>, and similarly for <span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span>: <span
+class="math inline">\(\nabla(1/r) = -\mathbf{r}/r^3 =
+-\hat{\mathbf{r}}/r^2\)</span>. Then <span class="math inline">\(-\nabla
+V = Q\hat{\mathbf{r}}/(4\pi\varepsilon_0 r^2)\)</span>, Coulomb’s field
+of section 5. One function, <span class="math inline">\(V\)</span>,
+carries all three components of the field.</p>
+<p><strong>Example: a field that focuses.</strong> Four electrodes
+arranged round a beam pipe, alternately positive and negative, make near
+the axis the potential <span class="math inline">\(V = V_0(x^2 -
+y^2)/a^2\)</span>, with <span class="math inline">\(a\)</span> the
+distance to the electrodes. Its gradient gives</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{E}} = -\nabla V = \left(-\frac{2V_0x}{a^2},\
++\frac{2V_0y}{a^2},\ 0\right) .
+\]</span></p>
+<p>A positive particle displaced in <span
+class="math inline">\(x\)</span> is pushed back towards the axis, with a
+force proportional to the displacement: the oscillation of F1 section
+10. Displaced in <span class="math inline">\(y\)</span>, it is pushed
+away. For <span class="math inline">\(V_0 = 10\)</span> kV and <span
+class="math inline">\(a = 2\)</span> cm, the field 1 mm off axis is
+<span class="math inline">\(5 \times 10^4\)</span> V/m. This
+<em>quadrupole</em> focuses in one plane and defocuses in the other, and
+<a href="16-strong-focusing.html">chapter 16</a> shows how alternating
+them focuses in both.</p>
+<h3 id="7-line-integrals-work-along-a-path">7. Line integrals: work
+along a path</h3>
+<p><strong>The definition.</strong> Move a charge along a curved path
+<span class="math inline">\(C\)</span> through an electric field. On
+each short step <span class="math inline">\(d\mathbf{l}\)</span> the
+field does work <span
+class="math inline">\(q\boldsymbol{\mathcal{E}}\cdot
+d\mathbf{l}\)</span>. Adding the steps gives a <em>line
+integral</em>:</p>
+<p><span class="math display">\[
+W = q\int_C\boldsymbol{\mathcal{E}}\cdot d\mathbf{l} .
+\]</span></p>
+<p>To compute one, describe the path by a parameter, <span
+class="math inline">\(\mathbf{r}(s)\)</span> for <span
+class="math inline">\(s\)</span> from <span
+class="math inline">\(s_1\)</span> to <span
+class="math inline">\(s_2\)</span>; then <span
+class="math inline">\(d\mathbf{l} = (d\mathbf{r}/ds)\,ds\)</span> and
+the line integral becomes an ordinary F1 integral over <span
+class="math inline">\(s\)</span>. When the path is a closed loop the
+integral is written <span class="math inline">\(\oint\)</span> and
+called the <em>circulation</em> of the field round the loop.</p>
+<p><strong>The fundamental theorem for gradients.</strong> If the field
+is a gradient, <span class="math inline">\(\mathbf{F} = \nabla
+f\)</span>, then along any path <span class="math inline">\(\nabla
+f\cdot d\mathbf{l}\)</span> is just the change <span
+class="math inline">\(df\)</span> of <span
+class="math inline">\(f\)</span> over that step (section 6), and the
+steps add up to the total change:</p>
+<p><span class="math display">\[
+\int_A^B\nabla f\cdot d\mathbf{l} = f(B) - f(A) .
+\]</span></p>
+<p>The answer depends only on the end points, not on the path between
+them; and round any closed loop it is zero. A field with this property
+is called <em>conservative</em>. Since a static electric field is <span
+class="math inline">\(-\nabla V\)</span>, the energy a charge gains from
+it is <span class="math inline">\(q[V(A) - V(B)]\)</span>, whatever
+route it takes. That is why an accelerator’s energy gain can be quoted
+in volts, and why no arrangement of static charges can make a ring that
+gives energy on every turn (<a
+href="05-the-voltage-multiplier.html">chapter 5</a> to <a
+href="09-resonant-acceleration.html">chapter 9</a> are about getting
+round that).</p>
+<p><strong>A field that is not a gradient.</strong> Some fields have a
+non-zero circulation: the magnetic field round a wire, or the electric
+field induced by a changing magnetic field, which drives the betatron
+(<a href="11-the-betatron.html">chapter 11</a>). For such fields no
+potential <span class="math inline">\(V\)</span> exists, and the work
+depends on the path. Section 11 gives the test.</p>
+<h3 id="8-integrals-over-areas-and-volumes">8. Integrals over areas and
+volumes</h3>
+<p><strong>Sums in two and three dimensions.</strong> F1’s integral adds
+up thin strips. To add up a quantity over an area, cut the area into
+small patches <span class="math inline">\(dA\)</span>, and over a volume
+into small cells <span class="math inline">\(dV\)</span>. In <span
+class="math inline">\(x, y, z\)</span> coordinates, <span
+class="math inline">\(dA = dx\,dy\)</span> and <span
+class="math inline">\(dV = dx\,dy\,dz\)</span>, and the sum is done one
+variable at a time: integrate over <span
+class="math inline">\(x\)</span> holding <span
+class="math inline">\(y\)</span> fixed, then over <span
+class="math inline">\(y\)</span>.</p>
+<p><strong>Choosing the cuts to fit.</strong> Shapes in physics are
+often round, and then it pays to cut them to match. A disc of radius
+<span class="math inline">\(R\)</span> cuts into thin rings of radius
+<span class="math inline">\(r\)</span> and width <span
+class="math inline">\(dr\)</span>, each of area <span
+class="math inline">\(2\pi r\,dr\)</span> (its circumference times its
+width):</p>
+<p><span class="math display">\[
+\text{area} = \int_0^R 2\pi r\,dr = \pi R^2 .
+\]</span></p>
+<p>A ball of radius <span class="math inline">\(R\)</span> cuts into
+thin shells of area <span class="math inline">\(4\pi r^2\)</span> and
+thickness <span class="math inline">\(dr\)</span>:</p>
+<p><span class="math display">\[
+\text{volume} = \int_0^R 4\pi r^2\,dr = \tfrac43\pi R^3 .
+\]</span></p>
+<p><strong>Example: the charge in a beam.</strong> A beam’s density
+usually falls off from the centre. If the charge per unit volume is
+<span class="math inline">\(\rho(r)\)</span>, depending only on the
+distance <span class="math inline">\(r\)</span> from the axis, the
+charge per metre of beam is <span
+class="math inline">\(\int_0^\infty\rho(r)\,2\pi r\,dr\)</span>. Chapter
+7 and chapter 22 use exactly this sum, with a Gaussian <span
+class="math inline">\(\rho\)</span>.</p>
+<h3 id="9-flux">9. Flux</h3>
+<p><strong>The picture.</strong> Water flows with velocity <span
+class="math inline">\(\mathbf{v}\)</span> through a small flat hoop of
+area <span class="math inline">\(dA\)</span>. If the hoop faces the
+flow, the volume passing each second is <span
+class="math inline">\(v\,dA\)</span>; if it is tilted by an angle <span
+class="math inline">\(\theta\)</span>, only the part of the velocity
+along the hoop’s <em>normal</em> (the direction it faces) gets through,
+<span class="math inline">\(v\cos\theta\,dA\)</span>. Give the patch a
+vector <span class="math inline">\(d\mathbf{A}\)</span>, of size <span
+class="math inline">\(dA\)</span> and pointing along its normal. Then
+the flow through it is <span class="math inline">\(\mathbf{v}\cdot
+d\mathbf{A}\)</span>, and through a whole surface <span
+class="math inline">\(S\)</span>, the <em>flux</em>:</p>
+<p><span class="math display">\[
+\Phi = \int_S\mathbf{v}\cdot d\mathbf{A} .
+\]</span></p>
+<p>For a closed surface, written <span
+class="math inline">\(\oint\)</span>, the normal is taken to point
+outwards, and the flux is the net amount flowing <em>out</em>. The same
+definition applies to any vector field, whether or not anything really
+flows: the electric flux <span
+class="math inline">\(\int\boldsymbol{\mathcal{E}}\cdot
+d\mathbf{A}\)</span>, the magnetic flux <span
+class="math inline">\(\int\mathbf{B}\cdot d\mathbf{A}\)</span>.</p>
+<p><strong>The flux of a point charge.</strong> Take a sphere of radius
+<span class="math inline">\(r\)</span> centred on a charge <span
+class="math inline">\(Q\)</span>. On it, the field points straight out,
+along <span class="math inline">\(d\mathbf{A}\)</span>, with the same
+size everywhere. So the flux is the field times the area:</p>
+<p><span class="math display">\[
+\oint\boldsymbol{\mathcal{E}}\cdot d\mathbf{A} =
+\frac{Q}{4\pi\varepsilon_0 r^2}\times 4\pi r^2 = \frac{Q}{\varepsilon_0}
+.
+\]</span></p>
+<p>The radius cancels: the <span class="math inline">\(1/r^2\)</span> of
+the field exactly balances the <span class="math inline">\(r^2\)</span>
+of the area. Every sphere round the charge has the same flux. This is
+the heart of <em>Gauss’s law</em>: the electric flux out of any closed
+surface is the charge inside divided by <span
+class="math inline">\(\varepsilon_0\)</span> (taught in full in <a
+href="01-why-accelerate.html#pre-requisite-gausss-law-and-potentials-of-simple-shapes">chapter
+1</a>).</p>
+<p><strong>Example: a high-voltage terminal.</strong> A sphere of radius
+1 m at 1 MV, far from anything else, has potential <span
+class="math inline">\(V = Q/(4\pi\varepsilon_0 R)\)</span>, so <span
+class="math inline">\(Q = 4\pi\varepsilon_0 RV = 1.11 \times
+10^{-4}\)</span> C, and the field at its surface is <span
+class="math inline">\(V/R = 1\)</span> MV/m. <a
+href="06-the-electrostatic-generator.html">Chapter 6</a> is about how
+big such a terminal must be before that surface field breaks the gas
+down.</p>
+<h3 id="10-divergence-and-gausss-theorem">10. Divergence, and Gauss’s
+theorem</h3>
+<p><strong>Divergence: flux out of a point.</strong> Shrink a closed
+surface round a point until it is tiny, and divide its outward flux by
+the volume it encloses. The limit is the <em>divergence</em> of the
+field there, the flux out per unit volume. Take a small box with sides
+<span class="math inline">\(dx\)</span>, <span
+class="math inline">\(dy\)</span>, <span
+class="math inline">\(dz\)</span>. Through its two faces at right angles
+to <span class="math inline">\(x\)</span>, the outward flux is <span
+class="math inline">\(F_x(x + dx)\,dy\,dz - F_x(x)\,dy\,dz =
+\dfrac{\partial F_x}{\partial x}\,dx\,dy\,dz\)</span>. Adding the three
+pairs of faces and dividing by the volume <span
+class="math inline">\(dx\,dy\,dz\)</span>:</p>
+<p><span class="math display">\[
+\nabla\cdot\mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial
+F_y}{\partial y} + \frac{\partial F_z}{\partial z} .
+\]</span></p>
+<p>The notation is the dot product of <span
+class="math inline">\(\nabla\)</span> with <span
+class="math inline">\(\mathbf{F}\)</span>. A positive divergence is a
+source, where field lines begin; a negative one is a sink, where they
+end; zero divergence means as much flows in as out.</p>
+<p><strong>Gauss’s theorem.</strong> Fill any volume <span
+class="math inline">\(V\)</span> with small boxes. Where two boxes
+touch, the flux out of one is the flux into the other, and they cancel.
+Only the faces on the outer surface <span
+class="math inline">\(S\)</span> survive. So the total divergence inside
+equals the flux out through the surface:</p>
+<p><span class="math display">\[
+\oint_S\mathbf{F}\cdot d\mathbf{A} = \int_V\nabla\cdot\mathbf{F}\,dV .
+\]</span></p>
+<p>This is F1’s fundamental theorem in three dimensions: the integral of
+a derivative over a region equals the field’s values on the
+boundary.</p>
+<p><em>Check.</em> The field <span class="math inline">\(\mathbf{F} =
+(x, y, z) = \mathbf{r}\)</span> has divergence <span
+class="math inline">\(1 + 1 + 1 = 3\)</span>. Over a ball of radius
+<span class="math inline">\(R\)</span>, the right side is <span
+class="math inline">\(3 \times \tfrac43\pi R^3 = 4\pi R^3\)</span>. On
+the surface, <span class="math inline">\(\mathbf{F}\)</span> points
+straight out with size <span class="math inline">\(R\)</span>, so the
+flux is <span class="math inline">\(R \times 4\pi R^2 = 4\pi
+R^3\)</span>. The two agree.</p>
+<p><strong>Gauss’s law, at a point.</strong> The electric flux out of
+any surface is the charge inside over <span
+class="math inline">\(\varepsilon_0\)</span>. Write the charge as the
+integral of the charge density <span class="math inline">\(\rho\)</span>
+over the volume, and use Gauss’s theorem on the left: <span
+class="math inline">\(\int\nabla\cdot\boldsymbol{\mathcal{E}}\,dV =
+\int(\rho/\varepsilon_0)\,dV\)</span> for every volume, which can only
+be if</p>
+<p><span class="math display">\[
+\nabla\cdot\boldsymbol{\mathcal{E}} = \frac{\rho}{\varepsilon_0} .
+\]</span></p>
+<p>This is the first of Maxwell’s equations, in the form F4 will
+use.</p>
+<p><strong>Example: the field of a beam.</strong> A long round beam of
+radius <span class="math inline">\(a\)</span> carries charge <span
+class="math inline">\(\lambda\)</span> per metre. Take a cylinder of
+radius <span class="math inline">\(r \ge a\)</span> and length <span
+class="math inline">\(L\)</span> round it. By symmetry the field points
+straight out from the axis, so the flux through the curved side is <span
+class="math inline">\(\mathcal{E}\times 2\pi rL\)</span> and through the
+flat ends zero. Gauss’s law gives <span
+class="math inline">\(\mathcal{E}\,2\pi rL = \lambda
+L/\varepsilon_0\)</span>, so <span class="math inline">\(\mathcal{E} =
+\lambda/(2\pi\varepsilon_0 r)\)</span>. A 10 mA electron beam at 2 kV
+moves at <span class="math inline">\(2.65 \times 10^7\)</span> m/s, so
+it carries <span class="math inline">\(\lambda = I/v = 3.77 \times
+10^{-10}\)</span> C/m, and at the edge of a 1 mm beam its own field is
+<span class="math inline">\(6.8\)</span> kV/m. This field pushes the
+beam’s electrons apart: the space charge that limits every intense
+low-energy beam (<a href="02-the-cathode-ray-tube.html">chapter 2</a>,
+<a href="22-intensity-limits.html">chapter 22</a>).</p>
+<h3 id="11-curl-and-stokess-theorem">11. Curl, and Stokes’s theorem</h3>
+<p><strong>Curl: circulation round a point.</strong> Shrink a small flat
+loop round a point and divide the circulation <span
+class="math inline">\(\oint\mathbf{F}\cdot d\mathbf{l}\)</span> by the
+area enclosed. The result depends on which way the loop faces. The
+<em>curl</em> is the vector whose component along a direction is the
+circulation per unit area of a small loop facing that way (going round
+it by the right-hand rule). For a small rectangle in the <span
+class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span>
+plane with sides <span class="math inline">\(dx\)</span> and <span
+class="math inline">\(dy\)</span>, going round anticlockwise seen from
+<span class="math inline">\(+z\)</span>: the two sides along <span
+class="math inline">\(x\)</span> contribute <span
+class="math inline">\(F_x(y)\,dx - F_x(y + dy)\,dx = -\dfrac{\partial
+F_x}{\partial y}dx\,dy\)</span>, and the two along <span
+class="math inline">\(y\)</span> contribute <span
+class="math inline">\(\dfrac{\partial F_y}{\partial x}dx\,dy\)</span>.
+So the <span class="math inline">\(z\)</span> component is <span
+class="math inline">\(\partial F_y/\partial x - \partial F_x/\partial
+y\)</span>, and in full,</p>
+<p><span class="math display">\[
+\nabla\times\mathbf{F} = \left(\frac{\partial F_z}{\partial y} -
+\frac{\partial F_y}{\partial z},\ \frac{\partial F_x}{\partial z} -
+\frac{\partial F_z}{\partial x},\ \frac{\partial F_y}{\partial x} -
+\frac{\partial F_x}{\partial y}\right),
+\]</span></p>
+<p>the cross product of <span class="math inline">\(\nabla\)</span> with
+<span class="math inline">\(\mathbf{F}\)</span>, with the same pattern
+as section 3. A field with zero curl everywhere is
+<em>irrotational</em>. A curl does not need the field lines to go round
+in circles; it needs the field to be stronger on one side of a point
+than on the other, as a stream flows faster in the middle than at the
+banks, which would turn a paddle-wheel placed off centre.</p>
+<p><strong>Stokes’s theorem.</strong> Cover a surface <span
+class="math inline">\(S\)</span> with small loops, all going round the
+same way. Each inner edge is run along twice, in opposite directions,
+and cancels; only the outer edge <span class="math inline">\(C\)</span>
+survives. So</p>
+<p><span class="math display">\[
+\oint_C\mathbf{F}\cdot d\mathbf{l} = \int_S(\nabla\times\mathbf{F})\cdot
+d\mathbf{A} .
+\]</span></p>
+<p>The circulation round a loop equals the flux of the curl through any
+surface it bounds.</p>
+<p><em>Check.</em> The field <span class="math inline">\(\mathbf{F} =
+(-y, x, 0)\)</span> swirls round the <span
+class="math inline">\(z\)</span> axis. Its curl is <span
+class="math inline">\((0, 0, 1 - (-1)) = (0, 0, 2)\)</span>. Round a
+circle of radius <span class="math inline">\(R\)</span> the field has
+size <span class="math inline">\(R\)</span> and runs along the path, so
+the circulation is <span class="math inline">\(R \times 2\pi R = 2\pi
+R^2\)</span>. The flux of the curl through the disc is <span
+class="math inline">\(2 \times \pi R^2\)</span>. They agree.</p>
+<p><strong>Two identities.</strong> For any smooth scalar field <span
+class="math inline">\(f\)</span> and vector field <span
+class="math inline">\(\mathbf{F}\)</span>:</p>
+<p><span class="math display">\[
+\nabla\times(\nabla f) = 0, \qquad \nabla\cdot(\nabla\times\mathbf{F}) =
+0 .
+\]</span></p>
+<p>Both follow from writing out components and using the fact (F1,
+section 9) that the order of partial derivatives does not matter. The
+first says a gradient has no circulation, which is section 7’s result
+again. Read the other way, it is the test promised there: a field with
+zero curl everywhere (in a region without holes) <em>is</em> a gradient,
+and has a potential. A static electric field has zero curl; the magnetic
+field does not, since by Ampère’s law (F4) its curl is set by the
+current density:</p>
+<p><span class="math display">\[
+\nabla\times\mathbf{B} = \mu_0\mathbf{J}, \qquad \mu_0 = 1.2566 \times
+10^{-6}\ \text{T m/A} .
+\]</span></p>
+<p><strong>Example: the field round a wire.</strong> Apply Stokes’s
+theorem to a circle of radius <span class="math inline">\(r\)</span>
+round a long straight wire carrying current <span
+class="math inline">\(I\)</span>. By symmetry <span
+class="math inline">\(\mathbf{B}\)</span> runs round the circle with the
+same size everywhere, so the circulation is <span
+class="math inline">\(B\times 2\pi r\)</span>, and the flux of <span
+class="math inline">\(\mu_0\mathbf{J}\)</span> through the disc is <span
+class="math inline">\(\mu_0 I\)</span>. So <span class="math inline">\(B
+= \mu_0 I/(2\pi r)\)</span>: 20 μT for 1 A at 1 cm. <a
+href="17-magnets.html">Chapter 17</a> builds accelerator magnets from
+this.</p>
+<h3 id="12-the-laplacian">12. The Laplacian</h3>
+<p><strong>Divergence of a gradient.</strong> Combine the two: <span
+class="math inline">\(\nabla\cdot(\nabla f) = \nabla^2 f\)</span>, the
+<em>Laplacian</em>:</p>
+<p><span class="math display">\[
+\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2
+f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} .
+\]</span></p>
+<p>It measures how much <span class="math inline">\(f\)</span> at a
+point differs from the average of <span class="math inline">\(f\)</span>
+round it: zero means the value at every point is the average of its
+neighbours, so the field has no bumps or dips of its own.</p>
+<p><strong>Laplace’s and Poisson’s equations.</strong> With <span
+class="math inline">\(\boldsymbol{\mathcal{E}} = -\nabla V\)</span> and
+<span class="math inline">\(\nabla\cdot\boldsymbol{\mathcal{E}} =
+\rho/\varepsilon_0\)</span>,</p>
+<p><span class="math display">\[
+\nabla^2 V = -\frac{\rho}{\varepsilon_0} .
+\]</span></p>
+<p>This is <em>Poisson’s equation</em>; in empty space, where <span
+class="math inline">\(\rho = 0\)</span>, it is <em>Laplace’s
+equation</em>, <span class="math inline">\(\nabla^2 V = 0\)</span>. The
+quadrupole potential of section 6 obeys it: <span
+class="math inline">\(\partial^2/\partial x^2\)</span> of <span
+class="math inline">\(V_0(x^2 - y^2)/a^2\)</span> is <span
+class="math inline">\(2V_0/a^2\)</span>, and <span
+class="math inline">\(\partial^2/\partial y^2\)</span> is <span
+class="math inline">\(-2V_0/a^2\)</span>; they cancel. So do <span
+class="math inline">\(x\)</span>, <span
+class="math inline">\(xy\)</span>, and <span
+class="math inline">\(1/r\)</span> away from the origin. Designing
+electrodes and magnets is largely solving Laplace’s equation with the
+right boundaries, which <a
+href="02-the-cathode-ray-tube.html#pre-requisite-laplace-and-poisson-equations-uniqueness-boundary-value-problems">chapter
+2’s pre-requisite</a> teaches. One consequence is already visible: since
+a potential obeying Laplace’s equation has no hills or valleys of its
+own, no static field can trap a charge in all three directions at once
+(<a
+href="14-linear-accelerators.html#pre-requisite-earnshaws-theorem">Earnshaw’s
+theorem</a>). The quadrupole shows it: focusing in <span
+class="math inline">\(x\)</span> means defocusing in <span
+class="math inline">\(y\)</span>.</p>
+<h3 id="13-coordinates-that-fit-round-things">13. Coordinates that fit
+round things</h3>
+<p>Beams, pipes and magnets are round, and <span
+class="math inline">\(x, y, z\)</span> make round problems clumsy. Two
+other systems are used throughout the course.</p>
+<p><strong>Cylindrical coordinates</strong> <span
+class="math inline">\((r, \phi, z)\)</span>: the distance <span
+class="math inline">\(r\)</span> from the <span
+class="math inline">\(z\)</span> axis, the angle <span
+class="math inline">\(\phi\)</span> round it, and the height <span
+class="math inline">\(z\)</span>. Then <span class="math inline">\(x =
+r\cos\phi\)</span>, <span class="math inline">\(y = r\sin\phi\)</span>.
+A small step has length components <span
+class="math inline">\(dr\)</span>, <span
+class="math inline">\(r\,d\phi\)</span> and <span
+class="math inline">\(dz\)</span> (an angle <span
+class="math inline">\(d\phi\)</span> at radius <span
+class="math inline">\(r\)</span> sweeps an arc <span
+class="math inline">\(r\,d\phi\)</span>), so the volume element is <span
+class="math inline">\(dV = r\,dr\,d\phi\,dz\)</span>, and the disc of
+section 8 is <span class="math inline">\(\int_0^{2\pi}\int_0^R
+r\,dr\,d\phi = \pi R^2\)</span>.</p>
+<p><strong>Spherical coordinates</strong> <span
+class="math inline">\((r, \theta, \phi)\)</span>: the distance <span
+class="math inline">\(r\)</span> from the origin, the angle <span
+class="math inline">\(\theta\)</span> down from the <span
+class="math inline">\(z\)</span> axis, and the angle <span
+class="math inline">\(\phi\)</span> round it. A small step has
+components <span class="math inline">\(dr\)</span>, <span
+class="math inline">\(r\,d\theta\)</span> and <span
+class="math inline">\(r\sin\theta\,d\phi\)</span>, so <span
+class="math inline">\(dV = r^2\sin\theta\,dr\,d\theta\,d\phi\)</span>,
+and integrating the angles gives the shell area <span
+class="math inline">\(4\pi r^2\)</span> of section 8.</p>
+<p><strong>The derivatives in cylindrical coordinates.</strong> Derived
+by changing variables with the chain rule (worked through in Griffiths,
+appendix A):</p>
+<p><span class="math display">\[
+\nabla f = \left(\frac{\partial f}{\partial r},\
+\frac{1}{r}\frac{\partial f}{\partial\phi},\ \frac{\partial f}{\partial
+z}\right), \qquad \nabla\cdot\mathbf{F} =
+\frac{1}{r}\frac{\partial(rF_r)}{\partial r} + \frac{1}{r}\frac{\partial
+F_\phi}{\partial\phi} + \frac{\partial F_z}{\partial z} .
+\]</span></p>
+<p>The factor <span class="math inline">\(1/r\)</span> in the angle term
+turns an angle into a length. The extra <span
+class="math inline">\(r\)</span> inside the radial divergence accounts
+for the circles growing with <span class="math inline">\(r\)</span>. For
+the beam of section 10, inside the beam with uniform density <span
+class="math inline">\(\rho\)</span>, symmetry leaves only <span
+class="math inline">\(\mathcal{E}_r(r)\)</span>, and <span
+class="math inline">\(\dfrac{1}{r}\dfrac{d(r\mathcal{E}_r)}{dr} =
+\dfrac{\rho}{\varepsilon_0}\)</span> integrates to <span
+class="math inline">\(\mathcal{E}_r = \dfrac{\rho
+r}{2\varepsilon_0}\)</span>: the field grows in proportion to the
+distance from the axis, a linear push outwards that chapter 22 treats as
+a defocusing lens.</p>
+<h2 id="where-the-course-uses-it">Where the course uses it</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th>First used in</th>
+<th>For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Components, dot product</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Work, energy gain, why magnetic fields do no work</td>
+</tr>
+<tr>
+<td>Cross product, Lorentz force</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>Bending in magnets, rigidity</td>
+</tr>
+<tr>
+<td>Circular motion, <span class="math inline">\(qB/m\)</span></td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="10-the-cyclotron.html">chapter 10</a></td>
+<td>Revolution frequency, the cyclotron</td>
+</tr>
+<tr>
+<td>Gradient, potential</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a></td>
+<td>The field from a voltage; the quadrupole of <a
+href="16-strong-focusing.html">chapter 16</a></td>
+</tr>
+<tr>
+<td>Line integrals, conservative fields</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="11-the-betatron.html">chapter 11</a></td>
+<td>Energy in volts; the betatron’s induced field</td>
+</tr>
+<tr>
+<td>Flux, Gauss’s law</td>
+<td><a href="01-why-accelerate.html">Chapter 1</a>, <a
+href="06-the-electrostatic-generator.html">chapter 6</a></td>
+<td>Fields of spheres, plates and beams</td>
+</tr>
+<tr>
+<td>Divergence, Laplacian</td>
+<td><a href="02-the-cathode-ray-tube.html">Chapter 2</a></td>
+<td>Space charge, Laplace’s and Poisson’s equations</td>
+</tr>
+<tr>
+<td>Curl, Stokes, Ampère</td>
+<td><a href="02-the-cathode-ray-tube.html">Chapter 2</a>, <a
+href="17-magnets.html">chapter 17</a></td>
+<td>Magnetic fields of coils and magnets</td>
+</tr>
+<tr>
+<td>Cylindrical coordinates</td>
+<td><a href="07-ion-sources-and-electron-guns.html">Chapter 7</a>
+onwards</td>
+<td>Beams, guns, cavities</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>Find the size of <span class="math inline">\(\mathbf{A} = (2, -1,
+2)\)</span>, a unit vector along it, and the angle between <span
+class="math inline">\(\mathbf{A}\)</span> and the <span
+class="math inline">\(z\)</span> axis.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(|\mathbf{A}| = \sqrt{4 + 1 + 4} =
+3\)</span>. The unit vector is <span class="math inline">\((2/3, -1/3,
+2/3)\)</span>. Its dot product with <span
+class="math inline">\(\hat{\mathbf{z}}\)</span> is <span
+class="math inline">\(2/3 = \cos\theta\)</span>, so <span
+class="math inline">\(\theta = 48.2°\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>A force <span class="math inline">\(\mathbf{F} = (0, 0, 10)\)</span>
+N acts on a body that moves from <span class="math inline">\((0, 0,
+0)\)</span> to <span class="math inline">\((3, 4, 5)\)</span> m along a
+straight line. How much work does it do? Would the work be different
+along a curved path between the same points? Why?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(W = \mathbf{F}\cdot\mathbf{d} = 10 \times
+5 = 50\)</span> J. A constant force is the gradient of <span
+class="math inline">\(f = 10z\)</span>, so by section 7 the work is
+<span class="math inline">\(f(B) - f(A) = 50\)</span> J along any
+path.</p>
+</details>
+<ol start="3" type="1">
+<li>Compute <span class="math inline">\((1, 0, 0)\times(0, 1,
+0)\)</span> and <span class="math inline">\((0, 1, 0)\times(1, 0,
+0)\)</span>, and <span class="math inline">\((2, 1, 0)\times(1, 3,
+0)\)</span>. What is the area of the parallelogram spanned by the last
+pair?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\hat{\mathbf{x}}\times\hat{\mathbf{y}} =
+(0, 0, 1)\)</span>, and the reverse is <span class="math inline">\((0,
+0, -1)\)</span>. <span class="math inline">\((2, 1, 0)\times(1, 3, 0) =
+(1 \cdot 0 - 0 \cdot 3,\ 0 \cdot 1 - 2 \cdot 0,\ 2 \cdot 3 - 1 \cdot 1)
+= (0, 0, 5)\)</span>. The area is 5.</p>
+</details>
+<ol start="4" type="1">
+<li>A proton moves at <span class="math inline">\(10^7\)</span> m/s
+along <span class="math inline">\(x\)</span> through a field <span
+class="math inline">\(\mathbf{B} = (0, 0, 0.5)\)</span> T. Find the
+force (size and direction), the radius of its circle, and its revolution
+frequency.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\mathbf{F} = q\mathbf{v}\times\mathbf{B}
+= q(v, 0, 0)\times(0, 0, B) = q(0 \cdot B - 0,\ 0 - vB,\ 0) = (0, -qvB,
+0)\)</span>: <span class="math inline">\(1.602 \times 10^{-19} \times
+10^7 \times 0.5 = 8.0 \times 10^{-13}\)</span> N along <span
+class="math inline">\(-y\)</span>. <span class="math inline">\(R =
+m_pv/(qB) = 1.673 \times 10^{-27} \times 10^7/(1.602 \times 10^{-19}
+\times 0.5) = 0.209\)</span> m. <span class="math inline">\(f = qB/(2\pi
+m_p) = 7.62\)</span> MHz.</p>
+</details>
+<ol start="5" type="1">
+<li>Find the gradient of <span class="math inline">\(f = x^2 +
+3yz\)</span> at the point <span class="math inline">\((1, 2,
+1)\)</span>. What is the slope of <span class="math inline">\(f\)</span>
+in the direction <span class="math inline">\((0, 0.6, 0.8)\)</span>
+there?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\nabla f = (2x, 3z, 3y) = (2, 3,
+6)\)</span>. The slope along the unit vector <span
+class="math inline">\((0, 0.6, 0.8)\)</span> is <span
+class="math inline">\(0 + 1.8 + 4.8 = 6.6\)</span>. (The steepest slope
+is <span class="math inline">\(|\nabla f| = 7\)</span>.)</p>
+</details>
+<ol start="6" type="1">
+<li>Show that <span class="math inline">\(V = Q/(4\pi\varepsilon_0
+r)\)</span> obeys Laplace’s equation away from the origin. (Use <span
+class="math inline">\(\partial r/\partial x = x/r\)</span>.)</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\partial(1/r)/\partial x =
+-x/r^3\)</span>. Differentiating again, <span
+class="math inline">\(\partial^2(1/r)/\partial x^2 = -1/r^3 +
+3x^2/r^5\)</span>. Adding the three: <span class="math inline">\(-3/r^3
++ 3(x^2 + y^2 + z^2)/r^5 = -3/r^3 + 3/r^3 = 0\)</span>.</p>
+</details>
+<ol start="7" type="1">
+<li>Find the divergence and the curl of (a) <span
+class="math inline">\(\mathbf{F} = (x, y, 0)\)</span> and (b) <span
+class="math inline">\(\mathbf{G} = (y, 0, 0)\)</span>. Which could be an
+electrostatic field in empty space?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<ol type="a">
+<li><span class="math inline">\(\nabla\cdot\mathbf{F} = 2\)</span>,
+<span class="math inline">\(\nabla\times\mathbf{F} = 0\)</span>. (b)
+<span class="math inline">\(\nabla\cdot\mathbf{G} = 0\)</span>, <span
+class="math inline">\(\nabla\times\mathbf{G} = (0, 0, 0 - 1) = (0, 0,
+-1)\)</span>. An electrostatic field must have zero curl, and in empty
+space zero divergence too, so neither: (a) needs a charge density <span
+class="math inline">\(2\varepsilon_0\)</span> to make it, and (b) has
+circulation, so it is not electrostatic at all. (<span
+class="math inline">\(\mathbf{G}\)</span> is the kind of shear flow that
+turns a paddle-wheel.)</li>
+</ol>
+</details>
+<ol start="8" type="1">
+<li>Verify Gauss’s theorem for <span class="math inline">\(\mathbf{F} =
+(0, 0, z)\)</span> on a cube with corners at <span
+class="math inline">\((0,0,0)\)</span> and <span
+class="math inline">\((1,1,1)\)</span>.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\nabla\cdot\mathbf{F} = 1\)</span>, so
+the volume integral is 1. On the top face (<span class="math inline">\(z
+= 1\)</span>, outward normal <span class="math inline">\(+z\)</span>)
+the flux is <span class="math inline">\(1 \times 1 = 1\)</span>; on the
+bottom (<span class="math inline">\(z = 0\)</span>) <span
+class="math inline">\(F = 0\)</span>; on the four sides <span
+class="math inline">\(\mathbf{F}\)</span> is along the face, giving
+zero. Total 1.</p>
+</details>
+<ol start="9" type="1">
+<li>A long straight conductor of radius 1 cm carries 100 A, spread
+evenly over its cross-section. Use Stokes’s theorem to find <span
+class="math inline">\(B\)</span> at its surface and at 5 mm from its
+axis.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>At the surface, the loop encloses all 100 A: <span
+class="math inline">\(B = \mu_0 I/(2\pi r) = 1.2566 \times 10^{-6}
+\times 100/(2\pi \times 0.01) = 2.0\)</span> mT. At 5 mm the loop
+encloses a quarter of the cross-section, 25 A: <span
+class="math inline">\(B = 1.2566 \times 10^{-6} \times 25/(2\pi \times
+0.005) = 1.0\)</span> mT. Inside, <span class="math inline">\(B\)</span>
+grows in proportion to <span class="math inline">\(r\)</span>.</p>
+</details>
+<ol start="10" type="1">
+<li>A uniform round beam of radius <span
+class="math inline">\(a\)</span> has charge density <span
+class="math inline">\(\rho\)</span>. Using Gauss’s law on a cylinder of
+radius <span class="math inline">\(r &lt; a\)</span>, show that the
+field inside is <span class="math inline">\(\rho
+r/(2\varepsilon_0)\)</span>. For the 10 mA, 2 kV, 1 mm beam of section
+10, what is <span class="math inline">\(\rho\)</span>, and does this
+formula agree with the field at the edge?</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p>The cylinder of radius <span class="math inline">\(r\)</span> and
+length <span class="math inline">\(L\)</span> holds charge <span
+class="math inline">\(\rho\pi r^2L\)</span>; the flux is <span
+class="math inline">\(\mathcal{E}\,2\pi rL\)</span>. So <span
+class="math inline">\(\mathcal{E} = \rho r/(2\varepsilon_0)\)</span>.
+With <span class="math inline">\(\lambda = 3.77 \times 10^{-10}\)</span>
+C/m over an area <span class="math inline">\(\pi(10^{-3})^2\)</span>,
+<span class="math inline">\(\rho = 1.20 \times 10^{-4}\)</span> C/m<span
+class="math inline">\(^3\)</span>, and at <span class="math inline">\(r
+= a\)</span>, <span class="math inline">\(\mathcal{E} = 1.20 \times
+10^{-4} \times 10^{-3}/(2 \times 8.854 \times 10^{-12}) = 6.8\)</span>
+kV/m, the same as <span class="math inline">\(\lambda/(2\pi\varepsilon_0
+a)\)</span>.</p>
+</details>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>W. R. Hamilton, “On quaternions; or on a new system of imaginaries
+in algebra”, <em>Philosophical Magazine</em>, 1844 onwards: the
+quaternions found in 1843, for “Numbers that point”.</li>
+<li>J. W. Gibbs, <em>Elements of Vector Analysis</em> (privately
+printed, New Haven, 1881 and 1884), and E. B. Wilson, <em>Vector
+Analysis, founded upon the lectures of J. Willard Gibbs</em> (Yale
+University Press, 1901): the dot and cross products and <span
+class="math inline">\(\nabla\)</span> in their modern form (free,
+archive.org).</li>
+<li>O. Heaviside, <em>Electromagnetic Theory</em>, volume 1 (The
+Electrician, 1893): vector notation and Maxwell’s equations as four
+(free, archive.org).</li>
+<li>M. J. Crowe, <em>A History of Vector Analysis</em> (University of
+Notre Dame Press, 1967; Dover 1994): the history of sections “Numbers
+that point” and “Maxwell, and a quarrel”.</li>
+<li>V. J. Katz, “The history of Stokes’ theorem”, <em>Mathematics
+Magazine</em> 52, 146 (1979): Lagrange, Gauss, Ostrogradsky, Thomson’s
+letter of 1850 and the Smith’s Prize of 1854.</li>
+<li>H. M. Schey, <em>Div, Grad, Curl, and All That</em> (Norton, 1973;
+4th edition 2005): divergence and curl as flux and circulation per unit
+size, the approach of sections 10 and 11.</li>
+<li>D. J. Griffiths, <em>Introduction to Electrodynamics</em> (Cambridge
+University Press, 4th edition 2017), chapter 1 “Vector analysis” and
+appendix A (curvilinear coordinates): sections 1 to 13.</li>
+<li>R. P. Feynman, R. B. Leighton and M. Sands, <em>The Feynman Lectures
+on Physics</em>, volume I chapter 11 “Vectors”, volume II chapters 2
+“Differential calculus of vector fields” and 3 “Vector integral
+calculus” (free, feynmanlectures.caltech.edu).</li>
+<li>D. Tong, <em>Lectures on Vector Calculus</em> (University of
+Cambridge, free at damtp.cam.ac.uk): a fuller treatment of line, surface
+and volume integrals and the theorems.</li>
+</ul>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="F1-calculus.html"><span>Previous</span>F1 Calculus</a>
+<a class="next" href="F3-mechanics.html"><span>Next</span>F3 Newtonian mechanics</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>

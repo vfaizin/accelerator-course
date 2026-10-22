@@ -1,0 +1,3093 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>15 The synchrotron · The physics of particle accelerators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="bar">
+  <a class="home" href="index.html">The physics of particle accelerators</a>
+  <span class="where">Chapter 15 of 29</span>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="Sections of this chapter">
+<details id="toc"><summary>Sections</summary>
+<ul>
+<li><a href="#15-the-synchrotron" id="toc-15-the-synchrotron">15 The
+synchrotron</a>
+<ul>
+<li><a href="#in-one-page" id="toc-in-one-page">In one page</a></li>
+<li><a href="#the-wall" id="toc-the-wall">The wall</a></li>
+<li><a href="#the-physics" id="toc-the-physics">The physics</a>
+<ul>
+<li><a href="#1-three-programmes-on-one-ring"
+id="toc-1-three-programmes-on-one-ring">1. Three programmes on one
+ring</a></li>
+<li><a href="#pre-requisite-continued-magnetic-circuits-and-iron"
+id="toc-pre-requisite-continued-magnetic-circuits-and-iron">Pre-requisite
+(continued): Magnetic circuits and iron</a></li>
+<li><a href="#2-the-field-follows-the-momentum"
+id="toc-2-the-field-follows-the-momentum">2. The field follows the
+momentum</a></li>
+<li><a href="#3-the-frequency-follows-the-speed"
+id="toc-3-the-frequency-follows-the-speed">3. The frequency follows the
+speed</a></li>
+<li><a href="#4-the-energy-gain-per-turn-and-the-synchronous-phase"
+id="toc-4-the-energy-gain-per-turn-and-the-synchronous-phase">4. The
+energy gain per turn and the synchronous phase</a></li>
+<li><a href="#5-weak-focusing-in-a-ring"
+id="toc-5-weak-focusing-in-a-ring">5. Weak focusing in a ring</a></li>
+<li><a href="#6-off-momentum-orbits-and-momentum-compaction"
+id="toc-6-off-momentum-orbits-and-momentum-compaction">6. Off-momentum
+orbits and momentum compaction</a></li>
+<li><a href="#7-the-phase-slip-factor-and-transition"
+id="toc-7-the-phase-slip-factor-and-transition">7. The phase-slip factor
+and transition</a></li>
+<li><a
+href="#pre-requisite-continued-laplace-transform-feedback-and-stability"
+id="toc-pre-requisite-continued-laplace-transform-feedback-and-stability">Pre-requisite
+(continued): Laplace transform, feedback and stability</a></li>
+<li><a href="#8-how-closely-the-frequency-must-follow-the-field"
+id="toc-8-how-closely-the-frequency-must-follow-the-field">8. How
+closely the frequency must follow the field</a></li>
+<li><a href="#9-the-wall-of-the-weak-focusing-ring"
+id="toc-9-the-wall-of-the-weak-focusing-ring">9. The wall of the
+weak-focusing ring</a></li>
+<li><a href="#10-injection-and-the-shrinking-beam"
+id="toc-10-injection-and-the-shrinking-beam">10. Injection and the
+shrinking beam</a></li>
+<li><a
+href="#pre-requisite-continued-diodes-rectifiers-and-capacitor-networks"
+id="toc-pre-requisite-continued-diodes-rectifiers-and-capacitor-networks">Pre-requisite
+(continued): Diodes, rectifiers and capacitor networks</a></li>
+<li><a href="#11-the-magnet-cycle-its-energy-and-its-power"
+id="toc-11-the-magnet-cycle-its-energy-and-its-power">11. The magnet
+cycle, its energy and its power</a></li>
+<li><a
+href="#pre-requisite-continued-fields-in-conductors-skin-depth-surface-resistance"
+id="toc-pre-requisite-continued-fields-in-conductors-skin-depth-surface-resistance">Pre-requisite
+(continued): Fields in conductors, skin depth, surface
+resistance</a></li>
+<li><a href="#12-eddy-currents-and-laminated-iron"
+id="toc-12-eddy-currents-and-laminated-iron">12. Eddy currents and
+laminated iron</a></li>
+<li><a href="#13-the-frequency-sweep-and-the-tunable-cavity"
+id="toc-13-the-frequency-sweep-and-the-tunable-cavity">13. The frequency
+sweep and the tunable cavity</a></li>
+</ul></li>
+<li><a href="#how-it-was-researched-and-built"
+id="toc-how-it-was-researched-and-built">How it was researched and
+built</a></li>
+<li><a href="#at-the-bench" id="toc-at-the-bench">At the bench</a></li>
+<li><a href="#where-it-stops" id="toc-where-it-stops">Where it
+stops</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul></li>
+</ul>
+</details>
+</nav>
+<main>
+<h1 id="15-the-synchrotron">15 The synchrotron</h1>
+<p><em>1944 to 1960: Oliphant’s memorandum, Veksler and McMillan, the
+converted betatron at Woolwich, the General Electric 70 MeV ring, the
+Cosmotron, the Bevatron and the Dubna synchrophasotron; past the wall of
+the solid magnet, whose iron grows as the cube of the momentum, by a
+ring of fixed radius whose field and frequency rise with the
+particle.</em></p>
+<blockquote>
+<p><strong>Pre-requisites for this chapter.</strong></p>
+<ul>
+<li><a
+href="#pre-requisite-continued-magnetic-circuits-and-iron">Magnetic
+circuits and iron, continued</a>: the field of a magnet with a gap,
+saturation that stops the field following the current, the remanent
+field at injection, and the ferrite whose incremental permeability falls
+under a bias field, for sections 2, 10 and 13; it builds on <a
+href="08-seeing-the-beam.html#pre-requisite-magnetic-circuits-and-iron">chapter
+8</a>.</li>
+<li><a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-simple-and-damped-harmonic-oscillator">Simple
+and damped harmonic oscillator</a>: oscillation about a stable
+equilibrium, its frequency set by the slope of the restoring force, and
+growth once that slope changes sign, for phase stability in section 4;
+the tune is added in <a
+href="10-the-cyclotron.html#pre-requisite-continued-simple-and-damped-harmonic-oscillator">chapter
+10</a>.</li>
+<li><a
+href="01-why-accelerate.html#pre-requisite-faraday-induction-inductance-and-magnetic-energy">Faraday
+induction, inductance and magnetic energy</a>: volts per turn from a
+changing flux, for the comparison with the betatron in section 4 and the
+induced fields of section 12; the magnet as an inductance storing <span
+class="math inline">\(\tfrac12LI^2 = \int B^2/(2\mu_0)\,dV\)</span> is
+in its <a
+href="09-resonant-acceleration.html#pre-requisite-continued-faraday-induction-inductance-and-magnetic-energy">continuation
+in chapter 9</a>, for section 11.</li>
+<li><a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-two-dimensional-magnetic-potentials-and-multipole-expansion">Two-dimensional
+magnetic potentials and multipole expansion</a>: a curl-free field in
+the gap, in which a dipole plus a gradient, <span
+class="math inline">\(B_y + iB_x = C_0 + C_1(x + iy)\)</span>, has <span
+class="math inline">\(B_x = C_1y\)</span>; with <span
+class="math inline">\(C_0 = B_0\)</span> and <span
+class="math inline">\(C_1 = -nB_0/\rho\)</span> this is the field index
+and the radial field of section 5 (see also <a
+href="10-the-cyclotron.html#pre-requisite-continued-biot-savart-and-amperes-law">chapter
+10</a>).</li>
+<li><a
+href="02-the-cathode-ray-tube.html#pre-requisite-ordinary-differential-equations-linear-constant-and-varying-coefficients">Ordinary
+differential equations</a>: <span class="math inline">\(x&#39;&#39; + Kx
+= 0\)</span>, an oscillation of wavelength <span
+class="math inline">\(2\pi/\sqrt{K}\)</span> for <span
+class="math inline">\(K &gt; 0\)</span> and exponential growth for <span
+class="math inline">\(K &lt; 0\)</span>, for the betatron oscillations
+and tunes of section 5.</li>
+<li><a
+href="#pre-requisite-continued-laplace-transform-feedback-and-stability">Laplace
+transform, feedback and stability, continued</a>: an open-loop frequency
+programme corrected by a radial loop, and a loop that damps the
+synchrotron oscillation across the band of frequencies it sweeps, for
+section 8; it builds on <a
+href="06-the-electrostatic-generator.html#pre-requisite-laplace-transform-feedback-and-stability">chapter
+6</a>.</li>
+<li><a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-adiabatic-invariants">Adiabatic
+invariants</a>: the action of a slowly changing oscillator stays
+constant, which makes the betatron amplitude shrink as <span
+class="math inline">\(p^{-1/2}\)</span> (<a
+href="11-the-betatron.html#6-the-adiabatic-shrinking-of-the-oscillations">chapter
+11, section 6</a>), for section 10.</li>
+<li><a
+href="#pre-requisite-continued-diodes-rectifiers-and-capacitor-networks">Diodes,
+rectifiers and capacitor networks, continued</a>: polyphase rectifiers
+feeding an inductive magnet, controlled valves fired at a chosen angle,
+and inversion that returns the magnet’s energy, for section 11; it
+builds on <a
+href="05-the-voltage-multiplier.html#pre-requisite-diodes-rectifiers-and-capacitor-networks">chapter
+5</a>.</li>
+<li><a
+href="#pre-requisite-continued-fields-in-conductors-skin-depth-surface-resistance">Fields
+in conductors, skin depth, surface resistance, continued</a>: the power
+density <span class="math inline">\(\sigma\mathcal{E}^2\)</span>, the
+diffusion of a field into iron, the skin depth with iron’s permeability,
+and the time a field takes to soak through a lamination, for section 12;
+it builds on <a
+href="13-rf-cavities-and-power.html#pre-requisite-fields-in-conductors-skin-depth-surface-resistance">chapter
+13</a>.</li>
+<li><a
+href="04-high-voltage-and-breakdown.html#pre-requisite-rlc-circuits-and-phasors">RLC
+circuits and phasors</a>: a resonant LC circuit at <span
+class="math inline">\(\omega = 1/\sqrt{LC}\)</span>, which gives a large
+voltage for little power and is tuned by changing <span
+class="math inline">\(L\)</span> or <span
+class="math inline">\(C\)</span>, for section 13.</li>
+<li><a
+href="01-why-accelerate.html#pre-requisite-relativistic-motion-in-electric-and-magnetic-fields">Relativistic
+motion in electric and magnetic fields</a> and <a
+href="01-why-accelerate.html#pre-requisite-four-momentum-energy-momentum-relation-invariant-mass">four-momentum
+and the energy-momentum relation</a>, both in chapter 1: <span
+class="math inline">\(p = \gamma mv\)</span>, <span
+class="math inline">\(E = \gamma mc^2\)</span>, <span
+class="math inline">\(E^2 = p^2c^2 + m^2c^4\)</span>, the circle of
+radius <span class="math inline">\(p/(qB)\)</span>, and the invariant
+<span class="math inline">\(s\)</span>, for sections 2 to 4 and the
+antiproton threshold.</li>
+<li><a
+href="12-phase-stability.html#1-who-comes-round-sooner-the-phase-slip-factor">The
+phase-slip factor</a> and <a
+href="12-phase-stability.html#2-phase-stability">phase stability</a>,
+chapter 12, sections 1 and 2: <span class="math inline">\(\eta\)</span>,
+transition, and the derivation of the synchrotron tune <span
+class="math inline">\(Q_s\)</span>, used in sections 4 and 7.</li>
+<li><a
+href="03-vacuum.html#pre-requisite-diffusion-and-fokker-planck">Diffusion</a>,
+chapter 3: the diffusion equation <span class="math inline">\(\partial
+n/\partial t = \mathcal{D}\,\partial^2 n/\partial x^2\)</span>, which a
+magnetic field also obeys inside a conductor (the pre-requisite before
+section 12).</li>
+</ul>
+<p>From Part 0, Foundations, the chapter leans on:</p>
+<ul>
+<li>F1 Calculus: <a
+href="F1-calculus.html#5-using-derivatives-small-changes-errors-maxima">small
+changes and the logarithmic derivative</a> (the period of an
+off-momentum particle, <span class="math inline">\(dE = v\,dp\)</span>),
+<a
+href="F1-calculus.html#7-the-fundamental-theorem-and-working-integrals-out">working
+integrals out</a> (the rectifier’s average, the eddy-current loss), <a
+href="F1-calculus.html#8-approximating-a-function-taylor-series">Taylor
+series</a> (the off-momentum orbit), <a
+href="F1-calculus.html#9-several-variables-partial-derivatives">partial
+derivatives</a> (the field index) and <a
+href="F1-calculus.html#10-equations-of-change-first-differential-equations">first
+differential equations</a> (the magnet’s current, the diffusion
+time).</li>
+<li>F2 Vectors: <a href="F2-vectors.html#3-the-cross-product">the cross
+product</a> (the direction of the magnetic force), <a
+href="F2-vectors.html#4-vectors-that-change-velocity-acceleration-and-circles">circles</a>
+(the bending radius), <a
+href="F2-vectors.html#11-curl-and-stokess-theorem">curl</a> (the radial
+field off the median plane, eddy currents) and <a
+href="F2-vectors.html#12-the-laplacian">the Laplacian</a> (the diffusion
+of a field into iron).</li>
+<li>F3 Mechanics: <a
+href="F3-mechanics.html#9-simple-harmonic-motion">simple harmonic
+motion</a> (betatron and synchrotron oscillations) and <a
+href="F3-mechanics.html#10-damped-and-driven-oscillation">damped
+oscillation</a> (the phase loop).</li>
+<li>F4 Electromagnetism: <a
+href="F4-electromagnetism.html#8-current-current-density-and-ohms-law">current
+and Ohm’s law</a>, <a
+href="F4-electromagnetism.html#10-the-magnetic-field-and-its-force">the
+magnetic force</a>, <a
+href="F4-electromagnetism.html#12-ampères-law">Ampère’s law</a> (the
+magnet with a gap), <a
+href="F4-electromagnetism.html#14-induction-faraday-and-lenz">induction</a>
+(eddy currents) and <a
+href="F4-electromagnetism.html#15-inductance-magnetic-energy-lr-circuits-and-iron">inductance,
+magnetic energy and iron</a> (the magnet as a load).</li>
+<li>F5 Waves: <a href="F5-waves.html#1-complex-numbers">complex
+numbers</a> and <a href="F5-waves.html#2-eulers-formula">Euler’s
+formula</a> (the loop’s roots, the skin depth), <a
+href="F5-waves.html#4-the-damped-oscillator-and-its-q">the damped
+oscillator</a> and <a
+href="F5-waves.html#6-lc-and-rlc-circuits-with-phasors">LC circuits</a>
+(the tuned cavity).</li>
+<li>F7 Atoms and quanta: <a
+href="F7-atoms-and-quanta.html#3-the-electron-volt">the electron-volt
+and momentum in GeV/<span class="math inline">\(c\)</span></a>, and <a
+href="F7-atoms-and-quanta.html#15-a-map-of-the-particles-the-course-meets">the
+map of particles</a> (pions, antiprotons).</li>
+</ul>
+</blockquote>
+<h2 id="in-one-page">In one page</h2>
+<p><strong>The wall.</strong> A cyclotron or synchrocyclotron bends its
+particles in one solid magnet, and the orbit grows with the momentum, so
+the pole must be as wide as the last orbit. The iron grows as the cube
+of the radius. A betatron keeps a fixed orbit but needs a core whose
+flux grows as the square of the radius, and electrons in it radiate. By
+1950 both had reached a few hundred MeV (<a
+href="11-the-betatron.html">chapter 11</a>, <a
+href="12-phase-stability.html">chapter 12</a>).</p>
+<p><strong>The idea.</strong> Keep the orbit at one radius <span
+class="math inline">\(\rho\)</span>. Raise the magnetic field in step
+with the momentum, so the magnet is only a ring. Give the energy from a
+radio-frequency gap or cavity at one or a few places, and raise its
+frequency in step with the speed. Phase stability, found by Veksler in
+1944 and McMillan in 1945, holds the particles in step with the wave if
+the field and frequency are only nearly right.</p>
+<p><strong>The equations to remember.</strong> For a particle of charge
+<span class="math inline">\(q\)</span> (C) and momentum <span
+class="math inline">\(p\)</span> (kg m/s) on a fixed bending radius
+<span class="math inline">\(\rho\)</span> (m) in a ring of circumference
+<span class="math inline">\(C\)</span> (m):</p>
+<p><span class="math display">\[
+B(t) = \frac{p(t)}{q\rho}, \qquad f_{RF} = h f_0 = \frac{h\beta c}{C}
+\]</span></p>
+<p>the field (T) follows the momentum; the RF frequency (Hz) is a whole
+number <span class="math inline">\(h\)</span> of revolution
+frequencies.</p>
+<p><span class="math display">\[
+q\hat{V}\sin\phi_s = q\,C\rho\,\frac{dB}{dt}
+\]</span></p>
+<p>the energy gain per turn (J) that the rising field demands, which
+fixes the synchronous phase <span class="math inline">\(\phi_s\)</span>
+for a voltage amplitude <span class="math inline">\(\hat{V}\)</span>
+(V).</p>
+<p><span class="math display">\[
+Q_x = \sqrt{1-n}, \quad Q_y = \sqrt{n}, \quad \alpha_c = \frac{1}{1-n} =
+\frac{1}{Q_x^2}
+\]</span></p>
+<p>the tunes (betatron oscillations per turn) and momentum compaction
+(relative change of path length per relative change of momentum) of a
+weak-focusing ring with field index <span class="math inline">\(0 &lt; n
+&lt; 1\)</span> and no straight sections; all three are defined and
+derived in sections 5 and 6.</p>
+<p><span class="math display">\[
+\eta = \alpha_c - \frac{1}{\gamma^2}, \qquad \gamma_t =
+\frac{1}{\sqrt{\alpha_c}} = Q_x &lt; 1
+\]</span></p>
+<p>the phase-slip factor and the transition gamma: in a weak-focusing
+ring <span class="math inline">\(\gamma_t\)</span> is below 1, so every
+particle is above transition and none ever crosses it.</p>
+<p><strong>Numbers to know.</strong> Goward and Barnes turned a 4 MeV
+betatron into an 8 MeV synchrotron at Woolwich in August 1946. The
+General Electric 70 MeV synchrotron, with a glass vacuum chamber, showed
+synchrotron light on 24 April 1947. The Cosmotron passed 1 GeV in 1952
+and reached 3.3 GeV in 1953. The Bevatron reached 6.2 GeV in 1954, above
+the 5.63 GeV threshold for making antiprotons, which were found in
+October 1955. Its 15.24 m orbit needed 0.030 T at its 10 MeV injection
+and 1.55 T at the top, the revolution frequency rose from 0.36 to 2.5
+MHz, and the protons gained about 1.5 keV a turn for 1.85 s, about four
+million turns. Its magnet weighed about 10,000 tons, the Dubna
+synchrophasotron’s (10 GeV, 1957) 36,000 tonnes: the mass grows roughly
+as <span class="math inline">\(p^3\)</span>, and that is the wall that
+strong focusing removed.</p>
+<h2 id="the-wall">The wall</h2>
+<p>In the years just after the Second World War there were three kinds
+of circular accelerator, and each was near its end.</p>
+<p>The cyclotron of <a href="10-the-cyclotron.html">chapter 10</a> keeps
+a fixed frequency and a fixed field, and its orbit spirals out as the
+particle gains momentum. Its revolution angular frequency is <span
+class="math inline">\(qB/(\gamma m)\)</span>, so it falls out of step
+once <span class="math inline">\(\gamma\)</span> departs from 1 by more
+than about the inverse of the number of turns: a few tens of MeV for
+protons. The synchrocyclotron of <a
+href="12-phase-stability.html">chapter 12</a> lowers its frequency as
+the particle’s mass grows and so removes the relativistic limit, but it
+keeps the spiral orbit. Its magnet must fill the whole circle of the
+last orbit. Lawrence’s 184-inch magnet, completed as a synchrocyclotron
+in November 1946, later gave protons of about 340 to 350 MeV (340 MeV in
+his Nobel lecture of 1951; later accounts give 350 MeV). For 6 GeV at
+1.5 T the last orbit would have a radius of 15 m, and the pole a face of
+730 m<span class="math inline">\(^2\)</span>. At a fixed field the
+radius grows in proportion to the momentum, and the iron in proportion
+to its cube.</p>
+<p>The betatron of <a href="11-the-betatron.html">chapter 11</a> keeps
+the orbit at one radius, but it gives the energy through the flux in a
+central core. The flux needed grows as the square of the radius times
+the field. A betatron on the Bevatron’s 15.24 m orbit would need a swing
+of 2260 Wb, a core of about 750 m<span class="math inline">\(^2\)</span>
+swung from <span class="math inline">\(-1.5\)</span> T to <span
+class="math inline">\(+1.5\)</span> T on every cycle, more than the 730
+m<span class="math inline">\(^2\)</span> enclosed by the orbit itself.
+And an electron on a 1 m orbit at 300 MeV radiates 721 eV a turn, a loss
+growing as the fourth power of the energy. Kerst’s 300 MeV betatron at
+Illinois (1950) was the end of that line.</p>
+<p>What was wanted was the betatron’s fixed orbit without its core, and
+the cyclotron’s resonant gap without its solid pole.</p>
+<p><strong>Oliphant, 1943.</strong> Mark Oliphant, the Australian head
+of physics at Birmingham, spent the war years partly in the United
+States on the electromagnetic separation of uranium. In September 1943,
+by E. J. N. Wilson’s account, he wrote a classified memorandum to the
+British authorities proposing that “particles should be constrained to
+move in a circle of constant radius” (Oliphant, quoted by Wilson), in an
+annular magnet whose field rises as the particles gain energy from an
+alternating voltage on hollow electrodes. He knew, he wrote later, what
+would happen to particles that led or lagged in phase, but he did not
+make the full analysis, and the memorandum was not published.</p>
+<p><strong>Veksler, 1944.</strong> Vladimir Veksler, at the Lebedev
+Physical Institute in Moscow, published two notes in <em>Doklady
+Akademii Nauk SSSR</em> in 1944. The first showed that resonant
+acceleration of relativistic particles was possible in a constant
+magnetic field, by “automatic phasing” (the idea behind the microtron).
+The second, received on 8 July 1944, extended it to a magnetic field
+rising in time. It says, in Russian, that in such an accelerator the
+magnetic field has the task of guiding the orbits, while the
+acceleration is done by an alternating electric field; that, unlike the
+betatron, the radiation from the electrons need not spoil the
+acceleration, because the phasing compensates for it; and that the
+magnet can be a narrow ring, which is extremely advantageous. It states
+two conditions: the field may vary only a little over the radius, and
+the voltage induced per turn by the changing field must be small
+compared with the RF voltage. An English version appeared in the
+<em>Journal of Physics of the USSR</em> in 1945.</p>
+<p><strong>McMillan, 1945.</strong> Edwin McMillan, at Los Alamos and
+planning his return to Berkeley, saw the same principle in June 1945.
+His letter, “The synchrotron, a proposed high energy particle
+accelerator”, appeared in <em>Physical Review</em> in September 1945. It
+coined both the words “synchrotron” and “phase stability”, and it worked
+out the equations of the phase oscillation. Only after publication did
+he learn of Veksler’s notes, which had not reached the United States in
+wartime. He acknowledged Veksler’s priority; both agreed that the ideas
+were independent; and they shared the Atoms for Peace Award in 1963
+(Jackson and Panofsky’s memoir of McMillan).</p>
+<p>The principle was now clear: a ring magnet whose field follows the
+momentum, a gap whose frequency follows the speed, and phase stability
+to make up for imperfect programming. What remained was to show that it
+worked, then to build it for protons at energies no cyclotron could
+reach, and to find out what such a ring costs.</p>
+<h2 id="the-physics">The physics</h2>
+<h3 id="1-three-programmes-on-one-ring">1. Three programmes on one
+ring</h3>
+<p>The physical picture is a racetrack of magnets around an evacuated
+pipe. The magnets bend the particle on arcs of fixed radius <span
+class="math inline">\(\rho\)</span>. Between arcs there may be straight
+sections, free of field, for the injector (the smaller accelerator that
+supplies the particles), the accelerating gap and the targets. Three
+things are programmed in time: the field in the magnets, the frequency
+of the voltage on the gap, and its amplitude. If the field is too strong
+for the particle’s momentum, the particle curves inward and hits the
+inner wall; too weak, and it hits the outer wall. If the frequency is
+wrong, the particle arrives at the gap at the wrong moment and is
+decelerated. The orbit is held near the middle of the pipe only if all
+three move together. The next three sections derive what each must
+do.</p>
+<p>Coordinates: <span class="math inline">\(s\)</span> is the distance
+along the reference orbit, <span class="math inline">\(x\)</span> the
+horizontal displacement, positive outward, and <span
+class="math inline">\(y\)</span> the vertical. <span
+class="math inline">\(C\)</span> is the circumference of the reference
+orbit and <span class="math inline">\(R = C/2\pi\)</span> its average
+radius. In a ring without straight sections <span
+class="math inline">\(R = \rho\)</span>; with straight sections <span
+class="math inline">\(R &gt; \rho\)</span>.</p>
+<p><img src="figures/15-ring-layout.svg" loading="lazy"
+alt="The racetrack ring of a weak-focusing synchrotron" /></p>
+<p><em>Figure 15.1. A synchrotron ring drawn to the Bevatron’s
+proportions: four bending magnets, each a quarter circle of radius <span
+class="math inline">\(\rho = 15.24\)</span> m, joined by four field-free
+straights of about 6.1 m, for a circumference near 120 m. The injector
+feeds one straight, the accelerating gap sits in another, the target in
+a third. The local axes: <span class="math inline">\(s\)</span> along
+the orbit, <span class="math inline">\(x\)</span> outward, away from the
+ring’s centre, <span class="math inline">\(y\)</span> up, out of the
+page. With <span class="math inline">\((x, y, s)\)</span> right-handed
+and the field along <span class="math inline">\(+y\)</span>, a positive
+particle is bent inward only if it runs clockwise as seen from above, as
+drawn.</em></p>
+<h3
+id="pre-requisite-continued-magnetic-circuits-and-iron">Pre-requisite
+(continued): Magnetic circuits and iron</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> <a
+href="08-seeing-the-beam.html#pre-requisite-magnetic-circuits-and-iron">Chapter
+8</a> taught iron as a magnetic material: the field <span
+class="math inline">\(H\)</span> and the relative permeability <span
+class="math inline">\(\mu_r\)</span>, the magnetic circuit of a magnet
+with a gap, domains, saturation near 2 T and, in passing, hysteresis.
+This section adds what a ring magnet, cycled from almost nothing to full
+field, does with them: why its field stops following its current at high
+field, why a field of fixed size stays in the gap when the current is
+zero (remanence) and how big it is, and why a ferrite, a magnetic
+insulator, can be tuned by a bias current. The next section uses the
+first three to explain why a ring is programmed by its measured field,
+and section 10 uses remanence for the choice of injection field; section
+13 uses the ferrite. Taught from Livingston and Blewett, §8-2 (the
+magnetic circuit and the permeability of iron), §§8-9 and 12-4 (remanent
+fields), §13-5 (the Cosmotron’s magnet and supply) and §§13-7 and 13-8
+(ferrite); Chao and others, <em>Handbook</em>, §7.2.2 (the remanent
+field in a gap).</p>
+</blockquote>
+<p><strong>The magnet with a gap, recalled.</strong> Chapter 8 wrote
+Ampère’s law round a magnet of <span class="math inline">\(N\)</span>
+turns carrying <span class="math inline">\(I\)</span> (A), with a path
+<span class="math inline">\(l\)</span> (m) in iron and a gap <span
+class="math inline">\(g\)</span> (m) where the beam runs, and the same
+flux density <span class="math inline">\(B\)</span> in both:</p>
+<p><span class="math display">\[
+NI = H_{iron}\,l + H_{gap}\,g, \qquad B = \frac{\mu_0 NI}{g + l/\mu_r}
+\approx \frac{\mu_0 NI}{g}.
+\]</span></p>
+<p>While <span class="math inline">\(l/\mu_r\)</span> is small against
+<span class="math inline">\(g\)</span>, the gap sets the field and the
+iron only carries the flux round; the field is proportional to the
+current, and the inductance <span class="math inline">\(L =
+N\Phi/I\)</span> (H), with <span class="math inline">\(\Phi\)</span> the
+flux through one turn, is a constant. A synchrotron magnet leaves that
+region at both ends of its cycle.</p>
+<p><em>At work.</em> The Cosmotron’s gap was 9 in, 0.229 m. For 1.4 T
+the gap alone needs <span class="math inline">\(NI = Bg/\mu_0 =
+2.55\times10^5\)</span> ampere-turns. Scale-model measurements gave
+<span class="math inline">\(3.36\times10^5\)</span> (Livingston and
+Blewett, §13-5), 32 per cent more. The excess drives the iron, which at
+1.4 T is approaching saturation, and the flux that leaks outside the
+gap.</p>
+<p><strong>Saturation: the field stops following the current.</strong>
+As <span class="math inline">\(B\)</span> in the iron approaches 2 T,
+nearly all the domains are already aligned, and more current adds little
+magnetisation. The relative permeability falls, from thousands to
+hundreds and below. With a 3 m iron path behind a 0.30 m gap, <span
+class="math inline">\(l/\mu_r\)</span> is 1 per cent of <span
+class="math inline">\(g\)</span> at <span class="math inline">\(\mu_r =
+1000\)</span>, 10 per cent at 100 and half of it at 20. So the field per
+ampere falls at the top of the cycle, and the inductance with it. Iron’s
+permeability also changes at the bottom: it is modest at the weakest
+fields, climbs to a maximum at moderate fields, and falls in saturation
+(Livingston and Blewett, §8-2). The Cosmotron’s models showed exactly
+this in the inductance of the whole magnet: 0.47 H at the start, 0.80 H
+near 0.1 T, and 0.25 H at the top (§13-5). A field proportional to the
+current is therefore an approximation that fails at both ends of the
+cycle.</p>
+<p><strong>Hysteresis and remanence.</strong> Chapter 8 noted that the
+magnetisation of iron depends on where it has been. Drive the iron up to
+a high field and bring <span class="math inline">\(H\)</span> back to
+zero: the domains do not all return, and a closed ring of iron keeps a
+flux density <span class="math inline">\(B_r\)</span>, the remanence,
+which can be of order 1 T. To bring <span
+class="math inline">\(B\)</span> to zero, <span
+class="math inline">\(H\)</span> must be driven backwards to <span
+class="math inline">\(-H_c\)</span>, where <span
+class="math inline">\(H_c\)</span> (A/m) is the coercive field; it is
+small for the soft steels used in magnets, of order 100 A/m or less. A
+full cycle traces a closed loop in the <span
+class="math inline">\(B\)</span>–<span class="math inline">\(H\)</span>
+plane, the hysteresis loop, and the area inside it is the energy turned
+into heat per cubic metre per cycle.</p>
+<p>Now put the gap back. With the current off, Ampère’s law round the
+circuit reads <span class="math inline">\(H_{iron}l + (B/\mu_0)g =
+0\)</span>, so</p>
+<p><span class="math display">\[
+B = -\frac{\mu_0 l}{g}\,H_{iron}.
+\]</span></p>
+<p>The iron must sit on its hysteresis loop and on this straight line at
+once. The line is very shallow: <span class="math inline">\(\mu_0
+l/g\)</span> is of order <span class="math inline">\(10^{-5}\)</span> T
+per A/m. It meets the falling branch of the loop at a slightly negative
+<span class="math inline">\(H\)</span>, close to <span
+class="math inline">\(-H_c\)</span>, where the loop drops steeply
+through zero. Putting <span class="math inline">\(H_{iron} \approx
+-H_c\)</span> into the line, the two minus signs cancel, and the gap
+holds</p>
+<p><span class="math display">\[
+B_{rem} \approx \mu_0 H_c\,\frac{l}{g},
+\]</span></p>
+<p>the coercive field times the ratio of the length of iron to the gap,
+which is how Halbach and Schlueter state it (Chao and others, §7.2.2).
+This field is a fixed number of tesla, not a fraction of the excitation,
+so it matters most at the lowest field, which is at injection. It
+depends on the shape of the previous cycle (Livingston and Blewett,
+§8-9), on how each block of iron was handled, and even on the magnetised
+steel in the building’s foundations (§12-4), so it differs from magnet
+to magnet round the ring.</p>
+<p><em>At work.</em> The Cosmotron’s remanent field was about 25 G, 2.5
+mT (Livingston and Blewett, §13-5). Its 4 MeV protons, on a 30 ft (9.14
+m) radius, have <span class="math inline">\(B\rho = 0.289\)</span> T m
+and need an injection field of 31.6 mT. The remanent field was 8 per
+cent of it. In ampere-turns it corresponds to <span
+class="math inline">\(H_c l = B_{rem}g/\mu_0 = 455\)</span> A.
+Livingston and Blewett report that designers try to keep the variation
+of the remanent field round the ring below a part in a thousand at
+injection, and correct what remains with DC currents in extra coils
+(§12-4).</p>
+<p><strong>Ferrite.</strong> A ferrite is an oxide of iron combined with
+other metals, manganese and zinc in the Cosmotron’s, ground, pressed and
+fired like a ceramic. It is magnetic, but its conductivity is about
+<span class="math inline">\(10^{-7}\)</span> of a metal’s (Livingston
+and Blewett, §13-7), so a changing field drives almost no eddy current
+in it even at megahertz. Its permeability is lower than iron’s, about
+1000 at low frequency and 500 at 5 MHz for a typical ferrite of the
+Cosmotron’s kind, and it saturates far lower: 0.2 to 0.3 T for the
+ferrites of the 1950s.</p>
+<p>Its use in an accelerator rests on the incremental permeability. Put
+a steady bias field <span class="math inline">\(H_b\)</span> on the
+ferrite from a DC winding, and a small RF field on top of it from a
+second winding. The RF flux does not see <span
+class="math inline">\(B/H\)</span> but the slope of the <span
+class="math inline">\(B\)</span>–<span class="math inline">\(H\)</span>
+curve at the bias point:</p>
+<p><span class="math display">\[
+\mu_{inc} = \frac{1}{\mu_0}\left.\frac{dB}{dH}\right|_{H_b}.
+\]</span></p>
+<p>At zero bias the slope is the full permeability. As the bias drives
+the material towards saturation the curve flattens and <span
+class="math inline">\(\mu_{inc}\)</span> falls. A coil wound on the
+ferrite has an inductance proportional to <span
+class="math inline">\(\mu_{inc}\)</span>, so a resonant circuit, <span
+class="math inline">\(\omega = 1/\sqrt{LC}\)</span> with <span
+class="math inline">\(C\)</span> fixed, tuned by the bias current
+changes its frequency as</p>
+<p><span class="math display">\[
+\frac{f_2}{f_1} = \sqrt{\frac{\mu_{inc,1}}{\mu_{inc,2}}},
+\]</span></p>
+<p>when the ferrite carries all of the coil’s flux.</p>
+<p><em>At work.</em> The Cosmotron’s master oscillator was tuned by a
+small ferrite toroid. Its permeability fell from about 1000 to under 10
+as the DC magnetising field rose from zero to 20 ampere-turns per
+centimetre, 2000 A/m: a factor of 100 in inductance and 10 in frequency
+(Livingston and Blewett, §13-8). The two windings were arranged so that
+the DC winding coupled as little as possible to the RF one. The ring
+needed a factor of 10.6: 4 MeV protons go round its 69.6 m at 0.396 MHz,
+and 3 GeV protons at 4.18 MHz.</p>
+<p><strong>Exercise A1.</strong> The Bevatron’s gap was 1 ft (0.305 m)
+high, and its supply gave at most 8400 A. What is the least number of
+turns that could give 1.549 T in the gap?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The gap alone needs <span class="math inline">\(NI = Bg/\mu_0 = 1.549
+\times 0.3048/(4\pi\times10^{-7}) = 3.76\times10^5\)</span>
+ampere-turns. At 8400 A that is <span class="math inline">\(N =
+44.7\)</span>, so at least 45 turns. More are needed in practice, for
+the iron near saturation and for the flux that leaks round the gap, as
+the Cosmotron’s 32 per cent excess shows.</p>
+</details>
+<p><strong>Exercise A2.</strong> At the Cosmotron’s peak the winding of
+<span class="math inline">\(N = 48\)</span> turns carried 7000 A, and
+the total flux, stray field included, was 88 Wb (Livingston and Blewett,
+§13-5). Find the flux linkage <span class="math inline">\(\Lambda =
+N\Phi\)</span> and the ratio <span
+class="math inline">\(\Lambda/I\)</span>. A linear inductor would store
+<span class="math inline">\(\tfrac12\Lambda I\)</span>; the measured
+stored energy was <span class="math inline">\(1.2\times10^7\)</span> J.
+Why less?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\Lambda = 48 \times 88 = 4224\)</span>
+Wb, and <span class="math inline">\(\Lambda/I = 0.603\)</span> H. A
+linear inductor would store <span class="math inline">\(\tfrac12 \times
+4224 \times 7000 = 1.48\times10^7\)</span> J. The energy put in is <span
+class="math inline">\(\int I\,d\Lambda\)</span>, the work done by the
+supply against the induced voltage <span
+class="math inline">\(d\Lambda/dt\)</span>. If <span
+class="math inline">\(\Lambda\)</span> were proportional to <span
+class="math inline">\(I\)</span> this would be <span
+class="math inline">\(\tfrac12\Lambda I\)</span>. In saturation the last
+of the flux is added only at the highest currents, so a plot of <span
+class="math inline">\(I\)</span> against <span
+class="math inline">\(\Lambda\)</span> curves upward and lies below the
+straight line from the origin to the peak; the area under it is smaller.
+The measured <span class="math inline">\(1.2\times10^7\)</span> J is 81
+per cent of the linear value.</p>
+</details>
+<p><strong>Exercise A3.</strong> A magnet has 2 m of iron, a gap of 0.1
+m and steel with <span class="math inline">\(H_c = 80\)</span> A/m.
+Estimate its remanent field. If a ring of such magnets injects 10 MeV
+protons on a 15.24 m radius, what fraction of the injection field is
+that? If the remanent field differs by 10 per cent from one magnet to
+the next, how big a relative field error results, and how does it
+compare with the <span class="math inline">\(10^{-3}\)</span> the orbit
+tolerates?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(B_{rem} \approx \mu_0 H_c l/g =
+4\pi\times10^{-7} \times 80 \times 2/0.1 = 2.0\)</span> mT. The
+injection field is <span class="math inline">\(B\rho/\rho = 0.458/15.24
+= 30.1\)</span> mT, so the remanent field is 6.7 per cent of it. A 10
+per cent spread of that is a relative field error of <span
+class="math inline">\(6.7\times10^{-3}\)</span>, nearly seven times the
+tolerance. This is why a ring is injected at as high a field as the
+injector allows (section 10), and why remanent fields were measured and
+corrected.</p>
+</details>
+<p><strong>Exercise A4.</strong> The Bevatron’s revolution frequency
+rose by a factor of 6.84. By what factor must the incremental
+permeability of a ferrite-tuned inductor fall, at fixed capacitance?
+Could a toroid like the Cosmotron’s do it?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(f \propto \mu_{inc}^{-1/2}\)</span>, so
+<span class="math inline">\(\mu_{inc}\)</span> must fall by <span
+class="math inline">\(6.84^2 = 47\)</span>. The Cosmotron’s toroid fell
+by a factor of 100 between zero bias and 2000 A/m, so it has range to
+spare; the bias current only has to follow the field along the right
+curve.</p>
+</details>
+<h3 id="2-the-field-follows-the-momentum">2. The field follows the
+momentum</h3>
+<p>A particle of charge <span class="math inline">\(q\)</span> and
+momentum <span class="math inline">\(p\)</span> moving perpendicular to
+a uniform field <span class="math inline">\(B\)</span> moves on a circle
+of radius <span class="math inline">\(\rho = p/(qB)\)</span> (Landau and
+Lifshitz, volume 2, section 21). The reason, recalled from <a
+href="F4-electromagnetism.html#10-the-magnetic-field-and-its-force">F4,
+section 10</a> and <a
+href="F2-vectors.html#4-vectors-that-change-velocity-acceleration-and-circles">F2,
+section 4</a>: the force <span
+class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span> is always at
+right angles to the velocity, so it turns the momentum without changing
+its size, and a momentum <span class="math inline">\(p\)</span> turned
+at the angular rate <span class="math inline">\(v/\rho\)</span> needs a
+force <span class="math inline">\(pv/\rho\)</span>; setting <span
+class="math inline">\(qvB = pv/\rho\)</span> gives <span
+class="math inline">\(\rho = p/(qB)\)</span>. This holds at any speed,
+with <span class="math inline">\(p = \gamma m v\)</span> (<a
+href="01-why-accelerate.html#pre-requisite-relativistic-motion-in-electric-and-magnetic-fields">chapter
+1</a>). To keep <span class="math inline">\(\rho\)</span> fixed as <span
+class="math inline">\(p\)</span> grows, the field must grow in
+proportion:</p>
+<p><span class="math display">\[
+B(t) = \frac{p(t)}{q\rho}, \qquad B\rho = \frac{p}{q}.
+\]</span></p>
+<p>The product <span class="math inline">\(B\rho\)</span> (T m) is the
+magnetic rigidity: how hard the particle is to bend. For a singly
+charged particle, <span class="math inline">\(B\rho\,[\mathrm{T\,m}] =
+3.3356\,p\,[\mathrm{GeV}/c]\)</span>. The number comes from the units. A
+momentum of 1 GeV/<span class="math inline">\(c\)</span> (<a
+href="F7-atoms-and-quanta.html#3-the-electron-volt">F7, section 3</a>)
+is <span class="math inline">\(10^9\,e\)</span> joules divided by <span
+class="math inline">\(c\)</span>, that is <span
+class="math inline">\(10^9 e/c\)</span> kg m/s, and dividing by the
+charge <span class="math inline">\(e\)</span> leaves <span
+class="math inline">\(B\rho = 10^9/c = 10^9/(2.998\times10^8) =
+3.3356\)</span> T m.</p>
+<p><strong>Worked numbers (Bevatron).</strong> The Bevatron’s magnets
+bend the protons on a radius of 600 inches, 15.24 m (Crebbin and
+Lothrop, 1969). The protons came in at about 10 MeV, from a 500 keV
+Cockcroft-Walton generator and a linear accelerator that added 9.5 MeV
+(<em>Lawrence and His Laboratory</em>, chapter 6), and left at 6.2 GeV.
+The momentum follows from the kinetic energy <span
+class="math inline">\(W\)</span> through <span class="math inline">\(E =
+W + mc^2\)</span> and <span class="math inline">\(pc = \sqrt{E^2 -
+(mc^2)^2}\)</span>, with <span class="math inline">\(mc^2 =
+0.9383\)</span> GeV for the proton (<a
+href="01-why-accelerate.html#pre-requisite-four-momentum-energy-momentum-relation-invariant-mass">chapter
+1</a>). At 10 MeV, <span class="math inline">\(p = 0.1374\)</span>
+GeV/<span class="math inline">\(c\)</span>, <span
+class="math inline">\(B\rho = 0.458\)</span> T m and <span
+class="math inline">\(B = 0.0301\)</span> T. At 6.2 GeV, <span
+class="math inline">\(p = 7.076\)</span> GeV/<span
+class="math inline">\(c\)</span>, <span class="math inline">\(B\rho =
+23.60\)</span> T m and <span class="math inline">\(B = 1.549\)</span> T.
+The field must rise by a factor of 52.</p>
+<p><strong>Worked numbers (an electron ring).</strong> McMillan’s 300
+MeV electron synchrotron at Berkeley had a radius of 1 m (Jackson and
+Panofsky). At 300 MeV an electron has <span class="math inline">\(p =
+300.5\)</span> MeV/<span class="math inline">\(c\)</span> and needs
+<span class="math inline">\(B = 1.002\)</span> T on that radius.</p>
+<p>The relation is exact for the reference particle. Two approximations
+hide in using it to set a real magnet. The field must be the same in
+every magnet to a part in a thousand or better, or the closed orbit
+wanders (section 8). And the field in the iron gap is not simply
+proportional to the current: at low field the remanent magnetism of the
+iron and the eddy currents of section 12 add to it, and at high field
+the iron saturates. A ring is therefore programmed by the measured
+field, not by the current (<a href="#at-the-bench">At the
+bench</a>).</p>
+<h3 id="3-the-frequency-follows-the-speed">3. The frequency follows the
+speed</h3>
+<p>A particle of speed <span class="math inline">\(v = \beta c\)</span>
+goes round in the revolution period <span class="math inline">\(T_0 =
+C/(\beta c)\)</span> (s; the subscript keeps it apart from the
+temperature <span class="math inline">\(T\)</span>), so its revolution
+frequency is</p>
+<p><span class="math display">\[
+f_0 = \frac{\beta c}{C}, \qquad \omega_0 = 2\pi f_0.
+\]</span></p>
+<p>The gap voltage must have the same phase each time the particle
+crosses, so its frequency is a whole multiple of the revolution
+frequency:</p>
+<p><span class="math display">\[
+f_{RF} = h f_0 = \frac{h\beta c}{C},
+\]</span></p>
+<p>where <span class="math inline">\(h\)</span> is the harmonic number.
+A <em>bunch</em> is a short cluster of particles riding together at one
+phase of the wave. In one turn the RF goes through <span
+class="math inline">\(h\)</span> cycles, so there are <span
+class="math inline">\(h\)</span> places round the ring where a particle
+sees the right phase, and <span class="math inline">\(h\)</span> is also
+the largest number of bunches the ring can hold. Because the field and
+the speed are tied through the momentum, the frequency can be written as
+a function of the field. Divide <span class="math inline">\(p = \gamma
+mv\)</span> by <span class="math inline">\(E = \gamma mc^2\)</span>:
+<span class="math inline">\(pc/E = v/c = \beta\)</span>. With <span
+class="math inline">\(E = \sqrt{p^2c^2 + m^2c^4}\)</span> this is <span
+class="math inline">\(\beta = p/\sqrt{p^2 + m^2c^2}\)</span>, and
+putting in <span class="math inline">\(p = qB\rho\)</span> and
+cancelling <span class="math inline">\(q\rho\)</span> from top and
+bottom,</p>
+<p><span class="math display">\[
+f_{RF}(B) = \frac{hc}{C}\,\frac{B}{\sqrt{B^2 + B_m^2}}, \qquad B_m =
+\frac{mc}{q\rho}.
+\]</span></p>
+<p><span class="math inline">\(B_m\)</span> is the field at which the
+particle’s momentum equals <span class="math inline">\(mc\)</span>, that
+is <span class="math inline">\(\beta\gamma = 1\)</span>. Below <span
+class="math inline">\(B_m\)</span> the frequency rises almost in
+proportion to the field; above it, it creeps towards its limit <span
+class="math inline">\(hc/C\)</span> (figure 15.2).</p>
+<p><img src="figures/15-frequency-field.svg" loading="lazy"
+alt="RF frequency against field for the Bevatron" /></p>
+<p><em>Figure 15.2. The RF frequency the Bevatron needs at each value of
+its field, from the formula above with <span class="math inline">\(h =
+1\)</span>, <span class="math inline">\(C = 120\)</span> m and <span
+class="math inline">\(B_m = 0.205\)</span> T. The steep part lies below
+<span class="math inline">\(B_m\)</span>, where the protons are still
+far from the speed of light: a third of the sweep is done by 100 MeV, at
+6 per cent of the top field. Above <span
+class="math inline">\(B_m\)</span> the frequency creeps towards <span
+class="math inline">\(c/C = 2.50\)</span> MHz.</em></p>
+<p><strong>Worked numbers (Bevatron).</strong> For protons <span
+class="math inline">\(mc/e = 3.1297\)</span> T m, so on <span
+class="math inline">\(\rho = 15.24\)</span> m, <span
+class="math inline">\(B_m = 0.205\)</span> T. The ring was four arcs and
+four straight sections, with a circumference of about 120 m (400 ft).
+With <span class="math inline">\(h = 1\)</span>, the frequency at 10 MeV
+is 0.362 MHz and at 6.2 GeV it is 2.48 MHz, a ratio of 6.84, the ratio
+of the speeds. At 100 MeV the field is only 0.097 T, but the frequency
+is already 1.07 MHz: a third of the whole frequency sweep is used up in
+the first 6 per cent of the field. If the field rose at its average rate
+of 0.82 T/s, that would take 82 ms. In 1971 the Bevatron’s RF ran from
+500 kHz to 2.51 MHz at the first harmonic (Evans and Lothrop); the
+higher starting frequency implies that by then the protons were injected
+at about 19 to 20 MeV.</p>
+<p><strong>Worked numbers (Dubna).</strong> The synchrophasotron’s
+circumference was 208 m. Protons injected at about 9 MeV have <span
+class="math inline">\(\beta = 0.1375\)</span> and <span
+class="math inline">\(f_0 = 0.198\)</span> MHz; at 10 GeV <span
+class="math inline">\(\beta = 0.9963\)</span> and <span
+class="math inline">\(f_0 = 1.436\)</span> MHz. The range 0.2 to 1.44
+MHz is the one Baldin and colleagues give for the ring’s RF in 1971, in
+a paper on accelerating deuterons, at half the protons’ speed, on the
+second harmonic.</p>
+<p><strong>Electrons need almost no sweep.</strong> An electron is
+relativistic at a few MeV. In Goward and Barnes’ machine at Woolwich the
+electrons went from 4 to 8 MeV, and <span
+class="math inline">\(\beta\)</span> changed from 0.99356 to 0.99820, a
+change of 0.47 per cent. In McMillan’s 1 m ring, a full circle (<span
+class="math inline">\(C = 2\pi\)</span> m) with an H-frame magnet and a
+toroidal chamber of eight 45° sectors of fused silica (Livingston and
+Blewett, sections 12-4 and 12-8), <span
+class="math inline">\(f_0\)</span> is 46.7 MHz at 2 MeV and 47.7 MHz at
+300 MeV. So an electron synchrotron can run its cavity at a fixed
+frequency, once the electrons have been brought to a few MeV, and the
+early machines did this by starting them as betatrons. The orbit then
+shifts slightly outward as <span class="math inline">\(\beta\)</span>
+rises; the 2 per cent change in McMillan’s ring would move the orbit by
+2 per cent of the radius if nothing else changed. Proton machines must
+sweep, and that is the hard part (<a
+href="#13-the-frequency-sweep-and-the-tunable-cavity">section
+13</a>).</p>
+<h3 id="4-the-energy-gain-per-turn-and-the-synchronous-phase">4. The
+energy gain per turn and the synchronous phase</h3>
+<p>With <span class="math inline">\(\rho\)</span> fixed, <span
+class="math inline">\(p = qB\rho\)</span> gives</p>
+<p><span class="math display">\[
+\frac{dp}{dt} = q\rho\,\frac{dB}{dt}.
+\]</span></p>
+<p>The rate of change of energy is <span class="math inline">\(dE/dt =
+v\,dp/dt\)</span>, since <span class="math inline">\(dE = v\,dp\)</span>
+for a particle (Landau and Lifshitz, volume 2, section 9). To see why,
+take a small change of <span class="math inline">\(E^2 = p^2c^2 +
+m^2c^4\)</span> (<a
+href="F1-calculus.html#5-using-derivatives-small-changes-errors-maxima">F1,
+section 5</a>): <span class="math inline">\(2E\,dE = 2pc^2\,dp\)</span>,
+so <span class="math inline">\(dE = (pc^2/E)\,dp\)</span>, and <span
+class="math inline">\(pc^2/E = \gamma mvc^2/(\gamma mc^2) = v\)</span>.
+It is the work-energy rule of <a
+href="F3-mechanics.html#4-work-kinetic-energy-and-power">F3, section
+4</a> in relativistic form: a force <span class="math inline">\(F =
+dp/dt\)</span> acting on a particle moving at <span
+class="math inline">\(v\)</span> delivers power <span
+class="math inline">\(Fv\)</span>. In one turn, which lasts <span
+class="math inline">\(C/v\)</span>, the particle must therefore gain</p>
+<p><span class="math display">\[
+\Delta E_{turn} = v\,\frac{dp}{dt}\cdot\frac{C}{v} =
+q\,C\rho\,\frac{dB}{dt}.
+\]</span></p>
+<p>The speed has cancelled. The energy gain per turn depends only on the
+geometry and the rate of rise of the field, not on the particle’s energy
+or mass. The kinetic energy <span class="math inline">\(W\)</span>
+changes by the same amount as <span
+class="math inline">\(E\)</span>.</p>
+<p>The gap supplies <span class="math inline">\(\Delta W =
+q\hat{V}\sin\phi\)</span>, where <span
+class="math inline">\(\hat{V}\)</span> is the voltage amplitude summed
+over all gaps in a turn and <span class="math inline">\(\phi\)</span>
+the RF phase at the crossing, increasing for later arrival. The
+synchronous particle, the one that stays exactly on the reference orbit,
+must cross at the phase <span class="math inline">\(\phi_s\)</span> that
+gives exactly what the field demands:</p>
+<p><span class="math display">\[
+\hat{V}\sin\phi_s = C\rho\,\frac{dB}{dt}.
+\]</span></p>
+<p><strong>A comparison with the betatron.</strong> In a ring without
+straight sections, <span class="math inline">\(C = 2\pi\rho\)</span> and
+the requirement is <span class="math inline">\(\hat{V}\sin\phi_s =
+2\pi\rho^2\,dB/dt\)</span>. A betatron of radius <span
+class="math inline">\(\rho\)</span> needs the flux through its orbit to
+change at <span class="math inline">\(d\Phi/dt =
+2\pi\rho^2\,dB/dt\)</span> by the <a
+href="11-the-betatron.html#3-keeping-the-radius-the-two-to-one-rule">two-to-one
+rule</a> (the average field inside the orbit must rise twice as fast as
+the field at it, so <span class="math inline">\(d\Phi/dt = \pi\rho^2
+\cdot 2\,dB/dt\)</span>). The volts per turn are the same, as they must
+be: both machines supply the same momentum to the same orbit in the same
+time. The synchrotron gets them from a resonant gap in a few metres of
+the ring, instead of from a core filling the whole circle.</p>
+<p><strong>Worked numbers (Bevatron).</strong> From 10 MeV to 6.2 GeV in
+1.85 s on <span class="math inline">\(\rho = 15.24\)</span> m, the
+average rate of rise is <span class="math inline">\(dB/dt =
+0.82\)</span> T/s, and with <span class="math inline">\(C = 120\)</span>
+m the energy gain per turn is <span class="math inline">\(120 \times
+15.24 \times 0.82 = 1.50\)</span> keV. As a check, <em>Lawrence and His
+Laboratory</em> gives 4,000,000 turns in 1.85 s; <span
+class="math inline">\((6.2\ \text{GeV} - 10\ \text{MeV})/4\times10^6 =
+1.55\)</span> keV a turn, and the path is <span
+class="math inline">\(4\times10^6 \times 120\ \text{m} =
+480{,}000\)</span> km, the “300,000 miles” of that account. The
+Bevatron’s two-gap drift tube in its north straight section gave at most
+about 5 keV a turn (Crebbin and Lothrop). So <span
+class="math inline">\(\sin\phi_s = 1.50/5 = 0.30\)</span>. Two phases in
+each cycle have this sine, <span
+class="math inline">\(17.5^\circ\)</span> on the rising side of the wave
+and <span class="math inline">\(180^\circ - 17.5^\circ =
+162.5^\circ\)</span> on the falling side. As section 7 shows, the
+Bevatron was above transition, and then only the falling side is stable
+(below, and figure 15.3), so <span class="math inline">\(\phi_s =
+162.5^\circ\)</span>.</p>
+<p><strong>Electrons radiate.</strong> An electron must also make up the
+energy it radiates. The loss per turn, quoted here and derived in <a
+href="20-synchrotron-radiation.html">chapter 20</a> (Landau and
+Lifshitz, volume 2, section 74), is</p>
+<p><span class="math display">\[
+U_0 = \frac{e^2\beta^3\gamma^4}{3\varepsilon_0\rho},
+\]</span></p>
+<p>or <span class="math inline">\(U_0\,[\mathrm{keV}] =
+88.46\,E^4[\mathrm{GeV}]/\rho[\mathrm{m}]\)</span> for <span
+class="math inline">\(\beta \approx 1\)</span>. In McMillan’s ring at
+300 MeV it is 721 eV a turn. The gap must then supply <span
+class="math inline">\(\hat{V}\sin\phi_s = C\rho\,\dot{B} +
+U_0/e\)</span>. Unlike the betatron’s induced voltage, the cavity
+voltage can be raised to pay it. This is the advantage Veksler named in
+1944.</p>
+<p><strong>Phase stability, in outline.</strong> Why does the bunch stay
+near <span class="math inline">\(\phi_s\)</span>? Suppose a particle has
+a little more energy than the synchronous one. Whether it then arrives
+earlier or later depends on two effects that oppose each other: it is
+faster, and it travels a longer path (section 6). Section 7 shows that
+in a weak-focusing ring the longer path wins at every energy: the
+particle with more energy arrives later, at a larger <span
+class="math inline">\(\phi\)</span>. To be stable it must then gain
+less, so <span class="math inline">\(\Delta W\)</span> must fall as
+<span class="math inline">\(\phi\)</span> rises past <span
+class="math inline">\(\phi_s\)</span>: <span
+class="math inline">\(\cos\phi_s &lt; 0\)</span>, or <span
+class="math inline">\(\pi/2 &lt; \phi_s &lt; \pi\)</span>, the falling
+side of the sine (figure 15.3). McMillan’s own description, in the
+memoir by Jackson and Panofsky, says the same: for rings with fields
+uniform in azimuth, stability lies on the decreasing part of the RF
+wave. The particles oscillate about <span
+class="math inline">\(\phi_s\)</span> in energy and phase. The theory of
+these synchrotron oscillations is in <a
+href="12-phase-stability.html#2-phase-stability">chapter 12</a> and in
+depth in <a href="19-longitudinal-dynamics.html">chapter 19</a>. Chapter
+12, section 2, derived the small-amplitude result needed here: the phase
+obeys the simple-harmonic equation of <a
+href="F3-mechanics.html#9-simple-harmonic-motion">F3, section 9</a>,
+turn by turn, and the number of these oscillations per turn, the
+synchrotron tune, is</p>
+<p><span class="math display">\[
+Q_s = \frac{\Omega_s}{\omega_0} =
+\sqrt{\frac{h\,|\eta|\,q\hat{V}\,|\cos\phi_s|}{2\pi\beta^2 E}},
+\]</span></p>
+<p>with <span class="math inline">\(q\hat{V}\)</span> and <span
+class="math inline">\(E\)</span>, the total energy, both in joules,
+<span class="math inline">\(\eta\)</span> the phase-slip factor of
+section 7, <span class="math inline">\(\omega_0 = 2\pi f_0\)</span> the
+revolution angular frequency and <span
+class="math inline">\(\Omega_s\)</span> (rad/s) the angular frequency of
+the synchrotron oscillation; the synchrotron frequency in hertz is <span
+class="math inline">\(f_s = \Omega_s/2\pi = Q_sf_0\)</span>.
+Linear-accelerator texts write the gain as <span
+class="math inline">\(qE_0T_tL\cos\phi\)</span> with a different zero of
+phase; the physics is the same (<a
+href="14-linear-accelerators.html">chapter 14</a>).</p>
+<p><img src="figures/15-phase-stability.svg" loading="lazy"
+alt="Phase stability above transition" /></p>
+<p><em>Figure 15.3. Phase stability above transition. The energy gain
+per crossing is <span class="math inline">\(q\hat{V}\sin\phi\)</span>,
+and the rising field demands <span
+class="math inline">\(0.30\,q\hat{V}\)</span> (the Bevatron’s 1.5 keV
+from a 5 kV gap), met at <span class="math inline">\(17.5^\circ\)</span>
+and at <span class="math inline">\(162.5^\circ\)</span>. Above
+transition a particle with extra energy takes longer to go round. Near
+<span class="math inline">\(162.5^\circ\)</span> an early particle gains
+more, so it comes round later next time; a late one gains less and comes
+round sooner. Both drift back towards <span
+class="math inline">\(\phi_s\)</span> (red arrows). Near <span
+class="math inline">\(17.5^\circ\)</span> the same reasoning pushes them
+away.</em></p>
+<p><strong>Worked numbers (Bevatron, illustrative).</strong> With <span
+class="math inline">\(h = 1\)</span>, <span
+class="math inline">\(\hat{V} = 5\)</span> kV, <span
+class="math inline">\(\sin\phi_s = 0.30\)</span>, and an assumed
+momentum compaction <span class="math inline">\(\alpha_c = 2\)</span>
+(section 6), <span class="math inline">\(Q_s = 0.0062\)</span> at
+injection, a synchrotron frequency of 2.3 kHz; at 1 GeV, 2.1 kHz; at 6.2
+GeV, 1.1 kHz. The Bevatron’s phase loop, which damped these
+oscillations, had its highest gain in the 1 to 2 kHz range (Evans and
+Lothrop, 1971): the same numbers seen from the control room.</p>
+<p>The synchronous phase is not fixed through the cycle. A
+motor-generator supply (an alternator driven by a flywheel, section 11)
+drives the current along a curve, not a straight line, so <span
+class="math inline">\(\dot{B}\)</span> is small at injection, largest in
+the middle and small again near the top. Either the voltage is
+programmed to follow <span class="math inline">\(\dot{B}\)</span>, or
+<span class="math inline">\(\phi_s\)</span> moves through the cycle.</p>
+<h3 id="5-weak-focusing-in-a-ring">5. Weak focusing in a ring</h3>
+<p>A particle that starts a little off the reference orbit, or at a
+small angle to it, must be brought back. In the early synchrotrons this
+was done exactly as in the betatron (<a
+href="11-the-betatron.html">chapter 11</a>): by letting the field fall
+slightly with radius. Near the orbit write</p>
+<p><span class="math display">\[
+B_y(x) = B_0\left(1 - n\,\frac{x}{\rho}\right), \qquad n =
+-\frac{\rho}{B}\frac{\partial B}{\partial r},
+\]</span></p>
+<p>with <span class="math inline">\(n\)</span> the field index, a pure
+number: the relative fall of the field per relative step outward. (The
+<span class="math inline">\(\partial\)</span> is a partial derivative,
+<a href="F1-calculus.html#9-several-variables-partial-derivatives">F1,
+section 9</a>: the slope with <span class="math inline">\(r\)</span> at
+fixed height and azimuth.) The median plane is the horizontal plane
+half-way between the poles, <span class="math inline">\(y = 0\)</span>.
+The field lines then bow outward, so off the median plane there is a
+radial field <span class="math inline">\(B_x = -n B_0 y/\rho\)</span>,
+which pushes a positive particle back towards the plane (figure 15.4).
+The radial field follows from the curl. The gap holds no current, so
+<span class="math inline">\(\nabla\times\mathbf{B} = 0\)</span> there
+(<a href="F2-vectors.html#11-curl-and-stokess-theorem">F2, section
+11</a>; Ampère’s law with no current, <a
+href="F4-electromagnetism.html#12-ampères-law">F4, section 12</a>). Its
+component along <span class="math inline">\(s\)</span> says <span
+class="math inline">\(\partial B_x/\partial y = \partial B_y/\partial
+x\)</span>, and from the first equation <span
+class="math inline">\(\partial B_y/\partial x = -nB_0/\rho\)</span>. On
+the median plane <span class="math inline">\(B_x = 0\)</span> by
+symmetry, so integrating up from <span class="math inline">\(y =
+0\)</span> gives <span class="math inline">\(B_x =
+-nB_0y/\rho\)</span>.</p>
+<p><img src="figures/15-gap-field.svg" loading="lazy"
+alt="Cross-section of a weak-focusing gap" /></p>
+<p><em>Figure 15.4. The gap of a weak-focusing magnet in cross-section,
+the beam coming out of the page. The poles open outward, so the field
+weakens with <span class="math inline">\(x\)</span> (<span
+class="math inline">\(n &gt; 0\)</span>) and its lines bow outward. On
+the median plane the field is vertical and bends the particle inward,
+round the ring. Above the plane the lines lean inward (<span
+class="math inline">\(B_x &lt; 0\)</span>) and the force <span
+class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span> (<a
+href="F2-vectors.html#3-the-cross-product">F2, section 3</a>) points
+down; below, they lean outward and it points up. Slope and bowing
+exaggerated.</em></p>
+<p>The equations of motion for small <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>, derived in <a
+href="11-the-betatron.html#4-transverse-motion-the-field-index-and-betatron-oscillations">chapter
+11, section 4</a> and in Humphries, section 7.3, are (a prime is a
+derivative with respect to <span class="math inline">\(s\)</span>, so
+<span class="math inline">\(x&#39; = dx/ds\)</span> is the angle of the
+path to the reference orbit)</p>
+<p><span class="math display">\[
+\frac{d^2x}{ds^2} + \frac{1-n}{\rho^2}\,x = 0, \qquad \frac{d^2y}{ds^2}
++ \frac{n}{\rho^2}\,y = 0.
+\]</span></p>
+<p>The horizontal restoring term has two parts: <span
+class="math inline">\(1/\rho^2\)</span>, from the geometry of circles
+(an orbit displaced outward in a uniform field is another circle that
+crosses the reference twice a turn, figure 15.5), and <span
+class="math inline">\(-n/\rho^2\)</span>, from the weaker field outside.
+Both motions are stable only if <span class="math inline">\(0 &lt; n
+&lt; 1\)</span>. Each equation has the form <span
+class="math inline">\(u&#39;&#39; + Ku = 0\)</span> of simple harmonic
+motion (<a href="F3-mechanics.html#9-simple-harmonic-motion">F3, section
+9</a>), with <span class="math inline">\(s\)</span> in place of time:
+for <span class="math inline">\(K &gt; 0\)</span> the solution is <span
+class="math inline">\(u = A\cos(\sqrt{K}s + \varphi)\)</span>, which
+repeats when <span class="math inline">\(\sqrt{K}s\)</span> grows by
+<span class="math inline">\(2\pi\)</span>; for <span
+class="math inline">\(K &lt; 0\)</span> it grows exponentially. The
+solutions are oscillations, the betatron oscillations, with wavelengths
+<span class="math inline">\(2\pi\rho/\sqrt{1-n}\)</span> and <span
+class="math inline">\(2\pi\rho/\sqrt{n}\)</span>. Their number per turn
+of length <span class="math inline">\(2\pi\rho\)</span>, the tunes,
+are</p>
+<p><span class="math display">\[
+Q_x = \sqrt{1-n}, \qquad Q_y = \sqrt{n}, \qquad Q_x^2 + Q_y^2 = 1.
+\]</span></p>
+<p>Both tunes are below 1: a weakly focused particle makes less than one
+oscillation per turn. That is what “weak” means. The wavelength of the
+oscillation is longer than the ring.</p>
+<p><img src="figures/15-displaced-circle.svg" loading="lazy"
+alt="A displaced orbit in a uniform field" /></p>
+<p><em>Figure 15.5. Why the horizontal tune is 1 in a uniform field
+(<span class="math inline">\(n = 0\)</span>). A particle of the right
+momentum started a distance <span class="math inline">\(a\)</span>
+outside the reference orbit moves on a circle of the same radius <span
+class="math inline">\(\rho\)</span>, centred at <span
+class="math inline">\(O&#39;\)</span>, a distance <span
+class="math inline">\(a\)</span> from <span
+class="math inline">\(O\)</span>. Its displacement is <span
+class="math inline">\(x \approx a\cos\theta\)</span>: outside on one
+side, inside on the other, crossing the reference twice. One full
+oscillation per turn. A field that weakens outward (<span
+class="math inline">\(n &gt; 0\)</span>) bends the outer part less,
+which lengthens the oscillation, and <span class="math inline">\(Q_x =
+\sqrt{1-n}\)</span> falls below 1. Shift exaggerated.</em></p>
+<p><strong>Straight sections.</strong> A racetrack ring has drifts
+between the arcs, where the particle runs straight and is not focused.
+The equations above hold in the arcs; across the straights <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(x&#39;\)</span> change as in empty space.
+Lengthening the straights raises the tunes and makes the betatron
+amplitude vary around the ring. The exact values come from multiplying
+the transfer matrices of the arcs and drifts (<a
+href="08-seeing-the-beam.html#pre-requisite-linear-systems-and-transfer-matrices">taught
+in chapter 8</a>: each element is a 2 by 2 matrix that takes <span
+class="math inline">\((x, x&#39;)\)</span> at its entrance to <span
+class="math inline">\((x, x&#39;)\)</span> at its exit), the method of
+<a href="16-strong-focusing.html">chapter 16</a>; for <span
+class="math inline">\(n = 0.6\)</span>, <span class="math inline">\(\rho
+= 15.24\)</span> m and four straights of 6.1 m (the Bevatron’s
+proportions) it gives <span class="math inline">\(Q_x \approx
+0.71\)</span> and <span class="math inline">\(Q_y \approx 0.87\)</span>,
+against 0.63 and 0.77 without straights. Both the Cosmotron and the
+Bevatron were built with <span class="math inline">\(n = 0.6\)</span> at
+the injection field, the pole faces sloped to give it; with straight
+sections the stable range narrows from 0.5 to 1.0 to about 0.5 to 0.8
+(Livingston and Blewett, section 13-3, page 448). For the Cosmotron,
+with 9.15 m arcs and four 10 ft (3 m) straights, the same authors give
+the radial oscillation frequency as 0.70 of the revolution frequency
+(section 13-6), close to this model. For the Bevatron, Crebbin and
+Lothrop drove the radial betatron oscillation at about 0.6 of the
+revolution frequency, below the model’s 0.71; the simple model leaves
+out the fringe fields and the change of <span
+class="math inline">\(n\)</span> with field, and the difference is not
+resolved here.</p>
+<p><strong>Worked numbers.</strong> With <span class="math inline">\(n =
+0.6\)</span>: <span class="math inline">\(Q_x = 0.632\)</span>, <span
+class="math inline">\(Q_y = 0.775\)</span>. On <span
+class="math inline">\(\rho = 15.24\)</span> m the horizontal wavelength
+is <span class="math inline">\(2\pi\rho/Q_x = 151\)</span> m, longer
+than the Bevatron’s 120 m circumference.</p>
+<h3 id="6-off-momentum-orbits-and-momentum-compaction">6. Off-momentum
+orbits and momentum compaction</h3>
+<p>A particle whose momentum differs from the reference by <span
+class="math inline">\(\delta = \Delta p/p\)</span> has its own closed
+orbit, displaced to where the field bends it on a circle. Take the field
+<span class="math inline">\(B_y(r) = B_0(\rho/r)^n\)</span>, the one
+whose index is <span class="math inline">\(n\)</span> at every radius
+(its logarithm is <span class="math inline">\(\ln B_y = \text{const} -
+n\ln r\)</span>, so <span class="math inline">\(-(r/B_y)\,dB_y/dr =
+n\)</span> exactly; near <span class="math inline">\(r = \rho\)</span>
+it is the linear field of section 5). In it a particle of momentum <span
+class="math inline">\(p(1+\delta)\)</span> circles at the radius <span
+class="math inline">\(r\)</span> where <span
+class="math inline">\(p(1+\delta) = qB_y(r)\,r\)</span>:</p>
+<p><span class="math display">\[
+1 + \delta = \frac{B_0\rho^n r^{1-n}}{B_0\rho} =
+\left(\frac{r}{\rho}\right)^{1-n}.
+\]</span></p>
+<p>For small <span class="math inline">\(\delta\)</span>, write <span
+class="math inline">\(r = \rho + x\)</span> and use the first term of
+the Taylor series (<a
+href="F1-calculus.html#8-approximating-a-function-taylor-series">F1,
+section 8</a>), <span class="math inline">\((1 + x/\rho)^{1-n} \approx 1
++ (1-n)\,x/\rho\)</span>. Then <span class="math inline">\(\delta =
+(1-n)\,x/\rho\)</span>, and</p>
+<p><span class="math display">\[
+x_{co} = \frac{\rho\,\delta}{1-n} = D_x\,\delta, \qquad D_x =
+\frac{\rho}{1-n}.
+\]</span></p>
+<p><span class="math inline">\(D_x\)</span> (m) is the dispersion, the
+displacement of the closed orbit per unit relative momentum deviation.
+With <span class="math inline">\(n = 0.6\)</span> on 15.24 m, <span
+class="math inline">\(D_x = 38\)</span> m: a proton 1 per cent high in
+momentum circles 38 cm outside the reference. This is why weak-focusing
+rings needed wide gaps.</p>
+<p>The longer orbit has a longer circumference. In a ring without
+straights, <span class="math inline">\(C = 2\pi r\)</span>, so</p>
+<p><span class="math display">\[
+\frac{\Delta C}{C} = \frac{x_{co}}{\rho} = \frac{\delta}{1-n}.
+\]</span></p>
+<p>The momentum compaction <span class="math inline">\(\alpha_c\)</span>
+is defined as the relative change in path length per relative change in
+momentum:</p>
+<p><span class="math display">\[
+\alpha_c = \frac{\Delta C/C}{\delta} = \frac{1}{1-n} = \frac{1}{Q_x^2}.
+\]</span></p>
+<p>For a weak-focusing ring <span class="math inline">\(\alpha_c &gt;
+1\)</span>: the path length grows faster than the momentum. In a uniform
+field (<span class="math inline">\(n = 0\)</span>) <span
+class="math inline">\(\alpha_c = 1\)</span>, the cyclotron’s case, where
+the orbit radius is proportional to the momentum.</p>
+<p><strong>With straight sections.</strong> The path length changes only
+where the orbit bends. On an arc of radius <span
+class="math inline">\(\rho\)</span> a short step <span
+class="math inline">\(ds\)</span> of the reference subtends the angle
+<span class="math inline">\(ds/\rho\)</span>, and an orbit a distance
+<span class="math inline">\(x\)</span> further out covers that angle on
+the radius <span class="math inline">\(\rho + x\)</span>, a path <span
+class="math inline">\((1 + x/\rho)\,ds\)</span>, longer by <span
+class="math inline">\(x\,ds/\rho\)</span>. On a straight, parallel paths
+have the same length. Adding up round the ring with <span
+class="math inline">\(x = D_x\delta\)</span>, <span
+class="math inline">\(\Delta C = \delta\oint D_x/\rho\,ds\)</span>, so
+in general <span class="math inline">\(\alpha_c = (1/C)\oint
+D_x/\rho\,ds\)</span> (the integral taken over the bends only, where
+<span class="math inline">\(1/\rho \neq 0\)</span>). If <span
+class="math inline">\(D_x\)</span> is about <span
+class="math inline">\(\rho/(1-n)\)</span> in the arcs, the arcs make up
+a fraction <span class="math inline">\(2\pi\rho/C = \rho/R\)</span> of
+the circumference and</p>
+<p><span class="math display">\[
+\alpha_c \approx \frac{\rho/R}{1-n}.
+\]</span></p>
+<p>For the Bevatron, <span class="math inline">\(\rho/R = 15.24/19.1 =
+0.80\)</span>, and with <span class="math inline">\(n = 0.6\)</span>,
+<span class="math inline">\(\alpha_c \approx 2.0\)</span>. This is the
+value used for illustration in section 4.</p>
+<h3 id="7-the-phase-slip-factor-and-transition">7. The phase-slip factor
+and transition</h3>
+<p>The time for one turn is <span class="math inline">\(T_0 =
+C/v\)</span>. Take logarithms, <span class="math inline">\(\ln T_0 = \ln
+C - \ln v\)</span>, and a small change of each: since <span
+class="math inline">\(d(\ln f) = df/f\)</span> (the logarithmic
+derivative of <a
+href="F1-calculus.html#5-using-derivatives-small-changes-errors-maxima">F1,
+section 5</a>), relative changes add and subtract as the logarithms do.
+For a small momentum deviation,</p>
+<p><span class="math display">\[
+\frac{\Delta T_0}{T_0} = \frac{\Delta C}{C} - \frac{\Delta v}{v}.
+\]</span></p>
+<p>The first term is <span
+class="math inline">\(\alpha_c\delta\)</span>. For the second, <span
+class="math inline">\(p = m c\,\beta\gamma\)</span> with <span
+class="math inline">\(\beta\gamma = \beta(1-\beta^2)^{-1/2}\)</span>. By
+the product and chain rules, <span
+class="math inline">\(d(\beta\gamma)/d\beta = (1-\beta^2)^{-1/2} +
+\beta^2(1-\beta^2)^{-3/2} = (1-\beta^2)^{-3/2} = \gamma^3\)</span>, so
+<span class="math inline">\(d(\beta\gamma) = \gamma^3 d\beta\)</span>.
+Dividing by <span class="math inline">\(\beta\gamma\)</span>, <span
+class="math inline">\(dp/p = \gamma^2\,d\beta/\beta\)</span> and <span
+class="math inline">\(\Delta v/v = \delta/\gamma^2\)</span>. Then</p>
+<p><span class="math display">\[
+\frac{\Delta T_0}{T_0} = \eta\,\delta, \qquad \eta = \alpha_c -
+\frac{1}{\gamma^2}.
+\]</span></p>
+<p>The phase-slip factor <span class="math inline">\(\eta\)</span> says
+whether a particle with extra momentum comes round sooner (<span
+class="math inline">\(\eta &lt; 0\)</span>) or later (<span
+class="math inline">\(\eta &gt; 0\)</span>). At low energy the speed
+term dominates and, in a ring with <span class="math inline">\(\alpha_c
+&lt; 1\)</span>, <span class="math inline">\(\eta\)</span> is negative:
+the ring is below transition. At high energy the speed hardly changes
+and the path term wins: <span class="math inline">\(\eta &gt;
+0\)</span>, above transition. The two balance at the transition
+gamma</p>
+<p><span class="math display">\[
+\gamma_t = \frac{1}{\sqrt{\alpha_c}}.
+\]</span></p>
+<p>Chapter 12 found the same factor for a cyclotron’s field (<a
+href="12-phase-stability.html#1-who-comes-round-sooner-the-phase-slip-factor">section
+1</a>); here it holds for any ring. At transition the phase focusing of
+section 4 vanishes and changes sign, so the stable phase must be
+switched from <span class="math inline">\(\phi_s\)</span> to <span
+class="math inline">\(\pi - \phi_s\)</span> as the beam passes through
+(<a href="19-longitudinal-dynamics.html">chapter 19</a>).</p>
+<p><strong>Weak focusing never crosses transition.</strong> With <span
+class="math inline">\(\alpha_c = 1/(1-n)\)</span>,</p>
+<p><span class="math display">\[
+\gamma_t = \sqrt{1-n} = Q_x &lt; 1.
+\]</span></p>
+<p>Since every particle has <span class="math inline">\(\gamma \geq
+1\)</span>, a weak-focusing ring is above transition from the moment of
+injection, and <span class="math inline">\(\eta = \alpha_c - 1/\gamma^2
+&gt; 0\)</span> throughout. Humphries (section 15.6) derives the same
+result: stable betatron motion limits <span
+class="math inline">\(\gamma_t\)</span> to between 0 and 1. With <span
+class="math inline">\(n = 0.6\)</span>, <span
+class="math inline">\(\alpha_c = 2.5\)</span> and <span
+class="math inline">\(\gamma_t = 0.632\)</span>; at 10 MeV injection
+<span class="math inline">\(\eta = 1.52\)</span> and at 6.2 GeV <span
+class="math inline">\(\eta = 2.48\)</span>. The stable phase is on the
+falling side of the wave from start to finish, which is why the
+Bevatron’s <span class="math inline">\(\phi_s\)</span> in section 4 was
+162.5°, not 17.5°.</p>
+<p>This is a quiet virtue of weak focusing. Strong-focusing rings (<a
+href="16-strong-focusing.html">chapter 16</a>) have <span
+class="math inline">\(Q_x\)</span> of several or many, so <span
+class="math inline">\(\alpha_c \approx 1/Q_x^2\)</span> is small and
+<span class="math inline">\(\gamma_t \approx Q_x\)</span> lies inside
+the energy range. Their protons must cross transition, as the CERN
+Proton Synchrotron’s first beams showed in 1959 (<a
+href="#where-it-stops">Where it stops</a>).</p>
+<p><img src="figures/15-eta-transition.svg" loading="lazy"
+alt="The phase-slip factor against gamma" /></p>
+<p><em>Figure 15.6. The phase-slip factor <span
+class="math inline">\(\eta = \alpha_c - 1/\gamma^2\)</span> against
+<span class="math inline">\(\gamma\)</span>. Red: the weak-focusing ring
+of the text (<span class="math inline">\(n = 0.6\)</span>, <span
+class="math inline">\(\alpha_c = 2.5\)</span>), positive from injection
+at 10 MeV (<span class="math inline">\(\eta = 1.52\)</span>) to 6.2 GeV
+(<span class="math inline">\(\eta = 2.48\)</span>); its transition,
+<span class="math inline">\(\gamma_t = 0.63\)</span>, lies below every
+possible <span class="math inline">\(\gamma\)</span>. Blue: an
+illustrative strong-focusing ring with <span
+class="math inline">\(\gamma_t = 6\)</span> (<span
+class="math inline">\(\alpha_c = 1/36\)</span>, close to the CERN Proton
+Synchrotron), negative at low energy and crossing zero at <span
+class="math inline">\(\gamma = 6\)</span>, where the stable phase must
+be switched.</em></p>
+<h3
+id="pre-requisite-continued-laplace-transform-feedback-and-stability">Pre-requisite
+(continued): Laplace transform, feedback and stability</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> <a
+href="06-the-electrostatic-generator.html#pre-requisite-laplace-transform-feedback-and-stability">Chapter
+6</a> taught the language of a regulating loop: the Laplace transform,
+the transfer function, the loop gain that divides slow errors, and the
+stability margin that a delay eats into. This section applies it to a
+ring’s RF in two ways. First, an open-loop programme corrected by a
+closed loop that measures the beam’s radius. Second, a loop that does
+not hold a quantity at a set point but damps an oscillation, and so
+needs the right gain and phase over the band of frequencies where the
+oscillation lives. The next section gives the tolerance that makes the
+first necessary; section 4 met the synchrotron oscillation that the
+second damps. Taught from Chao and others, <em>Handbook</em>, §7.3.1.1
+(the differentiator, the phase-lock loop with radial correction, and the
+beam’s response to the RF); Lee, chapter 3, §II.6 (the phase detector
+and phase feedback) and §IV.3 (the radial loop); Livingston and Blewett,
+§13-8 (frequency control in the Cosmotron); Landau and Lifshitz, volume
+1, §25 (the damped oscillator).</p>
+</blockquote>
+<p>In this section <span class="math inline">\(s\)</span> is the Laplace
+variable of chapter 6, not the distance along the orbit.</p>
+<p><strong>Programme plus correction.</strong> The RF frequency is first
+set by a programme: a function of the measured magnetic field, made by a
+circuit that knows the formula of section 3. Call its error <span
+class="math inline">\(\epsilon = \Delta f_{prog}/f\)</span>. Section 8
+shows that a frequency error moves the beam radially by</p>
+<p><span class="math display">\[
+\Delta x = -k\,\frac{\Delta f}{f}, \qquad k = \frac{D_x}{\eta},
+\]</span></p>
+<p>with <span class="math inline">\(k\)</span> about 25 m at the
+Bevatron’s injection and 15 m at the top. Now add a pick-up that
+measures <span class="math inline">\(\Delta x\)</span> and a loop that
+adds a correction <span class="math inline">\(\Delta f_{corr}/f =
+G\,\Delta x\)</span>, with <span class="math inline">\(G\)</span> (1/m)
+the loop’s gain. For slow changes,</p>
+<p><span class="math display">\[
+\Delta x = -k\left(\epsilon + G\,\Delta x\right) \quad\Rightarrow\quad
+\Delta x = -\frac{k\,\epsilon}{1 + kG}.
+\]</span></p>
+<p>The loop gain is <span class="math inline">\(G_0 = kG\)</span>,
+dimensionless (chapter 6 called it <span
+class="math inline">\(L_0\)</span>; here <span
+class="math inline">\(L\)</span> is an inductance). As in chapter 6 the
+closed loop divides the open-loop error by <span class="math inline">\(1
++ G_0\)</span>. The programme only has to be good enough to bring the
+beam into the range of the pick-up; the loop does the rest.</p>
+<p><em>At work.</em> A programme error of <span
+class="math inline">\(10^{-3}\)</span> at the Bevatron’s injection would
+put the beam 25 mm off. With <span class="math inline">\(G_0 =
+100\)</span> it is held to 0.25 mm. The gain this needs is <span
+class="math inline">\(G = 100/25 = 4\)</span> per metre: each millimetre
+of error moves the frequency by 0.4 per cent. Livingston and Blewett
+(§13-8) put the Cosmotron’s tolerance at about 0.2 per cent in
+frequency, about the error that would move the orbit by an inch at
+injection. The Cosmotron met it with a programme alone: a network of 28
+biased diode circuits shaped the ferrite’s bias current to follow the
+calculated frequency curve within 0.1 per cent over the whole 1 s rise,
+while the field rose more than fortyfold (§13-8). A tolerance of a few
+millimetres, ten times tighter, is what needs the loop.</p>
+<p><strong>The beam is itself an oscillator.</strong> The loop cannot be
+made as fast as one likes. A step in the RF frequency does not move the
+beam at once. The bunch must slip in phase, gain or lose energy, and
+move to its new orbit, and it overshoots and oscillates about the new
+equilibrium at the synchrotron frequency <span
+class="math inline">\(\Omega_s\)</span>. In transforms, the bunch’s
+response to the RF is</p>
+<p><span class="math display">\[
+R_b(s) = \frac{\Omega_s^2}{s^2 + \Omega_s^2},
+\]</span></p>
+<p>which has no damping at all (Chao and others, §7.3.1.1). A radial
+loop that tried to act faster than <span
+class="math inline">\(\Omega_s\)</span> would be driving an undamped
+resonance. So the radial loop is kept slow, below the synchrotron
+frequency, and a second loop damps the oscillation itself.</p>
+<p><strong>Damping an oscillation with a loop.</strong> Let <span
+class="math inline">\(\xi(t)\)</span> be the oscillating quantity, here
+the bunch’s phase error <span class="math inline">\(\phi -
+\phi_s\)</span>. Without feedback,</p>
+<p><span class="math display">\[
+\ddot{\xi} + \Omega_s^2\,\xi = 0.
+\]</span></p>
+<p>A detector measures <span class="math inline">\(\xi\)</span>, a
+filter with transfer function <span class="math inline">\(K(s)\)</span>
+(in s<span class="math inline">\(^{-2}\)</span>, so that the product is
+an acceleration of <span class="math inline">\(\xi\)</span>) shapes it,
+and the result is applied back as a shift of the RF phase that pushes on
+<span class="math inline">\(\xi\)</span>. In transforms, with no initial
+values,</p>
+<p><span class="math display">\[
+s^2\Xi + \Omega_s^2\,\Xi = -K(s)\,\Xi \quad\Rightarrow\quad s^2 +
+\Omega_s^2 + K(s) = 0.
+\]</span></p>
+<p>The roots <span class="math inline">\(s\)</span> of this equation
+give the motion <span class="math inline">\(e^{st}\)</span>. Without
+feedback they are <span class="math inline">\(s = \pm
+i\Omega_s\)</span>. With a weak loop, look for the root near <span
+class="math inline">\(+i\Omega_s\)</span>: write <span
+class="math inline">\(s = i\Omega_s + \lambda\)</span> with <span
+class="math inline">\(\lambda\)</span> small. Then <span
+class="math inline">\(s^2 = -\Omega_s^2 + 2i\Omega_s\lambda +
+\lambda^2\)</span>; the <span class="math inline">\(-\Omega_s^2\)</span>
+cancels the <span class="math inline">\(+\Omega_s^2\)</span>, and <span
+class="math inline">\(\lambda^2\)</span>, the product of two small
+quantities, is dropped. Evaluate <span class="math inline">\(K\)</span>
+at <span class="math inline">\(i\Omega_s\)</span>, writing the complex
+number (<a href="F5-waves.html#1-complex-numbers">F5, section 1</a>)
+<span class="math inline">\(K(i\Omega_s) = K_r + iK_i\)</span>:</p>
+<p><span class="math display">\[
+2i\Omega_s\lambda + K_r + iK_i = 0 \quad\Rightarrow\quad \lambda =
+-\frac{K_i}{2\Omega_s} + i\,\frac{K_r}{2\Omega_s}.
+\]</span></p>
+<p>Since <span class="math inline">\(e^{st} = e^{i\Omega_st}e^{\lambda
+t}\)</span>, the real part of <span
+class="math inline">\(\lambda\)</span> sets growth or decay and its
+imaginary part shifts the frequency. This is the rule of the whole
+subject. The part of the feedback in phase with <span
+class="math inline">\(\xi\)</span>, <span
+class="math inline">\(K_r\)</span>, changes the frequency and does
+nothing to the amplitude. Only the part a quarter period ahead of <span
+class="math inline">\(\xi\)</span>, <span
+class="math inline">\(K_i\)</span>, acts like friction: the amplitude
+decays as <span class="math inline">\(e^{-at}\)</span> with</p>
+<p><span class="math display">\[
+a = \frac{K_i}{2\Omega_s}.
+\]</span></p>
+<p>The simplest such filter is a differentiator, <span
+class="math inline">\(K(s) = 2as\)</span>, which feeds back <span
+class="math inline">\(2a\dot{\xi}\)</span> and turns the equation into
+the damped oscillator <span class="math inline">\(\ddot{\xi} +
+2a\dot{\xi} + \Omega_s^2\xi = 0\)</span> of Landau and Lifshitz, §25.
+Physically, <span class="math inline">\(\dot{\xi}\)</span> is
+proportional to the bunch’s energy error, so the loop takes energy away
+from a bunch that has too much and gives it to one that has too little.
+If <span class="math inline">\(K_i\)</span> is negative, the loop pumps
+the oscillation up instead.</p>
+<p><strong>Why the band matters.</strong> A real filter has delays and
+corners. A <em>corner frequency</em> is where a filter’s response bends:
+below it a stage passes the signal unchanged, above it the stage cuts
+the amplitude and adds a lag growing to <span
+class="math inline">\(90^\circ\)</span>; a stage with corner <span
+class="math inline">\(f_1\)</span> multiplies the response by <span
+class="math inline">\(1/(1 + if/f_1)\)</span>, a lag of <span
+class="math inline">\(\arctan(f/f_1)\)</span>. A delay <span
+class="math inline">\(t_d\)</span> multiplies <span
+class="math inline">\(K\)</span> by <span
+class="math inline">\(e^{-st_d}\)</span>, which at <span
+class="math inline">\(s = i\Omega_s\)</span> rotates it by the angle
+<span class="math inline">\(\Omega_s t_d\)</span>. The differentiator’s
+damping becomes <span class="math inline">\(a\cos(\Omega_s
+t_d)\)</span>, which vanishes when <span class="math inline">\(\Omega_s
+t_d = \pi/2\)</span>, that is, when the delay reaches a quarter of the
+synchrotron period, and turns to anti-damping beyond. The differentiator
+must also not respond to noise at the revolution frequency and its
+harmonics. The design rule in Chao and others (§7.3.1.1) is therefore a
+differentiator whose corners sit well above <span
+class="math inline">\(\Omega_s\)</span> and well below the revolution
+frequency <span class="math inline">\(\omega_0\)</span>. In a proton
+ring <span class="math inline">\(\Omega_s\)</span> also moves through
+the cycle: the Bevatron’s synchrotron frequency in section 4 falls from
+about 2.3 kHz at injection to 1.1 kHz at the top. The loop must keep
+both its gain and its quarter-period lead over that whole band. That is
+the meaning of the Bevatron’s phase loop having its highest gain in the
+1 to 2 kHz range.</p>
+<p><em>At work (an illustrative design).</em> A differentiator with
+corners at 20 kHz and 50 kHz, both far below the Bevatron’s revolution
+frequency of 0.36 to 2.5 MHz, keeps a phase lead of <span
+class="math inline">\(85.6^\circ\)</span> at 1.1 kHz and <span
+class="math inline">\(80.8^\circ\)</span> at 2.3 kHz instead of <span
+class="math inline">\(90^\circ\)</span>. Since only <span
+class="math inline">\(K_i\)</span> damps, the lost lead reduces the
+damping by <span class="math inline">\(\cos(90^\circ -
+\text{lead})\)</span>, to 99.7 and 98.7 per cent of the ideal; the
+corners also lower the gain slightly, by <span
+class="math inline">\(1/\sqrt{(1 + (f/f_1)^2)(1 + (f/f_2)^2)}\)</span>,
+and together the damping is 99.5 and 98.0 per cent of the ideal. The
+corners cost almost nothing. A delay of a hundred microseconds would
+leave <span class="math inline">\(\cos(\Omega_st_d)\)</span> of it: 77
+per cent at 1.1 kHz but only 13 per cent at 2.3 kHz.</p>
+<p><strong>Exercise B1.</strong> At the Bevatron’s top energy <span
+class="math inline">\(k = 15.3\)</span> m. A frequency programme is good
+to <span class="math inline">\(2\times10^{-3}\)</span>. How far off
+would the beam run with no loop, and what loop gain holds it within 1
+mm?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>Open loop, <span class="math inline">\(\Delta x = 15.3 \times
+2\times10^{-3} = 30.6\)</span> mm. Closed, <span
+class="math inline">\(30.6/(1 + G_0) \leq 1\)</span> mm needs <span
+class="math inline">\(G_0 \geq 29.6\)</span>, so a loop gain of about
+30.</p>
+</details>
+<p><strong>Exercise B2.</strong> A synchrotron oscillation at 2 kHz is
+to be damped with an amplitude time constant of 1 ms by a
+differentiator. What coefficient <span class="math inline">\(2a\)</span>
+is needed, and what loop delay would cancel the damping altogether?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(a = 1/(1\ \text{ms}) = 1000\)</span>
+s<span class="math inline">\(^{-1}\)</span>, so <span
+class="math inline">\(K(s) = 2as\)</span> with <span
+class="math inline">\(2a = 2000\)</span> s<span
+class="math inline">\(^{-1}\)</span>; then <span
+class="math inline">\(K_i = 2a\Omega_s = 2.5\times10^7\)</span> s<span
+class="math inline">\(^{-2}\)</span> at <span
+class="math inline">\(\Omega_s = 2\pi \times 2000 =
+1.26\times10^4\)</span> rad/s. The damping <span
+class="math inline">\(a\cos(\Omega_s t_d)\)</span> vanishes at <span
+class="math inline">\(t_d = 1/(4f_s) = 125\)</span> μs. A numerical
+solution of <span class="math inline">\(s^2 + \Omega_s^2 +
+2as\,e^{-st_d} = 0\)</span> agrees: the decay rate is 1000 s<span
+class="math inline">\(^{-1}\)</span> with no delay, 750 s<span
+class="math inline">\(^{-1}\)</span> at 62.5 μs, and the root crosses to
+growth near 116 μs, a little before 125 μs, because with <span
+class="math inline">\(a/\Omega_s = 0.08\)</span> the first-order rule is
+only approximate.</p>
+</details>
+<p><strong>Exercise B3.</strong> A loop feeds back <span
+class="math inline">\(K = 0.2\,\Omega_s^2\)</span>, a real constant,
+with no phase shift. What does it do to the oscillation?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(K_i = 0\)</span>, so no damping. The
+equation becomes <span class="math inline">\(\ddot{\xi} +
+1.2\,\Omega_s^2\xi = 0\)</span>, an oscillation at <span
+class="math inline">\(\sqrt{1.2} = 1.095\)</span> times the old
+frequency; the first-order rule gives <span class="math inline">\(1 +
+K_r/(2\Omega_s^2) = 1.1\)</span>. A loop that feeds back the phase error
+without a lead only stiffens the oscillation.</p>
+</details>
+<h3 id="8-how-closely-the-frequency-must-follow-the-field">8. How
+closely the frequency must follow the field</h3>
+<p>Suppose the field is right but the RF frequency is off by a fraction
+<span class="math inline">\(\Delta f/f\)</span>. The bunch must follow
+the RF, so its revolution frequency changes by the same fraction. A
+particle can change its revolution frequency only by changing its
+momentum: from section 7, <span class="math inline">\(\Delta f_0/f_0 =
+-\Delta T_0/T_0 = -\eta\,\delta\)</span> (a frequency is one over a
+period, so their relative changes are equal and opposite). The beam’s
+momentum, and with it the beam’s radius, therefore shift:</p>
+<p><span class="math display">\[
+\delta = -\frac{1}{\eta}\frac{\Delta f}{f}, \qquad \Delta x =
+D_x\,\delta = -\frac{D_x}{\eta}\,\frac{\Delta f}{f}.
+\]</span></p>
+<p>In a weak-focusing ring both <span class="math inline">\(D_x\)</span>
+and <span class="math inline">\(\eta\)</span> are positive, so raising
+the frequency moves the beam inward, onto a shorter path. This gives the
+operator a way to steer the beam radially, and the designer a
+tolerance.</p>
+<p><strong>Worked numbers (Bevatron-like, <span class="math inline">\(n
+= 0.6\)</span>).</strong> <span class="math inline">\(D_x =
+38.1\)</span> m. At 10 MeV, <span class="math inline">\(\eta =
+1.52\)</span>, so <span class="math inline">\(\Delta x = -25.0\
+\mathrm{m} \times \Delta f/f\)</span>: a 5 mm shift for <span
+class="math inline">\(\Delta f/f = 2.0\times10^{-4}\)</span>. At 6.2
+GeV, <span class="math inline">\(\Delta x = -15.3\
+\mathrm{m}\times\Delta f/f\)</span>, and 5 mm needs <span
+class="math inline">\(3.3\times10^{-4}\)</span>. The frequency must
+follow a field that rises by a factor of 52 to a few parts in <span
+class="math inline">\(10^4\)</span> at every moment. No open-loop
+programme of the 1950s could do that unaided. The answer, in every
+proton synchrotron, was feedback: pick-up electrodes measured the beam’s
+radial position, and an error signal corrected the frequency (<a
+href="#at-the-bench">At the bench</a>).</p>
+<p>The field has a similar tolerance. If the field in every magnet were
+too high by <span class="math inline">\(\Delta B/B\)</span> at fixed
+momentum, the particles would behave as if their momentum were low by
+that fraction, and would move inward by <span
+class="math inline">\(D_x\,\Delta B/B\)</span>: 38 mm for <span
+class="math inline">\(10^{-3}\)</span> in the example. An error in one
+magnet only also kicks the orbit, and since <span
+class="math inline">\(Q_x &lt; 1\)</span> that kick makes a distortion
+of the closed orbit around the whole ring of a size set by the radius
+(<a href="18-imperfections-and-resonances.html">chapter 18</a>).</p>
+<h3 id="9-the-wall-of-the-weak-focusing-ring">9. The wall of the
+weak-focusing ring</h3>
+<p>Why did weak-focusing rings get so heavy? Every displacement in
+sections 5 to 8 scales with the radius. The horizontal betatron
+oscillation has a wavelength of <span
+class="math inline">\(2\pi\rho/Q_x\)</span>, more than the
+circumference. An injection error of angle <span
+class="math inline">\(\theta\)</span> grows into an oscillation of
+amplitude about <span class="math inline">\(\rho\,\theta/Q_x\)</span>:
+the motion is <span class="math inline">\(x = A\sin(Q_xs/\rho)\)</span>,
+whose slope at the start is <span class="math inline">\(x&#39; =
+AQ_x/\rho\)</span>, and setting that equal to <span
+class="math inline">\(\theta\)</span> gives <span
+class="math inline">\(A = \rho\theta/Q_x\)</span>. The dispersion is
+<span class="math inline">\(\rho/(1-n)\)</span>. A field error makes an
+orbit distortion proportional to <span
+class="math inline">\(\rho\)</span>. With a fixed technology (fields of
+about 1.5 T, field errors of about <span
+class="math inline">\(10^{-3}\)</span>, injection spreads of a fraction
+of a per cent), the aperture needed grows in proportion to the
+radius.</p>
+<p>The radius in turn grows in proportion to the momentum at a fixed
+peak field. So the gap’s width and height each grow as <span
+class="math inline">\(p\)</span>, its cross-section as <span
+class="math inline">\(p^2\)</span>, and the ring’s length as <span
+class="math inline">\(p\)</span>. The volume of field, and the iron and
+copper around it, grow as</p>
+<p><span class="math display">\[
+M \propto \rho \times (\text{aperture})^2 \propto p^3.
+\]</span></p>
+<p><strong>Worked numbers.</strong> The Cosmotron (3.3 GeV, <span
+class="math inline">\(p = 4.13\)</span> GeV/<span
+class="math inline">\(c\)</span>) had 288 magnet blocks of about 5.7
+tons each, about 1,640 tons (Livingston and Blewett, section 13-4).
+Scaling as <span class="math inline">\(p^3\)</span> predicts 8,200 tons
+for the Bevatron (<span class="math inline">\(p = 7.08\)</span>
+GeV/<span class="math inline">\(c\)</span>), which had about 10,000
+tons, and 30,100 tons for the Dubna synchrophasotron (<span
+class="math inline">\(p = 10.90\)</span> GeV/<span
+class="math inline">\(c\)</span>), which had 36,000 tonnes (figure
+15.7). The exponents fitted between pairs of these machines are 3.4
+(Cosmotron to Bevatron), 3.0 (Bevatron to Dubna) and 3.2 (Cosmotron to
+Dubna): the later machines were somewhat heavier than <span
+class="math inline">\(p^3\)</span> scaling from the Cosmotron predicts,
+consistent with their being designed more conservatively.</p>
+<p>The aperture itself was the gamble. Brookhaven’s Cosmotron team chose
+pole faces 36 in (0.91 m) wide with a 9 in (0.23 m) gap, for a vacuum
+chamber 30 in by 6 in inside (Livingston and Blewett, section 13-3;
+Wilson gives about 1.2 m by 0.22 m). Berkeley began with a far larger
+one, as the next section tells. Ten gigaelectronvolts at 36,000 tonnes
+was close to what a laboratory would build. A 30 GeV weak-focusing ring
+would by the same scaling need about 23 times the Dubna mass, which
+nobody would build.</p>
+<p><img src="figures/15-mass-scaling.svg" loading="lazy"
+alt="Magnet mass against momentum" /></p>
+<p><em>Figure 15.7. The magnets of the three great weak-focusing proton
+synchrotrons against their top momentum, on logarithmic axes, where a
+power law is a straight line of slope equal to its exponent (<a
+href="F1-calculus.html#4-the-exponential-and-the-logarithm">F1, section
+4</a>). Dashed: <span class="math inline">\(M \propto p^3\)</span>
+through the Cosmotron’s 1,640 tons. The two later machines lie a little
+above it. The open circle is a 30 GeV ring scaled as <span
+class="math inline">\(p^3\)</span> from Dubna, about <span
+class="math inline">\(8\times10^5\)</span> tonnes.</em></p>
+<h3 id="10-injection-and-the-shrinking-beam">10. Injection and the
+shrinking beam</h3>
+<p>The ring cannot accept particles at rest. At injection the field must
+be large enough to be well defined: above the remanent field of the iron
+and the distortions of eddy currents, both of which are fixed in
+absolute terms and so are worst, relatively, at the lowest field. A
+higher injection energy raises the field at injection, and it also
+reduces the space-charge forces (the mutual electric repulsion of the
+beam’s own particles) in an intense beam (<a
+href="22-intensity-limits.html">chapter 22</a>). So proton synchrotrons
+are fed by an injector: the Bevatron by a Cockcroft-Walton generator and
+a linear accelerator at about 10 MeV, the Dubna synchrophasotron by a
+linear accelerator of about 9 MeV, Nimrod by a 600 keV pre-injector and
+a 15 MeV linear accelerator (Gray, 1967), the Cosmotron by an
+electrostatic generator. The Bevatron’s quarter-scale model was fed by a
+small cyclotron with 1 MeV protons, brought in by magnetic and
+electrostatic deflectors (Lawrence’s Nobel lecture). The early electron
+synchrotrons started their electrons as betatrons, with a small flux
+bar, and switched to the cavity at a few MeV.</p>
+<p>The injected pulse is long compared with a turn. While the field is
+still rising slowly, the injector fills the ring over many turns, each
+new turn entering beside the last; the beam then fills the horizontal
+aperture, and only particles that land inside the stable region in phase
+and energy when the RF is switched on are captured. The rest are lost in
+the first milliseconds. The techniques of injection and extraction are
+in <a href="21-injection-and-extraction.html">chapter 21</a>.</p>
+<p>The beam is largest at injection. As the momentum rises, the betatron
+amplitude shrinks as <span class="math inline">\(p^{-1/2}\)</span>, the
+adiabatic damping derived for the betatron in <a
+href="11-the-betatron.html#6-the-adiabatic-shrinking-of-the-oscillations">chapter
+11, section 6</a> (Landau and Lifshitz, volume 1, section 49): the
+oscillation’s action, its energy divided by its frequency, stays fixed
+while the guide field changes slowly, and with it the area the beam
+occupies in the plane of <span class="math inline">\(x\)</span> against
+<span class="math inline">\(x&#39;\)</span>; as <span
+class="math inline">\(p\)</span> rises the restoring force stiffens and
+the amplitude falls. Here <span
+class="math inline">\(\sqrt{7.076/0.1374} = 7.18\)</span>. From 10 MeV
+to 6.2 GeV in the Bevatron the amplitude falls by a factor of 7.2, to
+0.139 of its value at injection. So the aperture is set by the injected
+beam, and the sections of the cycle near injection are where beam is
+lost.</p>
+<h3
+id="pre-requisite-continued-diodes-rectifiers-and-capacitor-networks">Pre-requisite
+(continued): Diodes, rectifiers and capacitor networks</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> <a
+href="05-the-voltage-multiplier.html#pre-requisite-diodes-rectifiers-and-capacitor-networks">Chapter
+5</a> taught the diode, a valve that passes current one way only, and
+the rectifier that turns AC into DC for a capacitor. This section turns
+to the other kind of load, a large inductance such as a ring magnet. It
+shows how a polyphase rectifier turns an alternator’s AC into DC for the
+magnet, how a controlled valve, fired at a chosen moment, sets the
+average voltage, and how the same valves, fired late, make the voltage
+negative while the current keeps flowing, so that the magnet’s energy
+goes back to the alternator. The next section uses all of this for the
+motor-generator sets and ignitrons of the Bevatron. Taught from
+Livingston and Blewett, §12-5 (magnet excitation and ignitrons) and
+§13-5 (the Cosmotron’s pulse power supply); Chao and others,
+<em>Handbook</em>, §6.11 (power converters for magnets: the four
+quadrants, thyristor rectifiers, 12-pulse circuits and the return of
+energy to the mains). The books state the controlled rectifier’s output
+without deriving it; the derivation here is the standard one.</p>
+</blockquote>
+<p><strong>The load.</strong> A ring magnet is an inductance <span
+class="math inline">\(L\)</span> (H) with the resistance <span
+class="math inline">\(R\)</span> (<span
+class="math inline">\(\Omega\)</span>) of its copper. The voltage across
+it is</p>
+<p><span class="math display">\[
+V = L\frac{dI}{dt} + RI.
+\]</span></p>
+<p>Its time constant <span class="math inline">\(L/R\)</span> is seconds
+long. The Cosmotron’s 48-turn coil had <span class="math inline">\(R =
+0.114\ \Omega\)</span> (Livingston and Blewett, §13-5, give <span
+class="math inline">\(R = 4.95\times10^{-5}N^2\)</span> ohms), so with
+<span class="math inline">\(L\)</span> between 0.25 and 0.80 H, <span
+class="math inline">\(L/R\)</span> is 2 to 7 s. Against an alternator at
+60 Hz, whose period is 17 ms, the current is a smooth quantity: it
+cannot follow the wiggles of the voltage, only its average. The voltage
+applied over a cycle of the alternator sets the change of current, <span
+class="math inline">\(\Delta I = (\bar{V} - RI)\,\Delta t/L\)</span>. So
+what matters is the average output voltage of the rectifier, and the
+current, held up by the inductance, flows steadily in one direction.</p>
+<p><strong>The polyphase rectifier.</strong> An alternator with <span
+class="math inline">\(m\)</span> phases gives <span
+class="math inline">\(m\)</span> sinusoidal voltages of peak <span
+class="math inline">\(\hat{V}\)</span> (V), each shifted by <span
+class="math inline">\(2\pi/m\)</span> from the next. Connect each
+through a valve to the magnet. At any moment the valve on the most
+positive phase conducts and the others are reverse biased, as for the
+diode of chapter 5. Each phase takes its turn for a fraction <span
+class="math inline">\(1/m\)</span> of a cycle, centred on its crest.
+Measuring the angle <span class="math inline">\(\theta = \omega
+t\)</span> from that crest, the output is <span
+class="math inline">\(\hat{V}\cos\theta\)</span> for <span
+class="math inline">\(-\pi/m &lt; \theta &lt; \pi/m\)</span>, and the
+pattern repeats <span class="math inline">\(m\)</span> times a cycle.
+Its average is</p>
+<p><span class="math display">\[
+V_{d0} = \frac{m}{2\pi}\int_{-\pi/m}^{\pi/m}\hat{V}\cos\theta\,d\theta =
+\frac{m}{\pi}\sin\frac{\pi}{m}\,\hat{V}.
+\]</span></p>
+<p>For <span class="math inline">\(m = 2\)</span>, full-wave
+rectification of one phase, <span class="math inline">\(V_{d0} =
+2\hat{V}/\pi = 0.637\hat{V}\)</span>. For <span class="math inline">\(m
+= 6\)</span>, <span class="math inline">\(0.955\hat{V}\)</span>; for
+<span class="math inline">\(m = 12\)</span>, <span
+class="math inline">\(0.989\hat{V}\)</span>. (For a bridge, <span
+class="math inline">\(\hat{V}\)</span> is the peak of the voltage
+between the lines selected, not of one phase.) More phases give a
+flatter output: the voltage never falls far from the crest before the
+next phase takes over.</p>
+<p><strong>The controlled valve.</strong> Now replace each diode by a
+valve that does not conduct when its anode goes positive, but only when
+it is fired by a pulse; once on, it stays on until its current tries to
+reverse. The mercury-arc ignitron of the 1950s was such a valve: a pool
+of mercury as cathode, in which a pulse on an igniter electrode strikes
+an arc. Its modern successor is the thyristor. Fire each valve a delay
+angle <span class="math inline">\(\alpha_d\)</span> after the moment at
+which a diode would have taken over, and take the handover from one
+valve to the next as instantaneous. The previous valve keeps conducting
+until then, because its current, held up by the magnet’s inductance, has
+nowhere else to go. Each phase now supplies the output from <span
+class="math inline">\(-\pi/m + \alpha_d\)</span> to <span
+class="math inline">\(\pi/m + \alpha_d\)</span>, and the average is</p>
+<p><span class="math display">\[
+\bar{V} =
+\frac{m}{2\pi}\int_{-\pi/m+\alpha_d}^{\pi/m+\alpha_d}\hat{V}\cos\theta\,d\theta
+= \frac{m\hat{V}}{2\pi}\left[\sin\!\left(\frac{\pi}{m}+\alpha_d\right) -
+\sin\!\left(\alpha_d - \frac{\pi}{m}\right)\right] = V_{d0}\cos\alpha_d,
+\]</span></p>
+<p>using <span class="math inline">\(\sin(A+B) - \sin(B-A) = 2\cos B\sin
+A\)</span>. The firing angle is a dial: <span
+class="math inline">\(\alpha_d = 0\)</span> gives the full <span
+class="math inline">\(V_{d0}\)</span>, <span
+class="math inline">\(\alpha_d = 90^\circ\)</span> gives zero on
+average.</p>
+<p><strong>Inversion.</strong> Past <span
+class="math inline">\(90^\circ\)</span> the average voltage is negative.
+The current cannot reverse, because the valves pass it one way only, and
+it does not need to: the magnet’s inductance keeps it flowing in the
+same direction while the negative voltage brings it down. The power
+delivered to the magnet, <span class="math inline">\(\bar{V}I\)</span>,
+is now negative. Energy flows out of the magnet’s field, through the
+valves, into the alternator’s windings, against their voltage, which
+turns the alternator into a motor. In the language of Chao and others
+(§6.11), the converter works in two quadrants: current of one sign,
+voltage of either. The firing angle cannot be pushed all the way to
+<span class="math inline">\(180^\circ\)</span>: each valve must hand its
+current to the next while the next one’s voltage is still the higher,
+which takes time, so a margin is kept short of <span
+class="math inline">\(180^\circ\)</span>.</p>
+<p><img src="figures/15-rectifier.svg" loading="lazy"
+alt="Output of a controlled six-phase rectifier" /></p>
+<p><em>Figure 15.8. The output of a controlled rectifier with <span
+class="math inline">\(m = 6\)</span> phases (the Cosmotron’s had 12; six
+show the shape more clearly). Grey: the six phase voltages <span
+class="math inline">\(\hat{V}\cos(\omega t - 60^\circ k)\)</span>. Red:
+the voltage on the magnet, each valve conducting for <span
+class="math inline">\(60^\circ\)</span> from its firing. Dashed: the
+average <span class="math inline">\(V_{d0}\cos\alpha_d\)</span> with
+<span class="math inline">\(V_{d0} = 0.955\hat{V}\)</span>. At <span
+class="math inline">\(\alpha_d = 0\)</span> the output rides the crests;
+at <span class="math inline">\(60^\circ\)</span> each valve is fired
+later and the average halves; at <span
+class="math inline">\(120^\circ\)</span> the output is negative
+throughout and the magnet returns energy, while its current keeps
+flowing the same way.</em></p>
+<p>This is the motor-generator cycle of the large weak-focusing rings
+(Livingston and Blewett, §13-5). During the rise the valves rectify and
+the alternator, driven by its flywheel, slows as it gives up energy. At
+the top the firing is shifted past <span
+class="math inline">\(90^\circ\)</span>; the valves invert, the magnet
+drives the alternator as a motor, and the flywheel speeds up again. Only
+the losses come from the mains.</p>
+<p><em>At work: the Cosmotron’s cycle.</em> Its alternator was a
+12-phase, 60 Hz machine feeding 24 ignitrons. The voltage at the coil
+started at 5400 V and fell to 3700 V as the flywheel slowed over the 1 s
+rise; the current reached 7000 A. The ignitrons then reversed it to
+<span class="math inline">\(-2800\)</span> V, rising in size to about
+<span class="math inline">\(-4300\)</span> V, and the current returned
+to zero in 1.15 s. The cycle repeated every 5 s (Livingston and Blewett,
+§13-5). At the top the power into the magnet was <span
+class="math inline">\(3700 \times 7000 = 25.9\)</span> MW, the “26,000
+kVA” of the design. Reversing the voltage, not the current, was the
+whole trick.</p>
+<p><strong>Exercise C1.</strong> The Cosmotron’s current rose roughly
+linearly to 7000 A in 1 s and fell linearly to zero in 1.15 s, every 5
+s, through <span class="math inline">\(R = 0.114\ \Omega\)</span>.
+Estimate the average power lost in the copper. Livingston and Blewett
+give about 800 kW.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>For a current rising linearly from 0 to <span
+class="math inline">\(I\)</span> in a time <span
+class="math inline">\(\tau\)</span>, <span class="math inline">\(\int
+I(t)^2\,dt = I^2\tau/3\)</span>. The rise and fall together give <span
+class="math inline">\(\int I^2\,dt = 7000^2 \times 2.15/3 =
+3.51\times10^7\)</span> A<span class="math inline">\(^2\)</span> s, so
+the energy lost is <span class="math inline">\(0.114 \times
+3.51\times10^7 = 4.0\)</span> MJ a cycle, or 801 kW averaged over 5 s.
+The agreement with the book’s 800 kW shows that the copper, not the
+magnet’s stored energy, is what the mains pays for.</p>
+</details>
+<p><strong>Exercise C2.</strong> To hold the Cosmotron’s field flat at
+7000 A, the supply must give only the voltage across the copper. If the
+rectifier’s full output at that moment is <span
+class="math inline">\(V_{d0} = 4200\)</span> V, at what firing angle
+must the valves run?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>On the flat top <span class="math inline">\(dI/dt = 0\)</span>, so
+<span class="math inline">\(V = RI = 0.114 \times 7000 = 798\)</span> V.
+Then <span class="math inline">\(\cos\alpha_d = 798/4200 =
+0.190\)</span> and <span class="math inline">\(\alpha_d =
+79^\circ\)</span>. Close to <span
+class="math inline">\(90^\circ\)</span>: a flat top needs only a little
+of the alternator’s voltage.</p>
+</details>
+<p><strong>Exercise C3.</strong> The Bevatron’s magnet had <span
+class="math inline">\(L \approx 2.2\)</span> H and its supply gave up to
+15 kV at 8400 A. Ignoring resistance, how long does the current take to
+rise to 8400 A at full voltage, and how long to fall to zero again at
+<span class="math inline">\(-15\)</span> kV? How much energy goes in and
+comes back?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(dI/dt = V/L = 15000/2.2 = 6.8\)</span>
+kA/s, so 8400 A takes 1.23 s, and the fall at <span
+class="math inline">\(-15\)</span> kV takes the same. The energy is
+<span class="math inline">\(\tfrac12 LI^2 = \tfrac12 \times 2.2 \times
+8400^2 = 78\)</span> MJ, the figure of section 11. The peak power is
+<span class="math inline">\(15\ \text{kV} \times 8400\ \text{A} =
+126\)</span> MW, first out of the flywheels and then back into them.</p>
+</details>
+<p><strong>Exercise C4.</strong> The output of an <span
+class="math inline">\(m\)</span>-pulse rectifier is not flat: its
+largest ripple component is at <span class="math inline">\(m\)</span>
+times the alternator frequency, with amplitude <span
+class="math inline">\(2V_{d0}/(m^2 - 1)\)</span> at <span
+class="math inline">\(\alpha_d = 0\)</span> (a Fourier coefficient of
+the repeated cosine arch, which can be checked numerically). For the
+Cosmotron’s 12 phases at 60 Hz and <span class="math inline">\(V_{d0} =
+5400\)</span> V, what current ripple does it drive through <span
+class="math inline">\(L = 0.47\)</span> H, and how does that compare
+with the current at injection, about 160 A (7000 A scaled by 31.6 mT/1.4
+T)?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The ripple voltage is <span class="math inline">\(2 \times 5400/143 =
+75.5\)</span> V at <span class="math inline">\(12 \times 60 =
+720\)</span> Hz, <span class="math inline">\(\omega = 4524\)</span>
+rad/s. Through the inductance it drives <span
+class="math inline">\(75.5/(4524 \times 0.47) = 0.036\)</span> A, a
+fraction <span class="math inline">\(2.2\times10^{-4}\)</span> of 160 A.
+The magnet’s inductance is itself the filter. At larger firing angles
+the ripple grows, which is one reason precise rings add filters and use
+12 or more pulses.</p>
+</details>
+<h3 id="11-the-magnet-cycle-its-energy-and-its-power">11. The magnet
+cycle, its energy and its power</h3>
+<p>The ring magnet is a large inductance. Its stored energy at peak
+field is <span class="math inline">\(\frac{1}{2}LI^2 = \int
+B^2/(2\mu_0)\,dV\)</span>, most of it in the gap.</p>
+<p><strong>Worked numbers (Bevatron).</strong> At 1.549 T the energy
+density in the gap is <span class="math inline">\(B^2/(2\mu_0) =
+0.954\)</span> MJ/m<span class="math inline">\(^3\)</span>. A gap 1 ft
+by 4 ft (0.372 m<span class="math inline">\(^2\)</span>) along 95.8 m of
+arc holds 35.6 m<span class="math inline">\(^3\)</span>, so the gap
+alone stores 34 MJ. Evans, Frias and Hordos (1971) give the supply’s
+maximum as 15,000 V at 8,400 A, with the stored energy in the magnet
+peaking at 78 MJ; fringe fields and the field in and around the coils
+account for the difference. The implied inductance is <span
+class="math inline">\(2\times78\ \mathrm{MJ}/(8400\ \mathrm{A})^2 =
+2.2\)</span> H. At full voltage and current the supply’s output is 126
+MW, and the energy goes in over about a second.</p>
+<p>Taking 78 MJ from the public supply in a second, and giving it back
+in the next second, would swing the grid by about 100 MW every few
+seconds. The solution in every large weak-focusing ring was a
+motor-generator set with a flywheel. An induction motor of modest power
+keeps a heavy flywheel turning. On the rising field the flywheel’s
+kinetic energy drives an alternator, whose output is rectified into the
+magnet. At the top the rectifiers are switched to invert: the magnet’s
+energy drives the alternator as a motor and speeds the flywheel up
+again. Only the losses come from the mains. The Bevatron had two such
+sets, with flywheels of 65 to 70 tons (the laboratory’s history gives
+65; the engineering papers of 1969 and 1971 give 70), driven by two
+3,600 horsepower induction motors that limited the average loss to about
+6 MW (Evans, Frias and Hordos). Holding the field flat at the top cost
+about 13 MW in the copper and fixed losses (Salsig and Vogel, 1969).
+Nimrod’s two 60 MVA motor-alternator-flywheel sets fed mercury-arc
+converters (Brooks and Reed, 1967), and its load rose from zero to
+100,000 horsepower in 0.75 s (Wilson).</p>
+<p>The rectifiers were mercury-arc valves. The ignitron, a mercury-pool
+rectifier fired by a pulse on an igniter electrode, could be timed to
+the alternator’s waveform, so it could rectify or invert on command. The
+Bevatron’s eight high-voltage cubicles held ignitrons in pairs carrying
+about 2,000 A each (Evans, Frias and Hordos); Lawrence’s Nobel lecture
+of 1951 already shows the ignitrons and switchgear of its
+motor-generator plant.</p>
+<h3
+id="pre-requisite-continued-fields-in-conductors-skin-depth-surface-resistance">Pre-requisite
+(continued): Fields in conductors, skin depth, surface resistance</h3>
+<blockquote>
+<p><strong>Pre-requisite.</strong> <a
+href="13-rf-cavities-and-power.html#pre-requisite-fields-in-conductors-skin-depth-surface-resistance">Chapter
+13</a> gave Ohm’s law in a conductor, <span
+class="math inline">\(\mathbf{J} =
+\sigma\boldsymbol{\mathcal{E}}\)</span> with <span
+class="math inline">\(\sigma\)</span> the conductivity in S/m, and the
+currents a radio-frequency field drives on a cavity’s walls, and its
+section 3 found the skin depth of a copper wall from Maxwell’s
+equations. This section takes the same law to a slowly changing field in
+iron. It derives the power a field dissipates per cubic metre, <span
+class="math inline">\(\sigma\mathcal{E}^2\)</span>; shows that the field
+obeys a diffusion equation inside a conductor, so that a changing field
+reaches only a skin depth <span
+class="math inline">\(\sqrt{2/(\omega\mu\sigma)}\)</span> into it, with
+<span class="math inline">\(\mu\)</span> including iron’s large
+permeability; and turns that into the rule for laminations. The next
+section uses all three for the eddy currents in a ring magnet. As in
+that section, <span class="math inline">\(\sigma\)</span> here is a
+conductivity, and <span class="math inline">\(\delta_s\)</span> is used
+for the skin depth to keep it apart from the momentum deviation <span
+class="math inline">\(\delta\)</span>. Taught from Tong,
+<em>Electromagnetism</em>, §4.1.3 (resistance, Ohm’s law and Joule
+heating) and §8.6.2 (fields in conductors and the skin depth);
+Livingston and Blewett, §13-4 (the Cosmotron’s laminated magnet); Chao
+and others, <em>Handbook</em>, §7.2.1 (laminated cores, their thickness
+set by the ramp rate) and §7.2.3.3 (eddy currents and the skin depth in
+iron).</p>
+</blockquote>
+<p><strong>The power.</strong> An electric field <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> (written <span
+class="math inline">\(\mathcal{E}\)</span>, as in <a
+href="F4-electromagnetism.html#3-the-electric-field-and-superposition">F4</a>,
+to keep it apart from the energy <span class="math inline">\(E\)</span>)
+pushes on the charges in a conductor. If the charge density of the
+carriers is <span class="math inline">\(\rho_q\)</span> (C/m<span
+class="math inline">\(^3\)</span>) and they drift at velocity <span
+class="math inline">\(\mathbf{v}\)</span>, the force on a cubic metre of
+them is <span
+class="math inline">\(\rho_q\boldsymbol{\mathcal{E}}\)</span>, and the
+rate at which the field does work on them is <span
+class="math inline">\(\rho_q\boldsymbol{\mathcal{E}}\cdot\mathbf{v} =
+\mathbf{J}\cdot\boldsymbol{\mathcal{E}}\)</span>, since <span
+class="math inline">\(\mathbf{J} = \rho_q\mathbf{v}\)</span>. The
+carriers do not speed up: they hand the energy to the lattice in
+collisions, as heat. With Ohm’s law,</p>
+<p><span class="math display">\[
+\frac{P}{V} = \mathbf{J}\cdot\boldsymbol{\mathcal{E}} =
+\sigma\mathcal{E}^2 = \frac{J^2}{\sigma}\quad(\text{W/m}^3).
+\]</span></p>
+<p>Integrated over a wire of length <span
+class="math inline">\(l\)</span> and cross-section <span
+class="math inline">\(A\)</span> carrying current <span
+class="math inline">\(I = JA\)</span>, it gives <span
+class="math inline">\(I^2 l/(\sigma A) = I^2R\)</span>, the Joule
+heating of a resistor (Tong, §4.1.3).</p>
+<p><em>At work.</em> In the next section the field in a sheet of iron,
+changing at <span class="math inline">\(\dot{B}\)</span>, induces an
+electric field <span class="math inline">\(\mathcal{E} =
+\dot{B}x\)</span> at a distance <span class="math inline">\(x\)</span>
+from the mid-plane. In a Cosmotron plate, 12.7 mm thick, at its highest
+rate of rise of 1.6 T/s (Livingston and Blewett, §13-4), <span
+class="math inline">\(\mathcal{E}\)</span> at the surface is <span
+class="math inline">\(1.6 \times 0.00635 = 0.010\)</span> V/m. With
+<span class="math inline">\(\sigma = 10^7\)</span> S/m the power density
+there is <span class="math inline">\(\sigma\mathcal{E}^2 = 1.0\)</span>
+kW/m<span class="math inline">\(^3\)</span>; averaged over the thickness
+it is a third of that, <span class="math inline">\(\sigma
+d^2\dot{B}^2/12 = 344\)</span> W/m<span
+class="math inline">\(^3\)</span>.</p>
+<p><strong>When the eddy currents push back.</strong> That calculation
+assumed that the eddy currents are too weak to change the field that
+drives them. They are not always. Each eddy current makes its own field,
+opposing the change (Lenz), so the field inside the conductor lags
+behind the field at its surface. To see how far it gets, combine three
+laws. Faraday: <span
+class="math inline">\(\nabla\times\boldsymbol{\mathcal{E}} =
+-\partial\mathbf{B}/\partial t\)</span>. Ampère, in matter, without the
+displacement current: <span class="math inline">\(\nabla\times\mathbf{H}
+= \mathbf{J} = \sigma\boldsymbol{\mathcal{E}}\)</span>. And <span
+class="math inline">\(\mathbf{B} = \mu\mathbf{H}\)</span> with <span
+class="math inline">\(\mu = \mu_r\mu_0\)</span>, taken constant.
+Dropping the displacement current is safe in a metal: it is smaller than
+the conduction current by <span
+class="math inline">\(\omega\varepsilon_0/\sigma\)</span>, which for
+iron at 60 Hz is <span class="math inline">\(3\times10^{-16}\)</span>.
+Take the curl of Ampère’s law and use Faraday’s:</p>
+<p><span class="math display">\[
+\nabla\times(\nabla\times\mathbf{B}) =
+\mu\sigma\,\nabla\times\boldsymbol{\mathcal{E}} =
+-\mu\sigma\,\frac{\partial\mathbf{B}}{\partial t}.
+\]</span></p>
+<p>A vector identity, met in <a
+href="13-rf-cavities-and-power.html#pre-requisite-maxwells-equations-and-the-wave-equation">chapter
+13</a> and checked by writing out the components, says <span
+class="math inline">\(\nabla\times(\nabla\times\mathbf{B}) =
+\nabla(\nabla\cdot\mathbf{B}) - \nabla^2\mathbf{B}\)</span>, with <span
+class="math inline">\(\nabla^2\)</span> the Laplacian of <a
+href="F2-vectors.html#12-the-laplacian">F2, section 12</a> acting on
+each component. Since <span class="math inline">\(\nabla\cdot\mathbf{B}
+= 0\)</span>, the left side is <span
+class="math inline">\(-\nabla^2\mathbf{B}\)</span>, and</p>
+<p><span class="math display">\[
+\frac{\partial\mathbf{B}}{\partial t} =
+\frac{1}{\mu\sigma}\,\nabla^2\mathbf{B}.
+\]</span></p>
+<p>This is a diffusion equation, the same as for heat in a solid, and
+the same as the equation <span class="math inline">\(\partial n/\partial
+t = \mathcal{D}\,\partial^2n/\partial x^2\)</span> for the density of a
+gas spreading by random steps in <a
+href="03-vacuum.html#pre-requisite-diffusion-and-fokker-planck">chapter
+3</a>. A field change at the surface soaks inwards, with diffusivity
+<span class="math inline">\(1/(\mu\sigma)\)</span> (m<span
+class="math inline">\(^2\)</span>/s) in place of <span
+class="math inline">\(\mathcal{D}\)</span>. A diffusion goes as the
+square root of time: in a time <span class="math inline">\(t\)</span> it
+reaches a depth of order <span
+class="math inline">\(\sqrt{t/(\mu\sigma)}\)</span>. Two results
+follow.</p>
+<p><strong>The skin depth.</strong> Let the field at the surface of a
+thick conductor, <span class="math inline">\(z = 0\)</span>, oscillate
+as <span class="math inline">\(B_0\cos\omega t\)</span>. Try <span
+class="math inline">\(B = \mathrm{Re}\,[B_0 e^{-\kappa z}e^{i\omega
+t}]\)</span>, the complex-exponential way of writing an oscillation (<a
+href="F5-waves.html#2-eulers-formula">F5, section 2</a>). The time
+derivative brings down <span class="math inline">\(i\omega\)</span> and
+the second derivative in <span class="math inline">\(z\)</span> brings
+down <span class="math inline">\(\kappa^2\)</span>, so the equation
+<span class="math inline">\(i\omega B = \kappa^2B/(\mu\sigma)\)</span>
+gives <span class="math inline">\(\kappa^2 = i\omega\mu\sigma\)</span>.
+And since <span class="math inline">\(\sqrt{i} = (1+i)/\sqrt2\)</span>
+(square it: <span class="math inline">\((1 + 2i + i^2)/2 =
+i\)</span>),</p>
+<p><span class="math display">\[
+\kappa = \frac{1+i}{\delta_s}, \qquad \delta_s =
+\sqrt{\frac{2}{\omega\mu\sigma}},
+\]</span></p>
+<p>taking the root that decays into the metal. So</p>
+<p><span class="math display">\[
+B(z,t) = B_0\,e^{-z/\delta_s}\cos(\omega t - z/\delta_s).
+\]</span></p>
+<p>The field falls by <span class="math inline">\(e\)</span> in each
+skin depth and lags in phase as it goes in. Tong (§8.6.2) reaches the
+same length from waves entering a conductor. The new point for magnets
+is the <span class="math inline">\(\mu\)</span>: iron’s permeability of
+order 1000 shrinks the skin depth by <span
+class="math inline">\(\sqrt{1000} = 32\)</span> against a non-magnetic
+metal of the same conductivity.</p>
+<p><em>At work.</em> Copper (<span class="math inline">\(\sigma =
+5.8\times10^7\)</span> S/m, <span class="math inline">\(\mu_r =
+1\)</span>): 8.5 mm at 60 Hz, 66 μm at 1 MHz. Iron (<span
+class="math inline">\(\sigma = 10^7\)</span> S/m, <span
+class="math inline">\(\mu_r = 1000\)</span>) at 60 Hz: 0.65 mm. Silicon
+steel (<span class="math inline">\(\sigma = 2\times10^6\)</span> S/m,
+<span class="math inline">\(\mu_r = 1000\)</span>) at 60 Hz: 1.45 mm. A
+sheet several skin depths thick carries almost no changing flux in its
+middle.</p>
+<p><strong>The diffusion time.</strong> A ring magnet does not oscillate
+at one frequency; it ramps. The useful number is then how long the field
+takes to soak through a sheet of thickness <span
+class="math inline">\(d\)</span>. For a slab whose two faces are held at
+a new field, the slowest part of the difference between inside and
+outside has the shape <span class="math inline">\(\cos(\pi
+x/d)\)</span>, with <span class="math inline">\(x\)</span> from the
+mid-plane: half a cosine wave, zero at both faces. Put <span
+class="math inline">\(B = \cos(\pi x/d)\,e^{-t/\tau_d}\)</span> into the
+diffusion equation: the left side gives <span
+class="math inline">\(-1/\tau_d\)</span> times <span
+class="math inline">\(B\)</span>, the right side <span
+class="math inline">\(-(\pi/d)^2/(\mu\sigma)\)</span> times <span
+class="math inline">\(B\)</span>, so it decays as <span
+class="math inline">\(e^{-t/\tau_d}\)</span> with</p>
+<p><span class="math display">\[
+\tau_d = \frac{\mu\sigma d^2}{\pi^2}.
+\]</span></p>
+<p>If <span class="math inline">\(\tau_d\)</span> is short compared with
+the ramp, the field inside follows the surface closely and the weak-eddy
+formula of the next section holds. In a steady ramp at rate <span
+class="math inline">\(\dot{B}\)</span>, the diffusion equation has the
+solution in which the whole sheet rises at <span
+class="math inline">\(\dot{B}\)</span>, with the centre lagging the
+faces by a fixed amount:</p>
+<p><span class="math display">\[
+B_{face} - B_{centre} = \frac{\mu\sigma\dot{B}\,d^2}{8}.
+\]</span></p>
+<p>To be sure of this, put <span class="math inline">\(\partial
+B/\partial t = \dot{B}\)</span> everywhere in the diffusion equation:
+<span class="math inline">\(d^2B/dx^2 = \mu\sigma\dot{B}\)</span>, a
+parabola, whose rise from the centre to a face at <span
+class="math inline">\(x = d/2\)</span> is <span
+class="math inline">\(\mu\sigma\dot{B}d^2/8\)</span>. Divided by <span
+class="math inline">\(\mu\)</span>, the same parabola says that the
+field <span class="math inline">\(H\)</span> at the faces must exceed
+that at the centre by <span
+class="math inline">\(\sigma\dot{B}d^2/8\)</span>: the eddy currents
+behave like a winding opposing the main one, and their opposition is set
+by <span class="math inline">\(\dot{B}\)</span>, not by <span
+class="math inline">\(B\)</span>. In a magnet with a gap there is a
+twist. The gap and the current fix the total flux the iron carries, so
+the eddy currents cannot reduce it much; they redistribute it. The field
+near the faces runs ahead of the average and the centre falls behind, by
+the same parabola, and near the faces this can drive the iron towards
+saturation (Halbach and Schlueter, in Chao and others, §7.2.3.3).</p>
+<p><em>At work.</em> The Cosmotron’s half-inch plates (Livingston and
+Blewett, §13-4, who say the choice was justified by a detailed analysis
+checked on models): with <span class="math inline">\(\sigma =
+10^7\)</span> S/m and <span class="math inline">\(\mu_r = 1000\)</span>,
+as at low field, <span class="math inline">\(\tau_d = 0.21\)</span> s,
+not small against the 1 s rise, and at 1.6 T/s the centre would lag the
+faces by 0.41 T. At high field, where the incremental <span
+class="math inline">\(\mu_r\)</span> is nearer 100, <span
+class="math inline">\(\tau_d = 21\)</span> ms and the lag is 0.04 T. The
+opposing field is <span class="math inline">\(\sigma\dot{B}d^2/8 =
+323\)</span> A/m; along an assumed 3 m of iron that is about 970
+ampere-turns, against 5750 for the gap at the 31.6 mT injection field.
+Such numbers, largest at low field and different in the pole tips and in
+the back of the yoke, are why eddy currents distort the field shape at
+injection, and why the magnet was laminated at all.</p>
+<p><strong>Exercise D1.</strong> Show that the power density <span
+class="math inline">\(\sigma\mathcal{E}^2\)</span>, with <span
+class="math inline">\(\mathcal{E} = \dot{B}x\)</span>, averaged across a
+sheet of thickness <span class="math inline">\(d\)</span>, is <span
+class="math inline">\(\sigma d^2\dot{B}^2/12\)</span>, and find it for a
+0.35 mm silicon-steel lamination (<span class="math inline">\(\sigma =
+2\times10^6\)</span> S/m) at a steady 1.6 T/s.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The average of <span class="math inline">\(x^2\)</span> over <span
+class="math inline">\(-d/2 &lt; x &lt; d/2\)</span> is <span
+class="math inline">\((1/d)\int x^2\,dx = (1/d)(2/3)(d/2)^3 =
+d^2/12\)</span>. So <span
+class="math inline">\(\langle\sigma\mathcal{E}^2\rangle =
+\sigma\dot{B}^2d^2/12\)</span>. For the lamination, <span
+class="math inline">\(2\times10^6 \times 1.6^2 \times
+(3.5\times10^{-4})^2/12 = 0.052\)</span> W/m<span
+class="math inline">\(^3\)</span>, against 344 W/m<span
+class="math inline">\(^3\)</span> for the Cosmotron’s 12.7 mm iron plate
+at the same rate: a factor of 1300 from the square of the thickness and
+5 from the conductivity.</p>
+</details>
+<p><strong>Exercise D2.</strong> A ring is to be ramped from injection
+to top field in about 1 s. Estimate the diffusion time of a 50 mm solid
+iron plate (<span class="math inline">\(\sigma = 10^7\)</span> S/m) for
+<span class="math inline">\(\mu_r = 1000\)</span> and <span
+class="math inline">\(\mu_r = 100\)</span>. Can the weak-eddy loss
+formula be trusted for it?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\tau_d = \mu_r\mu_0\sigma d^2/\pi^2 =
+1000 \times 1.257\times10^{-6} \times 10^7 \times 0.0025/9.87 =
+3.2\)</span> s for <span class="math inline">\(\mu_r = 1000\)</span>,
+and 0.32 s for <span class="math inline">\(\mu_r = 100\)</span>. At low
+field the plate’s interior would lag the ramp by seconds; only at high
+field, where the permeability has fallen, does the field soak through
+within the rise. The formula <span class="math inline">\(\sigma
+d^2\dot{B}^2/12\)</span> is then not to be trusted at low field: the
+loss it gives is small, but the field lag, which distorts the field at
+injection, is the larger problem.</p>
+</details>
+<p><strong>Exercise D3.</strong> At what frequency is the skin depth of
+copper equal to the 12.7 mm thickness of a Cosmotron plate? What does
+that say about a copper vacuum chamber wall 2 mm thick in a magnet
+ramped in 1 s?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\delta_s = d\)</span> gives <span
+class="math inline">\(\omega = 2/(\mu_0\sigma d^2) =
+2/(1.257\times10^{-6} \times 5.8\times10^7 \times 1.613\times10^{-4}) =
+170\)</span> rad/s, <span class="math inline">\(f = 27\)</span> Hz. For
+a 2 mm wall, <span class="math inline">\(\tau_d = \mu_0\sigma d^2/\pi^2
+= 1.257\times10^{-6} \times 5.8\times10^7 \times 4\times10^{-6}/9.87 =
+30\)</span> μs, so the field soaks through at once, and the weak-eddy
+picture holds. The wall’s eddy currents are then simply proportional to
+<span class="math inline">\(\dot{B}\)</span> and to the width of the
+wall they circulate round, which is why the next section says they
+distort the field most where the chamber is widest, and why early rings
+used glass or resin chambers.</p>
+</details>
+<h3 id="12-eddy-currents-and-laminated-iron">12. Eddy currents and
+laminated iron</h3>
+<p>A changing field induces an electric field in any conductor it
+threads, by Faraday’s law (Landau and Lifshitz, volume 2, section 26),
+and the current that flows dissipates power and makes its own field.
+Take a sheet of iron of thickness <span class="math inline">\(d\)</span>
+(m) and conductivity <span class="math inline">\(\sigma\)</span> (S/m;
+in this section only, <span class="math inline">\(\sigma\)</span> is a
+conductivity, not a cross-section or a beam size), with the field
+changing at <span class="math inline">\(\dot{B}\)</span> in the plane of
+the sheet. The field threads loops in the cross-section; for a sheet
+much wider than it is thick, the induced electric field runs along the
+sheet, perpendicular to <span class="math inline">\(\mathbf{B}\)</span>,
+and grows linearly across the thickness: <span
+class="math inline">\(\mathcal{E}(x) = \dot{B}x\)</span>, with <span
+class="math inline">\(x\)</span> measured from the mid-plane, if the
+eddy currents are too weak to change the field. The step is Faraday’s
+law (<a
+href="F4-electromagnetism.html#14-induction-faraday-and-lenz">F4,
+section 14</a>) around a long rectangular loop of length <span
+class="math inline">\(\ell\)</span> in the sheet, its two long sides at
+<span class="math inline">\(+x\)</span> and <span
+class="math inline">\(-x\)</span>. It encloses the flux <span
+class="math inline">\(B \cdot 2x\ell\)</span>, which changes at <span
+class="math inline">\(2x\ell\dot{B}\)</span>. By symmetry the field
+along the two long sides is equal and opposite, so they add round the
+loop, and the short ends contribute little: <span
+class="math inline">\(2\mathcal{E}\ell = 2x\ell\dot{B}\)</span>, so
+<span class="math inline">\(\mathcal{E} = \dot{B}x\)</span>. The current
+density is <span class="math inline">\(\sigma\dot{B}x\)</span> and the
+power per unit volume, averaged over the thickness, is</p>
+<p><span class="math display">\[
+\frac{P}{V} = \frac{\sigma\dot{B}^2}{d}\int_{-d/2}^{d/2}x^2\,dx =
+\frac{\sigma d^2\dot{B}^2}{12}.
+\]</span></p>
+<p>The loss grows as the square of the thickness. Cutting the iron into
+thin insulated laminations divides it.</p>
+<p><strong>Worked numbers.</strong> For iron, <span
+class="math inline">\(\sigma \approx 10^7\)</span> S/m. At the
+Bevatron’s 1 T/s, a 1 mm sheet loses 0.83 W/m<span
+class="math inline">\(^3\)</span>, and a 50 mm plate 2.1 kW/m<span
+class="math inline">\(^3\)</span>: slow proton rings could use thick
+plates. For a magnet cycled at 60 Hz with a 1 T peak (an illustration
+for a fast electron ring), <span class="math inline">\(B = \sin\omega
+t\)</span> tesla gives <span class="math inline">\(\dot{B} =
+\omega\cos\omega t\)</span>, and since the mean of <span
+class="math inline">\(\cos^2\)</span> over a cycle is <span
+class="math inline">\(1/2\)</span>, the mean of <span
+class="math inline">\(\dot{B}^2\)</span> is <span
+class="math inline">\((2\pi\cdot60\cdot1)^2/2\)</span>; silicon steel
+(<span class="math inline">\(\sigma \approx 2\times10^6\)</span> S/m) in
+0.35 mm sheets loses 1.5 kW/m<span class="math inline">\(^3\)</span>,
+while 25 mm plate would, by the formula, lose 7.4 MW/m<span
+class="math inline">\(^3\)</span>. The formula has in fact failed there:
+the eddy currents screen the field, which then penetrates only a skin
+depth <span class="math inline">\(\sqrt{2/(\omega\mu\sigma)}\)</span>,
+about 1.5 mm for <span class="math inline">\(\mu_r = 1000\)</span> at 60
+Hz. Laminations must be thinner than the skin depth, or the inside of
+the iron never sees the field.</p>
+<p>The vacuum chamber is the other conductor in the gap. Eddy currents
+in a metal chamber make a field of their own, proportional to <span
+class="math inline">\(\dot{B}\)</span>, which is largest where the wall
+is widest and so distorts the field shape and the field index during the
+rise. Early rings used chambers of non-conductors: the General Electric
+70 MeV ring a glass one, which let its synchrotron light be seen; Nimrod
+an epoxy-resin and glass-cloth laminate (Gray). McMillan’s memoir names
+the control of eddy currents among the problems of the Berkeley electron
+ring.</p>
+<h3 id="13-the-frequency-sweep-and-the-tunable-cavity">13. The frequency
+sweep and the tunable cavity</h3>
+<p>A proton ring needs a gap voltage of a few kilovolts whose frequency
+follows the field over a factor of up to 7, programmed to a few parts in
+<span class="math inline">\(10^4\)</span>. A resonant circuit gives a
+large voltage for little power, but resonates at one frequency, <span
+class="math inline">\(\omega = 1/\sqrt{LC_{cav}}\)</span> (here <span
+class="math inline">\(C_{cav}\)</span> is the circuit’s capacitance). To
+sweep it, change <span class="math inline">\(L\)</span> or <span
+class="math inline">\(C_{cav}\)</span> in time.</p>
+<p>The Bevatron’s accelerating electrode, a drift tube between two
+grounded planes, formed the capacitive part of the tuned circuit of the
+final amplifier (Crebbin and Lothrop). The master oscillator’s
+inductance was a ferrite core, saturated by a current proportional to
+the guide field: as the field rose, the core’s permeability fell, the
+inductance fell and the frequency rose, following the field coarsely.
+Fine corrections came from voltage-variable capacitors (whose
+capacitance is set by a control voltage), driven by an open-loop
+correction curve, a radial-position loop and a phase loop (Evans and
+Lothrop, 1971). A ferrite is the right material because it is magnetic
+but an insulator, so it has no eddy currents at megahertz, and its
+incremental permeability falls steeply under a bias field. For a 6.8
+times change in frequency at fixed capacitance, the inductance must
+change by <span class="math inline">\(6.84^2 = 47\)</span> times.</p>
+<p>Birmingham, building the first proton synchrotron to be designed,
+solved the same problem with an uninsulated, highly non-linear inductor
+lowered into a bath of mercury, with fine adjustment by filing the edge
+of a rotating disc to shape (Wilson). The Cosmotron’s cavity was one of
+the first of the modern kind, with ferrite in its inductive part
+(Vretenar). Ferrite-loaded cavities, with a bias current to tune them,
+became the standard for proton rings (<a
+href="13-rf-cavities-and-power.html">chapter 13</a>).</p>
+<h2 id="how-it-was-researched-and-built">How it was researched and
+built</h2>
+<p><strong>Proof at Woolwich, 1946.</strong> Late in the war Kerst had
+built a portable betatron at the request of the research laboratory at
+Woolwich Arsenal in London. Frank Goward read McMillan’s paper and saw
+that a betatron already contains a synchrotron’s first half: a ring
+orbit, a rising field, and electrons already near the speed of light.
+With D. E. Barnes he mounted a quarter-wave resonator of open-weave
+construction, a cage of wires, on the doughnut (Livingston and Blewett,
+section 12-1, place it outside the vacuum chamber) and fed it RF. The
+magnet was driven harder than for a betatron, so that the central flux
+core saturated and betatron acceleration stopped; then the RF took over.
+In August 1946 they accelerated electrons from 4 to 8 MeV, the first
+synchrotron acceleration anywhere (S. Y. Lee’s textbook, in a footnote
+to section 1.I.4, places the work at the Telecommunications Research
+Laboratory rather than Woolwich; the letter’s own address was not seen).
+Their letter in <em>Nature</em> (September 1946) is titled “Experimental
+8 MeV synchrotron for electron acceleration”. Wilson reproduces their
+oscilloscope record: with the RF on, a barely visible blip on the
+beam-loss trace at 80° of the field cycle, where the betatron alone had
+given its beam at 30°.</p>
+<p><strong>General Electric, 1946 to 1947.</strong> At the General
+Electric Research Laboratory in Schenectady, a team with long experience
+of betatrons (F. R. Elder, A. M. Gurewitsch, R. V. Langmuir and H. C.
+Pollock), urged on by John Blewett, built a 70 MeV synchrotron. It ran
+about two months after the Woolwich machine (Wilson). Its vacuum chamber
+was glass. On 24 April 1947 a technician, Floyd Haber, saw a bright arc
+of light in the tube; it was the radiation Blewett had seen in its
+effect on the orbit of the 100 MeV betatron (<a
+href="11-the-betatron.html">chapter 11</a>), now seen with the eye.
+Their letter, “Radiation from electrons in a synchrotron”, was received
+by <em>Physical Review</em> on 7 May 1947. The light is the subject of
+<a href="20-synchrotron-radiation.html">chapter 20</a>.</p>
+<p><strong>Berkeley and Cornell.</strong> McMillan directed the building
+of Berkeley’s 300 MeV electron synchrotron himself. The electrons were
+accelerated as in a betatron to about 2 MeV, then by a cavity, on a 1 m
+radius. Jackson and Panofsky list its problems: a vacuum chamber exposed
+to the radiation, magnets that had to give the right focusing and
+control eddy currents, power supplies that switched large currents to
+time the magnet’s cycle, and the RF. It reached full energy, 320 MeV, in
+January 1949 (Livingston and Blewett, section 12-1). It made pions
+(light, short-lived particles of rest energy about 140 MeV, <a
+href="F7-atoms-and-quanta.html#15-a-map-of-the-particles-the-course-meets">F7,
+section 15</a>) from photons from 1949 (McMillan and Peterson), and
+showed the existence of the neutral pion. At Cornell a 300 MeV electron
+synchrotron was under construction when R. R. Wilson arrived in 1947; he
+began a 1.4 GeV machine there in 1952.</p>
+<p><strong>Birmingham.</strong> Oliphant returned to Birmingham and
+argued for a 1 GeV proton synchrotron with the Department of Scientific
+and Industrial Research. By his own account he was shattered by
+McMillan’s and Veksler’s papers, which nonetheless supported his case.
+The project was slowed by post-war shortages and administration; much of
+the work force was his graduate students. Besides the mercury-bath
+inductor, the magnet’s pulse came from a motor-generator set
+servo-controlled by light reflected from 120 mirrors on a disc (Wilson).
+It accelerated protons to just short of 1 GeV in July 1953, a year after
+Brookhaven’s ring. Livingston and Blewett (section 13-2) call it the
+first proton synchrotron to be started, and Oliphant’s 1943 proposal,
+made to the British Directorate of Atomic Energy, the first proposal of
+a ring magnet with both field and frequency varied.</p>
+<p><strong>The Cosmotron.</strong> The Atomic Energy Commission approved
+a proton synchrotron for the new Brookhaven National Laboratory in April
+1948 (Brookhaven’s history). The maximum energies had been fixed in
+March: about 3 GeV for Brookhaven and about twice that for Berkeley
+(<em>Lawrence and His Laboratory</em>; Lawrence’s Nobel lecture).
+Berkeley first built and studied a quarter-scale model. The Cosmotron
+team (M. S. Livingston, John and Hildred Blewett, Ernest Courant,
+Kenneth Green and others) settled on C-shaped magnets open to the
+outside, so that the vacuum chamber could be reached around its whole
+outer edge (Livingston and Blewett, section 13-3), 288 blocks around a
+ring about 23 m across, with a field index chosen for focusing in both
+planes. When they first switched on in early 1952 the beam would not
+accelerate. For two months they doubted their calculations; the fault
+was a burnt-out voltage divider in the RF system (Wilson). In May 1952
+it passed 1 GeV, the first machine to do so, and in 1953 it reached its
+3.3 GeV (Brookhaven’s history). Livingston and Blewett (section 13-2),
+who built it, tell the steps differently: 2.3 GeV in 1952, the most the
+power supply then installed allowed, and its design energy of 3.0 GeV
+announced in early 1954, once the supply was completed. It was the first
+synchrotron to give an external beam to experiments (Brookhaven’s
+history), and it ran until 1966.</p>
+<p>Its top energy was limited by saturation of the C magnets, which
+added a negative gradient at high field: Livingston and Blewett
+(sections 13-3 and 13-4) put the usable field at about 14 kG, where
+saturation became significant, and describe the pole-face windings added
+to hold <span class="math inline">\(n\)</span> at high field. Livingston
+proposed turning some magnets round, with their backs to the outside, to
+compensate; Courant was asked to check whether the alternation would
+spoil the focusing, and found that it improved it. Snyder recalled the
+optical analogy of alternating convex and concave lenses, and in 1952
+Courant, Livingston and Snyder published the strong-focusing synchrotron
+(<a href="16-strong-focusing.html">chapter 16</a>).</p>
+<p><strong>The Bevatron.</strong> William Brobeck’s design of 1947 had
+an aperture of 4 ft by 14 ft, which with the magnet then planned would
+have given only 1.5 GeV. A quarter-scale model running in 1949 showed
+that the protons could be steered more accurately than feared, and the
+gap was cut to 2 ft by 6 ft for 3.67 GeV. In December 1951, with the
+model’s results, the experience with big beams in the laboratory’s
+cold-war MTA project (the Materials Testing Accelerator, a large linear
+accelerator built at Livermore to make plutonium and tritium with the
+neutrons from its beam), and calculations from Brookhaven, the
+laboratory cut it again to 1 ft by 4 ft and aimed directly for 6 GeV:
+“the threshold for antiproton production” (<em>Lawrence and His
+Laboratory</em>). McMillan had calculated that 6 GeV would comfortably
+make proton-antiproton pairs. The machine was completed in 1954 and
+reached 6.2 GeV (Livingston and Blewett, section 13-2, give full-power
+operation at 5.7 GeV in October 1954, with 6.4 GeV possible at a slower
+cycling rate). It had four curved and four straight sections, a magnet
+of about 10,000 tons, and two motor generators with heavy flywheels; the
+laboratory’s history quotes an estimated cost of one to two million US
+dollars for each GeV, about ten times the 184-inch cyclotron.</p>
+<p><strong>The threshold, derived.</strong> To make an antiproton from a
+proton beam on protons at rest, <span class="math inline">\(p + p \to p
++ p + p + \bar{p}\)</span>, the total energy in the centre-of-mass frame
+must at least equal the rest energies of the four final particles. The
+square of the total four-momentum, <span
+class="math inline">\(s\)</span>, is the same in every frame (Landau and
+Lifshitz, volume 2, sections 9 and 11; taught in <a
+href="01-why-accelerate.html#pre-requisite-four-momentum-energy-momentum-relation-invariant-mass">chapter
+1</a>): <span class="math inline">\(s = E_{tot}^2 -
+p_{tot}^2c^2\)</span>, the total energy squared less the total momentum
+times <span class="math inline">\(c\)</span> squared. In the laboratory,
+a beam proton of total energy <span class="math inline">\(E\)</span> and
+momentum <span class="math inline">\(p\)</span> hits a proton at rest,
+so the total energy is <span class="math inline">\(E + mc^2\)</span> and
+the total momentum is <span class="math inline">\(p\)</span>:</p>
+<p><span class="math display">\[
+s = (E + mc^2)^2 - (pc)^2 = 2m^2c^4 + 2mc^2E,
+\]</span></p>
+<p>expanding the square and using <span class="math inline">\(E^2 -
+p^2c^2 = m^2c^4\)</span> for the beam proton.</p>
+<p>At threshold the four final particles are at rest in the
+centre-of-mass frame, so <span class="math inline">\(s = (4mc^2)^2 =
+16m^2c^4\)</span>. Then <span class="math inline">\(2mc^2E =
+14m^2c^4\)</span>, <span class="math inline">\(E = 7mc^2\)</span>, and
+the kinetic energy is</p>
+<p><span class="math display">\[
+W_{th} = E - mc^2 = 6mc^2 = 5.63\ \mathrm{GeV}.
+\]</span></p>
+<p>At 6.2 GeV, <span class="math inline">\(\sqrt{s} = 3.893\)</span>
+GeV, 140 MeV above <span class="math inline">\(4mc^2\)</span>. In a
+nucleus the target proton moves, which lowers the effective threshold a
+little. In 1955 Owen Chamberlain, Emilio Segrè, Clyde Wiegand and Thomas
+Ypsilantis took negative particles of 1.19 GeV/<span
+class="math inline">\(c\)</span> from a copper target, timed them over a
+flight path and identified antiprotons by their speed, <span
+class="math inline">\(\beta = 0.785\)</span> against 0.993 for pions (<a
+href="01-why-accelerate.html">chapter 1</a>). Their paper was received
+on 24 October 1955; Chamberlain and Segrè shared the Nobel Prize in
+1959.</p>
+<p><strong>Dubna.</strong> Veksler led the design of a 10 GeV proton
+synchrotron for the Soviet Union from 1949 to 1950; it was commissioned
+in April 1957 at what had become the Joint Institute for Nuclear
+Research at Dubna. It had a circumference of 208 m and a magnet of
+36,000 tonnes (the mass from Baldin and colleagues, 1981). Wilson notes
+that it held the world’s highest energy from 1957 until the CERN Proton
+Synchrotron ran. Its magnet ring proved hard to keep aligned: in 1981
+its operators reported field errors from deformations of the magnet’s
+foundation, which was not rigid enough; realigning the magnet was
+practically impossible without dismantling the vacuum chamber, and the
+pole-face windings corrected the errors only in part.</p>
+<p><strong>How long and how many.</strong> The Cosmotron took four years
+from approval to beam and the Bevatron about six. The weak-focusing
+synchrotron remained the choice of cautious laboratories for some years
+after strong focusing was known: Argonne’s Zero Gradient Synchrotron,
+Saturne in France and Nimrod in Britain followed the Cosmotron (Wilson).
+Nimrod gave 7 GeV protons, 1 to <span
+class="math inline">\(1.5\times10^{12}\)</span> per pulse, in the 1960s
+(Gray).</p>
+<p><strong>Design today.</strong> Nobody now builds a weak-focusing
+proton synchrotron; the rings built since 1960 use strong focusing (<a
+href="16-strong-focusing.html">chapter 16</a>). But the synchrotron
+principle is in every ring, and a designer still works through the steps
+of this chapter in the same order. Choose the top momentum and the peak
+field, which fixes <span class="math inline">\(\rho = p/(qB)\)</span>;
+choose the fraction of the ring filled with bending field, which fixes
+<span class="math inline">\(C\)</span>; choose the injection energy,
+which fixes the field ratio and the frequency range; choose <span
+class="math inline">\(h\)</span>, which fixes the frequency and the
+number of bunches; choose the ramp rate, which fixes the volts per turn
+and the power supply. Lattice codes compute the optics and the closed
+orbit from the magnets; field codes compute the magnets; longitudinal
+tracking codes follow the bunches through capture and acceleration. The
+magnet and its supply are <a href="17-magnets.html">chapter 17</a>, the
+cavity <a href="13-rf-cavities-and-power.html">chapter 13</a>.</p>
+<h2 id="at-the-bench">At the bench</h2>
+<p>This section draws on the published operating papers of the Bevatron
+(1965 to 1971) and Nimrod (1967), and on Wilson’s history.</p>
+<p><strong>What is in the building.</strong> A ring of magnets in its
+own hall, the vacuum chamber inside the gaps, with an injector at one
+straight section and the accelerating electrode or cavity in another.
+Elsewhere the motor-generator plant: alternators and flywheels on their
+shafts, the induction motors that keep them turning, and the rectifier
+cubicles. And the control room, with oscilloscopes showing the cycle,
+the RF controls, the field markers and the injector.</p>
+<p><strong>The magnet cycle.</strong> A Bevatron pulse: field from about
+300 gauss to 15.5 kilogauss and back. The 1.85 s acceleration was
+followed by the fall and a pause; the whole cycle took several seconds.
+Nimrod pulsed 22 times a minute. Later, both ran with a flat top, a
+period at constant field for slow spilling of the beam onto targets:
+half a second at Nimrod, up to 2 s at the Bevatron by 1969, with the
+field held flat to half a gauss.</p>
+<p><strong>The field clock.</strong> The RF, the injector and the
+targets must all be timed to the field, not to the clock on the wall,
+because the field’s rise varies from pulse to pulse with the speed of
+the flywheels. So the field is measured continuously. A winding in the
+gap gives a voltage proportional to <span
+class="math inline">\(\dot{B}\)</span>. In the Bevatron’s system of 1971
+a voltage-to-frequency converter turned it into a train of pulses, one
+per 0.01 gauss of change, counted up on the rise and down on the fall,
+so that the count was the field; before each pulse the remanent field
+was measured and preset into the counter. Sixteen markers, one at each
+kilogauss, went to the rest of the machine (Evans, Frias and Hordos).
+This is a B-clock: field increments as pulses. Earlier systems gave a
+pulse when the magnet current passed set levels. Injection is triggered
+at a chosen field, and every later event is set by a field value.</p>
+<p><strong>The frequency programme.</strong> The RF oscillator follows
+the field coarsely through its saturated ferrite. On top of that the
+operator sets an open-loop correction curve, adjusted until the beam
+stays at the centre of the aperture. Then the loops are closed: a radial
+loop that compares the beam’s position at a pair of electrodes with the
+wanted radius and corrects the frequency, and a phase loop that compares
+the beam’s phase with the RF and damps the synchrotron oscillations. At
+Nimrod both were used for the first 40 ms of the rise (Gray). The beam’s
+radius could be read from the RF itself: Crebbin and Lothrop timed
+18,535 RF cycles against a 10 MHz clock, so that near the 600 inch
+radius a radial shift of 1 inch changed the count by 100.</p>
+<p><strong>The current transformer over the cycle.</strong> A ring of
+magnetic core around the beam pipe reads the circulating current <span
+class="math inline">\(I = Nqf_0\)</span> (<a
+href="08-seeing-the-beam.html">chapter 8</a>). A typical trace through a
+cycle: 1. A spike at injection as the injector’s pulse fills the ring,
+often a long staircase or ramp over many turns. 2. A sharp fall in the
+first milliseconds: the particles not captured by the RF spiral out or
+in as the field rises and are lost. At Nimrod, the linac sent 18 to 20
+mA for 350 µs, about <span class="math inline">\(4\times10^{13}\)</span>
+protons, and 1 to <span class="math inline">\(1.5\times10^{12}\)</span>
+were accelerated: 2 to 4 per cent. Gray also reports a further loss of
+about 30 per cent in the first 25 ms that was not explained. 3. A slow
+rise through the acceleration, even with no further loss, because <span
+class="math inline">\(f_0\)</span> rises. For <span
+class="math inline">\(10^{12}\)</span> protons on the Bevatron’s 120 m
+the current is 58 mA at 10 MeV and 0.40 A at the top. To read the number
+of particles the operator divides by <span
+class="math inline">\(f_0\)</span>. 4. Steps or a slow decay: losses on
+obstacles, gas or resonances. 5. At the top, the beam goes to targets: a
+sharp drop for a fast target, a long ramp down for a slow spill.</p>
+<p><strong>The intensity at the top.</strong> The figure of merit is
+protons per pulse at full energy, and with the repetition rate it gives
+the average current. Nimrod’s <span
+class="math inline">\(1.5\times10^{12}\)</span> per pulse at 22 a minute
+is <span class="math inline">\(5.5\times10^{11}\)</span> protons a
+second, an average of 88 nA. In one year it ran 4,590 of 5,560 scheduled
+hours, 82.5 per cent (Gray). The Bevatron went through an improvement
+programme in 1962 to 1963 (Salsig and Vogel), and the Synchrophasotron’s
+beam rose from <span class="math inline">\(2\times10^{11}\)</span> to
+<span class="math inline">\(4\times10^{12}\)</span> protons per pulse in
+the five years to 1981, mainly by more current from the linac and better
+correction of the field (Baldin and colleagues).</p>
+<p><strong>The noise and the power swings.</strong> Each pulse moves
+tens of megajoules between flywheels and magnet; the generators slow and
+speed up by tens of revolutions a minute, and with a long flat top, by
+more. The rectifiers make ripple at multiples of the mains frequency,
+and hum and noise on the frequency control show as jitter in the beam’s
+position and in the spill. The Bevatron went digital in about 1970
+because noise and hum on the analogue frequency control spoiled resonant
+extraction (drawing the beam out slowly by bringing its tune onto a
+resonance, <a href="21-injection-and-extraction.html">chapter 21</a>),
+which needed the field set to one part in 15,000 (Evans and Lothrop;
+Evans, Frias and Hordos).</p>
+<p><strong>Setting up, in order.</strong> 1. Pulse the magnet; check the
+field markers against the reference and the flat-top level. 2. Bring the
+injector up and time its pulse to the injection field marker. 3. Set the
+RF frequency at injection and the voltage programme; look on the current
+transformer for the beam surviving the first milliseconds. 4. Adjust the
+open-loop frequency correction until the radial pick-ups show the beam
+near the centre through the rise; then close the radial and phase loops.
+5. Watch for loss on the current transformer and correct where it
+happens: the field index with pole-face windings near injection (as at
+Nimrod for the first 75 ms), the frequency later. 6. Set the flat top,
+move the targets in, and set the spill.</p>
+<p><strong>Ways it fails, with their signatures.</strong> - <em>No beam
+after a few milliseconds.</em> The RF is off, at the wrong frequency, or
+at the wrong phase: the uncaptured beam is lost as the field rises. The
+Cosmotron’s first two months were this, from a burnt-out divider in the
+RF system. - <em>Beam lost at a definite field, the same every
+pulse.</em> The frequency programme has drifted from the field: the beam
+walks to one wall at the same point in the cycle. Moving the frequency
+correction moves the loss. - <em>Captured intensity stops growing with
+injector current.</em> Space charge at injection and a larger emittance
+(the area the beam fills in the plane of position against angle, <a
+href="07-ion-sources-and-electron-guns.html#pre-requisite-phase-space-and-liouvilles-theorem">chapter
+7</a>) from the injector at high current (Nimrod; <a
+href="22-intensity-limits.html">chapter 22</a>). - <em>The beam grows
+suddenly at a definite time.</em> A coherent instability: at Nimrod the
+resistive-wall instability after 40 ms, cured by steering the beam off
+the central radius (<a href="22-intensity-limits.html">chapter 22</a>).
+- <em>Jitter in spill and position.</em> Hum and noise on the frequency
+or field control. - <em>An ignitron misfires.</em> One tube of a pair
+fails to fire and its partner carries both currents, which can destroy
+it (Evans, Frias and Hordos); the protection stops the following firing
+pulses or phases them back. - <em>The machine stops for months.</em> The
+rotating plant fails by fatigue. On 21 February 1965 one of Nimrod’s
+alternators failed after <span
+class="math inline">\(7.25\times10^6\)</span> pulses, with a thud and
+smoke, from fatigue cracks in the rotor’s end plates; Nimrod could not
+run at 7 GeV until the end of November (Brooks and Reed). In
+mid-December 1966 the pole dovetails of the Bevatron’s generators were
+found fractured, after 37.4 million pulses; replacing the poles took six
+months, during which the Bevatron could not run (Salsig and Vogel).</p>
+<h2 id="where-it-stops">Where it stops</h2>
+<p>The synchrotron principle itself has no energy limit: a ring of fixed
+radius, a field that follows the momentum and a frequency that follows
+the speed are used in every circular accelerator built since. What
+stopped was weak focusing. With tunes below 1 the beam’s oscillations,
+its dispersion and its orbit errors all scale with the radius, so the
+aperture does, and the magnet’s mass grows as about <span
+class="math inline">\(p^3\)</span>: 1,640 tons at 3.3 GeV, 10,000 tons
+at 6.2 GeV, 36,000 tonnes at 10 GeV. A 30 GeV weak-focusing ring would
+have needed on the order of a million tonnes of magnet.</p>
+<p>The way past was to make the focusing strong. Alternate the sign of
+the gradient from magnet to magnet, with <span
+class="math inline">\(|n|\)</span> in the hundreds instead of below 1,
+and the net effect focuses in both planes, as a pair of equal convex and
+concave lenses does. The tunes rise to several, the amplitudes and the
+dispersion shrink, and the aperture shrinks with them. Courant,
+Livingston and Snyder published the idea in 1952. Visiting Brookhaven in
+1952, the CERN group of Odd Dahl, Frank Goward and Rolf Wideroe
+abandoned their planned 10 GeV weak-focusing machine for a 25 GeV
+strong-focusing one at the same price (Wilson). The price of strong
+focusing was transition: with <span class="math inline">\(\gamma_t
+\approx Q_x\)</span> in the energy range, the protons must cross it. The
+CERN PS did so only after Wolfgang Schnell’s improvised circuit, built
+in a coffee tin, brought the beam through on the night of 24 November
+1959 (a radial loop in Vretenar’s account, a circuit to change the RF
+phase at transition in Wilson’s; <a
+href="16-strong-focusing.html">chapter 16</a>); Brookhaven’s Alternating
+Gradient Synchrotron reached 33 GeV in July 1960. The optics are <a
+href="16-strong-focusing.html">chapter 16</a>, the magnets <a
+href="17-magnets.html">chapter 17</a>, transition and the longitudinal
+motion <a href="19-longitudinal-dynamics.html">chapter 19</a>, and for
+electrons the next wall, radiation, <a
+href="20-synchrotron-radiation.html">chapter 20</a>.</p>
+<h2 id="exercises">Exercises</h2>
+<p><strong>1.</strong> Find <span class="math inline">\(B\rho\)</span>
+and the field at the top of the Bevatron’s cycle, for 6.2 GeV protons on
+a 15.24 m radius.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(E = 6.2 + 0.9383 = 7.138\)</span> GeV,
+<span class="math inline">\(pc = \sqrt{E^2 - (mc^2)^2} = 7.076\)</span>
+GeV, <span class="math inline">\(B\rho = 3.3356 \times 7.076 =
+23.60\)</span> T m, and <span class="math inline">\(B = 23.60/15.24 =
+1.549\)</span> T.</p>
+</details>
+<p><strong>2.</strong> For the Bevatron with <span
+class="math inline">\(C = 120\)</span> m and <span
+class="math inline">\(h = 1\)</span>, find the RF frequency at injection
+(10 MeV) and at the top (6.2 GeV), and the field at which the sweep is
+half done.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>At 10 MeV, <span class="math inline">\(\gamma = 1.0107\)</span>,
+<span class="math inline">\(\beta = 0.1448\)</span>, <span
+class="math inline">\(f = \beta c/C = 0.362\)</span> MHz. At 6.2 GeV,
+<span class="math inline">\(\beta = 0.9913\)</span>, <span
+class="math inline">\(f = 2.477\)</span> MHz; the ratio is 6.84.
+Half-way in frequency, 1.42 MHz, means <span class="math inline">\(\beta
+= 0.568\)</span>, <span class="math inline">\(\beta\gamma =
+0.690\)</span>, <span class="math inline">\(p = 0.648\)</span> GeV/<span
+class="math inline">\(c\)</span>, <span class="math inline">\(B\rho =
+2.16\)</span> T m and <span class="math inline">\(B = 0.142\)</span> T:
+half the frequency sweep is done at 9 per cent of the peak field. (From
+<span class="math inline">\(f(B) = (c/C)\,B/\sqrt{B^2 + B_m^2}\)</span>
+with <span class="math inline">\(B_m = 0.205\)</span> T, the same: <span
+class="math inline">\(B = B_m\,\beta/\sqrt{1-\beta^2}\)</span>.)</p>
+</details>
+<p><strong>3.</strong> Derive the threshold kinetic energy for <span
+class="math inline">\(p + p \to p + p + p + \bar{p}\)</span> on a
+stationary proton, and find by how much <span
+class="math inline">\(\sqrt{s}\)</span> exceeds four proton masses at
+6.2 GeV.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(s = 2m^2c^4 + 2mc^2E\)</span>; at
+threshold <span class="math inline">\(s = 16m^2c^4\)</span>, so <span
+class="math inline">\(E = 7mc^2\)</span> and <span
+class="math inline">\(W_{th} = 6mc^2 = 5.630\)</span> GeV. At <span
+class="math inline">\(W = 6.2\)</span> GeV, <span
+class="math inline">\(E = 7.138\)</span> GeV and <span
+class="math inline">\(\sqrt{s} = \sqrt{2(0.9383)^2 + 2(0.9383)(7.138)} =
+3.893\)</span> GeV, against <span class="math inline">\(4mc^2 =
+3.753\)</span> GeV: 140 MeV above threshold.</p>
+</details>
+<p><strong>4.</strong> The Bevatron’s field rose on average at 0.82 T/s.
+Find the energy gain per turn, the synchronous phase for a 5 kV gap, and
+check against four million turns in 1.85 s.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(\Delta W = eC\rho\dot{B} = 120 \times
+15.24 \times 0.82\)</span> eV <span class="math inline">\(=
+1.50\)</span> keV a turn. <span class="math inline">\(\sin\phi_s =
+0.30\)</span>; the ring is above transition, so <span
+class="math inline">\(\phi_s = 180^\circ - 17.5^\circ =
+162.5^\circ\)</span>. Four million turns at 1.50 keV give 6.0 GeV, and
+<span class="math inline">\((6.2\ \text{GeV} - 10\
+\text{MeV})/4\times10^6 = 1.55\)</span> keV a turn: consistent, given
+the rounded figures.</p>
+</details>
+<p><strong>5.</strong> A weak-focusing ring has <span
+class="math inline">\(n = 0.6\)</span> and no straight sections. Find
+<span class="math inline">\(Q_x\)</span>, <span
+class="math inline">\(Q_y\)</span>, <span
+class="math inline">\(\alpha_c\)</span>, <span
+class="math inline">\(\gamma_t\)</span> and <span
+class="math inline">\(\eta\)</span> at 10 MeV and at 6.2 GeV for
+protons. Does the ring cross transition?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(Q_x = \sqrt{0.4} = 0.632\)</span>, <span
+class="math inline">\(Q_y = \sqrt{0.6} = 0.775\)</span>, <span
+class="math inline">\(\alpha_c = 1/0.4 = 2.5\)</span>, <span
+class="math inline">\(\gamma_t = 1/\sqrt{2.5} = 0.632\)</span>. At 10
+MeV, <span class="math inline">\(\gamma = 1.0107\)</span> and <span
+class="math inline">\(\eta = 2.5 - 0.979 = 1.52\)</span>; at 6.2 GeV,
+<span class="math inline">\(\gamma = 7.608\)</span> and <span
+class="math inline">\(\eta = 2.5 - 0.0173 = 2.48\)</span>. Since <span
+class="math inline">\(\gamma_t &lt; 1 \le \gamma\)</span>, the ring is
+above transition from injection on and never crosses it.</p>
+</details>
+<p><strong>6.</strong> In the ring of exercise 5 with <span
+class="math inline">\(\rho = 15.24\)</span> m, how precisely must the RF
+frequency follow the field at injection to keep the beam within 5 mm of
+the centre? What happens to the beam if the frequency is set 0.1 per
+cent high?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(D_x = \rho/(1-n) = 38.1\)</span> m, and
+<span class="math inline">\(\Delta x = -(D_x/\eta)\,\Delta f/f = -25.0\
+\mathrm{m}\times\Delta f/f\)</span>. For 5 mm, <span
+class="math inline">\(\Delta f/f = 2.0\times10^{-4}\)</span>. At <span
+class="math inline">\(+10^{-3}\)</span> the beam moves 25 mm inward (a
+shorter path for a shorter period), five times the 5 mm allowed. In the
+Bevatron’s gap, 1.2 m wide, that is only 2 per cent of the width, but at
+injection the beam fills most of the horizontal aperture (section 10),
+so such a shift scrapes beam on the inner wall.</p>
+</details>
+<p><strong>7.</strong> Assuming the magnet mass scales as <span
+class="math inline">\(p^3\)</span>, predict the Dubna synchrophasotron’s
+magnet from the Cosmotron’s (288 blocks of about 5.7 tons, 3.3 GeV).
+Compare with 36,000 tonnes, and find the exponent that would fit
+exactly.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(p = 4.133\)</span> GeV/<span
+class="math inline">\(c\)</span> at 3.3 GeV and 10.898 GeV/<span
+class="math inline">\(c\)</span> at 10 GeV. <span
+class="math inline">\(288 \times 5.7 = 1642\)</span> tons, and <span
+class="math inline">\(1642 \times (10.898/4.133)^3 = 30{,}100\)</span>
+tons. The exponent that fits exactly is <span
+class="math inline">\(\ln(36000/1642)/\ln(10.898/4.133) = 3.18\)</span>.
+(Short tons and tonnes differ by 10 per cent, which is within the
+looseness of the comparison.)</p>
+</details>
+<p><strong>8.</strong> Show that a synchrotron with no straight sections
+needs the same volts per turn as a betatron of the same radius and the
+same <span class="math inline">\(\dot{B}\)</span> at the orbit. Then
+find the flux a betatron would need to take protons to 6.2 GeV on 15.24
+m.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>Synchrotron: <span class="math inline">\(\hat{V}\sin\phi_s =
+C\rho\dot{B} = 2\pi\rho^2\dot{B}\)</span>. Betatron: the two-to-one rule
+gives <span class="math inline">\(d\langle B\rangle/dt =
+2\dot{B}\)</span> and the voltage per turn <span
+class="math inline">\(d\Phi/dt = \pi\rho^2 \cdot 2\dot{B} =
+2\pi\rho^2\dot{B}\)</span>. The same. Integrating, the betatron needs
+<span class="math inline">\(\Delta\Phi = 2\pi\rho^2 B_{top} =
+2\pi(15.24)^2(1.549) = 2260\)</span> Wb, a core of about 750 m<span
+class="math inline">\(^2\)</span> swung through 3 T. The synchrotron
+gets the same volts from a resonant gap, a few kilovolts on one
+electrode, because it uses them a few million times.</p>
+</details>
+<p><strong>9.</strong> At Nimrod the 15 MeV linac delivered 18 to 20 mA
+for 350 µs, and 1 to <span
+class="math inline">\(1.5\times10^{12}\)</span> protons were accelerated
+at 22 pulses a minute. What fraction of the injected protons was
+accelerated, and what was the average proton current at 7 GeV?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>Injected: <span class="math inline">\((18\ \text{to}\
+20)\times10^{-3} \times 350\times10^{-6}/e = 3.9\)</span> to <span
+class="math inline">\(4.4\times10^{13}\)</span> protons. Accelerated:
+<span class="math inline">\(10^{12}\)</span> to <span
+class="math inline">\(1.5\times10^{12}\)</span>, about 2 to 4 per cent.
+Average: <span class="math inline">\(1.5\times10^{12}\times22/60 =
+5.5\times10^{11}\)</span> protons a second, or 88 nA. Most injected
+particles were lost at injection and capture.</p>
+</details>
+<p><strong>10.</strong> Derive the eddy-current loss per unit volume in
+a lamination of thickness <span class="math inline">\(d\)</span> and
+conductivity <span class="math inline">\(\sigma\)</span> in a field
+changing at <span class="math inline">\(\dot{B}\)</span>. Compare 0.35
+mm silicon steel with a 25 mm plate for a 1 T, 60 Hz sinusoidal field,
+and say why the second answer is wrong.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>Faraday’s law around a loop of half-width <span
+class="math inline">\(x\)</span> in the sheet gives <span
+class="math inline">\(\mathcal{E}(x) = \dot{B}x\)</span>; the power
+density is <span class="math inline">\(\sigma\mathcal{E}^2\)</span>,
+averaged over the thickness: <span class="math inline">\(\sigma\dot{B}^2
+d^2/12\)</span>. With <span
+class="math inline">\(\langle\dot{B}^2\rangle =
+(2\pi\cdot60)^2/2\)</span> T<span
+class="math inline">\(^2\)</span>/s<span
+class="math inline">\(^2\)</span> and <span class="math inline">\(\sigma
+= 2\times10^6\)</span> S/m: 1.45 kW/m<span
+class="math inline">\(^3\)</span> for 0.35 mm and 7.4 MW/m<span
+class="math inline">\(^3\)</span> for 25 mm. The second is wrong because
+the formula assumes the eddy currents do not change the field. At 60 Hz
+with <span class="math inline">\(\mu_r = 1000\)</span> the skin depth is
+1.5 mm, so a 25 mm plate screens its interior: the loss concentrates in
+the surface and most of the iron carries no flux. Laminations thinner
+than the skin depth are needed both to cut the loss and to let the field
+into the iron.</p>
+</details>
+<h2 id="sources">Sources</h2>
+<p><strong>Primary papers and records</strong> - M. L. E. Oliphant, “The
+acceleration of particles to very high energies”, classified memorandum,
+September 1943, University of Birmingham archive (not seen; known
+through Wilson, below, who quotes it). - V. I. Veksler, “Новый метод
+ускорения релятивистских частиц” (A new method of accelerating
+relativistic particles), <em>Doklady Akademii Nauk SSSR</em> 43, no. 8,
+346 (1944), received 25 April 1944, in Russian (Wilson cites page 329 of
+the foreign-language edition, <em>Comptes Rendus (Doklady) de l’Académie
+des Sciences de l’URSS</em>). (free, reprinted by JINR) <a
+href="http://www1.jinr.ru/Books/veksler/12.pdf"
+class="uri">http://www1.jinr.ru/Books/veksler/12.pdf</a>. English
+version: V. Veksler, <em>Journal of Physics of the USSR</em> 9, 153
+(1945) (as cited by Goward and Barnes). - V. I. Veksler, “О новом методе
+ускорения релятивистских частиц” (On the new method of accelerating
+relativistic particles), <em>Doklady Akademii Nauk SSSR</em> 44, no. 9,
+393 (1944), received 8 July 1944, in Russian. (free, reprinted by JINR)
+<a href="http://www1.jinr.ru/Books/veksler/13.pdf"
+class="uri">http://www1.jinr.ru/Books/veksler/13.pdf</a> - E. M.
+McMillan, “The synchrotron, a proposed high energy particle
+accelerator”, <em>Physical Review</em> 68, 143 (1945), received 5
+September 1945. - F. K. Goward and D. E. Barnes, “Experimental 8 MeV
+synchrotron for electron acceleration”, <em>Nature</em> 158, 413 (1946),
+published 21 September 1946. - F. R. Elder, A. M. Gurewitsch, R. V.
+Langmuir and H. C. Pollock, “A 70-MeV synchrotron”, <em>Journal of
+Applied Physics</em> 18, 810 (1947) (as cited by Wilson; not seen);
+“Radiation from electrons in a synchrotron”, <em>Physical Review</em>
+71, 829 (1947), received 7 May 1947. - H. C. Pollock, “The discovery of
+synchrotron radiation”, <em>American Journal of Physics</em> 51, 278
+(1983) (the date of 24 April 1947 and Haber’s name, as cited in the
+Wikipedia article “Synchrotron radiation”; not seen). - E. M. McMillan
+and J. M. Peterson, <em>Science</em> 109, 438 (1949) (as listed in
+Jackson and Panofsky). - E. O. Lawrence, “The evolution of the
+cyclotron”, Nobel Lecture, 11 December 1951 (the quarter-scale model,
+the 184-inch synchrocyclotron, the Bevatron’s magnet and its ignitron
+switchgear). (free) <a
+href="https://www.nobelprize.org/uploads/2018/06/lawrence-lecture.pdf"
+class="uri">https://www.nobelprize.org/uploads/2018/06/lawrence-lecture.pdf</a>
+- E. D. Courant, M. S. Livingston and H. S. Snyder, “The strong-focusing
+synchrotron, a new high energy accelerator”, <em>Physical Review</em>
+88, 1190 (1952). - O. Chamberlain, E. Segrè, C. Wiegand and T.
+Ypsilantis, “Observation of antiprotons”, <em>Physical Review</em> 100,
+947 (1955), received 24 October 1955. - M. R. Cleland and P. Farrell,
+“Dynamitrons of the future”, <em>IEEE Transactions on Nuclear
+Science</em> 12(3), 227 (1965), PAC 1965: in passing, the 4.0 MV Van de
+Graaff injector of the Cosmotron. (free) <a
+href="https://proceedings.jacow.org/p65/PDF/PAC1965_0227.PDF"
+class="uri">https://proceedings.jacow.org/p65/PDF/PAC1965_0227.PDF</a> -
+L. T. Jackson, “Experimental and external-proton-beam magnet
+power-supply systems at the Bevatron”, <em>IEEE Transactions on Nuclear
+Science</em> 12(3), 416 (1965), PAC 1965. (free) <a
+href="https://proceedings.jacow.org/p65/PDF/PAC1965_0416.PDF"
+class="uri">https://proceedings.jacow.org/p65/PDF/PAC1965_0416.PDF</a> -
+H. C. Brooks and A. B. D. Reed, “The failure of the alternators of the
+Nimrod main magnet power supply”, <em>IEEE Transactions on Nuclear
+Science</em> 14(3), 517 (1967), PAC 1967. (free) <a
+href="https://proceedings.jacow.org/p67/PDF/PAC1967_0517.PDF"
+class="uri">https://proceedings.jacow.org/p67/PDF/PAC1967_0517.PDF</a> -
+D. A. Gray, “The operational experience with Nimrod”, <em>IEEE
+Transactions on Nuclear Science</em> 14(3), 743 (1967), PAC 1967. (free)
+<a href="https://proceedings.jacow.org/p67/PDF/PAC1967_0743.PDF"
+class="uri">https://proceedings.jacow.org/p67/PDF/PAC1967_0743.PDF</a> -
+W. W. Salsig and H. W. Vogel, “Extended flattop operation of Bevatron
+results from studies of generator dovetail failure”, <em>IEEE
+Transactions on Nuclear Science</em> 16(3), 699 (1969), PAC 1969. (free)
+<a href="https://proceedings.jacow.org/p69/PDF/PAC1969_0699.PDF"
+class="uri">https://proceedings.jacow.org/p69/PDF/PAC1969_0699.PDF</a> -
+K. C. Crebbin and F. H. Lothrop, “Stimulation and measurement of radial
+betatron oscillations in the Bevatron using the RF accelerating system”,
+<em>IEEE Transactions on Nuclear Science</em> 16(3), 855 (1969), PAC
+1969: the 600 inch radius, the two-gap electrode, about 5 keV a turn,
+the radial tune. (free) <a
+href="https://proceedings.jacow.org/p69/PDF/PAC1969_0855.PDF"
+class="uri">https://proceedings.jacow.org/p69/PDF/PAC1969_0855.PDF</a> -
+D. M. Evans and F. H. G. Lothrop, “Digital control of Bevatron
+acceleration cycle”, <em>IEEE Transactions on Nuclear Science</em>
+18(3), 394 (1971), PAC 1971: the frequency range, the ferrite master
+oscillator, the loops. (free) <a
+href="https://proceedings.jacow.org/p71/PDF/PAC1971_0394.PDF"
+class="uri">https://proceedings.jacow.org/p71/PDF/PAC1971_0394.PDF</a> -
+D. M. Evans, R. Frias and B. Hordos, “Bevatron guide field control”,
+<em>IEEE Transactions on Nuclear Science</em> 18(3), 399 (1971), PAC
+1971: the motor-generator sets, 78 MJ, the field pulses and markers, the
+ignitrons. (free) <a
+href="https://proceedings.jacow.org/p71/PDF/PAC1971_0399.PDF"
+class="uri">https://proceedings.jacow.org/p71/PDF/PAC1971_0399.PDF</a> -
+A. M. Baldin et al., “Acceleration and ejection of deuterons of the
+Dubna synchrophasotron”, <em>IEEE Transactions on Nuclear Science</em>
+18(3), 1024 (1971), PAC 1971: the 9.4 MeV linac and the 0.2 to 1.44 MHz
+RF range. (free) <a
+href="https://epaper.kek.jp/p71/PDF/PAC1971_1024.PDF"
+class="uri">https://epaper.kek.jp/p71/PDF/PAC1971_1024.PDF</a> - A. M.
+Baldin et al., “Present-day status of the Synchrophasotron as a nuclear
+accelerator”, <em>IEEE Transactions on Nuclear Science</em> 28(3), 2043
+(1981), PAC 1981: the 36 kiloton magnet, the foundation, the
+intensities. (free) <a
+href="http://epaper.kek.jp/p81/PDF/PAC1981_2043.PDF"
+class="uri">http://epaper.kek.jp/p81/PDF/PAC1981_2043.PDF</a></p>
+<p><strong>History</strong> - E. J. N. Wilson, “Fifty years of
+synchrotrons”, <em>Proceedings of EPAC 96</em> (Sitges, 1996), paper
+FRX04A: Oliphant’s memorandum, Woolwich, General Electric, Birmingham,
+the Cosmotron and Bevatron apertures, Dubna, Nimrod, the origin of
+strong focusing. (free) <a
+href="https://proceedings.jacow.org/e96/PAPERS/ORALS/FRX04A.PDF"
+class="uri">https://proceedings.jacow.org/e96/PAPERS/ORALS/FRX04A.PDF</a>
+- J. D. Jackson and W. K. H. Panofsky, “Edwin Mattison McMillan
+1907-1991”, <em>Biographical Memoirs</em> of the National Academy of
+Sciences (1996): June 1945, the priority exchange with Veksler, the 300
+MeV synchrotron, the Bevatron energy. (free) <a
+href="https://www.nasonline.org/wp-content/uploads/2024/06/mcmillan-edwin.pdf"
+class="uri">https://www.nasonline.org/wp-content/uploads/2024/06/mcmillan-edwin.pdf</a>
+- <em>Lawrence and His Laboratory</em>, chapter 6, “Bumper crop”, LBL
+Research Review (1981): the Bevatron’s apertures, model, injector,
+4,000,000 turns in 1.85 s, flywheels, cost estimate, the antiproton
+search. (free) <a
+href="https://www2.lbl.gov/Science-Articles/Research-Review/Magazine/1981/81fchp6.html"
+class="uri">https://www2.lbl.gov/Science-Articles/Research-Review/Magazine/1981/81fchp6.html</a>
+- Brookhaven National Laboratory, “Our history: accelerators” (the
+Cosmotron’s approval in April 1948, 3.3 GeV in 1953, the first external
+beam, 1966; the AGS’s 33 GeV in July 1960). (free) <a
+href="https://www.bnl.gov/about/history/accelerators.php"
+class="uri">https://www.bnl.gov/about/history/accelerators.php</a> - M.
+Vretenar, “Radio frequency for particle accelerators: evolution and
+anatomy of a technology”, CERN Accelerator School, arXiv:1201.2345,
+section 6 (the Cosmotron cavity, ferrites, the PS on 24 November 1959).
+(free) - Wikipedia articles “Cosmotron” (English and German: 288 magnets
+of 6 tons, 1 GeV in May 1952, 3.3 GeV in January 1953), “Bevatron” (400
+ft circumference, 10,000 tons), “Synchrophasotron” (German: design under
+Veksler in 1949 and 1950, April 1957, 208 m), “Robert R. Wilson”
+(Cornell’s synchrotrons) and “Synchrotron radiation” (24 April 1947),
+consulted October 2026, for figures not found in a primary source.
+(free)</p>
+<p><strong>Textbooks</strong> - S. Humphries, <em>Principles of Charged
+Particle Acceleration</em> (Wiley, 1986): section 7.3 (betatron
+oscillations in a gradient field), section 15.5 (principles of the
+synchrotron, weak focusing), section 15.6 (longitudinal dynamics of
+synchrotrons; <span class="math inline">\(\gamma_t^2 = 1-n\)</span> for
+weak focusing, stable phase above and below transition). (free from the
+author) <a href="https://fieldp.com/cpa.html"
+class="uri">https://fieldp.com/cpa.html</a> - M. S. Livingston and J. P.
+Blewett, <em>Particle Accelerators</em> (McGraw-Hill, 1962): chapter 11,
+section 11-1 (the 184-inch synchrocyclotron in operation in November
+1946); chapter 12, “The electron synchrotron”, sections 12-1 (Goward and
+Barnes’s wire-cage resonator and saturated core, Berkeley’s 320 MeV in
+January 1949), 12-4 and 12-8 (the Berkeley ring’s H-frame magnet and
+toroidal chamber of eight fused-silica sectors); chapter 13, “The proton
+synchrotron”, sections 13-2 (Oliphant’s 1943 proposal, Birmingham the
+first proton synchrotron started, the Cosmotron’s and Bevatron’s dates
+and energies), 13-3 (<span class="math inline">\(n = 0.6\)</span> at
+injection in both the Cosmotron and the Bevatron, page 448; the
+Cosmotron’s C magnet, aperture and 14 kG limit), 13-4 (288 blocks of
+about 5.7 tons) and 13-6 (the Cosmotron’s radial oscillation at 0.70 of
+the revolution frequency). - D. A. Edwards and M. J. Syphers, <em>An
+Introduction to the Physics of High Energy Accelerators</em> (Wiley,
+1993), chapter 2 (longitudinal motion, transition) and chapter 3
+(transverse motion), for the general definitions of <span
+class="math inline">\(\alpha_c\)</span>, <span
+class="math inline">\(\eta\)</span> and <span
+class="math inline">\(\gamma_t\)</span>. - K. Wille, <em>The Physics of
+Particle Accelerators: An Introduction</em> (Oxford University Press,
+2000), the chapters on the synchrotron and on longitudinal dynamics. -
+S. Y. Lee, <em>Accelerator Physics</em> (World Scientific, 4th edition):
+chapter 1, section I.4 and its footnote on Goward and Barnes; chapter 2,
+section I.4 (the focusing index, <span class="math inline">\(0 \le n \le
+1\)</span> for weak focusing) and exercise 2.4.5 (<span
+class="math inline">\(D = \rho/(1-n)\)</span> and <span
+class="math inline">\(\gamma_T = \sqrt{1-n}\)</span> for a weak-focusing
+ring); chapter 3 on synchrotron motion. - Background mechanics: L. D.
+Landau and E. M. Lifshitz, <em>Mechanics</em> (volume 1), section 21
+(small oscillations) and section 49 (adiabatic invariants, for the
+shrinking of the betatron amplitude). - Background fields: L. D. Landau
+and E. M. Lifshitz, <em>The Classical Theory of Fields</em> (volume 2),
+section 9 (energy and momentum, <span class="math inline">\(dE =
+\mathbf{v}\cdot d\mathbf{p}\)</span>), section 11 (invariant mass and
+thresholds), section 21 (motion in a constant uniform magnetic field),
+section 26 (Faraday’s law in integral form), section 74 (radiation from
+a charge in a magnetic field).</p>
+<nav class="pager" aria-label="Chapters">
+<a class="prev" href="14-linear-accelerators.html"><span>Previous</span>14 Linear accelerators</a>
+<a class="next" href="16-strong-focusing.html"><span>Next</span>16 Strong focusing and linear optics</a>
+</nav>
+</main>
+</div>
+<script>
+  // The sections list stays open beside the text on a wide screen and
+  // folds above it on a phone.
+  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
+</script>
+</body>
+</html>
