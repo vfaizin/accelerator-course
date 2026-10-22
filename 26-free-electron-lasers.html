@@ -14,10 +14,11 @@ recovery · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 26 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#26-free-electron-lasers-and-energy-recovery"
 id="toc-26-free-electron-lasers-and-energy-recovery">26 Free-electron
@@ -106,7 +107,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="26-free-electron-lasers-and-energy-recovery">26 Free-electron
@@ -571,8 +571,9 @@ form is shorter because a product of exponentials is one exponential.
 (<a href="F5-waves.html#3-oscillations-as-turning-arrows">F5</a> drew
 oscillations as turning arrows; here each arrow is one electron’s
 contribution, and its angle is fixed by where that electron sits.)</p>
-<p><img src="figures/26-phasors.svg" loading="lazy"
-alt="Two ways of adding twenty unit arrows: on the left at random angles, ending a short distance from the start; on the right all at the same angle, in a straight line twenty long" /></p>
+<p><a href="figures/26-phasors.svg" class="figure"><img
+src="figures/26-phasors.svg" loading="lazy"
+alt="Two ways of adding twenty unit arrows: on the left at random angles, ending a short distance from the start; on the right all at the same angle, in a straight line twenty long" /></a></p>
 <p><em>Figure 26.1. Adding one unit arrow per electron, for <span
 class="math inline">\(N = 20\)</span>. Left: the angles <span
 class="math inline">\(kz_j\)</span> are random (drawn from a fixed
@@ -710,8 +711,9 @@ e^{i\pi/6} = \frac{\sqrt3}{2} + \frac{i}{2}, \qquad e^{i5\pi/6} =
 <p>Check the last: <span class="math inline">\((-i)^3 = -i^3 = -(-i) =
 i\)</span>. The real parts are <span class="math inline">\(\sqrt3/2 =
 0.866\)</span>, <span class="math inline">\(-0.866\)</span> and 0.</p>
-<p><img src="figures/26-cube-roots.svg" loading="lazy"
-alt="The unit circle in the complex plane with i at the top and the three cube roots of i marked at 30, 150 and 270 degrees, forming an equilateral triangle" /></p>
+<p><a href="figures/26-cube-roots.svg" class="figure"><img
+src="figures/26-cube-roots.svg" loading="lazy"
+alt="The unit circle in the complex plane with i at the top and the three cube roots of i marked at 30, 150 and 270 degrees, forming an equilateral triangle" /></a></p>
 <p><em>Figure 26.2. The three cube roots of <span
 class="math inline">\(i\)</span> on the unit circle, at <span
 class="math inline">\(30°\)</span>, <span
@@ -944,8 +946,9 @@ gives no net gain. The spread must be small compared with the line,
 about <span class="math inline">\(1/(2N_u)\)</span> in <span
 class="math inline">\(\delta\)</span>, as section 5 and Lee both
 say.</p>
-<p><img src="figures/26-line-slope.svg" loading="lazy"
-alt="The line shape S of nu, a peak of height one falling to zero at plus and minus two pi, and its negative slope, an antisymmetric curve with a maximum of 0.27 at nu equal to 2.61 and a minimum of minus 0.27 at minus 2.61" /></p>
+<p><a href="figures/26-line-slope.svg" class="figure"><img
+src="figures/26-line-slope.svg" loading="lazy"
+alt="The line shape S of nu, a peak of height one falling to zero at plus and minus two pi, and its negative slope, an antisymmetric curve with a maximum of 0.27 at nu equal to 2.61 and a minimum of minus 0.27 at minus 2.61" /></a></p>
 <p><em>Figure 26.3. The undulator’s line <span
 class="math inline">\(S(\nu) = [\sin(\nu/2)/(\nu/2)]^2\)</span> (grey)
 and its negative slope <span class="math inline">\(-dS/d\nu\)</span>
@@ -1543,8 +1546,9 @@ So</p>
 \lambda_r = \frac{\lambda_u}{2\gamma^2}\left(1+\frac{K^2}{2}\right),
 \]</span></p>
 <p>the same as the on-axis undulator wavelength.</p>
-<p><img src="figures/26-resonance.svg" loading="lazy"
-alt="Top: an electron’s wiggling path seen from above, between rows of field markers alternating out of and into the page. Bottom: the electron’s sideways velocity and the light’s field at the electron, both oscillating once per undulator period and in step, and their product, which never changes sign" /></p>
+<p><a href="figures/26-resonance.svg" class="figure"><img
+src="figures/26-resonance.svg" loading="lazy"
+alt="Top: an electron’s wiggling path seen from above, between rows of field markers alternating out of and into the page. Bottom: the electron’s sideways velocity and the light’s field at the electron, both oscillating once per undulator period and in step, and their product, which never changes sign" /></a></p>
 <p><em>Figure 26.4. The resonance condition. Top, seen from above and
 not to scale (in LCLS the wiggle is 1.3 µm from side to side in a 3 cm
 period): the field <span class="math inline">\(B_y\)</span> points out
@@ -2037,8 +2041,9 @@ gets nothing, to first order. If they start slightly above resonance,
 the decelerating side as they bunch and the light gains. Gain therefore
 lies on the high-energy side of the spontaneous line, as the 1976
 experiment saw.</p>
-<p><img src="figures/26-bucket.svg" loading="lazy"
-alt="The FEL bucket in the plane of phase theta and energy deviation delta: the separatrix as two cosine arcs meeting at minus pi and pi, a row of electrons starting evenly spread at a small positive delta, and the same electrons a quarter of a period later crowded near theta equal to zero" /></p>
+<p><a href="figures/26-bucket.svg" class="figure"><img
+src="figures/26-bucket.svg" loading="lazy"
+alt="The FEL bucket in the plane of phase theta and energy deviation delta: the separatrix as two cosine arcs meeting at minus pi and pi, a row of electrons starting evenly spread at a small positive delta, and the same electrons a quarter of a period later crowded near theta equal to zero" /></a></p>
 <p><em>Figure 26.5. Microbunching in the FEL bucket, computed by
 stepping the pendulum equations of section 3 for 24 electrons (with
 <span class="math inline">\(\delta\)</span> in units of <span
@@ -2288,8 +2293,9 @@ the three first-order equations gives the same powers to ten figures.
 This slow start is the lethargy region of section 6. In this ideal model
 (cold beam, exactly on resonance, no diffraction) the power does not
 fall below its input.</p>
-<p><img src="figures/26-lethargy.svg" loading="lazy"
-alt="A plot on a logarithmic scale of the light power over its input against as from 0 to 6: the full three-mode solution stays flat near one up to as about 1.5, then rises along the straight line of the growing mode, which starts at one ninth" /></p>
+<p><a href="figures/26-lethargy.svg" class="figure"><img
+src="figures/26-lethargy.svg" loading="lazy"
+alt="A plot on a logarithmic scale of the light power over its input against as from 0 to 6: the full three-mode solution stays flat near one up to as about 1.5, then rises along the straight line of the growing mode, which starts at one ninth" /></a></p>
 <p><em>Figure 26.6. A seeded high-gain FEL, computed from <span
 class="math inline">\(P/P_0 = |\tfrac13\sum_je^{\mu_js}|^2\)</span> with
 the three roots <span class="math inline">\(\mu_j\)</span> (red),
@@ -2963,8 +2969,9 @@ and an arc by <span class="math inline">\(\theta_B/\sin\theta_B \approx
 1 + \theta_B^2/6\)</span>. The minus sign comes from differentiating: a
 higher energy means a smaller <span
 class="math inline">\(\theta_B\)</span> and so a shorter path.)</p>
-<p><img src="figures/26-chicane.svg" loading="lazy"
-alt="Top: a four-dipole chicane bending the beam down and back up, with a low-energy path bending more and lying further out than a high-energy path. Bottom: the bunch in the plane of position and energy deviation, before the chicane as a long tilted ellipse and after as a short, steeper one" /></p>
+<p><a href="figures/26-chicane.svg" class="figure"><img
+src="figures/26-chicane.svg" loading="lazy"
+alt="Top: a four-dipole chicane bending the beam down and back up, with a low-energy path bending more and lying further out than a high-energy path. Bottom: the bunch in the plane of position and energy deviation, before the chicane as a long tilted ellipse and after as a short, steeper one" /></a></p>
 <p><em>Figure 26.7. Bunch compression in LCLS BC1. Top, not to scale:
 the four dipoles of the chicane; an electron with less energy (blue)
 bends more and takes the longer path, so it falls back; one with more
@@ -3422,8 +3429,9 @@ spent beam round and sends it back through the same cavities, timed half
 an RF period late, so that it is decelerated and gives its energy back
 to the field, which accelerates the next bunches. The spent beam reaches
 the dump at about the injection energy.</p>
-<p><img src="figures/26-erl.svg" loading="lazy"
-alt="Left: an energy recovery linac, an injector feeding a linac, a return loop carrying the beam through an FEL undulator and back into the linac, and a dump. Right: one RF cycle of the cavity voltage with the accelerated bunch on the crest and the returning bunch half a period later in the trough" /></p>
+<p><a href="figures/26-erl.svg" class="figure"><img
+src="figures/26-erl.svg" loading="lazy"
+alt="Left: an energy recovery linac, an injector feeding a linac, a return loop carrying the beam through an FEL undulator and back into the linac, and a dump. Right: one RF cycle of the cavity voltage with the accelerated bunch on the crest and the returning bunch half a period later in the trough" /></a></p>
 <p><em>Figure 26.8. An energy recovery linac. Left, not to scale:
 bunches from the injector (6 MeV in the CBETA-like example below) are
 accelerated in the linac (red), pass the FEL in the return loop, and
@@ -4165,10 +4173,6 @@ compression). Checked in references/.</li>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

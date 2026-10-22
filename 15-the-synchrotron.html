@@ -13,10 +13,11 @@
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 15 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#15-the-synchrotron" id="toc-15-the-synchrotron">15 The
 synchrotron</a>
@@ -90,7 +91,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="15-the-synchrotron">15 The synchrotron</h1>
@@ -427,8 +427,9 @@ orbit and <span class="math inline">\(R = C/2\pi\)</span> its average
 radius. In a ring without straight sections <span
 class="math inline">\(R = \rho\)</span>; with straight sections <span
 class="math inline">\(R &gt; \rho\)</span>.</p>
-<p><img src="figures/15-ring-layout.svg" loading="lazy"
-alt="The racetrack ring of a weak-focusing synchrotron" /></p>
+<p><a href="figures/15-ring-layout.svg" class="figure"><img
+src="figures/15-ring-layout.svg" loading="lazy"
+alt="The racetrack ring of a weak-focusing synchrotron" /></a></p>
 <p><em>Figure 15.1. A synchrotron ring drawn to the Bevatron’s
 proportions: four bending magnets, each a quarter circle of radius <span
 class="math inline">\(\rho = 15.24\)</span> m, joined by four field-free
@@ -788,8 +789,9 @@ is <span class="math inline">\(\beta\gamma = 1\)</span>. Below <span
 class="math inline">\(B_m\)</span> the frequency rises almost in
 proportion to the field; above it, it creeps towards its limit <span
 class="math inline">\(hc/C\)</span> (figure 15.2).</p>
-<p><img src="figures/15-frequency-field.svg" loading="lazy"
-alt="RF frequency against field for the Bevatron" /></p>
+<p><a href="figures/15-frequency-field.svg" class="figure"><img
+src="figures/15-frequency-field.svg" loading="lazy"
+alt="RF frequency against field for the Bevatron" /></a></p>
 <p><em>Figure 15.2. The RF frequency the Bevatron needs at each value of
 its field, from the formula above with <span class="math inline">\(h =
 1\)</span>, <span class="math inline">\(C = 120\)</span> m and <span
@@ -975,8 +977,9 @@ Linear-accelerator texts write the gain as <span
 class="math inline">\(qE_0T_tL\cos\phi\)</span> with a different zero of
 phase; the physics is the same (<a
 href="14-linear-accelerators.html">chapter 14</a>).</p>
-<p><img src="figures/15-phase-stability.svg" loading="lazy"
-alt="Phase stability above transition" /></p>
+<p><a href="figures/15-phase-stability.svg" class="figure"><img
+src="figures/15-phase-stability.svg" loading="lazy"
+alt="Phase stability above transition" /></a></p>
 <p><em>Figure 15.3. Phase stability above transition. The energy gain
 per crossing is <span class="math inline">\(q\hat{V}\sin\phi\)</span>,
 and the rising field demands <span
@@ -1040,8 +1043,9 @@ the median plane <span class="math inline">\(B_x = 0\)</span> by
 symmetry, so integrating up from <span class="math inline">\(y =
 0\)</span> gives <span class="math inline">\(B_x =
 -nB_0y/\rho\)</span>.</p>
-<p><img src="figures/15-gap-field.svg" loading="lazy"
-alt="Cross-section of a weak-focusing gap" /></p>
+<p><a href="figures/15-gap-field.svg" class="figure"><img
+src="figures/15-gap-field.svg" loading="lazy"
+alt="Cross-section of a weak-focusing gap" /></a></p>
 <p><em>Figure 15.4. The gap of a weak-focusing magnet in cross-section,
 the beam coming out of the page. The poles open outward, so the field
 weakens with <span class="math inline">\(x\)</span> (<span
@@ -1091,8 +1095,9 @@ Q_x = \sqrt{1-n}, \qquad Q_y = \sqrt{n}, \qquad Q_x^2 + Q_y^2 = 1.
 <p>Both tunes are below 1: a weakly focused particle makes less than one
 oscillation per turn. That is what “weak” means. The wavelength of the
 oscillation is longer than the ring.</p>
-<p><img src="figures/15-displaced-circle.svg" loading="lazy"
-alt="A displaced orbit in a uniform field" /></p>
+<p><a href="figures/15-displaced-circle.svg" class="figure"><img
+src="figures/15-displaced-circle.svg" loading="lazy"
+alt="A displaced orbit in a uniform field" /></a></p>
 <p><em>Figure 15.5. Why the horizontal tune is 1 in a uniform field
 (<span class="math inline">\(n = 0\)</span>). A particle of the right
 momentum started a distance <span class="math inline">\(a\)</span>
@@ -1295,8 +1300,9 @@ class="math inline">\(\alpha_c \approx 1/Q_x^2\)</span> is small and
 the energy range. Their protons must cross transition, as the CERN
 Proton Synchrotron’s first beams showed in 1959 (<a
 href="#where-it-stops">Where it stops</a>).</p>
-<p><img src="figures/15-eta-transition.svg" loading="lazy"
-alt="The phase-slip factor against gamma" /></p>
+<p><a href="figures/15-eta-transition.svg" class="figure"><img
+src="figures/15-eta-transition.svg" loading="lazy"
+alt="The phase-slip factor against gamma" /></a></p>
 <p><em>Figure 15.6. The phase-slip factor <span
 class="math inline">\(\eta = \alpha_c - 1/\gamma^2\)</span> against
 <span class="math inline">\(\gamma\)</span>. Red: the weak-focusing ring
@@ -1647,8 +1653,9 @@ one, as the next section tells. Ten gigaelectronvolts at 36,000 tonnes
 was close to what a laboratory would build. A 30 GeV weak-focusing ring
 would by the same scaling need about 23 times the Dubna mass, which
 nobody would build.</p>
-<p><img src="figures/15-mass-scaling.svg" loading="lazy"
-alt="Magnet mass against momentum" /></p>
+<p><a href="figures/15-mass-scaling.svg" class="figure"><img
+src="figures/15-mass-scaling.svg" loading="lazy"
+alt="Magnet mass against momentum" /></a></p>
 <p><em>Figure 15.7. The magnets of the three great weak-focusing proton
 synchrotrons against their top momentum, on logarithmic axes, where a
 power law is a straight line of slope equal to its exponent (<a
@@ -1811,8 +1818,9 @@ voltage of either. The firing angle cannot be pushed all the way to
 current to the next while the next one’s voltage is still the higher,
 which takes time, so a margin is kept short of <span
 class="math inline">\(180^\circ\)</span>.</p>
-<p><img src="figures/15-rectifier.svg" loading="lazy"
-alt="Output of a controlled six-phase rectifier" /></p>
+<p><a href="figures/15-rectifier.svg" class="figure"><img
+src="figures/15-rectifier.svg" loading="lazy"
+alt="Output of a controlled six-phase rectifier" /></a></p>
 <p><em>Figure 15.8. The output of a controlled rectifier with <span
 class="math inline">\(m = 6\)</span> phases (the Cosmotron’s had 12; six
 show the shape more clearly). Grey: the six phase voltages <span
@@ -3084,10 +3092,6 @@ a charge in a magnetic field).</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

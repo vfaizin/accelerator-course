@@ -14,10 +14,11 @@ instabilities · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 22 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a
 href="#22-intensity-limits-space-charge-wakefields-and-instabilities"
@@ -127,7 +128,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1
@@ -592,8 +592,9 @@ q\lambda/(2\pi\varepsilon_0 r)\)</span>, the field of a line charge.
 Both fields grow linearly with <span class="math inline">\(r\)</span>
 inside, which will matter: a linear force is a lens, and it changes the
 focusing without distorting the beam.</p>
-<p><img src="figures/22-beam-fields.svg" loading="lazy"
-alt="Cross-section of a round beam with its radial electric field and circling magnetic field, and a plot of the field against radius" /></p>
+<p><a href="figures/22-beam-fields.svg" class="figure"><img
+src="figures/22-beam-fields.svg" loading="lazy"
+alt="Cross-section of a round beam with its radial electric field and circling magnetic field, and a plot of the field against radius" /></a></p>
 <p><em>Figure 22.1. The fields of a long uniform round beam of radius
 <span class="math inline">\(a\)</span>, coming out of the page. Left:
 the electric field points out from the axis and the magnetic field
@@ -682,8 +683,9 @@ as it must be. Inside the gap only the beam is a real charge, so by
 uniqueness (<a
 href="04-high-voltage-and-breakdown.html#pre-requisite-continued-laplace-and-poisson-equations-uniqueness-boundary-value-problems">chapter
 4</a>) this is the field.</p>
-<p><img src="figures/22-plate-images.svg" loading="lazy"
-alt="A row of image line charges of alternating sign on either side of two parallel plates, with the beam between them" /></p>
+<p><a href="figures/22-plate-images.svg" class="figure"><img
+src="figures/22-plate-images.svg" loading="lazy"
+alt="A row of image line charges of alternating sign on either side of two parallel plates, with the beam between them" /></a></p>
 <p><em>Figure 22.2. A beam (filled) at height <span
 class="math inline">\(y_0\)</span> between conducting plates at <span
 class="math inline">\(y = \pm h\)</span>, and the first four of its
@@ -1096,8 +1098,9 @@ class="math inline">\(1/(2\pi\times0.001) = 159\)</span> turns, 14.2 ms
 in the LHC (88.9 µs a turn). A Gaussian of rms 0.001 takes <span
 class="math inline">\(\sqrt2/(2\pi\times0.001) = 225\)</span> turns,
 20.0 ms, and then falls much faster.</p>
-<p><img src="figures/22-decoherence.svg" loading="lazy"
-alt="Two decaying curves of the centroid envelope against turn number, an exponential for a Lorentzian spread and a bell-shaped fall for a Gaussian" /></p>
+<p><a href="figures/22-decoherence.svg" class="figure"><img
+src="figures/22-decoherence.svg" loading="lazy"
+alt="Two decaying curves of the centroid envelope against turn number, an exponential for a Lorentzian spread and a bell-shaped fall for a Gaussian" /></a></p>
 <p><em>Figure 22.3. The envelope of a kicked beam’s centroid, for a
 Lorentzian tune spread of half width 0.001 (<span
 class="math inline">\(e^{-n/159}\)</span>) and a Gaussian of rms width
@@ -2702,8 +2705,9 @@ upper and lower sideband is the whole mechanism: above transition (<span
 class="math inline">\(\eta &gt; 0\)</span>) impedance at the upper
 sideband feeds the oscillation and impedance at the lower one damps it;
 below transition the roles swap.</p>
-<p><img src="figures/22-robinson.svg" loading="lazy"
-alt="A resonance curve of the real impedance with its peak below the RF frequency, and two sidebands either side of the RF frequency, the lower one higher on the curve" /></p>
+<p><a href="figures/22-robinson.svg" class="figure"><img
+src="figures/22-robinson.svg" loading="lazy"
+alt="A resonance curve of the real impedance with its peak below the RF frequency, and two sidebands either side of the RF frequency, the lower one higher on the curve" /></a></p>
 <p><em>Figure 22.4. Robinson’s rule above transition. A bunch
 oscillating at the synchrotron frequency <span
 class="math inline">\(\Omega_s\)</span> puts sidebands at <span
@@ -3186,8 +3190,9 @@ and also as <span class="math inline">\(1/b^3\)</span> and with <span
 class="math inline">\(\beta_y\)</span>. A fractional tune below one half
 puts the nearest line further from zero, which is one reason most rings
 run with <span class="math inline">\(\Delta &lt; 0.5\)</span>.</p>
-<p><img src="figures/22-resistive-wall.svg" loading="lazy"
-alt="The odd curve of the transverse resistive-wall impedance against frequency, with betatron lines marked; lines at negative frequency are driven" /></p>
+<p><a href="figures/22-resistive-wall.svg" class="figure"><img
+src="figures/22-resistive-wall.svg" loading="lazy"
+alt="The odd curve of the transverse resistive-wall impedance against frequency, with betatron lines marked; lines at negative frequency are driven" /></a></p>
 <p><em>Figure 22.5. The real part of the transverse resistive-wall
 impedance, <span class="math inline">\(\propto
 1/\sqrt{|\omega|}\)</span> and odd in <span
@@ -3397,8 +3402,9 @@ N_{th} = \frac{8\,p\,\Omega_s\,C}{\pi\,q^2\,\beta_y\,W_0}
 <p>The threshold rises with momentum and synchrotron frequency and falls
 with <span class="math inline">\(\beta_y\)</span> and the wake.
 Chromaticity does not remove it but raises it somewhat.</p>
-<p><img src="figures/22-tmci.svg" loading="lazy"
-alt="Two mode frequencies approaching each other as the wake strength grows, merging at a threshold, above which a growth rate appears" /></p>
+<p><a href="figures/22-tmci.svg" class="figure"><img
+src="figures/22-tmci.svg" loading="lazy"
+alt="Two mode frequencies approaching each other as the wake strength grows, merging at a threshold, above which a growth rate appears" /></a></p>
 <p><em>Figure 22.6. The two-particle model, computed from the trace
 <span class="math inline">\(2 - \Upsilon^2\)</span>. Top: the
 frequencies of the two modes, measured from <span
@@ -3576,8 +3582,9 @@ class="math inline">\(\tfrac12\)</span>) to</p>
 \quad\Rightarrow\quad
 \tau_d = \frac{2}{g_d}\ \text{turns}.
 \]</span></p>
-<p><img src="figures/22-damper.svg" loading="lazy"
-alt="A circle in normalised phase space with a point on it, and a vertical kick that moves the point onto a smaller circle" /></p>
+<p><a href="figures/22-damper.svg" class="figure"><img
+src="figures/22-damper.svg" loading="lazy"
+alt="A circle in normalised phase space with a point on it, and a vertical kick that moves the point onto a smaller circle" /></a></p>
 <p><em>Figure 22.7. A damper’s kick in normalised phase space at the
 kicker. The particle goes round the circle of radius <span
 class="math inline">\(A\)</span> (clockwise, with <span
@@ -3655,8 +3662,9 @@ exceeds 1 the electron number multiplies bunch after bunch, beam-induced
 multipacting (a multiplying discharge driven by a periodic field, the
 name used for the same effect in RF cavities), until the cloud’s own
 space charge saturates it.</p>
-<p><img src="figures/22-electron-cloud.svg" loading="lazy"
-alt="Cross-section of a round vacuum chamber with a bunch at the centre, a photon striking the wall, a photoelectron kicked across, and secondaries leaving the far wall" /></p>
+<p><a href="figures/22-electron-cloud.svg" class="figure"><img
+src="figures/22-electron-cloud.svg" loading="lazy"
+alt="Cross-section of a round vacuum chamber with a bunch at the centre, a photon striking the wall, a photoelectron kicked across, and secondaries leaving the far wall" /></a></p>
 <p><em>Figure 22.8. One step of electron-cloud build-up, in a
 cross-section of a chamber of radius 2 cm with the bunch going into the
 page. A synchrotron-radiation photon frees a photoelectron at the wall.
@@ -4716,10 +4724,6 @@ screening).</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

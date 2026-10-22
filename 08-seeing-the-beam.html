@@ -13,10 +13,11 @@
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 08 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#08-seeing-the-beam" id="toc-08-seeing-the-beam">08 Seeing
 the beam</a>
@@ -145,7 +146,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="08-seeing-the-beam">08 Seeing the beam</h1>
@@ -780,8 +780,9 @@ field of only 2.3 µV/m at 25 mm, so the signals of section 4 and 5 come
 from the <span class="math inline">\(10^9\)</span> to <span
 class="math inline">\(10^{11}\)</span> charges of a bunch acting
 together.</p>
-<p><img src="figures/08-field-pulse.svg" loading="lazy"
-alt="The transverse field of a passing charge for three beams" /></p>
+<p><a href="figures/08-field-pulse.svg" class="figure"><img
+src="figures/08-field-pulse.svg" loading="lazy"
+alt="The transverse field of a passing charge for three beams" /></a></p>
 <p><em>Figure 8.1. The transverse field at <span class="math inline">\(b
 = 25\)</span> mm as a single charge passes, divided by the static
 Coulomb field at that distance, from the formula for <span
@@ -1005,8 +1006,9 @@ class="math inline">\((a - r)/(a + r) = 0.67\)</span> times: a ratio of
 2.25 across the pipe. For a centred 1 A beam the density is <span
 class="math inline">\(1/(2\pi \times 0.025) = 6.4\)</span> A per metre
 of circumference everywhere.</p>
-<p><img src="figures/08-image-current.svg" loading="lazy"
-alt="Wall current round a pipe with the beam off centre" /></p>
+<p><a href="figures/08-image-current.svg" class="figure"><img
+src="figures/08-image-current.svg" loading="lazy"
+alt="Wall current round a pipe with the beam off centre" /></a></p>
 <p><em>Figure 8.2. The pipe in cross-section, radius 25 mm, with the
 beam 5 mm to the right of the axis. The red curve is drawn outside the
 wall at a height proportional to the wall current density <span
@@ -1703,8 +1705,9 @@ class="math inline">\(3.5\)</span>, about 2 MeV cm<span
 class="math inline">\(^2\)</span>/g in most materials (1.664 in silicon,
 1.981 in water, 1.403 in copper), and then rises slowly. A particle near
 the minimum is called minimum-ionising.</p>
-<p><img src="figures/08-bethe.svg" loading="lazy"
-alt="The Bethe formula for protons in water" /></p>
+<p><a href="figures/08-bethe.svg" class="figure"><img
+src="figures/08-bethe.svg" loading="lazy"
+alt="The Bethe formula for protons in water" /></a></p>
 <p><em>Figure 8.3. The Bethe formula for protons in water, without the
 density term, computed with the constants of the list above. Both scales
 are logarithmic. Below about 1 GeV the loss falls nearly as <span
@@ -1813,8 +1816,9 @@ protons scatter about the mean (range straggling), and the beam loses
 protons to nuclear reactions on the way. Robert R. Wilson proposed in
 1946 to use the peak to treat tumours; dose delivery is <a
 href="28-accelerators-at-work.html">chapter 28</a>.</p>
-<p><img src="figures/08-bragg.svg" loading="lazy"
-alt="The Bragg peak of a 150 MeV proton in water" /></p>
+<p><a href="figures/08-bragg.svg" class="figure"><img
+src="figures/08-bragg.svg" loading="lazy"
+alt="The Bragg peak of a 150 MeV proton in water" /></a></p>
 <p><em>Figure 8.4. The energy loss of one 150 MeV proton along its path
 in water. The curve uses the range law <span class="math inline">\(R
 \propto W^{1.76}\)</span> of the previous paragraph: the energy left at
@@ -2235,8 +2239,9 @@ class="math inline">\(R = 50\)</span> Ω, <span class="math inline">\(I_s
 same equation also says what happens to slow changes, which the next
 section takes up: the transformer cannot hold a steady secondary
 current, and its output sags.</p>
-<p><img src="figures/08-transformer.svg" loading="lazy"
-alt="A beam current transformer and its equivalent circuit" /></p>
+<p><a href="figures/08-transformer.svg" class="figure"><img
+src="figures/08-transformer.svg" loading="lazy"
+alt="A beam current transformer and its equivalent circuit" /></a></p>
 <p><em>Figure 8.5. Left: the ring core seen along the beam, which comes
 out of the page. By the right-hand rule the field <span
 class="math inline">\(H = I_{beam}/(2\pi r)\)</span> circles
@@ -2371,8 +2376,9 @@ winding’s own resistance of about 1 Ω. With 100 turns on the same core,
 <span class="math inline">\(L = 0.80\)</span> H and <span
 class="math inline">\(\tau_{droop} = 0.8\)</span> s, and a 5 ms pulse
 droops by only 0.6 per cent before any further correction.</p>
-<p><img src="figures/08-droop.svg" loading="lazy"
-alt="The output of a passive and an active transformer for a flat pulse" /></p>
+<p><a href="figures/08-droop.svg" class="figure"><img
+src="figures/08-droop.svg" loading="lazy"
+alt="The output of a passive and an active transformer for a flat pulse" /></a></p>
 <p><em>Figure 8.6. What a transformer shows for a flat beam pulse 100 µs
 long, as a fraction of the transformed current <span
 class="math inline">\(RI_0/N\)</span>, from <span
@@ -4836,8 +4842,9 @@ class="math inline">\(\varepsilon_n\)</span>, and its size, for the same
 optics, by <span class="math inline">\(\sqrt{175} = 13\)</span>: the
 shrinking beam that residual-gas monitors show during acceleration
 (section 6).</p>
-<p><img src="figures/08-ellipse.svg" loading="lazy"
-alt="The rms ellipse before and after a drift" /></p>
+<p><a href="figures/08-ellipse.svg" class="figure"><img
+src="figures/08-ellipse.svg" loading="lazy"
+alt="The rms ellipse before and after a drift" /></a></p>
 <p><em>Figure 8.7. Section 7’s example beam in the plane of position and
 angle. Blue: its rms ellipse at the quadrupole, <span
 class="math inline">\(\gamma_xx^2 + 2\alpha_xxx&#39; + \beta_xx&#39;^2 =
@@ -5236,8 +5243,9 @@ random error on each squared size) returns 2.05 µm. The scan must pass
 through the waist, the minimum of the parabola, or <span
 class="math inline">\(a\)</span> and <span
 class="math inline">\(c\)</span> are poorly determined.</p>
-<p><img src="figures/08-quad-scan.svg" loading="lazy"
-alt="The parabola of a quadrupole scan" /></p>
+<p><a href="figures/08-quad-scan.svg" class="figure"><img
+src="figures/08-quad-scan.svg" loading="lazy"
+alt="The parabola of a quadrupole scan" /></a></p>
 <p><em>Figure 8.8. The squared beam size on the screen against the
 quadrupole’s strength for the example beam, <span
 class="math inline">\(\sigma_{11}(K) = 500(K + 0.3)^2 + 5\)</span>
@@ -7144,10 +7152,6 @@ radiation” (Ginzburg and Frank 1945), “Hans Geiger” and “Walther Müller
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

@@ -14,10 +14,11 @@ cyclotron · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 12 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a
 href="#12-phase-stability-the-synchrocyclotron-and-the-isochronous-cyclotron"
@@ -141,7 +142,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1
@@ -1085,8 +1085,9 @@ accelerated. At 10 MeV the height is <span
 class="math inline">\(\pm2.77\)</span> MeV and at 600 MeV <span
 class="math inline">\(\pm3.23\)</span> MeV, a few tenths of a per cent
 of <span class="math inline">\(E\)</span>.</p>
-<p><img src="figures/12-bucket.svg" loading="lazy"
-alt="The tilted washboard potential and the bucket in the phase plane" /></p>
+<p><a href="figures/12-bucket.svg" class="figure"><img
+src="figures/12-bucket.svg" loading="lazy"
+alt="The tilted washboard potential and the bucket in the phase plane" /></a></p>
 <p><em>Figure 12.1. Top: the potential <span class="math inline">\(U/a =
 \cos\phi + \phi\sin\phi_s\)</span> for <span
 class="math inline">\(\phi_s = 150^\circ\)</span>, a cosine tilted by a
@@ -1195,8 +1196,9 @@ transition it arrives later, so <span
 class="math inline">\(\sin\phi\)</span> must fall: <span
 class="math inline">\(\pi/2 &lt; \phi_s &lt; \pi\)</span>. The
 synchrocyclotron’s particles ride the falling side (Figure 12.2).</p>
-<p><img src="figures/12-phase-stability.svg" loading="lazy"
-alt="Energy gain against phase, with the synchronous particle on the falling side" /></p>
+<p><a href="figures/12-phase-stability.svg" class="figure"><img
+src="figures/12-phase-stability.svg" loading="lazy"
+alt="Energy gain against phase, with the synchronous particle on the falling side" /></a></p>
 <p><em>Figure 12.2. The energy gain per turn against the phase at which
 a particle crosses the gaps, for the model’s 40 kV per turn. The
 synchronous particle (red) crosses at 150° and gains 20 keV, the dashed
@@ -1365,8 +1367,9 @@ per turn and 600 MeV takes 30,000 turns. Summing the periods along the
 frequency curve gives 1.366 ms, matching the sweep. Figure 12.3 shows
 the frequency the sweep must follow.</li>
 </ul>
-<p><img src="figures/12-sweep.svg" loading="lazy"
-alt="Revolution frequency against energy in three kinds of field" /></p>
+<p><a href="figures/12-sweep.svg" class="figure"><img
+src="figures/12-sweep.svg" loading="lazy"
+alt="Revolution frequency against energy in three kinds of field" /></a></p>
 <p><em>Figure 12.3. The revolution frequency of a proton against its
 kinetic energy. Red: the model synchrocyclotron, computed along the
 orbits of the field <span class="math inline">\(B_0[1 - 0.071(r/2.22\
@@ -1752,8 +1755,9 @@ factors change sign between entry and exit, so the force points towards
 the median plane at both edges. This is the edge focusing of a bending
 magnet (<a href="16-strong-focusing.html">chapter 16</a>), repeated at
 every hill edge.</p>
-<p><img src="figures/12-scallop.svg" loading="lazy"
-alt="Four radial hills and the scalloped closed orbit" /></p>
+<p><a href="figures/12-scallop.svg" class="figure"><img
+src="figures/12-scallop.svg" loading="lazy"
+alt="Four radial hills and the scalloped closed orbit" /></a></p>
 <p><em>Figure 12.4. Four radial hills (shaded, strong field) and valleys
 (weak field), seen from above, with the field pointing into the page so
 that a positive particle going anticlockwise is bent inward. The red
@@ -2318,8 +2322,9 @@ class="math inline">\(kL = 1.875\)</span> the trace reaches <span
 class="math inline">\(-2\)</span> and beyond it the motion is unstable:
 alternating gradients focus, but only up to a strength (Figure 12.5).
 This is the arithmetic behind section 6’s “focusing on balance”.</p>
-<p><img src="figures/12-trace.svg" loading="lazy"
-alt="Half the trace of the one-period matrix for square-wave focusing" /></p>
+<p><a href="figures/12-trace.svg" class="figure"><img
+src="figures/12-trace.svg" loading="lazy"
+alt="Half the trace of the one-period matrix for square-wave focusing" /></a></p>
 <p><em>Figure 12.5. Half the trace of the one-period matrix, <span
 class="math inline">\(\cos kL\cosh kL\)</span>, for focusing that
 alternates between <span class="math inline">\(+k^2\)</span> and <span
@@ -2657,8 +2662,9 @@ class="math inline">\(AN_s\tan\xi\,\sin\psi\,z\)</span> to <span
 class="math inline">\(z&#39;&#39;\)</span>: an alternating gradient of
 amplitude <span class="math inline">\(G = AN_s\tan\xi\)</span>. Two
 terms survive averaging.</p>
-<p><img src="figures/12-spiral.svg" loading="lazy"
-alt="Four spiral hills, with the angle between a hill edge and the radius" /></p>
+<p><a href="figures/12-spiral.svg" class="figure"><img
+src="figures/12-spiral.svg" loading="lazy"
+alt="Four spiral hills, with the angle between a hill edge and the radius" /></a></p>
 <p><em>Figure 12.6. Four spiral hills seen from above, each edge a
 logarithmic spiral <span class="math inline">\(\theta = \theta_0 +
 \tan\xi\ln(r/R)\)</span> with <span class="math inline">\(\xi =
@@ -3116,8 +3122,9 @@ which ends the machine: <span class="math inline">\(\gamma =
 1.5\)</span> (469 MeV for protons) with three sectors, <span
 class="math inline">\(\gamma = 2\)</span> (938 MeV) with four (Figure
 12.7).</p>
-<p><img src="figures/12-tune-diagram.svg" loading="lazy"
-alt="A cyclotron’s tune diagram with its main resonance lines" /></p>
+<p><a href="figures/12-tune-diagram.svg" class="figure"><img
+src="figures/12-tune-diagram.svg" loading="lazy"
+alt="A cyclotron’s tune diagram with its main resonance lines" /></a></p>
 <p><em>Figure 12.7. The tune diagram: each line is one resonance <span
 class="math inline">\(m_rQ_r + m_zQ_z = p\)</span>, and a particle whose
 tunes sit on a line has its oscillation pushed in step every turn. <span
@@ -3269,8 +3276,9 @@ beam centre peaks at the last turn, and by lowering the field gradient
 over the last turns, which lowers <span class="math inline">\(Q_r^2 =
 1-n\)</span> in the general formula. <em>In the synchrocyclotron
 model</em>, with 20 keV per turn at 600 MeV, the step is only 54 µm.</p>
-<p><img src="figures/12-turn-separation.svg" loading="lazy"
-alt="Radial step per turn across the PSI ring" /></p>
+<p><a href="figures/12-turn-separation.svg" class="figure"><img
+src="figures/12-turn-separation.svg" loading="lazy"
+alt="Radial step per turn across the PSI ring" /></a></p>
 <p><em>Figure 12.8. The radial step per turn in the PSI ring, from <span
 class="math inline">\(dR/dn_t = R\,\Delta
 W_t/[mc^2\gamma(\gamma^2-1)]\)</span> with <span
@@ -3436,8 +3444,9 @@ has a large, low-field magnet: 14 km is still only about 280 turns of 50
 m, so near the outer edge, where the field peaks, a fraction of a per
 cent of the ions can be lost per turn spent in that field (Figure
 12.9).</p>
-<p><img src="figures/12-stripping.svg" loading="lazy"
-alt="Mean path of a 520 MeV H- ion before stripping, against the field" /></p>
+<p><a href="figures/12-stripping.svg" class="figure"><img
+src="figures/12-stripping.svg" loading="lazy"
+alt="Mean path of a 520 MeV H- ion before stripping, against the field" /></a></p>
 <p><em>Figure 12.9. The mean path of a 520 MeV H<span
 class="math inline">\(^-\)</span> ion before the magnetic field strips
 it, <span class="math inline">\(\beta\gamma c\tau\)</span> with Furman’s
@@ -4696,10 +4705,6 @@ Zaremba).</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

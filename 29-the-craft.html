@@ -14,10 +14,11 @@ commissioned and run · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 29 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a
 href="#29-how-an-accelerator-is-researched-designed-built-commissioned-and-run"
@@ -117,7 +118,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1
@@ -666,8 +666,9 @@ makes the total eleven times less certain than independence promises.
 This is why a cost that every magnet shares, such as the price of its
 superconducting cable, is estimated as one item and not left to average
 out.</p>
-<p><img src="figures/29-correlated.svg" loading="lazy"
-alt="Relative uncertainty of a total against the number of items, for four correlations" /></p>
+<p><a href="figures/29-correlated.svg" class="figure"><img
+src="figures/29-correlated.svg" loading="lazy"
+alt="Relative uncertainty of a total against the number of items, for four correlations" /></a></p>
 <p><em>Figure 29.1. The uncertainty of a total of <span
 class="math inline">\(N\)</span> items, each uncertain by 10 per cent,
 computed from the formula above for four values of the common
@@ -809,8 +810,9 @@ a Gaussian of the same mean and spread. The skew shows in the far tail.
 (The 55 per cent: <span class="math inline">\(K &lt; 100\)</span> means
 <span class="math inline">\(Z &lt; \ln(100/97.0)/s = 0.123\)</span>, and
 <span class="math inline">\(\Phi(0.123) = 0.549\)</span>.)</p>
-<p><img src="figures/29-lognormal.svg" loading="lazy"
-alt="A log-normal cost item against a Gaussian of the same mean and spread" /></p>
+<p><a href="figures/29-lognormal.svg" class="figure"><img
+src="figures/29-lognormal.svg" loading="lazy"
+alt="A log-normal cost item against a Gaussian of the same mean and spread" /></a></p>
 <p><em>Figure 29.2. The probability density of the item above, mean 100
 and standard deviation 25: log-normal (red, <span
 class="math inline">\(s = 0.246\)</span>, median 97.0) and Gaussian
@@ -1047,8 +1049,9 @@ class="math inline">\(h = 1.41\)</span> m, tilt 0.67 mrad.</li>
 class="math inline">\(r = 14\,429\)</span> m: <span
 class="math inline">\(h = 16.3\)</span> m, tilt 2.26 mrad.</li>
 </ul>
-<p><img src="figures/29-geodesy.svg" loading="lazy"
-alt="A plane tangent to the Earth rises above the level surface" /></p>
+<p><a href="figures/29-geodesy.svg" class="figure"><img
+src="figures/29-geodesy.svg" loading="lazy"
+alt="A plane tangent to the Earth rises above the level surface" /></a></p>
 <p><em>Figure 29.3. Why a flat ring is not level, not to scale. The ring
 lies in the plane that touches the Earth’s level surface at its centre
 <span class="math inline">\(C\)</span>. At the ring’s edge, a distance
@@ -1277,8 +1280,9 @@ and 6.1 mm at the defocusing ones (<span class="math inline">\(\beta_x =
 href="18-imperfections-and-resonances.html">chapter 18</a>). The arc
 aperture is a few centimetres, so a few uncorrected kicks of this size
 lose the beam within a cell or two.</p>
-<p><img src="figures/29-threading.svg" loading="lazy"
-alt="The trajectory after one corrector kick, seen at the monitors" /></p>
+<p><a href="figures/29-threading.svg" class="figure"><img
+src="figures/29-threading.svg" loading="lazy"
+alt="The trajectory after one corrector kick, seen at the monitors" /></a></p>
 <p><em>Figure 29.4. One corrector kick of 80.8 µrad seen on the first
 pass, computed from <span class="math inline">\(x_j =
 \sqrt{\beta_{x,i}\beta_{x,j}}\sin(\psi_j - \psi_i)\,\theta_i\)</span>
@@ -1550,8 +1554,9 @@ bound reaches <span class="math inline">\(10^{-4}\)</span> at <span
 class="math inline">\(N = 134\)</span> turns and <span
 class="math inline">\(4.8\times10^{-6}\)</span> at 1024 turns, if the
 beam stays coherent that long.</p>
-<p><img src="figures/29-tune-precision.svg" loading="lazy"
-alt="The rms tune error against the number of turns, for the bare peak and the noise limit" /></p>
+<p><a href="figures/29-tune-precision.svg" class="figure"><img
+src="figures/29-tune-precision.svg" loading="lazy"
+alt="The rms tune error against the number of turns, for the bare peak and the noise limit" /></a></p>
 <p><em>Figure 29.5. How well a tune can be read from <span
 class="math inline">\(N\)</span> turns, computed from the two formulas
 of this section. Black: taking the peak bin of the spectrum, rms <span
@@ -1802,8 +1807,9 @@ lasts on average <span class="math inline">\(10(1 - 0.47) =
 5.28\)</span> h, 70 per cent of the plan. Doubling <span
 class="math inline">\(M_{tot}\)</span> to 20 h gives 0.69 and 6.25
 h.</p>
-<p><img src="figures/29-survival.svg" loading="lazy"
-alt="The chance that a fill runs on without a fault, against time" /></p>
+<p><a href="figures/29-survival.svg" class="figure"><img
+src="figures/29-survival.svg" loading="lazy"
+alt="The chance that a fill runs on without a fault, against time" /></a></p>
 <p><em>Figure 29.6. The survival law <span class="math inline">\(S(t) =
 e^{-t/M_{tot}}\)</span> for <span class="math inline">\(M_{tot} =
 10\)</span> h (red) and 20 h (blue), computed from the formula. A fill
@@ -2285,8 +2291,9 @@ must be <span class="math inline">\(5\times23 = 115\)</span> cm. For a
 high-energy hadron machine the same logic holds, but the neutrons from
 lost protons dominate and the calculation is done with Monte Carlo codes
 such as FLUKA.</p>
-<p><img src="figures/29-shielding.svg" loading="lazy"
-alt="The fraction of the dose let through a concrete wall, against its thickness" /></p>
+<p><a href="figures/29-shielding.svg" class="figure"><img
+src="figures/29-shielding.svg" loading="lazy"
+alt="The fraction of the dose let through a concrete wall, against its thickness" /></a></p>
 <p><em>Figure 29.7. The shielding law <span
 class="math inline">\(10^{-d/\text{TVL}}\)</span> in ordinary concrete,
 computed for the two tenth-value layers of this chapter: cobalt-60 gamma
@@ -2354,8 +2361,9 @@ prototypes and test stands are the Berkeley habit kept on purpose, so
 that the build-and-rebuild happens on one magnet rather than on a
 thousand.</p>
 <h3 id="the-life-of-a-machine">The life of a machine</h3>
-<p><img src="figures/29-life.svg" loading="lazy"
-alt="The stages in the life of an accelerator, with the LHC’s dates" /></p>
+<p><a href="figures/29-life.svg" class="figure"><img
+src="figures/29-life.svg" loading="lazy"
+alt="The stages in the life of an accelerator, with the LHC’s dates" /></a></p>
 <p><em>Figure 29.8. The life of a machine, in the order of the
 paragraphs below, with the LHC’s dates from this chapter in red. The
 first row decides what to build, the second builds it, the third runs
@@ -2882,8 +2890,9 @@ class="math inline">\(\sqrt{2.9} = 1.7\)</span> times narrower. A
 continuous taper is hard to build; IOTA approximates it by a string of
 short pieces of constant cross-section (<em>Handbook</em>, section
 2.3.11).</p>
-<p><img src="figures/29-iota-insert.svg" loading="lazy"
-alt="The betatron function through a nonlinear insert, and how the magnet must taper" /></p>
+<p><a href="figures/29-iota-insert.svg" class="figure"><img
+src="figures/29-iota-insert.svg" loading="lazy"
+alt="The betatron function through a nonlinear insert, and how the magnet must taper" /></a></p>
 <p><em>Figure 29.9. The insert of the example, 1.8 m long with 0.3 of a
 turn of phase advance, computed from <span
 class="math inline">\(\beta(s) = \beta^* + s^2/\beta^*\)</span> with
@@ -3738,10 +3747,6 @@ and the proton mass.</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

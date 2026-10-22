@@ -13,10 +13,11 @@
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 10 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#10-the-cyclotron" id="toc-10-the-cyclotron">10 The
 cyclotron</a>
@@ -144,7 +145,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="10-the-cyclotron">10 The cyclotron</h1>
@@ -526,8 +526,9 @@ on a half circle. Each time it crosses the gap it is accelerated,
 provided the voltage has reversed in the time it took to go half round;
 since that time is fixed, one frequency serves for every half turn. The
 ions start at the centre and spiral outward.</p>
-<p><img src="figures/10-dees.svg" loading="lazy"
-alt="The dees, the gap and the spiral seen from above" /></p>
+<p><a href="figures/10-dees.svg" class="figure"><img
+src="figures/10-dees.svg" loading="lazy"
+alt="The dees, the gap and the spiral seen from above" /></a></p>
 <p><em>Figure 10.1. The cyclotron seen from above, not to scale. The
 magnetic field points out of the page, so a positive ion circles
 clockwise. The oscillator drives the two dees against each other; the
@@ -704,8 +705,9 @@ R}{\sqrt{N}}\cdot\frac{2}{3}N^{3/2} = \frac{4\pi}{3} R N ,
 \]</span></p>
 <p>and the time in the machine is <span class="math inline">\(N\)</span>
 revolution periods, <span class="math inline">\(N/f_0\)</span>.</p>
-<p><img src="figures/10-spiral.svg" loading="lazy"
-alt="Radius and turn spacing against turn number for the 11-inch" /></p>
+<p><a href="figures/10-spiral.svg" class="figure"><img
+src="figures/10-spiral.svg" loading="lazy"
+alt="Radius and turn spacing against turn number for the 11-inch" /></a></p>
 <p><em>Figure 10.2. The 11-inch cyclotron’s spiral, from <span
 class="math inline">\(r_n = R\sqrt{n/N}\)</span> with <span
 class="math inline">\(R = 11.5\)</span> cm and <span
@@ -884,8 +886,9 @@ class="math inline">\(n = 0\)</span> there is no tilt and no force, the
 uniform field of section 5. If <span class="math inline">\(n &lt;
 0\)</span> the tilt reverses and the force pushes particles away from
 the plane.</p>
-<p><img src="figures/10-barrel.svg" loading="lazy"
-alt="Barrel-shaped field lines between pole faces that open outward" /></p>
+<p><a href="figures/10-barrel.svg" class="figure"><img
+src="figures/10-barrel.svg" loading="lazy"
+alt="Barrel-shaped field lines between pole faces that open outward" /></a></p>
 <p><em>Figure 10.3. A vertical cut through the gap of the magnet, with
 the bow of the lines greatly exaggerated. The field points up, from the
 lower pole to the upper, and weakens outward, so the lines bow outward
@@ -1156,8 +1159,9 @@ factor of <span class="math inline">\(8 \times 10^{10}\)</span> in the
 40 turns of the 60-inch. A micrometre becomes 80 km; in practice the
 particle hits a dee within a few turns.</li>
 </ul>
-<p><img src="figures/10-three-cases.svg" loading="lazy"
-alt="Height against turns for the three signs of the field index" /></p>
+<p><a href="figures/10-three-cases.svg" class="figure"><img
+src="figures/10-three-cases.svg" loading="lazy"
+alt="Height against turns for the three signs of the field index" /></a></p>
 <p><em>Figure 10.4. The three cases drawn from the solutions above, for
 a particle that leaves the median plane at 1 mrad on an orbit of radius
 0.5 m, with time counted in turns. With <span class="math inline">\(n =
@@ -2273,8 +2277,9 @@ convention of section 2), the exit field is weaker than the entrance
 field, which adds focusing. If it is rising, the exit field is stronger,
 and the gap defocuses.</li>
 </ol>
-<p><img src="figures/10-gap-lens.svg" loading="lazy"
-alt="Field lines bulging into the openings of two dees" /></p>
+<p><a href="figures/10-gap-lens.svg" class="figure"><img
+src="figures/10-gap-lens.svg" loading="lazy"
+alt="Field lines bulging into the openings of two dees" /></a></p>
 <p><em>Figure 10.5. The gap between two dees, cut through the median
 plane, at an instant when the left dee is positive; schematic. Field
 lines leave the metal at right angles. Those that start on the inner
@@ -2556,8 +2561,9 @@ uniform field (centre 0.58% high, starting at about 166°) and 18.4 MeV
 with Rose’s 0.4% fall, taking <span class="math inline">\(R\)</span> as
 the radius at which that energy is reached; the fall needed for focusing
 costs about 3.4 MeV here.</p>
-<p><img src="figures/10-phase-slip.svg" loading="lazy"
-alt="Phase at the gap against energy for deuterons at 50 kV" /></p>
+<p><a href="figures/10-phase-slip.svg" class="figure"><img
+src="figures/10-phase-slip.svg" loading="lazy"
+alt="Phase at the gap against energy for deuterons at 50 kV" /></a></p>
 <p><em>Figure 10.6. The phase at which a deuteron crosses the gap,
 against its energy, from the continuous model of this section with <span
 class="math inline">\(q\hat{V} = 50\)</span> keV and no fall of the
@@ -2990,8 +2996,9 @@ length <span class="math inline">\(t\)</span>. When the beam stops, the
 activity decays as <span class="math inline">\(e^{-\lambda t}\)</span>.
 Making far more than one half-life’s worth gains nothing: decay then
 removes nuclei as fast as the beam makes them.</p>
-<p><img src="figures/10-buildup.svg" loading="lazy"
-alt="Activity of sodium-24 during and after a 24-hour run" /></p>
+<p><a href="figures/10-buildup.svg" class="figure"><img
+src="figures/10-buildup.svg" loading="lazy"
+alt="Activity of sodium-24 during and after a 24-hour run" /></a></p>
 <p><em>Figure 10.7. The activity of sodium-24 (<span
 class="math inline">\(T_{1/2} = 15.0\)</span> h) under a steady beam, as
 a fraction of the saturation activity <span
@@ -3651,10 +3658,6 @@ turn-by-turn phase calculations of sections 8 and 9.</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

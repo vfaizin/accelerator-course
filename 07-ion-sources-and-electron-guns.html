@@ -14,10 +14,11 @@ guns · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 07 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#07-ion-sources-and-electron-guns"
 id="toc-07-ion-sources-and-electron-guns">07 Ion sources and electron
@@ -181,7 +182,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="07-ion-sources-and-electron-guns">07 Ion sources and electron
@@ -666,8 +666,9 @@ every small square anywhere in the plane is changed in the same way, and
 any region, built from small squares, has its area multiplied by <span
 class="math inline">\(|\det M|\)</span>. (A negative determinant means
 the map also flips the region over, as a mirror does.)</p>
-<p><img src="figures/07-determinant.svg" loading="lazy"
-alt="The unit square and its image under a matrix" /></p>
+<p><a href="figures/07-determinant.svg" class="figure"><img
+src="figures/07-determinant.svg" loading="lazy"
+alt="The unit square and its image under a matrix" /></a></p>
 <p><em>Figure 7.1. A matrix sends the unit square (blue) to the
 parallelogram (red) whose sides are its two columns. Left: a general
 matrix, whose determinant 1.375 is the parallelogram’s area. Right: a
@@ -896,8 +897,9 @@ rms width 1 mm and rms angle 1 mrad, with no correlation between them,
 is <span class="math inline">\(\sqrt{1^2 + (1000 \times 0.001)^2} =
 1.41\)</span> mm wide after a 1 m drift: wider, and now correlated (the
 outer particles are the ones moving outward), but no larger in area.</p>
-<p><img src="figures/07-drift-lens.svg" loading="lazy"
-alt="The rms ellipse of a beam before and after a drift and a lens" /></p>
+<p><a href="figures/07-drift-lens.svg" class="figure"><img
+src="figures/07-drift-lens.svg" loading="lazy"
+alt="The rms ellipse of a beam before and after a drift and a lens" /></a></p>
 <p><em>Figure 7.2. The rms ellipse of the beam in the text, 1 mm by 1
 mrad (blue), after a 1 m drift (red) and then a thin lens of 1 m focal
 length (dashed). The drift tilts and stretches the ellipse, so the beam
@@ -1168,8 +1170,9 @@ particles gives the same 5.00 µm. The beam’s true area has not changed
 at all, but every measurement and every downstream machine will see five
 times the emittance. This is why the chapter says that nonlinear forces
 “keep the true area but twist the cloud”.</p>
-<p><img src="figures/07-filamentation.svg" loading="lazy"
-alt="A Gaussian beam’s contour before and after a cubic kick" /></p>
+<p><a href="figures/07-filamentation.svg" class="figure"><img
+src="figures/07-filamentation.svg" loading="lazy"
+alt="A Gaussian beam’s contour before and after a cubic kick" /></a></p>
 <p><em>Figure 7.3. The example’s beam, drawn as its <span
 class="math inline">\(2\sigma\)</span> density contour: before the cubic
 kick (blue) and after it (red). The kick moves each point straight up or
@@ -1376,8 +1379,9 @@ emittance)</td>
 </tr>
 </tbody>
 </table>
-<p><img src="figures/07-gaussian-fraction.svg" loading="lazy"
-alt="Fraction of a beam inside an ellipse of given emittance" /></p>
+<p><a href="figures/07-gaussian-fraction.svg" class="figure"><img
+src="figures/07-gaussian-fraction.svg" loading="lazy"
+alt="Fraction of a beam inside an ellipse of given emittance" /></a></p>
 <p><em>Figure 7.4. The fraction of a beam inside an ellipse similar to
 its rms ellipse, against the ellipse’s emittance in units of the rms
 emittance: <span class="math inline">\(1 -
@@ -2422,8 +2426,9 @@ such peaks against breakdown (<a
 href="04-high-voltage-and-breakdown.html">chapter 4</a>). Real
 electrodes are cut off at a finite size, and round beams need numerical
 solutions, which is why every gun is then checked with a code.</p>
-<p><img src="figures/07-pierce-gun.svg" loading="lazy"
-alt="Pierce electrodes and equipotentials for a sheet beam" /></p>
+<p><a href="figures/07-pierce-gun.svg" class="figure"><img
+src="figures/07-pierce-gun.svg" loading="lazy"
+alt="Pierce electrodes and equipotentials for a sheet beam" /></a></p>
 <p><em>Figure 7.5. The Pierce gun for a sheet beam, drawn from <span
 class="math inline">\(\phi = V(r/d)^{4/3}\cos(4\theta/3)\)</span>. The
 beam (red) fills the region below its edge, the <span
@@ -4093,8 +4098,9 @@ reflected. The electrons, able to follow the slow field, screen it out.
 So a plasma passes waves above its plasma frequency and reflects those
 below, a high-pass filter (Brown, section 11.4.4). The ionosphere
 reflects long radio waves for the same reason.</p>
-<p><img src="figures/07-plasma-dispersion.svg" loading="lazy"
-alt="Dispersion relation of waves in a plasma" /></p>
+<p><a href="figures/07-plasma-dispersion.svg" class="figure"><img
+src="figures/07-plasma-dispersion.svg" loading="lazy"
+alt="Dispersion relation of waves in a plasma" /></a></p>
 <p><em>Figure 7.6. Frequency against wavenumber for a wave in a plasma,
 <span class="math inline">\(\omega^2 = \omega_p^2 + k^2c^2\)</span>
 (red), in units of the plasma frequency. At high frequency it approaches
@@ -4487,8 +4493,9 @@ n_i \approx n_s\left(1 - \frac{e|\varphi|}{M u_0^2}\right), \qquad n_e
 \frac{1}{M u_0^2} \le \frac{1}{k_B T_e} \quad\Longleftrightarrow\quad
 u_0 \ge c_s = \sqrt{\frac{k_B T_e}{M}}.
 \]</span></p>
-<p><img src="figures/07-bohm.svg" loading="lazy"
-alt="Ion and electron densities entering a sheath" /></p>
+<p><a href="figures/07-bohm.svg" class="figure"><img
+src="figures/07-bohm.svg" loading="lazy"
+alt="Ion and electron densities entering a sheath" /></a></p>
 <p><em>Figure 7.7. The densities just inside a sheath, as the potential
 falls: electrons (blue) by the Boltzmann factor, ions by energy
 conservation and constant flux. Ions that enter at the ion sound speed
@@ -4985,8 +4992,9 @@ f_{lost} = 1 - \cos\alpha_{lc}.
 </tr>
 </tbody>
 </table>
-<p><img src="figures/07-loss-cone.svg" loading="lazy"
-alt="The loss cone of a magnetic mirror in velocity space" /></p>
+<p><a href="figures/07-loss-cone.svg" class="figure"><img
+src="figures/07-loss-cone.svg" loading="lazy"
+alt="The loss cone of a magnetic mirror in velocity space" /></a></p>
 <p><em>Figure 7.8. Velocities at the weakest point of a mirror field,
 with <span class="math inline">\(v_\parallel\)</span> along the field
 and <span class="math inline">\(v_\perp\)</span> across it, for mirror
@@ -6172,10 +6180,6 @@ screening).</li>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

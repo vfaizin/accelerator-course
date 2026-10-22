@@ -14,10 +14,11 @@ mechanics · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Part 0, Foundations</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#f3-newtonian-mechanics" id="toc-f3-newtonian-mechanics">F3
 Newtonian mechanics</a>
@@ -77,7 +78,6 @@ id="toc-where-the-course-uses-it">Where the course uses it</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="f3-newtonian-mechanics">F3 Newtonian mechanics</h1>
@@ -1923,10 +1923,6 @@ Huygens’s collisions and the principle of least action.</li>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

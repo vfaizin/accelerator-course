@@ -14,10 +14,11 @@ optics · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 16 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#16-strong-focusing-and-linear-optics"
 id="toc-16-strong-focusing-and-linear-optics">16 Strong focusing and
@@ -126,7 +127,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="16-strong-focusing-and-linear-optics">16 Strong focusing and
@@ -813,8 +813,9 @@ is smaller. In the other order, the diverging lens throws the ray
 outward, and it reaches the converging lens farther out, where the
 converging kick is larger. Either way the converging lens wins, by an
 amount of second order in the lens strength.</p>
-<p><img src="figures/16-doublet.svg" loading="lazy"
-alt="A ray through a converging-diverging pair of lenses, in both orders" /></p>
+<p><a href="figures/16-doublet.svg" class="figure"><img
+src="figures/16-doublet.svg" loading="lazy"
+alt="A ray through a converging-diverging pair of lenses, in both orders" /></a></p>
 <p><em>Figure 16.1. A ray entering parallel at height <span
 class="math inline">\(x_0\)</span> through two thin lenses of focal
 length <span class="math inline">\(f = 2\)</span> m and <span
@@ -957,8 +958,9 @@ axis and are cut off at the sides to leave room for the coils; the
 truncation adds small higher multipoles (12-pole and 20-pole terms for a
 symmetric quadrupole), which <a href="17-magnets.html">chapter 17</a>
 treats.</p>
-<p><img src="figures/16-quadrupole.svg" loading="lazy"
-alt="Cross-section of a quadrupole: four hyperbolic iron poles, the field between them and the force on the beam" /></p>
+<p><a href="figures/16-quadrupole.svg" class="figure"><img
+src="figures/16-quadrupole.svg" loading="lazy"
+alt="Cross-section of a quadrupole: four hyperbolic iron poles, the field between them and the force on the beam" /></a></p>
 <p><em>Figure 16.2. A quadrupole seen along the beam, which comes out of
 the page, for <span class="math inline">\(g &gt; 0\)</span>. The iron
 poles follow the hyperbolas <span class="math inline">\(xy = \pm
@@ -1410,8 +1412,9 @@ class="math inline">\(x(s)\)</span> to first order in <span
 class="math inline">\(x\)</span>, <span
 class="math inline">\(y\)</span>, their slopes, and <span
 class="math inline">\(\delta = (p - p_0)/p_0\)</span>.</p>
-<p><img src="figures/16-coordinates.svg" loading="lazy"
-alt="The curved coordinates of a ring: the reference orbit, and a particle displaced outward by x" /></p>
+<p><a href="figures/16-coordinates.svg" class="figure"><img
+src="figures/16-coordinates.svg" loading="lazy"
+alt="The curved coordinates of a ring: the reference orbit, and a particle displaced outward by x" /></a></p>
 <p><em>Figure 16.3. The coordinates that ride along the design orbit.
 Inside a bending magnet the reference orbit (dashed) is an arc of radius
 <span class="math inline">\(\rho\)</span> about the centre <span
@@ -2440,8 +2443,9 @@ class="math inline">\(0.577\,L\)</span>. The maximum is smallest at
 class="math inline">\(1.665\,L\)</span>, which is why arc cells are
 usually built with phase advances between about 60° and 90° (figure
 16.4).</p>
-<p><img src="figures/16-fodo-beta-range.svg" loading="lazy"
-alt="The largest and smallest betatron functions of a thin-lens FODO cell against its phase advance" /></p>
+<p><a href="figures/16-fodo-beta-range.svg" class="figure"><img
+src="figures/16-fodo-beta-range.svg" loading="lazy"
+alt="The largest and smallest betatron functions of a thin-lens FODO cell against its phase advance" /></a></p>
 <p><em>Figure 16.4. <span
 class="math inline">\(\beta_{x,\max}/L\)</span> and <span
 class="math inline">\(\beta_{x,\min}/L\)</span> of the thin-lens FODO
@@ -2464,8 +2468,9 @@ class="math inline">\(\beta_{x,\max} = 182.5\)</span> m and <span
 class="math inline">\(\beta_{x,\min} = 31.3\)</span> m. Holzer’s CERN
 Accelerator School lecture gives <span class="math inline">\(\beta =
 180\)</span> m in the LHC arcs; the thin-lens cell reproduces it.</p>
-<p><img src="figures/16-fodo-beta.svg" loading="lazy"
-alt="The horizontal and vertical betatron functions along one 90-degree FODO cell" /></p>
+<p><a href="figures/16-fodo-beta.svg" class="figure"><img
+src="figures/16-fodo-beta.svg" loading="lazy"
+alt="The horizontal and vertical betatron functions along one 90-degree FODO cell" /></a></p>
 <p><em>Figure 16.5. The betatron functions through the worked cell,
 <span class="math inline">\(L = 106.9\)</span> m and <span
 class="math inline">\(\mu = 90°\)</span>, computed by carrying <span
@@ -2615,8 +2620,9 @@ diverging. (Since <span class="math inline">\(\alpha_x =
 class="math inline">\(\alpha_x\)</span> means <span
 class="math inline">\(\beta_x\)</span>, and with it the beam’s width, is
 shrinking along <span class="math inline">\(s\)</span>.)</p>
-<p><img src="figures/16-ellipse.svg" loading="lazy"
-alt="The Courant-Snyder ellipse in the plane of position and slope" /></p>
+<p><a href="figures/16-ellipse.svg" class="figure"><img
+src="figures/16-ellipse.svg" loading="lazy"
+alt="The Courant-Snyder ellipse in the plane of position and slope" /></a></p>
 <p><em>Figure 16.6. The Courant-Snyder ellipse <span
 class="math inline">\(\gamma_x x^2 + 2\alpha_x xx&#39; + \beta_x
 x&#39;^2 = \varepsilon\)</span>, drawn from its parametric form <span
@@ -3853,8 +3859,9 @@ class="math inline">\(\mu = 0.31547\)</span> per step against the exact
 0.31416, a tune error of 0.4 per cent, and a slightly tilted invariant
 ellipse.</li>
 </ul>
-<p><img src="figures/16-integrators.svg" loading="lazy"
-alt="Amplitude of a stepped oscillation against the number of oscillations, for three integrators" /></p>
+<p><a href="figures/16-integrators.svg" class="figure"><img
+src="figures/16-integrators.svg" loading="lazy"
+alt="Amplitude of a stepped oscillation against the number of oscillations, for three integrators" /></a></p>
 <p><em>Figure 16.7. The oscillation <span
 class="math inline">\(x&#39;&#39; = -x\)</span> stepped twenty times per
 oscillation by each method, from the per-step factors above: explicit
@@ -4278,8 +4285,9 @@ about 46 times less; Courant, Livingston and Snyder’s 1 by 2 inch magnet
 aperture was 288 times less. The PS reached four times the Bevatron’s
 energy with about 4,000 tonnes of magnet against about 10,000 tons (some
 9,000 tonnes).</p>
-<p><img src="figures/16-apertures.svg" loading="lazy"
-alt="The beam spaces of the Bevatron, the PS and the 1952 strong-focusing design, drawn to the same scale" /></p>
+<p><a href="figures/16-apertures.svg" class="figure"><img
+src="figures/16-apertures.svg" loading="lazy"
+alt="The beam spaces of the Bevatron, the PS and the 1952 strong-focusing design, drawn to the same scale" /></a></p>
 <p><em>Figure 16.8. The space the beam needed, drawn to one scale. Grey:
 the Bevatron’s gap, 1 ft by 4 ft (0.30 m by 1.22 m), for 6.2 GeV with
 weak focusing. Inside it, red: the PS vacuum chamber today, an ellipse
@@ -5432,10 +5440,6 @@ the copy in references/.</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

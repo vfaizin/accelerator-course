@@ -13,10 +13,11 @@
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 11 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#11-the-betatron" id="toc-11-the-betatron">11 The
 betatron</a>
@@ -94,7 +95,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="11-the-betatron">11 The betatron</h1>
@@ -487,8 +487,9 @@ circle. So the rising field pushes the electron forward in exactly the
 direction in which it bends it round. This is not luck. Both statements
 say that a ring of charge in a rising field moves so as to oppose the
 rise.</p>
-<p><img src="figures/11-lenz.svg" loading="lazy"
-alt="The induced field and the forces on an electron, seen from above" /></p>
+<p><a href="figures/11-lenz.svg" class="figure"><img
+src="figures/11-lenz.svg" loading="lazy"
+alt="The induced field and the forces on an electron, seen from above" /></a></p>
 <p><em>Figure 11.1. The orbit seen from above, with the field <span
 class="math inline">\(\boldsymbol{B}\)</span> pointing up (out of the
 page) and rising. The induced field <span
@@ -686,8 +687,9 @@ through an iron core. Any closed loop around the core has an
 electromotive force equal to the rate of change of the flux through it.
 A wire loop would carry a current. In the betatron the loop is a circle
 in vacuum and the “current” is electrons that go round it.</p>
-<p><img src="figures/11-magnet.svg" loading="lazy"
-alt="A small betatron magnet cut through its axis" /></p>
+<p><a href="figures/11-magnet.svg" class="figure"><img
+src="figures/11-magnet.svg" loading="lazy"
+alt="A small betatron magnet cut through its axis" /></a></p>
 <p><em>Figure 11.2. A small betatron magnet cut through its axis (not to
 scale). The coils drive flux <span class="math inline">\(\Phi\)</span>
 up through the laminated central core, across its short gap <span
@@ -942,8 +944,9 @@ machine it was made so by two discs of laminated iron set into the
 central gap; their thickness fixed the residual gap, and so the radius
 at which the rule holds. Model measurements set it to put the
 equilibrium orbit at 19 cm.</p>
-<p><img src="figures/11-two-to-one.svg" loading="lazy"
-alt="The field in the median plane of the 20 MeV betatron, and half the mean field inside each radius" /></p>
+<p><a href="figures/11-two-to-one.svg" class="figure"><img
+src="figures/11-two-to-one.svg" loading="lazy"
+alt="The field in the median plane of the 20 MeV betatron, and half the mean field inside each radius" /></a></p>
 <p><em>Figure 11.3. The 20 MeV betatron’s field in the median plane, in
 units of <span class="math inline">\(B_0\)</span>: a uniform <span
 class="math inline">\(B_c\)</span> in the core out to <span
@@ -1428,8 +1431,9 @@ class="math inline">\(\omega_y = \sqrt{n}\,\beta c/R =
 1.3\times10^8\)</span> s<span class="math inline">\(^{-1}\)</span>, so
 <span class="math inline">\(\varepsilon \approx 0.008\)</span>, and it
 only falls after that.</p>
-<p><img src="figures/11-shrink.svg" loading="lazy"
-alt="The amplitude of a betatron oscillation through the rise of the field" /></p>
+<p><a href="figures/11-shrink.svg" class="figure"><img
+src="figures/11-shrink.svg" loading="lazy"
+alt="The amplitude of a betatron oscillation through the rise of the field" /></a></p>
 <p><em>Figure 11.4. The shrinking in Humphries’ 300 MeV example, from an
 amplitude of 20 mm at injection (100 keV, 0.99 µs after the field’s
 zero) to 0.67 mm at the top (1389 µs). Curve: <span
@@ -1837,8 +1841,9 @@ class="math inline">\(A\)</span>, the same sequence that <span
 class="math inline">\(Q = 0.423\)</span> would give. This is how tunes
 are measured, and why the integer part has to be known from the
 design.</p>
-<p><img src="figures/11-pickup.svg" loading="lazy"
-alt="What one pickup sees of two oscillations with tunes q and 1 - q" /></p>
+<p><a href="figures/11-pickup.svg" class="figure"><img
+src="figures/11-pickup.svg" loading="lazy"
+alt="What one pickup sees of two oscillations with tunes q and 1 - q" /></a></p>
 <p><em>Figure 11.5. A radial oscillation with <span
 class="math inline">\(Q = 0.577\)</span> (<span class="math inline">\(n
 = 2/3\)</span>), started at its crest, and one with <span
@@ -2333,8 +2338,9 @@ class="math inline">\(n &lt; 1\)</span>. In a uniform field (<span
 class="math inline">\(n = 0\)</span>) the electron still oscillates
 radially: a displaced circle in a uniform field crosses the reference
 circle twice a turn. Figure 11.6 shows the balance.</p>
-<p><img src="figures/11-radial-force.svg" loading="lazy"
-alt="The force an electron needs and the force it gets, against radius" /></p>
+<p><a href="figures/11-radial-force.svg" class="figure"><img
+src="figures/11-radial-force.svg" loading="lazy"
+alt="The force an electron needs and the force it gets, against radius" /></a></p>
 <p><em>Figure 11.6. Radial focusing. An electron of the orbit’s momentum
 needs an inward force <span class="math inline">\(pv/r\)</span> to
 circle at radius <span class="math inline">\(r\)</span> (black), and the
@@ -2362,8 +2368,9 @@ component reverses across the plane, and crossed with the azimuthal
 velocity it pushes the electron back towards the plane when <span
 class="math inline">\(n &gt; 0\)</span>. Vertical stability needs a
 field that falls outward.</p>
-<p><img src="figures/11-bowed-lines.svg" loading="lazy"
-alt="Field lines bowing outward between shaped poles, and the vertical force on an electron above and below the median plane" /></p>
+<p><a href="figures/11-bowed-lines.svg" class="figure"><img
+src="figures/11-bowed-lines.svg" loading="lazy"
+alt="Field lines bowing outward between shaped poles, and the vertical force on an electron above and below the median plane" /></a></p>
 <p><em>Figure 11.7. Vertical focusing, in a cut through the gap to the
 right of the axis. The poles open outward, the field falls outward, and
 the field lines bow outward: <span class="math inline">\(B_r\)</span>
@@ -3211,8 +3218,9 @@ cycle of about 13 per cent of the energy, enough to shrink the orbit by
 about 20 per cent; it added flux through separate side packages of the
 core and ejected the beam at 75° of the cycle, which held the loss to
 about 8 per cent.</p>
-<p><img src="figures/11-radiation-shift.svg" loading="lazy"
-alt="How far radiation moves the orbit inward through the rise of the field" /></p>
+<p><a href="figures/11-radiation-shift.svg" class="figure"><img
+src="figures/11-radiation-shift.svg" loading="lazy"
+alt="How far radiation moves the orbit inward through the rise of the field" /></a></p>
 <p><em>Figure 11.8. The inward shift of the orbit from radiation, for a
 1 m orbit with <span class="math inline">\(n = 2/3\)</span>, against the
 phase of the field cycle: 100 MeV at 60 Hz (blue; 1 mm by 37°, 20 mm at
@@ -3953,10 +3961,6 @@ Maxwell’s equations, with Faraday’s law in integral form), section 74
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

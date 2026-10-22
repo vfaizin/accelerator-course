@@ -14,10 +14,11 @@ sources · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 13 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#13-rf-cavities-and-power-sources"
 id="toc-13-rf-cavities-and-power-sources">13 RF cavities and power
@@ -168,7 +169,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="13-rf-cavities-and-power-sources">13 RF cavities and power
@@ -1120,8 +1120,9 @@ of strongest electric field.</p>
 <p>This is the pillbox cavity. Real accelerating cavities have rounded
 shapes, beam pipes, nose cones and ports, but the pillbox can be solved
 exactly and shows every idea.</p>
-<p><img src="figures/13-circuit-to-box.svg" loading="lazy"
-alt="From a capacitor and a coil to a pillbox cavity" /></p>
+<p><a href="figures/13-circuit-to-box.svg" class="figure"><img
+src="figures/13-circuit-to-box.svg" loading="lazy"
+alt="From a capacitor and a coil to a pillbox cavity" /></a></p>
 <p><em>Figure 13.1. From a circuit to a box. (a) Two plates joined by
 one loop: the electric field (blue) is between the plates, the magnetic
 field round the loop. (b) Loops in parallel lower the inductance to
@@ -2165,8 +2166,9 @@ class="math inline">\(H_\varphi\)</span> is zero on the axis, largest at
 <span class="math inline">\(kr = 1.841\)</span> where <span
 class="math inline">\(J_1 = 0.582\)</span>, and at the wall equals <span
 class="math inline">\(0.519\mathcal{E}_0/\eta_0\)</span>.</p>
-<p><img src="figures/13-tm010-profile.svg" loading="lazy"
-alt="The TM010 electric and magnetic fields across the pillbox" /></p>
+<p><a href="figures/13-tm010-profile.svg" class="figure"><img
+src="figures/13-tm010-profile.svg" loading="lazy"
+alt="The TM010 electric and magnetic fields across the pillbox" /></a></p>
 <p><em>Figure 13.2. The TM<span class="math inline">\(_{010}\)</span>
 fields across the pillbox, from <span
 class="math inline">\(\mathcal{E}_z = \mathcal{E}_0J_0(kr)\)</span> and
@@ -2715,8 +2717,9 @@ class="math inline">\(|J_w|^2 = |1 + j|^2|H_t|^2/\delta^2 =
 class="math inline">\(\delta\)</span> carrying the whole current
 uniformly. (Tong, <em>Electromagnetism</em>, §8.6.2, derives the skin
 depth from the Drude model.)</p>
-<p><img src="figures/13-skin-depth.svg" loading="lazy"
-alt="The magnetic field inside a metal wall, decaying and lagging with depth" /></p>
+<p><a href="figures/13-skin-depth.svg" class="figure"><img
+src="figures/13-skin-depth.svg" loading="lazy"
+alt="The magnetic field inside a metal wall, decaying and lagging with depth" /></a></p>
 <p><em>Figure 13.3. The field inside a good conductor, <span
 class="math inline">\(H = H_te^{-z/\delta}\cos(\omega t -
 z/\delta)\)</span>, at four instants an eighth of a period apart (red),
@@ -3093,8 +3096,9 @@ The <span class="math inline">\(8\pi/9\)</span> mode is 0.75 MHz below
 the <span class="math inline">\(\pi\)</span> mode, against a loaded
 bandwidth of 415 Hz in operation: well apart. Twenty cells with the same
 coupling would leave 0.15 MHz.</p>
-<p><img src="figures/13-passband.svg" loading="lazy"
-alt="The passband of the nine-cell TESLA cavity" /></p>
+<p><a href="figures/13-passband.svg" class="figure"><img
+src="figures/13-passband.svg" loading="lazy"
+alt="The passband of the nine-cell TESLA cavity" /></a></p>
 <p><em>Figure 13.4. The passband of the nine-cell TESLA cavity: the
 dispersion relation <span class="math inline">\(f = f_0/\sqrt{1 +
 k\cos\phi}\)</span> with <span class="math inline">\(k = 1.87\)</span>
@@ -3520,8 +3524,9 @@ class="math inline">\(0.2 \mp 0.4j\)</span> (magnitude 0.45); at <span
 class="math inline">\(y = \pm10\)</span>, <span
 class="math inline">\(-0.89 \mp 0.37j\)</span>, nearly back at <span
 class="math inline">\(-1\)</span>.</p>
-<p><img src="figures/13-smith-circle.svg" loading="lazy"
-alt="Reflection circles of a cavity swept through resonance" /></p>
+<p><a href="figures/13-smith-circle.svg" class="figure"><img
+src="figures/13-smith-circle.svg" loading="lazy"
+alt="Reflection circles of a cavity swept through resonance" /></a></p>
 <p><em>Figure 13.5. The reflection coefficient <span
 class="math inline">\(\Gamma\)</span> of a cavity, seen through its
 coupler, as the frequency sweeps through resonance, for coupling factors
@@ -3987,8 +3992,9 @@ after <span class="math inline">\(\tau\ln2 = 531\)</span> µs. The beam
 is then injected and absorbs exactly the power that would otherwise have
 pushed the field higher. Aune and others quote a filling time of 530 µs,
 then an 800 µs flat top.</p>
-<p><img src="figures/13-filling.svg" loading="lazy"
-alt="Filling a TESLA cavity, then holding it with the beam" /></p>
+<p><a href="figures/13-filling.svg" class="figure"><img
+src="figures/13-filling.svg" loading="lazy"
+alt="Filling a TESLA cavity, then holding it with the beam" /></a></p>
 <p><em>Figure 13.6. One RF pulse of a TESLA cavity, computed with <span
 class="math inline">\(\tau = 2Q_L/\omega = 767\)</span> µs. With full
 forward power and no beam, the voltage heads for twice the working value
@@ -4321,8 +4327,9 @@ class="math inline">\(v_{ph} = 1.458c\)</span> and <span
 class="math inline">\(v_g = 0.686c\)</span>. WR-650 (165.1 by 82.55 mm),
 used at 1.3 GHz, cuts off at 0.908 GHz and has <span
 class="math inline">\(v_g = 0.716c\)</span>.</p>
-<p><img src="figures/13-waveguide.svg" loading="lazy"
-alt="The TE10 mode of WR-284 and its dispersion curve" /></p>
+<p><a href="figures/13-waveguide.svg" class="figure"><img
+src="figures/13-waveguide.svg" loading="lazy"
+alt="The TE10 mode of WR-284 and its dispersion curve" /></a></p>
 <p><em>Figure 13.7. Left: the cross-section of WR-284 to scale, with the
 TE<span class="math inline">\(_{10}\)</span> electric field, <span
 class="math inline">\(\mathcal{E}_y \propto \sin(\pi x/a_w)\)</span>:
@@ -4544,8 +4551,9 @@ class="math inline">\(V_0\)</span>, the power out would be <span
 class="math inline">\(\tfrac12(2I_0J_1)V_0\)</span>, an efficiency of
 <span class="math inline">\(J_1(1.841) = 58\)</span> per cent for this
 two-cavity tube.</p>
-<p><img src="figures/13-klystron.svg" loading="lazy"
-alt="A two-cavity klystron and the bunching in its drift" /></p>
+<p><a href="figures/13-klystron.svg" class="figure"><img
+src="figures/13-klystron.svg" loading="lazy"
+alt="A two-cavity klystron and the bunching in its drift" /></a></p>
 <p><em>Figure 13.8. Top: a two-cavity klystron, not to scale. A steady
 beam from the gun crosses the buncher, whose small RF voltage speeds
 some electrons and slows others, drifts a length <span
@@ -6422,10 +6430,6 @@ shown; the pillbox examples are idealised cells without beam holes.</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

@@ -14,10 +14,11 @@ list · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Appendix</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#appendix-c-reading-list"
 id="toc-appendix-c-reading-list">Appendix C: reading list</a>
@@ -145,7 +146,6 @@ books in <code>references/accelerators/</code></a></li>
 id="toc-what-was-checked-and-how">What was checked and how</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="appendix-c-reading-list">Appendix C: reading list</h1>
@@ -2281,10 +2281,6 @@ were read from the files, never from memory.</li>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

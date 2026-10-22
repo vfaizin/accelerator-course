@@ -14,10 +14,11 @@ tandem · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 06 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#06-the-electrostatic-generator-and-the-tandem"
 id="toc-06-the-electrostatic-generator-and-the-tandem">06 The
@@ -124,7 +125,6 @@ id="toc-pre-requisite-continued-counting-statistics-poisson">Pre-requisite
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="06-the-electrostatic-generator-and-the-tandem">06 The
@@ -641,8 +641,9 @@ P = VI
 <p>in watts, with <span class="math inline">\(I\)</span> the charging
 current in amperes. Below breakdown the belt is a current source: it
 delivers the same current whatever the terminal voltage.</p>
-<p><img src="figures/06-generator.svg" loading="lazy"
-alt="A belt-charged electrostatic generator in side view" /></p>
+<p><a href="figures/06-generator.svg" class="figure"><img
+src="figures/06-generator.svg" loading="lazy"
+alt="A belt-charged electrostatic generator in side view" /></a></p>
 <p><em>Figure 6.1. A belt-charged generator, in side view and not to
 scale. A comb of sharp points at the bottom, fed from a supply of a few
 tens of kilovolts, sprays positive charge onto the rising run of an
@@ -975,8 +976,9 @@ class="math inline">\(V_0 = 7\)</span> MV, with 30 µA at 8 MV. Then
 <span class="math inline">\(\tau = C/g = 5\)</span> s for 300 pF. This
 is the crude natural regulator of section 3.</li>
 </ul>
-<p><img src="figures/06-load-curve.svg" loading="lazy"
-alt="The corona load curve and where a terminal settles" /></p>
+<p><a href="figures/06-load-curve.svg" class="figure"><img
+src="figures/06-load-curve.svg" loading="lazy"
+alt="The corona load curve and where a terminal settles" /></a></p>
 <p><em>Figure 6.2. Where a terminal settles, for the illustrative corona
 load <span class="math inline">\(I_L = k(V - V_0)^2\)</span> above onset
 <span class="math inline">\(V_0 = 7\)</span> MV (30 µA at 8 MV). A
@@ -1169,8 +1171,9 @@ class="math inline">\(\ln(b/a) = 1\)</span>, at <span
 class="math inline">\(a = b/e\)</span>. Both have the same cause: shrink
 the terminal and its curvature concentrates the field; enlarge it and
 the gap closes. Figure 6.3 shows both curves.</p>
-<p><img src="figures/06-best-terminal.svg" loading="lazy"
-alt="The surface field of a terminal against its size" /></p>
+<p><a href="figures/06-best-terminal.svg" class="figure"><img
+src="figures/06-best-terminal.svg" loading="lazy"
+alt="The surface field of a terminal against its size" /></a></p>
 <p><em>Figure 6.3. The field at the surface of a terminal of radius
 <span class="math inline">\(a\)</span> in a grounded tank of radius
 <span class="math inline">\(b\)</span>, in units of <span
@@ -1265,8 +1268,9 @@ class="math inline">\(2.718\,V/b\)</span>).</li>
 <p>In both, the inner gap is itself an optimum terminal for its own
 outer radius: <span class="math inline">\(b_1 = 2a\)</span> for spheres,
 <span class="math inline">\(b_1 = e\,a\)</span> for cylinders.</p>
-<p><img src="figures/06-shield.svg" loading="lazy"
-alt="The field between nested spheres, with and without a shield" /></p>
+<p><a href="figures/06-shield.svg" class="figure"><img
+src="figures/06-shield.svg" loading="lazy"
+alt="The field between nested spheres, with and without a shield" /></a></p>
 <p><em>Figure 6.4. The field between a spherical terminal and its tank,
 in units of <span class="math inline">\(V/b\)</span>, against the
 distance <span class="math inline">\(r\)</span> from the centre. Without
@@ -1719,8 +1723,9 @@ section turns it back (figure 6.5). Later tandems added weak transverse
 magnetic fields, which bend light electrons strongly and heavy ions
 hardly at all. NEC’s very clean metal-ceramic tubes held 1 MV per module
 without inclined fields (Herb, 1971).</p>
-<p><img src="figures/06-inclined-field.svg" loading="lazy"
-alt="Electrodes of an inclined-field tube, with an electron and an ion" /></p>
+<p><a href="figures/06-inclined-field.svg" class="figure"><img
+src="figures/06-inclined-field.svg" loading="lazy"
+alt="Electrodes of an inclined-field tube, with an electron and an ion" /></a></p>
 <p><em>Figure 6.5. Two sections of an inclined-field tube in side view,
 with the terminal to the left. In each section the electrodes are tilted
 by <span class="math inline">\(\theta = 14^\circ\)</span> (drawn true),
@@ -2155,8 +2160,9 @@ class="math inline">\(1 + L_0\)</span> and the time constant <span
 class="math inline">\(\tau\)</span> divided by <span
 class="math inline">\(1 + L_0\)</span>. So the closed loop’s time
 constant is <span class="math inline">\(\tau/(1 + L_0)\)</span>.</p>
-<p><img src="figures/06-loop.svg" loading="lazy"
-alt="The terminal stabiliser drawn as a loop" /></p>
+<p><a href="figures/06-loop.svg" class="figure"><img
+src="figures/06-loop.svg" loading="lazy"
+alt="The terminal stabiliser drawn as a loop" /></a></p>
 <p><em>Figure 6.6. The terminal stabiliser as a loop. A disturbance
 current <span class="math inline">\(D\)</span>, such as a fluctuation of
 the chain’s charge, and the correction current meet at the terminal,
@@ -2612,8 +2618,9 @@ class="math inline">\(2.56\,\sigma_E\)</span> (from <span
 class="math inline">\(-1.28\,\sigma_E\)</span> to <span
 class="math inline">\(+1.28\,\sigma_E\)</span>): the step’s width
 measures the beam’s energy spread.</p>
-<p><img src="figures/06-thick-target.svg" loading="lazy"
-alt="A narrow resonance and the thick-target yield step it makes" /></p>
+<p><a href="figures/06-thick-target.svg" class="figure"><img
+src="figures/06-thick-target.svg" loading="lazy"
+alt="A narrow resonance and the thick-target yield step it makes" /></a></p>
 <p><em>Figure 6.7. A resonance of full width <span
 class="math inline">\(\Gamma = 1.8\)</span> keV (dashed, the
 Breit–Wigner cross-section as a fraction of its peak) and the yield from
@@ -3118,8 +3125,9 @@ class="math inline">\(m\)</span> keeps the fraction <span
 class="math inline">\(m/M\)</span> of the energy it arrived with: <span
 class="math inline">\(W = (m/M)(W_{inj} + eV_T) + n_q eV_T\)</span>.
 Accelerator mass spectrometry relies on this break-up (section 14).</p>
-<p><img src="figures/06-tandem.svg" loading="lazy"
-alt="A tandem laid out straight, with the potential along the beam" /></p>
+<p><a href="figures/06-tandem.svg" class="figure"><img
+src="figures/06-tandem.svg" loading="lazy"
+alt="A tandem laid out straight, with the potential along the beam" /></a></p>
 <p><em>Figure 6.8. A tandem, laid out straight and not to scale, with
 the potential along the beam’s path beneath it. Negative ions from a
 source at ground are drawn up the first tube to the positive terminal,
@@ -4261,10 +4269,6 @@ references folder.</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

@@ -14,10 +14,11 @@ accelerate · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 27 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#27-new-ways-to-accelerate"
 id="toc-27-new-ways-to-accelerate">27 New ways to accelerate</a>
@@ -103,7 +104,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="27-new-ways-to-accelerate">27 New ways to accelerate</h1>
@@ -790,8 +790,9 @@ field <span class="math inline">\(\mathcal{E} = e n
 sheets (<a href="F4-electromagnetism.html#4-gausss-law-in-use">F4,
 section 4</a>), pointing to pull the electrons back (figure 27.1). Each
 electron obeys</p>
-<p><img src="figures/27-slab.svg" loading="lazy"
-alt="A slab of electrons displaced against fixed ions, with the field between the two charged faces" /></p>
+<p><a href="figures/27-slab.svg" class="figure"><img
+src="figures/27-slab.svg" loading="lazy"
+alt="A slab of electrons displaced against fixed ions, with the field between the two charged faces" /></a></p>
 <p><em>Figure 27.1. A slab of plasma electrons shifted a distance <span
 class="math inline">\(\xi\)</span> along <span
 class="math inline">\(z\)</span> against ions held still. A strip of
@@ -1266,8 +1267,9 @@ w_0z/z_R\)</span>, a cone of half-angle <span
 class="math inline">\(\theta = w_0/z_R = \lambda_0/(\pi w_0)\)</span>:
 the tighter the focus, the faster the spread, with <span
 class="math inline">\(w_0\theta = \lambda_0/\pi\)</span> fixed.</p>
-<p><img src="figures/27-gaussian-beam.svg" loading="lazy"
-alt="The radius of a focused Gaussian beam against distance from the focus" /></p>
+<p><a href="figures/27-gaussian-beam.svg" class="figure"><img
+src="figures/27-gaussian-beam.svg" loading="lazy"
+alt="The radius of a focused Gaussian beam against distance from the focus" /></a></p>
 <p><em>Figure 27.2. The radius <span class="math inline">\(w(z) =
 w_0\sqrt{1 + z^2/z_R^2}\)</span> of a 0.8 µm beam focused to <span
 class="math inline">\(w_0 = 20\)</span> µm, computed from the formula:
@@ -1444,8 +1446,9 @@ class="math inline">\(\pi a_0^2/2\)</span> in units of <span
 class="math inline">\(1/k_0\)</span>, overtakes the full sideways swing,
 <span class="math inline">\(2a_0\)</span>, once <span
 class="math inline">\(a_0 &gt; 4/\pi \approx 1.3\)</span>.</p>
-<p><img src="figures/27-laser-orbit.svg" loading="lazy"
-alt="The path of an electron in a plane laser wave for a0 = 1 and a0 = 2" /></p>
+<p><a href="figures/27-laser-orbit.svg" class="figure"><img
+src="figures/27-laser-orbit.svg" loading="lazy"
+alt="The path of an electron in a plane laser wave for a0 = 1 and a0 = 2" /></a></p>
 <p><em>Figure 27.3. The path of an electron that was at rest when a
 linearly polarised plane wave reached it, computed from <span
 class="math inline">\(k_0x = a_0(\cos\phi - 1)\)</span> and <span
@@ -1873,8 +1876,9 @@ intensity profile 12.5 µm or 42 fs long at half maximum. With <span
 class="math inline">\(a_0 = 1\)</span> the wake is <span
 class="math inline">\(0.38 \times 96 = 36.5\)</span> GV/m. A laser of
 the right length was exactly what 1979 did not have.</p>
-<p><img src="figures/27-linear-wake.svg" loading="lazy"
-alt="The pulse, the oscillating field and the density ripple of a linear wake" /></p>
+<p><a href="figures/27-linear-wake.svg" class="figure"><img
+src="figures/27-linear-wake.svg" loading="lazy"
+alt="The pulse, the oscillating field and the density ripple of a linear wake" /></a></p>
 <p><em>Figure 27.4. A linear wake, plotted against <span
 class="math inline">\(k_p\zeta\)</span> with <span
 class="math inline">\(\zeta = z - ct\)</span>, for a Gaussian pulse of
@@ -1892,8 +1896,9 @@ class="math inline">\(\mathcal{E}_z &lt; 0\)</span> (shaded) the force
 points forward: a witness electron placed there gains energy. The
 pattern repeats every <span class="math inline">\(\lambda_p\)</span> and
 moves with the pulse.</em></p>
-<p><img src="figures/27-pulse-length.svg" loading="lazy"
-alt="The linear wake amplitude against pulse length" /></p>
+<p><a href="figures/27-pulse-length.svg" class="figure"><img
+src="figures/27-pulse-length.svg" loading="lazy"
+alt="The linear wake amplitude against pulse length" /></a></p>
 <p><em>Figure 27.5. The wake amplitude <span
 class="math inline">\(\mathcal{E}_{\max}/(a_0^2\mathcal{E}_0) =
 (\sqrt{\pi/2}/4)\,k_pL\,e^{-k_p^2L^2/8}\)</span> against the pulse
@@ -2341,8 +2346,9 @@ class="math inline">\(\mathcal{E}_{\max}\approx\sqrt{a_0}\,\mathcal{E}_0\)</span
 the field falls linearly to zero at the centre, so its average over the
 trapped electron’s path from rear to centre is half that (figure
 27.6).</p>
-<p><img src="figures/27-bubble.svg" loading="lazy"
-alt="The bubble: a sphere of bare ions behind the laser pulse, and the accelerating field along its axis" /></p>
+<p><a href="figures/27-bubble.svg" class="figure"><img
+src="figures/27-bubble.svg" loading="lazy"
+alt="The bubble: a sphere of bare ions behind the laser pulse, and the accelerating field along its axis" /></a></p>
 <p><em>Figure 27.6. The bubble, drawn for <span
 class="math inline">\(a_0 = 4\)</span> (<span class="math inline">\(k_pR
 = 2\sqrt{a_0} = 4\)</span>). The laser pulse at the front pushes the
@@ -3002,8 +3008,9 @@ of motion, so its transverse momentum shrinks in proportion with its
 longitudinal momentum. RF cavities then restore only the longitudinal
 momentum. The angles, and so the transverse emittance, shrink (figure
 27.7).</p>
-<p><img src="figures/27-cooling.svg" loading="lazy"
-alt="Ionisation cooling as two steps on the momentum vector" /></p>
+<p><a href="figures/27-cooling.svg" class="figure"><img
+src="figures/27-cooling.svg" loading="lazy"
+alt="Ionisation cooling as two steps on the momentum vector" /></a></p>
 <p><em>Figure 27.7. Ionisation cooling in two steps. (1) In the absorber
 the muon loses momentum along its own direction of motion, so <span
 class="math inline">\(p_z\)</span> and <span
@@ -3132,8 +3139,9 @@ and dividing by <span class="math inline">\(l\,t_p\)</span> gives it;
 with Metglas (<span class="math inline">\(\Delta B = 2.5\)</span> T),
 radii 0.1 and 0.5 m and 100 ns, it is 10 MV/m, and about 5 MV/m once
 insulators, ports and feeds take space.</p>
-<p><img src="figures/27-induction-cell.svg" loading="lazy"
-alt="One induction cell cut along the beam axis" /></p>
+<p><a href="figures/27-induction-cell.svg" class="figure"><img
+src="figures/27-induction-cell.svg" loading="lazy"
+alt="One induction cell cut along the beam axis" /></a></p>
 <p><em>Figure 27.8. One induction cell cut along the beam axis (upper
 half; the cell is round about the axis). A ring-shaped core of ferrite
 or Metglas, of radial depth <span class="math inline">\(R_o -
@@ -3929,10 +3937,6 @@ sources.</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

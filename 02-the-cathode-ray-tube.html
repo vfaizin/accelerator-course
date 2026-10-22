@@ -14,10 +14,11 @@ tube · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 02 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#02-the-cathode-ray-tube"
 id="toc-02-the-cathode-ray-tube">02 The cathode ray tube</a>
@@ -152,7 +153,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="02-the-cathode-ray-tube">02 The cathode ray tube</h1>
@@ -455,8 +455,9 @@ vacuum: Richardson’s law of 1901, Wehnelt’s cylinder of 1902 to 1903,
 Coolidge’s X-ray tube of 1913, and Western Electric’s hot-cathode
 oscillograph tube, sold from 1922.</p>
 <h2 id="the-physics">The physics</h2>
-<p><img src="figures/02-tube.svg" loading="lazy"
-alt="A hot-cathode tube in side view" /></p>
+<p><a href="figures/02-tube.svg" class="figure"><img
+src="figures/02-tube.svg" loading="lazy"
+alt="A hot-cathode tube in side view" /></a></p>
 <p><em>Figure 2.1. The parts of a hot-cathode tube, in side view and not
 to scale. The heated cathode gives off electrons, the grid sets how many
 pass, the anode at <span class="math inline">\(+V_a\)</span> accelerates
@@ -750,8 +751,9 @@ is uniform and transverse. The electron keeps its forward speed and
 gains a sideways speed in proportion to the time it spends between them.
 Beyond the plates it flies straight, so the spot on a distant screen
 moves in proportion to the plate voltage.</p>
-<p><img src="figures/02-deflection.svg" loading="lazy"
-alt="Electric deflection between parallel plates" /></p>
+<p><a href="figures/02-deflection.svg" class="figure"><img
+src="figures/02-deflection.svg" loading="lazy"
+alt="Electric deflection between parallel plates" /></a></p>
 <p><em>Figure 2.2. Deflection between parallel plates of length <span
 class="math inline">\(l\)</span> and gap <span
 class="math inline">\(d\)</span>. Inside, the electron is pushed towards
@@ -840,8 +842,9 @@ field</h3>
 the velocity without changing its size, so in a uniform transverse field
 the path is a circle. The circle’s radius measures momentum per
 charge.</p>
-<p><img src="figures/02-magnetic-bend.svg" loading="lazy"
-alt="An electron bent on a circle by a magnetic field" /></p>
+<p><a href="figures/02-magnetic-bend.svg" class="figure"><img
+src="figures/02-magnetic-bend.svg" loading="lazy"
+alt="An electron bent on a circle by a magnetic field" /></a></p>
 <p><em>Figure 2.3. An electron entering a uniform field that points into
 the page. The force <span class="math inline">\(\mathbf{F} =
 -e\,\mathbf{v}\times\mathbf{B}\)</span> is always at right angles to the
@@ -909,8 +912,9 @@ class="math inline">\(\sqrt{1 - x} \approx 1 - x/2\)</span> for small
 href="F1-calculus.html#8-approximating-a-function-taylor-series">F1,
 section 8</a>): <span class="math inline">\(\sqrt{r^2 - L^2} = r\sqrt{1
 - L^2/r^2} \approx r - L^2/2r\)</span>.</p>
-<p><img src="figures/02-sagitta.svg" loading="lazy"
-alt="The sideways shift of a beam bent on a circle" /></p>
+<p><a href="figures/02-sagitta.svg" class="figure"><img
+src="figures/02-sagitta.svg" loading="lazy"
+alt="The sideways shift of a beam bent on a circle" /></a></p>
 <p><em>Figure 2.4. A beam that bends on a circle of radius <span
 class="math inline">\(r\)</span> over a flight length <span
 class="math inline">\(L\)</span> ends a distance <span
@@ -1228,8 +1232,9 @@ plates and a pair of coils on the same stretch of tube (figure 2.5). The
 electric field points across the beam between the plates, the magnetic
 field across both the beam and the electric field, so the two are
 “crossed”.</p>
-<p><img src="figures/02-thomson-tube.svg" loading="lazy"
-alt="Thomson’s crossed-field tube" /></p>
+<p><a href="figures/02-thomson-tube.svg" class="figure"><img
+src="figures/02-thomson-tube.svg" loading="lazy"
+alt="Thomson’s crossed-field tube" /></a></p>
 <p><em>Figure 2.5. Thomson’s crossed-field tube of 1897, after his
 description, not to scale. The anode <span
 class="math inline">\(A\)</span> and the plug <span
@@ -1930,8 +1935,9 @@ p^2/2m_e\)</span>, the tail is <span
 class="math inline">\(e^{\mu/k_BT}\,e^{-p^2/(2m_ek_BT)}\)</span>: a
 Maxwellian in momentum. The electrons that leave a hot metal come out as
 a Maxwellian sample.</p>
-<p><img src="figures/02-fermi-dirac.svg" loading="lazy"
-alt="The Fermi–Dirac occupation at 2500 K" /></p>
+<p><a href="figures/02-fermi-dirac.svg" class="figure"><img
+src="figures/02-fermi-dirac.svg" loading="lazy"
+alt="The Fermi–Dirac occupation at 2500 K" /></a></p>
 <p><em>Figure 2.6. Left: the Fermi–Dirac occupation <span
 class="math inline">\(f\)</span> against the energy above the Fermi
 level, at zero temperature (a step) and at 2500 K, where <span
@@ -1964,8 +1970,9 @@ speed of <span class="math inline">\(2.03 \times 10^{6}\)</span> m/s
 eV), more than the <span class="math inline">\(1.57 \times
 10^{6}\)</span> m/s of the fastest electrons at zero temperature. None
 escapes until heat lifts some into the tail.</p>
-<p><img src="figures/02-work-function.svg" loading="lazy"
-alt="The potential well of a metal" /></p>
+<p><a href="figures/02-work-function.svg" class="figure"><img
+src="figures/02-work-function.svg" loading="lazy"
+alt="The potential well of a metal" /></a></p>
 <p><em>Figure 2.7. The free-electron well of copper, to scale in energy.
 The conduction electrons fill the states from the floor up to the Fermi
 level, 7.04 eV above it. The wall at the surface stands a further 4.7 eV
@@ -2209,8 +2216,9 @@ J = 0.602 \times 10^{6} \times (2500)^2 \times 7.38 \times 10^{-10} =
 <p>From half a square millimetre of hot wire that is 1.39 mA. With 4.54
 V it is 1.32 mA; with the theoretical <span
 class="math inline">\(A_R\)</span> it would be 2.77 mA.</p>
-<p><img src="figures/02-richardson.svg" loading="lazy"
-alt="Richardson emission from tungsten against temperature" /></p>
+<p><a href="figures/02-richardson.svg" class="figure"><img
+src="figures/02-richardson.svg" loading="lazy"
+alt="Richardson emission from tungsten against temperature" /></a></p>
 <p><em>Figure 2.8. The current density from a tungsten cathode against
 its temperature, from the Richardson–Dushman law with Dushman’s
 constants. The scale on the left is logarithmic: each step is a factor
@@ -2769,8 +2777,9 @@ class="math inline">\(4V_a/3d\)</span>, a third more than in vacuum. And
 the transit time is <span class="math inline">\(3d/v_f\)</span>, where
 <span class="math inline">\(v_f\)</span> is the final speed, compared
 with <span class="math inline">\(2d/v_f\)</span> for an empty gap.</p>
-<p><img src="figures/02-child-langmuir.svg" loading="lazy"
-alt="Potential across a space-charge-limited gap" /></p>
+<p><a href="figures/02-child-langmuir.svg" class="figure"><img
+src="figures/02-child-langmuir.svg" loading="lazy"
+alt="Potential across a space-charge-limited gap" /></a></p>
 <p><em>Figure 2.9. The potential across a flat gap. With no current it
 rises in a straight line. When the current is limited by space charge,
 the cloud of electrons near the cathode pulls the potential down to
@@ -2836,8 +2845,9 @@ microperveance). At 300 V the space-charge limit is 0.24 mA; at 500 V,
 0.52 mA; at 1 kV, 1.48 mA. The knee is at 960 V. Below it the current
 follows the voltage; above it, the temperature. A real hairpin filament
 is not a plane, so treat these as a guide to the order of magnitude.</p>
-<p><img src="figures/02-diode-knee.svg" loading="lazy"
-alt="Current against voltage for a diode with a hot cathode" /></p>
+<p><a href="figures/02-diode-knee.svg" class="figure"><img
+src="figures/02-diode-knee.svg" loading="lazy"
+alt="Current against voltage for a diode with a hot cathode" /></a></p>
 <p><em>Figure 2.10. The current of the planar diode above: a cathode of
 0.5 mm<span class="math inline">\(^2\)</span> at 2500 K, offering 1.39
 mA, facing an anode 5 mm away. Below 960 V the space charge holds the
@@ -2868,8 +2878,9 @@ makes this exact). The electrons therefore cross the axis and each other
 in a small waist, the <em>crossover</em>, a short distance in front of
 the cathode, and the rest of the tube images that crossover onto the
 screen as the spot (figure 2.11).</p>
-<p><img src="figures/02-gun.svg" loading="lazy"
-alt="The simplest electron gun" /></p>
+<p><a href="figures/02-gun.svg" class="figure"><img
+src="figures/02-gun.svg" loading="lazy"
+alt="The simplest electron gun" /></a></p>
 <p><em>Figure 2.11. The simplest gun in cross-section, not to scale. The
 Wehnelt cup, a few tens of volts negative of the cathode, pushes the
 electrons from the centre of the cathode towards the axis; they cross
@@ -2973,8 +2984,9 @@ a^2}{2}\cdot\frac{2}{a^2} = \mu_0 N I ,
 \]</span></p>
 <p>independent of the radius. A small coil has a strong, short field; a
 large one a weak, long field; the integral is the same.</p>
-<p><img src="figures/02-coil-field.svg" loading="lazy"
-alt="The field on the axis of a coil" /></p>
+<p><a href="figures/02-coil-field.svg" class="figure"><img
+src="figures/02-coil-field.svg" loading="lazy"
+alt="The field on the axis of a coil" /></a></p>
 <p><em>Figure 2.12. The field on the axis of the lens coil of section 9:
 one loop of radius 25 mm (its position marked at <span
 class="math inline">\(z = 0\)</span>) carrying 181 ampere-turns. The
@@ -3928,8 +3940,9 @@ the electrons cross 0.30 m of nitrogen at about 0.8 Pa, not the 0.09 Pa
 of the hard-sphere estimate (<a href="03-vacuum.html">chapter 3</a>),
 and a real tube shows the dot at that higher pressure, with a halo of
 scattered electrons around it. Figure 2.13 shows both estimates.</p>
-<p><img src="figures/02-vacuum-survival.svg" loading="lazy"
-alt="Fraction of the beam crossing the tube against pressure" /></p>
+<p><a href="figures/02-vacuum-survival.svg" class="figure"><img
+src="figures/02-vacuum-survival.svg" loading="lazy"
+alt="Fraction of the beam crossing the tube against pressure" /></a></p>
 <p><em>Figure 2.13. The fraction of 2 kV electrons that cross 0.30 m of
 air without a collision, <span
 class="math inline">\(\exp(-L/\lambda_e)\)</span>, against pressure.
@@ -4622,10 +4635,6 @@ class="uri">https://www.fieldp.com/trak.html</a></li>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>

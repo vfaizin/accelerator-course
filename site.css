@@ -39,6 +39,9 @@ body {
   font-optical-sizing: auto;
 }
 a { color: var(--link); text-underline-offset: 0.15em; }
+/* Long web addresses in the Sources lists break anywhere rather than
+   widening the page on a phone. */
+a.uri, main p, main li { overflow-wrap: anywhere; }
 a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* The top bar: the course name, and where this page sits in it. */
@@ -63,6 +66,19 @@ body::before {
 }
 .bar .home { font-weight: 700; color: var(--fg); text-decoration: none; letter-spacing: 0.01em; }
 .bar .where { color: var(--muted); font-size: 0.875rem; }
+.toc-button {
+  margin-left: auto;
+  padding: 0.35rem 0.75rem;
+  font: 600 0.8125rem/1 var(--font-head);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.toc-open .toc-button { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 
 .layout {
   display: grid;
@@ -77,16 +93,37 @@ body::before {
 main { min-width: 0; max-width: var(--measure); }
 .home-layout main { max-width: 52rem; margin: 0 auto; }
 
-/* Sections list: folded above the text on narrow screens, a sticky column
-   beside it on wide ones. */
+/* Sections list: a sticky column beside the text on wide screens; on
+   narrow ones a panel that the top bar's Sections button opens. */
 .toc { font-family: var(--font-head); font-size: 0.875rem; }
-.toc summary { cursor: pointer; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; }
+.toc-title { margin: 0; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; }
 .toc ul { list-style: none; margin: 0.5rem 0 0; padding: 0; }
 .toc ul ul { padding-left: 0.9rem; }
 .toc li { margin: 0.2rem 0; }
 .toc a { color: var(--fg); text-decoration: none; }
 .toc a:hover { color: var(--link); text-decoration: underline; }
+@media (max-width: 1099px) {
+  .toc { display: none; }
+  .toc-open .toc {
+    display: block;
+    position: fixed;
+    z-index: 4;
+    top: calc(env(safe-area-inset-top, 0px) + 3rem);
+    left: 0; right: 0; bottom: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-block: 1rem 2rem;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    background: var(--surface);
+    font-size: 1rem;
+  }
+  .toc-open { overflow: hidden; }
+  .toc li { margin: 0; }
+  .toc a { display: block; padding: 0.45rem 0; border-bottom: 1px solid var(--rule); }
+}
 @media (min-width: 1100px) {
+  .toc-button { display: none; }
   .layout { grid-template-columns: 16rem minmax(0, 1fr); gap: 3rem; }
   .home-layout { grid-template-columns: minmax(0, 1fr); }
   .toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 3.5rem); align-self: start; max-height: calc(100vh - 5rem); overflow-y: auto; }
@@ -114,18 +151,19 @@ blockquote > :first-child { margin-top: 0; }
 blockquote > :last-child { margin-bottom: 0; }
 
 /* Folded answers under each exercise. */
-details:not(#toc) {
+details {
   margin: 0.5rem 0 1.25rem;
   padding: 0.4rem 0.9rem;
   background: var(--answer);
   border-radius: 6px;
 }
-details:not(#toc) > summary { cursor: pointer; font-family: var(--font-head); font-weight: 600; font-size: 0.9rem; color: var(--link); }
-details[open]:not(#toc) > summary { margin-bottom: 0.4rem; }
+details > summary { cursor: pointer; font-family: var(--font-head); font-weight: 600; font-size: 0.9rem; color: var(--link); }
+details[open] > summary { margin-bottom: 0.4rem; }
 
 /* Figures are drawn on white plates, so they read the same in both themes. */
 img { max-width: 100%; height: auto; }
-p > img:only-child {
+a.figure { display: block; }
+a.figure > img {
   display: block;
   margin: 1.5rem auto 0.25rem;
   padding: 0.75rem;
@@ -134,7 +172,7 @@ p > img:only-child {
   border-radius: 6px;
   box-sizing: border-box;
 }
-p:has(> img:only-child) + p > em:only-child { display: block; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
+p:has(> a.figure) + p > em:only-child { display: block; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
 
 /* Wide things scroll inside themselves, never the page. */
 table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.92rem; font-variant-numeric: tabular-nums; }
@@ -144,6 +182,9 @@ pre { overflow-x: auto; padding: 0.75rem 1rem; background: var(--surface); borde
 code { font-family: var(--font-mono); font-size: 0.88em; }
 mjx-container[display="true"] { display: block; overflow-x: auto; overflow-y: hidden; padding: 0.15rem 0; }
 mjx-container { color: var(--fg); }
+/* An inline equation too wide for a phone even when shrunk (site.js marks
+   it) scrolls inside its own box instead of widening the page. */
+mjx-container.wide-inline { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
 pre.mermaid { background: var(--surface); text-align: center; }
 
 hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
@@ -158,5 +199,23 @@ li + li { margin-top: 0.25rem; }
 
 /* The home page's first line. */
 .start { font-family: var(--font-head); font-size: 1.05rem; padding: 0.75rem 1rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+
+/* Phones: a one-line top bar, smaller headings, and figures that use the
+   full width of the screen (tap one to open it full size). */
+@media (max-width: 700px) {
+  body { font-size: 1rem; line-height: 1.6; }
+  .bar { flex-wrap: nowrap; padding-block: 0.5rem; }
+  .bar .home { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 0.9375rem; }
+  .bar .where { display: none; }
+  h1 { font-size: 1.65rem; }
+  h2 { font-size: 1.3rem; margin-top: 2.25rem; }
+  h3 { font-size: 1.1rem; }
+  blockquote { padding: 0.6rem 0.75rem; }
+  a.figure { margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); }
+  a.figure > img { margin: 1.25rem 0 0.25rem; padding: 0.35rem; border-radius: 0; border-left: 0; border-right: 0; width: 100%; }
+  .pager a { max-width: 100%; }
+  .pager { flex-direction: column; }
+  .pager .next { margin-left: 0; text-align: left; }
+}
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

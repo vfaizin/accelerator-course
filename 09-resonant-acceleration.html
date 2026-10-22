@@ -14,10 +14,11 @@ Wideroe · The physics of particle accelerators</title>
 <header class="bar">
   <a class="home" href="index.html">The physics of particle accelerators</a>
   <span class="where">Chapter 09 of 29</span>
+  <button class="toc-button" type="button" aria-controls="toc" aria-expanded="false">Sections</button>
 </header>
 <div class="layout">
-<nav class="toc" aria-label="Sections of this chapter">
-<details id="toc"><summary>Sections</summary>
+<nav class="toc" id="toc" aria-label="Sections of this chapter">
+<p class="toc-title">Sections</p>
 <ul>
 <li><a href="#09-resonant-acceleration-ising-and-wideroe"
 id="toc-09-resonant-acceleration-ising-and-wideroe">09 Resonant
@@ -143,7 +144,6 @@ stops</a></li>
 <li><a href="#sources" id="toc-sources">Sources</a></li>
 </ul></li>
 </ul>
-</details>
 </nav>
 <main>
 <h1 id="09-resonant-acceleration-ising-and-wideroe">09 Resonant
@@ -919,8 +919,9 @@ each end is, for a bore radius of</p>
 far from field-free; the thirtieth tube, 5.5 cm long, is field-free for
 any of these. Narrow bores in the first tubes are what make the
 drift-tube picture of sections 1 and 2 true.</p>
-<p><img src="figures/09-open-tube.svg" loading="lazy"
-alt="The field inside an open tube, falling with depth" /></p>
+<p><a href="figures/09-open-tube.svg" class="figure"><img
+src="figures/09-open-tube.svg" loading="lazy"
+alt="The field inside an open tube, falling with depth" /></a></p>
 <p><em>Figure 9.1. How far the gap’s field reaches into an open tube of
 bore radius <span class="math inline">\(a\)</span>, on a logarithmic
 scale, where each exponential is a straight line. The first term of the
@@ -1025,8 +1026,9 @@ other. At any instant, then, adjacent gaps have opposite fields: if gap
 1 pushes forward, gap 2 pushes backward. A particle accelerated at gap 1
 must reach gap 2 after the voltage has reversed. The first chance is
 half a period later.</p>
-<p><img src="figures/09-layout.svg" loading="lazy"
-alt="Wideroe’s drift tubes and their connections" /></p>
+<p><a href="figures/09-layout.svg" class="figure"><img
+src="figures/09-layout.svg" loading="lazy"
+alt="Wideroe’s drift tubes and their connections" /></a></p>
 <p><em>Figure 9.2. Wideroe’s arrangement in side view, not to scale
 except that the tubes lengthen as <span
 class="math inline">\(\sqrt{n}\)</span> (section 3). Tubes 0, 2, 4, 6
@@ -1075,8 +1077,9 @@ This is why such a structure is called a <span
 class="math inline">\(\beta\lambda/2\)</span> structure (Humphries 1986,
 section 14.2). Choosing <span class="math inline">\(3\pi\)</span>
 instead gives tubes three times as long, which only wastes length.</p>
-<p><img src="figures/09-timing.svg" loading="lazy"
-alt="The forward voltage at successive gaps against time" /></p>
+<p><a href="figures/09-timing.svg" class="figure"><img
+src="figures/09-timing.svg" loading="lazy"
+alt="The forward voltage at successive gaps against time" /></a></p>
 <p><em>Figure 9.3. The synchronism condition in time. The voltage that
 pushes an ion forward is <span
 class="math inline">\(+\hat{V}\sin\omega_{RF}t\)</span> at the odd gaps
@@ -1220,8 +1223,9 @@ m. These are the lengths the synchronism condition requires for the
 published voltage and wavelength. Livingston and Blewett (1962, section
 10-1, p. 313) give the built tube: a first tube of effective length 1 cm
 and an overall length of 1.14 m, as the condition says.</p>
-<p><img src="figures/09-tube-lengths.svg" loading="lazy"
-alt="The 30 drift-tube lengths of the 1931 machine" /></p>
+<p><a href="figures/09-tube-lengths.svg" class="figure"><img
+src="figures/09-tube-lengths.svg" loading="lazy"
+alt="The 30 drift-tube lengths of the 1931 machine" /></a></p>
 <p><em>Figure 9.4. The cutting list of the 1931 Sloan and Lawrence
 machine, from the synchronism condition: one bar per tube, for Hg<span
 class="math inline">\(^+\)</span> at 42 keV per gap and <span
@@ -1640,8 +1644,9 @@ class="math inline">\(\beta\lambda = 2.01\)</span> cm; a 5 mm gap there
 would give <span class="math inline">\(T_t = 0.90\)</span>, a 1 cm gap
 0.64. Short gaps are cheap in transit time but expensive in breakdown:
 the same voltage across a shorter gap is a higher field.</p>
-<p><img src="figures/09-transit-time.svg" loading="lazy"
-alt="The transit-time factor against gap length" /></p>
+<p><a href="figures/09-transit-time.svg" class="figure"><img
+src="figures/09-transit-time.svg" loading="lazy"
+alt="The transit-time factor against gap length" /></a></p>
 <p><em>Figure 9.5. The transit-time factor of a uniform gap, <span
 class="math inline">\(\sin(\pi g/\beta\lambda)/(\pi
 g/\beta\lambda)\)</span>, against the gap length in units of the
@@ -1712,8 +1717,9 @@ href="12-phase-stability.html">chapter 12</a>. In 1928 to 1931 nobody
 designed for it. The machines were set for the crest, and Sloan’s
 synchronization was found by trial-and-error adjustment (Heilbron and
 Seidel 1989, chapter 2).</p>
-<p><img src="figures/09-phase.svg" loading="lazy"
-alt="Energy gain against phase, with the design phase on the rising slope" /></p>
+<p><a href="figures/09-phase.svg" class="figure"><img
+src="figures/09-phase.svg" loading="lazy"
+alt="Energy gain against phase, with the design phase on the rising slope" /></a></p>
 <p><em>Figure 9.6. Why the design phase belongs on the rising slope.
 With <span class="math inline">\(\phi_s = 60^\circ\)</span>, an ion that
 arrives late (at <span class="math inline">\(75^\circ\)</span>) gains
@@ -2323,8 +2329,9 @@ would fall by a factor <span class="math inline">\(e^{-14.5\pi/10} =
 0.011\)</span>. No ion could stay in step with a voltage falling a
 hundredfold while it passed. A steady source is not a refinement; it is
 what makes the scheme work.</p>
-<p><img src="figures/09-ringdown.svg" loading="lazy"
-alt="A spark-excited circuit ringing down, against a steady oscillator" /></p>
+<p><a href="figures/09-ringdown.svg" class="figure"><img
+src="figures/09-ringdown.svg" loading="lazy"
+alt="A spark-excited circuit ringing down, against a steady oscillator" /></a></p>
 <p><em>Figure 9.7. The gap voltage over the 14.5 RF cycles a mercury ion
 spends between the first and last gaps of the 30-gap machine. A
 spark-excited circuit with <span class="math inline">\(Q_0 = 10\)</span>
@@ -2524,8 +2531,9 @@ bench</em> shows that 5 per cent too little voltage already loses every
 ion at full energy. Even 10 kHz of drift (<span class="math inline">\(y
 = 0.4\)</span>) costs 7 per cent of the voltage. A resonator must be
 kept on tune to a small part of its own bandwidth.</p>
-<p><img src="figures/09-resonance.svg" loading="lazy"
-alt="The resonance curve of the 10 MHz resonator" /></p>
+<p><a href="figures/09-resonance.svg" class="figure"><img
+src="figures/09-resonance.svg" loading="lazy"
+alt="The resonance curve of the 10 MHz resonator" /></a></p>
 <p><em>Figure 9.8. The resonance curve of section 7’s resonator (<span
 class="math inline">\(R_p = 63.7\)</span> kΩ, <span
 class="math inline">\(Q_0 = 200\)</span>, 10 MHz), computed from the
@@ -3840,10 +3848,6 @@ tracking script, thin gaps and no transverse motion.</p>
 </nav>
 </main>
 </div>
-<script>
-  // The sections list stays open beside the text on a wide screen and
-  // folds above it on a phone.
-  if (window.matchMedia('(min-width: 1100px)').matches) document.getElementById('toc').open = true;
-</script>
+<script src="site.js"></script>
 </body>
 </html>
