@@ -174,6 +174,21 @@ a.figure > img {
 }
 p:has(> a.figure) + p > em:only-child { display: block; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
 
+/* A figure opened over the page (site.js): a dark backdrop, the drawing on
+   its white plate filling the screen, the caption under it, and three round
+   buttons in the corner. */
+a.figure { cursor: zoom-in; }
+body.zoom-open { overflow: hidden; }
+.zoom { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; background: #0c0e12; }
+.zoom[hidden] { display: none; }
+.zoom-stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 3.5rem 1rem 0.5rem; touch-action: none; }
+.zoom-stage img { max-width: none; padding: 0.75rem; background: #ffffff; border-radius: 6px; box-sizing: border-box; transform-origin: center; cursor: grab; user-select: none; -webkit-user-drag: none; }
+.zoom-caption { margin: 0 auto; padding: 0.5rem 1rem 1rem; max-width: var(--measure); max-height: 25vh; overflow-y: auto; color: #d6dae2; font-size: 0.9rem; line-height: 1.5; }
+.zoom-caption mjx-container { color: inherit; }
+.zoom-tools { position: absolute; top: 0.75rem; right: 0.75rem; display: flex; gap: 0.5rem; z-index: 1; }
+.zoom-tools button { width: 2.5rem; height: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50%; background: rgba(30, 34, 42, 0.85); color: #ffffff; font: 500 1.35rem/1 var(--font-head); cursor: pointer; }
+.zoom-tools button:hover, .zoom-tools button:focus-visible { background: rgba(60, 66, 80, 0.95); outline: none; }
+
 /* Wide things scroll inside themselves, never the page. */
 table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.92rem; font-variant-numeric: tabular-nums; }
 th, td { padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; text-align: left; }
