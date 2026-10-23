@@ -1954,20 +1954,30 @@ MW, and the energy goes in over about a second.</p>
 <p>Taking 78 MJ from the public supply in a second, and giving it back
 in the next second, would swing the grid by about 100 MW every few
 seconds. The solution in every large weak-focusing ring was a
-motor-generator set with a flywheel. An induction motor of modest power
-keeps a heavy flywheel turning. On the rising field the flywheel’s
-kinetic energy drives an alternator, whose output is rectified into the
-magnet. At the top the rectifiers are switched to invert: the magnet’s
-energy drives the alternator as a motor and speeds the flywheel up
-again. Only the losses come from the mains. The Bevatron had two such
-sets, with flywheels of 65 to 70 tons (the laboratory’s history gives
-65; the engineering papers of 1969 and 1971 give 70), driven by two
-3,600 horsepower induction motors that limited the average loss to about
-6 MW (Evans, Frias and Hordos). Holding the field flat at the top cost
-about 13 MW in the copper and fixed losses (Salsig and Vogel, 1969).
-Nimrod’s two 60 MVA motor-alternator-flywheel sets fed mercury-arc
-converters (Brooks and Reed, 1967), and its load rose from zero to
-100,000 horsepower in 0.75 s (Wilson).</p>
+motor-generator set with a flywheel (figure 15.9). An induction motor of
+modest power keeps a heavy flywheel turning. On the rising field the
+flywheel’s kinetic energy drives an alternator, whose output is
+rectified into the magnet. At the top the rectifiers are switched to
+invert: the magnet’s energy drives the alternator as a motor and speeds
+the flywheel up again. Only the losses come from the mains. The Bevatron
+had two such sets, with flywheels of 65 to 70 tons (the laboratory’s
+history gives 65; the engineering papers of 1969 and 1971 give 70),
+driven by two 3,600 horsepower induction motors that limited the average
+loss to about 6 MW (Evans, Frias and Hordos). Holding the field flat at
+the top cost about 13 MW in the copper and fixed losses (Salsig and
+Vogel, 1969). Nimrod’s two 60 MVA motor-alternator-flywheel sets fed
+mercury-arc converters (Brooks and Reed, 1967), and its load rose from
+zero to 100,000 horsepower in 0.75 s (Wilson).</p>
+<p><a href="figures/15-flywheel.svg" class="figure"><img
+src="figures/15-flywheel.svg" loading="lazy"
+alt="A motor-generator set: mains, induction motor, flywheel, alternator, ignitron rectifiers and ring magnet, with energy swinging both ways" /></a></p>
+<p><em>Figure 15.9. The motor-generator set of a slow proton ring,
+schematic. An induction motor keeps a heavy flywheel turning; on the
+rising field the flywheel drives the alternator, and the ignitrons
+rectify its output into the magnet. At the top they are fired to invert,
+and the magnet’s stored energy, 78 MJ at the Bevatron’s peak, drives the
+alternator as a motor and speeds the flywheel up again. Only the losses
+come from the mains.</em></p>
 <p>The rectifiers were mercury-arc valves. The ignitron, a mercury-pool
 rectifier fired by a pulse on an igniter electrode, could be timed to
 the alternator’s waveform, so it could rectify or invert on command. The
@@ -2343,17 +2353,26 @@ class="math inline">\(C_{cav}\)</span> in time.</p>
 <p>The Bevatron’s accelerating electrode, a drift tube between two
 grounded planes, formed the capacitive part of the tuned circuit of the
 final amplifier (Crebbin and Lothrop). The master oscillator’s
-inductance was a ferrite core, saturated by a current proportional to
-the guide field: as the field rose, the core’s permeability fell, the
-inductance fell and the frequency rose, following the field coarsely.
-Fine corrections came from voltage-variable capacitors (whose
-capacitance is set by a control voltage), driven by an open-loop
-correction curve, a radial-position loop and a phase loop (Evans and
-Lothrop, 1971). A ferrite is the right material because it is magnetic
-but an insulator, so it has no eddy currents at megahertz, and its
-incremental permeability falls steeply under a bias field. For a 6.8
+inductance was a ferrite core (figure 15.10), saturated by a current
+proportional to the guide field: as the field rose, the core’s
+permeability fell, the inductance fell and the frequency rose, following
+the field coarsely. Fine corrections came from voltage-variable
+capacitors (whose capacitance is set by a control voltage), driven by an
+open-loop correction curve, a radial-position loop and a phase loop
+(Evans and Lothrop, 1971). A ferrite is the right material because it is
+magnetic but an insulator, so it has no eddy currents at megahertz, and
+its incremental permeability falls steeply under a bias field. For a 6.8
 times change in frequency at fixed capacitance, the inductance must
 change by <span class="math inline">\(6.84^2 = 47\)</span> times.</p>
+<p><a href="figures/15-rf-tuning.svg" class="figure"><img
+src="figures/15-rf-tuning.svg" loading="lazy"
+alt="The RF frequency following the field: a field-biased ferrite in the oscillator, with correction and beam loops trimming it" /></a></p>
+<p><em>Figure 15.10. How the RF follows the field, block diagram after
+the Bevatron’s system. The oscillator’s inductance is a ferrite core
+biased by a current proportional to the guide field, so the frequency
+rises as the field rises. An open-loop correction curve, a radial loop
+from the beam’s position and a phase loop from a beam pickup trim the
+frequency through voltage-variable capacitors.</em></p>
 <p>Birmingham, building the first proton synchrotron to be designed,
 solved the same problem with an uninsulated, highly non-linear inductor
 lowered into a bath of mercury, with fine adjustment by filing the edge
@@ -2575,9 +2594,20 @@ per 0.01 gauss of change, counted up on the rise and down on the fall,
 so that the count was the field; before each pulse the remanent field
 was measured and preset into the counter. Sixteen markers, one at each
 kilogauss, went to the rest of the machine (Evans, Frias and Hordos).
-This is a B-clock: field increments as pulses. Earlier systems gave a
-pulse when the magnet current passed set levels. Injection is triggered
-at a chosen field, and every later event is set by a field value.</p>
+This is a B-clock: field increments as pulses (figure 15.11). Earlier
+systems gave a pulse when the magnet current passed set levels.
+Injection is triggered at a chosen field, and every later event is set
+by a field value.</p>
+<p><a href="figures/15-b-clock.svg" class="figure"><img
+src="figures/15-b-clock.svg" loading="lazy"
+alt="The B-clock: a winding in the gap, a voltage-to-frequency converter, an up/down counter preset to the remanent field, and markers" /></a></p>
+<p><em>Figure 15.11. The field clock, block diagram of the Bevatron’s
+system of 1971. A winding in the gap gives a voltage proportional to
+<span class="math inline">\(dB/dt\)</span>, turned into one pulse per
+0.01 gauss of change and counted up on the rise and down on the fall;
+with the remanent field preset before each pulse, the count is the
+field. Markers at each kilogauss time the injector, the RF and the
+targets.</em></p>
 <p><strong>The frequency programme.</strong> The RF oscillator follows
 the field coarsely through its saturated ferrite. On top of that the
 operator sets an open-loop correction curve, adjusted until the beam
@@ -2593,15 +2623,16 @@ radius a radial shift of 1 inch changed the count by 100.</p>
 magnetic core around the beam pipe reads the circulating current <span
 class="math inline">\(I = Nqf_0\)</span> (<a
 href="08-seeing-the-beam.html">chapter 8</a>). A typical trace through a
-cycle: 1. A spike at injection as the injector’s pulse fills the ring,
-often a long staircase or ramp over many turns. 2. A sharp fall in the
-first milliseconds: the particles not captured by the RF spiral out or
-in as the field rises and are lost. At Nimrod, the linac sent 18 to 20
-mA for 350 µs, about <span class="math inline">\(4\times10^{13}\)</span>
-protons, and 1 to <span class="math inline">\(1.5\times10^{12}\)</span>
-were accelerated: 2 to 4 per cent. Gray also reports a further loss of
-about 30 per cent in the first 25 ms that was not explained. 3. A slow
-rise through the acceleration, even with no further loss, because <span
+cycle (figure 15.12): 1. A spike at injection as the injector’s pulse
+fills the ring, often a long staircase or ramp over many turns. 2. A
+sharp fall in the first milliseconds: the particles not captured by the
+RF spiral out or in as the field rises and are lost. At Nimrod, the
+linac sent 18 to 20 mA for 350 µs, about <span
+class="math inline">\(4\times10^{13}\)</span> protons, and 1 to <span
+class="math inline">\(1.5\times10^{12}\)</span> were accelerated: 2 to 4
+per cent. Gray also reports a further loss of about 30 per cent in the
+first 25 ms that was not explained. 3. A slow rise through the
+acceleration, even with no further loss, because <span
 class="math inline">\(f_0\)</span> rises. For <span
 class="math inline">\(10^{12}\)</span> protons on the Bevatron’s 120 m
 the current is 58 mA at 10 MeV and 0.40 A at the top. To read the number
@@ -2609,6 +2640,17 @@ of particles the operator divides by <span
 class="math inline">\(f_0\)</span>. 4. Steps or a slow decay: losses on
 obstacles, gas or resonances. 5. At the top, the beam goes to targets: a
 sharp drop for a fast target, a long ramp down for a slow spill.</p>
+<p><a href="figures/15-cycle.svg" class="figure"><img
+src="figures/15-cycle.svg" loading="lazy"
+alt="One Bevatron cycle: the field’s ramp and flat top, and the circulating current rising with the revolution frequency" /></a></p>
+<p><em>Figure 15.12. One Bevatron cycle. Top: the field, from 300 gauss
+at injection to 1.549 T in 1.85 s (taken as a straight ramp), a flat top
+and the fall. Bottom: the circulating current a transformer reads,
+computed as <span class="math inline">\(I = Nqf_0\)</span> for <span
+class="math inline">\(10^{12}\)</span> captured protons on the 120 m
+ring: 58 mA at injection, 0.40 A at the top, rising only because the
+protons go round faster. The injection spike, the early loss and the
+slow spill are drawn, not computed.</em></p>
 <p><strong>The intensity at the top.</strong> The figure of merit is
 protons per pulse at full energy, and with the repetition rate it gives
 the average current. Nimrod’s <span
