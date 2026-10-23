@@ -2808,17 +2808,28 @@ factor is 0.13. This shrinking is what lets a betatron hold its beam:
 the beam is largest at injection, when it is close to the gun and the
 walls, and it draws in as it gains energy.</p>
 <h3 id="7-injection">7. Injection</h3>
-<p>The electron gun sits inside the doughnut, near the inner or outer
-wall, a little off the median plane: a hot cathode, an anode or focusing
-electrodes, and a pulse of tens of kilovolts. Kerst’s patent asks for at
-least 30 to 40 eV, to limit scattering, and says experiments needed at
-least several hundred electron volts, with good results up to several
-thousand; Livingston and Blewett (section 7-8) note that the gun of the
-2.3 MeV machine was designed for at most 600 V. Later and larger
-machines injected at 20 to 120 kV with currents of 1 to 2 A for a few
-microseconds (Humphries, section 11.3 and 11.6); the Illinois 300 MeV
-machine injected at 80 to 135 kV with 1 to 3 A (Livingston and Blewett,
-table 7-1).</p>
+<p>The electron gun sits inside the doughnut (figure 11.8), near the
+inner or outer wall, a little off the median plane: a hot cathode, an
+anode or focusing electrodes, and a pulse of tens of kilovolts. Kerst’s
+patent asks for at least 30 to 40 eV, to limit scattering, and says
+experiments needed at least several hundred electron volts, with good
+results up to several thousand; Livingston and Blewett (section 7-8)
+note that the gun of the 2.3 MeV machine was designed for at most 600 V.
+Later and larger machines injected at 20 to 120 kV with currents of 1 to
+2 A for a few microseconds (Humphries, section 11.3 and 11.6); the
+Illinois 300 MeV machine injected at 80 to 135 kV with 1 to 3 A
+(Livingston and Blewett, table 7-1).</p>
+<p><a href="figures/11-doughnut.svg" class="figure"><img
+src="figures/11-doughnut.svg" loading="lazy"
+alt="The betatron’s doughnut from above: ring, orbit, gun, target, X-rays and pump arm" /></a></p>
+<p><em>Figure 11.8. The doughnut seen from above, schematic. A sealed
+glass ring lies between the poles, around the central core’s flux. With
+<span class="math inline">\(\mathbf{B}\)</span> out of the page and
+rising, the electrons go round anticlockwise. The gun, on a stem near
+the outer wall, fires a pulse along the orbit just after the field’s
+zero; near the top of the cycle the orbit is moved onto a tungsten
+target, and the X-rays leave forward, along the electrons’ direction,
+through the wall. A side arm leads to the pump.</em></p>
 <p><strong>Timing.</strong> The gun fires when the guide field is just
 right to bend the injected electrons on a circle near the gun. That
 field is small, because the injection momentum is small. For the 300 MeV
@@ -2894,11 +2905,22 @@ guide field so the beam moves outward onto a target, or past it.</li>
 <li><strong>Extraction.</strong> For an external electron beam, the
 orbit is pushed out past the radius where <span
 class="math inline">\(n\)</span> reaches 1. There the radial focusing
-ends and the electrons spiral outward into a magnetic shunt, the peeler,
-placed at one azimuth outside the beam’s normal path, which shields them
-from the guide field and lets them leave. Skaggs, Almy, Kerst and Lanzl
-reported removing the beam from a betatron in 1946.</li>
+ends and the electrons spiral outward into a magnetic shunt, the peeler
+(figure 11.9), placed at one azimuth outside the beam’s normal path,
+which shields them from the guide field and lets them leave. Skaggs,
+Almy, Kerst and Lanzl reported removing the beam from a betatron in
+1946.</li>
 </ul>
+<p><a href="figures/11-peeler.svg" class="figure"><img
+src="figures/11-peeler.svg" loading="lazy"
+alt="A quarter of the betatron: the orbit expanding past n = 1 and leaving straight through the peeler" /></a></p>
+<p><em>Figure 11.9. Taking the beam out, a quarter of the machine seen
+from above, schematic. A pulsed coil lowers the guide field and the
+orbit expands. Past the radius where <span
+class="math inline">\(n\)</span> reaches 1 the radial focusing ends and
+the electrons spiral outward, until at one azimuth they enter the
+peeler, an iron channel that shields them from the guide field, and go
+straight out.</em></p>
 <p>The shift needed is small. At fixed momentum the orbit sits where
 <span class="math inline">\(p = eB(r)\,r\)</span>. Scale the whole guide
 field by <span class="math inline">\((1 + b)\)</span>, so <span
@@ -3198,7 +3220,7 @@ t\)</span> and <span class="math inline">\(U_0 \propto E^4\)</span>, the
 loss rate goes as <span class="math inline">\(\sin^4\omega t\)</span>,
 whose integral has a closed form: <span
 class="math inline">\(\int_0^\phi\sin^4u\,du = 3\phi/8 - \sin2\phi/4 +
-\sin4\phi/32\)</span> (Figure 11.8). For a machine run at 60 Hz to 100
+\sin4\phi/32\)</span> (Figure 11.10). For a machine run at 60 Hz to 100
 MeV (an illustrative case of the size of the General Electric machine,
 whose own radius is not used here), the momentum deficit at the peak is
 0.67 MeV/<span class="math inline">\(c\)</span>, 0.7 per cent, and the
@@ -3221,7 +3243,7 @@ about 8 per cent.</p>
 <p><a href="figures/11-radiation-shift.svg" class="figure"><img
 src="figures/11-radiation-shift.svg" loading="lazy"
 alt="How far radiation moves the orbit inward through the rise of the field" /></a></p>
-<p><em>Figure 11.8. The inward shift of the orbit from radiation, for a
+<p><em>Figure 11.10. The inward shift of the orbit from radiation, for a
 1 m orbit with <span class="math inline">\(n = 2/3\)</span>, against the
 phase of the field cycle: 100 MeV at 60 Hz (blue; 1 mm by 37°, 20 mm at
 the top) and 300 MeV at 180 Hz (red; 1 cm by 38°, 18 cm at the top, far
@@ -3543,7 +3565,18 @@ volts is the peak voltage per turn the electrons receive. A loop at the
 orbit gives the guide field. The gun pulse, a few microseconds long,
 sits near the zero of the field. A detector near the target shows the
 X-ray burst near the top of the cycle, when the beam is moved onto the
-target.</p>
+target (figure 11.11).</p>
+<p><a href="figures/11-cycle.svg" class="figure"><img
+src="figures/11-cycle.svg" loading="lazy"
+alt="One cycle: the field and the voltage per turn, the gun pulse after the zero and the X-ray burst near the top" /></a></p>
+<p><em>Figure 11.11. One cycle as an oscilloscope shows it, schematic.
+The guide field (solid) rises as <span class="math inline">\(\sin\omega
+t\)</span>, and the voltage per turn from a loop round the core goes as
+<span class="math inline">\(d\Phi/dt\)</span> (dashed). The gun fires
+microseconds after the field’s zero, the electrons are caught and
+accelerated through the rising quarter (shaded), and near the top a
+pulse moves them onto the target in one X-ray burst. Nothing is
+accelerated in the rest of the cycle.</em></p>
 <p><strong>Setting up.</strong> 1. Pump the doughnut down and check the
 vacuum. The electrons travel a hundred kilometres or more in a cycle,
 and gas scattering is largest at low energy, when the beam is biggest
