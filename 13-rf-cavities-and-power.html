@@ -3907,12 +3907,13 @@ those from the centre.</p>
 beam loading</h3>
 <p><strong>Couplers.</strong> Power enters through a loop that links the
 magnetic field near the wall, an antenna that reaches into the electric
-field, or an iris, a hole into a waveguide. Through the same port,
-energy stored in the cavity also leaks back out to the line. Define the
-external quality factor <span class="math inline">\(Q_{ext} = \omega
-U/P_{ext}\)</span>, where <span class="math inline">\(P_{ext}\)</span>
-is the power that would leave through the port if the generator were
-switched off and the line ended in a matched load. Losses add, so</p>
+field, or an iris, a hole into a waveguide (figure 13.6). Through the
+same port, energy stored in the cavity also leaks back out to the line.
+Define the external quality factor <span class="math inline">\(Q_{ext} =
+\omega U/P_{ext}\)</span>, where <span
+class="math inline">\(P_{ext}\)</span> is the power that would leave
+through the port if the generator were switched off and the line ended
+in a matched load. Losses add, so</p>
 <p><span class="math display">\[
 \frac{1}{Q_L} = \frac{1}{Q_0} + \frac{1}{Q_{ext}}, \qquad \beta_c =
 \frac{P_{ext}}{P} = \frac{Q_0}{Q_{ext}}, \qquad Q_L = \frac{Q_0}{1 +
@@ -3924,6 +3925,15 @@ subscripted here to keep it from the particle’s speed). <span
 class="math inline">\(Q_L\)</span> is the loaded quality factor, which
 sets the bandwidth <span class="math inline">\(f_0/Q_L\)</span> and the
 field decay time <span class="math inline">\(2Q_L/\omega_0\)</span>.</p>
+<p><a href="figures/13-couplers.svg" class="figure"><img
+src="figures/13-couplers.svg" loading="lazy"
+alt="Three pillbox cavities in section, fed by a loop, an antenna and an iris" /></a></p>
+<p><em>Figure 13.6. Three ways in, each a pillbox in side section,
+schematic. In the TM<span class="math inline">\(_{010}\)</span> mode the
+electric field runs along the axis and the magnetic field circles it,
+strongest near the outer wall. (a) A loop at the outer wall links the
+magnetic flux. (b) An antenna reaches into the electric field. (c) An
+iris, a hole in the wall, opens into a waveguide.</em></p>
 <p><strong>Reflection.</strong> Seen from the line through an ideal
 transformer, a cavity at resonance is a resistance <span
 class="math inline">\(\beta_c\)</span> times the line impedance <span
@@ -3995,7 +4005,7 @@ then an 800 µs flat top.</p>
 <p><a href="figures/13-filling.svg" class="figure"><img
 src="figures/13-filling.svg" loading="lazy"
 alt="Filling a TESLA cavity, then holding it with the beam" /></a></p>
-<p><em>Figure 13.6. One RF pulse of a TESLA cavity, computed with <span
+<p><em>Figure 13.7. One RF pulse of a TESLA cavity, computed with <span
 class="math inline">\(\tau = 2Q_L/\omega = 767\)</span> µs. With full
 forward power and no beam, the voltage heads for twice the working value
 along <span class="math inline">\(2\hat{V}(1 - e^{-t/\tau})\)</span> and
@@ -4330,7 +4340,7 @@ class="math inline">\(v_g = 0.716c\)</span>.</p>
 <p><a href="figures/13-waveguide.svg" class="figure"><img
 src="figures/13-waveguide.svg" loading="lazy"
 alt="The TE10 mode of WR-284 and its dispersion curve" /></a></p>
-<p><em>Figure 13.7. Left: the cross-section of WR-284 to scale, with the
+<p><em>Figure 13.8. Left: the cross-section of WR-284 to scale, with the
 TE<span class="math inline">\(_{10}\)</span> electric field, <span
 class="math inline">\(\mathcal{E}_y \propto \sin(\pi x/a_w)\)</span>:
 zero at the narrow walls, where it would be tangential, and strongest in
@@ -4554,7 +4564,7 @@ two-cavity tube.</p>
 <p><a href="figures/13-klystron.svg" class="figure"><img
 src="figures/13-klystron.svg" loading="lazy"
 alt="A two-cavity klystron and the bunching in its drift" /></a></p>
-<p><em>Figure 13.8. Top: a two-cavity klystron, not to scale. A steady
+<p><em>Figure 13.9. Top: a two-cavity klystron, not to scale. A steady
 beam from the gun crosses the buncher, whose small RF voltage speeds
 some electrons and slows others, drifts a length <span
 class="math inline">\(L_d\)</span>, and gives up energy in the catcher.
@@ -4622,14 +4632,25 @@ and 180 A is a beam of 29.7 MW, and 20 MW out is 67 per cent.</p>
 <h4 id="the-magnetron">The magnetron</h4>
 <p>In the cavity magnetron the electrons circle a central cathode in
 crossed electric and magnetic fields and drift past a ring of resonant
-cavities cut into the anode. The cavities’ fields bunch the electrons
-into rotating spokes, which deliver energy to the cavities as they pass.
-A magnetron is an oscillator, not an amplifier: its frequency and phase
-drift with current and load. That suits radar, ovens and compact medical
-linacs, where one magnetron drives one accelerating structure (<a
-href="28-accelerators-at-work.html">chapter 28</a>). It does not suit a
-long linac whose many sources must hold a common phase, which is why
-such linacs use klystrons.</p>
+cavities cut into the anode (figure 13.10). The cavities’ fields bunch
+the electrons into rotating spokes, which deliver energy to the cavities
+as they pass. A magnetron is an oscillator, not an amplifier: its
+frequency and phase drift with current and load. That suits radar, ovens
+and compact medical linacs, where one magnetron drives one accelerating
+structure (<a href="28-accelerators-at-work.html">chapter 28</a>). It
+does not suit a long linac whose many sources must hold a common phase,
+which is why such linacs use klystrons.</p>
+<p><a href="figures/13-magnetron.svg" class="figure"><img
+src="figures/13-magnetron.svg" loading="lazy"
+alt="A cavity magnetron end on: copper block with eight hole-and-slot resonators, cathode and rotating spokes" /></a></p>
+<p><em>Figure 13.10. A cavity magnetron end on, schematic: Randall and
+Boot’s eight-hole form. Each hole, joined to the central bore by a slot,
+is a resonator. The cathode is on the axis and the magnetic field along
+it; the electrons drift round the cathode and are gathered into rotating
+spokes, four for eight cavities in the <span
+class="math inline">\(\pi\)</span> mode, which give energy to the
+cavities as they pass. Power leaves through a loop in one
+cavity.</em></p>
 <h4 id="the-inductive-output-tube">The inductive output tube</h4>
 <p>Andrew Haeff invented the inductive output tube (IOT) at RCA in 1938
 or 1939 (sources give both years). It puts a control grid, as in a
@@ -4653,9 +4674,9 @@ others 2007). A failed module lowers the output slightly and is replaced
 without stopping the machine.</p>
 <h4 id="pulsed-modulators">Pulsed modulators</h4>
 <p>A pulsed klystron needs a high-voltage pulse with a flat top. The
-classic line-type modulator charges a pulse-forming network, <span
-class="math inline">\(n\)</span> sections of inductance <span
-class="math inline">\(L_s\)</span> and capacitance <span
+classic line-type modulator (figure 13.11) charges a pulse-forming
+network, <span class="math inline">\(n\)</span> sections of inductance
+<span class="math inline">\(L_s\)</span> and capacitance <span
 class="math inline">\(C_s\)</span>, to a voltage <span
 class="math inline">\(V_c\)</span>, then discharges it through a switch
 (a hydrogen thyratron) into a matched load of <span
@@ -4675,6 +4696,18 @@ phase delay is 1834°, and a 0.1 per cent voltage error moves the output
 phase by 0.6°. The CLIC drive-beam specification asks for a flat top
 within 0.1 per cent and a pulse-to-pulse repeatability of 50 ppm, which
 is 0.03° on the same assumption.</p>
+<p><a href="figures/13-modulator.svg" class="figure"><img
+src="figures/13-modulator.svg" loading="lazy"
+alt="A line-type modulator: supply, choke, pulse-forming network, thyratron, pulse transformer and klystron, with its flat pulse" /></a></p>
+<p><em>Figure 13.11. The line-type modulator, schematic. The supply
+charges the pulse-forming network to <span
+class="math inline">\(V_c\)</span> through a choke and a diode, the
+charging current returning through the pulse transformer’s primary. When
+the thyratron closes it earths the network’s input end, and the network
+discharges through the thyratron and the primary in series: a flat pulse
+of <span class="math inline">\(V_c/2\)</span> lasting <span
+class="math inline">\(2n\sqrt{L_sC_s}\)</span>, stepped up by the
+transformer for the klystron’s gun.</em></p>
 <h4
 id="pre-requisite-continued-sampling-discrete-fourier-transform-fft-aliasing">Pre-requisite
 (continued): Sampling, discrete Fourier transform, FFT, aliasing</h4>
@@ -4892,9 +4925,9 @@ class="math inline">\(I\)</span>) and quadrature (<span
 class="math inline">\(Q\)</span>) parts give the complex field vector; a
 controller compares it with the set point and drives an <span
 class="math inline">\(I/Q\)</span> vector modulator at the klystron’s
-input. Controlling <span class="math inline">\(I\)</span> and <span
-class="math inline">\(Q\)</span> rather than amplitude and phase
-decouples the two loops and avoids the ill-defined phase at small
+input (figure 13.12). Controlling <span class="math inline">\(I\)</span>
+and <span class="math inline">\(Q\)</span> rather than amplitude and
+phase decouples the two loops and avoids the ill-defined phase at small
 amplitude. At the TESLA Test Facility one klystron fed up to 32
 cavities, so only their vector sum could be controlled; the signals were
 mixed to 250 kHz and sampled at 1 MHz, and a feedback loop with adaptive
@@ -4904,6 +4937,15 @@ class="math inline">\(2\times10^{-3}\)</span>, which needs gradient
 stability of <span class="math inline">\(10^{-3}\)</span> and phase
 stability of 1.6°. The CLIC drive beam asks for ±0.2 per cent and
 ±0.05°.</p>
+<p><a href="figures/13-llrf.svg" class="figure"><img
+src="figures/13-llrf.svg" loading="lazy"
+alt="The low-level RF loop: oscillator, vector modulator, klystron, cavity, probe, mixer, controller, feed-forward" /></a></p>
+<p><em>Figure 13.12. The low-level RF loop, block diagram. A probe
+samples the cavity’s field; a mixer and an analog-to-digital converter
+turn it into the complex field vector <span class="math inline">\((I,
+Q)\)</span>; the controller compares it with the set point and, with
+feed-forward tables for the errors that repeat from pulse to pulse,
+drives the vector modulator at the klystron’s input.</em></p>
 <p>Why phase matters depends on where the beam sits. The energy gain
 goes as <span class="math inline">\(\sin\phi\)</span>. On crest, <span
 class="math inline">\(\phi = 90°\)</span>, a phase error <span
@@ -5515,7 +5557,8 @@ near the end for niobium.</p>
 <p><strong>What stops cavities before the critical field.</strong> Each
 limit has its signature in the curve of <span
 class="math inline">\(Q_0\)</span> against <span
-class="math inline">\(\mathcal{E}_{acc}\)</span> (Padamsee 2020):</p>
+class="math inline">\(\mathcal{E}_{acc}\)</span> (figure 13.13; Padamsee
+2020):</p>
 <ul>
 <li><em>Multipacting</em> (section 10): <span
 class="math inline">\(Q_0\)</span> drops at a fixed field level and
@@ -5545,6 +5588,16 @@ which leaves it smoother than chemical etching) followed by baking at
 120 °C for about two days. Hydrogen in the surface, forming niobium
 hydrides that go normal in the field, is the leading explanation.</li>
 </ul>
+<p><a href="figures/13-sc-cavity.svg" class="figure"><img
+src="figures/13-sc-cavity.svg" loading="lazy"
+alt="The nine-cell TESLA cavity, and Q0 against gradient with the signature of each limit" /></a></p>
+<p><em>Figure 13.13. Top: the nine-cell 1.3 GHz TESLA cavity in section,
+schematic, with its input coupler and higher-order-mode couplers.
+Bottom: the curve of <span class="math inline">\(Q_0\)</span> against
+gradient, drawn schematically, not measured, with the signature of each
+limit: a multipacting dip that processes away, the high-field Q-slope,
+the steep fall of field emission with its X-rays, and the quench where
+the curve ends.</em></p>
 <p><strong>Nitrogen doping.</strong> In 2013 A. Grassellino and
 colleagues at Fermilab reported that annealing a cavity at 800 °C in a
 partial pressure of nitrogen, then electropolishing a few micrometres,
@@ -5943,17 +5996,29 @@ it is <span class="math inline">\(\Delta f/f =
 -2r^3/(a^2LJ_1^2)\)</span>: a bead of 0.5 mm radius shifts the 2856 MHz
 cell by 31 kHz.</p>
 <p>In practice a bead on a nylon thread is pulled along the axis in
-steps by a motor. The analyser sits at the unperturbed resonance and
-records the phase of <span class="math inline">\(S_{21}\)</span>; for
-small shifts, <span class="math inline">\(\tan\Delta\varphi = 2Q_L\Delta
-f/f\)</span> (11° for the bead above with <span
-class="math inline">\(Q_L = 9200\)</span>). The profile of <span
-class="math inline">\(\sqrt{\Delta f}\)</span> along the axis is the
-field profile. Multi-cell cavities are tuned cell by cell until the
-field is flat. The frequencies of the whole passband (the nine modes of
-a nine-cell cavity) are a quicker check of the same thing: the XFEL
-cavities’ passband was measured at the vendor and again on arrival at
-DESY, to catch deformation in transport (Reschke and others 2017).</p>
+steps by a motor (figure 13.14). The analyser sits at the unperturbed
+resonance and records the phase of <span
+class="math inline">\(S_{21}\)</span>; for small shifts, <span
+class="math inline">\(\tan\Delta\varphi = 2Q_L\Delta f/f\)</span> (11°
+for the bead above with <span class="math inline">\(Q_L =
+9200\)</span>). The profile of <span class="math inline">\(\sqrt{\Delta
+f}\)</span> along the axis is the field profile. Multi-cell cavities are
+tuned cell by cell until the field is flat. The frequencies of the whole
+passband (the nine modes of a nine-cell cavity) are a quicker check of
+the same thing: the XFEL cavities’ passband was measured at the vendor
+and again on arrival at DESY, to catch deformation in transport (Reschke
+and others 2017).</p>
+<p><a href="figures/13-bead-pull.svg" class="figure"><img
+src="figures/13-bead-pull.svg" loading="lazy"
+alt="A bead on a thread pulled through a five-cell cavity, read by a network analyser, and the phase shift along the axis" /></a></p>
+<p><em>Figure 13.14. The bead pull, schematic. A small metal bead on a
+nylon thread is pulled along the axis by a motor while a network
+analyser, set at the unperturbed resonance, records the phase of <span
+class="math inline">\(S_{21}\)</span>. On the axis the magnetic field is
+zero, so the shift measures <span
+class="math inline">\(\mathcal{E}^2\)</span>; a well-tuned cavity in the
+<span class="math inline">\(\pi\)</span> mode shows one equal hump per
+cell (drawn, not measured).</em></p>
 <h3 id="conditioning-a-copper-cavity">Conditioning a copper cavity</h3>
 <p>A new copper cavity will not take full power at once. The power is
 raised slowly, often with short pulses first, then lengthened. The
