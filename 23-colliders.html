@@ -1506,8 +1506,8 @@ too) has doubled. Figure 23.3 shows how fast the growth becomes for
 small <span class="math inline">\(\beta^*\)</span>.</p>
 <p><strong>What it costs.</strong> The final quadrupoles cannot be
 closer than the detector allows: at the LHC the first one, Q1, sits
-<span class="math inline">\(L^* = 23\)</span> m from the collision
-point. There</p>
+<span class="math inline">\(L^* = 23\)</span> m from the collision point
+(figure 23.4). There</p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -1589,6 +1589,20 @@ class="math inline">\(D_x\)</span> (m) there, with a beam of rms
 momentum spread <span class="math inline">\(\sigma_\delta\)</span>,
 would add <span class="math inline">\(D_x\sigma_\delta\)</span> in
 quadrature to the beam size.</p>
+<p><a href="figures/23-insertion.svg" class="figure"><img
+src="figures/23-insertion.svg" loading="lazy"
+alt="The LHC low-beta insertion from the side: the detector round the collision point, the beam envelope widening to the first quadrupole 23 m away, and the triplets on each side" /></a></p>
+<p><em>Figure 23.4. The low-beta insertion of the LHC seen from the side
+(schematic, not to scale along the beam). The detector fills the space
+round the collision point, so the first quadrupole, Q1, stands <span
+class="math inline">\(L^* = 23\)</span> m away, followed by the rest of
+the triplet. The red envelope between them is computed from <span
+class="math inline">\(\sigma = \sqrt{\varepsilon\beta_x(s)}\)</span>
+with the design <span class="math inline">\(\beta^* = 0.55\)</span> m
+and <span class="math inline">\(\varepsilon_n = 3.75\)</span> µm at 7
+TeV: 16.6 µm at the collision point, 0.70 mm at Q1; across the beam it
+is drawn about a thousand times larger than along it. The lengths and
+spacing of the quadrupoles are drawn, not given.</em></p>
 <p>The ISR showed the gain. A conventional steel low-beta insertion
 built in 1974 raised the luminosity at one crossing by a factor of 2.3;
 a superconducting one in Intersection 8, about 1980, by 6.5
@@ -1698,7 +1712,7 @@ small-amplitude particles get the full tune shift.</p>
 <p><a href="figures/23-bunch-field.svg" class="figure"><img
 src="figures/23-bunch-field.svg" loading="lazy"
 alt="The radial field of a round Gaussian beam" /></a></p>
-<p><em>Figure 23.4. The radial field of a round Gaussian beam against
+<p><em>Figure 23.5. The radial field of a round Gaussian beam against
 the distance from its axis, in units of <span
 class="math inline">\(\lambda/(2\pi\varepsilon_0\sigma_\perp)\)</span>,
 computed from <span class="math inline">\((1 - e^{-u^2/2})/u\)</span>
@@ -1893,7 +1907,7 @@ beam’s field as strong as it can be.</p>
 <p><a href="figures/23-beam-beam-force.svg" class="figure"><img
 src="figures/23-beam-beam-force.svg" loading="lazy"
 alt="The electric and magnetic forces on a charge moving with a bunch and against it" /></a></p>
-<p><em>Figure 23.5. The forces on a positive charge <span
+<p><em>Figure 23.6. The forces on a positive charge <span
 class="math inline">\(q\)</span> just above a positive bunch moving to
 the right at nearly <span class="math inline">\(c\)</span> (arrow
 lengths schematic). The bunch’s electric field <span
@@ -2322,12 +2336,12 @@ class="math inline">\(X_0\)</span> in g/cm² by the density:</p>
 centimetre of tungsten is almost three.</p>
 <p><strong>The shower.</strong> The two processes feed each other. An
 electron radiates a photon, the photon makes a pair, each of them
-radiates again. A simple model (Heitler’s) captures the result: every
-radiation length, each particle becomes two, sharing its energy equally.
-After <span class="math inline">\(t\)</span> radiation lengths there are
-<span class="math inline">\(2^t\)</span> particles of energy <span
-class="math inline">\(E_0/2^t\)</span>. The doubling stops when the
-energy per particle falls to the critical energy <span
+radiates again. A simple model (Heitler’s) captures the result (figure
+23.7): every radiation length, each particle becomes two, sharing its
+energy equally. After <span class="math inline">\(t\)</span> radiation
+lengths there are <span class="math inline">\(2^t\)</span> particles of
+energy <span class="math inline">\(E_0/2^t\)</span>. The doubling stops
+when the energy per particle falls to the critical energy <span
 class="math inline">\(E_c\)</span>, where an electron loses as much by
 ionisation in a radiation length as it has; below it particles stop by
 ionising instead of multiplying. The <em>Handbook</em> gives <span
@@ -2397,6 +2411,18 @@ its silicon pads, a few millimetres across, locate a shower’s centre far
 more finely than its width. That is what section 9 needs: the acceptance
 edge at <span class="math inline">\(\theta_{\min}\)</span> is defined by
 the shower position, and seen from 2.5 m, 10 µrad is 25 µm.</p>
+<p><a href="figures/23-shower.svg" class="figure"><img
+src="figures/23-shower.svg" loading="lazy"
+alt="A shower in a silicon-tungsten calorimeter: an electron enters tungsten plates and the number of particles doubles every radiation length, with silicon layers between the plates" /></a></p>
+<p><em>Figure 23.7. Heitler’s model of a shower in a silicon-tungsten
+sampling calorimeter (schematic). Each tungsten plate is one radiation
+length, 3.5 mm; in each, every particle becomes two sharing its energy:
+an electron or positron (solid) radiates a photon (dashed), a photon
+makes a pair. The silicon layers between the plates count the charged
+particles crossing them. Four doublings are drawn and the spread across
+the beam is exaggerated. For a 45.6 GeV electron the doubling stops at
+the critical energy, 10.6 MeV, with 4300 particles at 12.1 <span
+class="math inline">\(X_0\)</span> = 4.2 cm.</em></p>
 <p><strong>Trackers and vertices.</strong> A charged particle crossing
 several layers of silicon at radii <span class="math inline">\(r_1 &lt;
 r_2 &lt; \ldots\)</span> leaves a point in each; a solenoid’s field
@@ -2415,10 +2441,10 @@ x_0 = \frac{r_2x_1 - r_1x_2}{r_2 - r_1}, \qquad \sigma_0^2 =
 <p>the errors of independent measurements adding in quadrature (<a
 href="01-why-accelerate.html#pre-requisite-errors-and-their-propagation">Errors
 and their propagation</a>). The lever arm matters: layers at 3 and 7 cm
-with 10 µm each give 19 µm, layers at 4 and 10 cm with 15 µm give 27 µm.
-So the first layer must be as close to the beam as the beam pipe allows.
-Material spoils this. A particle crossing a thickness <span
-class="math inline">\(x\)</span> is scattered by a random angle of
+with 10 µm each give 19 µm (figure 23.8), layers at 4 and 10 cm with 15
+µm give 27 µm. So the first layer must be as close to the beam as the
+beam pipe allows. Material spoils this. A particle crossing a thickness
+<span class="math inline">\(x\)</span> is scattered by a random angle of
 rms</p>
 <p><span class="math display">\[
 \theta_0 = \frac{13.6\ \text{MeV}}{\beta cp}\sqrt{\frac{x}{X_0}}\left[1
@@ -2434,6 +2460,19 @@ only 2.3 µm. Many tracks from one collision fit together to a vertex
 located to tens of microns along the beam. That is enough for the B
 factories’ flight distances of 127 to 251 µm (exercise 10), and for
 separating the collisions of one crossing.</p>
+<p><a href="figures/23-vertex.svg" class="figure"><img
+src="figures/23-vertex.svg" loading="lazy"
+alt="A vertex tracker seen along the beam, with curved tracks crossing two silicon layers, and below, the error band of a track extrapolated back to the beam axis" /></a></p>
+<p><em>Figure 23.8. A vertex tracker. Top, schematic: seen along the
+beam, with the solenoid’s field out of the page, tracks from a collision
+on the axis cross the beam pipe and two silicon layers at 3 and 7 cm;
+<span class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span> turns
+positive tracks clockwise and negative ones anticlockwise. Bottom,
+computed: a straight track measured to 10 µm at each layer, extrapolated
+back. The error band is narrowest between the layers and widens beyond
+them, to 19 µm at the axis: the inner layer is weighted by <span
+class="math inline">\(r_2/(r_2 - r_1)\)</span>, so the lever arm and the
+first layer’s radius set the resolution.</em></p>
 <p><strong>Pile-up in space.</strong> The collisions of one crossing are
 spread along the luminous region, rms <span
 class="math inline">\(\sigma_z/\sqrt2\)</span>, with a Gaussian density
@@ -2520,12 +2559,12 @@ class="math inline">\(\sigma_{\text{vis}}\)</span>. The method assumes
 the profiles factorise into <span class="math inline">\(x\)</span> and
 <span class="math inline">\(y\)</span> parts, that the beams do not
 deflect each other during the scan, and that the displacement scale is
-right; modern analyses correct each. Figure 23.6 shows a scan with the
+right; modern analyses correct each. Figure 23.9 shows a scan with the
 numbers of “At the bench”.</p>
 <p><a href="figures/23-vdm-scan.svg" class="figure"><img
 src="figures/23-vdm-scan.svg" loading="lazy"
 alt="A van der Meer scan: rate against beam separation" /></a></p>
-<p><em>Figure 23.6. A van der Meer scan as ATLAS ran it in Run 2,
+<p><em>Figure 23.9. A van der Meer scan as ATLAS ran it in Run 2,
 computed for two beams of 100 µm rms: the rate, relative to its peak,
 against the separation of the beams, <span class="math inline">\(R/R_0 =
 e^{-d^2/2\Sigma^2}\)</span> with <span class="math inline">\(\Sigma =
@@ -2563,11 +2602,11 @@ class="math inline">\(\int_{\theta_{\min}}^{\theta_{\max}}\theta^{-3}\,d\theta
 c)^2}{s}\left(\frac{1}{\theta_{\min}^2} -
 \frac{1}{\theta_{\max}^2}\right) .
 \]</span></p>
-<p>For OPAL’s silicon-tungsten luminometer, 25 to 58 mrad, at <span
-class="math inline">\(\sqrt{s} = 91.2\)</span> GeV this gives 163 nb
-before acceptance cuts, about 4 counts per second at the LEP Z-peak
-luminosity of <span class="math inline">\(2.4 \times 10^{31}\)</span>
-cm<span class="math inline">\(^{-2}\)</span> s<span
+<p>For OPAL’s silicon-tungsten luminometer (figure 23.10), 25 to 58
+mrad, at <span class="math inline">\(\sqrt{s} = 91.2\)</span> GeV this
+gives 163 nb before acceptance cuts, about 4 counts per second at the
+LEP Z-peak luminosity of <span class="math inline">\(2.4 \times
+10^{31}\)</span> cm<span class="math inline">\(^{-2}\)</span> s<span
 class="math inline">\(^{-1}\)</span>. The steep <span
 class="math inline">\(1/\theta_{\min}^2\)</span> is the difficulty: a 10
 µrad error at 25 mrad shifts the cross-section by <span
@@ -2576,6 +2615,18 @@ edges to a few microns and reached a total experimental systematic error
 of <span class="math inline">\(3.4 \times 10^{-4}\)</span>, below the
 <span class="math inline">\(5.4 \times 10^{-4}\)</span> then assigned to
 the QED calculation.</p>
+<p><a href="figures/23-bhabha.svg" class="figure"><img
+src="figures/23-bhabha.svg" loading="lazy"
+alt="A small-angle Bhabha luminosity monitor: two calorimeters ringing the beam pipe on either side of the collision point, with a scattered electron and positron leaving back to back into them" /></a></p>
+<p><em>Figure 23.10. A small-angle Bhabha luminosity monitor like
+OPAL’s, seen from the side (not to scale; the angles are exaggerated
+about six times). Two silicon-tungsten calorimeters ring the beam pipe
+about 2.5 m from the collision point on each side and accept angles from
+25 to 58 mrad. An electron and a positron that scatter by <span
+class="math inline">\(\theta\)</span> leave back to back, one into each
+calorimeter. The acceptance’s inner edge must be known to microns: 10
+µrad at 2.5 m is 25 µm and changes the cross-section by <span
+class="math inline">\(10^{-3}\)</span>.</em></p>
 <h3
 id="pre-requisite-continued-ordinary-differential-equations-linear-constant-and-varying-coefficients">Pre-requisite
 (continued): Ordinary differential equations (linear, constant and
@@ -2807,7 +2858,7 @@ shorten the average.</p>
 <p><a href="figures/23-burn-off.svg" class="figure"><img
 src="figures/23-burn-off.svg" loading="lazy"
 alt="Burn-off of particles and luminosity in an LHC fill, and the best fill length" /></a></p>
-<p><em>Figure 23.7. Burn-off for the LHC in 2018, <span
+<p><em>Figure 23.11. Burn-off for the LHC in 2018, <span
 class="math inline">\(\tau_N = 23.2\)</span> h. Left: the particles fall
 as <span class="math inline">\(1/(1 + t/\tau_N)\)</span> and the
 luminosity, which goes as their square, as <span
@@ -2892,33 +2943,34 @@ length.</p>
 <p><a href="figures/23-lhc-layout.svg" class="figure"><img
 src="figures/23-lhc-layout.svg" loading="lazy"
 alt="The LHC seen from above, with its two beams crossing at four points" /></a></p>
-<p><em>Figure 23.8. The LHC seen from above, not to scale. The two beams
-run in opposite directions in the two channels of one set of magnets,
-here drawn far apart (they are 194 mm apart in the arcs). They share a
-common pipe only in the straight sections of the four experiments, ATLAS
-(IP1), ALICE (IP2), CMS (IP5) and LHCb (IP8), and cross there, each
-changing from the outer channel to the inner or back. The other four
-straight sections hold the collimators that clean the beam’s halo (IP3
-and IP7), the RF cavities (IP4) and the beam dump (IP6).</em></p>
+<p><em>Figure 23.12. The LHC seen from above, not to scale. The two
+beams run in opposite directions in the two channels of one set of
+magnets, here drawn far apart (they are 194 mm apart in the arcs). They
+share a common pipe only in the straight sections of the four
+experiments, ATLAS (IP1), ALICE (IP2), CMS (IP5) and LHCb (IP8), and
+cross there, each changing from the outer channel to the inner or back.
+The other four straight sections hold the collimators that clean the
+beam’s halo (IP3 and IP7), the RF cavities (IP4) and the beam dump
+(IP6).</em></p>
 <h2 id="how-it-was-researched-and-built">How it was researched and
 built</h2>
 <p><strong>AdA.</strong> On 7 March 1960 Touschek gave a seminar at
 Frascati proposing electron-positron collisions and, as a first step, a
-very small ring fed by the laboratory’s 1.1 GeV electron synchrotron.
-AdA (Anello di Accumulazione) stored its first particles on 27 February
-1961, according to Bernardini’s account; it was not clear at the time
-whether they were electrons or positrons. The ring was 4.1 m round, for
-250 MeV per beam, with a 1.1 T weak-focusing magnet. Bremsstrahlung
-photons from the synchrotron’s beam converted on a tantalum target
-inside the ring to give electrons; then the whole ring was turned
-through 180° to fill positrons the other way. Below 1 nTorr, beams lived
-for up to 40 hours, but the currents were tiny, and in July 1962 AdA was
-moved to the 1 GeV linac at Orsay. There the team found that at about
-<span class="math inline">\(3 \times 10^7\)</span> particles the
-lifetime fell from some 50 hours to a few: scattering within the bunch
-threw particles out of the RF bucket, the Touschek effect (<a
-href="19-longitudinal-dynamics.html">chapter 19</a>). To prove
-collisions they counted single-bremsstrahlung photons, <span
+very small ring fed by the laboratory’s 1.1 GeV electron synchrotron
+(figure 23.13). AdA (Anello di Accumulazione) stored its first particles
+on 27 February 1961, according to Bernardini’s account; it was not clear
+at the time whether they were electrons or positrons. The ring was 4.1 m
+round, for 250 MeV per beam, with a 1.1 T weak-focusing magnet.
+Bremsstrahlung photons from the synchrotron’s beam converted on a
+tantalum target inside the ring to give electrons; then the whole ring
+was turned through 180° to fill positrons the other way. Below 1 nTorr,
+beams lived for up to 40 hours, but the currents were tiny, and in July
+1962 AdA was moved to the 1 GeV linac at Orsay. There the team found
+that at about <span class="math inline">\(3 \times 10^7\)</span>
+particles the lifetime fell from some 50 hours to a few: scattering
+within the bunch threw particles out of the RF bucket, the Touschek
+effect (<a href="19-longitudinal-dynamics.html">chapter 19</a>). To
+prove collisions they counted single-bremsstrahlung photons, <span
 class="math inline">\(e^+e^- \to e^+e^-\gamma\)</span>, in a 150 kg
 lead-glass counter. Beam-gas photons scale as <span
 class="math inline">\(N_1\)</span>, beam-beam photons as <span
@@ -2929,6 +2981,19 @@ luminosity. The runs of December 1963 to April 1964 gave about <span
 class="math inline">\(10^{25}\)</span> cm<span
 class="math inline">\(^{-2}\)</span> s<span
 class="math inline">\(^{-1}\)</span>, reported on 16 July 1964.</p>
+<p><a href="figures/23-ada.svg" class="figure"><img
+src="figures/23-ada.svg" loading="lazy"
+alt="AdA from above: a small ring with a target at the top, photon beams arriving from either side, electrons circulating clockwise and positrons anticlockwise, and a lead-glass counter catching photons from collisions" /></a></p>
+<p><em>Figure 23.13. AdA, the first electron-positron storage ring, seen
+from above in the ring’s own frame (schematic, not to scale): 4.1 m
+round, 1.1 T, 250 MeV per beam. Photons from the synchrotron converted
+on a tantalum target inside the ring, and the electrons that stayed went
+round in the photons’ direction. For positrons the whole ring was turned
+through 180°, so that the photons came in the other way: in one field,
+electrons and positrons circulate in opposite senses. Photons from
+single bremsstrahlung in collisions, <span class="math inline">\(e^+e^-
+\to e^+e^-\gamma\)</span>, go on along the beam into the 150 kg
+lead-glass counter.</em></p>
 <p><strong>VEP-1 and the Princeton-Stanford rings.</strong> G. I.
 Budker’s group began work on colliding electron beams late in 1956.
 VEP-1, two rings 2.7 m round stacked one above the other, for 160 MeV

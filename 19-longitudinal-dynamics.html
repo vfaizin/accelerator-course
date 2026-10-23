@@ -3496,9 +3496,25 @@ about 320 ns for the extraction kicker’s rise.</li>
 <li>The 40 and 80 MHz systems rotate the bunches to about 4 ns to fit
 the SPS’s 200 MHz buckets.</li>
 </ol>
-<p>Each of the six bunches has become twelve. The scheme had to give 14
-per cent more intensity per Booster bunch than the abandoned 8-into-84
-debunching scheme, for the same intensity per LHC bunch.</p>
+<p>Each of the six bunches has become twelve (figure 19.8). The scheme
+had to give 14 per cent more intensity per Booster bunch than the
+abandoned 8-into-84 debunching scheme, for the same intensity per LHC
+bunch.</p>
+<p><a href="figures/19-lhc-train.svg" class="figure"><img
+src="figures/19-lhc-train.svg" loading="lazy"
+alt="Five rows, each one turn of the PS: six bunches on h = 7, 18 on h = 21, 36 on h = 42, 72 on h = 84 with a gap, and the 72 rotated short" /></a></p>
+<p><em>Figure 19.8. The LHC’s 25 ns train made in the PS, schematic:
+each row is one turn of the ring, unrolled, about 2.1 µs. Six bunches
+from the Booster on <span class="math inline">\(h\)</span> = 7 are split
+in three to <span class="math inline">\(h\)</span> = 21, accelerated to
+25 GeV, split in two to <span class="math inline">\(h\)</span> = 42 and
+again to <span class="math inline">\(h\)</span> = 84: 72 bunches 25 ns
+apart, with 12 buckets left empty for the extraction kicker’s rise. Each
+split shares a bunch’s particles and its emittance among its daughters,
+so the bunches are drawn with their area and length shrinking together.
+Last, the 40 and 80 MHz systems rotate them to about 4 ns, drawn three
+times shorter and taller, to fit the SPS’s 200 MHz buckets. The shapes
+are drawn, not tracked.</em></p>
 <p><strong>Batch compression.</strong> Raise the harmonic in small
 steps, from <span class="math inline">\(h_0\)</span> to a slightly
 higher <span class="math inline">\(h_1\)</span> and so on, with the
@@ -3557,7 +3573,23 @@ class="math inline">\(T_0\)</span> = 11.13 µs, <span
 class="math inline">\(V_0\)</span> = 2 kV and <span
 class="math inline">\(T_1\)</span> = 0.91 µs, <span
 class="math inline">\(\Delta\hat{E}\)</span> = 18.2 MeV, <span
-class="math inline">\(\delta = 2.06\times10^{-3}\)</span>.</p>
+class="math inline">\(\delta = 2.06\times10^{-3}\)</span> (figure
+19.9).</p>
+<p><a href="figures/19-barrier.svg" class="figure"><img
+src="figures/19-barrier.svg" loading="lazy"
+alt="The Recycler’s barrier voltage over one turn and the barrier bucket in time and energy, a long flat-topped bucket closed by the two barriers" /></a></p>
+<p><em>Figure 19.9. A barrier bucket in the Recycler, from the numbers
+above. Top: the voltage over one turn of 11.13 µs, a pulse of 2 kV and
+0.91 µs of each sign and nothing between (drawn rectangular; where the
+pulses sit in the turn is a choice). Below transition a particle with
+more energy goes round faster and drifts earlier, into the left barrier,
+which takes energy; one with less drifts later, into the right barrier,
+which gives it. Bottom: the bucket, computed: particles drift at
+constant <span class="math inline">\(\Delta E\)</span> between the
+barriers and turn round inside them, anticlockwise. The edge (red)
+reaches 18.2 MeV, <span class="math inline">\(\delta =
+2.06\times10^{-3}\)</span>, and just crosses each barrier; the black
+orbits start at 13 and 7 MeV and turn round sooner.</em></p>
 <p><strong>Double-harmonic (Landau) cavities.</strong> Add a second
 voltage at <span class="math inline">\(n\)</span> times the RF
 frequency. In the <em>bunch-lengthening</em> mode it flattens the bottom
@@ -3635,7 +3667,7 @@ with stable <span class="math inline">\(\phi_s\)</span> between −90° and
 <p>No open-loop programme makes the RF frequency follow the field to the
 accuracy needed (<a href="15-the-synchrotron.html">chapter 15</a>,
 section 8). Every hadron synchrotron closes loops around the beam
-(Baudrenghien 2011).</p>
+(Baudrenghien 2011); figure 19.10 draws them.</p>
 <ul>
 <li><strong>Frequency programme.</strong> The frequency is computed from
 the measured field (a “B-train” of pulses from a coil in a reference
@@ -3684,6 +3716,22 @@ notes it is not practical when transition must be crossed.</li>
 <p>The PS’s ferrite cavities are themselves tuned by a further loop: the
 bias current in the ferrite sets its permeability and so the cavity’s
 frequency between 2.8 and 10 MHz (Favia et al. 2016).</p>
+<p><a href="figures/19-rf-loops.svg" class="figure"><img
+src="figures/19-rf-loops.svg" loading="lazy"
+alt="Block diagram of the RF loops: B-train and frequency programme, beam phase loop, radial loop or synchronisation loop, RF source, amplifiers and cavities" /></a></p>
+<p><em>Figure 19.10. The loops round a hadron synchrotron’s RF,
+schematic, with the beam drawn as one turn unrolled. The frequency
+programme, from the B-train of a reference magnet, sets the RF
+frequency. The beam phase loop compares the phase of the beam’s RF
+component, from a longitudinal pick-up, with that of the cavities’
+summed voltage, and its error minus <span
+class="math inline">\(\phi_s\)</span> corrects the frequency: this damps
+dipole oscillations. The radial loop trims the frequency slowly to keep
+the beam centred on a radial pick-up, with a gain that changes sign at
+transition; in its place the RF can be locked softly to a reference that
+follows the programme (dashed). The corrections add to the frequency of
+the RF source, which drives the cavities through the power
+amplifiers.</em></p>
 <h3
 id="pre-requisite-continued-fourier-series-and-transforms">Pre-requisite
 (continued): Fourier series and transforms</h3>
@@ -3906,7 +3954,7 @@ drives the oscillation. Above transition a particle with excess energy
 circulates more slowly, so the motion is damped if the impedance is
 larger at the lower sideband: the cavity must be tuned below the RF
 frequency; below transition, above it. The reason, in a picture (Figure
-19.8): a bunch that oscillates spends half of each synchrotron period
+19.11): a bunch that oscillates spends half of each synchrotron period
 with too much energy and half with too little. Above transition, with
 too much energy it goes round more slowly, so its current at the RF
 harmonic is at a frequency a little <em>below</em> <span
@@ -3925,7 +3973,7 @@ zero.</p>
 <p><a href="figures/19-robinson.svg" class="figure"><img
 src="figures/19-robinson.svg" loading="lazy"
 alt="The cavity’s resistance at the two synchrotron sidebands, with the cavity tuned below the RF" /></a></p>
-<p><em>Figure 19.8. Robinson’s argument, not to scale. The cavity’s
+<p><em>Figure 19.11. Robinson’s argument, not to scale. The cavity’s
 resistance (the real part of its impedance) against frequency, for a
 cavity tuned below the RF harmonic <span
 class="math inline">\(h\omega_0\)</span>. A bunch in a dipole
@@ -4032,9 +4080,26 @@ phase error at injection, and a sine (rather than a cosine) means an
 energy error, cured by trimming the frequency. A ridge that pulses wider
 and narrower at twice the synchrotron frequency is a quadrupole
 oscillation: the voltage is mismatched. If it first narrows, the voltage
-is too high; if it first widens, too low. Damerau’s PS mountain range of
-a lead-ion bunch through transition records a profile every three turns,
+is too high; if it first widens, too low. Figure 19.12 shows both,
+tracked for the LHC at injection. Damerau’s PS mountain range of a
+lead-ion bunch through transition records a profile every three turns,
 with an RF period of 102.5 ns.</p>
+<p><a href="figures/19-mountain-range.svg" class="figure"><img
+src="figures/19-mountain-range.svg" loading="lazy"
+alt="Two mountain ranges of 300 turns: a bunch whose centre swings from side to side, and a bunch that narrows and widens" /></a></p>
+<p><em>Figure 19.12. Mountain ranges computed with the map of section 1
+for the LHC at injection: 450 GeV, 8 MV, synchrotron period 177 turns, a
+0.6 eV s bunch from the SPS. A profile is drawn every 6 turns for 300
+turns, later turns higher; the dashed line is the bucket’s centre. (a) A
+bunch matched to 8 MV but injected with an energy error of 100 MeV (an
+assumed <span class="math inline">\(2.2\times10^{-4}\)</span>): its
+centre swings as a sine, by 0.2 ns, later first, because above
+transition a particle with more energy goes round more slowly. (b) A
+bunch matched to 2.5 MV, 1.55 ns long (<span
+class="math inline">\(4\sigma_t\)</span>), injected into 8 MV: the
+voltage is too high, so it first narrows, from 0.385 to 0.273 ns rms,
+then breathes at twice the synchrotron frequency, its peak rising each
+time it is short.</em></p>
 <p><strong>Matching the voltage.</strong> In the absence of loss the
 product of peak current and bunch length is constant, so a quadrupole
 oscillation is seen at once on the peak detector. At LHC injection

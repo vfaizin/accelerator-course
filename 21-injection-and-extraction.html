@@ -1123,15 +1123,15 @@ tune widely are the subject of <a
 href="13-rf-cavities-and-power.html">chapter 13</a>.</p>
 <h3 id="2-the-chain-today">2 The chain today</h3>
 <p><strong>CERN.</strong> Linac4 is 86 m long and accelerates H⁻ ions to
-160 MeV in pulses of 400 µs. It produced its first beams in 2013 and
-became the source of protons for the LHC in 2020, replacing Linac2. The
-ions are stripped at injection into the four superposed rings of the PS
-Booster, which accelerate them to 2 GeV. The PS takes them to 26
-GeV/<span class="math inline">\(c\)</span>, the SPS to 450 GeV/<span
-class="math inline">\(c\)</span>, and the LHC to 6.8 TeV per beam (7 TeV
-by design). CERN quotes the energies of its circular machines as momenta
-in GeV/<span class="math inline">\(c\)</span>, and above a few GeV the
-difference from the total energy is small.</p>
+160 MeV in pulses of 400 µs (figure 21.3). It produced its first beams
+in 2013 and became the source of protons for the LHC in 2020, replacing
+Linac2. The ions are stripped at injection into the four superposed
+rings of the PS Booster, which accelerate them to 2 GeV. The PS takes
+them to 26 GeV/<span class="math inline">\(c\)</span>, the SPS to 450
+GeV/<span class="math inline">\(c\)</span>, and the LHC to 6.8 TeV per
+beam (7 TeV by design). CERN quotes the energies of its circular
+machines as momenta in GeV/<span class="math inline">\(c\)</span>, and
+above a few GeV the difference from the total energy is small.</p>
 <table style="width:100%;">
 <colgroup>
 <col style="width: 16%" />
@@ -1191,6 +1191,16 @@ of the one before: PS = 4 × Booster, SPS = 11.0 × PS, LHC = 27/7 × SPS
 within 0.01 per cent. The ratios make the RF systems easy to
 synchronise, so that bunches from one ring land in the right buckets of
 the next.</p>
+<p><a href="figures/21-chain.svg" class="figure"><img
+src="figures/21-chain.svg" loading="lazy"
+alt="CERN’s chain drawn as a line feeding four rings of growing size, with each ring’s energy and rigidity below" /></a></p>
+<p><em>Figure 21.3. CERN’s chain for the LHC, schematic, sizes not to
+scale. Linac4’s H⁻ ions are stripped at injection into the four
+superposed rings of the PS Booster; the PS and the SPS follow, and two
+transfer lines of about 3 km fill the LHC’s two beams. Below each ring,
+from the table: the energy it delivers, its rigidity in and out, and
+their ratio. No ring spans more than a factor of 17.3 in
+momentum.</em></p>
 <p><strong>Fermilab.</strong> The linac was commissioned in 1970 and
 raised to 400 MeV in 1993; it accelerates H⁻. The Booster, a
 rapid-cycling synchrotron at 15 Hz, takes the stripped protons to 8 GeV;
@@ -1526,7 +1536,7 @@ and enters the septum.</p>
 <p><a href="figures/21-single-turn.svg" class="figure"><img
 src="figures/21-single-turn.svg" loading="lazy"
 alt="Single-turn injection: septum, quarter oscillation, kicker, and the same in phase space" /></a></p>
-<p><em>Figure 21.3. Single-turn injection. (a) The new beam leaves the
+<p><em>Figure 21.4. Single-turn injection. (a) The new beam leaves the
 septum’s field region parallel to the closed orbit, a distance <span
 class="math inline">\(x_s\)</span> outside it, on the far side of the
 thin blade from the stored beam. The quadrupoles of the ring turn it
@@ -1548,7 +1558,7 @@ of 2100) because laminated steel cannot follow nanosecond changes. Take
 Ampère’s law (<a href="F4-electromagnetism.html#12-ampères-law">F4,
 section 12</a>) round a loop that runs through the ferrite and once
 across the gap <span class="math inline">\(g\)</span> (m) of a C-shaped
-core (Figure 21.4). It encloses the current <span
+core (Figure 21.5). It encloses the current <span
 class="math inline">\(I\)</span> (A) of the single-turn conductor once,
 so <span class="math inline">\(\oint \mathbf{B}\cdot d\mathbf{l}/\mu =
 I\)</span>, with <span class="math inline">\(\mu = \mu_0\)</span> in the
@@ -1585,7 +1595,7 @@ quotes 3 kA in 1 µs as typical).</p>
 <p><a href="figures/21-kicker.svg" class="figure"><img
 src="figures/21-kicker.svg" loading="lazy"
 alt="Cross-section of a C-core ferrite kicker with its single-turn conductor" /></a></p>
-<p><em>Figure 21.4. A C-core kicker in cross-section, the beam coming
+<p><em>Figure 21.5. A C-core kicker in cross-section, the beam coming
 out of the page. The single-turn conductor carries <span
 class="math inline">\(I\)</span> into the page at the back of the gap
 and returns outside the core. The dashed loop of Ampère’s law runs
@@ -1641,7 +1651,7 @@ class="math inline">\(\sqrt{L_c/C_c}\)</span>. The field then rises in
 each cell as fast as the switch allows, and the whole magnet is full
 after the wave has crossed it, in <span
 class="math inline">\(n\sqrt{L_cC_c}\)</span>. This is a travelling-wave
-kicker.</p>
+kicker (figure 21.6).</p>
 <p>Worked number: the LHC injection kicker, MKI (L. Ducimetière and
 others, PAC 2003). Each of the four magnets per ring is 2.7 m long, made
 of 33 cells with <span class="math inline">\(L_c = 101\)</span> nH and
@@ -1658,15 +1668,31 @@ class="math inline">\(1.2/1501 = 0.80\)</span> mrad. The specified rise
 time (0.5 to 99.5 per cent) is 0.9 µs, the flat top up to 7.86 µs with
 ripple below ±0.5 per cent, and the fall 3.0 µs. The fill time of 667 ns
 is most of the rise.</p>
+<p><a href="figures/21-tw-kicker.svg" class="figure"><img
+src="figures/21-tw-kicker.svg" loading="lazy"
+alt="Circuit of a pulse-forming network, a thyratron, a kicker magnet built as a chain of cells, and a matched resistor, with the current pulse below" /></a></p>
+<p><em>Figure 21.6. A travelling-wave kicker and its pulse-forming
+network, with the LHC injection kicker’s numbers; circuit schematic,
+four sections and four cells drawn of many. The supply charges the PFN
+to <span class="math inline">\(V_p = 54\)</span> kV through a resistor.
+When the thyratron fires, the PFN drives a wave into the magnet, which
+is itself a line of cells (<span class="math inline">\(L_c =
+101\)</span> nH, <span class="math inline">\(C_c = 4.04\)</span> nF,
+<span class="math inline">\(\sqrt{L_c/C_c} = 5\ \Omega\)</span>) ended
+in a matched 5 Ω resistor; all currents return through the earth rail.
+The magnet sees <span class="math inline">\(V_p/2 = 27\)</span> kV and
+carries 5.4 kA while the line empties. Below, the current (the times not
+to scale): it rises as the wave fills the magnet in 667 ns, stays flat
+for up to 7.86 µs, and falls.</em></p>
 <p><strong>Septa.</strong> A septum magnet has two apertures: one with
 field for the transferred beam, one without for the circulating beam,
-separated by a thin wall that carries the current. Magnetic septa have
-walls of 2 to 20 mm and, with single-turn coils, currents of 5 to 25 kA.
-An electrostatic septum separates the regions with a plane of thin wires
-or foil, typically 100 µm or less, held at ground, with a high-voltage
-electrode one or two centimetres away. A particle of charge <span
-class="math inline">\(q\)</span>, momentum <span
-class="math inline">\(p\)</span> and speed <span
+separated by a thin wall that carries the current (figure 21.7).
+Magnetic septa have walls of 2 to 20 mm and, with single-turn coils,
+currents of 5 to 25 kA. An electrostatic septum separates the regions
+with a plane of thin wires or foil, typically 100 µm or less, held at
+ground, with a high-voltage electrode one or two centimetres away. A
+particle of charge <span class="math inline">\(q\)</span>, momentum
+<span class="math inline">\(p\)</span> and speed <span
 class="math inline">\(v\)</span> crossing a transverse electric field
 <span class="math inline">\(\mathcal{E}\)</span> (V/m) over a length
 <span class="math inline">\(L_E\)</span> (m) spends a time <span
@@ -1694,6 +1720,21 @@ injection septa give 12 mrad, <span class="math inline">\(0.012 \times
 1501 = 18\)</span> T m, in five magnets, and its kickers only 0.8 mrad
 (0.85 mrad in the High-Luminosity LHC design report). Septa give large
 angles slowly; kickers give small angles quickly.</p>
+<p><a href="figures/21-septa.svg" class="figure"><img
+src="figures/21-septa.svg" loading="lazy"
+alt="Cross-sections of a magnetic septum and an electrostatic septum, each with the extracted beam in the field and the circulating beam outside it" /></a></p>
+<p><em>Figure 21.7. The two kinds of septum in cross-section, beams
+going into the page; schematic, not to scale. (a) Magnetic: the thin
+septum conductor carries the current out of the page and the return
+conductor brings it back. Between two opposite currents their fields
+add, here downwards; beyond the septum they cancel, so the circulating
+beam feels nothing. On a positive particle going into the page, <span
+class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span> points left,
+away from the circulating beam. (b) Electrostatic: a plane of thin wires
+at earth (the anode) and a cathode at negative high voltage 1 to 2 cm
+away. The field points from anode to cathode and pushes the extracted
+beam towards the cathode; the circulating beam, on the other side of the
+wires, feels none.</em></p>
 <h3 id="5-injection-errors-and-mismatch">5 Injection errors and
 mismatch</h3>
 <p>Suppose the injected beam arrives with its centre offset in
@@ -1740,7 +1781,7 @@ amplitude-dependent tune gives 1.494 for <span class="math inline">\(a =
 <p><a href="figures/21-filamentation.svg" class="figure"><img
 src="figures/21-filamentation.svg" loading="lazy"
 alt="A beam injected off centre, before and after filamentation, in normalised phase space" /></a></p>
-<p><em>Figure 21.5. Filamentation after an injection error of <span
+<p><em>Figure 21.8. Filamentation after an injection error of <span
 class="math inline">\(a = 2\)</span> beam sizes, with 400 particles
 drawn at random. (a) As injected: a round Gaussian beam of rms emittance
 <span class="math inline">\(\varepsilon\)</span> whose centre sits at
@@ -2207,7 +2248,7 @@ acceptable.</p>
 <p><a href="figures/21-stripping.svg" class="figure"><img
 src="figures/21-stripping.svg" loading="lazy"
 alt="Fractions of H minus, H zero and protons against foil thickness, linear and logarithmic" /></a></p>
-<p><em>Figure 21.6. The three fractions of a 160 MeV H⁻ beam after a
+<p><em>Figure 21.9. The three fractions of a 160 MeV H⁻ beam after a
 carbon foil, computed from the solution above with Goddard’s
 cross-sections. Left: the H⁻ (blue) die away fast; the H⁰ (green) rise,
 peak at 17.2 µg/cm² with 54 per cent of the beam, and fall more slowly;
@@ -2856,7 +2897,7 @@ cent at the Booster).</p>
 <p><a href="figures/21-chicane.svg" class="figure"><img
 src="figures/21-chicane.svg" loading="lazy"
 alt="Plan of H minus injection: four chicane dipoles, the foil, and the dump for H zero and H minus" /></a></p>
-<p><em>Figure 21.7. Charge-exchange injection seen from above, not to
+<p><em>Figure 21.10. Charge-exchange injection seen from above, not to
 scale, angles exaggerated. Four dipoles bump the circulating protons
 (red) out to the foil and back to the orbit. The H⁻ beam (blue) arrives
 at an angle (66 mrad at the PS Booster); having the opposite charge, it
@@ -4002,7 +4043,7 @@ speed turns negative for part of each cycle: the triangle grows again
 and the spill stops. It stays off a little longer, until the triangle
 has shrunk back below the smallest size it had before, because the
 particles between were already extracted; then it bursts. The spill is
-chopped (Figure 21.8). The critical ripple is</p>
+chopped (Figure 21.11). The critical ripple is</p>
 <p><span class="math display">\[
 \delta Q_{\mathrm{crit}} = \frac{\dot Q}{\omega}
 \]</span></p>
@@ -4019,7 +4060,7 @@ its mean. This is the legendary sensitivity of slow extraction.</p>
 <p><a href="figures/21-ripple.svg" class="figure"><img
 src="figures/21-ripple.svg" loading="lazy"
 alt="Spill rate under 50 Hz tune ripple, below and above the critical ripple" /></a></p>
-<p><em>Figure 21.8. The spill rate under a 50 Hz ripple in the tune,
+<p><em>Figure 21.11. The spill rate under a 50 Hz ripple in the tune,
 relative to the rate without ripple. Blue: a ripple of 0.3 of the
 critical value, which modulates the spill between 0.7 and 1.3. Red: 1.5
 times the critical value. The triangle grows again for part of each 20
@@ -4109,9 +4150,9 @@ measured at 450 GeV, is about <span
 class="math inline">\(2\times10^{12}\)</span> protons, 144 kJ, 0.6 per
 cent of the full ring. So the end of every fill, and every fault, is a
 fast extraction that must not fail.</p>
-<p><strong>The LHC dump</strong> (JINST 2008, chapter 10). Fifteen
-kicker magnets (MKD) per ring, each giving 0.428 T m from an 18.5 kA
-pulse at up to 30 kV, deflect the beam horizontally by <span
+<p><strong>The LHC dump</strong> (JINST 2008, chapter 10; figure 21.12).
+Fifteen kicker magnets (MKD) per ring, each giving 0.428 T m from an
+18.5 kA pulse at up to 30 kV, deflect the beam horizontally by <span
 class="math inline">\(15 \times 0.428/23\,349 = 0.275\)</span> mrad. The
 field rises in 3.0 µs and stays flat for at least 90 µs. Fifteen
 Lambertson septa (MSD) then lift the beam 2.4 mrad vertically over the
@@ -4147,6 +4188,20 @@ href="F6-heat-and-probability.html#5-the-gaussian-distribution">the
 Gaussian</a> having peak <span
 class="math inline">\(1/(\sqrt{2\pi}\,\sigma)\)</span> per unit length.
 Exercise 10 works it.)</p>
+<p><a href="figures/21-lhc-dump.svg" class="figure"><img
+src="figures/21-lhc-dump.svg" loading="lazy"
+alt="Plan of the LHC dump: kickers, Lambertson septa, protection absorbers, dilution kickers, the dump line and the graphite absorber, with the swept beam’s e-shaped trace on its face" /></a></p>
+<p><em>Figure 21.12. The LHC beam dump, seen from above; schematic, not
+to scale, angles exaggerated. Fifteen MKD kickers deflect the beam
+horizontally by 0.275 mrad; fifteen Lambertson septa then bend it 2.4
+mrad upwards, out of the page, while the circulating beam passes through
+their field-free hole. Graphite absorbers (TCDQ, TCDS) guard the septa
+and the ring against an asynchronous dump. Ten MKB dilution kickers
+sweep the beam, and at the end of the 975 m line it meets the TDE, a
+graphite cylinder 7.7 m long inside about 900 t of shielding. Inset: the
+“e” the swept bunches trace on the TDE’s face (drawn, not computed), at
+least 0.86 m long, which lowers the peak energy per unit area by about
+220.</em></p>
 <p><strong>Reliability.</strong> The system is designed for a total
 failure no more often than once in <span
 class="math inline">\(10^6\)</span> hours, about once a century. At

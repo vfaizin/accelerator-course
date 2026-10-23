@@ -1077,8 +1077,22 @@ by a laser, distances) and laser trackers (which follow a reflector held
 on the component and measure its position in three dimensions) place
 components in the initial alignment; then smoothing refines the relative
 positions of neighbours, using wire offsets radially (distances measured
-from a stretched wire) and levelling vertically, and is repeated during
-technical stops as the ground moves (FCC study, section 3.5).</p>
+from a stretched wire) and levelling vertically (figure 29.4), and is
+repeated during technical stops as the ground moves (FCC study, section
+3.5).</p>
+<p><a href="figures/29-alignment.svg" class="figure"><img
+src="figures/29-alignment.svg" loading="lazy"
+alt="Magnets on girders on jacks, with targets, a laser tracker and levelling pots joined by water; below, the girders from above beside a stretched wire" /></a></p>
+<p><em>Figure 29.4. How magnets are placed, schematic, not to scale.
+Above, a side view: a quadrupole and a sextupole on a girder about 6 m
+long, which stands on jacks. Targets on the magnets tie their magnetic
+axes to the outside; a laser tracker measures the targets in the
+geodetic frame for the initial alignment; levelling pots joined by water
+compare the girders’ heights against gravity. Below, the same girders
+from above: offsets measured from a stretched wire give their radial
+positions for smoothing (their misplacement exaggerated). The tolerances
+are the FCC study’s, and the independent contributions add in
+quadrature.</em></p>
 <h3 id="4-hardware-commissioning-energy-heat-and-joints">4. Hardware
 commissioning: energy, heat and joints</h3>
 <p>Before any beam, every circuit is powered, every vacuum sector pumped
@@ -1127,7 +1141,19 @@ nΩ. (A quench is the sudden loss of superconductivity in a magnet or
 busbar, which then turns resistive and must have its current removed
 before it burns; <a
 href="17-magnets.html#11-stored-energy-quench-and-protection">chapter
-17</a>.)</p>
+17</a>.) Figure 29.5 shows such a splice.</p>
+<p><a href="figures/29-splice.svg" class="figure"><img
+src="figures/29-splice.svg" loading="lazy"
+alt="A busbar splice between a dipole and a quadrupole, and the splice cut along its length: two cables overlapped and soldered inside copper, the current crossing the solder" /></a></p>
+<p><em>Figure 29.5. A busbar splice, schematic, not to scale. Above: the
+interconnect between a dipole and a quadrupole, where the joint of 19
+September 2008 failed; the busbar carries the circuit’s full current
+from one magnet to the next. Below: the splice cut along its length. The
+two superconducting cables overlap and are soldered together inside
+copper, the stabiliser. The cables have no resistance, so the current
+crosses the solder from one to the other, and the solder contact is the
+joint’s resistance <span class="math inline">\(R\)</span>, dissipating
+<span class="math inline">\(I^2R\)</span>.</em></p>
 <p><strong>Cool-down.</strong> Cooling a superconducting ring takes
 weeks per sector, because almost all the heat to be removed lies above
 80 K and is taken out with liquid nitrogen (<a
@@ -1197,8 +1223,24 @@ class="math inline">\(\tau_U = 0.61\)</span> s. The measurement is a
 curve of <span class="math inline">\(Q_0\)</span> against gradient,
 ended by a quench (a spot of the niobium wall going normal-conducting)
 or by field emission (electrons pulled out of the wall by the strong
-surface field) (<a href="13-rf-cavities-and-power.html">chapter
-13</a>).</p>
+surface field) (<a href="13-rf-cavities-and-power.html">chapter 13</a>).
+Figure 29.6 shows the set-up and the decay.</p>
+<p><a href="figures/29-vertical-test.svg" class="figure"><img
+src="figures/29-vertical-test.svg" loading="lazy"
+alt="A nine-cell cavity hanging in superfluid helium in a cryostat, with RF source, coupler and pickup probe, and the stored energy decaying after the drive is switched off" /></a></p>
+<p><em>Figure 29.6. A cavity in a vertical test, schematic. Left: the
+bare niobium cavity, drawn as the nine-cell TESLA shape, hangs in
+superfluid helium at 2 K. Power enters through an input antenna; a
+directional coupler measures the forward and reflected power, and a
+pickup probe samples the field inside. Right: when the drive is switched
+off the stored energy, and with it the probe’s power, decays as <span
+class="math inline">\(e^{-t/\tau_U}\)</span>, computed for the example
+above: <span class="math inline">\(Q_0 = 10^{10}\)</span> critically
+coupled, so <span class="math inline">\(Q_L = 5\times10^9\)</span> and
+<span class="math inline">\(\tau_U = Q_L/\omega_{RF} = 0.61\)</span> s.
+The reflected power gives <span
+class="math inline">\(\beta_{cp}\)</span>, and then <span
+class="math inline">\(Q_0 = (1 + \beta_{cp})Q_L\)</span>.</em></p>
 <h3 id="5-beam-commissioning-threading-the-first-turn">5. Beam
 commissioning: threading the first turn</h3>
 <p><strong>The trajectory response.</strong> Before a beam circulates,
@@ -1283,7 +1325,7 @@ lose the beam within a cell or two.</p>
 <p><a href="figures/29-threading.svg" class="figure"><img
 src="figures/29-threading.svg" loading="lazy"
 alt="The trajectory after one corrector kick, seen at the monitors" /></a></p>
-<p><em>Figure 29.4. One corrector kick of 80.8 µrad seen on the first
+<p><em>Figure 29.7. One corrector kick of 80.8 µrad seen on the first
 pass, computed from <span class="math inline">\(x_j =
 \sqrt{\beta_{x,i}\beta_{x,j}}\sin(\psi_j - \psi_i)\,\theta_i\)</span>
 for the model ring of chapter 18 (90.6° of phase per cell). Red:
@@ -1557,7 +1599,7 @@ beam stays coherent that long.</p>
 <p><a href="figures/29-tune-precision.svg" class="figure"><img
 src="figures/29-tune-precision.svg" loading="lazy"
 alt="The rms tune error against the number of turns, for the bare peak and the noise limit" /></a></p>
-<p><em>Figure 29.5. How well a tune can be read from <span
+<p><em>Figure 29.8. How well a tune can be read from <span
 class="math inline">\(N\)</span> turns, computed from the two formulas
 of this section. Black: taking the peak bin of the spectrum, rms <span
 class="math inline">\(1/(N\sqrt{12})\)</span>, falling as <span
@@ -1687,11 +1729,27 @@ easily seen. Repeat at several trims, plot the tune against <span
 class="math inline">\(\delta\)</span>, and the slope of the best
 straight line (<a
 href="08-seeing-the-beam.html#pre-requisite-least-squares-fitting">chapter
-8</a>) is <span class="math inline">\(Q&#39;\)</span>. Measurements of
-the same kind, of RF frequency against orbit, also give the beam’s
-momentum; at the LHC’s first beam it was found to be 450.5 GeV/<span
-class="math inline">\(c\)</span> within 0.2 GeV/<span
+8</a>) is <span class="math inline">\(Q&#39;\)</span> (figure 29.9).
+Measurements of the same kind, of RF frequency against orbit, also give
+the beam’s momentum; at the LHC’s first beam it was found to be 450.5
+GeV/<span class="math inline">\(c\)</span> within 0.2 GeV/<span
 class="math inline">\(c\)</span> (Wenninger 2009).</p>
+<p><a href="figures/29-chromaticity.svg" class="figure"><img
+src="figures/29-chromaticity.svg" loading="lazy"
+alt="Tune change against momentum offset for RF trims from minus 150 to plus 150 Hz: points on a straight line of slope 2" /></a></p>
+<p><em>Figure 29.9. Measuring chromaticity, computed for the worked
+number above: the LHC at 450 GeV, <span class="math inline">\(f_{RF} =
+400.789\)</span> MHz, <span class="math inline">\(\eta =
+3.18\times10^{-4}\)</span> and <span class="math inline">\(Q&#39; =
+2\)</span>. Each RF trim, from <span class="math inline">\(-150\)</span>
+to <span class="math inline">\(+150\)</span> Hz in steps of 50 Hz, moves
+the momentum by <span class="math inline">\(\delta = -\Delta
+f_{RF}/(\eta f_{RF})\)</span> and the tune by <span
+class="math inline">\(Q&#39;\delta\)</span>; a raised frequency gives a
+negative <span class="math inline">\(\delta\)</span>. The points here
+lie exactly on the line; measured ones scatter about it, and the slope
+of the best straight line is <span
+class="math inline">\(Q&#39;\)</span>.</em></p>
 <h3
 id="pre-requisite-continued-counting-statistics-poisson">Pre-requisite
 (continued): Counting statistics (Poisson)</h3>
@@ -1810,7 +1868,7 @@ h.</p>
 <p><a href="figures/29-survival.svg" class="figure"><img
 src="figures/29-survival.svg" loading="lazy"
 alt="The chance that a fill runs on without a fault, against time" /></a></p>
-<p><em>Figure 29.6. The survival law <span class="math inline">\(S(t) =
+<p><em>Figure 29.10. The survival law <span class="math inline">\(S(t) =
 e^{-t/M_{tot}}\)</span> for <span class="math inline">\(M_{tot} =
 10\)</span> h (red) and 20 h (blue), computed from the formula. A fill
 planned for 7.5 h reaches its end with probability 0.47 or 0.69. The
@@ -2294,7 +2352,7 @@ such as FLUKA.</p>
 <p><a href="figures/29-shielding.svg" class="figure"><img
 src="figures/29-shielding.svg" loading="lazy"
 alt="The fraction of the dose let through a concrete wall, against its thickness" /></a></p>
-<p><em>Figure 29.7. The shielding law <span
+<p><em>Figure 29.11. The shielding law <span
 class="math inline">\(10^{-d/\text{TVL}}\)</span> in ordinary concrete,
 computed for the two tenth-value layers of this chapter: cobalt-60 gamma
 rays (blue, broad-beam TVL 23 cm) and the neutrons from GeV protons
@@ -2364,7 +2422,7 @@ thousand.</p>
 <p><a href="figures/29-life.svg" class="figure"><img
 src="figures/29-life.svg" loading="lazy"
 alt="The stages in the life of an accelerator, with the LHC’s dates" /></a></p>
-<p><em>Figure 29.8. The life of a machine, in the order of the
+<p><em>Figure 29.12. The life of a machine, in the order of the
 paragraphs below, with the LHC’s dates from this chapter in red. The
 first row decides what to build, the second builds it, the third runs
 it; upgrades send a machine back into operation, sometimes more than
@@ -2893,7 +2951,7 @@ short pieces of constant cross-section (<em>Handbook</em>, section
 <p><a href="figures/29-iota-insert.svg" class="figure"><img
 src="figures/29-iota-insert.svg" loading="lazy"
 alt="The betatron function through a nonlinear insert, and how the magnet must taper" /></a></p>
-<p><em>Figure 29.9. The insert of the example, 1.8 m long with 0.3 of a
+<p><em>Figure 29.13. The insert of the example, 1.8 m long with 0.3 of a
 turn of phase advance, computed from <span
 class="math inline">\(\beta(s) = \beta^* + s^2/\beta^*\)</span> with
 <span class="math inline">\(\beta^* = 0.654\)</span> m. Black: <span

@@ -2126,23 +2126,35 @@ with <span class="math inline">\(K = 0.934\times0.24\times3.2 =
 0.717\)</span>; with <span class="math inline">\(\gamma = 1 + 24/0.511 =
 47.97\)</span> this gives 10.5 µm.</p>
 <p><strong>The oscillator.</strong> Put the undulator between two
-mirrors. Light from one bunch makes a round trip and meets the next
-bunch, so the round-trip time must equal the bunch spacing. Deacon,
-Elias, Madey, Ramian, Schwettman and Smith (1977) fired one bunch every
-84.6 ns, so the mirrors were <span class="math inline">\(c\times84.6\
-\text{ns}/2 = 12.7\)</span> m apart. At 43.5 MeV the oscillator ran
-above threshold at 3.417 µm, with 0.36 W average output, about 7 kW
-peak, 1.5 per cent mirror transmission and 500 kW inside the cavity.
-(The resonance formula gives 3.27 µm at 43.5 MeV; the measured line
-needs 42.5 MeV, 2.2 per cent less, within the 5 per cent calibration
-error the authors quote for their spectrometer.) Gain must exceed the
-round-trip loss, so the power grows pass by pass until saturation. An
-electron can lose energy only until it falls through the line, which is
-about <span class="math inline">\(1/(2N_u)\)</span> wide in <span
+mirrors (figure 26.6). Light from one bunch makes a round trip and meets
+the next bunch, so the round-trip time must equal the bunch spacing.
+Deacon, Elias, Madey, Ramian, Schwettman and Smith (1977) fired one
+bunch every 84.6 ns, so the mirrors were <span
+class="math inline">\(c\times84.6\ \text{ns}/2 = 12.7\)</span> m apart.
+At 43.5 MeV the oscillator ran above threshold at 3.417 µm, with 0.36 W
+average output, about 7 kW peak, 1.5 per cent mirror transmission and
+500 kW inside the cavity. (The resonance formula gives 3.27 µm at 43.5
+MeV; the measured line needs 42.5 MeV, 2.2 per cent less, within the 5
+per cent calibration error the authors quote for their spectrometer.)
+Gain must exceed the round-trip loss, so the power grows pass by pass
+until saturation. An electron can lose energy only until it falls
+through the line, which is about <span
+class="math inline">\(1/(2N_u)\)</span> wide in <span
 class="math inline">\(\delta\)</span>, so the efficiency of a simple
 oscillator is of order <span class="math inline">\(1/(2N_u)\)</span>:
 0.3 per cent at Stanford. Oscillators remain the right choice in the
 infrared, where good mirrors exist and the gain is enough.</p>
+<p><a href="figures/26-oscillator.svg" class="figure"><img
+src="figures/26-oscillator.svg" loading="lazy"
+alt="The first FEL oscillator: a helical undulator between two mirrors 12.7 m apart, electron bunches bent in and out of the optical cavity, and light leaving through one mirror" /></a></p>
+<p><em>Figure 26.6. The first FEL oscillator, Stanford 1977 (schematic,
+not to scale). A superconducting helical undulator, 5.2 m long with a
+3.2 cm period, sits between two mirrors 12.7 m apart; bending magnets
+bring the 43.5 MeV bunches in and take them out to the dump. One bunch
+comes every 84.6 ns, the time light takes to go from one mirror to the
+other and back, so each pulse of light meets a fresh bunch on every pass
+and grows until it saturates. 1.5 per cent leaves through the output
+mirror, at 3.417 µm.</em></p>
 <h3
 id="pre-requisite-continued-ordinary-differential-equations-linear-constant-and-varying-coefficients">Pre-requisite
 (continued): Ordinary differential equations (linear, constant and
@@ -2296,7 +2308,7 @@ fall below its input.</p>
 <p><a href="figures/26-lethargy.svg" class="figure"><img
 src="figures/26-lethargy.svg" loading="lazy"
 alt="A plot on a logarithmic scale of the light power over its input against as from 0 to 6: the full three-mode solution stays flat near one up to as about 1.5, then rises along the straight line of the growing mode, which starts at one ninth" /></a></p>
-<p><em>Figure 26.6. A seeded high-gain FEL, computed from <span
+<p><em>Figure 26.7. A seeded high-gain FEL, computed from <span
 class="math inline">\(P/P_0 = |\tfrac13\sum_je^{\mu_js}|^2\)</span> with
 the three roots <span class="math inline">\(\mu_j\)</span> (red),
 against the growing mode alone, <span
@@ -2551,7 +2563,7 @@ L_G = \frac{1}{2\sqrt3\,k_u\rho_F} =
 <p>This is the one-dimensional power gain length. A seed field entering
 with no bunching excites all three roots equally, so the growing mode
 carries a third of the amplitude, a ninth of the power: the output first
-lingers, then rises exponentially (the “lethargy” region, Figure 26.6).
+lingers, then rises exponentially (the “lethargy” region, Figure 26.7).
 The physics is a loop with three links, field to energy modulation,
 energy modulation to bunching, bunching to field, each a derivative;
 three derivatives in a loop give the cube root of <span
@@ -2972,7 +2984,7 @@ class="math inline">\(\theta_B\)</span> and so a shorter path.)</p>
 <p><a href="figures/26-chicane.svg" class="figure"><img
 src="figures/26-chicane.svg" loading="lazy"
 alt="Top: a four-dipole chicane bending the beam down and back up, with a low-energy path bending more and lying further out than a high-energy path. Bottom: the bunch in the plane of position and energy deviation, before the chicane as a long tilted ellipse and after as a short, steeper one" /></a></p>
-<p><em>Figure 26.7. Bunch compression in LCLS BC1. Top, not to scale:
+<p><em>Figure 26.8. Bunch compression in LCLS BC1. Top, not to scale:
 the four dipoles of the chicane; an electron with less energy (blue)
 bends more and takes the longer path, so it falls back; one with more
 energy (red) takes the shorter path and moves forward. Bottom, from the
@@ -3054,9 +3066,20 @@ of phase changes <span class="math inline">\(C\)</span> a lot. The
 X-band section’s other job is to cancel the curvature of the S-band
 sine, which would otherwise compress the bunch into a spike with a tail.
 BC2 at 4.3 GeV (<span class="math inline">\(R_{56} = -24.7\)</span> mm)
-compresses another 12 times to 3 kA, and L3 runs on crest, where the
-bunch’s own longitudinal wakefield in the long linac takes out the
-remaining chirp (<a href="22-intensity-limits.html">chapter 22</a>).</p>
+compresses another 12 times to 3 kA (figure 26.9 shows the whole
+machine), and L3 runs on crest, where the bunch’s own longitudinal
+wakefield in the long linac takes out the remaining chirp (<a
+href="22-intensity-limits.html">chapter 22</a>).</p>
+<p><a href="figures/26-lcls.svg" class="figure"><img
+src="figures/26-lcls.svg" loading="lazy"
+alt="The LCLS from gun to dump on two folded lines: gun, injector linac, laser heater, TCAV0, L1S and L1X, BC1, L2, BC2, L3, the undulator, the XTCAV and the dump, with energies and peak currents" /></a></p>
+<p><em>Figure 26.9. The LCLS from gun to dump at 250 pC, folded onto two
+lines (schematic, not to scale). The injector gives 33 A at 135 MeV,
+where the laser heater and the deflecting cavity TCAV0 sit; L1S and L1X
+put on the chirp; BC1 at 250 MeV raises the peak current to 250 A, BC2
+at 4.3 GeV to 3 kA; L3, on crest, takes the beam to 13.64 GeV; 33
+undulator segments in 132 m make 1.5 Å light, which goes straight on
+while the electrons pass the XTCAV and are bent into the dump.</em></p>
 <h3
 id="10-coherent-synchrotron-radiation-the-microbunching-instability-and-the-laser-heater">10.
 Coherent synchrotron radiation, the microbunching instability and the
@@ -3114,16 +3137,30 @@ e^{-(kR_{56}\sigma_\delta)^2/2} .
 MeV, the natural 3 keV spread leaves a 20 µm ripple at 0.99 of itself;
 20 keV reduces it to 0.52, and a 5 µm ripple to <span
 class="math inline">\(3\times10^{-5}\)</span>. <strong>The laser
-heater</strong> adds that spread on purpose, early and cleanly: a 758 nm
-laser co-propagating with the beam in a short undulator in the middle of
-a small chicane at 135 MeV imposes an energy modulation at 758 nm, and
-the second half of the chicane smears it into a spread. LCLS runs it at
-about 6 µJ for 20 keV rms; after the total compression of 90 this is 1.8
-MeV, <span class="math inline">\(1.3\times10^{-4}\)</span> at 13.64 GeV,
-safely below <span class="math inline">\(\rho_F\)</span>. With the
-heater off, the FEL power in the exponential regime fell by an order of
-magnitude and the gain length grew by about 1 m (Huang and colleagues
-2010).</p>
+heater</strong> (figure 26.10) adds that spread on purpose, early and
+cleanly: a 758 nm laser co-propagating with the beam in a short
+undulator in the middle of a small chicane at 135 MeV imposes an energy
+modulation at 758 nm, and the second half of the chicane smears it into
+a spread. LCLS runs it at about 6 µJ for 20 keV rms; after the total
+compression of 90 this is 1.8 MeV, <span
+class="math inline">\(1.3\times10^{-4}\)</span> at 13.64 GeV, safely
+below <span class="math inline">\(\rho_F\)</span>. With the heater off,
+the FEL power in the exponential regime fell by an order of magnitude
+and the gain length grew by about 1 m (Huang and colleagues 2010).</p>
+<p><a href="figures/26-heater.svg" class="figure"><img
+src="figures/26-heater.svg" loading="lazy"
+alt="The laser heater: a small chicane with a short undulator in its middle where a laser travels with the beam, and the beam’s energy against position, first modulated as a sine and then scrambled into a spread" /></a></p>
+<p><em>Figure 26.10. The laser heater. Top (schematic, not to scale): a
+small chicane at 135 MeV with a short undulator in its middle, where a
+758 nm laser travels with the beam. Bottom, computed for 700 sample
+electrons: (a) after the undulator, the energy is modulated at the
+laser’s wavelength, 20 keV rms on the natural 3 keV; (b) after the
+second half of the chicane each electron has moved along the bunch in
+proportion to its energy change, by several wavelengths (with an
+illustrative <span class="math inline">\(R_{56}\)</span>, not the LCLS
+value), and the modulation has become a spread of 20 keV rms with no
+order left at short wavelengths. No electron’s energy changed in the
+chicane.</em></p>
 <h3 id="11-seeding-and-short-pulses">11. Seeding and short pulses</h3>
 <p>SASE’s spikes and its wavelength jitter are a price; seeding removes
 them by starting the FEL from a clean field or a clean bunching.</p>
@@ -3134,7 +3171,7 @@ class="math inline">\(\mathcal{M}\sigma_E\)</span>, <span
 class="math inline">\(\mathcal{M}\)</span> times the uncorrelated rms
 energy spread <span class="math inline">\(\sigma_E = \sigma_\delta
 E\)</span>. A chicane with <span class="math inline">\(R_{56}\)</span>
-follows. Write <span class="math inline">\(\mathcal{D} =
+follows (figure 26.11a). Write <span class="math inline">\(\mathcal{D} =
 k_s|R_{56}|\sigma_\delta\)</span>. After the chicane, the bunching at
 harmonic <span class="math inline">\(n_h\)</span> is <span
 class="math inline">\(b_{n_h} = \langle e^{-in_hk_sz_f}\rangle\)</span>;
@@ -3180,9 +3217,23 @@ laser. Colleagues at DESY proposed letting the first half of the
 undulator lase by SASE, passing the light through a diamond crystal
 whose Bragg reflection leaves a narrow line in the forward beam,
 delaying the electrons in a chicane to wash out their bunching, and
-amplifying that line in the second half. LCLS demonstrated it in 2012:
-0.4 to 0.5 eV bandwidth at 8 to 9 keV, 40 to 50 times narrower than SASE
-(Amann and colleagues).</p>
+amplifying that line in the second half (figure 26.11b). LCLS
+demonstrated it in 2012: 0.4 to 0.5 eV bandwidth at 8 to 9 keV, 40 to 50
+times narrower than SASE (Amann and colleagues).</p>
+<p><a href="figures/26-seeding.svg" class="figure"><img
+src="figures/26-seeding.svg" loading="lazy"
+alt="Two ways to seed an FEL: high-gain harmonic generation, with a seed laser, modulator, chicane and radiator; and self-seeding, with a SASE undulator, a diamond crystal and chicane, and a second undulator, with a spiky and a single-line spectrum" /></a></p>
+<p><em>Figure 26.11. Two ways to seed an FEL (schematic, not to scale).
+(a) High-gain harmonic generation: a seed laser modulates the electrons’
+energy in a short modulator, a chicane turns the modulation into
+bunching with harmonics, and a radiator resonant at <span
+class="math inline">\(\lambda_s/n_h\)</span> amplifies the <span
+class="math inline">\(n_h\)</span>th. (b) Self-seeding: the first part
+of the undulator lases by SASE, a spiky spectrum; a diamond crystal
+leaves a narrow line in the forward light while a chicane delays the
+electrons and washes out their bunching; the second part amplifies the
+line, 0.4 to 0.5 eV wide at 8 to 9 keV at LCLS. The spectra are drawn,
+not computed.</em></p>
 <p><strong>Attosecond pulses.</strong> A pulse shorter than a
 cooperation length holds a single spike. In 2019 a team at LCLS reported
 isolated soft X-ray attosecond pulses with peak power above 100 GW
@@ -3432,7 +3483,7 @@ the dump at about the injection energy.</p>
 <p><a href="figures/26-erl.svg" class="figure"><img
 src="figures/26-erl.svg" loading="lazy"
 alt="Left: an energy recovery linac, an injector feeding a linac, a return loop carrying the beam through an FEL undulator and back into the linac, and a dump. Right: one RF cycle of the cavity voltage with the accelerated bunch on the crest and the returning bunch half a period later in the trough" /></a></p>
-<p><em>Figure 26.8. An energy recovery linac. Left, not to scale:
+<p><em>Figure 26.12. An energy recovery linac. Left, not to scale:
 bunches from the injector (6 MeV in the CBETA-like example below) are
 accelerated in the linac (red), pass the FEL in the return loop, and
 come back through the same cavities (blue), decelerated, to the dump.
@@ -3638,9 +3689,9 @@ slides). With self-seeding, one line stands above a pedestal of
 SASE.</p>
 <p><strong>Bunch length with a transverse deflecting cavity.</strong> An
 RF structure in a dipole mode gives each electron a sideways kick
-proportional to its arrival time, like a streak camera. With deflecting
-voltage <span class="math inline">\(V_\perp\)</span>, an electron at
-<span class="math inline">\(z\)</span> gets <span
+proportional to its arrival time, like a streak camera (figure 26.13).
+With deflecting voltage <span class="math inline">\(V_\perp\)</span>, an
+electron at <span class="math inline">\(z\)</span> gets <span
 class="math inline">\(y&#39; = (eV_\perp/E)\sin(k_{RF}z) \approx
 (eV_\perp k_{RF}/E)z\)</span>. After a phase advance <span
 class="math inline">\(\Delta\psi\)</span> to a screen, <span
@@ -3668,6 +3719,18 @@ where the FEL took energy: the lasing footprint, which gives the X-ray
 pulse’s length and shape shot by shot. LCLS also has a deflector in the
 injector (TCAV0) to measure the bunch at 135 MeV (0.65 mm rms at 250 pC;
 Emma, table 1) and to see the laser heater’s effect.</p>
+<p><a href="figures/26-xtcav.svg" class="figure"><img
+src="figures/26-xtcav.svg" loading="lazy"
+alt="Measuring the bunch with a transverse deflecting cavity: the deflector fans the bunch out with head up and tail down, a dipole bends it by energy, and the screen shows time against energy, with lasing off and lasing on" /></a></p>
+<p><em>Figure 26.13. A transverse deflecting cavity used as a streak
+camera, after the LCLS XTCAV (schematic, not to scale). Two 1 m X-band
+structures give a 45 MV kick that is zero at the bunch’s centre and
+grows along it, so head and tail go opposite ways; a dipole then bends
+across, by energy. The screen shows time against energy, the
+longitudinal phase space. With lasing off the band is smooth; with
+lasing on, the slices that lased have lost energy and move aside, which
+shows the X-ray pulse’s length and shape shot by shot. The images are
+drawn, not measured.</em></p>
 <p><strong>Beam-based alignment of the undulator.</strong> The beam must
 be straight to a few micrometres over 100 m: an angle of <span
 class="math inline">\(\theta_e\)</span> shifts the resonance by <span

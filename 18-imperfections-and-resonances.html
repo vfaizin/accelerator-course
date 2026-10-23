@@ -3205,7 +3205,28 @@ through the model ring with these sextupoles gave chromaticities of
 23{,}349\)</span> T m) the integrated sextupole gradients are 293 T/m
 and <span class="math inline">\(-615\)</span> T/m per cell. The
 defocusing family is twice as strong because the dispersion at the
-defocusing quadrupoles is half as large.</p>
+defocusing quadrupoles is half as large. Figure 18.6 draws one cell of
+the model ring with its sextupoles, monitors and correctors, and its
+betatron functions and dispersion.</p>
+<p><a href="figures/18-cell.svg" class="figure"><img
+src="figures/18-cell.svg" loading="lazy"
+alt="One FODO cell of the model ring: quadrupoles, dipoles, sextupoles, monitors and a corrector, above its beta functions and dispersion" /></a></p>
+<p><em>Figure 18.6. One cell of the model ring, 106.9 m from the middle
+of one focusing quadrupole to the next. Top, schematic (positions along
+the cell to scale, lengths of the magnets not): QF and QD, three dipoles
+in each half cell, and beside the quadrupoles the chromaticity
+sextupoles SF and SD, a beam position monitor at each, and a horizontal
+corrector at each QF. Bottom, computed with the thin-lens matrices:
+<span class="math inline">\(\beta_x\)</span> is 182.9 m at QF and 30.9 m
+at QD, <span class="math inline">\(\beta_y\)</span> the reverse, and the
+dispersion <span class="math inline">\(D_x\)</span>, with the bending
+spread evenly along the cell, is 2.19 m at QF and 1.04 m at QD. SF sits
+where <span class="math inline">\(\beta_x\)</span> and <span
+class="math inline">\(D_x\)</span> are both large and acts mainly on
+<span class="math inline">\(Q_x&#39;\)</span>; SD sits where <span
+class="math inline">\(\beta_y\)</span> is large and acts mainly on <span
+class="math inline">\(Q_y&#39;\)</span>, but with half the dispersion,
+which is why it must be twice as strong.</em></p>
 <h3
 id="pre-requisite-continued-lagrangian-and-hamiltonian-mechanics-the-charged-particle-hamiltonian">Pre-requisite
 (continued): Lagrangian and Hamiltonian mechanics, the charged-particle
@@ -3727,7 +3748,7 @@ separatrices bow.</p>
 <p><a href="figures/18-kobayashi.svg" class="figure"><img
 src="figures/18-kobayashi.svg" loading="lazy"
 alt="Tracked orbits of a one-sextupole ring near the third-integer resonance, with Kobayashi’s triangle" /></a></p>
-<p><em>Figure 18.6. The third-integer resonance seen by tracking: one
+<p><em>Figure 18.7. The third-integer resonance seen by tracking: one
 thin sextupole and a rotation per turn (Hénon’s map of section 11), in
 units with <span class="math inline">\(S = 1\)</span>, at <span
 class="math inline">\(Q_x = 0.33\)</span>, so <span
@@ -3796,7 +3817,7 @@ third-integer (order 3). A sextupole drives order 3 directly and order 4
 in second order; an octupole drives order 4.</p>
 <p><strong>The tune diagram.</strong> Draw the lines <span
 class="math inline">\(mQ_x + nQ_y = p\)</span> in the square of
-fractional tunes, 0 to 1 in each direction (figure 18.7). Counted here
+fractional tunes, 0 to 1 in each direction (figure 18.8). Counted here
 (including lines along the edges, and lines such as <span
 class="math inline">\(Q_x + Q_y = 0\)</span> that touch the square only
 at a corner): 4 lines of order 1, 12 up to order 2, 32 up to order 3, 60
@@ -3824,7 +3845,7 @@ resonances”, are used for delicate measurements.</p>
 <p><a href="figures/18-tune-diagram.svg" class="figure"><img
 src="figures/18-tune-diagram.svg" loading="lazy"
 alt="The tune diagram to fourth order, with the LHC’s working points" /></a></p>
-<p><em>Figure 18.7. The tune diagram: every resonance line <span
+<p><em>Figure 18.8. The tune diagram: every resonance line <span
 class="math inline">\(mQ_x + nQ_y = p\)</span> up to order 4 in the
 square of fractional tunes, 60 lines in all, drawn heavier for lower
 order. Left: the whole square. Right: the region from 0.25 to 0.35
@@ -4847,7 +4868,19 @@ and others 2017); LEP used the modulation to find BPM offsets (Wenninger
 2018). In the model ring a 1 per cent modulation of a focusing
 quadrupole with the beam 0.1 mm off-centre moves the orbit by 3 µm at
 the other focusing quadrupoles, which a BPM averaged over many turns can
-see.</p>
+see. Figure 18.9 draws the two steps.</p>
+<p><a href="figures/18-bba.svg" class="figure"><img
+src="figures/18-bba.svg" loading="lazy"
+alt="Beam-based alignment: varying a quadrupole moves the orbit when the beam is off its centre, and moves nothing once a bump steers the beam through it" /></a></p>
+<p><em>Figure 18.9. Beam-based alignment, schematic, with the offsets
+hugely enlarged. (a) The beam passes the quadrupole Q a distance <span
+class="math inline">\(\Delta\)</span> from its magnetic axis; changing
+its strength by <span class="math inline">\(\delta(kL)\)</span> adds a
+kick <span class="math inline">\(\delta(kL)\,\Delta\)</span>, and the
+orbit moves (dashed), all round the ring. (b) A bump of three correctors
+moves the orbit only between C1 and C3, and is steered until the beam
+passes through Q’s axis. Now varying Q moves nothing, and the BPM close
+beside it reads its own offset from the quadrupole’s axis.</em></p>
 <p><strong>Fitting the model to the response (LOCO).</strong> The
 response matrix contains far more than the orbit. Each element of <span
 class="math inline">\(R\)</span> depends on the betatron functions and
@@ -5155,7 +5188,22 @@ LEP), tilts the spins away from vertical turn after turn and destroys
 the polarisation. Sweep the frequency, find the depolarisation, and the
 energy follows from a constant of nature. LEP measured it this way from
 1991, to about <span class="math inline">\(2\times10^{-5}\)</span>, or
-0.9 MeV per beam at the Z.</p>
+0.9 MeV per beam at the Z (figure 18.10).</p>
+<p><a href="figures/18-depolarisation.svg" class="figure"><img
+src="figures/18-depolarisation.svg" loading="lazy"
+alt="Resonant depolarisation: a ring of polarised electrons, a depolariser driven by a swept generator, and the polarisation dropping at one frequency" /></a></p>
+<p><em>Figure 18.10. Resonant depolarisation, schematic. Top: the ring
+in perspective, so that vertical is up. The electrons’ spins line up
+with the vertical guide field and precess about it <span
+class="math inline">\(\nu = E/440.65\)</span> MeV times a turn; a weak
+horizontal field from the depolariser, driven by a swept frequency
+generator, tilts them away from vertical turn after turn when its
+frequency matches the fractional spin tune. Bottom: the polarisation
+during a sweep, drawn, not measured. At 45.6 GeV, <span
+class="math inline">\(\nu = 103.48\)</span> and the depolarisation falls
+at <span class="math inline">\(0.4835 \times 11\,245.5\)</span> Hz =
+5437 Hz; the frequency moves by 25.5 Hz for each MeV of beam energy, so
+0.9 MeV is about 23 Hz.</em></p>
 <p>The calibrations of 1991 scattered more than they should, and the
 scatter correlated with the local gravity changes of the tides. On 11
 November 1992 a dedicated experiment measured the beam energy for 24
@@ -5355,7 +5403,23 @@ Group’s 1999 account). In a proton ring above transition the target is a
 small positive chromaticity, 2 to 10 units; below transition, slightly
 negative. Failure signature: a tune that moves the wrong way with
 frequency means the chromaticity has the wrong sign, and above
-transition it shows as a head-tail instability.</p>
+transition it shows as a head-tail instability. Figure 18.11 draws the
+lines for LEP’s numbers.</p>
+<p><a href="figures/18-rf-chroma.svg" class="figure"><img
+src="figures/18-rf-chroma.svg" loading="lazy"
+alt="The tune change against the RF frequency for chromaticities from -17 to +30, all crossing at the central frequency" /></a></p>
+<p><em>Figure 18.11. Chromaticity measured with the RF frequency,
+computed for LEP’s <span class="math inline">\(\alpha_c =
+1.86\times10^{-4}\)</span> and 352.2 MHz: the change of tune, <span
+class="math inline">\(Q&#39;\delta\)</span> with <span
+class="math inline">\(\delta = -\Delta f/(\eta f_{RF})\)</span>, over a
+sweep of 125 Hz, for chromaticities from <span
+class="math inline">\(-17\)</span> to <span
+class="math inline">\(+30\)</span>. Each line’s slope gives its
+chromaticity, and all of them cross at the central frequency, where the
+beam passes through the sextupoles on average. The lines are computed
+from the formula; a real measurement adds the scatter of the tune
+readings.</em></p>
 <p><strong>5. One misaligned quadrupole.</strong> Suppose a single
 quadrupole in the model ring is 0.5 mm off. It kicks the beam by <span
 class="math inline">\(kL\Delta = 13.3\)</span> µrad. The difference
@@ -5367,7 +5431,21 @@ locates the culprit to within a cell; changing that quadrupole’s
 strength and watching the orbit move confirms it, and the offset follows
 from beam-based alignment. Several misaligned quadrupoles with similar
 phases look like one; the fit then gives an equivalent kick, and the
-survey team is asked to check the neighbourhood.</p>
+survey team is asked to check the neighbourhood. Figure 18.12 draws the
+difference orbit as the BPMs would see it.</p>
+<p><a href="figures/18-one-quad.svg" class="figure"><img
+src="figures/18-one-quad.svg" loading="lazy"
+alt="The difference orbit from one misaligned quadrupole at the BPMs within sixteen cells of it, with a cusp at the culprit" /></a></p>
+<p><em>Figure 18.12. The orbit change from one focusing quadrupole of
+the model ring displaced by 0.5 mm, computed with the single-kick
+formula of section 2 at the BPMs within 16 cells either side, filled at
+the focusing quadrupoles and open at the defocusing ones. Between
+quadrupoles the change is a straight line. It is 0.83 mm at the culprit,
+where its slope jumps by the kick of 13.3 µrad (the cusp); round the
+ring it is a betatron wave whose amplitude is 1.47 mm at the focusing
+quadrupoles (dashed) and 0.60 mm at the defocusing ones (dotted), which
+the monitors, 45.3° of phase apart, sample without always catching the
+crest.</em></p>
 <p><strong>Timescales and controls.</strong> An orbit measurement is a
 fraction of a second; a response matrix minutes to an hour; a tune scan
 a few minutes to a night; a LEP-style energy calibration by resonant

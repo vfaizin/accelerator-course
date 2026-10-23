@@ -2176,9 +2176,9 @@ impedance</h3>
 <p>The second family of limits comes from the environment. A charge
 passing a change in the chamber (a cavity, a bellows, a step, a kicker
 magnet) or travelling through a wall of finite conductivity leaves
-electromagnetic fields behind it. For an ultra-relativistic source these
-fields cannot overtake it, so they act only on particles behind:
-causality.</p>
+electromagnetic fields behind it (figure 22.4). For an
+ultra-relativistic source these fields cannot overtake it, so they act
+only on particles behind: causality.</p>
 <p><strong>The longitudinal wake function.</strong> Let a source charge
 <span class="math inline">\(q_1\)</span> pass a structure on axis and a
 test charge <span class="math inline">\(q_2\)</span> follow at a
@@ -2195,6 +2195,19 @@ the test charge is decelerated. At <span class="math inline">\(z =
 0\)</span> a particle sees half of its own wake, <span
 class="math inline">\(\Delta W_1 = -\tfrac12 q_1^2
 W_\parallel(0^+)\)</span>, the beam-loading theorem.</p>
+<p><a href="figures/22-wake.svg" class="figure"><img
+src="figures/22-wake.svg" loading="lazy"
+alt="A source charge that has passed a cavity in the beam pipe, the fields left ringing in the cavity, and a test charge behind it crossing them" /></a></p>
+<p><em>Figure 22.4. What a wake function measures; schematic, the field
+lines drawn, not computed. A source charge <span
+class="math inline">\(q_1\)</span> moving at nearly <span
+class="math inline">\(c\)</span> has passed a cavity in the pipe and
+left fields ringing in it. They cannot overtake it, so nothing acts
+ahead of the source. A test charge <span
+class="math inline">\(q_2\)</span> a distance <span
+class="math inline">\(z\)</span> behind crosses them and gains <span
+class="math inline">\(\Delta W_2 =
+-q_1q_2W_\parallel(z)\)</span>.</em></p>
 <p><strong>The transverse wake function.</strong> Displace the source by
 <span class="math inline">\(\Delta y_1\)</span>. The integrated
 transverse kick on the trailing particle is, to first order in the
@@ -2708,7 +2721,7 @@ below transition the roles swap.</p>
 <p><a href="figures/22-robinson.svg" class="figure"><img
 src="figures/22-robinson.svg" loading="lazy"
 alt="A resonance curve of the real impedance with its peak below the RF frequency, and two sidebands either side of the RF frequency, the lower one higher on the curve" /></a></p>
-<p><em>Figure 22.4. Robinson’s rule above transition. A bunch
+<p><em>Figure 22.5. Robinson’s rule above transition. A bunch
 oscillating at the synchrotron frequency <span
 class="math inline">\(\Omega_s\)</span> puts sidebands at <span
 class="math inline">\(\omega_{RF}\pm\Omega_s\)</span>. With the cavity
@@ -2768,10 +2781,24 @@ ms) can hold an instability only if <span
 class="math inline">\(\mathrm{Re}\,Z\)</span> at the line is below about
 21 kΩ at 180 mA, or 12 kΩ at 300 mA, a hundredth of the mode’s peak. PLS
 was limited to 180 mA at 2 GeV by such modes. The cures it applied are
-the standard set: move each HOM between beam lines by adjusting the
-cavity’s cooling-water temperature (the copper expands and the mode
-frequencies shift), and add a bunch-by-bunch longitudinal feedback
-system (section 16).</p>
+the standard set: move each HOM between beam lines (figure 22.6) by
+adjusting the cavity’s cooling-water temperature (the copper expands and
+the mode frequencies shift), and add a bunch-by-bunch longitudinal
+feedback system (section 16).</p>
+<p><a href="figures/22-hom-lines.svg" class="figure"><img
+src="figures/22-hom-lines.svg" loading="lazy"
+alt="The resonance curve of a narrow cavity mode on a logarithmic scale, once centred on a beam line and once midway between two lines" /></a></p>
+<p><em>Figure 22.6. Moving a higher-order mode off the beam’s lines,
+computed for the PLS’s TM011 mode (758 MHz, <span
+class="math inline">\(Q_L = 21\,000\)</span>, <span
+class="math inline">\(R_s = 1.75\)</span> MΩ) from the resonator formula
+of section 7, on a logarithmic scale. The beam’s lines (grey) are the
+revolution harmonics, 1.0685 MHz apart; their synchrotron sidebands,
+11.4 kHz either side, are too close to show. With the mode on a line
+(red, dashed) the line meets the full 1750 kΩ. Moved half a spacing
+(blue), the mode’s 36 kHz width keeps it far from both neighbours, which
+meet 2.0 kΩ, below the 21 kΩ and 12 kΩ that radiation damping can hold
+at 180 mA and 300 mA.</em></p>
 <p>Transverse coupled-bunch modes work the same way with betatron lines
 <span class="math inline">\((pM + \mu + Q_y)\omega_0\)</span> and the
 transverse impedance, driven by dipole HOMs and by the resistive wall
@@ -3193,7 +3220,7 @@ run with <span class="math inline">\(\Delta &lt; 0.5\)</span>.</p>
 <p><a href="figures/22-resistive-wall.svg" class="figure"><img
 src="figures/22-resistive-wall.svg" loading="lazy"
 alt="The odd curve of the transverse resistive-wall impedance against frequency, with betatron lines marked; lines at negative frequency are driven" /></a></p>
-<p><em>Figure 22.5. The real part of the transverse resistive-wall
+<p><em>Figure 22.7. The real part of the transverse resistive-wall
 impedance, <span class="math inline">\(\propto
 1/\sqrt{|\omega|}\)</span> and odd in <span
 class="math inline">\(\omega\)</span>, with the betatron lines <span
@@ -3405,7 +3432,7 @@ Chromaticity does not remove it but raises it somewhat.</p>
 <p><a href="figures/22-tmci.svg" class="figure"><img
 src="figures/22-tmci.svg" loading="lazy"
 alt="Two mode frequencies approaching each other as the wake strength grows, merging at a threshold, above which a growth rate appears" /></a></p>
-<p><em>Figure 22.6. The two-particle model, computed from the trace
+<p><em>Figure 22.8. The two-particle model, computed from the trace
 <span class="math inline">\(2 - \Upsilon^2\)</span>. Top: the
 frequencies of the two modes, measured from <span
 class="math inline">\(\omega_\beta\)</span> in units of <span
@@ -3546,7 +3573,8 @@ A of stacked current.</p>
 <h3 id="16-feedback">16. Feedback</h3>
 <p>When Landau damping is not enough, measure the oscillation and
 correct it. A transverse damper has a pick-up, a processing chain and a
-kicker. In normalised phase-space coordinates at the kicker (<a
+kicker (figure 22.10). In normalised phase-space coordinates at the
+kicker (<a
 href="16-strong-focusing.html#pre-requisite-action-angle-variables">chapter
 16</a>: the position and the slope rescaled with the betatron function
 so that the ellipse of a free oscillation becomes a circle), <span
@@ -3585,7 +3613,7 @@ class="math inline">\(\tfrac12\)</span>) to</p>
 <p><a href="figures/22-damper.svg" class="figure"><img
 src="figures/22-damper.svg" loading="lazy"
 alt="A circle in normalised phase space with a point on it, and a vertical kick that moves the point onto a smaller circle" /></a></p>
-<p><em>Figure 22.7. A damper’s kick in normalised phase space at the
+<p><em>Figure 22.9. A damper’s kick in normalised phase space at the
 kicker. The particle goes round the circle of radius <span
 class="math inline">\(A\)</span> (clockwise, with <span
 class="math inline">\(\psi\)</span> increasing). The kick changes only
@@ -3606,6 +3634,18 @@ and the ring then stored a stable beam up to 230 mA, against the 180 mA
 to which coupled-bunch instabilities had limited it; above that,
 transverse coupled-bunch modes grew, and a transverse feedback system
 was being completed in early 2000 to deal with them.</p>
+<p><a href="figures/22-feedback.svg" class="figure"><img
+src="figures/22-feedback.svg" loading="lazy"
+alt="A ring with a pick-up, a processing box across the ring, and a kicker a quarter of a betatron wavelength downstream" /></a></p>
+<p><em>Figure 22.10. A transverse damper; schematic, not to scale. A
+pick-up measures each bunch’s displacement <span
+class="math inline">\(y\)</span>; a processing chain, bunch by bunch,
+turns it into a kick of the opposite sign, delivered a quarter of a
+betatron wavelength downstream. The beam (red, its oscillation
+exaggerated) is displaced most at the pick-up and crosses the axis at
+the kicker, with its largest angle: what the pick-up measured is, at the
+kicker, <span class="math inline">\(\hat p\)</span>, the coordinate the
+kick changes. The LHC’s numbers are at the bottom.</em></p>
 <p><strong>Worked number: the LHC transverse damper.</strong> The LHC
 revolution frequency is <span class="math inline">\(c/C =
 11{,}245.5\)</span> Hz, a turn every 88.9 µs. The LHC Design Report
@@ -3665,7 +3705,7 @@ space charge saturates it.</p>
 <p><a href="figures/22-electron-cloud.svg" class="figure"><img
 src="figures/22-electron-cloud.svg" loading="lazy"
 alt="Cross-section of a round vacuum chamber with a bunch at the centre, a photon striking the wall, a photoelectron kicked across, and secondaries leaving the far wall" /></a></p>
-<p><em>Figure 22.8. One step of electron-cloud build-up, in a
+<p><em>Figure 22.11. One step of electron-cloud build-up, in a
 cross-section of a chamber of radius 2 cm with the bunch going into the
 page. A synchrotron-radiation photon frees a photoelectron at the wall.
 The next bunch kicks it towards the axis to about 270 eV; it crosses in
@@ -3697,14 +3737,28 @@ thin carbon layer grows. Running with dense beams on purpose, to let the
 cloud clean the chamber, is called scrubbing (see At the bench). The
 other remedies change the surface or the geometry: low-yield coatings (a
 TiZrV getter in the LHC’s warm sections, amorphous carbon in the SPS), a
-sawtooth on the LHC’s cold beam screen that sends reflected photons
-where the dipole field confines the photoelectrons, and wider bunch
-spacing. After the LHC’s first scrubbing in 2011 the arc yield was
-estimated at 2.1 to 2.2, enough for 50 ns trains; 25 ns trains need a
-lower yield, below about 1.4 at 7 TeV in the simulations of the time (H.
-Maury Cuna and others, IPAC 2012), and in an October 2011 test with 2100
-bunches in beam 1 the additional heat load reached nearly 50 W per
-half-cell, about 0.5 W/m per beam.</p>
+sawtooth on the LHC’s cold beam screen (figure 22.12) that sends
+reflected photons where the dipole field confines the photoelectrons,
+and wider bunch spacing. After the LHC’s first scrubbing in 2011 the arc
+yield was estimated at 2.1 to 2.2, enough for 50 ns trains; 25 ns trains
+need a lower yield, below about 1.4 at 7 TeV in the simulations of the
+time (H. Maury Cuna and others, IPAC 2012), and in an October 2011 test
+with 2100 bunches in beam 1 the additional heat load reached nearly 50 W
+per half-cell, about 0.5 W/m per beam.</p>
+<p><a href="figures/22-beam-screen.svg" class="figure"><img
+src="figures/22-beam-screen.svg" loading="lazy"
+alt="Cross-section of the LHC beam screen inside the cold bore, with pumping slots, cooling, the beam, its light striking a sawtooth on the outer wall, and a photoelectron held by the dipole field" /></a></p>
+<p><em>Figure 22.12. The LHC’s beam screen inside a dipole’s cold bore,
+beam going into the page and the ring’s centre to the left; schematic,
+the shape and proportions drawn, not taken from engineering drawings.
+The screen, perforated and copper-lined, is cooled with helium to 5 to
+20 K and takes the synchrotron light and the image-current heat, so that
+they do not reach the 1.9 K bore. The light goes outward and strikes the
+outer wall, where a sawtooth of 30 µm steps over a 500 µm period
+reflects only about 2 per cent of it; the photoelectrons freed there
+spiral along the dipole’s vertical field (pointing down, for protons
+bent to the left) and stay near that wall. Shielded slots let gas
+through to the bore, which pumps it.</em></p>
 <h3 id="18-ions-in-electron-rings">18. Ions in electron rings</h3>
 <p>In an electron ring the beam is negative and attracts positive ions
 made from the residual gas. Whether an ion stays depends on the bunch
@@ -4195,13 +4249,22 @@ put its HOMs between beam lines.</p>
 instability looks like a ceiling: the beam behaves until a certain
 current, then loses part of itself, then behaves again. The ISR’s brick
 wall is the classic: losses of 10 to 15 per cent each time the stack
-reached about 3 A, giving a sawtooth on the current monitor. At the SPS
-the TMCI threshold was mapped by injecting single bunches of increasing
-intensity and longitudinal emittance and recording which survived; with
-the chromaticity near zero, bunches above about <span
-class="math inline">\(1.6\times10^{11}\)</span> in the nominal optics
-went unstable at injection, and the threshold rose with longitudinal
-emittance as the theory predicts.</p>
+reached about 3 A, giving a sawtooth on the current monitor (figure
+22.13). At the SPS the TMCI threshold was mapped by injecting single
+bunches of increasing intensity and longitudinal emittance and recording
+which survived; with the chromaticity near zero, bunches above about
+<span class="math inline">\(1.6\times10^{11}\)</span> in the nominal
+optics went unstable at injection, and the threshold rose with
+longitudinal emittance as the theory predicts.</p>
+<p><a href="figures/22-brick-wall.svg" class="figure"><img
+src="figures/22-brick-wall.svg" loading="lazy"
+alt="A staircase of stacked current that climbs to about 3 A, drops suddenly, and climbs again, over and over" /></a></p>
+<p><em>Figure 22.13. The ISR’s brick wall as the current monitor showed
+it; drawn, not computed, with the step size and time illustrative. Each
+step is one more stacked pulse. At about 3 A the resistive-wall
+instability throws out 10 to 15 per cent of the beam (12 per cent
+drawn), and stacking climbs back to the same ceiling. A larger tune
+spread, applied on purpose, removed it.</em></p>
 <p><strong>Saving the beam: chromaticity and octupoles.</strong> The
 first remedies an operator reaches for are raising the chromaticity and
 switching on, or raising, the octupoles. In the LHC electron-cloud tests

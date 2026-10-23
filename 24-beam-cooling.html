@@ -2599,10 +2599,11 @@ piling them up there.</p>
 cooling: LEReC</h3>
 <p>Electrostatic accelerators stop at a few MV, so cooling ions at
 higher energy needs electrons accelerated by RF, which come in bunches.
-The Low Energy RHIC electron Cooler at Brookhaven was the first. A 704
-MHz laser (one pulse every 1.42 ns) lit a multi-alkali photocathode (a
-thin layer of alkali metals such as potassium and caesium, which gives
-many electrons per photon; the photoelectric effect of <a
+The Low Energy RHIC electron Cooler at Brookhaven was the first (figure
+24.6). A 704 MHz laser (one pulse every 1.42 ns) lit a multi-alkali
+photocathode (a thin layer of alkali metals such as potassium and
+caesium, which gives many electrons per photon; the photoelectric effect
+of <a
 href="07-ion-sources-and-electron-guns.html#pre-requisite-continued-photons-and-the-photoelectric-effect">chapter
 7</a>) in a DC gun at about 400 kV. A 704 MHz superconducting booster
 cavity raised the electrons to 1.6 to 2.6 MeV. An RF cavity gives each
@@ -2625,6 +2626,17 @@ class="math inline">\(= 1.8\times10^5\)</span> m/s, as hot as NAP-M’s
 April 2019; by the end of that run cooling worked at 3.85 GeV per
 nucleon with 1.6 MeV electrons and at 4.6 GeV per nucleon with 2 MeV
 electrons, on bunches in collision.</p>
+<p><a href="figures/24-lerec.svg" class="figure"><img
+src="figures/24-lerec.svg" loading="lazy"
+alt="LEReC: a laser and DC photocathode gun, an SRF booster and warm cavities, feeding electrons through a cooling section in one RHIC ring, round a 180 degree turn and through a cooling section in the other ring" /></a></p>
+<p><em>Figure 24.6. LEReC, the first bunched-beam electron cooler
+(schematic, not to scale). A 704 MHz laser lights the photocathode of a
+DC gun at about 400 kV; an SRF booster raises the electrons to 1.6 to
+2.6 MeV and warm cavities take out the energy’s curvature, chirp and
+bunch-to-bunch variation. The electrons then travel 20 m with the ions
+of one RHIC ring, turn through 180° and travel 20 m with the ions of the
+other, which go round the opposite way, before the dump. Below: thirty
+electron bunches 1.4 ns apart ride on each ion bunch.</em></p>
 <h3
 id="pre-requisite-continued-fourier-series-and-transforms">Pre-requisite
 (continued): Fourier series and transforms</h3>
@@ -2713,7 +2725,7 @@ longer tell particles apart by revolution frequency.</p>
 <p><a href="figures/24-schottky.svg" class="figure"><img
 src="figures/24-schottky.svg" loading="lazy"
 alt="The Schottky spectrum of a coasting beam: bands at every harmonic, of equal area, widening until they overlap" /></a></p>
-<p><em>Figure 24.6. The Schottky spectrum of a coasting beam, harmonics
+<p><em>Figure 24.7. The Schottky spectrum of a coasting beam, harmonics
 1 to 20, computed as a sum of Gaussian bands centred on <span
 class="math inline">\(nf_0\)</span> with rms width <span
 class="math inline">\(nf_0|\eta|\sigma_\delta\)</span> and equal areas.
@@ -3051,7 +3063,7 @@ rest of the electronics, which leaves the sign change that matters.</p>
 <p><a href="figures/24-notch.svg" class="figure"><img
 src="figures/24-notch.svg" loading="lazy"
 alt="The gain and phase of the one-turn notch filter across three harmonics, with Schottky bands at the notches" /></a></p>
-<p><em>Figure 24.7. The one-turn notch filter, computed from <span
+<p><em>Figure 24.8. The one-turn notch filter, computed from <span
 class="math inline">\(|H| = 2|\sin(\pi f/f_0)|\)</span> and a phase of
 <span class="math inline">\(90° - 180°\times\)</span> (the fractional
 part of <span class="math inline">\(f/f_0\)</span>). Top: the gain is
@@ -3188,7 +3200,7 @@ the signal is amplified and sent across the ring, faster than the
 particle travels round, to a kicker (an electrode or magnet that gives
 the beam a sideways push) a quarter of a betatron wavelength (or an odd
 number of quarters) downstream, where the displacement has turned into
-an angle (figure 24.8). In an oscillation <span class="math inline">\(x
+an angle (figure 24.9). In an oscillation <span class="math inline">\(x
 = a\cos\phi\)</span>, a quarter of a period after the largest
 displacement the particle crosses the axis with its largest slope, as a
 pendulum passes the bottom at full speed (<a
@@ -3198,7 +3210,7 @@ oscillation is cancelled in one pass.</p>
 <p><a href="figures/24-loop.svg" class="figure"><img
 src="figures/24-loop.svg" loading="lazy"
 alt="A stochastic cooling system: pickup, amplifier and kicker on a ring, and the betatron oscillation between them" /></a></p>
-<p><em>Figure 24.8. A stochastic cooling system, schematic and not to
+<p><em>Figure 24.9. A stochastic cooling system, schematic and not to
 scale. Left: the beam goes round the ring; the pickup measures a
 sample’s mean displacement, the amplifier raises the signal, and it
 takes the chord across the ring so as to reach the kicker together with
@@ -3447,11 +3459,26 @@ B3), and the gain fall in proportion to <span
 class="math inline">\(1/\psi\)</span>. Over a density ratio of <span
 class="math inline">\(10^4\)</span> that is <span
 class="math inline">\(\ln10^4 = 9.2\)</span> e-folds (factors of <span
-class="math inline">\(e\)</span>). That is how the AA was built: two
-sets of stack-tail pickups at different radial positions, high gain at
-the low-density edge and low gain near the core, with filters to keep
-the powerful tail systems from heating the core, and a separate 1 to 2
-GHz system for the core itself.</p>
+class="math inline">\(e\)</span>). That is how the AA was built (figure
+24.10): two sets of stack-tail pickups at different radial positions,
+high gain at the low-density edge and low gain near the core, with
+filters to keep the powerful tail systems from heating the core, and a
+separate 1 to 2 GHz system for the core itself.</p>
+<p><a href="figures/24-stack.svg" class="figure"><img
+src="figures/24-stack.svg" loading="lazy"
+alt="Stacking in the AA: the density of antiprotons against revolution frequency on a logarithmic scale, a dense core, a stack tail that falls as a straight line, a shutter, and the newly injected batch beyond it" /></a></p>
+<p><em>Figure 24.10. Stacking in the AA, schematic. Across the wide
+chamber where the dispersion is large, position measures momentum and so
+revolution frequency. The injected batch is precooled at 150 to 500 MHz
+behind a shutter, then added at the stack’s edge; the stack-tail system
+(250 to 500 MHz, pickups at two positions) carries the particles to the
+core, which has its own 1 to 2 GHz system. In the chapter’s simplified
+model the density rises exponentially towards the core, <span
+class="math inline">\(10^4\)</span> times across the tail, a straight
+line on this logarithmic scale, and the gain falls as <span
+class="math inline">\(1/\psi\)</span>: high at the edge, low near the
+core. The shapes of core and batch are drawn; the core is placed at
+lower frequency, as in that model.</em></p>
 <p><strong>Limits and extensions.</strong> Bunched beams cool badly:
 bunching correlates the Schottky bands (particles held together by the
 RF no longer pass the pickup at unrelated times, and their signals stop
@@ -3518,9 +3545,9 @@ length, so that the antiprotons’ source looks as small as possible from
 the collecting lens all along the rod. A magnetic horn (a current sheet
 with field only between its walls; the AA’s ran at 400 kA for 15 µs) or
 a lithium lens (Fermilab’s could give up to 1000 T/m, and ran routinely
-at about 760 T/m) then captures antiprotons emerging at large angles. In
-the horn the current flows along an inner conductor and back along an
-outer one, so by Ampère’s law (<a
+at about 760 T/m) then captures antiprotons emerging at large angles
+(figure 24.11). In the horn the current flows along an inner conductor
+and back along an outer one, so by Ampère’s law (<a
 href="02-the-cathode-ray-tube.html#pre-requisite-biot-savart-and-amperes-law">chapter
 2</a>) the field between them circles the axis with strength <span
 class="math inline">\(\mu_0I/2\pi r\)</span>. In the lens the current
@@ -3542,6 +3569,23 @@ momentum; the AC, 200 π mm mrad and <span
 class="math inline">\(\pm3\)</span> per cent (acceptances in the π mm
 mrad convention of the source; the <em>Handbook</em> gives the AC a
 nominal 240).</p>
+<p><a href="figures/24-target.svg" class="figure"><img
+src="figures/24-target.svg" loading="lazy"
+alt="Making antiprotons: protons on a target rod, a horn or lithium lens collecting the antiprotons, and the two lenses in cross-section with their current and field, and their field against radius" /></a></p>
+<p><em>Figure 24.11. Making and collecting antiprotons (schematic, not
+to scale). Top: protons are focused onto a heavy-metal rod and the
+antiprotons leave over a wide cone; a horn or a lithium lens close
+behind turns them parallel into the beam line. Middle: the two lenses in
+cross-section, antiprotons going into the page. Antiprotons are
+negative, so to be pushed towards the axis they need the current to flow
+against their motion, out of the page; the field then circles
+anticlockwise. In the horn the current goes out along the inner
+conductor and back along the outer, and the field lies only between
+them; in the lithium lens it is spread through the rod. Bottom, from
+Ampère’s law: the horn’s field falls as <span
+class="math inline">\(1/r\)</span> between its walls; the lens’s rises
+as <span class="math inline">\(r\)</span> inside the rod, so its pull
+grows with distance from the axis, in both planes.</em></p>
 <table>
 <colgroup>
 <col style="width: 25%" />
@@ -3735,15 +3779,29 @@ spectrum analyser on a pickup, tuned to one harmonic band. At the AA van
 der Meer showed the 170th harmonic, 314 MHz: the injected batch of <span
 class="math inline">\(6\times10^6\)</span> antiprotons narrowing tenfold
 in 2 s. At Fermilab a longitudinal Schottky monitor worked at the 126th
-harmonic, about 79 MHz; its signal was mixed down (multiplied by a
-steady local oscillator, which shifts the band to a low frequency
-without changing its shape, as a product of cosines gives the difference
-frequency), digitised with an 8-bit scope at 156 kHz, split into blocks
-of 2048 points and Fourier transformed, ten spectra every 2.2 s cycle.
-In them one watches the injected beam arrive at 628 756 Hz with an rms
-spread of 3 Hz, the RF move it to 628 831 Hz, and the stack-tail system
-carry it to the core at 628 897 Hz. A low-pass filter held the core’s
-large signal down so that an 8-bit digitiser could see the tail.</p>
+harmonic, about 79 MHz (figure 24.12); its signal was mixed down
+(multiplied by a steady local oscillator, which shifts the band to a low
+frequency without changing its shape, as a product of cosines gives the
+difference frequency), digitised with an 8-bit scope at 156 kHz, split
+into blocks of 2048 points and Fourier transformed, ten spectra every
+2.2 s cycle. In them one watches the injected beam arrive at 628 756 Hz
+with an rms spread of 3 Hz, the RF move it to 628 831 Hz, and the
+stack-tail system carry it to the core at 628 897 Hz. A low-pass filter
+held the core’s large signal down so that an 8-bit digitiser could see
+the tail.</p>
+<p><a href="figures/24-schottky-monitor.svg" class="figure"><img
+src="figures/24-schottky-monitor.svg" loading="lazy"
+alt="Fermilab’s Schottky monitor: pickup, mixer with a local oscillator, low-pass filter, 8-bit digitiser and FFT, and below the spectrum it shows, with the injected beam, its position after the RF move, and the stack tail rising to the core" /></a></p>
+<p><em>Figure 24.12. Fermilab’s longitudinal Schottky monitor on the
+Accumulator (schematic). The pickup’s band at the 126th harmonic, about
+79 MHz, is mixed down with a local oscillator, filtered so that the
+core’s large signal does not swamp the 8-bit digitiser, sampled at 156
+kHz and Fourier transformed in blocks of 2048 points (13 ms each, bins
+0.6 Hz apart in revolution frequency). Below, in revolution frequency:
+the injected beam arrives at 628 756 Hz with an rms spread of 3 Hz, the
+RF moves it to 628 831 Hz, and the stack tail carries it to the core at
+628 897 Hz. The heights and the shapes of tail and core are
+drawn.</em></p>
 <p><strong>Reading a momentum spread.</strong> The rms width <span
 class="math inline">\(\Delta f_n\)</span> of the <span
 class="math inline">\(n\)</span>th band in frequency gives <span

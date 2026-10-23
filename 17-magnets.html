@@ -2273,7 +2273,18 @@ rectangular window of the yoke, filling the gap’s width: the field is
 very uniform from wall to wall, but the coils sit beside the beam and
 must be accurately placed. Quadrupoles and sextupoles are four- and
 six-legged versions of the H, often split in halves to admit the vacuum
-chamber.</p>
+chamber. Figure 17.5 draws the three dipoles side by side.</p>
+<p><a href="figures/17-yokes.svg" class="figure"><img
+src="figures/17-yokes.svg" loading="lazy"
+alt="Three iron dipoles in cross-section: C-shaped, H-shaped and window frame, with coils and an upward gap field" /></a></p>
+<p><em>Figure 17.5. The three shapes of iron dipole, seen along the
+beam, which comes out of the page (schematic, not to scale). In each the
+gap field points up and the coil current runs into the page on the right
+and out of it on the left, as in figure 17.2. The C returns its flux
+through one leg and is open on the other side; the H returns it through
+two legs, symmetric and closed; the window frame puts its coils in the
+window beside the gap, so the field runs evenly from one coil to the
+other.</em></p>
 <p><strong>Combined against separated function.</strong> In a
 <em>combined-function</em> magnet the pole is tilted so that one magnet
 both bends and focuses (<span class="math inline">\(B_y = B_0 +
@@ -2865,7 +2876,22 @@ strengths are measured to <span class="math inline">\(10^{-4}\)</span>,
 and harmonics repeated to 0.01 unit in the best cases. Modern systems
 take several hundred readings per turn at up to 10 turns per second,
 fast enough to follow the field during a ramp. The LHC magnets were
-measured with shafts 15 m long, made of twelve segments of 1.15 m.</p>
+measured with shafts 15 m long, made of twelve segments of 1.15 m.
+Figure 17.6 draws the arrangement.</p>
+<p><a href="figures/17-rotating-coil.svg" class="figure"><img
+src="figures/17-rotating-coil.svg" loading="lazy"
+alt="A rotating coil on a shaft through a magnet’s aperture, turned by a motor, with an angle encoder triggering an integrator" /></a></p>
+<p><em>Figure 17.6. The rotating coil, schematic and not to scale. A
+long, narrow coil of <span class="math inline">\(N_t\)</span> turns and
+length <span class="math inline">\(L\)</span> lies on a shaft along the
+magnet’s axis; a motor turns it, and an angle encoder on the shaft
+triggers the integrator, which records the flux through the coil at each
+angle. A Fourier analysis of one turn gives the multipoles <span
+class="math inline">\(C_n\)</span>. The end view shows the coil’s two
+sides at radii <span class="math inline">\(R_1\)</span> and <span
+class="math inline">\(R_2\)</span>, at angle <span
+class="math inline">\(\theta\)</span>, and the reference radius <span
+class="math inline">\(R_r\)</span> (dashed).</em></p>
 <p><strong>Hall probe.</strong> A thin semiconductor plate carrying a
 current <span class="math inline">\(I_H\)</span> develops a voltage
 across it <span class="math inline">\(V_H = I_H B/(n_c q t_H)\)</span>,
@@ -2953,7 +2979,7 @@ current, field and temperature.</p>
 <p><a href="figures/17-bc2.svg" class="figure"><img
 src="figures/17-bc2.svg" loading="lazy"
 alt="The upper critical field of niobium-titanium against temperature" /></a></p>
-<p><em>Figure 17.5. The upper critical field of niobium-titanium from
+<p><em>Figure 17.7. The upper critical field of niobium-titanium from
 Lubell’s fit with de Rijk’s constants: 10.7 T at 4.2 K and 13.5 T at 1.9
 K. The LHC’s 8.33 T at 1.9 K would meet this curve only at 5.6 K; the
 Tevatron ran at about 4.4 T and 4.5 K. The curve is the field at which
@@ -3404,7 +3430,7 @@ optimise the block positions.</p>
 <p><a href="figures/17-cos-theta.svg" class="figure"><img
 src="figures/17-cos-theta.svg" loading="lazy"
 alt="The cos theta current shell and the 60 degree sector coil" /></a></p>
-<p><em>Figure 17.6. Left: the thin shell with <span
+<p><em>Figure 17.8. Left: the thin shell with <span
 class="math inline">\(K_z = -K_0\cos\theta\)</span>, its current into
 the page on the right and out on the left, the size of each symbol
 following <span class="math inline">\(|\cos\theta|\)</span>. Inside, the
@@ -3483,7 +3509,7 @@ radial force.</p>
 <p><a href="figures/17-shell-forces.svg" class="figure"><img
 src="figures/17-shell-forces.svg" loading="lazy"
 alt="The azimuthal force on the cos theta shell" /></a></p>
-<p><em>Figure 17.7. The force on the <span
+<p><em>Figure 17.9. The force on the <span
 class="math inline">\(\cos\theta\)</span> shell, <span
 class="math inline">\(f_\theta = -K_0B_0\cos\theta\sin\theta\)</span>,
 drawn every <span class="math inline">\(15°\)</span>. It runs along the
@@ -3625,7 +3651,7 @@ voltage falls with the current.</p>
 <p><a href="figures/17-dump.svg" class="figure"><img
 src="figures/17-dump.svg" loading="lazy"
 alt="Exponential and linear discharge of an LHC dipole" /></a></p>
-<p><em>Figure 17.8. One LHC dipole emptied with at most 1 kV across it.
+<p><em>Figure 17.10. One LHC dipole emptied with at most 1 kV across it.
 Into a resistor (blue) the current decays as <span
 class="math inline">\(e^{-t/\tau}\)</span> with <span
 class="math inline">\(\tau = 1.18\)</span> s and is never quite zero;
@@ -3771,7 +3797,23 @@ diode in parallel, inside the helium vessel, as in HERA and RHIC; the
 Tevatron used thyristors outside the cryostat (Schmüser, Handbook,
 section 7.2.4): when it quenches and its heaters fire, its current
 switches into the diode and it discharges itself, while the rest of the
-circuit ramps down through the dump resistors.</p>
+circuit ramps down through the dump resistors (figure 17.11).</p>
+<p><a href="figures/17-quench-circuit.svg" class="figure"><img
+src="figures/17-quench-circuit.svg" loading="lazy"
+alt="An LHC dipole circuit: converter, a string of dipoles each with a bypass diode, a dump resistor with its switch, the quench detector and the heaters" /></a></p>
+<p><em>Figure 17.11. One LHC main dipole circuit, schematic, drawn with
+three of its 154 magnets. The converter drives the current <span
+class="math inline">\(I\)</span> round the string. Each dipole has a
+cold bypass diode in parallel, pointing the way the current flows. The
+quench detector compares the voltages across the two halves of a
+magnet’s coil; when they differ by about 100 mV it fires the heater
+strips from their capacitor bank, switches the converter off and opens
+the dump switch, which puts the resistor, at most 84 m<span
+class="math inline">\(\Omega\)</span> for 1000 V at 11 850 A, in series.
+The quenching magnet’s resistive voltage turns its diode on, so the
+string’s current goes round it while it empties itself into its own
+copper; the rest of the circuit’s energy, up to 1.08 GJ in all, goes
+into the resistor, with a time constant of at least 182 s.</em></p>
 <p><strong>Ramp voltage.</strong> The same inductance limits the ramp
 rate. Ramping one sector from 761 A (the injection field, scaled
 linearly) to 11 850 A in 20 minutes means <span
@@ -3797,12 +3839,12 @@ class="math inline">\(\mu_0J_c\)</span>, and wherever it has entered the
 current density is exactly <span class="math inline">\(J_c\)</span>;
 deeper in, where the field has not yet reached, there is no current.
 This picture, due to C. P. Bean in 1962, is the <em>critical state</em>,
-and Wilson’s flux-jump argument (section 7.2) rests on it. Figure 17.9
+and Wilson’s flux-jump argument (section 7.2) rests on it. Figure 17.12
 draws it.</p>
 <p><a href="figures/17-critical-state.svg" class="figure"><img
 src="figures/17-critical-state.svg" loading="lazy"
 alt="The critical state in a superconducting slab" /></a></p>
-<p><em>Figure 17.9. Bean’s critical state in a slab of half-width <span
+<p><em>Figure 17.12. Bean’s critical state in a slab of half-width <span
 class="math inline">\(a_f\)</span>, schematic. The outside field <span
 class="math inline">\(B_a\)</span> falls from each face in a straight
 line of slope <span class="math inline">\(\mu_0J_c\)</span>; the current
@@ -4070,7 +4112,20 @@ segments shaped as annular sectors the factor is instead <span
 class="math inline">\(\sin(3\pi/M)/(3\pi/M)\)</span>, giving 362 T/m;
 for the dipole the two shapes give the same <span
 class="math inline">\(K_1\)</span> (Halbach and Schlueter, Handbook,
-section 7.2.8, eqns 4 and 5).</p>
+section 7.2.8, eqns 4 and 5). Figure 17.13 draws the 16-segment dipole
+ring of the example.</p>
+<p><a href="figures/17-halbach.svg" class="figure"><img
+src="figures/17-halbach.svg" loading="lazy"
+alt="A ring of 16 permanent-magnet segments whose magnetisation turns twice as fast as the position angle, with a uniform upward field in the bore" /></a></p>
+<p><em>Figure 17.13. A Halbach dipole ring of 16 segments, to scale for
+the example: <span class="math inline">\(r_i = 10\)</span> mm, <span
+class="math inline">\(r_o = 40\)</span> mm, <span
+class="math inline">\(B_R = 1.2\)</span> T. The segment at position
+angle <span class="math inline">\(\theta\)</span> is magnetised at <span
+class="math inline">\(2\theta - 90°\)</span> (arrows), so the direction
+turns twice round while the position goes once round. The bore field is
+1.62 T, uniform and upward; a numerical sum over the segments made here
+gives the same 1.62 T, and almost no field outside.</em></p>
 <p><strong>Uses.</strong> Permanent magnets need no power, no cooling
 and no supply, and cannot trip. Their fields are fixed (or adjustable
 only mechanically), so they suit beams of fixed energy. Fermilab’s
@@ -4243,10 +4298,10 @@ several times.</li>
 field and harmonics from the rotating coil, and the current from a
 precision current transducer. Then step down.</li>
 <li>Plot the transfer function <span class="math inline">\(\int
-B\,ds/I\)</span> against <span class="math inline">\(I\)</span>. It is
-flat in the middle, falls at the top where the iron saturates, and the
-up and down branches split by the hysteresis. At zero current the
-remanent field, a few millitesla, remains.</li>
+B\,ds/I\)</span> against <span class="math inline">\(I\)</span> (figure
+17.14, top). It is flat in the middle, falls at the top where the iron
+saturates, and the up and down branches split by the hysteresis. At zero
+current the remanent field, a few millitesla, remains.</li>
 <li>Read the harmonics against current: <span
 class="math inline">\(b_3\)</span> in a dipole and <span
 class="math inline">\(b_6\)</span> in a quadrupole shift as the poles
@@ -4280,12 +4335,13 @@ between taps tells how the normal zone spread. The helium boils, the
 pressure in the cryostat jumps, and relief valves vent, audibly, while
 the recovery line takes back most of the gas. Then the magnet must be
 cooled again, which takes hours.</li>
-<li><em>The training curve.</em> Quench current against quench number. A
-good magnet starts within a few per cent of its target and climbs in a
-handful of quenches; a poor one starts low, climbs slowly, or quenches
-erratically at one place, a sign of a loose or damaged turn. A magnet
-that has passed is cycled to a temperature above its operating point and
-back to see whether it remembers its training.</li>
+<li><em>The training curve.</em> Quench current against quench number
+(figure 17.14, bottom). A good magnet starts within a few per cent of
+its target and climbs in a handful of quenches; a poor one starts low,
+climbs slowly, or quenches erratically at one place, a sign of a loose
+or damaged turn. A magnet that has passed is cycled to a temperature
+above its operating point and back to see whether it remembers its
+training.</li>
 <li><em>Magnetic measurement cold.</em> Rotating coils at the injection
 plateau show the persistent-current harmonics, their decay over minutes
 at constant current, and their snapback when the ramp resumes. The field
@@ -4294,6 +4350,20 @@ at full current shows any iron saturation.</li>
 measured, at nano-ohm resolution after 2008; a joint that warms under
 current is a fault waiting to happen.</li>
 </ul>
+<p><a href="figures/17-bench.svg" class="figure"><img
+src="figures/17-bench.svg" loading="lazy"
+alt="Top: a warm magnet’s transfer function against current, up and down branches. Bottom: training curves of a good and a poor superconducting magnet" /></a></p>
+<p><em>Figure 17.14. What the two bench tests show, drawn, not computed
+or measured. Top: the transfer function of a warm iron magnet, relative
+to its value in the middle, against the current. It is flat in the
+middle and falls at the top, where the iron saturates; the down branch
+lies above the up branch by the hysteresis, most at low current, where
+the remanent field is the largest part of the field. Bottom: training
+curves, quench current against quench number, relative to the target. A
+good magnet starts within a few per cent of the target and climbs
+towards its conductor’s limit in a handful of quenches, and after a
+thermal cycle it remembers most of its training; a poor one starts low
+and climbs slowly and erratically.</em></p>
 <p><strong>Ways it fails, with their signatures.</strong> - <em>Low
 first quench and slow training:</em> coil not prestressed enough or
 conductor movement; the voltage taps locate the segment. - <em>Quench at
