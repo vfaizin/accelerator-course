@@ -320,7 +320,20 @@ straight line through two points of the curve, and as <span
 class="math inline">\(h\)</span> shrinks the line turns into the
 <em>tangent</em>, the straight line that just touches the curve at <span
 class="math inline">\(x\)</span>. The derivative is the slope of the
-tangent.</p>
+tangent (figure F1.1).</p>
+<p><a href="figures/F1-secant-tangent.svg" class="figure"><img
+src="figures/F1-secant-tangent.svg" loading="lazy"
+alt="The electron’s distance from the plate against time, a parabola, with two straight lines through the point at 0.5 ns and later points, and the tangent at 0.5 ns; the lines’ slopes fall from 22.0 to 19.3 to 17.6 mm/ns" /></a></p>
+<p><em>Figure F1.1. The electron between the plates, <span
+class="math inline">\(x = \tfrac12 at^2\)</span>. The straight lines
+through the point at <span class="math inline">\(t = 0.5\)</span> ns and
+a point a step <span class="math inline">\(h\)</span> later have slopes
+22.0 mm/ns (<span class="math inline">\(h = 0.25\)</span> ns) and 19.3
+mm/ns (<span class="math inline">\(h = 0.1\)</span> ns); as <span
+class="math inline">\(h\)</span> shrinks they turn into the tangent, of
+slope 17.6 mm/ns, which is the speed <span class="math inline">\(1.76
+\times 10^7\)</span> m/s at that instant. Computed from the section’s
+numbers.</em></p>
 <p><strong>Notation.</strong> Three notations are in common use, and the
 course uses all of them:</p>
 <ul>
@@ -397,12 +410,24 @@ class="math inline">\(h \to 0\)</span>:</p>
 (fg)&#39; = f&#39;g + fg&#39; .
 \]</span></p>
 <p>Picture a rectangle of sides <span class="math inline">\(f\)</span>
-and <span class="math inline">\(g\)</span>. When both sides grow a
-little, the area grows by a strip along each side, <span
+and <span class="math inline">\(g\)</span> (figure F1.2). When both
+sides grow a little, the area grows by a strip along each side, <span
 class="math inline">\(g\,\Delta f\)</span> and <span
 class="math inline">\(f\,\Delta g\)</span>, plus a tiny corner <span
 class="math inline">\(\Delta f\,\Delta g\)</span> that vanishes faster
 than the strips.</p>
+<p><a href="figures/F1-product-rectangle.svg" class="figure"><img
+src="figures/F1-product-rectangle.svg" loading="lazy"
+alt="A rectangle of sides f and g, with a strip g times delta f along its right side, a strip f times delta g along its top, and a small corner square delta f times delta g" /></a></p>
+<p><em>Figure F1.2. The product rule as an area. When <span
+class="math inline">\(f\)</span> and <span
+class="math inline">\(g\)</span> both grow, the area <span
+class="math inline">\(fg\)</span> gains two strips, <span
+class="math inline">\(g\,\Delta f\)</span> and <span
+class="math inline">\(f\,\Delta g\)</span>, and a corner <span
+class="math inline">\(\Delta f\,\Delta g\)</span>, which is a product of
+two small steps and vanishes faster than either strip. Not to scale: the
+steps are drawn large so they can be seen.</em></p>
 <p><strong>Quotients.</strong> From the product rule applied to <span
 class="math inline">\(f = (f/g)\,g\)</span>:</p>
 <p><span class="math display">\[
@@ -461,8 +486,8 @@ class="math inline">\(\pi\)</span> radians and 1 radian is <span
 class="math inline">\(57.30°\)</span>. Calculus uses radians because
 then, for a small angle <span class="math inline">\(\theta\)</span>, the
 arc <span class="math inline">\(\theta\)</span> and the half-chord <span
-class="math inline">\(\sin\theta\)</span> are almost the same
-length:</p>
+class="math inline">\(\sin\theta\)</span> are almost the same length
+(figure F1.3):</p>
 <p><span class="math display">\[
 \lim_{\theta \to 0}\frac{\sin\theta}{\theta} = 1 .
 \]</span></p>
@@ -470,6 +495,17 @@ length:</p>
 within 0.17 per cent of 0.1. In degrees the ratio would tend to <span
 class="math inline">\(\pi/180\)</span> instead, and every formula below
 would carry that factor.</p>
+<p><a href="figures/F1-radian.svg" class="figure"><img
+src="figures/F1-radian.svg" loading="lazy"
+alt="A quarter circle of radius 1 with an angle theta at the centre; the arc it cuts is marked as length theta, the vertical half-chord as sine theta and the base as cosine theta" /></a></p>
+<p><em>Figure F1.3. On a circle of radius 1, an angle in radians is the
+length of the arc it cuts (blue). The half-chord (red) is <span
+class="math inline">\(\sin\theta\)</span> and the base is <span
+class="math inline">\(\cos\theta\)</span>. At <span
+class="math inline">\(\theta = 0.6\)</span> the arc is 0.600 and the
+half-chord 0.565; at <span class="math inline">\(\theta = 0.1\)</span>
+they are 0.100 and 0.0998, nearly equal, which is why <span
+class="math inline">\(\sin\theta/\theta \to 1\)</span>.</em></p>
 <p>The second limit needed is for the cosine. Since <span
 class="math inline">\(1 - \cos\theta = \dfrac{\sin^2\theta}{1 +
 \cos\theta}\)</span> (multiply top and bottom by <span
@@ -562,8 +598,8 @@ This proves the power rule for every <span
 class="math inline">\(n\)</span>, not only whole numbers.</li>
 </ul>
 <p><strong>Exponential decay.</strong> The function <span
-class="math inline">\(e^{-x/\tau}\)</span> falls by a factor <span
-class="math inline">\(e\)</span> for every step <span
+class="math inline">\(e^{-x/\tau}\)</span> (figure F1.4) falls by a
+factor <span class="math inline">\(e\)</span> for every step <span
 class="math inline">\(\tau\)</span> in <span
 class="math inline">\(x\)</span>, and its slope at any point is <span
 class="math inline">\(-1/\tau\)</span> times its value. After one <span
@@ -571,6 +607,17 @@ class="math inline">\(\tau\)</span> it is at <span
 class="math inline">\(1/e = 36.8\)</span> per cent; after two, 13.5 per
 cent; after <span class="math inline">\(\tau\ln 2 = 0.693\tau\)</span>,
 at one half. Section 10 shows where it comes from in physics.</p>
+<p><a href="figures/F1-exp-decay.svg" class="figure"><img
+src="figures/F1-exp-decay.svg" loading="lazy"
+alt="The falling curve e to the minus x over tau, marked at one half at 0.693 tau, 36.8 per cent at one tau and 13.5 per cent at two tau, with straight tangent lines at 0 and at one tau that each reach zero one tau further on" /></a></p>
+<p><em>Figure F1.4. Exponential decay, <span
+class="math inline">\(e^{-x/\tau}\)</span>. It is at one half after
+<span class="math inline">\(0.693\tau\)</span>, 36.8 per cent after
+<span class="math inline">\(\tau\)</span> and 13.5 per cent after <span
+class="math inline">\(2\tau\)</span>. Its slope is always <span
+class="math inline">\(-1/\tau\)</span> times its value, so the tangent
+at any point (blue) reaches zero exactly one <span
+class="math inline">\(\tau\)</span> further on.</em></p>
 <p><strong>The logarithmic derivative.</strong> Since <span
 class="math inline">\((\ln f)&#39; = f&#39;/f\)</span>, the derivative
 of a logarithm measures <em>relative</em> change: the fractional change
@@ -609,14 +656,23 @@ Boltzmann’s constant. Its logarithmic derivative is</p>
 \frac{d\ln J}{d\ln T} = 2 + \frac{W}{k_B T} .
 \]</span></p>
 <p>At 2500 K this is <span class="math inline">\(2 + 21.03 =
-23.03\)</span>. A 1 per cent rise in temperature should raise the
-current by about 23 per cent. The exact calculation gives <span
-class="math inline">\(1.01^2 \times e^{21.03 \times (1 - 1/1.01)} =
-1.256\)</span>, a 26 per cent rise. The small-change rule is only the
+23.03\)</span> (figure F1.5). A 1 per cent rise in temperature should
+raise the current by about 23 per cent. The exact calculation gives
+<span class="math inline">\(1.01^2 \times e^{21.03 \times (1 - 1/1.01)}
+= 1.256\)</span>, a 26 per cent rise. The small-change rule is only the
 first term of an approximation (section 8 gives the rest); it is good
 when <span class="math inline">\(f&#39;\Delta x\)</span> is small
 compared with <span class="math inline">\(f\)</span>, and here 23 per
 cent is not small.</p>
+<p><a href="figures/F1-cathode-small-change.svg" class="figure"><img
+src="figures/F1-cathode-small-change.svg" loading="lazy"
+alt="The tungsten cathode’s current against temperature near 2500 K, both relative to their values at 2500 K: a curve bending upwards and its tangent at 2500 K; at 1 per cent above, the curve is at 1.256 and the tangent at 1.230" /></a></p>
+<p><em>Figure F1.5. A hot tungsten cathode’s current near 2500 K (red)
+and its tangent there (blue), the small-change rule. For a 1 per cent
+rise in temperature the tangent predicts 1.230 times the current; the
+curve, bending upwards, gives 1.256. Computed from <span
+class="math inline">\(J = AT^2e^{-W/(k_BT)}\)</span> with <span
+class="math inline">\(W = 4.53\)</span> eV.</em></p>
 <p><strong>Maxima and minima.</strong> At the top of a hill or the
 bottom of a valley the tangent is level, so <span
 class="math inline">\(f&#39;(x) = 0\)</span>. The second derivative
@@ -626,7 +682,7 @@ minimum.</p>
 <p><em>Example: matching a load.</em> A source of voltage <span
 class="math inline">\(V\)</span> with internal resistance <span
 class="math inline">\(r\)</span> drives a load resistance <span
-class="math inline">\(R\)</span>. The current is <span
+class="math inline">\(R\)</span> (figure F1.6). The current is <span
 class="math inline">\(I = V/(R + r)\)</span> and the power into the load
 is</p>
 <p><span class="math display">\[
@@ -640,6 +696,16 @@ is then <span class="math inline">\(V^2/(4r)\)</span>: 50 W from a 100 V
 source with <span class="math inline">\(r = 50\ \Omega\)</span>. Chapter
 13 meets the same idea when RF power has to pass from a klystron into a
 cavity without being reflected.</p>
+<p><a href="figures/F1-matched-load.svg" class="figure"><img
+src="figures/F1-matched-load.svg" loading="lazy"
+alt="Top: a circuit, a 100 volt source with an internal resistance of 50 ohms inside a dashed box, connected to a load resistance R. Bottom: the power in the load against R, rising to a peak of 50 watts at R equal to 50 ohms, where the tangent is level, then falling slowly" /></a></p>
+<p><em>Figure F1.6. Matching a load. The source (in the dashed box) is a
+voltage <span class="math inline">\(V = 100\)</span> V with an internal
+resistance <span class="math inline">\(r = 50\ \Omega\)</span>; the same
+current flows through <span class="math inline">\(r\)</span> and the
+load <span class="math inline">\(R\)</span>. The power in the load
+(computed) is largest, 50 W, where its tangent is level, at <span
+class="math inline">\(R = r\)</span>.</em></p>
 <h3 id="6-accumulation-the-integral">6. Accumulation: the integral</h3>
 <p><strong>The picture.</strong> If a car’s speed is steady at <span
 class="math inline">\(v\)</span>, the distance after time <span
@@ -650,7 +716,7 @@ class="math inline">\(t\)</span> on a graph of speed against time. If
 the speed changes, cut the time into many short intervals <span
 class="math inline">\(\Delta t\)</span>. In each, the speed is nearly
 steady, and the distance is nearly <span class="math inline">\(v\,\Delta
-t\)</span>, the area of a thin strip. Add the strips:</p>
+t\)</span>, the area of a thin strip. Add the strips (figure F1.7):</p>
 <p><span class="math display">\[
 \text{distance} \approx \sum_i v(t_i)\,\Delta t .
 \]</span></p>
@@ -671,6 +737,16 @@ integral, where the adding starts and stops. The units are those of
 class="math inline">\(t\)</span>: m/s times s gives metres. Where <span
 class="math inline">\(v\)</span> is negative the strips count as
 negative area: going backwards subtracts distance.</p>
+<p><a href="figures/F1-strips.svg" class="figure"><img
+src="figures/F1-strips.svg" loading="lazy"
+alt="A curve of speed against time with the area under it cut into eight vertical strips; one strip is shaded darker and labelled with its height v of t i and width delta t" /></a></p>
+<p><em>Figure F1.7. Distance as an area. The time is cut into strips of
+width <span class="math inline">\(\Delta t\)</span>; each strip’s area
+<span class="math inline">\(v(t_i)\,\Delta t\)</span> (here with <span
+class="math inline">\(v\)</span> taken at the strip’s left edge) is
+nearly the distance gone in that interval. As the strips are made
+thinner, their sum becomes the area under the curve, the integral. The
+curve is drawn for its shape, not from the chapter’s numbers.</em></p>
 <p><strong>Integrals in physics.</strong> The same pattern appears every
 time a rate is added up over a range:</p>
 <ul>
@@ -904,9 +980,19 @@ kV electron, <span class="math inline">\(\beta = 0.088\)</span> and the
 correction is 0.59 per cent, which is why chapter 2 can use Newton’s
 formula there. At <span class="math inline">\(\beta = 0.5\)</span>, two
 terms give <span class="math inline">\(\gamma \approx 1.125\)</span> and
-three give 1.1484, against the true 1.1547: the series still works, but
-needs more terms. At <span class="math inline">\(\beta = 0.99\)</span>
-it is useless, and the exact formula must be used.</p>
+three give 1.1484, against the true 1.1547 (figure F1.8): the series
+still works, but needs more terms. At <span class="math inline">\(\beta
+= 0.99\)</span> it is useless, and the exact formula must be used.</p>
+<p><a href="figures/F1-taylor-gamma.svg" class="figure"><img
+src="figures/F1-taylor-gamma.svg" loading="lazy"
+alt="The Lorentz factor gamma against beta from 0 to 0.9: the exact curve rising steeply towards the right, and the two-term and three-term Taylor approximations, which follow it closely at low beta and fall below it at high beta" /></a></p>
+<p><em>Figure F1.8. The Lorentz factor <span
+class="math inline">\(\gamma\)</span> (red) and its Taylor series
+stopped after two terms (blue, dashed) and three (green). At low speed
+all three agree; at <span class="math inline">\(\beta = 0.5\)</span>
+they give 1.125, 1.1484 and 1.1547; towards <span
+class="math inline">\(\beta = 0.9\)</span> the series falls far short
+and the exact formula must be used. Computed.</em></p>
 <p><strong>How good is the approximation?</strong> The error of stopping
 after the <span class="math inline">\(h^n\)</span> term is roughly the
 size of the first term left out. That is the rule the course uses
@@ -1036,8 +1122,8 @@ has <span class="math inline">\(\tau = 1\)</span> ms.</li>
 </ul>
 <p><strong>Kind 3: oscillation.</strong> A body pulled back towards a
 centre with a force proportional to its distance from it, <span
-class="math inline">\(F = -kx\)</span> (a spring, or, in chapter 10
-onwards, a particle in a focusing field), obeys</p>
+class="math inline">\(F = -kx\)</span> (figure F1.9; a spring, or, in
+chapter 10 onwards, a particle in a focusing field), obeys</p>
 <p><span class="math display">\[
 m\ddot x = -kx, \qquad \text{or} \qquad \ddot x = -\omega^2 x, \quad
 \omega = \sqrt{k/m} .
@@ -1056,6 +1142,19 @@ course oscillate about their ideal path this way; chapter 2’s
 pre-requisite on <a
 href="02-the-cathode-ray-tube.html#pre-requisite-ordinary-differential-equations-linear-constant-and-varying-coefficients">ordinary
 differential equations</a> and chapter 16 go on from here.</p>
+<p><a href="figures/F1-oscillation.svg" class="figure"><img
+src="figures/F1-oscillation.svg" loading="lazy"
+alt="Top: a mass on a smooth table attached to a wall by a spring, displaced to the right of its rest position, with the force arrow pointing back to the left. Bottom: the displacement against omega t, a wave that starts at A and repeats every two pi" /></a></p>
+<p><em>Figure F1.9. Oscillation. A mass on a spring (top, schematic) is
+pulled back towards <span class="math inline">\(x = 0\)</span> by <span
+class="math inline">\(F = -kx\)</span>. Its displacement (bottom,
+computed for <span class="math inline">\(A = 1\)</span>, <span
+class="math inline">\(B = 0.5\)</span> in arbitrary units) is <span
+class="math inline">\(A\cos\omega t + B\sin\omega t\)</span>: it starts
+at <span class="math inline">\(x = A\)</span> with slope <span
+class="math inline">\(B\omega\)</span> and repeats every <span
+class="math inline">\(2\pi/\omega\)</span>, whatever the size of the
+swing.</em></p>
 <p><strong>Why two constants?</strong> An equation with a second
 derivative needs two facts to pin down a solution (a position and a
 speed); one with a first derivative needs one (a starting amount).
@@ -1078,9 +1177,18 @@ f(x_{n-1}) + \tfrac12 f(x_n)\right] .
 weighting them <span class="math inline">\(1, 4, 2, 4, \dots, 4,
 1\)</span> times <span class="math inline">\(h/3\)</span>. For <span
 class="math inline">\(\int_0^1 e^{-x^2}dx = 0.746824\)</span>, four
-strips give 0.742984 by the trapezoid rule (0.5 per cent low) and
-0.746855 by Simpson’s (0.004 per cent high). Halving the strip width
-cuts the trapezoid’s error by about 4 and Simpson’s by about 16.</p>
+strips give 0.742984 by the trapezoid rule (figure F1.10) (0.5 per cent
+low) and 0.746855 by Simpson’s (0.004 per cent high). Halving the strip
+width cuts the trapezoid’s error by about 4 and Simpson’s by about
+16.</p>
+<p><a href="figures/F1-trapezoid.svg" class="figure"><img
+src="figures/F1-trapezoid.svg" loading="lazy"
+alt="The bell curve e to the minus x squared from 0 to 1, with the area under it filled by four trapezoids whose straight tops join five points on the curve, lying just under the curve" /></a></p>
+<p><em>Figure F1.10. The trapezoid rule for <span
+class="math inline">\(\int_0^1 e^{-x^2}dx\)</span>. Four strips joined
+by straight lines give 0.742984 against the exact 0.746824; where the
+curve bends downwards the straight tops lie just under it, so the rule
+comes out low. Computed.</em></p>
 <p><strong>Differential equations.</strong> <em>Euler’s method</em>
 steps the equation forward: from <span class="math inline">\(\dot x =
 g(x, t)\)</span>, take <span class="math inline">\(x(t + h) \approx x(t)

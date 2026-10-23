@@ -262,9 +262,10 @@ arrow on top, <span class="math inline">\(\vec v\)</span>. The magnitude
 is <span class="math inline">\(|\mathbf{v}|\)</span>, or just <span
 class="math inline">\(v\)</span>.</p>
 <p><strong>Adding and scaling.</strong> To add two vectors, put them
-head to tail; the sum runs from the first tail to the second head. Order
-does not matter: <span class="math inline">\(\mathbf{A} + \mathbf{B} =
-\mathbf{B} + \mathbf{A}\)</span>. Multiplying by a number <span
+head to tail (figure F2.1); the sum runs from the first tail to the
+second head. Order does not matter: <span
+class="math inline">\(\mathbf{A} + \mathbf{B} = \mathbf{B} +
+\mathbf{A}\)</span>. Multiplying by a number <span
 class="math inline">\(c\)</span> stretches the arrow by <span
 class="math inline">\(c\)</span>, and reverses it if <span
 class="math inline">\(c &lt; 0\)</span>. So <span
@@ -299,18 +300,41 @@ class="math inline">\(\hat{\mathbf{A}} =
 point is the arrow from the origin to it, <span
 class="math inline">\(\mathbf{r} = (x, y, z)\)</span>, with length <span
 class="math inline">\(r = \sqrt{x^2 + y^2 + z^2}\)</span>.</p>
+<p><a href="figures/F2-add-components.svg" class="figure"><img
+src="figures/F2-add-components.svg" loading="lazy"
+alt="Left: two arrows A and B placed head to tail, with their sum drawn from the first tail to the second head, and the same sum reached the other way round a parallelogram. Right: three-dimensional axes x, y, z with the unit vectors along them, and an arrow A built from three steps along the axes" /></a></p>
+<p><em>Figure F2.1. Left: adding vectors head to tail; going round the
+parallelogram the other way, <span class="math inline">\(\mathbf{B} +
+\mathbf{A}\)</span>, gives the same arrow. Right: a vector as three
+steps along the unit vectors of right-handed axes (<span
+class="math inline">\(x\)</span> towards the reader, <span
+class="math inline">\(y\)</span> to the right, <span
+class="math inline">\(z\)</span> up), <span
+class="math inline">\(A_x\hat{\mathbf{x}} + A_y\hat{\mathbf{y}} +
+A_z\hat{\mathbf{z}}\)</span>; its length follows from Pythagoras used
+twice. Schematic.</em></p>
 <p><strong>Example: leaving the deflecting plates.</strong> In chapter
 2, a 2 kV electron moves along <span class="math inline">\(z\)</span> at
 <span class="math inline">\(v_z = 2.65 \times 10^7\)</span> m/s between
 plates 2 cm long and 5 mm apart, with 100 V across them. It leaves with
 a sideways velocity <span class="math inline">\(v_x\)</span> that is 0.1
-of <span class="math inline">\(v_z\)</span> (chapter 2 derives the
-factor <span class="math inline">\(lV_d/(2dV_a) = 0.02 \times 100/(2
-\times 0.005 \times 2000) = 0.1\)</span>). Its velocity is <span
-class="math inline">\(\mathbf{v} = (2.65 \times 10^6, 0, 2.65 \times
-10^7)\)</span> m/s, and it is turned through the angle whose tangent is
-<span class="math inline">\(v_x/v_z = 0.1\)</span>, <span
+of <span class="math inline">\(v_z\)</span> (figure F2.2) (chapter 2
+derives the factor <span class="math inline">\(lV_d/(2dV_a) = 0.02
+\times 100/(2 \times 0.005 \times 2000) = 0.1\)</span>). Its velocity is
+<span class="math inline">\(\mathbf{v} = (2.65 \times 10^6, 0, 2.65
+\times 10^7)\)</span> m/s, and it is turned through the angle whose
+tangent is <span class="math inline">\(v_x/v_z = 0.1\)</span>, <span
 class="math inline">\(5.71°\)</span>.</p>
+<p><a href="figures/F2-deflection.svg" class="figure"><img
+src="figures/F2-deflection.svg" loading="lazy"
+alt="An electron beam entering between two horizontal plates 2 cm long and 5 mm apart, with the field pointing from the upper positive plate to the lower negative one; the beam bends towards the upper plate and leaves in a straight line. Beside it, the exit velocity split into a long component along z and a short sideways component a tenth as long, at 5.71 degrees" /></a></p>
+<p><em>Figure F2.2. The 2 kV electron between chapter 2’s deflecting
+plates, to scale. Being negative, it is pushed against the field,
+towards the positive plate, and leaves with the velocity <span
+class="math inline">\(\mathbf{v} = (v_x, 0, v_z)\)</span>, <span
+class="math inline">\(v_x = 0.1\,v_z\)</span>, turned through <span
+class="math inline">\(5.71°\)</span>. The velocity triangle is drawn
+below the path at a larger scale.</em></p>
 <h3 id="2-the-dot-product">2. The dot product</h3>
 <p><strong>The definition.</strong> The dot product of two vectors is a
 number:</p>
@@ -321,11 +345,23 @@ number:</p>
 between them. It is the length of <span
 class="math inline">\(\mathbf{A}\)</span> times the part of <span
 class="math inline">\(\mathbf{B}\)</span> that lies along <span
-class="math inline">\(\mathbf{A}\)</span>. Two vectors at right angles
-have <span class="math inline">\(\mathbf{A}\cdot\mathbf{B} = 0\)</span>;
-parallel vectors have the product of their lengths; and <span
-class="math inline">\(\mathbf{A}\cdot\mathbf{A} =
+class="math inline">\(\mathbf{A}\)</span> (figure F2.3). Two vectors at
+right angles have <span class="math inline">\(\mathbf{A}\cdot\mathbf{B}
+= 0\)</span>; parallel vectors have the product of their lengths; and
+<span class="math inline">\(\mathbf{A}\cdot\mathbf{A} =
 |\mathbf{A}|^2\)</span>.</p>
+<p><a href="figures/F2-dot.svg" class="figure"><img
+src="figures/F2-dot.svg" loading="lazy"
+alt="Two arrows from one point, A horizontal and B at an angle theta above it, with a dashed line dropped from the tip of B to A marking the part of B along A, of length B cos theta" /></a></p>
+<p><em>Figure F2.3. The dot product. Drop a perpendicular from the tip
+of <span class="math inline">\(\mathbf{B}\)</span> to the line of <span
+class="math inline">\(\mathbf{A}\)</span>: the part of <span
+class="math inline">\(\mathbf{B}\)</span> along <span
+class="math inline">\(\mathbf{A}\)</span> is <span
+class="math inline">\(|\mathbf{B}|\cos\theta\)</span>, and <span
+class="math inline">\(\mathbf{A}\cdot\mathbf{B}\)</span> is <span
+class="math inline">\(|\mathbf{A}|\)</span> times it.
+Schematic.</em></p>
 <p><strong>In components.</strong> Since the unit vectors are
 perpendicular and of length 1, <span
 class="math inline">\(\hat{\mathbf{x}}\cdot\hat{\mathbf{x}} = 1\)</span>
@@ -362,7 +398,8 @@ steer (<a href="01-why-accelerate.html">chapter 1</a>).</p>
 <h3 id="3-the-cross-product">3. The cross product</h3>
 <p><strong>The definition.</strong> The cross product of two vectors is
 a vector, <span
-class="math inline">\(\mathbf{A}\times\mathbf{B}\)</span>, with</p>
+class="math inline">\(\mathbf{A}\times\mathbf{B}\)</span> (figure F2.4),
+with</p>
 <ul>
 <li>magnitude <span
 class="math inline">\(|\mathbf{A}||\mathbf{B}|\sin\theta\)</span>, the
@@ -376,6 +413,18 @@ towards <span class="math inline">\(\mathbf{B}\)</span>, thumb along
 reverses the result: <span
 class="math inline">\(\mathbf{B}\times\mathbf{A} =
 -\mathbf{A}\times\mathbf{B}\)</span>.</p>
+<p><a href="figures/F2-cross.svg" class="figure"><img
+src="figures/F2-cross.svg" loading="lazy"
+alt="Two arrows A and B lying in a horizontal plane, spanning a shaded parallelogram; the cross product A cross B rises straight up from their common tail, and B cross A, dashed, points straight down" /></a></p>
+<p><em>Figure F2.4. The cross product. <span
+class="math inline">\(\mathbf{A}\)</span> and <span
+class="math inline">\(\mathbf{B}\)</span> span a parallelogram of area
+<span class="math inline">\(|\mathbf{A}||\mathbf{B}|\sin\theta\)</span>;
+<span class="math inline">\(\mathbf{A}\times\mathbf{B}\)</span> has that
+length and stands at right angles to both, on the side given by the
+right-hand rule. <span
+class="math inline">\(\mathbf{B}\times\mathbf{A}\)</span> points the
+other way. Schematic.</em></p>
 <p><strong>In components.</strong> From <span
 class="math inline">\(\hat{\mathbf{x}}\times\hat{\mathbf{y}} =
 \hat{\mathbf{z}}\)</span>, <span
@@ -476,8 +525,9 @@ centre.</p>
 <p><strong>The cyclotron frequency.</strong> In a uniform magnetic field
 <span class="math inline">\(B\)</span> at right angles to the motion,
 the magnetic force <span class="math inline">\(qvB\)</span> is always
-sideways, so the speed is fixed and the path is a circle. Setting the
-force equal to <span class="math inline">\(mv^2/R\)</span>:</p>
+sideways, so the speed is fixed and the path is a circle (figure F2.5).
+Setting the force equal to <span
+class="math inline">\(mv^2/R\)</span>:</p>
 <p><span class="math display">\[
 qvB = \frac{mv^2}{R} \quad\Rightarrow\quad R = \frac{mv}{qB} =
 \frac{p}{qB}, \qquad \omega = \frac{v}{R} = \frac{qB}{m} .
@@ -493,6 +543,18 @@ m_ev/(eB) = 3.0\)</span> m. (Near the speed of light <span
 class="math inline">\(m\)</span> becomes <span
 class="math inline">\(\gamma m\)</span>; chapter 1 shows why, and
 chapter 12 what it does to the cyclotron.)</p>
+<p><a href="figures/F2-cyclotron-circle.svg" class="figure"><img
+src="figures/F2-cyclotron-circle.svg" loading="lazy"
+alt="A circle in a region of magnetic field pointing out of the page, shown as dots; a proton at the top of the circle moves to the right, and the force on it points straight down to the centre; the proton goes round clockwise" /></a></p>
+<p><em>Figure F2.5. A proton in a uniform field <span
+class="math inline">\(\mathbf{B}\)</span> out of the page. At the top of
+the circle its velocity is to the right, and <span
+class="math inline">\(q\,\mathbf{v}\times\mathbf{B}\)</span> points
+down, to the centre; the force stays sideways all the way round, so the
+proton circles (clockwise as seen here) at a steady speed, with radius
+<span class="math inline">\(p/(qB)\)</span> and angular rate <span
+class="math inline">\(qB/m\)</span>. An electron would circle the other
+way. Schematic.</em></p>
 <h3 id="5-fields">5. Fields</h3>
 <p><strong>Scalar and vector fields.</strong> A <em>field</em> is a
 quantity with a value at every point of space, and possibly changing in
@@ -510,7 +572,8 @@ fields.</p>
 like the height contours of a map. A vector field is drawn with
 <em>field lines</em>, curves that run along the arrow at every point,
 drawn closer together where the field is stronger. The electric field of
-a point charge <span class="math inline">\(Q\)</span> at the origin,</p>
+a point charge <span class="math inline">\(Q\)</span> at the origin
+(figure F2.6),</p>
 <p><span class="math display">\[
 \boldsymbol{\mathcal{E}} = \frac{Q}{4\pi\varepsilon_0
 r^2}\,\hat{\mathbf{r}},
@@ -522,6 +585,16 @@ spherical contours. Here <span class="math inline">\(\varepsilon_0 =
 8.854 \times 10^{-12}\)</span> F/m and <span
 class="math inline">\(\hat{\mathbf{r}} = \mathbf{r}/r\)</span> points
 away from the charge.</p>
+<p><a href="figures/F2-point-charge.svg" class="figure"><img
+src="figures/F2-point-charge.svg" loading="lazy"
+alt="A positive point charge with eight straight field lines running out from it, and three circles round it, the contours of potential 3, 2 and 1, at radii 1, 1.5 and 3: equal steps of potential lie further apart going outwards" /></a></p>
+<p><em>Figure F2.6. A positive point charge. Field lines (blue) run
+straight out and spread apart, so the field weakens as <span
+class="math inline">\(1/r^2\)</span>. Contours of the potential (red),
+drawn in equal steps of <span class="math inline">\(V\)</span>, are
+circles (spheres in space) that lie further apart where the field is
+weaker. The field lines cross the contours at right angles, as section 6
+shows they must.</em></p>
 <h3 id="6-the-gradient">6. The gradient</h3>
 <p><strong>The picture.</strong> Stand on a hillside of height <span
 class="math inline">\(h(x, y)\)</span>. Which way is uphill, and how
@@ -578,10 +651,10 @@ V = Q\hat{\mathbf{r}}/(4\pi\varepsilon_0 r^2)\)</span>, Coulomb’s field
 of section 5. One function, <span class="math inline">\(V\)</span>,
 carries all three components of the field.</p>
 <p><strong>Example: a field that focuses.</strong> Four electrodes
-arranged round a beam pipe, alternately positive and negative, make near
-the axis the potential <span class="math inline">\(V = V_0(x^2 -
-y^2)/a^2\)</span>, with <span class="math inline">\(a\)</span> the
-distance to the electrodes. Its gradient gives</p>
+arranged round a beam pipe, alternately positive and negative (figure
+F2.7), make near the axis the potential <span class="math inline">\(V =
+V_0(x^2 - y^2)/a^2\)</span>, with <span class="math inline">\(a\)</span>
+the distance to the electrodes. Its gradient gives</p>
 <p><span class="math display">\[
 \boldsymbol{\mathcal{E}} = -\nabla V = \left(-\frac{2V_0x}{a^2},\
 +\frac{2V_0y}{a^2},\ 0\right) .
@@ -596,6 +669,19 @@ class="math inline">\(a = 2\)</span> cm, the field 1 mm off axis is
 <em>quadrupole</em> focuses in one plane and defocuses in the other, and
 <a href="16-strong-focusing.html">chapter 16</a> shows how alternating
 them focuses in both.</p>
+<p><a href="figures/F2-quadrupole.svg" class="figure"><img
+src="figures/F2-quadrupole.svg" loading="lazy"
+alt="Four hyperbola-shaped electrodes round a central axis, positive left and right and negative top and bottom; red hyperbolic equipotential lines between them, dashed diagonals where the potential is zero, and blue field arrows pointing towards the axis along x and away from it along y" /></a></p>
+<p><em>Figure F2.7. An electric quadrupole, beam into the page.
+Electrodes shaped as the hyperbolas <span class="math inline">\(x^2 -
+y^2 = \pm a^2\)</span> give <span class="math inline">\(V = V_0(x^2 -
+y^2)/a^2\)</span> (red, equipotentials). The field <span
+class="math inline">\(-\nabla V\)</span> (blue, computed) crosses them
+at right angles and grows with the distance from the axis: it pushes a
+positive particle back towards the axis in <span
+class="math inline">\(x\)</span> and away from it in <span
+class="math inline">\(y\)</span>. The arrows’ scale is
+arbitrary.</em></p>
 <h3 id="7-line-integrals-work-along-a-path">7. Line integrals: work
 along a path</h3>
 <p><strong>The definition.</strong> Move a charge along a curved path
@@ -687,15 +773,16 @@ class="math inline">\(\rho\)</span>.</p>
 class="math inline">\(\mathbf{v}\)</span> through a small flat hoop of
 area <span class="math inline">\(dA\)</span>. If the hoop faces the
 flow, the volume passing each second is <span
-class="math inline">\(v\,dA\)</span>; if it is tilted by an angle <span
-class="math inline">\(\theta\)</span>, only the part of the velocity
-along the hoop’s <em>normal</em> (the direction it faces) gets through,
-<span class="math inline">\(v\cos\theta\,dA\)</span>. Give the patch a
-vector <span class="math inline">\(d\mathbf{A}\)</span>, of size <span
-class="math inline">\(dA\)</span> and pointing along its normal. Then
-the flow through it is <span class="math inline">\(\mathbf{v}\cdot
-d\mathbf{A}\)</span>, and through a whole surface <span
-class="math inline">\(S\)</span>, the <em>flux</em>:</p>
+class="math inline">\(v\,dA\)</span> (figure F2.8); if it is tilted by
+an angle <span class="math inline">\(\theta\)</span>, only the part of
+the velocity along the hoop’s <em>normal</em> (the direction it faces)
+gets through, <span class="math inline">\(v\cos\theta\,dA\)</span>. Give
+the patch a vector <span class="math inline">\(d\mathbf{A}\)</span>, of
+size <span class="math inline">\(dA\)</span> and pointing along its
+normal. Then the flow through it is <span
+class="math inline">\(\mathbf{v}\cdot d\mathbf{A}\)</span>, and through
+a whole surface <span class="math inline">\(S\)</span>, the
+<em>flux</em>:</p>
 <p><span class="math display">\[
 \Phi = \int_S\mathbf{v}\cdot d\mathbf{A} .
 \]</span></p>
@@ -707,6 +794,17 @@ flows: the electric flux <span
 class="math inline">\(\int\boldsymbol{\mathcal{E}}\cdot
 d\mathbf{A}\)</span>, the magnetic flux <span
 class="math inline">\(\int\mathbf{B}\cdot d\mathbf{A}\)</span>.</p>
+<p><a href="figures/F2-flux.svg" class="figure"><img
+src="figures/F2-flux.svg" loading="lazy"
+alt="A small hoop seen edge on in a flow of water to the right, twice: on the left facing the flow, its normal along the flow, catching a band of flow of height dA; on the right tilted so its normal makes angle theta with the flow, catching a narrower band of height dA cos theta" /></a></p>
+<p><em>Figure F2.8. Flux through a small hoop, seen edge on. Facing the
+flow (left), it catches a band of flow as wide as itself, <span
+class="math inline">\(v\,dA\)</span> a second. Tilted so that its normal
+<span class="math inline">\(d\mathbf{A}\)</span> makes the angle <span
+class="math inline">\(\theta\)</span> with the flow (right), it catches
+a band only <span class="math inline">\(dA\cos\theta\)</span> wide, so
+the flow through it is <span class="math inline">\(\mathbf{v}\cdot
+d\mathbf{A}\)</span>. Schematic.</em></p>
 <p><strong>The flux of a point charge.</strong> Take a sphere of radius
 <span class="math inline">\(r\)</span> centred on a charge <span
 class="math inline">\(Q\)</span>. On it, the field points straight out,
@@ -844,9 +942,9 @@ than on the other, as a stream flows faster in the middle than at the
 banks, which would turn a paddle-wheel placed off centre.</p>
 <p><strong>Stokes’s theorem.</strong> Cover a surface <span
 class="math inline">\(S\)</span> with small loops, all going round the
-same way. Each inner edge is run along twice, in opposite directions,
-and cancels; only the outer edge <span class="math inline">\(C\)</span>
-survives. So</p>
+same way (figure F2.9, left). Each inner edge is run along twice, in
+opposite directions, and cancels; only the outer edge <span
+class="math inline">\(C\)</span> survives. So</p>
 <p><span class="math display">\[
 \oint_C\mathbf{F}\cdot d\mathbf{l} = \int_S(\nabla\times\mathbf{F})\cdot
 d\mathbf{A} .
@@ -884,7 +982,7 @@ current density:</p>
 <p><strong>Example: the field round a wire.</strong> Apply Stokes’s
 theorem to a circle of radius <span class="math inline">\(r\)</span>
 round a long straight wire carrying current <span
-class="math inline">\(I\)</span>. By symmetry <span
+class="math inline">\(I\)</span> (figure F2.9, right). By symmetry <span
 class="math inline">\(\mathbf{B}\)</span> runs round the circle with the
 same size everywhere, so the circulation is <span
 class="math inline">\(B\times 2\pi r\)</span>, and the flux of <span
@@ -893,6 +991,18 @@ class="math inline">\(\mu_0 I\)</span>. So <span class="math inline">\(B
 = \mu_0 I/(2\pi r)\)</span>: 20 μT for 1 A at 1 cm. <a
 href="17-magnets.html">Chapter 17</a> builds accelerator magnets from
 this.</p>
+<p><a href="figures/F2-stokes-wire.svg" class="figure"><img
+src="figures/F2-stokes-wire.svg" loading="lazy"
+alt="Left: a square surface divided into nine small squares, each with a small anticlockwise arrow; the outer edge is drawn thick with arrows running anticlockwise round it. Right: a wire seen end on, carrying current out of the page, with two circles round it and magnetic field arrows running anticlockwise along them, shorter on the outer circle" /></a></p>
+<p><em>Figure F2.9. Left: Stokes’s theorem. Every small loop is run
+anticlockwise; each inner edge is shared by two loops and run along once
+each way, so it cancels, and only the outer edge <span
+class="math inline">\(C\)</span> is left. Right: the field round a wire
+carrying current <span class="math inline">\(I\)</span> out of the page.
+By the right-hand rule (thumb along the current) <span
+class="math inline">\(\mathbf{B}\)</span> runs anticlockwise round it,
+the same size all round a circle, and weaker further out, <span
+class="math inline">\(B = \mu_0 I/(2\pi r)\)</span>. Schematic.</em></p>
 <h3 id="12-the-laplacian">12. The Laplacian</h3>
 <p><strong>Divergence of a gradient.</strong> Combine the two: <span
 class="math inline">\(\nabla\cdot(\nabla f) = \nabla^2 f\)</span>, the
@@ -941,8 +1051,8 @@ round things</h3>
 class="math inline">\(x, y, z\)</span> make round problems clumsy. Two
 other systems are used throughout the course.</p>
 <p><strong>Cylindrical coordinates</strong> <span
-class="math inline">\((r, \phi, z)\)</span>: the distance <span
-class="math inline">\(r\)</span> from the <span
+class="math inline">\((r, \phi, z)\)</span> (figure F2.10, left): the
+distance <span class="math inline">\(r\)</span> from the <span
 class="math inline">\(z\)</span> axis, the angle <span
 class="math inline">\(\phi\)</span> round it, and the height <span
 class="math inline">\(z\)</span>. Then <span class="math inline">\(x =
@@ -958,9 +1068,9 @@ class="math inline">\(dV = r\,dr\,d\phi\,dz\)</span>, and the disc of
 section 8 is <span class="math inline">\(\int_0^{2\pi}\int_0^R
 r\,dr\,d\phi = \pi R^2\)</span>.</p>
 <p><strong>Spherical coordinates</strong> <span
-class="math inline">\((r, \theta, \phi)\)</span>: the distance <span
-class="math inline">\(r\)</span> from the origin, the angle <span
-class="math inline">\(\theta\)</span> down from the <span
+class="math inline">\((r, \theta, \phi)\)</span> (figure F2.10, right):
+the distance <span class="math inline">\(r\)</span> from the origin, the
+angle <span class="math inline">\(\theta\)</span> down from the <span
 class="math inline">\(z\)</span> axis, and the angle <span
 class="math inline">\(\phi\)</span> round it. A small step has
 components <span class="math inline">\(dr\)</span>, <span
@@ -969,6 +1079,19 @@ class="math inline">\(r\sin\theta\,d\phi\)</span>, so <span
 class="math inline">\(dV = r^2\sin\theta\,dr\,d\theta\,d\phi\)</span>,
 and integrating the angles gives the shell area <span
 class="math inline">\(4\pi r^2\)</span> of section 8.</p>
+<p><a href="figures/F2-coordinates.svg" class="figure"><img
+src="figures/F2-coordinates.svg" loading="lazy"
+alt="Two sets of three-dimensional axes. Left, cylindrical coordinates: a point at height z above the x-y plane, at distance r from the z axis and at angle phi round it from the x axis. Right, spherical coordinates: a point at distance r from the origin, at angle theta down from the z axis and angle phi round it" /></a></p>
+<p><em>Figure F2.10. Coordinates that fit round things. Left,
+cylindrical: the distance <span class="math inline">\(r\)</span> from
+the <span class="math inline">\(z\)</span> axis, the angle <span
+class="math inline">\(\phi\)</span> round it measured from <span
+class="math inline">\(x\)</span>, and the height <span
+class="math inline">\(z\)</span>. Right, spherical: the distance <span
+class="math inline">\(r\)</span> from the origin, the angle <span
+class="math inline">\(\theta\)</span> down from the <span
+class="math inline">\(z\)</span> axis, and the same <span
+class="math inline">\(\phi\)</span>. Schematic.</em></p>
 <p><strong>The derivatives in cylindrical coordinates.</strong> Derived
 by changing variables with the chain rule (worked through in Griffiths,
 appendix A):</p>

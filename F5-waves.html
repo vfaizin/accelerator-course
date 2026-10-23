@@ -458,7 +458,20 @@ care with the quadrant: <span class="math inline">\(-3 - 4i\)</span>
 also has <span class="math inline">\(y/x = 4/3\)</span>, but its angle
 is <span class="math inline">\(233.13°\)</span>, or <span
 class="math inline">\(-126.87°\)</span>. Draw the point.) The conjugate
-is the mirror image in the real axis: same modulus, opposite angle.</p>
+is the mirror image in the real axis: same modulus, opposite angle
+(figure F5.1).</p>
+<p><a href="figures/F5-complex-plane.svg" class="figure"><img
+src="figures/F5-complex-plane.svg" loading="lazy"
+alt="The complex plane with the arrows 3 + 4i, 1 - 2i added nose to tail to give 4 + 2i, the conjugate 3 - 4i, and i times 3 + 4i turned a quarter turn" /></a></p>
+<p><em>Figure F5.1. The complex plane. The arrow <span
+class="math inline">\(z_1 = 3 + 4i\)</span> has length 5 and angle <span
+class="math inline">\(53.13°\)</span>. Adding <span
+class="math inline">\(z_2 = 1 - 2i\)</span> nose to tail gives <span
+class="math inline">\(4 + 2i\)</span>, as for vectors. The conjugate
+<span class="math inline">\(3 - 4i\)</span> is the mirror image in the
+real axis, and <span class="math inline">\(iz_1 = -4 + 3i\)</span> is
+<span class="math inline">\(z_1\)</span> turned a quarter turn
+anticlockwise with its length unchanged.</em></p>
 <p><strong>Polar form.</strong> So every complex number can be
 written</p>
 <p><span class="math display">\[
@@ -576,7 +589,19 @@ class="math inline">\(A\)</span>, angular frequency <span
 class="math inline">\(\omega\)</span> and phase <span
 class="math inline">\(\phi\)</span>. Every sinusoidal quantity in the
 course, a cavity voltage, a betatron oscillation, the field of a light
-wave, can be pictured as the shadow of a turning arrow.</p>
+wave, can be pictured as the shadow of a turning arrow (figure
+F5.2).</p>
+<p><a href="figures/F5-phasor.svg" class="figure"><img
+src="figures/F5-phasor.svg" loading="lazy"
+alt="An arrow turning in the complex plane, and below it the shadow of its tip on the real axis plotted against time running down the page, a cosine" /></a></p>
+<p><em>Figure F5.2. An oscillation as the shadow of a turning arrow. The
+arrow <span class="math inline">\(Ae^{i(\omega t + \phi)}\)</span> turns
+anticlockwise at <span class="math inline">\(\omega\)</span> radians per
+second; the shadow of its tip on the real axis moves back and forth
+between <span class="math inline">\(-A\)</span> and <span
+class="math inline">\(A\)</span>. Plotted below with time running down
+the page, the shadow traces <span class="math inline">\(A\cos(\omega t +
+\phi)\)</span>, repeating once per turn.</em></p>
 <p><strong>The complex amplitude.</strong> Collect the length and
 starting angle into one complex number, the <em>complex amplitude</em>
 <span class="math inline">\(X = Ae^{i\phi}\)</span>. Then</p>
@@ -716,7 +741,7 @@ consequences:</p>
 <ul>
 <li>The amplitude falls with time constant <span
 class="math inline">\(1/\Gamma = 2Q/\omega_0\)</span>, the energy with
-<span class="math inline">\(Q/\omega_0\)</span>.</li>
+<span class="math inline">\(Q/\omega_0\)</span> (figure F5.3).</li>
 <li>Per cycle the amplitude falls by the factor <span
 class="math inline">\(e^{-\Gamma/f_0} = e^{-\pi/Q}\)</span>. Half
 amplitude takes <span class="math inline">\(Q\ln 2/\pi\)</span>
@@ -728,6 +753,19 @@ by a second-order amount: for <span class="math inline">\(Q =
 class="math inline">\(10^{10}\)</span>. For a good resonator, <span
 class="math inline">\(\omega_d = \omega_0\)</span>.</li>
 </ul>
+<p><a href="figures/F5-ringdown.svg" class="figure"><img
+src="figures/F5-ringdown.svg" loading="lazy"
+alt="A cosine oscillation whose amplitude shrinks inside a decaying exponential envelope, for Q = 20, with half amplitude after 4.41 cycles and 1/e after 6.37 cycles" /></a></p>
+<p><em>Figure F5.3. A damped oscillator ringing down, computed for <span
+class="math inline">\(Q = 20\)</span> so that the cycles can be seen.
+The oscillation keeps its frequency inside the envelope <span
+class="math inline">\(e^{-\Gamma t}\)</span>. The amplitude halves after
+<span class="math inline">\(Q\ln 2/\pi = 4.41\)</span> cycles and falls
+to <span class="math inline">\(1/e\)</span> after <span
+class="math inline">\(1/\Gamma = Q/\pi = 6.37\)</span> cycles. The
+copper cell of the text, with <span class="math inline">\(Q_0 =
+18\,400\)</span>, does the same over 4060 cycles to half
+amplitude.</em></p>
 <p><strong>Worked number: a copper cell.</strong> Chapter 13’s idealised
 copper pillbox cell at 2856 MHz has <span class="math inline">\(Q_0 =
 18\,400\)</span> (the subscript 0 marks the <em>unloaded</em> <span
@@ -830,10 +868,10 @@ phase lag is <span class="math inline">\(\arctan y\)</span>.</p>
 = 200\)</span> has a bandwidth of 50 kHz. Detuned by 19 kHz, <span
 class="math inline">\(y = 2 \times 200 \times 0.0019 = 0.76\)</span>:
 the voltage falls to <span class="math inline">\(1/\sqrt{1 + 0.76^2} =
-0.80\)</span> of its peak, <span class="math inline">\(37°\)</span>
-late. (The full formula, not the near-resonance form, gives 0.795 and
-<span class="math inline">\(37.2°\)</span>.) Chapter 9 shows that 5 per
-cent too little voltage already loses the beam.</li>
+0.80\)</span> of its peak, <span class="math inline">\(37°\)</span> late
+(figure F5.4). (The full formula, not the near-resonance form, gives
+0.795 and <span class="math inline">\(37.2°\)</span>.) Chapter 9 shows
+that 5 per cent too little voltage already loses the beam.</li>
 <li>The 2856 MHz copper cell of section 4 has a bandwidth of <span
 class="math inline">\(2.856 \times 10^9/18\,400 = 155\)</span> kHz; a
 copper cavity at 200 MHz with <span class="math inline">\(Q_0 =
@@ -842,6 +880,21 @@ expand by a few parts in <span class="math inline">\(10^5\)</span> moves
 such a cavity by a large part of its bandwidth, which is why cavities
 have tuners and cooling water held to a fraction of a degree.</li>
 </ul>
+<p><a href="figures/F5-resonance.svg" class="figure"><img
+src="figures/F5-resonance.svg" loading="lazy"
+alt="Two stacked plots against detuning for a 10 MHz resonator with Q = 200: the amplitude, a peak 50 kHz wide at half power; and the phase lag, rising from near 0 through 90 degrees at resonance towards 180" /></a></p>
+<p><em>Figure F5.4. The resonance of chapter 9’s resonator, 10 MHz with
+<span class="math inline">\(Q = 200\)</span>, computed from the full
+formula for <span class="math inline">\(X\)</span>. Top: the amplitude
+relative to its peak; it falls to <span
+class="math inline">\(1/\sqrt2\)</span> (half power) 25 kHz either side,
+a full width of <span class="math inline">\(f_0/Q = 50\)</span> kHz. At
+19 kHz off tune it is 0.795. Bottom: how far the displacement lags the
+force: <span class="math inline">\(90°\)</span> at resonance, <span
+class="math inline">\(127.2°\)</span> (that is, <span
+class="math inline">\(37.2°\)</span> more) at 19 kHz, and towards <span
+class="math inline">\(0°\)</span> or <span
+class="math inline">\(180°\)</span> far below or far above.</em></p>
 <p><strong>Bandwidth and ring-down are the same fact.</strong> The field
 time constant was <span class="math inline">\(\tau =
 2Q/\omega_0\)</span>, and the bandwidth <span
@@ -1037,8 +1090,19 @@ at <span class="math inline">\(t = \pi/(\omega_2 - \omega_1)\)</span>.
 class="math inline">\(\kappa = 0.5\)</span> N/m: <span
 class="math inline">\(\omega_1 = 10.000\)</span> rad/s, <span
 class="math inline">\(\omega_2 = 10.488\)</span> rad/s, and the energy
-moves fully across in 6.4 s, about ten swings. The weaker the coupling,
-the closer the two frequencies and the slower the exchange.</p>
+moves fully across in 6.4 s, about ten swings (figure F5.5). The weaker
+the coupling, the closer the two frequencies and the slower the
+exchange.</p>
+<p><a href="figures/F5-coupled.svg" class="figure"><img
+src="figures/F5-coupled.svg" loading="lazy"
+alt="Two masses between walls joined by three springs, the middle one weak; below, the computed motions of the two masses over 13 seconds, the swing passing from the first mass to the second and back" /></a></p>
+<p><em>Figure F5.5. Two masses and three springs (top, schematic), and
+their motion computed for <span class="math inline">\(m = 0.1\)</span>
+kg, <span class="math inline">\(k = 10\)</span> N/m and <span
+class="math inline">\(\kappa = 0.5\)</span> N/m, with mass 1 pulled
+aside and let go. Each swings at nearly 10 rad/s inside a slow envelope
+(dashed). Mass 1 is still and mass 2 swings fully at 6.44 s; at 12.9 s
+the energy is back in mass 1.</em></p>
 <p><strong>Beats.</strong> The same identity explains <em>beats</em>.
 Two oscillations of nearly equal frequency added together,</p>
 <p><span class="math display">\[
@@ -1288,13 +1352,24 @@ frequencies:</p>
 <p><span class="math display">\[
 f_n = \frac{v}{\lambda_n} = \frac{nv}{2L}, \qquad n = 1, 2, 3, \dots
 \]</span></p>
-<p>These are the string’s <em>modes</em> (its normal modes, as in
-section 7, now infinitely many because the string has infinitely many
-parts). <span class="math inline">\(n = 1\)</span> is the fundamental
-and the rest are its harmonics. The steel wire at 70 N, 0.648 m long,
-has <span class="math inline">\(f_1 = 426/(2 \times 0.648) =
-329\)</span> Hz, close to the top string of a guitar, and harmonics at
+<p>These are the string’s <em>modes</em> (figure F5.6; its normal modes,
+as in section 7, now infinitely many because the string has infinitely
+many parts). <span class="math inline">\(n = 1\)</span> is the
+fundamental and the rest are its harmonics. The steel wire at 70 N,
+0.648 m long, has <span class="math inline">\(f_1 = 426/(2 \times 0.648)
+= 329\)</span> Hz, close to the top string of a guitar, and harmonics at
 658, 987 Hz and so on.</p>
+<p><a href="figures/F5-standing.svg" class="figure"><img
+src="figures/F5-standing.svg" loading="lazy"
+alt="Three standing waves on a string fixed at both ends, with one, two and three loops, nodes marked, at 329, 658 and 987 Hz" /></a></p>
+<p><em>Figure F5.6. The first three modes of a string fixed at both
+ends. Each is drawn at its two extreme shapes, half a period apart; the
+dots are nodes, which never move, and halfway between them are the
+antinodes. Only waves with whole numbers of half wavelengths in <span
+class="math inline">\(L\)</span> fit. The frequencies are for the steel
+wire of the text: <span class="math inline">\(f_n = nv/(2L)\)</span>
+with <span class="math inline">\(v = 426\)</span> m/s and <span
+class="math inline">\(L = 0.648\)</span> m.</em></p>
 <p><strong>Modes of a pipe.</strong> Sound in a pipe open at both ends
 has pressure nodes at the ends, and the same <span
 class="math inline">\(f_n = nv/(2L)\)</span>. Closed at one end (a
@@ -1378,12 +1453,23 @@ class="math inline">\(Z_2 = 0\)</span>), <span class="math inline">\(r =
 \tfrac12 Z\omega^2|A|^2\)</span> from section 9, the reflected fraction
 of the power is <span class="math inline">\(r^2\)</span> and the
 transmitted fraction <span class="math inline">\((Z_2/Z_1)t^2\)</span>.
-For <span class="math inline">\(Z_2 = 2Z_1\)</span>: <span
+For <span class="math inline">\(Z_2 = 2Z_1\)</span> (figure F5.7): <span
 class="math inline">\(r = -1/3\)</span>, <span class="math inline">\(t =
 2/3\)</span>, and the power splits <span
 class="math inline">\(1/9\)</span> reflected and <span
 class="math inline">\(2 \times 4/9 = 8/9\)</span> transmitted, adding to
 1 as it must.</p>
+<p><a href="figures/F5-reflection.svg" class="figure"><img
+src="figures/F5-reflection.svg" loading="lazy"
+alt="A pulse on a light string heading for a knot with a heavy rope; later, a smaller inverted pulse coming back along the string and a narrower pulse going on into the rope" /></a></p>
+<p><em>Figure F5.7. A pulse meets a knot joining a light string to a
+heavy rope with twice its impedance (<span class="math inline">\(Z_2 =
+2Z_1\)</span>, the same tension). Afterwards a third of the amplitude
+comes back, inverted (<span class="math inline">\(r =
+-\tfrac13\)</span>), and two thirds go on (<span class="math inline">\(t
+= \tfrac23\)</span>). The transmitted pulse is half as wide, because in
+the rope it travels at half the speed. Amplitudes and positions
+computed; the pulse’s shape is chosen for the drawing.</em></p>
 <p><strong>Matching.</strong> If <span class="math inline">\(Z_2 =
 Z_1\)</span>, <span class="math inline">\(r = 0\)</span>: the wave
 passes the join without noticing it. Nothing is reflected when the
@@ -1493,7 +1579,22 @@ At 2856 MHz, <span class="math inline">\(\sqrt{1 - (2.078/2.856)^2} =
 class="math inline">\(\lambda_g = 105.0/0.686 = 153.0\)</span> mm. A
 numerical check, <span class="math inline">\((\omega_2 - \omega_1)/(k_2
 - k_1)\)</span> between 2855 and 2857 MHz, gives <span
-class="math inline">\(0.68607c\)</span>, the same to five figures.</p>
+class="math inline">\(0.68607c\)</span>, the same to five figures.
+Figure F5.8 shows both speeds as slopes.</p>
+<p><a href="figures/F5-dispersion.svg" class="figure"><img
+src="figures/F5-dispersion.svg" loading="lazy"
+alt="Frequency against wavenumber for WR-284 waveguide: a curve starting at the cutoff 2.078 GHz and approaching the free-space line; at 2856 MHz a line from the origin and a tangent show the phase and group velocities" /></a></p>
+<p><em>Figure F5.8. The dispersion relation of WR-284 waveguide, <span
+class="math inline">\(\omega^2 = \omega_c^2 + c^2k^2\)</span>, computed.
+Below the cutoff, 2.078 GHz, there is no travelling wave. At 2856 MHz
+(<span class="math inline">\(k = 41.07\)</span> rad/m) the slope of the
+line from the origin is the phase velocity, <span
+class="math inline">\(1.458c\)</span>, steeper than the free-space line
+<span class="math inline">\(\omega = ck\)</span> (dashed); the slope of
+the tangent is the group velocity, <span
+class="math inline">\(0.686c\)</span>, shallower. Far above cutoff the
+curve approaches the free-space line and both tend to <span
+class="math inline">\(c\)</span>.</em></p>
 <p><strong>Below cutoff.</strong> For <span class="math inline">\(\omega
 &lt; \omega_c\)</span>, <span class="math inline">\(k^2 = (\omega^2 -
 \omega_c^2)/c^2\)</span> is negative, so <span
@@ -1549,7 +1650,21 @@ class="math inline">\(\mathbf{B}\)</span> are perpendicular to each
 other and in step, with the direction of travel along <span
 class="math inline">\(\boldsymbol{\mathcal{E}} \times
 \mathbf{B}\)</span>; and <span class="math inline">\(B =
-\mathcal{E}/c\)</span>.</p>
+\mathcal{E}/c\)</span> (figure F5.9).</p>
+<p><a href="figures/F5-em-wave.svg" class="figure"><img
+src="figures/F5-em-wave.svg" loading="lazy"
+alt="A plane wave drawn at one instant: the electric field oscillating up and down along x, the magnetic field oscillating along y, in step, both perpendicular to the direction of travel z" /></a></p>
+<p><em>Figure F5.9. A plane electromagnetic wave at one instant, over
+two wavelengths. The electric field (blue) points along <span
+class="math inline">\(x\)</span>, the magnetic field (green) along <span
+class="math inline">\(y\)</span>; they rise and fall together, both
+across the direction of travel <span class="math inline">\(z\)</span>,
+which is the direction of <span
+class="math inline">\(\boldsymbol{\mathcal{E}} \times
+\mathbf{B}\)</span>. Schematic: <span
+class="math inline">\(\mathbf{B}\)</span> is drawn to a visible size; in
+SI units it is <span
+class="math inline">\(\mathcal{E}/c\)</span>.</em></p>
 <p><strong>Intensity.</strong> The power per unit area carried by the
 wave, averaged over a cycle, is</p>
 <p><span class="math display">\[
@@ -1815,10 +1930,20 @@ positive half (<span class="math inline">\(\omega_0t = \pi/2\)</span>),
 the sums of one, two and three terms are 1.273, 0.849 and 1.103, and of
 100 terms 0.997: closing in on 1. Near the jumps the partial sums always
 overshoot by about 9 per cent however many terms are taken (the Gibbs
-phenomenon), but the overshoot gets narrower. How the coefficients are
-found, by multiplying by each sine and averaging, is in chapter 8’s <a
+phenomenon), but the overshoot gets narrower (figure F5.10). How the
+coefficients are found, by multiplying by each sine and averaging, is in
+chapter 8’s <a
 href="08-seeing-the-beam.html#pre-requisite-fourier-series-and-transforms">Fourier
 series and transforms</a>.</p>
+<p><a href="figures/F5-square-wave.svg" class="figure"><img
+src="figures/F5-square-wave.svg" loading="lazy"
+alt="A square wave over one period with its Fourier sums of 1, 3 and 100 terms; the 100-term sum follows the square closely but overshoots beside each jump" /></a></p>
+<p><em>Figure F5.10. A square wave and its Fourier sums, computed. One
+term is a sine of height <span class="math inline">\(4/\pi =
+1.273\)</span>; three terms already show the flat tops; a hundred follow
+the square closely, except for the overshoot to 1.18 beside each jump
+(the Gibbs phenomenon), which grows narrower but never smaller as terms
+are added.</em></p>
 <p><strong>Why it matters.</strong> For a linear system (a circuit, a
 cavity, a string), the response to a sum is the sum of the responses. So
 find the response to each sinusoid separately (a complex division, as in

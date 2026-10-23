@@ -512,8 +512,16 @@ probabilities add to <span class="math inline">\((p + 1 - p)^n =
 </table>
 <p>On average one electron in twenty hits (section 3 proves the mean is
 <span class="math inline">\(np = 1\)</span>), but in more than a third
-of crossings none does, and in a quarter (0.264) two or more do. An
-average says little about any one trial.</p>
+of crossings none does, and in a quarter (0.264) two or more do (figure
+F6.1). An average says little about any one trial.</p>
+<p><a href="figures/F6-binomial.svg" class="figure"><img
+src="figures/F6-binomial.svg" loading="lazy"
+alt="Bar chart of the binomial probabilities for 20 electrons each hitting with probability 0.05: 0.3585 for none, 0.3774 for one, 0.1887 for two, falling fast after" /></a></p>
+<p><em>Figure F6.1. The binomial distribution for twenty electrons, each
+hitting a molecule with probability 0.05. The mean is one hit, but no
+hits and one hit are about equally likely, and two or more happen a
+quarter of the time. The standard deviation, 0.975 (section 3), is
+marked about the mean.</em></p>
 <p><strong>Ten coins.</strong> With <span class="math inline">\(n =
 10\)</span> and <span class="math inline">\(p = \tfrac12\)</span>, the
 chance of exactly five heads is <span class="math inline">\(252/2^{10} =
@@ -683,9 +691,19 @@ class="math inline">\(e^{-L/\lambda}\)</span>.</p>
 <p><em>Example.</em> In air at 1 Pa and 20 °C the mean free path of a
 molecule is 6.65 mm (section 14). The fraction of molecules that fly
 more than 1 cm without a collision is <span
-class="math inline">\(e^{-10/6.65} = 0.22\)</span>. Chapter 2 uses the
-same law to find what fraction of a tube’s electrons cross it
-unscattered.</p>
+class="math inline">\(e^{-10/6.65} = 0.22\)</span>, the area under the
+density beyond 10 mm (figure F6.2). Chapter 2 uses the same law to find
+what fraction of a tube’s electrons cross it unscattered.</p>
+<p><a href="figures/F6-exponential.svg" class="figure"><img
+src="figures/F6-exponential.svg" loading="lazy"
+alt="The exponential density of free paths for air at 1 Pa, falling from 0.15 per mm at zero; the mean free path 6.65 mm is marked and the area beyond 10 mm is shaded" /></a></p>
+<p><em>Figure F6.2. Probability as an area. The density of free paths in
+air at 1 Pa and 20 °C, <span class="math inline">\(f(x) =
+e^{-x/\lambda}/\lambda\)</span> with <span class="math inline">\(\lambda
+= 6.65\)</span> mm, computed. The whole area under the curve is 1; the
+shaded area beyond 10 mm, 0.22, is the fraction of molecules that fly
+further than 1 cm without a collision. Short paths are the most common,
+but the mean is <span class="math inline">\(\lambda\)</span>.</em></p>
 <h3 id="5-the-gaussian-distribution">5. The Gaussian distribution</h3>
 <p><strong>The shape.</strong> The bell curve is</p>
 <p><span class="math display">\[
@@ -747,7 +765,8 @@ class="math inline">\(k\)</span> standard deviations of the mean has no
 simple formula; it is tabulated as the <em>error function</em> (chapter
 2’s <a
 href="02-the-cathode-ray-tube.html#pre-requisite-special-functions-and-integrals-bessel-gaussian-error-function">special
-functions</a>). Three values are worth knowing by heart:</p>
+functions</a>). Three values are worth knowing by heart (figure
+F6.3):</p>
 <table>
 <thead>
 <tr>
@@ -787,6 +806,17 @@ so</p>
 <p><span class="math display">\[
 \text{FWHM} = 2\sqrt{2\ln 2}\;\sigma = 2.355\,\sigma .
 \]</span></p>
+<p><a href="figures/F6-gaussian.svg" class="figure"><img
+src="figures/F6-gaussian.svg" loading="lazy"
+alt="The Gaussian bell curve with shaded bands within one, two and three standard deviations of the mean, holding 68.27, 95.45 and 99.73 per cent, and the full width at half maximum, 2.355 sigma" /></a></p>
+<p><em>Figure F6.3. The Gaussian, drawn in units of <span
+class="math inline">\(\sigma\)</span>, computed. The shaded bands hold
+68.27 per cent of the probability within <span
+class="math inline">\(1\sigma\)</span> of the mean, 95.45 per cent
+within <span class="math inline">\(2\sigma\)</span> and 99.73 per cent
+within <span class="math inline">\(3\sigma\)</span>. Halfway up, the
+curve is <span class="math inline">\(2.355\,\sigma\)</span> wide: the
+full width at half maximum.</em></p>
 <p><em>Example: a beam on a screen.</em> A beam profile monitor shows a
 horizontal profile with a full width at half maximum of 4.7 mm. If the
 beam is Gaussian, <span class="math inline">\(\sigma_x = 4.7/2.355 =
@@ -905,8 +935,16 @@ in 1910:</p>
 </tbody>
 </table>
 <p>The differences are about the size of the square root of each number,
-as they should be if the counts in each column are themselves
-random.</p>
+as they should be if the counts in each column are themselves random
+(figure F6.4).</p>
+<p><a href="figures/F6-poisson.svg" class="figure"><img
+src="figures/F6-poisson.svg" loading="lazy"
+alt="Paired bars for N = 0 to 7 alphas per interval: Poisson’s prediction and Rutherford and Geiger’s counts of 1910, agreeing within their error bars" /></a></p>
+<p><em>Figure F6.4. Rutherford and Geiger’s count of 1910: the numbers
+of 7.5-second intervals, out of 2608, in which 0, 1, 2, … alphas
+arrived, against Poisson’s law with the measured mean of 3.872. The
+error bars on the counted numbers are plus or minus the square root of
+the expected number, the scatter a random count should show.</em></p>
 <p><strong>The square-root rule.</strong> In practice the mean is
 unknown and one count <span class="math inline">\(N\)</span> is all
 there is. The best estimate of <span class="math inline">\(\mu\)</span>
@@ -985,13 +1023,20 @@ class="math inline">\(\sigma = 5.40\)</span></th>
 </tr>
 </tbody>
 </table>
-<p>Ten flat distributions have already made a bell to within a per cent.
-(Twelve numbers drawn uniformly between 0 and 1 and added make a sum
-with <span class="math inline">\(\mu = 6\)</span> and <span
+<p>Ten flat distributions have already made a bell to within a per cent
+(figure F6.5). (Twelve numbers drawn uniformly between 0 and 1 and added
+make a sum with <span class="math inline">\(\mu = 6\)</span> and <span
 class="math inline">\(\sigma = 1\)</span>; 67.9 per cent of the sums
 fall within <span class="math inline">\(\pm 1\)</span> and 95.5 per cent
 within <span class="math inline">\(\pm 2\)</span>. Programs used to make
 Gaussian random numbers this way.)</p>
+<p><a href="figures/F6-dice.svg" class="figure"><img
+src="figures/F6-dice.svg" loading="lazy"
+alt="Three bar charts: one die, flat over 1 to 6; the sum of two dice, a triangle peaking at 7; the sum of ten dice, a bell centred on 35 matching a Gaussian curve" /></a></p>
+<p><em>Figure F6.5. The central limit theorem with dice, computed
+exactly. One die is flat; the sum of two is a triangle; the sum of ten
+is already a bell, and the Gaussian with the same mean, 35, and standard
+deviation, 5.40 (red), runs through the tops of the bars.</em></p>
 <p><strong>Poisson becomes Gaussian.</strong> A Poisson count with a
 large mean is the sum of many small independent counts (the counts in
 each tenth of the interval, say), so it too becomes Gaussian, with <span
@@ -1247,8 +1292,8 @@ class="math inline">\(v_z\)</span>. It bounces elastically off the wall
 at <span class="math inline">\(x = L\)</span>: <span
 class="math inline">\(v_x\)</span> becomes <span
 class="math inline">\(-v_x\)</span>, a change of momentum <span
-class="math inline">\(2mv_x\)</span>. It returns to that wall after
-crossing the box and back, a distance <span
+class="math inline">\(2mv_x\)</span> (figure F6.6). It returns to that
+wall after crossing the box and back, a distance <span
 class="math inline">\(2L\)</span>, which takes <span
 class="math inline">\(2L/v_x\)</span>. (Collisions with the other walls
 change <span class="math inline">\(v_y\)</span> and <span
@@ -1259,6 +1304,18 @@ on the wall is the momentum delivered per unit time:</p>
 <p><span class="math display">\[
 F = \frac{2mv_x}{2L/v_x} = \frac{mv_x^2}{L} .
 \]</span></p>
+<p><a href="figures/F6-box.svg" class="figure"><img
+src="figures/F6-box.svg" loading="lazy"
+alt="A box seen from the side with one molecule’s zigzag path; at the right-hand wall its velocity changes from (vx, vy) to (-vx, vy), giving the wall an impulse 2 m vx" /></a></p>
+<p><em>Figure F6.6. One molecule in a box, seen from the side
+(schematic). At the wall <span class="math inline">\(x = L\)</span> it
+bounces: <span class="math inline">\(v_x\)</span> reverses and <span
+class="math inline">\(v_y\)</span> is unchanged, so the wall receives an
+impulse <span class="math inline">\(2mv_x\)</span>. Bounces off the
+other walls change <span class="math inline">\(v_y\)</span> and <span
+class="math inline">\(v_z\)</span> but not <span
+class="math inline">\(v_x\)</span>, so the molecule is back at the same
+wall every <span class="math inline">\(2L/v_x\)</span>.</em></p>
 <p><strong>Many molecules.</strong> With <span
 class="math inline">\(N\)</span> molecules, add their forces and divide
 by the wall’s area <span class="math inline">\(L^2\)</span>:</p>
@@ -1513,12 +1570,21 @@ class="math inline">\(\sqrt{2k_BT/m}\)</span>, the mean <span
 class="math inline">\(\bar v = \sqrt{8k_BT/\pi m}\)</span>, and the rms
 <span class="math inline">\(\sqrt{3k_BT/m}\)</span>, in the ratio <span
 class="math inline">\(1 : 1.128 : 1.225\)</span>. For nitrogen at 20 °C
-they are 417, 471 and 511 m/s. Chapter 3’s <a
+they are 417, 471 and 511 m/s (figure F6.7). Chapter 3’s <a
 href="03-vacuum.html#pre-requisite-continued-maxwell-boltzmann-distribution">Maxwell-Boltzmann
 pre-requisite</a> derives <span class="math inline">\(\bar v\)</span> by
 integrating <span class="math inline">\(vF(v)\)</span>, and <a
 href="03-vacuum.html#the-speeds-of-molecules">the speeds of
 molecules</a> lists them for the gases of a vacuum system.</p>
+<p><a href="figures/F6-maxwell.svg" class="figure"><img
+src="figures/F6-maxwell.svg" loading="lazy"
+alt="Two speed distributions at 20 degrees Celsius: nitrogen, a tall narrow peak at 417 metres per second, and hydrogen, a low wide one peaking at 1555 metres per second" /></a></p>
+<p><em>Figure F6.7. The Maxwell-Boltzmann distribution of speeds at 20
+°C, computed, for nitrogen (blue) and hydrogen (red). Each curve
+encloses an area of 1. Nitrogen’s most probable, mean and rms speeds,
+417, 471 and 511 m/s, are marked. Hydrogen, 14 times lighter, is spread
+over speeds <span class="math inline">\(\sqrt{14}\)</span> times higher,
+with a mean of 1755 m/s, and a long tail of fast molecules.</em></p>
 <p><strong>Escape over a barrier.</strong> A molecule stuck on a surface
 with binding energy <span class="math inline">\(E_d\)</span> vibrates in
 its place about <span class="math inline">\(10^{13}\)</span> times a
@@ -1551,12 +1617,27 @@ class="math inline">\(\theta\)</span> to the wall’s normal. Those that
 reach an area <span class="math inline">\(A\)</span> in time <span
 class="math inline">\(dt\)</span> are inside a slanted cylinder of base
 <span class="math inline">\(A\)</span> and height <span
-class="math inline">\(v\cos\theta\,dt\)</span>. So the rate per unit
-area is the number density times the average of <span
+class="math inline">\(v\cos\theta\,dt\)</span> (figure F6.8). So the
+rate per unit area is the number density times the average of <span
 class="math inline">\(v\cos\theta\)</span> over all molecules, counting
 only those heading towards the wall (<span
 class="math inline">\(\cos\theta &gt; 0\)</span>) and counting the
 others as zero.</p>
+<p><a href="figures/F6-wall-flux.svg" class="figure"><img
+src="figures/F6-wall-flux.svg" loading="lazy"
+alt="Cross-section of a wall with a patch of area A and a slanted cylinder above it, of slant length v dt and height v cos theta dt, holding molecules moving towards the patch" /></a></p>
+<p><em>Figure F6.8. Which molecules hit a patch of wall of area <span
+class="math inline">\(A\)</span> in a time <span
+class="math inline">\(dt\)</span> (schematic, in cross-section). Those
+moving with speed <span class="math inline">\(v\)</span> at angle <span
+class="math inline">\(\theta\)</span> to the normal arrive if they start
+inside the slanted cylinder of slant length <span
+class="math inline">\(v\,dt\)</span>; its height is <span
+class="math inline">\(v\cos\theta\,dt\)</span>, so its volume is <span
+class="math inline">\(Av\cos\theta\,dt\)</span>. Molecules moving along
+the wall (<span class="math inline">\(\theta\)</span> near <span
+class="math inline">\(90°\)</span>) come from a thin slice and rarely
+hit it.</em></p>
 <p>The speeds and directions are independent, so the average is <span
 class="math inline">\(\bar v\)</span> times the average of “<span
 class="math inline">\(\cos\theta\)</span> if positive, else 0” over
@@ -1615,7 +1696,7 @@ within <span class="math inline">\(d\)</span>, so a moving molecule
 sweeps out a cylinder of cross-section <span
 class="math inline">\(\sigma = \pi d^2\)</span> (here <span
 class="math inline">\(\sigma\)</span> is an area, the <em>collision
-cross-section</em>). Flying a distance <span
+cross-section</em>; figure F6.9). Flying a distance <span
 class="math inline">\(x\)</span>, it sweeps a volume <span
 class="math inline">\(\sigma x\)</span>, which holds on average <span
 class="math inline">\(n\sigma x\)</span> other molecules. If the others
@@ -1628,6 +1709,18 @@ independent Gaussian velocities the variances add, section 3), so</p>
 <p><span class="math display">\[
 \lambda = \frac{1}{\sqrt2\,n\sigma} = \frac{k_BT}{\sqrt2\,\pi d^2\,p} .
 \]</span></p>
+<p><a href="figures/F6-free-path.svg" class="figure"><img
+src="figures/F6-free-path.svg" loading="lazy"
+alt="A molecule flying along an axis sweeps a cylinder of radius d; other molecules whose centres lie inside the cylinder are hit, those outside are missed" /></a></p>
+<p><em>Figure F6.9. The mean free path (schematic, side view). Two
+molecules of diameter <span class="math inline">\(d\)</span> touch when
+their centres are <span class="math inline">\(d\)</span> apart, so a
+molecule flying a distance <span class="math inline">\(x\)</span> hits
+every molecule whose centre lies within <span
+class="math inline">\(d\)</span> of its path: inside a cylinder of
+cross-section <span class="math inline">\(\sigma = \pi d^2\)</span> and
+volume <span class="math inline">\(\sigma x\)</span> (filled), but not
+those outside it (open).</em></p>
 <p>For air, <span class="math inline">\(d \approx 3.7 \times
 10^{-10}\)</span> m and <span class="math inline">\(\sigma = 4.3 \times
 10^{-19}\)</span> m<span class="math inline">\(^2\)</span>. At 20
@@ -1851,15 +1944,25 @@ ideal. With <span class="math inline">\(T_a = 300\)</span> K:</p>
 </tbody>
 </table>
 <p>The colder the cold end, the steeper the price, growing as <span
-class="math inline">\(1/T\)</span>. Real plants reach between a quarter
-and under a third of this ideal: about 235 to 280 W of electricity per
-watt at 4.5 K (<a href="17-magnets.html#13-cryogenics">chapter 17,
-cryogenics</a>). A string of superconducting magnets with a heat leak of
-50 W at 4.5 K needs at least 3.3 kW, and in practice 12 to 14 kW. This
-is why every cryostat in the course is wrapped in vacuum, polished
-shields and a nitrogen-cooled jacket, and why chapter 13 finds
-superconducting cavities worthwhile only when the RF losses they save
-outweigh the refrigeration.</p>
+class="math inline">\(1/T\)</span> (figure F6.10). Real plants reach
+between a quarter and under a third of this ideal: about 235 to 280 W of
+electricity per watt at 4.5 K (<a
+href="17-magnets.html#13-cryogenics">chapter 17, cryogenics</a>). A
+string of superconducting magnets with a heat leak of 50 W at 4.5 K
+needs at least 3.3 kW, and in practice 12 to 14 kW. This is why every
+cryostat in the course is wrapped in vacuum, polished shields and a
+nitrogen-cooled jacket, and why chapter 13 finds superconducting
+cavities worthwhile only when the RF losses they save outweigh the
+refrigeration.</p>
+<p><a href="figures/F6-carnot.svg" class="figure"><img
+src="figures/F6-carnot.svg" loading="lazy"
+alt="Log-log plot of the least work to remove one watt against the temperature of the cold end, rising as 1 over T: 2.75 watts at 80 K, 65.7 at 4.5 K, 157 at 1.9 K, with real plants at 235 to 280 watts at 4.5 K" /></a></p>
+<p><em>Figure F6.10. The price of cold: the least work to pump one watt
+from temperature <span class="math inline">\(T\)</span> to a room at 300
+K, <span class="math inline">\((T_a - T)/T\)</span>, computed. It grows
+as <span class="math inline">\(1/T\)</span> at low temperature: 2.75 W
+at 80 K, 65.7 W at 4.5 K, 157 W at 1.9 K. Real helium plants at 4.5 K
+need 235 to 280 W (red bar).</em></p>
 <p><strong>Why a cold surface pumps gas.</strong> A surface at 20 K in a
 vacuum chamber catches nitrogen, oxygen and water: each molecule that
 lands sticks for thousands of years (section 13), and the chamber’s

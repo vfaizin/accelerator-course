@@ -519,9 +519,23 @@ positive charges and end on negative ones (or at infinity), they never
 cross (the field has one direction at each point), and they are crowded
 where the field is strong. A dipole’s lines loop from <span
 class="math inline">\(+\)</span> to <span
-class="math inline">\(-\)</span>. Faraday thought of the lines as
-stretched strings that pull the charges together and push sideways on
-each other, a picture section 6 makes exact in terms of energy.</p>
+class="math inline">\(-\)</span> (figure F4.1). Faraday thought of the
+lines as stretched strings that pull the charges together and push
+sideways on each other, a picture section 6 makes exact in terms of
+energy.</p>
+<p><a href="figures/F4-dipole.svg" class="figure"><img
+src="figures/F4-dipole.svg" loading="lazy"
+alt="Field lines and equipotentials of a dipole, with the fields of the two charges added as arrows at a point above its centre" /></a></p>
+<p><em>Figure F4.1. The dipole of the example, computed: <span
+class="math inline">\(+1\)</span> nC and <span
+class="math inline">\(-1\)</span> nC 10 cm apart. The field lines (blue)
+leave the positive charge and end on the negative one; the dashed curves
+are equipotentials, crossing the field lines at right angles. At the
+point 5 cm above the centre, the field of each charge is 1798 V/m, one
+pointing away from <span class="math inline">\(+\)</span> and one
+towards <span class="math inline">\(-\)</span>; their sum (red) is 2542
+V/m along <span class="math inline">\(+x\)</span>. Arrows to
+scale.</em></p>
 <h3 id="4-gausss-law-in-use">4. Gauss’s law in use</h3>
 <p><strong>The law.</strong> F2 (section 9) showed that the flux of a
 point charge’s field through any sphere round it is <span
@@ -545,7 +559,16 @@ section 10).</p>
 gives the field only when symmetry tells you the field’s direction and
 that its size is the same all over a suitable surface. Then the flux is
 (field) × (area), and one line of algebra gives the field. Four shapes
-come up again and again.</p>
+come up again and again (figure F4.2).</p>
+<p><a href="figures/F4-gauss-shapes.svg" class="figure"><img
+src="figures/F4-gauss-shapes.svg" loading="lazy"
+alt="Four charged shapes, a sphere, a line, a sheet and a pair of plates, each with a dashed closed surface and field arrows" /></a></p>
+<p><em>Figure F4.2. The four shapes Gauss’s law solves, schematic. Each
+has a closed surface (dashed) chosen so that symmetry makes the field
+the same size all over the part of it that the field crosses: a
+concentric sphere round a charged sphere, a coaxial cylinder round a
+line, a short box straddling a sheet. Between two oppositely charged
+plates the fields of the two sheets add; outside they cancel.</em></p>
 <p><strong>A sphere.</strong> A charge <span
 class="math inline">\(Q\)</span> spread over a sphere of radius <span
 class="math inline">\(R\)</span> (on its surface, or through it with a
@@ -729,8 +752,9 @@ cent of <span class="math inline">\(c\)</span>.</p>
 takes no work, so the field has no component along it: field lines cross
 equipotentials at right angles. Between parallel plates the
 equipotentials are planes parallel to the plates; round a point charge,
-spheres. Electron-gun and lens designers think in equipotentials,
-because the shape of the electrodes sets their shape (<a
+spheres; round a dipole, the dashed curves of figure F4.1. Electron-gun
+and lens designers think in equipotentials, because the shape of the
+electrodes sets their shape (<a
 href="07-ion-sources-and-electron-guns.html">chapter 7</a>).</p>
 <p><strong>Conductors are equipotentials.</strong> In a conductor the
 free charges move whenever there is a field. When they have stopped
@@ -1071,12 +1095,24 @@ starts rising at <span class="math inline">\(I/C = 90\)</span> kV/s and
 settles at <span class="math inline">\(IR = 1\)</span> MV, with <span
 class="math inline">\(\tau = RC = 1.11 \times 10^{-10} \times 10^{11} =
 11.1\)</span> s. It reaches 90 per cent of the final voltage after <span
-class="math inline">\(\tau\ln10 = 25.6\)</span> s. A real machine also
-feeds the beam current and the corona losses, which add to the leak (<a
-href="06-the-electrostatic-generator.html">chapter 6</a>). Inductors,
-alternating currents and phasors are chapter 4’s <a
+class="math inline">\(\tau\ln10 = 25.6\)</span> s (figure F4.3). A real
+machine also feeds the beam current and the corona losses, which add to
+the leak (<a href="06-the-electrostatic-generator.html">chapter 6</a>).
+Inductors, alternating currents and phasors are chapter 4’s <a
 href="04-high-voltage-and-breakdown.html#pre-requisite-rlc-circuits-and-phasors">pre-requisite
 on RLC circuits</a> and F5.</p>
+<p><a href="figures/F4-rc-generator.svg" class="figure"><img
+src="figures/F4-rc-generator.svg" loading="lazy"
+alt="A circuit of a current source, a capacitor and a resistor to earth, beside the terminal voltage rising towards 1 MV" /></a></p>
+<p><em>Figure F4.3. The electrostatic generator as a circuit, and its
+terminal voltage, computed. The belt is a current source of 10 μA into
+the terminal <span class="math inline">\(T\)</span>, whose capacitance
+to earth is 111 pF; the resistor column of <span
+class="math inline">\(10^{11}\)</span> Ω leaks to earth. The voltage
+starts rising at 90 kV/s (dashed), slows as the leak grows, and settles
+at <span class="math inline">\(IR = 1\)</span> MV: 63 per cent of the
+way after one time constant, 11.1 s, and 90 per cent after 25.6
+s.</em></p>
 <h3 id="10-the-magnetic-field-and-its-force">10. The magnetic field, and
 its force</h3>
 <p><strong>The picture.</strong> A compass needle near a wire turns when
@@ -1125,12 +1161,23 @@ class="math inline">\(I_1\)</span> sits in the field <span
 class="math inline">\(\mu_0I_2/(2\pi d)\)</span> of a parallel wire a
 distance <span class="math inline">\(d\)</span> away (section 12), and
 so feels <span class="math inline">\(\mu_0I_1I_2/(2\pi d)\)</span> per
-metre. For 1 A in each, 1 m apart, that is <span class="math inline">\(2
-\times 10^{-7}\)</span> N per metre; until 2019 this defined the ampere.
-Two beams of particles moving the same way are two currents that
-attract, while their charges repel; at the speed of light the two nearly
-cancel, which is why fast beams suffer less from their own space charge
-(<a href="22-intensity-limits.html">chapter 22</a>).</p>
+metre (figure F4.4). For 1 A in each, 1 m apart, that is <span
+class="math inline">\(2 \times 10^{-7}\)</span> N per metre; until 2019
+this defined the ampere. Two beams of particles moving the same way are
+two currents that attract, while their charges repel; at the speed of
+light the two nearly cancel, which is why fast beams suffer less from
+their own space charge (<a href="22-intensity-limits.html">chapter
+22</a>).</p>
+<p><a href="figures/F4-two-wires.svg" class="figure"><img
+src="figures/F4-two-wires.svg" loading="lazy"
+alt="Two wires seen end on, with the circular field of the first; with currents the same way they attract, with opposite currents they repel" /></a></p>
+<p><em>Figure F4.4. Two parallel wires seen end on, schematic. The field
+of wire 1 circles it, anticlockwise for a current out of the page, and
+at wire 2 points up. The force <span
+class="math inline">\(I\mathbf{L}\times\mathbf{B}\)</span> on wire 2
+then points towards wire 1 when the currents run the same way, and away
+when they run opposite ways. The force on wire 1 is equal and
+opposite.</em></p>
 <p><strong>A current loop is a magnet.</strong> A flat loop of area
 <span class="math inline">\(A\)</span> carrying current <span
 class="math inline">\(I\)</span>, in a uniform field, feels no net force
@@ -1174,7 +1221,7 @@ point, and at right angles to the line joining them, so each makes a
 field of size <span class="math inline">\(\mu_0I\,dl/(4\pi(R^2 +
 z^2))\)</span>. These fields point in a cone round the axis; going round
 the loop, their sideways parts cancel in opposite pairs, and only the
-part along the axis survives, a fraction <span
+part along the axis survives (figure F4.5), a fraction <span
 class="math inline">\(R/\sqrt{R^2 + z^2}\)</span> of each. Adding round
 the loop, <span class="math inline">\(\int dl = 2\pi R\)</span>:</p>
 <p><span class="math display">\[
@@ -1195,6 +1242,18 @@ pair to bend his cathode rays, and chapter 2 uses one to cancel the
 Earth’s field over a bench (<a
 href="02-the-cathode-ray-tube.html#pre-requisite-biot-savart-and-amperes-law">chapter
 2’s pre-requisite</a>).</p>
+<p><a href="figures/F4-loop-axis.svg" class="figure"><img
+src="figures/F4-loop-axis.svg" loading="lazy"
+alt="A current loop with the field of its top and bottom pieces at a point on the axis, above a plot of the field along the axis for one coil and a Helmholtz pair" /></a></p>
+<p><em>Figure F4.5. The field on the axis of a loop. Above, schematic:
+the piece at the top of the loop makes at <span
+class="math inline">\(P\)</span> a field at right angles to the line
+<span class="math inline">\(r\)</span>; the piece at the bottom makes
+one tilted the other way; their sideways parts cancel and their parts
+along the axis add. Below, computed: the field along the axis of a coil
+of 100 turns, radius 20 cm, carrying 1 A, 314 μT at the centre and 111
+μT one radius away; and of a Helmholtz pair of two such coils one radius
+apart, 450 μT and nearly flat in the middle.</em></p>
 <h3 id="12-ampères-law">12. Ampère’s law</h3>
 <p><strong>The law.</strong> For steady currents, F2 (section 11) gave
 the circulation of <span class="math inline">\(\mathbf{B}\)</span> round
@@ -1282,10 +1341,19 @@ the iron (<a href="17-magnets.html">chapter 17</a>).</p>
 <h3 id="14-induction-faraday-and-lenz">14. Induction: Faraday and
 Lenz</h3>
 <p><strong>The discovery.</strong> Faraday wound two coils on one iron
-ring. A steady current in the first did nothing to the second; but at
-the moment the first was switched on or off, a meter on the second
-kicked. A magnet pushed into a coil did the same, and a magnet held
-still did nothing. What counts is <em>change</em>.</p>
+ring (figure F4.6). A steady current in the first did nothing to the
+second; but at the moment the first was switched on or off, a meter on
+the second kicked. A magnet pushed into a coil did the same, and a
+magnet held still did nothing. What counts is <em>change</em>.</p>
+<p><a href="figures/F4-faraday-ring.svg" class="figure"><img
+src="figures/F4-faraday-ring.svg" loading="lazy"
+alt="An iron ring with two coils, one with a battery and switch, one with a meter, above a timeline of the current and the meter’s kicks" /></a></p>
+<p><em>Figure F4.6. Faraday’s induction ring of 1831, schematic. Coil A
+is joined to a battery through a switch; coil B, on the other side of
+the ring, to a meter. While a steady current flows in A, the meter reads
+nothing. It kicks one way at the moment A is switched on, and the other
+way when it is switched off: only a changing flux in the ring drives a
+current in B. Drawn, not computed.</em></p>
 <p><strong>Faraday’s law.</strong> Round any loop, the <em>electromotive
 force</em> (EMF), the work done per unit charge by the electric field
 going once round, is</p>
@@ -1341,10 +1409,11 @@ on fields in conductors</a>.</p>
 class="math inline">\(L\)</span> slides at speed <span
 class="math inline">\(v\)</span> along two rails, across a field <span
 class="math inline">\(B\)</span> at right angles to rod, rails and
-motion. Each free charge <span class="math inline">\(q\)</span> in the
-rod moves with the rod and feels <span
-class="math inline">\(qvB\)</span> along the rod, and so is pushed from
-one end to the other. The work done per unit charge along the rod is</p>
+motion (figure F4.7). Each free charge <span
+class="math inline">\(q\)</span> in the rod moves with the rod and feels
+<span class="math inline">\(qvB\)</span> along the rod, and so is pushed
+from one end to the other. The work done per unit charge along the rod
+is</p>
 <p><span class="math display">\[
 \text{EMF} = BLv .
 \]</span></p>
@@ -1363,6 +1432,17 @@ class="math inline">\(NBA\omega\sin\omega t\)</span>: the
 alternating-current generator. With 100 turns of 0.01 m<span
 class="math inline">\(^2\)</span> in 0.5 T at 50 Hz, the peak EMF is 157
 V.</p>
+<p><a href="figures/F4-rails.svg" class="figure"><img
+src="figures/F4-rails.svg" loading="lazy"
+alt="A rod sliding to the right along two rails joined through a lamp, in a field out of the page, with the induced current running clockwise" /></a></p>
+<p><em>Figure F4.7. Motional EMF, seen from above, schematic. The field
+points out of the page and the rod slides to the right. A positive
+charge in the rod, moving with it, is pushed down the rod by <span
+class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span>, so the
+current runs clockwise round the circuit through the lamp. A clockwise
+current makes a field into the page inside the loop, against the growing
+outward flux (Lenz), and the force on the current in the rod points
+backwards: the hand that pushes the rod pays for the light.</em></p>
 <p>The deeper reading of <a
 href="01-why-accelerate.html#pre-requisite-faraday-induction-inductance-and-magnetic-energy">Faraday’s
 law in chapter 1</a> adds the “two-to-one rule” of the betatron and the
@@ -1465,14 +1545,14 @@ href="15-the-synchrotron.html">chapter 15</a>).</p>
 or H shape of iron with a gap of height <span
 class="math inline">\(g\)</span> where the beam goes, driven by a coil
 of <span class="math inline">\(N\)</span> turns carrying <span
-class="math inline">\(I\)</span>. Ampère’s law round the iron and across
-the gap is easiest written with the field <span class="math inline">\(H
-= B/(\mu_0\mu_r)\)</span>, in A/m, whose circulation is the current:
-<span class="math inline">\(\oint H\,dl = NI\)</span>. In the iron,
-<span class="math inline">\(\mu_r\)</span> is large and <span
-class="math inline">\(H\)</span> tiny; nearly all of <span
-class="math inline">\(NI\)</span> is spent across the gap, where <span
-class="math inline">\(H = B/\mu_0\)</span>. So</p>
+class="math inline">\(I\)</span> (figure F4.8). Ampère’s law round the
+iron and across the gap is easiest written with the field <span
+class="math inline">\(H = B/(\mu_0\mu_r)\)</span>, in A/m, whose
+circulation is the current: <span class="math inline">\(\oint H\,dl =
+NI\)</span>. In the iron, <span class="math inline">\(\mu_r\)</span> is
+large and <span class="math inline">\(H\)</span> tiny; nearly all of
+<span class="math inline">\(NI\)</span> is spent across the gap, where
+<span class="math inline">\(H = B/\mu_0\)</span>. So</p>
 <p><span class="math display">\[
 B \approx \frac{\mu_0NI}{g} .
 \]</span></p>
@@ -1485,6 +1565,18 @@ LHC’s 8.33 T comes from superconducting coils, with the iron only as a
 return path. The full theory is chapter 8’s <a
 href="08-seeing-the-beam.html#pre-requisite-magnetic-circuits-and-iron">pre-requisite
 on magnetic circuits and iron</a>.</p>
+<p><a href="figures/F4-iron-dipole.svg" class="figure"><img
+src="figures/F4-iron-dipole.svg" loading="lazy"
+alt="A C-shaped iron magnet in section, with a coil on its back leg, the flux running round the iron and across a narrow gap where the beam passes" /></a></p>
+<p><em>Figure F4.8. A C-shaped iron dipole in section, schematic, not to
+scale. The coil round the back leg drives a flux down the leg, along the
+lower arm, up across the gap and back along the upper arm (dashed,
+blue). The same dashed loop is the path for Ampère’s law, <span
+class="math inline">\(\oint H\,dl = NI\)</span>: in the iron <span
+class="math inline">\(H\)</span> is tiny, so nearly all the ampere-turns
+are spent across the gap, and <span class="math inline">\(B \approx
+\mu_0NI/g\)</span> there. The beam crosses the gap into the
+page.</em></p>
 <h3 id="16-the-displacement-current-and-maxwells-four-equations">16. The
 displacement current, and Maxwell’s four equations</h3>
 <p><strong>A gap in Ampère’s law.</strong> Charge a capacitor through a
@@ -1496,12 +1588,27 @@ class="math inline">\(I\)</span> is the current through <em>any</em>
 surface bounded by the loop. A flat disc is cut by the wire: <span
 class="math inline">\(\mu_0I\)</span>. But a bag-shaped surface with the
 same edge, passing between the capacitor’s plates, is cut by no current
-at all: zero. The law gives two answers. The same trouble appears in the
-mathematics: the divergence of a curl is zero (F2, section 11), so <span
-class="math inline">\(\nabla\times\mathbf{B} = \mu_0\mathbf{J}\)</span>
-demands <span class="math inline">\(\nabla\cdot\mathbf{J} = 0\)</span>,
-which contradicts the continuity equation of section 8 wherever charge
-is piling up.</p>
+at all: zero (figure F4.9). The law gives two answers. The same trouble
+appears in the mathematics: the divergence of a curl is zero (F2,
+section 11), so <span class="math inline">\(\nabla\times\mathbf{B} =
+\mu_0\mathbf{J}\)</span> demands <span
+class="math inline">\(\nabla\cdot\mathbf{J} = 0\)</span>, which
+contradicts the continuity equation of section 8 wherever charge is
+piling up.</p>
+<p><a href="figures/F4-displacement.svg" class="figure"><img
+src="figures/F4-displacement.svg" loading="lazy"
+alt="A wire charging a capacitor, with a loop round the wire bounding a flat disc pierced by the wire and a bag passing between the plates" /></a></p>
+<p><em>Figure F4.9. The gap in Ampère’s law, schematic. The loop <span
+class="math inline">\(C\)</span> round the wire is the edge of two
+surfaces: the flat disc <span class="math inline">\(S_1\)</span>,
+pierced by the current <span class="math inline">\(I\)</span>, and the
+bag <span class="math inline">\(S_2\)</span>, which passes between the
+capacitor’s plates and is pierced by no current. What crosses <span
+class="math inline">\(S_2\)</span> is the growing electric field between
+the plates. Maxwell’s displacement current, <span
+class="math inline">\(\varepsilon_0\,d\Phi_E/dt\)</span>, equals <span
+class="math inline">\(I\)</span>, so both surfaces give the same
+answer.</em></p>
 <p><strong>Maxwell’s cure.</strong> Between the plates there is no
 current, but there is a changing electric field. As the plates charge,
 <span class="math inline">\(\mathcal{E} = Q/(\varepsilon_0A)\)</span>
@@ -1658,7 +1765,8 @@ class="math inline">\(\mathcal{E}_y = f(x - ct)\)</span> into the first
 equation, <span class="math inline">\(\partial B_z/\partial t =
 -f&#39;\)</span>, which is satisfied by <span class="math inline">\(B_z
 = f(x - ct)/c\)</span>. So in the wave the two fields are in step, at
-right angles to each other and to the direction of travel, with</p>
+right angles to each other and to the direction of travel (figure
+F4.10), with</p>
 <p><span class="math display">\[
 \mathcal{E} = cB .
 \]</span></p>
@@ -1668,6 +1776,19 @@ and chapter 13’s <a
 href="13-rf-cavities-and-power.html#pre-requisite-maxwells-equations-and-the-wave-equation">pre-requisite
 on Maxwell’s equations and the wave equation</a> takes them into
 cavities and waveguides.</p>
+<p><a href="figures/F4-em-wave.svg" class="figure"><img
+src="figures/F4-em-wave.svg" loading="lazy"
+alt="A plane wave drawn in perspective: the electric field rising and falling along y, the magnetic field along z, in step, travelling along x" /></a></p>
+<p><em>Figure F4.10. A plane electromagnetic wave at one instant, two
+wavelengths of it, in an oblique view. The electric field points along
+<span class="math inline">\(y\)</span> and the magnetic field along
+<span class="math inline">\(z\)</span>, both rising and falling
+together, and the pattern moves along <span
+class="math inline">\(x\)</span> at <span
+class="math inline">\(c\)</span>, the direction of <span
+class="math inline">\(\boldsymbol{\mathcal{E}}\times\mathbf{B}\)</span>.
+The two are drawn the same height to be seen; in SI units <span
+class="math inline">\(B = \mathcal{E}/c\)</span>.</em></p>
 <h3 id="18-energy-flow-the-poynting-vector">18. Energy flow: the
 Poynting vector</h3>
 <p><strong>Energy on the move.</strong> Fields store energy, <span
@@ -1722,17 +1843,28 @@ class="math inline">\(\mathcal{E} = IR/\ell = 0.168\)</span> V/m pushing
 the current; round it, <span class="math inline">\(B = \mu_0I/(2\pi r) =
 3.54\)</span> mT at the surface. <span
 class="math inline">\(\mathbf{S}\)</span> points radially <em>into</em>
-the wire, with size <span class="math inline">\(\mathcal{E}B/\mu_0 =
-474\)</span> W/m<span class="math inline">\(^2\)</span>. Over a metre of
-surface, <span class="math inline">\(2\pi r\)</span> square metres, that
-is <span class="math inline">\(474 \times 2\pi \times 0.000564 =
-1.68\)</span> W, exactly the <span class="math inline">\(I^2R\)</span>
-heating of a metre of wire. The energy that heats a wire does not travel
-inside it with the electrons; it flows in through the space round it,
-from the fields. In a coaxial cable or a waveguide carrying RF power to
-a cavity, the energy likewise travels in the field between the
-conductors, and the metal only guides it (<a
-href="13-rf-cavities-and-power.html">chapter 13</a>).</p>
+the wire (figure F4.11), with size <span
+class="math inline">\(\mathcal{E}B/\mu_0 = 474\)</span> W/m<span
+class="math inline">\(^2\)</span>. Over a metre of surface, <span
+class="math inline">\(2\pi r\)</span> square metres, that is <span
+class="math inline">\(474 \times 2\pi \times 0.000564 = 1.68\)</span> W,
+exactly the <span class="math inline">\(I^2R\)</span> heating of a metre
+of wire. The energy that heats a wire does not travel inside it with the
+electrons; it flows in through the space round it, from the fields. In a
+coaxial cable or a waveguide carrying RF power to a cavity, the energy
+likewise travels in the field between the conductors, and the metal only
+guides it (<a href="13-rf-cavities-and-power.html">chapter 13</a>).</p>
+<p><a href="figures/F4-poynting-wire.svg" class="figure"><img
+src="figures/F4-poynting-wire.svg" loading="lazy"
+alt="A wire carrying current to the right, with the magnetic field circling it and the Poynting vector pointing into it from all sides" /></a></p>
+<p><em>Figure F4.11. Energy flowing into a wire, schematic: 10 A in 1
+mm<span class="math inline">\(^2\)</span> copper. The field <span
+class="math inline">\(\mathcal{E} = 0.168\)</span> V/m runs along the
+wire with the current; the magnetic field, 3.54 mT at the surface,
+circles it, out of the page above and into it below. Their cross product
+points into the wire from every side, 474 W/m<span
+class="math inline">\(^2\)</span>, which over a metre of surface is 1.68
+W, exactly the heat the wire’s resistance makes.</em></p>
 <h3 id="19-the-units-together">19. The units, together</h3>
 <table>
 <thead>
