@@ -1844,9 +1844,9 @@ them gently, and wrapped in lead to catch what escapes (Forck, section
 (section 13).</p>
 <h3 id="3-the-faraday-cup">3. The Faraday cup</h3>
 <p><strong>The picture.</strong> An insulated metal block stops the
-beam, and an ammeter between it and ground reads the current. Nothing
-else measures current absolutely and so simply: the block counts
-charges.</p>
+beam, and an ammeter between it and ground reads the current (figure
+8.5). Nothing else measures current absolutely and so simply: the block
+counts charges.</p>
 <p><strong>Secondary electrons.</strong> When a particle strikes the
 block, it knocks out secondary electrons, mostly with energies below 10
 eV, in a distribution peaked forward of the surface (Forck, section
@@ -1880,6 +1880,14 @@ class="math inline">\(B\)</span> the field (T). For 10 eV and 10 mT,
 <span class="math inline">\(r_c = 1.07\)</span> mm, small against a cup
 of 50 mm. The GSI cups use cobalt-samarium magnets giving about 0.1
 T.</p>
+<p><a href="figures/08-faraday-cup.svg" class="figure"><img
+src="figures/08-faraday-cup.svg" loading="lazy"
+alt="A Faraday cup: suppressor ring, deep insulated cup, magnets and ammeter" /></a></p>
+<p><em>Figure 8.5. A Faraday cup, in section, schematic. The beam stops
+in a deep insulated cup, and an ammeter between the cup and ground reads
+the current. A suppressor ring at the entrance, some hundreds of volts
+negative, turns the secondary electrons back, and permanent magnets
+across the cup make the slow ones spiral, so they stay in.</em></p>
 <p><strong>What it reads.</strong> The current <span
 class="math inline">\(I = \dot{N} q\)</span>; for a singly charged beam,
 1 µA is <span class="math inline">\(6.24 \times 10^{12}\)</span>
@@ -2242,7 +2250,7 @@ current, and its output sags.</p>
 <p><a href="figures/08-transformer.svg" class="figure"><img
 src="figures/08-transformer.svg" loading="lazy"
 alt="A beam current transformer and its equivalent circuit" /></a></p>
-<p><em>Figure 8.5. Left: the ring core seen along the beam, which comes
+<p><em>Figure 8.6. Left: the ring core seen along the beam, which comes
 out of the page. By the right-hand rule the field <span
 class="math inline">\(H = I_{beam}/(2\pi r)\)</span> circles
 anticlockwise inside the core; the winding of <span
@@ -2379,7 +2387,7 @@ droops by only 0.6 per cent before any further correction.</p>
 <p><a href="figures/08-droop.svg" class="figure"><img
 src="figures/08-droop.svg" loading="lazy"
 alt="The output of a passive and an active transformer for a flat pulse" /></a></p>
-<p><em>Figure 8.6. What a transformer shows for a flat beam pulse 100 µs
+<p><em>Figure 8.7. What a transformer shows for a flat beam pulse 100 µs
 long, as a fraction of the transformed current <span
 class="math inline">\(RI_0/N\)</span>, from <span
 class="math inline">\(e^{-t/\tau}\)</span> during the pulse. The passive
@@ -3015,7 +3023,7 @@ the wall-current monitor</h3>
 <p><strong>The picture.</strong> A ring of magnetic material around the
 beam is a transformer whose primary is the beam itself, one turn. A
 winding of <span class="math inline">\(N\)</span> turns on the ring is
-the secondary (Figure 8.5). The beam’s magnetic field is tiny, <span
+the secondary (Figure 8.6). The beam’s magnetic field is tiny, <span
 class="math inline">\(\mu_0 I/2\pi r\)</span>, which for 1 µA at 10 cm
 is 2 pT, against the Earth’s 50 µT; the ring gathers it from all round,
 so the reading barely depends on where the beam passes.</p>
@@ -3090,15 +3098,25 @@ are all needed.</p>
 <p><strong>The wall-current monitor.</strong> Break the pipe with a
 ceramic gap and bridge it with <span class="math inline">\(n\)</span>
 resistors of value <span class="math inline">\(R\)</span> around the
-circumference. The image current flows through them in parallel and
-makes <span class="math inline">\(U = (R/n)\,I_{beam}\)</span>. With 10
-to 100 resistors of 10 to 100 Ω, <span class="math inline">\(R/n \approx
-1\)</span> Ω, so 1 A of bunch current gives 1 V. Ferrite rings outside
-force the current through the resistors and set the low cut-off near 10
-kHz; the gap’s capacitance sets the high one at several GHz. It shows
-the bunch shape directly, down to bunch lengths of a nanosecond, and is
-the usual instrument for watching bunches in a proton synchrotron (<a
+circumference (figure 8.8). The image current flows through them in
+parallel and makes <span class="math inline">\(U =
+(R/n)\,I_{beam}\)</span>. With 10 to 100 resistors of 10 to 100 Ω, <span
+class="math inline">\(R/n \approx 1\)</span> Ω, so 1 A of bunch current
+gives 1 V. Ferrite rings outside force the current through the resistors
+and set the low cut-off near 10 kHz; the gap’s capacitance sets the high
+one at several GHz. It shows the bunch shape directly, down to bunch
+lengths of a nanosecond, and is the usual instrument for watching
+bunches in a proton synchrotron (<a
 href="19-longitudinal-dynamics.html">chapter 19</a>).</p>
+<p><a href="figures/08-wall-current.svg" class="figure"><img
+src="figures/08-wall-current.svg" loading="lazy"
+alt="A wall-current monitor: a ceramic gap in the pipe bridged by resistors, with ferrite rings" /></a></p>
+<p><em>Figure 8.8. The wall-current monitor, in section, schematic. The
+pipe is broken by a ceramic gap and bridged by <span
+class="math inline">\(n\)</span> resistors round it. The image current,
+equal and opposite to the beam, flows through them in parallel and makes
+<span class="math inline">\(U = (R/n)\,I_{beam}\)</span>. Ferrite rings
+outside force the current through the resistors.</em></p>
 <h3
 id="pre-requisite-transmission-lines-matching-s-parameters">Pre-requisite:
 Transmission lines, matching, S-parameters</h3>
@@ -3493,9 +3511,9 @@ charge on the axis pushes the two halves equally and oppositely.</p>
 <h3 id="5-beam-position-monitors">5. Beam position monitors</h3>
 <p><strong>The difference over sum.</strong> Put two small electrodes,
 buttons, in the wall at azimuths 0 and <span
-class="math inline">\(\pi\)</span>, each of angular width <span
-class="math inline">\(\alpha\)</span>, and let the beam be at <span
-class="math inline">\((r, \theta)\)</span> with <span
+class="math inline">\(\pi\)</span> (figure 8.9, left), each of angular
+width <span class="math inline">\(\alpha\)</span>, and let the beam be
+at <span class="math inline">\((r, \theta)\)</span> with <span
 class="math inline">\(r \ll a\)</span>. Expand the image-current density
 to first order in <span class="math inline">\(r/a\)</span>:</p>
 <p><span class="math display">\[
@@ -3570,12 +3588,24 @@ bunch frequency.</p>
 <p><strong>Stripline monitors.</strong> For short relativistic bunches
 the electrode is made a strip of length <span
 class="math inline">\(l\)</span>, forming with the pipe a transmission
-line of 50 Ω matched at both ends. A passing bunch induces a pulse at
-the upstream port; a second pulse of opposite sign follows a time <span
-class="math inline">\(2l/c\)</span> later, when the image charge leaves
-the strip. A bunch travelling the other way gives its signal at the
-other port. This directivity is why striplines are used in colliders,
-where two beams pass the same monitor in opposite directions.</p>
+line of 50 Ω matched at both ends (figure 8.9, right). A passing bunch
+induces a pulse at the upstream port; a second pulse of opposite sign
+follows a time <span class="math inline">\(2l/c\)</span> later, when the
+image charge leaves the strip. A bunch travelling the other way gives
+its signal at the other port. This directivity is why striplines are
+used in colliders, where two beams pass the same monitor in opposite
+directions.</p>
+<p><a href="figures/08-bpm.svg" class="figure"><img
+src="figures/08-bpm.svg" loading="lazy"
+alt="Button pick-ups in a pipe with the beam off centre, and a stripline with its two pulses" /></a></p>
+<p><em>Figure 8.9. Two position monitors, schematic. Left: buttons in
+the pipe wall, end view, with the beam a distance <span
+class="math inline">\(x\)</span> off centre; the near button collects
+more image charge, and the difference over the sum gives <span
+class="math inline">\(x\)</span>. Right: a stripline, side view. A
+passing bunch gives a pulse at the upstream port, and a second of
+opposite sign a time <span class="math inline">\(2l/c\)</span> later,
+when its image charge leaves the strip.</em></p>
 <p><strong>Cavity monitors.</strong> A beam passing off centre through a
 pillbox cavity excites its dipole mode, TM<span
 class="math inline">\(_{110}\)</span>, with an amplitude proportional to
@@ -4082,11 +4112,11 @@ little energy.</p>
 </details>
 <h3 id="6-profiles">6. Profiles</h3>
 <p><strong>Screens.</strong> A plate that glows where the beam hits it,
-watched by a camera. It is the most direct of all instruments and is
-found everywhere from the source to the target. It intercepts the beam
-and is several millimetres thick, so it is used in transfer lines and at
-the end of linear machines, never in a ring’s circulating beam.
-Properties of common materials (Forck, table 3.1):</p>
+watched by a camera (figure 8.10). It is the most direct of all
+instruments and is found everywhere from the source to the target. It
+intercepts the beam and is several millimetres thick, so it is used in
+transfer lines and at the end of linear machines, never in a ring’s
+circulating beam. Properties of common materials (Forck, table 3.1):</p>
 <table>
 <thead>
 <tr>
@@ -4231,6 +4261,16 @@ class="math inline">\(10^6\)</span> for two) and imaged on a phosphor.
 These monitors are in nearly every proton and ion synchrotron, where
 they show the beam shrinking during acceleration as the normalised
 emittance is conserved.</p>
+<p><a href="figures/08-profiles.svg" class="figure"><img
+src="figures/08-profiles.svg" loading="lazy"
+alt="Three profile monitors: a screen and camera, a wire scanner, and a residual-gas monitor" /></a></p>
+<p><em>Figure 8.10. Three ways to see a profile, side views, schematic.
+Left: a screen at 45° glows where the beam strikes and is watched by a
+camera; it stops the beam. Middle: a thin wire swept across the beam
+makes a shower of secondaries, counted by a scintillator outside the
+pipe. Right: a residual-gas monitor; a field sweeps the ions the beam
+makes in the gas onto a microchannel plate, and where they land gives
+the profile without touching the beam.</em></p>
 <p><strong>Synchrotron light.</strong> An electron bent in a dipole
 radiates, and imaging that light gives the profile without contact. Its
 resolution is limited by diffraction, because the light comes in a
@@ -4845,8 +4885,8 @@ shrinking beam that residual-gas monitors show during acceleration
 <p><a href="figures/08-ellipse.svg" class="figure"><img
 src="figures/08-ellipse.svg" loading="lazy"
 alt="The rms ellipse before and after a drift" /></a></p>
-<p><em>Figure 8.7. Section 7’s example beam in the plane of position and
-angle. Blue: its rms ellipse at the quadrupole, <span
+<p><em>Figure 8.11. Section 7’s example beam in the plane of position
+and angle. Blue: its rms ellipse at the quadrupole, <span
 class="math inline">\(\gamma_xx^2 + 2\alpha_xxx&#39; + \beta_xx&#39;^2 =
 \varepsilon\)</span> with <span class="math inline">\(\varepsilon =
 2\)</span> µm, <span class="math inline">\(\beta_x = 10\)</span> m and
@@ -5246,7 +5286,7 @@ class="math inline">\(c\)</span> are poorly determined.</p>
 <p><a href="figures/08-quad-scan.svg" class="figure"><img
 src="figures/08-quad-scan.svg" loading="lazy"
 alt="The parabola of a quadrupole scan" /></a></p>
-<p><em>Figure 8.8. The squared beam size on the screen against the
+<p><em>Figure 8.12. The squared beam size on the screen against the
 quadrupole’s strength for the example beam, <span
 class="math inline">\(\sigma_{11}(K) = 500(K + 0.3)^2 + 5\)</span>
 mm<span class="math inline">\(^2\)</span> (that is <span
@@ -5268,9 +5308,9 @@ emittance scattered by 52 per cent in the least-squares table.</em></p>
 rigidity <span class="math inline">\(B\rho = p/q\)</span> (<a
 href="06-the-electrostatic-generator.html">chapter 6</a> uses one to
 hold a tandem’s voltage). The simplest to analyse is the 180°
-spectrometer: a uniform field bends particles from a source through half
-a circle onto a detector. A particle of momentum <span
-class="math inline">\(p\)</span> arrives at distance <span
+spectrometer (figure 8.13): a uniform field bends particles from a
+source through half a circle onto a detector. A particle of momentum
+<span class="math inline">\(p\)</span> arrives at distance <span
 class="math inline">\(2\rho\)</span> from the source, so a momentum
 change <span class="math inline">\(\delta = \Delta p/p\)</span> moves it
 by</p>
@@ -5286,6 +5326,20 @@ is why the 180° geometry focuses, and the second-order miss is <span
 class="math inline">\(\rho\alpha^2\)</span>. With a source of width
 <span class="math inline">\(w\)</span>, two momenta are resolved when
 their separation exceeds the image width:</p>
+<p><a href="figures/08-spectrometer.svg" class="figure"><img
+src="figures/08-spectrometer.svg" loading="lazy"
+alt="The 180-degree spectrometer: half-circle orbits for two momenta and two angles over a detector line" /></a></p>
+<p><em>Figure 8.13. The 180° spectrometer, seen along its field, with
+everything exaggerated. A particle of momentum <span
+class="math inline">\(p\)</span> lands at <span
+class="math inline">\(2\rho\)</span>; one of momentum <span
+class="math inline">\(p(1 + \delta)\)</span> lands <span
+class="math inline">\(2\rho\delta\)</span> further out. Particles of
+momentum <span class="math inline">\(p\)</span> leaving at <span
+class="math inline">\(\pm\alpha\)</span> (dashed) land together at <span
+class="math inline">\(2\rho\cos\alpha\)</span>, only <span
+class="math inline">\(\rho\alpha^2\)</span> short: to first order they
+meet again, which is why the geometry focuses.</em></p>
 <p><span class="math display">\[
 \delta_{min} = \frac{w + \rho\,\alpha^2}{2\rho}.
 \]</span></p>
