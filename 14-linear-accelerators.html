@@ -2930,16 +2930,28 @@ order. The price is that half the cells hold no field and do not
 accelerate.</p>
 <p><strong>The side-coupled structure.</strong> Knapp and his colleagues
 at Los Alamos removed that price. They moved the unexcited cells off the
-axis, to the side of the chain, where they serve only as coupling cells.
-Seen by the beam, the structure is a row of accelerating cells, each in
-opposite phase to the next: a <span class="math inline">\(\pi\)</span>
-mode for the beam, cells <span
+axis, to the side of the chain, where they serve only as coupling cells
+(figure 14.7). Seen by the beam, the structure is a row of accelerating
+cells, each in opposite phase to the next: a <span
+class="math inline">\(\pi\)</span> mode for the beam, cells <span
 class="math inline">\(\beta\lambda/2\)</span> long. Seen as a resonant
 chain, it is a <span class="math inline">\(\pi/2\)</span> mode. Knapp
 reported it at the 1964 linac conference at MURA (Nagle 1967); the
 definitive paper is Knapp, Knapp and Potter (1968). It accelerated LAMPF
 from 100 to 800 MeV at 805 MHz, organised in 44 modules each driven by a
 1.25 MW klystron (Knapp 1971).</p>
+<p><a href="figures/14-side-coupled.svg" class="figure"><img
+src="figures/14-side-coupled.svg" loading="lazy"
+alt="The side-coupled structure: accelerating cells on the axis in opposite phase, coupling cells to the side" /></a></p>
+<p><em>Figure 14.7. The side-coupled structure in section, schematic.
+The accelerating cells sit on the axis, each <span
+class="math inline">\(\beta\lambda/2\)</span> long, and neighbours are
+in opposite phase, a <span class="math inline">\(\pi\)</span> mode as
+the beam sees it. The coupling cells sit off to the side, alternately
+above and below, each bridging two accelerating cells through slots. As
+a resonant chain the whole runs in the <span
+class="math inline">\(\pi/2\)</span> mode, so the coupling cells hold
+almost no field.</em></p>
 <p><strong>A computed comparison.</strong> In the chain model above with
 <span class="math inline">\(k_c\)</span> = 0.02 and random
 cell-frequency errors of <span class="math inline">\(10^{-4}\)</span>
@@ -3251,7 +3263,7 @@ is a constant.</p>
 <p><a href="figures/14-brillouin.svg" class="figure"><img
 src="figures/14-brillouin.svg" loading="lazy"
 alt="The Brillouin diagram of a SLAC-like disc-loaded guide, with the light line crossing at 2856 MHz" /></a></p>
-<p><em>Figure 14.7. The Brillouin diagram of the coupled-cell model with
+<p><em>Figure 14.8. The Brillouin diagram of the coupled-cell model with
 SLAC’s numbers worked out below (<span
 class="math inline">\(k_c\)</span> = 0.0135, <span
 class="math inline">\(d = \lambda/3\)</span> = 35.0 mm), drawn over
@@ -3355,10 +3367,10 @@ and the electron can ride a crest of the wave like a surfer. A smooth
 pipe cannot carry such a wave: a waveguide mode has phase velocity
 greater than <span class="math inline">\(c\)</span> (<a
 href="13-rf-cavities-and-power.html">chapter 13</a>). Loading the pipe
-with a row of irises, discs with a central hole, slows the wave. The
-disc spacing and hole radius are chosen so that the phase velocity is
-exactly <span class="math inline">\(c\)</span> at the operating
-frequency.</p>
+with a row of irises, discs with a central hole, slows the wave (figure
+14.9). The disc spacing and hole radius are chosen so that the phase
+velocity is exactly <span class="math inline">\(c\)</span> at the
+operating frequency.</p>
 <p><strong>The geometry.</strong> The structure is periodic with period
 <span class="math inline">\(d\)</span>, so its fields obey Floquet’s
 theorem: from one cell to the next they repeat with a phase shift <span
@@ -3371,6 +3383,17 @@ class="math inline">\(d = \lambda/3\)</span>. At SLAC’s 2856 MHz, <span
 class="math inline">\(\lambda\)</span> = 104.97 mm and <span
 class="math inline">\(d\)</span> = 35.0 mm, about 87 cells in a 3.05 m
 section.</p>
+<p><a href="figures/14-disc-loaded.svg" class="figure"><img
+src="figures/14-disc-loaded.svg" loading="lazy"
+alt="A disc-loaded waveguide section with input and output couplers, the wave and a bunch on its crest" /></a></p>
+<p><em>Figure 14.9. A travelling-wave section of disc-loaded waveguide,
+schematic. Power from the klystron enters through the input coupler,
+travels along the section as a wave that the irises slow to exactly
+<span class="math inline">\(c\)</span>, and what is left leaves through
+the output coupler into a load. With <span
+class="math inline">\(2\pi/3\)</span> per cell the period is <span
+class="math inline">\(d = \lambda/3\)</span>, three cells to a
+wavelength; a bunch rides the crest at the same speed.</em></p>
 <p><strong>Capture.</strong> A wave moving at <span
 class="math inline">\(c\)</span> cannot have a synchronous particle with
 <span class="math inline">\(\beta &lt; 1\)</span>; an injected electron
@@ -3534,11 +3557,12 @@ V = \sqrt{rLP_0\,(1-e^{-2\tau})} .
 \alpha_0/(1 - 2\alpha_0z)\)</span> with <span
 class="math inline">\(\alpha_0 = (1-e^{-2\tau})/(2L)\)</span>, rising
 along the section, so <span class="math inline">\(v_g\)</span> falls
-from input to output. Figure 14.8 compares the two kinds of section.</p>
+from input to output. Figure 14.10 compares the two kinds of
+section.</p>
 <p><a href="figures/14-travelling-wave.svg" class="figure"><img
 src="figures/14-travelling-wave.svg" loading="lazy"
 alt="Energy gain of constant-impedance and constant-gradient sections against attenuation, and their fields along a SLAC section" /></a></p>
-<p><em>Figure 14.8. Left: the energy gain of a travelling-wave section
+<p><em>Figure 14.10. Left: the energy gain of a travelling-wave section
 with no beam, in units of <span
 class="math inline">\(\sqrt{rLP_0}\)</span>, against the attenuation
 <span class="math inline">\(\tau\)</span>. The constant-impedance
@@ -3906,18 +3930,27 @@ section 1.5.2). Each resonator is independently phased, so the linac can
 accelerate any ion to a range of velocities. ESS uses double-spoke
 cavities from about 90 to 216 MeV.</p>
 <p><strong>Recirculation: CEBAF.</strong> At Jefferson Lab in Virginia,
-two superconducting linacs are joined by arcs into a racetrack, and the
-electrons pass through both linacs up to five times. Construction began
-on 13 February 1987, beam first reached an experimental hall on 1 July
-1994, the 4 GeV design energy was reached in 1995 and 6 GeV in 2000; the
-upgrade to 12 GeV was completed in 2017. The beam is continuous; the
-design current was 200 μA, and the 4 GeV design energy was first reached
-in five passes with 25 μA (Padamsee, Knobloch and Hays 1998, section
-1.6.3). For 4 GeV in ten linac passes each linac must give about 0.4 GeV
-per pass. The cavities were the Cornell 5-cell 1.5 GHz design, 338 of
-them, designed for 5 MV/m (Padamsee 2009, section 11.2.1); Padamsee
-(2020) gives their gradient as raised to 7.5 MV/m to reach 6.5 GeV in
-later operation.</p>
+two superconducting linacs are joined by arcs into a racetrack (figure
+14.11), and the electrons pass through both linacs up to five times.
+Construction began on 13 February 1987, beam first reached an
+experimental hall on 1 July 1994, the 4 GeV design energy was reached in
+1995 and 6 GeV in 2000; the upgrade to 12 GeV was completed in 2017. The
+beam is continuous; the design current was 200 μA, and the 4 GeV design
+energy was first reached in five passes with 25 μA (Padamsee, Knobloch
+and Hays 1998, section 1.6.3). For 4 GeV in ten linac passes each linac
+must give about 0.4 GeV per pass. The cavities were the Cornell 5-cell
+1.5 GHz design, 338 of them, designed for 5 MV/m (Padamsee 2009, section
+11.2.1); Padamsee (2020) gives their gradient as raised to 7.5 MV/m to
+reach 6.5 GeV in later operation.</p>
+<p><a href="figures/14-cebaf.svg" class="figure"><img
+src="figures/14-cebaf.svg" loading="lazy"
+alt="CEBAF’s racetrack: injector, two linacs, five stacked recirculation arcs at each end, extraction to the halls" /></a></p>
+<p><em>Figure 14.11. CEBAF’s racetrack seen from above, schematic and
+not to scale. The injector feeds two superconducting linacs joined by
+recirculation arcs, one arc for each pass, stacked; the electrons pass
+through both linacs up to five times, gaining about 0.4 GeV a pass in
+each for the 4 GeV design, and leave for the experimental halls. The
+beam is continuous.</em></p>
 <p><strong>SNS.</strong> The Spallation Neutron Source at Oak Ridge
 accelerates H<span class="math inline">\(^-\)</span> ions (a proton
 carrying two electrons; at the ring the two electrons are stripped off
@@ -3926,16 +3959,27 @@ circulating, <a href="21-injection-and-extraction.html">chapter 21</a>):
 a 2.5 MeV front end with a 402.5 MHz RFQ, six drift-tube tanks at 402.5
 MHz to 87 MeV with permanent-magnet quadrupoles, four coupled-cavity
 modules at 805 MHz to 186 MeV, and 81 superconducting cavities at 805
-MHz to 1 GeV: 33 with <span class="math inline">\(\beta\)</span> = 0.61
-and 48 with <span class="math inline">\(\beta\)</span> = 0.81, designed
-for 10.1 and 15.9 MV/m (Aleksandrov et al. 2006; Zhang et al. 2006; Jeon
-et al. 2006). The design is 38 mA peak in 1 ms pulses at 60 Hz, chopped
-so that the beam is on for 68 per cent of each pulse: an average linac
-current of 1.6 mA and 1.44 MW on target (Henderson 2006). Beam
-commissioning ran from 2002 to May 2006 in seven runs (Henderson 2006).
-Each superconducting cavity has its own klystron, so a failed cavity can
-be switched off and the others rephased around it, which a long copper
-structure with its velocity profile machined in cannot do.</p>
+MHz to 1 GeV (figure 14.12): 33 with <span
+class="math inline">\(\beta\)</span> = 0.61 and 48 with <span
+class="math inline">\(\beta\)</span> = 0.81, designed for 10.1 and 15.9
+MV/m (Aleksandrov et al. 2006; Zhang et al. 2006; Jeon et al. 2006). The
+design is 38 mA peak in 1 ms pulses at 60 Hz, chopped so that the beam
+is on for 68 per cent of each pulse: an average linac current of 1.6 mA
+and 1.44 MW on target (Henderson 2006). Beam commissioning ran from 2002
+to May 2006 in seven runs (Henderson 2006). Each superconducting cavity
+has its own klystron, so a failed cavity can be switched off and the
+others rephased around it, which a long copper structure with its
+velocity profile machined in cannot do.</p>
+<p><a href="figures/14-proton-chain.svg" class="figure"><img
+src="figures/14-proton-chain.svg" loading="lazy"
+alt="The SNS linac from source to 1 GeV: RFQ, drift-tube linac, coupled-cavity linac and two families of superconducting cavities" /></a></p>
+<p><em>Figure 14.12. A proton linac from end to end, the SNS as built,
+schematic. Each structure serves a range of velocity: the RFQ to 2.5
+MeV, six drift-tube tanks to 87 MeV, four coupled-cavity modules to 186
+MeV, then superconducting cavities of <span
+class="math inline">\(\beta\)</span> = 0.61 and 0.81 to 1 GeV. The
+frequency doubles once, from 402.5 to 805 MHz, as <span
+class="math inline">\(\beta\)</span> rises.</em></p>
 <p><strong>The European XFEL.</strong> Hamburg, built from early 2009. A
 photo-injector with one superconducting module brings the electrons to
 130 MeV; 96 TESLA-type modules of eight cavities each (a module, or
@@ -4280,14 +4324,15 @@ class="math inline">\(dt/dW = -D/(v^2)\,dv/dW =
 mc^2\beta\gamma^3\,d\beta\)</span> as in section 3; this is the linear
 term, good while <span class="math inline">\(\Delta W\)</span> is small
 compared with <span class="math inline">\(W\)</span>.) So the curve of
-arrival phase against cavity phase is very nearly a sine wave. Its
-amplitude gives the cavity voltage, its zero crossings give the cavity
-phase at which the beam gains nothing, and its offset and slight
-asymmetry give the input energy. For an illustration with SNS-like
-numbers, a proton at 400 MeV (<span class="math inline">\(\beta\)</span>
-= 0.713), a cavity giving 10 MV and BPMs 5 m apart at 805 MHz give a
-curve of amplitude about <span class="math inline">\(49^\circ\)</span>;
-a 1 per cent error in the cavity voltage changes it by <span
+arrival phase against cavity phase is very nearly a sine wave (figure
+14.13). Its amplitude gives the cavity voltage, its zero crossings give
+the cavity phase at which the beam gains nothing, and its offset and
+slight asymmetry give the input energy. For an illustration with
+SNS-like numbers, a proton at 400 MeV (<span
+class="math inline">\(\beta\)</span> = 0.713), a cavity giving 10 MV and
+BPMs 5 m apart at 805 MHz give a curve of amplitude about <span
+class="math inline">\(49^\circ\)</span>; a 1 per cent error in the
+cavity voltage changes it by <span
 class="math inline">\(0.5^\circ\)</span>. At SNS the measured curves
 were fitted with a model to give the input energy, the gradient and the
 beam-cavity phase to within 1 per cent and <span
@@ -4298,6 +4343,16 @@ were fitted to the data from two BPMs <span
 class="math inline">\(6\beta\lambda\)</span> apart, for three RF
 amplitudes; the fit for DTL tank 1 also showed that the incoming beam
 was 26.5 keV, 1.06 per cent, below its 2.5 MeV design (Jeon 2006).</p>
+<p><a href="figures/14-phase-scan.svg" class="figure"><img
+src="figures/14-phase-scan.svg" loading="lazy"
+alt="Arrival phase at a BPM against cavity phase: a sine of amplitude 48.9 degrees" /></a></p>
+<p><em>Figure 14.13. A phase scan, computed from the formula above with
+the illustrative SNS-like numbers of the text: 400 MeV protons, a cavity
+giving 10 MV, BPMs 5 m on measuring at 805 MHz. The arrival phase shift
+is <span class="math inline">\(-48.9^\circ\sin\phi\)</span>. Its
+amplitude gives the cavity voltage and its zero crossings the phases at
+which the beam gains nothing; on crest the beam gains most and arrives
+earliest.</em></p>
 <p><strong>The acceptance scan.</strong> The older method, still used
 for first light. Put an energy degrader (an absorber thick enough to
 stop particles below design energy) and a Faraday cup after the tank and
