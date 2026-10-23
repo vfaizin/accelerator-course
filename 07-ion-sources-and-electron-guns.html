@@ -3982,13 +3982,24 @@ the bunch and nonlinear space charge; in a real gun these leave a
 residue, and codes that track particles with space charge are used for
 the design.</p>
 <p><strong>The S-band gun.</strong> A widely copied design is the
-1.6-cell gun at 2856 MHz developed by BNL, SLAC and UCLA. The LCLS gun
-is a version of it: the full cell fed from two sides to remove dipole
-fields, shaped as a racetrack to cancel the quadrupole fields the double
-feed brings, and the separation between the wanted π-mode and the
-unwanted 0-mode raised from the 3.2 MHz of earlier guns to 15 MHz.
-Electrons leave it at about 6 MeV, where <span
+1.6-cell gun at 2856 MHz (figure 7.6) developed by BNL, SLAC and UCLA.
+The LCLS gun is a version of it: the full cell fed from two sides to
+remove dipole fields, shaped as a racetrack to cancel the quadrupole
+fields the double feed brings, and the separation between the wanted
+π-mode and the unwanted 0-mode raised from the 3.2 MHz of earlier guns
+to 15 MHz. Electrons leave it at about 6 MeV, where <span
 class="math inline">\(\gamma = 12.7\)</span>.</p>
+<p><a href="figures/07-rf-gun.svg" class="figure"><img
+src="figures/07-rf-gun.svg" loading="lazy"
+alt="A 1.6-cell RF gun: photocathode on the end wall, laser from a mirror, RF feeds, solenoid" /></a></p>
+<p><em>Figure 7.6. The 1.6-cell S-band RF gun, in section, schematic. A
+copper photocathode forms the end wall of the 0.6 cell, where the field
+is highest, about 115 MV/m; a 253 nm laser pulse, brought in along the
+beam pipe by a mirror, frees the bunch. The full cell is fed with 2856
+MHz from both sides. The gun runs in the π mode: at any instant the two
+cells’ fields point opposite ways, and the bunch crosses each while its
+field pushes it on. A solenoid just after the gun does the emittance
+compensation; the electrons leave at about 6 MeV.</em></p>
 <p><strong>Numbers.</strong> The LCLS injector produced first electrons
 on 5 April 2007 and 250 MeV beam in the SLAC linac on 14 April. It met
 its design: 1 nC per bunch, a projected normalised emittance of 1.2 µm
@@ -4101,7 +4112,7 @@ reflects long radio waves for the same reason.</p>
 <p><a href="figures/07-plasma-dispersion.svg" class="figure"><img
 src="figures/07-plasma-dispersion.svg" loading="lazy"
 alt="Dispersion relation of waves in a plasma" /></a></p>
-<p><em>Figure 7.6. Frequency against wavenumber for a wave in a plasma,
+<p><em>Figure 7.7. Frequency against wavenumber for a wave in a plasma,
 <span class="math inline">\(\omega^2 = \omega_p^2 + k^2c^2\)</span>
 (red), in units of the plasma frequency. At high frequency it approaches
 light in vacuum (dashed). Below <span
@@ -4496,7 +4507,7 @@ u_0 \ge c_s = \sqrt{\frac{k_B T_e}{M}}.
 <p><a href="figures/07-bohm.svg" class="figure"><img
 src="figures/07-bohm.svg" loading="lazy"
 alt="Ion and electron densities entering a sheath" /></a></p>
-<p><em>Figure 7.7. The densities just inside a sheath, as the potential
+<p><em>Figure 7.8. The densities just inside a sheath, as the potential
 falls: electrons (blue) by the Boltzmann factor, ions by energy
 conservation and constant flux. Ions that enter at the ion sound speed
 <span class="math inline">\(c_s\)</span> (red) thin out more slowly than
@@ -4547,17 +4558,26 @@ the gap can carry:</p>
 \]</span></p>
 <p>Here <span class="math inline">\(d_{\mathrm{eff}}\)</span> is the
 effective gap from the meniscus to the extraction electrode. The
-meniscus is a free boundary, and its shape is the beam’s first lens. If
-the plasma is dense compared with the gap’s capacity, the meniscus
-bulges outward, convex, and the beam diverges and strikes the extraction
-electrode. If the plasma is thin, the meniscus retreats into the
-chamber, concave, and focuses the beam; too thin and it over-focuses to
-a crossover and diverges again. Between them lies a matched condition, a
-slightly concave meniscus, at which the beam leaves nearly parallel and
-the emittance is least. Because the right-hand side scales as <span
-class="math inline">\(V^{3/2}\)</span>, matching is a condition on the
-perveance: for a fixed geometry and plasma, there is one best voltage.
-The practical consequence is in “At the bench”.</p>
+meniscus is a free boundary, and its shape is the beam’s first lens
+(figure 7.9). If the plasma is dense compared with the gap’s capacity,
+the meniscus bulges outward, convex, and the beam diverges and strikes
+the extraction electrode. If the plasma is thin, the meniscus retreats
+into the chamber, concave, and focuses the beam; too thin and it
+over-focuses to a crossover and diverges again. Between them lies a
+matched condition, a slightly concave meniscus, at which the beam leaves
+nearly parallel and the emittance is least. Because the right-hand side
+scales as <span class="math inline">\(V^{3/2}\)</span>, matching is a
+condition on the perveance: for a fixed geometry and plasma, there is
+one best voltage. The practical consequence is in “At the bench”.</p>
+<p><a href="figures/07-meniscus.svg" class="figure"><img
+src="figures/07-meniscus.svg" loading="lazy"
+alt="The plasma meniscus at the extraction hole: convex, matched and deeply concave, with the beams they give" /></a></p>
+<p><em>Figure 7.9. The plasma’s edge at the hole of the plasma
+electrode, in three cases, schematic. Too dense a plasma bulges out,
+convex, and the beam diverges onto the extraction electrode. Matched,
+the meniscus is slightly concave and the beam leaves nearly parallel.
+Too thin a plasma retreats, deeply concave, and the beam crosses over
+and diverges again.</em></p>
 <p>The extraction gap is limited by breakdown (<a
 href="04-high-voltage-and-breakdown.html">chapter 4</a>). At fixed field
 <span class="math inline">\(\mathcal{E} = V/d\)</span>, the
@@ -4604,20 +4624,20 @@ the current density and plasma density rise, the proton fraction rises
 with them, and the narrow channel limits how much gas escapes. This is
 the principle of the cyclotron capillary sources of the late 1930s.</p>
 <p><strong>Penning (PIG) source.</strong> A cylindrical anode between
-two cathodes, in an axial magnetic field. Electrons from the cathodes
-spiral along the field and are reflected by the opposite cathode,
-oscillating many times before they reach the anode; each electron’s
-path, and so its chance of ionising, is multiplied. F. M. Penning built
-a pressure gauge on this geometry at Philips in Eindhoven in 1937; the
-“Penning ionisation gauge” gave the source its name, PIG. The cathodes
-can be cold, heated by the discharge. Penning sources give multiply
-charged heavy ions at modest currents and have served as cyclotron
-sources; at the LBL 88-Inch Cyclotron the first ECR source replaced a
-PIG in 1984. Variants of the geometry became the calutron source of
-wartime isotope separation and, after the war, the Nielsen and Bernas
-sources; the Bernas source, built in 1958 with a reflecting
-“anticathode” opposite its filament, is now the commonest source of ion
-implanters.</p>
+two cathodes, in an axial magnetic field (figure 7.10, left). Electrons
+from the cathodes spiral along the field and are reflected by the
+opposite cathode, oscillating many times before they reach the anode;
+each electron’s path, and so its chance of ionising, is multiplied. F.
+M. Penning built a pressure gauge on this geometry at Philips in
+Eindhoven in 1937; the “Penning ionisation gauge” gave the source its
+name, PIG. The cathodes can be cold, heated by the discharge. Penning
+sources give multiply charged heavy ions at modest currents and have
+served as cyclotron sources; at the LBL 88-Inch Cyclotron the first ECR
+source replaced a PIG in 1984. Variants of the geometry became the
+calutron source of wartime isotope separation and, after the war, the
+Nielsen and Bernas sources; the Bernas source, built in 1958 with a
+reflecting “anticathode” opposite its filament, is now the commonest
+source of ion implanters.</p>
 <p><strong>Magnetron.</strong> The magnetic field is now perpendicular
 to the electric field between a central cathode and a surrounding anode,
 about 1 mm apart, so electrons drift around the cathode in closed loops
@@ -4630,13 +4650,24 @@ field traps the electrons but hardly the ions, which is what an ion
 source wants.</p>
 <p><strong>Duoplasmatron.</strong> Manfred von Ardenne built it in 1956
 as a powerful source of gas ions. A hot cathode drives an arc to an
-intermediate electrode, which constricts it; a magnetic field between
-the intermediate electrode and the anode squeezes the plasma further
-into a small, very dense region at the anode aperture. The two stages
-(“duo”) give a high current density and a high proton fraction.
-Duoplasmatrons have long served as proton sources for accelerators, and
-in the 1960s they were found to give negative and multiply charged ions
-as well.</p>
+intermediate electrode, which constricts it (figure 7.10, right); a
+magnetic field between the intermediate electrode and the anode squeezes
+the plasma further into a small, very dense region at the anode
+aperture. The two stages (“duo”) give a high current density and a high
+proton fraction. Duoplasmatrons have long served as proton sources for
+accelerators, and in the 1960s they were found to give negative and
+multiply charged ions as well.</p>
+<p><a href="figures/07-pig-duo.svg" class="figure"><img
+src="figures/07-pig-duo.svg" loading="lazy"
+alt="A Penning source with electrons oscillating between two cathodes, and a duoplasmatron squeezing its plasma" /></a></p>
+<p><em>Figure 7.10. Two positive-ion sources, in section, schematic.
+Left: the Penning (PIG) source. Electrons spiral along the axial field
+and are turned back by each cathode in turn, so they cross the anode’s
+volume many times and ionise many times; ions leave through a slit.
+Right: the duoplasmatron. A hot cathode drives an arc through the funnel
+of the intermediate electrode, and the magnetic field between it and the
+anode squeezes the plasma into a small, very dense spot at the anode’s
+aperture.</em></p>
 <p><strong>RF sources.</strong> An antenna, inside the plasma or wrapped
 around a ceramic chamber, drives a current at 2 to 13.56 MHz; the
 changing magnetic field induces an electric field in the gas (<a
@@ -4995,7 +5026,7 @@ f_{lost} = 1 - \cos\alpha_{lc}.
 <p><a href="figures/07-loss-cone.svg" class="figure"><img
 src="figures/07-loss-cone.svg" loading="lazy"
 alt="The loss cone of a magnetic mirror in velocity space" /></a></p>
-<p><em>Figure 7.8. Velocities at the weakest point of a mirror field,
+<p><em>Figure 7.11. Velocities at the weakest point of a mirror field,
 with <span class="math inline">\(v_\parallel\)</span> along the field
 and <span class="math inline">\(v_\perp\)</span> across it, for mirror
 ratio <span class="math inline">\(R_m = 4\)</span>. A particle whose
@@ -5254,14 +5285,15 @@ solenoids make a magnetic bottle along the axis, and a hexapole adds a
 radial field that grows towards the walls. The field is weakest at the
 centre and rises in every direction, so the surface where <span
 class="math inline">\(B = B_{ECR}\)</span> is closed, like an egg shell
-around the centre. Electrons crossing it gain energy; the bottle traps
-them because the magnetic moment <span class="math inline">\(\mu_m =
-p_\perp^2/(2m_e B)\)</span> (subscripted to keep it apart from the phase
-advance per cell <span class="math inline">\(\mu\)</span>) is an
-adiabatic invariant, so an electron whose velocity makes too large an
-angle with the field is reflected where the field rises. With mirror
-ratio <span class="math inline">\(R_m = B_{max}/B_{min}\)</span>,
-electrons whose pitch angle lies within <span
+around the centre (figure 7.12). Electrons crossing it gain energy; the
+bottle traps them because the magnetic moment <span
+class="math inline">\(\mu_m = p_\perp^2/(2m_e B)\)</span> (subscripted
+to keep it apart from the phase advance per cell <span
+class="math inline">\(\mu\)</span>) is an adiabatic invariant, so an
+electron whose velocity makes too large an angle with the field is
+reflected where the field rises. With mirror ratio <span
+class="math inline">\(R_m = B_{max}/B_{min}\)</span>, electrons whose
+pitch angle lies within <span
 class="math inline">\(\arcsin(1/\sqrt{R_m})\)</span> of the field
 escape; for <span class="math inline">\(R_m = 4\)</span> that is 30°,
 and 13 per cent of an isotropic distribution. The hot, confined
@@ -5269,6 +5301,16 @@ electrons, at keV energies, strip the ions one electron at a time while
 the ions, cold and held by the electrons’ space charge, wait. The charge
 state reached depends on the product of electron density and ion
 confinement time.</p>
+<p><a href="figures/07-ecr.svg" class="figure"><img
+src="figures/07-ecr.svg" loading="lazy"
+alt="An ECR source: solenoids, hexapole bars, a closed resonance surface, microwaves in, ions out, and B on the axis" /></a></p>
+<p><em>Figure 7.12. An ECR ion source, in section, schematic, with the
+field on the axis below. Two solenoids make a bottle along the axis and
+hexapole bars along the wall add a radial field, so the field is weakest
+at the centre and rises every way. The surface where <span
+class="math inline">\(B = B_{ECR}\)</span> (dashed) is therefore closed;
+electrons crossing it gain energy from the microwaves, and the ions they
+strip leave through the extraction electrode.</em></p>
 <p>Two scalings follow from the physics derived above. The density
 cannot much exceed <span class="math inline">\(n_c \propto
 f_{RF}^2\)</span>, so higher frequency gives a denser plasma and more
@@ -5293,8 +5335,8 @@ ions by brute force</h3>
 <p>An electron beam ion source sends a dense electron beam, compressed
 by a strong solenoid, along the axis of a series of drift tubes. The
 beam’s negative space charge traps positive ions radially; voltages on
-the end tubes trap them axially. Inside the trap the ions are struck
-again and again, and each charge state <span
+the end tubes trap them axially (figure 7.13). Inside the trap the ions
+are struck again and again, and each charge state <span
 class="math inline">\(q\)</span> lasts a time</p>
 <p><span class="math display">\[
 \tau_q \approx \frac{e}{j_e\,\sigma_q}
@@ -5316,6 +5358,15 @@ to uranium and can switch between them on a timescale of one second, and
 it was built to take over from the two Tandem Van de Graaffs that had
 been the workhorse injectors for forty years (<a
 href="06-the-electrostatic-generator.html">chapter 6</a>).</p>
+<p><a href="figures/07-ebis.svg" class="figure"><img
+src="figures/07-ebis.svg" loading="lazy"
+alt="An EBIS: electron gun, solenoid, three drift tubes and collector, and the potential well that traps the ions" /></a></p>
+<p><em>Figure 7.13. An electron beam ion source, in section, schematic,
+with the potential on the axis below. A dense electron beam, compressed
+by a strong solenoid, runs from the gun through three drift tubes to the
+collector. Its space charge holds the ions radially, and the higher
+voltages on the two end tubes hold them along the axis. When the outer
+barrier is lowered (dashed), the ions leave in a pulse.</em></p>
 <h3 id="negative-ion-sources">Negative-ion sources</h3>
 <p>An H⁻ ion is a proton with two electrons, the second bound by only
 0.75 eV (the electron affinity of hydrogen). It is easily destroyed in a
@@ -5700,12 +5751,24 @@ cooled at high power.</p>
 and D. B. Holtkamp at Los Alamos described in 1983 an electric-sweep
 scanner for intense, low-energy H⁻ beams: a 10 cm analyser with a front
 slit, a pair of deflecting plates driven by a ±500 V ramp and a rear
-slit. Ions that pass the rear slit at a given moment entered at an angle
-proportional to the instantaneous plate voltage, so one ramp sweeps
-<span class="math inline">\(x&#39;\)</span> while a stepping motor moves
-the head across <span class="math inline">\(x\)</span>. It was built for
-±0.5 mrad angular resolution. Scanners of this kind are widely used at
-ion-source test stands.</p>
+slit (figure 7.14). Ions that pass the rear slit at a given moment
+entered at an angle proportional to the instantaneous plate voltage, so
+one ramp sweeps <span class="math inline">\(x&#39;\)</span> while a
+stepping motor moves the head across <span
+class="math inline">\(x\)</span>. It was built for ±0.5 mrad angular
+resolution. Scanners of this kind are widely used at ion-source test
+stands.</p>
+<p><a href="figures/07-allison.svg" class="figure"><img
+src="figures/07-allison.svg" loading="lazy"
+alt="The Allison scanner: front slit, deflecting plates on a voltage ramp, rear slit and collector" /></a></p>
+<p><em>Figure 7.14. The Allison emittance scanner, in section,
+schematic. The front slit passes ions at one position <span
+class="math inline">\(x\)</span>, coming at many angles <span
+class="math inline">\(x&#39;\)</span>. At each moment of the plates’
+voltage ramp only the ions whose angle the voltage cancels reach the
+rear slit and the collector, so one ramp sweeps <span
+class="math inline">\(x&#39;\)</span>; a stepping motor then moves the
+head to the next <span class="math inline">\(x\)</span>.</em></p>
 <p><strong>The pepper-pot.</strong> A plate with a grid of small holes
 in front of a scintillator or a phosphor screen measures both planes in
 one shot: each hole’s spot gives the angular spread at that position. It
