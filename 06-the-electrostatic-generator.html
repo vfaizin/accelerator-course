@@ -1502,9 +1502,20 @@ fixed so that the field is uniform along everything that spans it. Herb,
 Parkinson and Kerst’s 1937 machine introduced the answer used ever
 since, the <em>column</em>: the insulating supports, the belt and the
 accelerating tube enclosed in a stack of metal hoops from ground to
-terminal, each hoop at its share of the voltage. Inside the stack the
-field is nearly uniform and axial, so no insulator sees a
+terminal, each hoop at its share of the voltage (figure 6.5). Inside the
+stack the field is nearly uniform and axial, so no insulator sees a
 concentration.</p>
+<p><a href="figures/06-tank-column.svg" class="figure"><img
+src="figures/06-tank-column.svg" loading="lazy"
+alt="A generator in a pressure tank: terminal, column of hoops, posts, chain, tube and divider" /></a></p>
+<p><em>Figure 6.5. A single-ended generator in a pressure tank, in
+section, schematic. A steel vessel of SF<span
+class="math inline">\(_6\)</span> at 6 to 7 bar holds the terminal on
+its column: insulating posts, the charging chain and the accelerating
+tube, all inside a stack of metal hoops from ground to terminal. A
+divider holds each hoop at its share of the voltage, so the field inside
+the stack is nearly uniform and along the axis. An ion source in the
+terminal sends the beam down the tube to the analysing magnet.</em></p>
 <p>The hoops are held at their potentials by a <em>divider</em>, a chain
 of elements in series from terminal to ground that shares the voltage
 among the gaps, as resistors in series share a voltage in proportion to
@@ -1719,14 +1730,14 @@ energy. A beam ion entering with energy <span class="math inline">\(W
 \Delta x&#39; \approx \frac{q\mathcal{E}L\sin\theta}{2W},
 \]</span></p>
 <p>24 mrad for a 1 MeV ion in an illustrative 2 MV/m, and the next
-section turns it back (figure 6.5). Later tandems added weak transverse
+section turns it back (figure 6.6). Later tandems added weak transverse
 magnetic fields, which bend light electrons strongly and heavy ions
 hardly at all. NEC’s very clean metal-ceramic tubes held 1 MV per module
 without inclined fields (Herb, 1971).</p>
 <p><a href="figures/06-inclined-field.svg" class="figure"><img
 src="figures/06-inclined-field.svg" loading="lazy"
 alt="Electrodes of an inclined-field tube, with an electron and an ion" /></a></p>
-<p><em>Figure 6.5. Two sections of an inclined-field tube in side view,
+<p><em>Figure 6.6. Two sections of an inclined-field tube in side view,
 with the terminal to the left. In each section the electrodes are tilted
 by <span class="math inline">\(\theta = 14^\circ\)</span> (drawn true),
 and the field, at right angles to them, is tilted by <span
@@ -2132,7 +2143,7 @@ class="math inline">\(d\)</span> act on the terminal (the chain’s
 fluctuation, say), and let the stabiliser feed back a correction current
 <span class="math inline">\(-Kv\)</span>, with <span
 class="math inline">\(K\)</span> in A/V the gain from measured voltage
-to corona current, arriving after the delay. Figure 6.6 draws the loop.
+to corona current, arriving after the delay. Figure 6.7 draws the loop.
 In transforms, the current into the terminal is the disturbance less the
 delayed correction, and the terminal turns current into voltage through
 <span class="math inline">\(G\)</span>; collecting the <span
@@ -2163,7 +2174,7 @@ constant is <span class="math inline">\(\tau/(1 + L_0)\)</span>.</p>
 <p><a href="figures/06-loop.svg" class="figure"><img
 src="figures/06-loop.svg" loading="lazy"
 alt="The terminal stabiliser drawn as a loop" /></a></p>
-<p><em>Figure 6.6. The terminal stabiliser as a loop. A disturbance
+<p><em>Figure 6.7. The terminal stabiliser as a loop. A disturbance
 current <span class="math inline">\(D\)</span>, such as a fluctuation of
 the chain’s charge, and the correction current meet at the terminal,
 which turns current into a voltage deviation <span
@@ -2394,17 +2405,28 @@ slow changes, below about 1 Hz.</p>
 on one slit jaw than the other. The two slit currents, amplified
 logarithmically so that their difference depends on position and not
 intensity, give an error signal. It drives the grid of a vacuum triode
-in series with corona needles facing the terminal: more error, more
-corona current, more charge bled away. Capacitive pickoff plates sense
-fast ripple and add a derivative term. NEC’s stabilisers switch to slit
-control when the terminal is within 50 kV of its set point and beam is
-on a slit, and otherwise use the generating voltmeter; rated stability
-is <span class="math inline">\(\pm 0.01\)</span> per cent. The corona
-loop is slow: NEC gives its bandwidth as about 1 Hz; at the ANU the
-transit time of charge from needles to terminal keeps it below 10 Hz,
-and the 14UD’s open-loop time constant was 10.2 s at 8 MV. That system
-held the beam with long-term stability equal to a 3.9 kV full-width
-fluctuation of the terminal (Lobanov and others, 2012).</p>
+in series with corona needles facing the terminal (figure 6.8): more
+error, more corona current, more charge bled away. Capacitive pickoff
+plates sense fast ripple and add a derivative term. NEC’s stabilisers
+switch to slit control when the terminal is within 50 kV of its set
+point and beam is on a slit, and otherwise use the generating voltmeter;
+rated stability is <span class="math inline">\(\pm 0.01\)</span> per
+cent. The corona loop is slow: NEC gives its bandwidth as about 1 Hz; at
+the ANU the transit time of charge from needles to terminal keeps it
+below 10 Hz, and the 14UD’s open-loop time constant was 10.2 s at 8 MV.
+That system held the beam with long-term stability equal to a 3.9 kV
+full-width fluctuation of the terminal (Lobanov and others, 2012).</p>
+<p><a href="figures/06-stabiliser-layout.svg" class="figure"><img
+src="figures/06-stabiliser-layout.svg" loading="lazy"
+alt="The analysing magnet and image slits, with the slit currents driving a triode and corona needles at the terminal" /></a></p>
+<p><em>Figure 6.8. Holding the energy, laid out as it is built,
+schematic. The beam turns 90° in the analysing magnet and meets the
+image slits; a beam a little too energetic bends on a wider circle
+(dashed) and lands more on jaw 2. The difference of the two slit
+currents, amplified logarithmically, drives a triode in series with
+corona needles that bleed charge from the terminal. A generating
+voltmeter in the tank wall follows slow changes, and a capacitive
+pickoff fast ripple. Figure 6.7 draws the same thing as a loop.</em></p>
 <p>Energy defined to about one part in <span
 class="math inline">\(10^4\)</span> is ordinary for these machines
 (Jones, 1984); the ripple of a Pelletron chain alone is typically <span
@@ -2621,7 +2643,7 @@ measures the beam’s energy spread.</p>
 <p><a href="figures/06-thick-target.svg" class="figure"><img
 src="figures/06-thick-target.svg" loading="lazy"
 alt="A narrow resonance and the thick-target yield step it makes" /></a></p>
-<p><em>Figure 6.7. A resonance of full width <span
+<p><em>Figure 6.9. A resonance of full width <span
 class="math inline">\(\Gamma = 1.8\)</span> keV (dashed, the
 Breit–Wigner cross-section as a fraction of its peak) and the yield from
 a thick target (solid, as a fraction of its plateau) as the beam energy
@@ -2762,15 +2784,25 @@ foot. At National Electrostatics Corporation it became the
 <em>Pelletron</em> chain: metal cylinders joined by solid insulating
 links such as nylon.</p>
 <p>The chain is charged by induction. At the bottom pulley an inductor
-electrode at a few kilovolts faces the pellets while they touch the
-grounded pulley; its field draws charge onto each pellet, which keeps it
-when contact breaks. In the terminal the process reverses. The charge
-per pellet is set by a capacitance and a voltage, not by a corona, so it
-is reproducible, there is no sparking at the transfer, and charging
-fluctuations are very low. Herb’s 1971 chain, on 30 cm pulleys, was
-rated at 150 µA (a single chain still delivers about that; Sundquist, in
-Chao and others, section 1.6.5), and the return run can bring down
-charge of the other sign.</p>
+electrode at a few kilovolts (figure 6.10) faces the pellets while they
+touch the grounded pulley; its field draws charge onto each pellet,
+which keeps it when contact breaks. In the terminal the process
+reverses. The charge per pellet is set by a capacitance and a voltage,
+not by a corona, so it is reproducible, there is no sparking at the
+transfer, and charging fluctuations are very low. Herb’s 1971 chain, on
+30 cm pulleys, was rated at 150 µA (a single chain still delivers about
+that; Sundquist, in Chao and others, section 1.6.5), and the return run
+can bring down charge of the other sign.</p>
+<p><a href="figures/06-pelletron.svg" class="figure"><img
+src="figures/06-pelletron.svg" loading="lazy"
+alt="A Pelletron chain round its grounded pulley, charged by an inductor electrode" /></a></p>
+<p><em>Figure 6.10. Charging a Pelletron chain, the bottom pulley,
+schematic. Metal pellets on insulating nylon links run round a grounded
+pulley. While a pellet still touches the pulley, the field of the
+inductor electrode, a few kilovolts negative, draws positive charge onto
+it; the pellet keeps the charge when contact breaks and carries it up to
+the terminal. The charge per pellet is set by a capacitance and a
+voltage, so it is the same each time.</em></p>
 <p>The <em>Laddertron</em>, developed at Daresbury for its large tandem,
 does the same with a flat chain of closely spaced metal cross-pieces,
 each insulated from the next, between insulating side members. High
@@ -3128,7 +3160,7 @@ Accelerator mass spectrometry relies on this break-up (section 14).</p>
 <p><a href="figures/06-tandem.svg" class="figure"><img
 src="figures/06-tandem.svg" loading="lazy"
 alt="A tandem laid out straight, with the potential along the beam" /></a></p>
-<p><em>Figure 6.8. A tandem, laid out straight and not to scale, with
+<p><em>Figure 6.11. A tandem, laid out straight and not to scale, with
 the potential along the beam’s path beneath it. Negative ions from a
 source at ground are drawn up the first tube to the positive terminal,
 gaining <span class="math inline">\(eV_T\)</span>; inside the terminal
@@ -3603,16 +3635,25 @@ salts; the 1931 pair cost under USD 100, obtained from Henry Smyth. In
 help from Vannevar Bush, was issued in February 1935.</p>
 <p><strong>Round Hill, 1932 to 1937.</strong> On Colonel Edward H. R.
 Green’s estate at South Dartmouth, Massachusetts, an MIT group built the
-first giant in a former airship hangar: two aluminium spheres 4.6 m
-across on hollow insulating columns 7.6 m high and 1.8 m across, the
-spheres 13 m above the ground, each unit on a truck on a railway track.
-Designed for 10 MV, with paper belts charged at about 20 kV, it reached
-about 5.1 MV between its spheres and was first shown publicly on 28
-November 1933 (Van de Graaff, Compton and Van Atta, 1933; Van Atta and
-others, 1936). After Green’s death it was moved in 1937 to MIT,
-enclosed, and run up to about 2.4 MV (Livingston and Blewett give beams
-of 2.75 MeV by 1940); in 1955 it went to the Museum of Science in
+first giant in a former airship hangar (figure 6.12): two aluminium
+spheres 4.6 m across on hollow insulating columns 7.6 m high and 1.8 m
+across, the spheres 13 m above the ground, each unit on a truck on a
+railway track. Designed for 10 MV, with paper belts charged at about 20
+kV, it reached about 5.1 MV between its spheres and was first shown
+publicly on 28 November 1933 (Van de Graaff, Compton and Van Atta, 1933;
+Van Atta and others, 1936). After Green’s death it was moved in 1937 to
+MIT, enclosed, and run up to about 2.4 MV (Livingston and Blewett give
+beams of 2.75 MeV by 1940); in 1955 it went to the Museum of Science in
 Boston, where it still runs.</p>
+<p><a href="figures/06-round-hill.svg" class="figure"><img
+src="figures/06-round-hill.svg" loading="lazy"
+alt="The Round Hill generator to scale: two 4.6 m spheres on 7.6 m columns on railway trucks, with a person" /></a></p>
+<p><em>Figure 6.12. The Round Hill generator of 1933, to scale in
+height, with a person 1.75 m tall. Each aluminium sphere, 4.6 m across,
+stands on a hollow insulating column 7.6 m high with a paper belt
+inside, on a truck on a railway track, its top 13 m above the ground;
+one sphere was charged positive and the other negative. The spacing
+between the units is drawn, not measured.</em></p>
 <p><strong>The Carnegie Institution.</strong> Tuve, Hafstad and Dahl
 fitted a Van de Graaff generator with an accelerating tube and by late
 1932 were doing nuclear physics with it; their 1935 paper set out the
